@@ -5397,7 +5397,7 @@ spawn(function()
                                     
                                     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
                                 end
-                            elseif game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true or not _G.AceetpQuestBone == false  then
+                            elseif game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true or not _G.AceetpQuestBone then
                             for _, _Mon in next, BoneTabel["Mon"] do
                                     if game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton") or game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie") or game:GetService("Workspace").Enemies:FindFirstChild("Demonic Soul") or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy") then
                                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
