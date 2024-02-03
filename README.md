@@ -5545,19 +5545,19 @@ task.spawn(function()
     end
 end)
 
-_G.FastAttack = true
-page2:Toggle("Fast Attack", _G.FastAttack, function(x)
-    _G.FastAttack = value
+_G.FastAttack1 = true
+page2:Toggle("Fast Attack", _G.FastAttack1, function(x)
+    _G.FastAttack1 = value
 end)
 local Time = 0.09
 spawn(function()
-	while _G.FastAttack do task.wait()
+	while _G.FastAttack1 do task.wait()
 	require(game.ReplicatedStorage.Util.CameraShaker):Stop()
 	xShadowFastAttackx = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
 	xShadowx = debug.getupvalues(xShadowFastAttackx)[2]
 	task.spawn(function()
 		while true do task.wait()
-			if _G.FastAttack then
+			if _G.FastAttack1 then
 				if typeof(xShadowx) == "table" then
 					pcall(function()
 						xShadowx.activeController.timeToNextAttack = -(math.huge^math.huge^math.huge)
@@ -5582,7 +5582,7 @@ spawn(function()
 	
 	task.spawn(function()
 		while true do task.wait()
-			if _G.FastAttack then
+			if _G.FastAttack1 then
 				pcall(function()
 					CameraShakerR:Stop()
 					CombatFramework.activeController.attacking = false
@@ -5685,8 +5685,8 @@ spawn(function()
 	
 	b = tick()
 	spawn(function()
-		while _G.FastAttack do task.wait()
-			if _G.FastAttack then
+		while _G.FastAttack1 do task.wait()
+			if _G.FastAttack1 then
 				if b - tick() > 9e9 then
 					b = tick()
 				end
@@ -5724,7 +5724,7 @@ spawn(function()
 	k = tick()
 	spawn(function()
 		while wait() do
-			if  _G.FastAttack then
+			if  _G.FastAttack1 then
 				if k - tick() > 9e9 then
 					k = tick()
 				end
@@ -5797,7 +5797,7 @@ spawn(function()
 						STOPRL.wrapAttackAnimationAsync = function(a,b,c,d,func)
 							local Hits = STOPRL.getBladeHits(b,c,d)
 							if Hits then
-								if  _G.FastAttack then
+								if  _G.FastAttack1 then
 									STOP.play = function() end
 									a:Play(21,29,30)
 									func(Hits)
