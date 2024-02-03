@@ -5347,7 +5347,7 @@ function GetBone_CFrame_Mon()
     
     return matchingCFrames
 end
-local Questbone = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest
+
 spawn(function()
     while wait() do
         pcall(function()
@@ -5376,9 +5376,30 @@ spawn(function()
                             EquipWeapon(_Item)
                             toTarget(workspace.Map["Haunted Castle"].Summoner.Detection.CFrame)
                         else
+                            if  game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false  and _G.AceetpQuestBone == true then
+                                local Myleveling = game.Players.LocalPlayer.Data.Level.Value
+                                local CFrameMonBq = CFrame.new(-9513.88477, 172.1306, 6073.37061, -0.906221628, 7.55508509e-08, 0.422802985, 5.79426853e-08, 1, -5.44980487e-08, -0.422802985, -2.48889691e-08, -0.906221628)
+                                repeat wait() toTarget(CFrameMonBq) until (CFrameMonBq.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2 or not _G.AceetpQuestBone
+                                if Myleveling <= 2049 then
+                                    local args = {
+                                        [1] = "StartQuest",
+                                        [2] = "HauntedQuest2",
+                                        [3] = 1
+                                    }
+                                    
+                                    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+                                else
+                                    local args = {
+                                        [1] = "StartQuest",
+                                        [2] = "HauntedQuest2",
+                                        [3] = 2
+                                    }
+                                    
+                                    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+                                end
+                            elseif game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true or not _G.AceetpQuestBone == false  then
                             for _, _Mon in next, BoneTabel["Mon"] do
                                     if game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton") or game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie") or game:GetService("Workspace").Enemies:FindFirstChild("Demonic Soul") or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy") then
-                                        if Questbone == true or not _G.AceetpQuestBone then
                                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                                             if string.find(v.Name, _Mon) then
                                                 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
@@ -5393,31 +5414,10 @@ spawn(function()
                                                         end
                                                     until not _G.AutoFarmBone or v.Humanoid.Health <= 0 or not v.Parent or v.Humanoid.Health <= 0
                                                 else
-                                                    local CFrameMon = CFrame.new(-9504.8564453125, 172.14292907714844, 6057.259765625)
-                                                    repeat wait() toTarget(CFrameMon) until (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 20 or not _G.AutoFarmBone
+                                                    local CFrameMon = CFrame.new(-9513.88477, 172.1306, 6073.37061, -0.906221628, 7.55508509e-08, 0.422802985, 5.79426853e-08, 1, -5.44980487e-08, -0.422802985, -2.48889691e-08, -0.906221628)
+                                                    repeat wait() toTarget(CFrameMon) until (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 20 or v.Humanoid.Health > 0 or  not _G.AutoFarmBone
                                                 end
                                             end
-                                        end
-                                        elseif not Questbone  and _G.AceetpQuestBone then
-                                        local Myleveling = game.Players.LocalPlayer.Data.Level.Value
-                                        local CFrameMonBq = CFrame.new(-9513.88477, 172.1306, 6073.37061, -0.906221628, 7.55508509e-08, 0.422802985, 5.79426853e-08, 1, -5.44980487e-08, -0.422802985, -2.48889691e-08, -0.906221628)
-                                        repeat wait() toTarget(CFrameMonBq) until (CFrameMonBq.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2 or not _G.AceetpQuestBone
-                                        if Myleveling <= 2049 then
-                                            local args = {
-                                                [1] = "StartQuest",
-                                                [2] = "HauntedQuest2",
-                                                [3] = 1
-                                            }
-                                            
-                                            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-                                        else
-                                            local args = {
-                                                [1] = "StartQuest",
-                                                [2] = "HauntedQuest2",
-                                                [3] = 2
-                                            }
-                                            
-                                            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
                                         end
                                     else
                                     if _G.Auto_CFrame then
