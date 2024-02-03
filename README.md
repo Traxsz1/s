@@ -5288,6 +5288,10 @@ page1:Toggle("ฟาร์มกระดูก", _G.Settings.AutoFarmBone , fun
         task.wait()
     end
 end)
+page1:Toggle("รับเควสระหว่างฟาร์มกระดูก", _G.AceetpQuestBone, function(value)
+    _G.AceetpQuestBone = value
+end)
+
 page1:Toggle("สุ่มกระดูก", _G.AutoRandomBone, function(value)
     _G.AutoRandomBone = value
 end)
@@ -5394,7 +5398,7 @@ spawn(function()
                                                 end
                                             end
                                         end
-                                        elseif not Quesbone  and _G.AceetpQuestBone then
+                                        elseif not Questbone  and _G.AceetpQuestBone then
                                         local Myleveling = game.Players.LocalPlayer.Data.Level.Value
                                         local CFrameMonBq = CFrame.new(-9513.88477, 172.1306, 6073.37061, -0.906221628, 7.55508509e-08, 0.422802985, 5.79426853e-08, 1, -5.44980487e-08, -0.422802985, -2.48889691e-08, -0.906221628)
                                         repeat wait() toTarget(CFrameMonBq) until (CFrameMonBq.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2 or not _G.AceetpQuestBone
