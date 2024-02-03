@@ -1,1 +1,10053 @@
-repeat wait(0)until game.Players.LocalPlayer;local b=game.PlaceId;if b==2753915549 then World1=true elseif b==4442272183 then World2=true elseif b==7449423635 then World3=true else game:Shutdown()end;setfpscap(999)_G.Settings={AutoFarm=false,NeareastFarm=false,AutoNewWorld=false,AutoSaber=false,AutoPole=false,TeleportIsland=false,AutoThirdSea=false,AutoBartiloQuest=false,Auto_Evo_Race_V2=false,AutoDarkCoat=false,AutoSwanGlasses=false,AutoTrueTriplKatana=false,AutoRengoku=false,AutoEctoplasm=false,AutoFactory=false,Mirage=false,MirageHop=false,Auto_Gear=false,TeleportGear=false,AutoRainbowHaki=false,AutoBuyEnchanmentHakiHop=false,AutoBuyLegendarySwordHop=false,AutoEliteHunter=false,AutoMusketeerHat=false,AutoBuddySword=false,AutoFarmBone=false,AutoKenHakiV2=false,AutoObservation=false,AutoObservation_Hop=false,AutoGodHuman=false,AutoCavander=false,AutoCursedDualKatana=false,AutoYamaSword=false,AutoTushitaSword=false,AutoSerpentBow=false,AutoDarkDagger=false,AutoCakePrince=false,AutoDoughV2=false,AutoHolyTorch=false,AutoBuddySwords=false,AutoFarmBossHallow=false,AutoEvent=false,TPTOBOAT=false,AutoFarmMaterial=false,Teleporttop=false,AutoFarmChest=false,AutoAllBoss=false,AutoBossSelect=false,AutoFarmBoss=false,AutoFarmFruitMastery=false,AutoFarmGunMastery=false,FarmMasterySwordList=false,AutoRaids=false,AutoNextPlace=false}function Vec(c)local d=require(game.ReplicatedStorage.Notification)local e=d.new(c)e.Duration=10;e:Display()end;local f=game.CoreGui:WaitForChild("RobloxGui"):WaitForChild("Modules"):FindFirstChild("dsfwefwfwdfsfasdadaxczcw")if f then f:Destroy()end;local g=game:GetService("UserInputService")local h=game:GetService("VirtualInputManager")local i=game:GetService("TweenService")local j=game:service"TweenService"local l=game:GetService("RunService")local m=game:GetService("Players").LocalPlayer;local n=m:GetMouse()local o=game:GetService("GuiService")local p=Instance.new("Sound")p.Name="Sound Effect"p.SoundId="rbxassetid://3398620867"p.Volume=1;p.Parent=game.Workspace;local q=Instance.new("UIStroke")local r=Instance.new("UICorner")local s=Instance.new("ScreenGui")local t=Instance.new("ImageButton")local u=Enum.ButtonStyle.RobloxButton;s.Parent=game.CoreGui:WaitForChild("RobloxGui"):WaitForChild("Modules")s.Name="dsfwefwfwdfsfasdadaxczcw"t.Parent=s;t.Position=UDim2.new(0.120833337,0,0.0952890813,0)t.Size=UDim2.new(0,65,0,65)t.Draggable=true;t.BackgroundColor3=Color3.fromRGB(0,0,0)t.BackgroundTransparency=1;t.Image="rbxassetid://16129235054"function LoadFunction()t.MouseEnter:Connect(function()i:Create(t,TweenInfo.new(.2,Enum.EasingStyle.Back,Enum.EasingDirection.InOut),{Size=UDim2.new(0,80,0,80)}):Play()end)t.MouseLeave:Connect(function()i:Create(t,TweenInfo.new(.2,Enum.EasingStyle.Back,Enum.EasingDirection.InOut),{Size=UDim2.new(0,65,0,65)}):Play()end)local v=false;t.MouseButton1Down:Connect(function()if v==false then v=false;i:Create(t,TweenInfo.new(.2,Enum.EasingStyle.Back,Enum.EasingDirection.InOut),{Rotation=180}):Play()p:Play()i:Create(t,TweenInfo.new(.4,Enum.EasingStyle.Quart,Enum.EasingDirection.In),{ImageTransparency=0}):Play()wait(.5)i:Create(t,TweenInfo.new(.2,Enum.EasingStyle.Back,Enum.EasingDirection.InOut),{Rotation=0}):Play()i:Create(t,TweenInfo.new(.4,Enum.EasingStyle.Quart,Enum.EasingDirection.In),{ImageTransparency=0}):Play()wait(.5)end end)end;LoadFunction()t.MouseButton1Down:connect(function()game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.F1,false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,Enum.KeyCode.F1,false,game)end)function LoadSettings()if readfile and writefile and isfile and isfolder then if not isfolder("VectorHub")then makefolder("VectorHub")end;if not isfolder("VectorHub/Blox Fruits/")then makefolder("VectorHub/Blox Fruits/")end;if not isfile("VectorHub/Blox Fruits/"..game.Players.LocalPlayer.Name..".json")then writefile("VectorHub/Blox Fruits/"..game.Players.LocalPlayer.Name..".json",game:GetService("HttpService"):JSONEncode(_G.Settings))else local x=game:GetService("HttpService"):JSONDecode(readfile("VectorHub/Blox Fruits/"..game.Players.LocalPlayer.Name..".json"))for y,z in pairs(x)do _G.Settings[y]=z end end else return end end;function SaveSettings()if readfile and writefile and isfile and isfolder then if not isfile("VectorHub/Blox Fruits/"..game.Players.LocalPlayer.Name..".json")then LoadSettings()else local x=game:GetService("HttpService"):JSONDecode(readfile("VectorHub/Blox Fruits/"..game.Players.LocalPlayer.Name..".json"))local A={}for y,z in pairs(_G.Settings)do A[y]=z end;writefile("VectorHub/Blox Fruits/"..game.Players.LocalPlayer.Name..".json",game:GetService("HttpService"):JSONEncode(A))end else return end end;LoadSettings()local h=game:GetService("VirtualInputManager")local i=game:GetService("TweenService")local j=game:service"TweenService"local l=game:GetService("RunService")local m=game:GetService("Players").LocalPlayer;local n=m:GetMouse()local o=game:GetService("GuiService")repeat wait(0)until game:IsLoaded()if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam")then repeat wait()if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main").ChooseTeam.Visible==true then if _G.Team=="Pirate"then for y,z in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.TextButton.Activated))do z.Function()end elseif _G.Team=="Marine"then for y,z in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.TextButton.Activated))do z.Function()end else for y,z in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.TextButton.Activated))do z.Function()end end end until game.Players.LocalPlayer.Team~=nil and game:IsLoaded()end;game:GetService("Players").LocalPlayer.Idled:connect(function()game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)wait(1)game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end)function UnEquipWeapon(Weapon)if game.Players.LocalPlayer.Character:FindFirstChild(Weapon)then _G.NotAutoEquip=true;wait(.5)game.Players.LocalPlayer.Character:FindFirstChild(Weapon).Parent=game.Players.LocalPlayer.Backpack;wait(.1)_G.NotAutoEquip=false end end;function EquipWeapon(B)pcall(function()if game.Players.LocalPlayer.Backpack:FindFirstChild(B)then local C=game.Players.LocalPlayer.Backpack:FindFirstChild(B)game.Players.LocalPlayer.Character.Humanoid:EquipTool(C)end end)end;function EquipWeaponSword()pcall(function()for y,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do if z.ToolTip=="Sword"and z:IsA('Tool')then local C=game.Players.LocalPlayer.Backpack:FindFirstChild(z.Name)game.Players.LocalPlayer.Character.Humanoid:EquipTool(C)end end end)end;Tabel={}function GetCake_CFrame_Mon()local D={"Baking Staff","Head Baker","Cake Guard","Cookie Crafter"}local E=workspace.EnemySpawns:GetChildren()local F=math.random(1,#E)local G=E[F]for H,I in pairs(D)do local J=string.gsub(I,"Lv. ","")local K=string.gsub(J,"[%[%]]","")local L=string.gsub(K,"%d+","")local M=string.gsub(L,"%s+","")local N=M;if G.Name==M then return G.CFrame end end end;local O=Instance.new("Folder",workspace)O.Name="EnemySpawns"for y,z in pairs(workspace._WorldOrigin.EnemySpawns:GetChildren())do if z:IsA("Part")then local P=z:Clone()local J=string.gsub(z.Name,"Lv. ","")local K=string.gsub(J,"[%[%]]","")local L=string.gsub(K,"%d+","")local M=string.gsub(L,"%s+","")P.Name=M;P.Parent=workspace.EnemySpawns;P.Anchored=true end end;for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z:IsA("Model")and z:FindFirstChild("HumanoidRootPart")then local P=z.HumanoidRootPart:Clone()local J=string.gsub(z.Name,"Lv. ","")local K=string.gsub(J,"[%[%]]","")local L=string.gsub(K,"%d+","")local M=string.gsub(L,"%s+","")P.Name=M;P.Parent=workspace.EnemySpawns;P.Anchored=true end end;for y,z in pairs(game.ReplicatedStorage:GetChildren())do if z:IsA("Model")and z:FindFirstChild("HumanoidRootPart")then local P=z.HumanoidRootPart:Clone()local J=string.gsub(z.Name,"Lv. ","")local K=string.gsub(J,"[%[%]]","")local L=string.gsub(K,"%d+","")local M=string.gsub(L,"%s+","")P.Name=M;P.Parent=workspace.EnemySpawns;P.Anchored=true end end;local function Q()local R=game:GetService("Players").LocalPlayer.Data.Level.Value;if R>=1 and R<=9 then if tostring(game.Players.LocalPlayer.Team)=="Marines"then MobName="Trainee"QuestName="MarineQuest"QuestLevel=1;Mon="Trainee"NPCPosition=CFrame.new(-2709.67944,24.5206585,2104.24585,-0.744724929,-3.97967455e-08,-0.667371571,4.32403588e-08,1,-1.07884304e-07,0.667371571,-1.09201515e-07,-0.744724929)elseif tostring(game.Players.LocalPlayer.Team)=="Pirates"then MobName="Bandit"Mon="Bandit"QuestName="BanditQuest1"QuestLevel=1;NPCPosition=CFrame.new(1059.99731,16.9222069,1549.28162,-0.95466274,7.29721794e-09,0.297689587,1.05190106e-08,1,9.22064114e-09,-0.297689587,1.19340022e-08,-0.95466274)end;return{[1]=QuestLevel,[2]=NPCPosition,[3]=MobName,[4]=QuestName,[5]=LevelRequire,[6]=Mon,[7]=MobCFrame}end;if R>=210 and R<=249 then MobName="Dangerous Prisoner"QuestName="PrisonerQuest"QuestLevel=2;Mon="Dangerous Prisoner"NPCPosition=CFrame.new(5308.93115,1.65517521,475.120514,-0.0894274712,-5.00292918e-09,-0.995993316,1.60817859e-09,1,-5.16744869e-09,0.995993316,-2.06384709e-09,-0.0894274712)local S={}local J=string.gsub(MobName,"Lv. ","")local K=string.gsub(J,"[%[%]]","")local L=string.gsub(K,"%d+","")local M=string.gsub(L,"%s+","")for y,z in pairs(game.workspace.EnemySpawns:GetChildren())do if z.Name==M then table.insert(S,z.CFrame)end;MobCFrame=S end;return{[1]=QuestLevel,[2]=NPCPosition,[3]=MobName,[4]=QuestName,[5]=LevelRequire,[6]=Mon,[7]=MobCFrame}end;local T=require(game:GetService("ReplicatedStorage").GuideModule)local U=require(game:GetService("ReplicatedStorage").Quests)for y,z in pairs(T["Data"]["NPCList"])do for V,W in pairs(z["Levels"])do if R>=W then if not LevelRequire then LevelRequire=0 end;if W>LevelRequire then NPCPosition=y["CFrame"]QuestLevel=V;LevelRequire=W end;if#z["Levels"]==3 and QuestLevel==3 then NPCPosition=y["CFrame"]QuestLevel=2;LevelRequire=z["Levels"][2]end end end end;if R>=375 and R<=399 then if _G.AutoFarm and(NPCPosition.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude>3000 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625,11.6796875,1819.7841796875))end end;if R>=400 and R<=449 then if _G.AutoFarm and(NPCPosition.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude>3000 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625,11.6796875,1819.7841796875))end end;for y,z in pairs(U)do for V,W in pairs(z)do if W["LevelReq"]==LevelRequire and y~="CitizenQuest"then QuestName=y;for X,Y in pairs(W["Task"])do MobName=X;Mon=string.split(X," [Lv. "..W["LevelReq"].."]")[1]end end end end;if QuestName=="MarineQuest2"then QuestName="MarineQuest2"QuestLevel=1;MobName="Chief Petty Officer"Mon="Chief Petty Officer"LevelRequire=120 elseif QuestName=="ImpelQuest"then QuestName="PrisonerQuest"QuestLevel=2;MobName="Dangerous Prisoner"Mon="Dangerous Prisoner"LevelRequire=210;NPCPosition=CFrame.new(5310.60547,0.350014925,474.946594,0.0175017118,0,0.999846935,0,1,0,-0.999846935,0,0.0175017118)elseif QuestName=="SkyExp1Quest"then if QuestLevel==1 then NPCPosition=CFrame.new(-4721.88867,843.874695,-1949.96643,0.996191859,-0,-0.0871884301,0,1,-0,0.0871884301,0,0.996191859)elseif QuestLevel==2 then NPCPosition=CFrame.new(-7859.09814,5544.19043,-381.476196,-0.422592998,0,0.906319618,0,1,0,-0.906319618,0,-0.422592998)end elseif QuestName=="Area2Quest"and QuestLevel==2 then QuestName="Area2Quest"QuestLevel=1;MobName="Swan Pirate"Mon="Swan Pirate"LevelRequire=775 end;MobName=MobName:sub(1,#MobName)if not MobName:find("Lv")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do MonLV=string.match(z.Name,"%d+")if z.Name:find(MobName)and#z.Name>#MobName and tonumber(MonLV)<=R+50 then MobName=z.Name end end end;if not MobName:find("Lv")then for y,z in pairs(game:GetService("ReplicatedStorage"):GetChildren())do MonLV=string.match(z.Name,"%d+")if z.Name:find(MobName)and#z.Name>#MobName and tonumber(MonLV)<=R+50 then MobName=z.Name;Mon=a end end end;local S={}local J=string.gsub(MobName,"Lv. ","")local K=string.gsub(J,"[%[%]]","")local L=string.gsub(K,"%d+","")local M=string.gsub(L,"%s+","")for y,z in pairs(game.workspace.EnemySpawns:GetChildren())do if z.Name==M then table.insert(S,z.CFrame)else table.insert(S,nil)end;MobCFrame=S end;return{[1]=QuestLevel,[2]=NPCPosition,[3]=MobName,[4]=QuestName,[5]=LevelRequire,[6]=Mon,[7]=MobCFrame,[8]=MonQ,[9]=MobCFrameNuber}end;spawn(function()pcall(function()game:GetService("RunService").Stepped:Connect(function()if _G.AutoFarm or _G.TptoKisuneIsland or _G.TptoEventIsland or _G.TptoKisuneshrine or _G.ColletEmber or _G.NeareastFarm or _G.Mirage or _G.AutoEvent or _G.Auto_Gear or _G.TeleportGear or _G.AutoNewWorld or _G.AutoSaber or _G.AutoPole or _G.TeleportIsland or _G.AutoThirdSea or _G.AutoBartiloQuest or _G.Auto_Evo_Race_V2 or _G.AutoDarkCoat or _G.AutoSwanGlasses or _G.AutoTrueTriplKatana or _G.AutoRengoku or _G.AutoEctoplasm or _G.AutoFactory or _G.AutoRainbowHaki or _G.AutoEliteHunter or _G.AutoCastleRaid or _G.AutoMusketeerHat or _G.AutoBuddySword or _G.AutoFarmBone or _G.AutoKenHakiV2 or _G.AutoObservation or _G.AutoGodHuman or _G.AutoCavander or _G.AutoCursedDualKatana or _G.AutoYamaSword or _G.AutoTushitaSword or _G.AutoSerpentBowor or _G.AutoDarkDagger or _G.AutoCakePrince or _G.AutoDoughV2 or _G.AutoHolyTorch or _G.AutoBuddySwords or _G.AutoFarmBossHallow or _G.TPTOBOAT or Tushita_Quest2 or Tushita_Quest1 or AutoFarmMaterial or teleporttop or _G.AutoFarmChest or _G.AutoAllBoss or _G.AutoBossSelect or _G.AutoFarmBoss or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.FarmMasterySwordList or _G.AutoRaids or _G.AutoNextPlace then if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip")then local Z=Instance.new("BodyVelocity")Z.Name="BodyClip"Z.Parent=game.Players.LocalPlayer.Character.HumanoidRootPart;Z.MaxForce=Vector3.new(100000,100000,100000)Z.Velocity=Vector3.new(0,0,0)end;if not game.Players.LocalPlayer.Character:FindFirstChild("Highlight")then local _=Instance.new("Highlight")_.FillColor=Color3.new(0,86,255)_.OutlineColor=Color3.new(0,86,255)_.Parent=game.Players.LocalPlayer.Character end else if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip")then game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip"):Destroy()end;if game.Players.LocalPlayer.Character:FindFirstChild('Highlight')then game.Players.LocalPlayer.Character:FindFirstChild('Highlight'):Destroy()end end end)end)end)spawn(function()pcall(function()game:GetService("RunService").Stepped:Connect(function()if _G.AutoFarm or _G.TptoKisuneIsland or _G.TptoEventIsland or _G.TptoKisuneshrine or _G.ColletEmber or _G.NeareastFarm or _G.Mirage or _G.AutoEvent or _G.Auto_Gear or _G.TeleportGear or _G.AutoNewWorld or _G.AutoSaber or _G.AutoPole or _G.TeleportIsland or _G.AutoThirdSea or _G.AutoBartiloQuest or _G.Auto_Evo_Race_V2 or _G.AutoDarkCoat or _G.AutoSwanGlasses or _G.AutoTrueTriplKatana or _G.AutoRengoku or _G.AutoEctoplasm or _G.AutoFactory or _G.AutoRainbowHaki or _G.AutoEliteHunter or _G.AutoCastleRaid or _G.AutoMusketeerHat or _G.AutoBuddySword or _G.AutoFarmBone or _G.AutoKenHakiV2 or _G.AutoObservation or _G.AutoGodHuman or _G.AutoCavander or _G.AutoCursedDualKatana or _G.AutoYamaSword or _G.AutoTushitaSword or _G.AutoSerpentBowor or _G.AutoDarkDagger or _G.AutoCakePrince or _G.AutoDoughV2 or _G.AutoHolyTorch or _G.AutoBuddySwords or _G.AutoFarmBossHallow or _G.TPTOBOAT or Tushita_Quest2 or Tushita_Quest1 or AutoFarmMaterial or teleporttop or _G.AutoFarmChest or _G.AutoAllBoss or _G.AutoBossSelect or _G.AutoFarmBoss or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.FarmMasterySwordList or _G.AutoRaids or _G.AutoNextPlace then for H,z in pairs(game.Players.LocalPlayer.Character:GetDescendants())do if z:IsA("BasePart")then z.CanCollide=false end end end end)end)end)task.spawn(function()while true do task.wait()if setscriptable then setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)end;if sethiddenproperty then sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)end end end)task.spawn(function()while task.wait()do pcall(function()if BringMob then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if not string.find(z.Name,"Boss")and(z.HumanoidRootPart.Position-PosMon.Position).magnitude<=300 then if InMyNetWork(z.HumanoidRootPart)then z.HumanoidRootPart.CFrame=PosMon;z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.Size=Vector3.new(60,60,60)z.HumanoidRootPart.Transparency=1;z.HumanoidRootPart.CanCollide=false;z.Head.CanCollide=false;if z.Humanoid:FindFirstChild("Animator")then z.Humanoid.Animator:Destroy()end;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)end end end end end)end end)task.spawn(function()while task.wait()do pcall(function()if BringMob then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if not string.find(z.Name,"Boss")and(z.HumanoidRootPart.Position-PosMon.Position).magnitude<=300 then z.HumanoidRootPart.CFrame=PosMon;z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.Size=Vector3.new(60,60,60)z.HumanoidRootPart.Transparency=1;z.HumanoidRootPart.CanCollide=false;z.Head.CanCollide=false;if z.Humanoid:FindFirstChild("Animator")then z.Humanoid.Animator:Destroy()end;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)end end end end)end end)function InMyNetWork(a0)if isnetworkowner then return isnetworkowner(a0)else if(a0.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=200 then return true end;return false end end;if game.Players.LocalPlayer.Character:FindFirstChild("Stun")then game.Players.LocalPlayer.Character.Stun.Changed:connect(function()pcall(function()if game.Players.LocalPlayer.Character:FindFirstChild("Stun")then game.Players.LocalPlayer.Character.Stun.Value=0 end end)end)end;spawn(function()while task.wait()do for y,z in pairs(game:GetService("Workspace")["_WorldOrigin"]:GetChildren())do pcall(function()if z.Name=="CurvedRing"or z.Name=="SlashHit"or z.Name=="SwordSlash"then z:Destroy()end end)end end end)_G.DisDieffect=true;if _G.DisDieffect then if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death")then game:GetService("ReplicatedStorage").Effect.Container.Death:Destroy()end;if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn")then game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy()end end;function DisabledDamage()task.spawn(function()while task.wait()do pcall(function()if _G.Disdamage then game:GetService("ReplicatedStorage").Assets.GUI.DamageCounter.Enabled=false else game:GetService("ReplicatedStorage").Assets.GUI.DamageCounter.Enabled=true end end)end end)end;function CameraShaker()local a1=require(game.ReplicatedStorage.Util.CameraShaker)a1:Stop()end;local a2=require(game:GetService("Players").LocalPlayer.PlayerScripts:WaitForChild("CombatFramework"))local a3=getupvalues(a2)[2]local a4=require(game:GetService("Players")["LocalPlayer"].PlayerScripts.CombatFramework.RigController)local a5=getupvalues(a4)[2]local a6=require(game.ReplicatedStorage.CombatFramework.RigLib)local a7=tick()function DisabledDamage()task.spawn(function()while task.wait()do pcall(function()if _G.Disdamage then game:GetService("ReplicatedStorage").Assets.GUI.DamageCounter.Enabled=false else game:GetService("ReplicatedStorage").Assets.GUI.DamageCounter.Enabled=true end end)end end)end;function CameraShaker()local a1=require(game.ReplicatedStorage.Util.CameraShaker)a1:Stop()end;function CurrentWeapon()local a8=a3.activeController;local a9=a8.blades[1]if not a9 then return game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name end;pcall(function()while a9.Parent~=game.Players.LocalPlayer.Character do a9=a9.Parent end end)if not a9 then return game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name end;return a9 end;function getAllBladeHits(aa)local ab={}local Client=game.Players.LocalPlayer;local ac=workspace.Characters:GetChildren()local ad=game:GetService("Workspace").Enemies:GetChildren()for y=1,#ad do local z=ad[y]local ae=z:FindFirstChildOfClass("Humanoid")if ae and ae.RootPart and ae.Health>0 and Client:DistanceFromCharacter(ae.RootPart.Position)<=aa+5 then table.insert(ab,ae.RootPart)end end;for y=1,#ac do local z=ac[y]if z~=game.Players.LocalPlayer.Character then local ae=z:FindFirstChildOfClass("Humanoid")if ae and ae.RootPart and ae.Health>0 and Client:DistanceFromCharacter(ae.RootPart.Position)<=aa+5 then table.insert(ab,ae.RootPart)end end end;return ab end;function yakmefan()local a8=a3.activeController;if a8 and a8.equipped then for af=1,1 do local ag=getAllBladeHits(60)if#ag>0 then local ah=debug.getupvalue(a8.attack,5)local ai=debug.getupvalue(a8.attack,6)local aj=debug.getupvalue(a8.attack,4)local ak=debug.getupvalue(a8.attack,7)local al=(ah*798405+aj*727595)%ai;local am=aj*798405(function()al=(al*ai+am)%1099511627776;ah=math.floor(al/ai)aj=al-ah*ai end)()ak=ak+1;debug.setupvalue(a8.attack,5,ah)debug.setupvalue(a8.attack,6,ai)debug.setupvalue(a8.attack,4,aj)debug.setupvalue(a8.attack,7,ak)for k,z in pairs(a8.animator.anims.basic)do z:Play(0.01,0.01,0.01)end;if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")and a8.blades and a8.blades[1]then game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(CurrentWeapon()))game.ReplicatedStorage.Remotes.Validator:FireServer(math.floor(al/1099511627776*16777215),ak)game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("hit",ag,2,"")end end end end end;function Com(an,...)local ao=game:GetService('ReplicatedStorage').Remotes:FindFirstChild("Comm"..an)if ao:IsA("RemoteEvent")then ao:FireServer(...)elseif ao:IsA("RemoteFunction")then ao:InvokeServer(...)end end;local function ap(...)local aq={...}local ar=aq[1]local as;if type(ar)=="vector"then as=ar elseif type(ar)=="userdata"then as=ar.Position elseif type(ar)=="number"then as=CFrame.new(unpack(aq))as=as.p end;local at;local au=math.huge;if game.Players.LocalPlayer.Team then for y,z in pairs(game.Workspace._WorldOrigin.PlayerSpawns:FindFirstChild(tostring(game.Players.LocalPlayer.Team)):GetChildren())do local av=(as-z:GetModelCFrame().p).Magnitude;if av<au then au=av;at=z.Name end end;if at then return at end end end;local function aw(...)local aq={...}local ar=aq[1]local as;if type(ar)=="vector"then as=CFrame.new(ar)elseif type(ar)=="userdata"then as=ar elseif type(ar)=="number"then as=CFrame.new(unpack(aq))end;if game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health==0 then if j then j:Cancel()end;repeat wait()until game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health>0;wait(0.2)end;local ax={}local Distance=(as.Position-game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).Magnitude;if Distance<250 then Speed=590 elseif Distance<500 then Speed=580 elseif Distance<750 then Speed=400 elseif Distance>=1000 then Speed=350 end;if _G.BypassTP then if Distance>3000 and not AutoFarmMaterial and not _G.AutoGodHumanand and not _G.AutoRaids and not(game.Players.LocalPlayer.Backpack:FindFirstChild("Special Microchip")or game.Players.LocalPlayer.Character:FindFirstChild("Special Microchip")or game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice")or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice")or game.Players.LocalPlayer.Backpack:FindFirstChild("Hallow Essence")or game.Players.LocalPlayer.Character:FindFirstChild("Hallow Essence")or game.Players.LocalPlayer.Character:FindFirstChild("Sweet Chalice")or game.Players.LocalPlayer.Backpack:FindFirstChild("Sweet Chalice"))and not(Name=="Fishman Commando"or Name=="Fishman Warrior")then pcall(function()j:Cancel()fkwarp=false;if game:GetService("Players")["LocalPlayer"].Data:FindFirstChild("SpawnPoint").Value==tostring(ap(as))then wait(.1)Com("F_","TeleportToSpawn")elseif game:GetService("Players")["LocalPlayer"].Data:FindFirstChild("LastSpawnPoint").Value==tostring(ap(as))then game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):ChangeState(15)wait(0.1)repeat wait()until game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health>0 else if game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health>0 then if fkwarp==false then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=as end;fkwarp=true end;wait(.08)game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):ChangeState(15)repeat wait()until game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health>0;wait(.1)Com("F_","SetSpawnPoint")end;wait(0.2)return end)end end;local ay=game:service"TweenService"local az=TweenInfo.new((as.Position-game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).Magnitude/Speed,Enum.EasingStyle.Linear)local aA,err=pcall(function()if not game.Players.LocalPlayer.Character:FindFirstChild("Highlight")then local _=Instance.new("Highlight")_.FillColor=Color3.new(0.266667,0.854902,0.921569)_.OutlineColor=Color3.new(0.266667,0.854902,0.921569)_.Parent=game.Players.LocalPlayer.Character end;j=ay:Create(game.Players.LocalPlayer.Character["HumanoidRootPart"],az,{CFrame=as})j:Play()end)function ax:Stop()j:Cancel()end;function ax:Wait()j.Completed:Wait()end;return ax end;local function aB(aC)local aD=aC;_G.StopTween=true;if W3 then if(aD.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude>=4000 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-5076.60107,314.54129,-3152.13086,0.351963997,-4.56893581e-08,-0.93601352,6.84364423e-08,1,-2.30789325e-08,0.93601352,-5.59344855e-08,0.351963997))end end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(111111,111111,111111)wait()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=aC;wait()game.Players.LocalPlayer.Character.Head:Destroy()wait()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=aC;wait()local aE={[1]="SetSpawnPoint"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))wait()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=aC;wait()local aE={[1]="SetSpawnPoint"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))wait(0.1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=aC;wait()local aE={[1]="SetSpawnPoint"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))wait()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(111111,111111,111111)wait()game.Players.LocalPlayer.Character.Head:Destroy()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(99999999,99999999,99999999)wait()local aE={[1]="SetLastSpawnPoint",[2]=tostring(game:GetService("Players").LocalPlayer.Data.SpawnPoint.Value)}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))wait()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=aC;wait()local aE={[1]="SetSpawnPoint"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))wait()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(99999999,99999999,99999999)wait()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(99999999,99999999,99999999)wait()local aE={[1]="SetLastSpawnPoint",[2]=tostring(game:GetService("Players").LocalPlayer.Data.SpawnPoint.Value)}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))wait()local aE={[1]="SetLastSpawnPoint",[2]=tostring(game:GetService("Players").LocalPlayer.Data.SpawnPoint.Value)}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))wait(0.5)local aE={[1]="SetLastSpawnPoint",[2]=tostring(game:GetService("Players").LocalPlayer.Data.SpawnPoint.Value)}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))wait()wait()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=aC;wait()game.Players.LocalPlayer.Character.Head:Destroy()wait()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=aC;wait()_G.StopTween=false;return end;function two(aF)pcall(function()game.Players.LocalPlayer.Character.Humanoid.Sit=false;game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored=false end)if(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position-aF.Position).Magnitude<=200 then pcall(function()tweenz:Cancel()end)game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame=aF else local ay=game:service"TweenService"local az=TweenInfo.new((game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position-aF.Position).Magnitude/325,Enum.EasingStyle.Linear)j,err=pcall(function()if not game.Players.LocalPlayer.Character:FindFirstChild("Highlight")then local _=Instance.new("Highlight")_.FillColor=Color3.new(0.266667,0.854902,0.921569)_.OutlineColor=Color3.new(0.266667,0.854902,0.921569)_.Parent=game.Players.LocalPlayer.Character end;tweenz=ay:Create(game.Players.LocalPlayer.Character["HumanoidRootPart"],az,{CFrame=aF})tweenz:Play()end)if not j then return err end end;function _TweenCanCle()tweenz:Cancel()end end;function TP(aG)Distance=(aG.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude;if game.Players.LocalPlayer.Character.Humanoid.Sit==true then game.Players.LocalPlayer.Character.Humanoid.Sit=false end;pcall(function()j=game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/210,Enum.EasingStyle.Linear),{CFrame=aG})end)j:Play()if Distance<=250 then j:Cancel()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=aG end;if _G.StopTween==true then j:Cancel()_G.Clip=false end end;function GetDistance(aH)return math.floor((aH.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude)end;function twoboat(aF)if(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position-aF.Position).Magnitude<=10 then pcall(function()tweenz:Cancel()end)else local ay=game:service"TweenService"local az=TweenInfo.new((game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position-aF.Position).Magnitude/325,Enum.EasingStyle.Linear)j,err=pcall(function()tweenz=ay:Create(game.Players.LocalPlayer.Character["HumanoidRootPart"],az,{CFrame=aF})tweenz:Play()end)if not j then return err end end;function _TweenCanCle()tweenz:Cancel()end end;local function aI(aJ,aK)local aL=aJ:FindFirstChild("Owner")if aL and aL:IsA("ObjectValue")and aL.Value then local aM=aL.Value.Name;if aM==game.Players.LocalPlayer.Name then for H,aN in pairs(aJ:GetDescendants())do if aN:IsA("BasePart")then local i=game:GetService("TweenService")local az=TweenInfo.new((aN.Position-aK.Position).Magnitude/200,Enum.EasingStyle.Linear)local j=i:Create(aN,az,{CFrame=aK})j:Play()function StopBoatF()j:Cancel()end end end end end end;local aO=game.PlaceId;local aP={}local aQ=""local aR=os.date("!*t").hour;local aS=false;function TPReturner()local aT;if aQ==""then aT=game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/r/games/'..aO..'/servers/Public?sortOrder=Asc&limit=100'))else aT=game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/r/games/'..aO..'/servers/Public?sortOrder=Asc&limit=100&cursor='..aQ))end;local aU=""if aT.nextPageCursor and aT.nextPageCursor~="null"and aT.nextPageCursor~=nil then aQ=aT.nextPageCursor end;local aV=0;for y,z in pairs(aT.data)do local aW=true;aU=tostring(z.id)if tonumber(z.maxPlayers)>tonumber(z.playing)then for H,aX in pairs(aP)do if aV~=0 then if aU==tostring(aX)then aW=false end else if tonumber(aR)~=tonumber(aX)then local aY=pcall(function()aP={}table.insert(aP,aR)end)end end;aV=aV+1 end;if aW==true then table.insert(aP,aU)task.wait()pcall(function()task.wait()game:GetService("TeleportService"):TeleportToPlaceInstance(aO,aU,game.Players.LocalPlayer)end)wait(4)end end end end;function Teleport()while task.wait()do pcall(function()TPReturner()if aQ~=""then TPReturner()end end)end end;function Hop()repeat wait()until game:IsLoaded()and game.Players.LocalPlayer;local aZ,a_=game:GetService"HttpService",game:GetService"TeleportService"local b0=aZ:JSONDecode(game:HttpGet("https://games.roblox.com/r/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))function joinNew()if not isfile('servers.sss')then writefile('servers.sss',aZ:JSONEncode({}))end;local b1=readfile('servers.sss')b1=aZ:JSONDecode(b1)for b2,b3 in next,b0["data"]do if b3~=game.JobId then local b4=true;for a,b5 in pairs(b1)do if b5==b3.id then b4=false end end;if b4 then table.insert(b1,b3["id"])writefile("servers.sss",aZ:JSONEncode(b1))wait()return b3['id']end end end end;local b6=joinNew()if not b6 then writefile("servers.sss",aZ:JSONEncode({}))local b6=joinNew()a_:TeleportToPlaceInstance(game.PlaceId,b6)else a_:TeleportToPlaceInstance(game.PlaceId,b6)end end;function Click()game:GetService("VirtualUser"):CaptureController()game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))end;function GetFightingStyle(b7)ReturnText=""for y,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do if z:IsA("Tool")then if z.ToolTip==b7 then ReturnText=z.Name end end end;for y,z in pairs(game.Players.LocalPlayer.Character:GetChildren())do if z:IsA("Tool")then if z.ToolTip==b7 then ReturnText=z.Name end end end;if ReturnText~=""then return ReturnText else return"Not Have"end end;function CheckMasteryWeapon(b8,b9)if game.Players.LocalPlayer.Backpack:FindFirstChild(b8)then if tonumber(game.Players.LocalPlayer.Backpack:FindFirstChild(b8).Level.Value)<tonumber(b9)then return"true DownTo"elseif tonumber(game.Players.LocalPlayer.Backpack:FindFirstChild(b8).Level.Value)>=tonumber(b9)then return"true UpTo"end end;if game.Players.LocalPlayer.Character:FindFirstChild(b8)then if tonumber(game.Players.LocalPlayer.Character:FindFirstChild(b8).Level.Value)<tonumber(b9)then return"true DownTo"elseif tonumber(game.Players.LocalPlayer.Character:FindFirstChild(b8).Level.Value)>=tonumber(b9)then return"true UpTo"end end;return"else"end;function GetWeaponInventory(ba)for y,z in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory"))do if type(z)=="table"then if z.Type=="Sword"then if z.Name==ba then return true end end end end;return false end;function GetMaterial(bb)for y,z in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory"))do if type(z)=="table"then if z.Type=="Material"then if z.Name==bb then return z.Count end end end end;return 0 end;local bc;if World1 then bc={"Magma Ore","Leather","Scrap Metal","Angel Wings","Fish Tail"}elseif World2 then bc={"Magma Ore","Scrap Metal","Radioactive Material","Vampire Fang","Mystic Droplet"}elseif World3 then bc={"Mini Tusk","Fish Tail","Scrap Metal","Dragon Scale","Conjured Cocoa","Demonic Wisp","Gunpowder"}end;table.sort(bc)local function bd(be)for y,z in pairs(be)do if game:GetService("Workspace").Enemies:FindFirstChild(z)then return true end end;return false end;local function bf(W)if World1 then if W=="Magma Ore"then MaterialMob={"Military Soldier","Military Spy"}CFrameMon=CFrame.new(-5815,84,8820)elseif W=="Leather"or W=="Scrap Metal"then MaterialMob={"Brute"}CFrameMon=CFrame.new(-1145,15,4350)elseif W=="Angel Wings"then MaterialMob={"God's Guard"}CFrameMon=CFrame.new(-4698,845,-1912)elseif W=="Fish Tail"then MaterialMob={"Fishman Warrior","Fishman Commando"}CFrameMon=CFrame.new(61123,19,1569)end end;if World2 then if W=="Magma Ore"then MaterialMob={"Magma Ninja"}CFrameMon=CFrame.new(-5428,78,-5959)elseif W=="Scrap Metal"then MaterialMob={"Swan Pirate"}CFrameMon=CFrame.new(878,122,1235)elseif W=="Radioactive Material"then MaterialMob={"Factory Staff"}CFrameMon=CFrame.new(295,73,-56)elseif W=="Vampire Fang"then MaterialMob={"Vampire"}CFrameMon=CFrame.new(-6033,7,-1317)elseif W=="Mystic Droplet"then MaterialMob={"Water Fighter","Sea Soldier"}CFrameMon=CFrame.new(-3385,239,-10542)end end;if World3 then if W=="Mini Tusk"then MaterialMob={"Mythological Pirate"}CFrameMon=CFrame.new(-13545,470,-6917)elseif W=="Fish Tail"then MaterialMob={"Fishman Raider","Fishman Captain"}CFrameMon=CFrame.new(-10993,332,-8940)elseif W=="Scrap Metal"then MaterialMob={"Jungle Pirate"}CFrameMon=CFrame.new(-12107,332,-10549)elseif W=="Dragon Scale"then MaterialMob={"Dragon Crew Archer","Dragon Crew Warrior"}CFrameMon=CFrame.new(6594,383,139)elseif W=="Conjured Cocoa"then MaterialMob={"Cocoa Warrior","Chocolate Bar Battler","Sweet Thief","Candy Rebel"}CFrameMon=CFrame.new(620.6344604492188,78.93644714355469,-12581.369140625)elseif W=="Demonic Wisp"then MaterialMob={"Demonic Soul"}CFrameMon=CFrame.new(-9507,172,6158)elseif W=="Gunpowder"then MaterialMob={"Pistol Billionaire"}CFrameMon=CFrame.new(-469,74,5904)end end end;_G.Color=Color3.fromRGB(0,86,255)if game:GetService("CoreGui").RobloxGui.Modules:FindFirstChild("VVV")then game:GetService("CoreGui").RobloxGui.Modules:FindFirstChild("VVV"):Destroy()end;local g=game:GetService("UserInputService")local i=game:GetService("TweenService")local function bg(bh,a0)local bi=nil;local bj=nil;local bk=nil;local bl=nil;local function bm(bn)local bo=bn.Position-bk;local bp=UDim2.new(bl.X.Scale,bl.X.Offset+bo.X,bl.Y.Scale,bl.Y.Offset+bo.Y)local bq=i:Create(a0,TweenInfo.new(0.15),{Position=bp})bq:Play()end;bh.InputBegan:Connect(function(bn)if bn.UserInputType==Enum.UserInputType.MouseButton1 or bn.UserInputType==Enum.UserInputType.Touch then bi=true;bk=bn.Position;bl=a0.Position;bn.Changed:Connect(function()if bn.UserInputState==Enum.UserInputState.End then bi=false end end)end end)bh.InputChanged:Connect(function(bn)if bn.UserInputType==Enum.UserInputType.MouseMovement or bn.UserInputType==Enum.UserInputType.Touch then bj=bn end end)g.InputChanged:Connect(function(bn)if bn==bj and bi then bm(bn)end end)end;local bm={}function bm:Window(c,br,bs)local r=Instance.new("UICorner")local bt={}local bu=false;local bv=false;local bw=""local bs=bs or Enum.KeyCode.F1;local bx=string.gsub(tostring(bs),"Enum.KeyCode.","")local by=Instance.new("ScreenGui")by.Name="VVV"by.Parent=game:GetService("CoreGui").RobloxGui.Modules;by.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;local bz=Instance.new("Frame")bz.Name="Main"bz.Parent=by;bz.ClipsDescendants=true;bz.AnchorPoint=Vector2.new(0.5,0.5)bz.BackgroundColor3=Color3.fromRGB(0,0,0)bz.Position=UDim2.new(0.5,0,0.5,0)bz.Size=UDim2.new(0,0,0,0)r.Parent=bz;bz:TweenSize(UDim2.new(0,550,0,350),"Out","Quad",0.4,true)local bA=Instance.new("UIStroke")bA.Name="BtnStroke"bA.Parent=bz;bA.ApplyStrokeMode=Enum.ApplyStrokeMode.Border;bA.Color=_G.Color;bA.LineJoinMode=Enum.LineJoinMode.Round;bA.Thickness=1;bA.Transparency=0;bA.Enabled=true;bA.Archivable=true;local bB=Instance.new("UICorner")bB.Name="MCNR"bB.Parent=bz;bB.CornerRadius=UDim.new(0,0)local bC=Instance.new("Frame")bC.Name="Top"bC.Parent=bz;bC.BackgroundColor3=Color3.fromRGB(0,0,0)bC.Size=UDim2.new(0,556,0,30)bC.BackgroundTransparency=1.000;local bD=Instance.new("UICorner")bD.Name="TCNR"bD.Parent=bC;bD.CornerRadius=UDim.new(0,5)local bE=Instance.new("ImageLabel")bE.Name="Logo"bE.Parent=bz;bE.BackgroundColor3=Color3.fromRGB(255,255,255)bE.BackgroundTransparency=1.000;bE.Position=UDim2.new(0,5,0,-115)bE.Size=UDim2.new(0,80,0,80)bE.Image="rbxassetid://14645512457"local bF=Instance.new("Frame")bF.Name="Tab"bF.Parent=bz;bF.BackgroundColor3=Color3.fromRGB(45,45,45)bF.Position=UDim2.new(0,5,0,50)bF.Size=UDim2.new(0,0,0,0)local bG=Instance.new("UIListLayout")bG.Name="TabCorner"bG.Parent=bF;bG.SortOrder=Enum.SortOrder.LayoutOrder;bG.Padding=UDim.new(0,15)local bA=Instance.new("UIStroke")local bH=Instance.new("ScrollingFrame")local bI=Instance.new("UICorner")bH.Name="ScrollTab"bH.Parent=bF;bH.Active=true;bH.BackgroundColor3=Color3.fromRGB(255,255,255)bH.BackgroundTransparency=1.000;bH.Size=UDim2.new(0,133,0,300)bH.CanvasSize=UDim2.new(0,0,0,0)bH.ScrollBarThickness=0;local bJ=Instance.new("UIListLayout")bJ.Name="PLL"bJ.Parent=bH;bJ.SortOrder=Enum.SortOrder.LayoutOrder;bJ.Padding=UDim.new(0,15)local bK=Instance.new("UIPadding")bK.Name="PPD"bK.Parent=bH;bK.PaddingLeft=UDim.new(0,9)bK.PaddingTop=UDim.new(0,2)local bA=Instance.new("UIStroke")local bL=Instance.new("Frame")local bM=Instance.new("TextLabel")local bN=Instance.new("Frame")bN.Name="Page"bN.Parent=bz;bN.BackgroundColor3=Color3.fromRGB(0,0,0)bN.Position=UDim2.new(0.255426834,0,0.086000003,0)bN.Size=UDim2.new(0,410,0,308)local bO=Instance.new("UICorner")bO.Parent=bN;bO.CornerRadius=UDim.new(0,3)local bP=Instance.new("Frame")bP.Name="MainPage"bP.Parent=bN;bP.ClipsDescendants=true;bP.BackgroundColor3=Color3.fromRGB(255,255,255)bP.BackgroundTransparency=1.000;bP.Size=UDim2.new(0,410,0,308)local bQ=Instance.new("Folder")bQ.Name="PageList"bQ.Parent=bP;local bR=Instance.new("UIPageLayout")bR.Parent=bQ;bR.SortOrder=Enum.SortOrder.LayoutOrder;bR.EasingDirection=Enum.EasingDirection.InOut;bR.EasingStyle=Enum.EasingStyle.Quad;bR.FillDirection=Enum.FillDirection.Vertical;bR.Padding=UDim.new(0,10)bR.TweenTime=0.400;bR.GamepadInputEnabled=false;bR.ScrollWheelInputEnabled=false;bR.TouchInputEnabled=false;bg(bC,bz)g.InputBegan:Connect(function(bn)if bn.KeyCode==Enum.KeyCode.F1 then if bu==false then bu=true;bz:TweenSize(UDim2.new(0,0,0,0),"In","Quad",0.4,true)else bu=false;bz:TweenSize(UDim2.new(0,550,0,350),"Out","Quad",0.5,true)end end end)if _G.Mode=="English"then bL.Parent=bz;bL.BackgroundColor3=Color3.fromRGB(0,0,0)bL.BackgroundTransparency=1.000;bL.BorderColor3=Color3.fromRGB(0,0,0)bL.BorderSizePixel=0;bL.Position=UDim2.new(0.1,-150,0.158805028,-80)bL.Size=UDim2.new(0,327,0,100)bM.Parent=bL;bM.BackgroundColor3=Color3.fromRGB(255,255,255)bM.BackgroundTransparency=1.000;bM.BorderColor3=Color3.fromRGB(0,0,0)bM.BorderSizePixel=0;bM.Position=UDim2.new(0.199847102,0,0.25,0)bM.Size=UDim2.new(0,200,0,50)bM.Font=Enum.Font.FredokaOne;bM.Text="English Version"bM.TextColor3=Color3.fromRGB(0,86,255)bM.TextSize=18.000;bM.TextWrapped=true else bL.Parent=bz;bL.BackgroundColor3=Color3.fromRGB(0,0,0)bL.BackgroundTransparency=1.000;bL.BorderColor3=Color3.fromRGB(0,0,0)bL.BorderSizePixel=0;bL.Position=UDim2.new(0.1,-150,0.158805028,-80)bL.Size=UDim2.new(0,327,0,100)bM.Parent=bL;bM.BackgroundColor3=Color3.fromRGB(255,255,255)bM.BackgroundTransparency=1.000;bM.BorderColor3=Color3.fromRGB(0,0,0)bM.BorderSizePixel=0;bM.Position=UDim2.new(0.199847102,0,0.25,0)bM.Size=UDim2.new(0,200,0,50)bM.Font=Enum.Font.FredokaOne;bM.Text="Thai Version"bM.TextColor3=Color3.fromRGB(0,86,255)bM.TextSize=18.000;bM.TextWrapped=true end;local bS={}function bS:Tab(c,bT)local bA=Instance.new("UIStroke")local bU=Instance.new("UICorner")local bV=Instance.new("TextButton")local bW=Instance.new("TextLabel")local bX=Instance.new("UICorner")local bY=Instance.new("TextLabel")bV.Parent=bH;bV.Name=c.."Server"bV.Text=""bV.BackgroundColor3=Color3.fromRGB(255,255,255)bV.BackgroundTransparency=1.000;bV.Size=UDim2.new(0,120,0,25)bV.Font=Enum.Font.GothamSemibold;bV.TextColor3=Color3.fromRGB(255,255,255)bV.TextSize=12.000;bV.TextTransparency=0.5;bY.Parent=bV;bY.BackgroundColor3=Color3.fromRGB(150,150,150)bY.BackgroundTransparency=1.000;bY.Position=UDim2.new(0,25,0,0)bY.Size=UDim2.new(0,100,0,25)bY.Font=Enum.Font.GothamSemibold;bY.Text=c;bY.TextColor3=Color3.fromRGB(255,255,255)bY.TextSize=15.000;bY.TextXAlignment=Enum.TextXAlignment.Left;local bZ=Instance.new("ImageLabel")bZ.Name="LogoIDK"bZ.Parent=bV;bZ.BackgroundColor3=Color3.fromRGB(255,255,255)bZ.BackgroundTransparency=1.000;bZ.Position=UDim2.new(0,3,0,3)bZ.Size=UDim2.new(0,20,0,20)bZ.Image=bT;bX.CornerRadius=UDim.new(0,3)bX.Parent=bV;bA.Name="BtnStroke"bA.Parent=bV;bA.ApplyStrokeMode=Enum.ApplyStrokeMode.Border;bA.Color=_G.Color;bA.LineJoinMode=Enum.LineJoinMode.Round;bA.Thickness=1;bA.Transparency=0;bA.Enabled=true;bA.Archivable=true;local b_=Instance.new("ScrollingFrame")b_.Name=c.."_Page"b_.Parent=bQ;b_.Active=true;b_.BackgroundColor3=Color3.fromRGB(255,255,255)b_.BackgroundTransparency=1.000;b_.BorderSizePixel=0;b_.Size=UDim2.new(0,400,0,308)b_.CanvasSize=UDim2.new(0,0,0,0)b_.ScrollBarThickness=0;local c0=Instance.new("UIPadding")local c1=Instance.new("UIListLayout")c0.Parent=b_;c0.PaddingLeft=UDim.new(0,10)c0.PaddingTop=UDim.new(0,5)c1.Padding=UDim.new(0,12)c1.Parent=b_;c1.SortOrder=Enum.SortOrder.LayoutOrder;bV.MouseButton1Click:Connect(function()for y,z in next,bH:GetChildren()do if z:IsA("TextButton")then i:Create(z,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{TextTransparency=0.5}):Play()end;i:Create(bV,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{TextTransparency=0}):Play()end;for y,z in next,bQ:GetChildren()do bw=string.gsub(bV.Name,"Server","").."_Page"if z.Name==bw then bR:JumpTo(z)end end end)if bv==false then for y,z in next,bH:GetChildren()do if z:IsA("TextButton")then i:Create(z,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{TextTransparency=0.5}):Play()end;i:Create(bV,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{TextTransparency=0}):Play()end;bR:JumpToIndex(1)bv=true end;game:GetService("RunService").Stepped:Connect(function()pcall(function()b_.CanvasSize=UDim2.new(0,0,0,c1.AbsoluteContentSize.Y+20)bH.CanvasSize=UDim2.new(0,0,0,bJ.AbsoluteContentSize.Y+20)end)end)function bm:Notification(c2)local c3=Instance.new("TextButton")local c4=Instance.new("Frame")local c5=Instance.new("TextButton")local c6=Instance.new("UICorner")local c7=Instance.new("TextLabel")local c8=Instance.new("TextLabel")local c9=Instance.new("TextLabel")local ca=Instance.new("UICorner")local cb=Instance.new("UIStroke")local cc=Instance.new("Frame")c3.Name="NotificationHold"c3.Parent=bz;c3.BackgroundColor3=Color3.new(125,125,125)c3.BackgroundTransparency=1;c3.BorderSizePixel=0;c3.Size=UDim2.new(0,589,0,378)c3.AutoButtonColor=false;c3.Font=Enum.Font.SourceSans;c3.Text=""c3.TextColor3=Color3.new(125,0,125)c3.TextSize=13.000;i:Create(c3,TweenInfo.new(.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{BackgroundTransparency=1}):Play()wait(0.4)c4.Name="NotificationFrame"c4.Parent=c3;c4.AnchorPoint=Vector2.new(0.5,0.5)c4.BackgroundColor3=Color3.fromRGB(15,15,15)c4.BorderColor3=Color3.new(125,0,125)c4.BorderSizePixel=0;c4.Transparency=0;c4.ClipsDescendants=true;c4.Position=UDim2.new(0,295,0,190)c4.Size=UDim2.new(0,0,0,0)c4:TweenSize(UDim2.new(0,400,0,250),Enum.EasingDirection.Out,Enum.EasingStyle.Quart,.6,true)ca.Name="NotifCorner"ca.Parent=c4;ca.CornerRadius=UDim.new(0,5)cb.Name="NotifHolderUIStroke"cb.Parent=c4;cb.ApplyStrokeMode=Enum.ApplyStrokeMode.Border;cb.Color=Color3.new(125,0,125)cb.LineJoinMode=Enum.LineJoinMode.Round;cb.Thickness=2;cb.Transparency=0;cb.Enabled=true;cb.Archivable=true;c5.Name="OkayBtn"c5.Parent=c4;c5.BackgroundColor3=Color3.fromRGB(190,190,190)c5.BorderSizePixel=2;c5.BorderColor3=Color3.new(125,0,125)c5.Position=UDim2.new(0,125,0,190)c5.Size=UDim2.new(0,150,0,30)c5.AutoButtonColor=true;c5.Font=Enum.Font.SourceSans;c5.Text=""c5.TextColor3=Color3.new(125,0,125)c5.TextSize=13.000;c6.CornerRadius=UDim.new(0,5)c6.Name="OkayBtnCorner"c6.Parent=c5;c7.Name="OkayBtnTitle"c7.Parent=c5;c7.BackgroundColor3=Color3.new(125,0,125)c7.BackgroundTransparency=1.000;c7.Size=UDim2.new(0,150,0,30)c7.Text="OK"c7.Font=Enum.Font.GothamSemibold;c7.TextColor3=Color3.fromRGB(0,0,0)c7.TextSize=22.000;c8.Name="NotificationTitle"c8.Parent=c4;c8.BackgroundColor3=Color3.new(125,0,125)c8.BackgroundTransparency=1.000;c8.Position=UDim2.new(0,0,0,10)c8.Size=UDim2.new(0,400,0,25)c8.ZIndex=3;c8.Font=Enum.Font.GothamSemibold;c8.Text="Notification"c8.TextColor3=Color3.fromRGB(255,0,0)c8.TextSize=22.000;cc.Name="Line"cc.Parent=c4;cc.BackgroundColor3=Color3.new(125,0,125)cc.BorderSizePixel=0;cc.Position=UDim2.new(0,10,0,40)cc.Size=UDim2.new(0,380,0,1)c9.Name="NotificationDesc"c9.Parent=c4;c9.BackgroundColor3=_G.SectionColor;c9.BackgroundTransparency=1.000;c9.Position=UDim2.new(0,10,0,80)c9.Size=UDim2.new(0,380,0,200)c9.Font=Enum.Font.GothamSemibold;c9.Text=c2;c9.TextScaled=false;c9.TextColor3=Color3.new(125,0,125)c9.TextSize=16.000;c9.TextWrapped=true;c9.TextXAlignment=Enum.TextXAlignment.Center;c9.TextYAlignment=Enum.TextYAlignment.Top;c5.MouseEnter:Connect(function()i:Create(c5,TweenInfo.new(.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{BackgroundColor3=Color3.fromRGB(34,34,34)}):Play()end)c5.MouseLeave:Connect(function()i:Create(c5,TweenInfo.new(.2,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{BackgroundColor3=Color3.fromRGB(25,25,25)}):Play()end)c5.MouseButton1Click:Connect(function()c4:TweenSize(UDim2.new(0,0,0,0),Enum.EasingDirection.Out,Enum.EasingStyle.Quart,.6,true)wait(0.4)i:Create(c3,TweenInfo.new(.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{BackgroundTransparency=1}):Play()wait(.3)c3:Destroy()end)end;local cd={}function cd:Button(c,ce)local cf=Instance.new("Frame")local r=Instance.new("UICorner")local cg=Instance.new("TextButton")local ch=Instance.new("UICorner")local ci=Instance.new("Frame")local cj=Instance.new("UICorner")cf.Name="Button"cf.Parent=b_;cf.BackgroundColor3=Color3.new(0,0,0)cf.Size=UDim2.new(0,387,0,31)r.CornerRadius=UDim.new(0,5)r.Parent=cf;cg.Name="TextBtn"cg.Parent=cf;cg.BackgroundColor3=_G.Color;cg.Position=UDim2.new(0,1,0,1)cg.Size=UDim2.new(0,385,0,32)cg.AutoButtonColor=false;cg.Font=Enum.Font.GothamSemibold;cg.Text=c;cg.TextColor3=Color3.fromRGB(0,0,0)cg.TextSize=15.000;ch.CornerRadius=UDim.new(0,5)ch.Parent=cg;ci.Name="Black"ci.Parent=cf;ci.BackgroundColor3=Color3.fromRGB(0,0,0)ci.BackgroundTransparency=1.000;ci.BorderSizePixel=0;ci.Position=UDim2.new(0,1,0,1)ci.Size=UDim2.new(0,385,0,29)cj.CornerRadius=UDim.new(0,5)cj.Parent=ci;cg.MouseEnter:Connect(function()i:Create(ci,TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{BackgroundTransparency=0.7}):Play()end)cg.MouseLeave:Connect(function()i:Create(ci,TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{BackgroundTransparency=1}):Play()end)cg.MouseButton1Click:Connect(function()cg.TextSize=0;i:Create(cg,TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{TextSize=15}):Play()ce()end)end;function cd:Toggle(c,ck,ce)ck=ck or false;local cl=ck;local r=Instance.new("UICorner")local q=Instance.new("UIStroke")local cf=Instance.new("TextButton")local ch=Instance.new("UICorner")local bY=Instance.new("TextLabel")local cm=Instance.new("Frame")local cj=Instance.new("UICorner")local cn=Instance.new("Frame")local co=Instance.new("UICorner")local cp=Instance.new("ImageLabel")cf.Name="Button"cf.Parent=b_;cf.BackgroundColor3=Color3.fromRGB(0,0,0)cf.Position=UDim2.new(0,1,0,1)cf.Size=UDim2.new(0,387,0,31)cf.AutoButtonColor=false;cf.Font=Enum.Font.SourceSans;cf.Text=""cf.TextColor3=Color3.fromRGB(0,0,0)cf.TextSize=11.000;q.Name="UIStroke"q.Parent=cf;q.ApplyStrokeMode=Enum.ApplyStrokeMode.Border;q.Color=_G.Color;q.LineJoinMode=Enum.LineJoinMode.Round;q.Thickness=1;q.Transparency=0;q.Enabled=true;q.Archivable=true;ch.CornerRadius=UDim.new(0,3)ch.Parent=cf;cp.Name="Icon"cp.Parent=cf;cp.BackgroundColor3=Color3.fromRGB(255,255,255)cp.BackgroundTransparency=1.000;cp.Position=UDim2.new(0,5,0,1)cp.Size=UDim2.new(0,30,0,30)cp.Image="rbxassetid://"bY.Parent=cf;bY.BackgroundColor3=Color3.fromRGB(150,150,150)bY.BackgroundTransparency=1.000;bY.Position=UDim2.new(0,15,0,0)bY.Size=UDim2.new(0,280,0,30)bY.Font=Enum.Font.GothamSemibold;bY.Text=""..c;bY.TextColor3=Color3.fromRGB(255,255,255)bY.TextSize=15;bY.TextXAlignment=Enum.TextXAlignment.Left;cm.Name="ToggleImage"cm.Parent=cf;cm.BackgroundColor3=Color3.fromRGB(225,225,225)cm.Position=UDim2.new(0,332,0,6)cm.Size=UDim2.new(0,45,0,20)cj.CornerRadius=UDim.new(0,10)cj.Parent=cm;cn.Name="Circle"cn.Parent=cm;cn.BackgroundColor3=Color3.fromRGB(227,60,60)cn.Position=UDim2.new(0,2,0,2)cn.Size=UDim2.new(0,16,0,16)co.CornerRadius=UDim.new(0,10)co.Parent=cn;cf.MouseButton1Click:Connect(function()if cl==false then cl=true;cn:TweenPosition(UDim2.new(0,27,0,2),"Out","Sine",0.2,true)i:Create(cn,TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{BackgroundColor3=_G.Color}):Play()else cl=false;cn:TweenPosition(UDim2.new(0,2,0,2),"Out","Sine",0.2,true)i:Create(cn,TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{BackgroundColor3=Color3.fromRGB(227,60,110)}):Play()end;pcall(ce,cl)end)if ck==true then cl=true;cn:TweenPosition(UDim2.new(0,27,0,2),"Out","Sine",0.4,true)i:Create(cn,TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{BackgroundColor3=_G.Color}):Play()pcall(ce,cl)end end;function cd:Dropdown(c,cq,ce)local cr=false;local cs=Instance.new("Frame")local r=Instance.new("UICorner")local ct=Instance.new("TextLabel")local cu=Instance.new("ScrollingFrame")local c1=Instance.new("UIListLayout")local c0=Instance.new("UIPadding")local cv=Instance.new("TextButton")local cw=Instance.new("ImageLabel")local q=Instance.new("UIStroke")cs.Name="Dropdown"cs.Parent=b_;cs.BackgroundColor3=Color3.fromRGB(0,0,0)cs.ClipsDescendants=true;cs.Size=UDim2.new(0,387,0,31)q.Name="UIStroke"q.Parent=cs;q.ApplyStrokeMode=Enum.ApplyStrokeMode.Border;q.Color=_G.Color;q.LineJoinMode=Enum.LineJoinMode.Round;q.Thickness=1;q.Transparency=0;q.Enabled=true;q.Archivable=true;r.CornerRadius=UDim.new(0,3)r.Parent=cs;ct.Name="DropTitle"ct.Parent=cs;ct.BackgroundColor3=Color3.fromRGB(255,255,255)ct.BackgroundTransparency=1.000;ct.Size=UDim2.new(0,385,0,31)ct.Font=Enum.Font.GothamSemibold;ct.Text=c;ct.TextColor3=Color3.fromRGB(255,255,255)ct.TextSize=15.000;cu.Name="DropScroll"cu.Parent=ct;cu.Active=true;cu.BackgroundColor3=Color3.fromRGB(255,255,255)cu.BackgroundTransparency=1.000;cu.BorderSizePixel=0;cu.Position=UDim2.new(0,0,0,31)cu.Size=UDim2.new(0,385,0,100)cu.CanvasSize=UDim2.new(0,0,0,0)cu.ScrollBarThickness=3;c1.Parent=cu;c1.SortOrder=Enum.SortOrder.LayoutOrder;c1.Padding=UDim.new(0,5)c0.Parent=cu;c0.PaddingLeft=UDim.new(0,5)c0.PaddingTop=UDim.new(0,5)cv.Name="DropButton"cv.Parent=cs;cv.BackgroundColor3=Color3.fromRGB(255,255,255)cv.BackgroundTransparency=1.000;cv.Size=UDim2.new(0,385,0,31)cv.Font=Enum.Font.SourceSans;cv.Text=""cv.TextColor3=Color3.fromRGB(0,0,0)cv.TextSize=14.000;for y,z in next,cq do local cx=Instance.new("TextButton")cx.Name="Item"cx.Parent=cu;cx.BackgroundColor3=Color3.fromRGB(255,255,255)cx.BackgroundTransparency=1.000;cx.Size=UDim2.new(0,385,0,26)cx.Font=Enum.Font.GothamSemibold;cx.Text=tostring(z)cx.TextColor3=Color3.fromRGB(255,255,255)cx.TextSize=13.000;cx.TextTransparency=0.500;cx.MouseEnter:Connect(function()i:Create(cx,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{TextTransparency=0}):Play()end)cx.MouseLeave:Connect(function()i:Create(cx,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{TextTransparency=0.5}):Play()end)cx.MouseButton1Click:Connect(function()cr=false;cs:TweenSize(UDim2.new(0,385,0,31),"Out","Quad",0.3,true)i:Create(cw,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{Rotation=180}):Play()ce(cx.Text)ct.Text=c.." : "..cx.Text end)end;cu.CanvasSize=UDim2.new(0,0,0,c1.AbsoluteContentSize.Y+10)cv.MouseButton1Click:Connect(function()if cr==false then cr=true;cs:TweenSize(UDim2.new(0,385,0,131),"Out","Quad",0.3,true)i:Create(cw,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{Rotation=0}):Play()else cr=false;cs:TweenSize(UDim2.new(0,385,0,31),"Out","Quad",0.3,true)i:Create(cw,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{Rotation=180}):Play()end end)local cy={}function cy:Add(cz)local cx=Instance.new("TextButton")cx.Name="Item"cx.Parent=cu;cx.BackgroundColor3=Color3.fromRGB(255,255,255)cx.BackgroundTransparency=1.000;cx.Size=UDim2.new(0,385,0,26)cx.Font=Enum.Font.GothamSemibold;cx.Text=tostring(cz)cx.TextColor3=Color3.fromRGB(255,255,255)cx.TextSize=13.000;cx.TextTransparency=0.500;cx.MouseEnter:Connect(function()i:Create(cx,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{TextTransparency=0}):Play()end)cx.MouseLeave:Connect(function()i:Create(cx,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{TextTransparency=0.5}):Play()end)cx.MouseButton1Click:Connect(function()cr=false;cs:TweenSize(UDim2.new(0,387,0,31),"Out","Quad",0.3,true)i:Create(cw,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{Rotation=180}):Play()ce(cx.Text)ct.Text=c.." : "..cx.Text end)end;function cy:Clear()ct.Text=tostring(c).." : "cr=false;cs:TweenSize(UDim2.new(0,385,0,31),"Out","Quad",0.3,true)i:Create(cw,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{Rotation=180}):Play()for y,z in next,cu:GetChildren()do if z:IsA("TextButton")then z:Destroy()end end end;return cy end;function cd:Slider(c,cA,cB,cC,ce)local cD={}local cE=Instance.new("Frame")local cF=Instance.new("Frame")local q=Instance.new("UIStroke")local r=Instance.new("UICorner")local cG=Instance.new("ImageLabel")local cH=Instance.new("TextLabel")local bY=Instance.new("TextLabel")local cI=Instance.new("Frame")local cJ=Instance.new("Frame")local cK=Instance.new("Frame")local cL=Instance.new("UICorner")local cM=Instance.new("UICorner")local cN=Instance.new("Frame")local cO=Instance.new("TextBox")local cP=Instance.new("UIStroke")local cQ=Instance.new("TextButton")local ch=Instance.new("UICorner")local cj=Instance.new("UICorner")cE.Name=slidertitle or"SliderFrame"cE.Parent=b_;cE.BackgroundColor3=_G.Color;cE.BackgroundTransparency=1.000;cE.BorderSizePixel=0;cE.Size=UDim2.new(0,387,0,60)cF.Name="SliderFrame_2"cF.Parent=cE;cF.BackgroundColor3=Color3.fromRGB(0,0,0)cF.BackgroundTransparency=0;cF.BorderSizePixel=0;cF.Position=UDim2.new(0,1,0,1)cF.Size=UDim2.new(0,387,0,60)q.Name="UIStroke"q.Parent=cF;q.ApplyStrokeMode=Enum.ApplyStrokeMode.Border;q.Color=_G.Color;q.LineJoinMode=Enum.LineJoinMode.Round;q.Thickness=1;q.Transparency=0;q.Enabled=true;q.Archivable=true;r.Parent=cF;r.CornerRadius=UDim.new(0,3)cG.Name="ImageLabel"cG.Parent=cF;cG.BackgroundColor3=_G.Color;cG.BackgroundTransparency=1.000;cG.BorderSizePixel=0;cG.Position=UDim2.new(0,7.5,0,7.5)cG.Size=UDim2.new(0,30,0,30)cG.Image="rbxassetid://"bY.Parent=cF;bY.BackgroundColor3=Color3.fromRGB(150,150,150)bY.BackgroundTransparency=1.000;bY.Position=UDim2.new(0,45,0,5)bY.Size=UDim2.new(0,280,0,30)bY.Font=Enum.Font.GothamSemibold;bY.Text="|  "..c;bY.TextColor3=Color3.fromRGB(255,255,255)bY.TextSize=15.000;bY.TextXAlignment=Enum.TextXAlignment.Left;cI.Name="SliderInput"cI.Parent=cF;cI.BackgroundColor3=_G.Color;cI.BackgroundTransparency=0.7;cI.BorderSizePixel=0;cI.Position=UDim2.new(0,8,0,42)cI.Size=UDim2.new(0,365,0,6)cM.CornerRadius=UDim.new(0,100000)cM.Parent=cI;cJ.Name="SliderButton"cJ.Parent=cI;cJ.BackgroundColor3=_G.Color;cJ.BackgroundTransparency=1.000;cJ.BorderSizePixel=0;cJ.Position=UDim2.new(0,0,0,-7)cJ.Size=UDim2.new(0,346,0,25)cK.Name="SliderCount"cK.Parent=cJ;cK.BackgroundColor3=_G.Color;cK.BackgroundTransparency=0.3;cK.BorderSizePixel=0;cK.Position=UDim2.new(0,cC,0,0)cK.Size=UDim2.new(0,18,0,18)cQ.Name="Title_2"cQ.Parent=cJ;cQ.AnchorPoint=Vector2.new(0,0)cQ.BackgroundColor3=_G.Color;cQ.AutoButtonColor=false;cQ.BackgroundTransparency=1.000;cQ.Position=UDim2.new(0,cC,0,0)cQ.Size=UDim2.new(0,18,0,18)cQ.Font=Enum.Font.GothamBold;cQ.Text=tostring(cC and math.floor(cC/cB*(cB-cA)+cA)or 0)cQ.TextColor3=Color3.fromRGB(255,255,255)cQ.TextSize=8.000;cQ.TextXAlignment=Enum.TextXAlignment.Center;ch.Parent=cQ;ch.CornerRadius=UDim.new(0,100000)cL.CornerRadius=UDim.new(0,100000)cL.Parent=cK;cP.Name="SliderStroke"cP.Parent=cN;cP.ApplyStrokeMode=Enum.ApplyStrokeMode.Border;cP.Color=_G.Color;cP.LineJoinMode=Enum.LineJoinMode.Round;cP.Thickness=1;cP.Transparency=0.5;cP.Enabled=true;cP.Archivable=true;cN.Name="BoxFrame"cN.Parent=cF;cN.BackgroundColor3=_G.Color;cN.BackgroundTransparency=1.000;cN.Size=UDim2.new(0,50,0,15)cN.Position=UDim2.new(0,323,0,8)cO.Name="SliderBox"cO.Parent=cN;cO.BackgroundColor3=Color3.fromRGB(200,0,0)cO.BackgroundTransparency=1.000;cO.Position=UDim2.new(0,0,0,1.65)cO.Size=UDim2.new(0,50,0,15)cO.ClearTextOnFocus=false;cO.Font=Enum.Font.Code;cO.Text=tostring(cC and math.floor(cC/cB*(cB-cA)+cA)or 0)cO.TextColor3=Color3.fromRGB(200,200,200)cO.TextSize=10.000;cO.TextTransparency=0;cO.TextXAlignment=Enum.TextXAlignment.Center;cO.TextEditable=true;cj.Parent=cN;cj.CornerRadius=UDim.new(0,2)local cR;local cS;local cT;local cU=cJ;local function cU(bn)local slidein=UDim2.new(math.clamp((bn.Position.X-cJ.AbsolutePosition.X)/cJ.AbsoluteSize.X,0,1),0,0,0)cK:TweenPosition(slidein,Enum.EasingDirection.InOut,Enum.EasingStyle.Linear,0.08,true)cQ:TweenPosition(slidein,Enum.EasingDirection.InOut,Enum.EasingStyle.Linear,0.12,true)local Value=math.floor(slidein.X.Scale*cB/cB*(cB-cA)+cA)cO.Text=tostring(Value)cQ.Text=tostring(Value)pcall(ce,Value,slidein)end;cJ.InputBegan:Connect(function(bn)if bn.UserInputType==Enum.UserInputType.MouseButton1 or bn.UserInputType==Enum.UserInputType.Touch then cR=true;cT=bn;cS=bn.Position.X;slidein=cJ.AbsolutePosition.X;game.TweenService:Create(cK,TweenInfo.new(0.08,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),{BackgroundTransparency=0,Size=UDim2.new(0,14,0,14)}):Play()game.TweenService:Create(cQ,TweenInfo.new(0.12,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),{AnchorPoint=Vector2.new(0.22,0.8),TextSize=13.000,BackgroundTransparency=0,Size=UDim2.new(0,25,0,25)}):Play()game.TweenService:Create(cO,TweenInfo.new(0.08,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),{TextTransparency=0}):Play()game.TweenService:Create(cI,TweenInfo.new(0.08,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),{BackgroundTransparency=0.5}):Play()game.TweenService:Create(cP,TweenInfo.new(0.08,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),{Transparency=0}):Play()end;bn.Changed:Connect(function(bn)if bn.UserInputType==Enum.UserInputState.End then cR=false end end)end)cJ.InputEnded:Connect(function(bn)if bn.UserInputType==Enum.UserInputType.MouseMovement or bn.UserInputType==Enum.UserInputType.Touch then cR=false;cT=bn;game.TweenService:Create(cK,TweenInfo.new(0.08,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),{BackgroundTransparency=0.3,Size=UDim2.new(0,18,0,18)}):Play()game.TweenService:Create(cQ,TweenInfo.new(0.12,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),{AnchorPoint=Vector2.new(0,0),TextSize=8.000,BackgroundTransparency=1.000,Size=UDim2.new(0,18,0,18)}):Play()game.TweenService:Create(cO,TweenInfo.new(0.08,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),{TextTransparency=0.5}):Play()game.TweenService:Create(cI,TweenInfo.new(0.08,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),{BackgroundTransparency=0.7}):Play()game.TweenService:Create(cP,TweenInfo.new(0.08,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut),{Transparency=0.5}):Play()end end)g.InputChanged:Connect(function(bn)if bn==cT and cR then cU(bn)end end)function set(cV)if cV=="Text"then if tonumber(cO.Text)then if tonumber(cO.Text)<=cB then Value=cO.Text;cQ.Text=cO.Text;cK:TweenPosition(UDim2.new(((tonumber(cO.Text)or cA)-cA)/(cB-cA),0,0,0),"InOut","Linear",0.08,true)cQ:TweenPosition(UDim2.new(((tonumber(cO.Text)or cA)-cA)/(cB-cA),0,0,0),"InOut","Linear",0.12,true)pcall(function()ce(Value)end)end;if tonumber(cO.Text)>cB then cO.Text=cB;cQ.Text=cB;Value=cB;cK:TweenPosition(UDim2.new(((cB or cA)-cA)/(cB-cA),0,0,0),"InOut","Linear",0.08,true)cQ:TweenPosition(UDim2.new(((cB or cA)-cA)/(cB-cA),0,0,0),"InOut","Linear",0.12,true)pcall(function()ce(Value)end)end;if tonumber(cO.Text)>=cA then Value=cO.Text;cQ.Text=cO.Text;cK:TweenPosition(UDim2.new(((tonumber(cO.Text)or cA)-cA)/(cB-cA),0,0,0),"InOut","Linear",0.08,true)cQ:TweenPosition(UDim2.new(((tonumber(cO.Text)or cA)-cA)/(cB-cA),0,0,0),"InOut","Linear",0.12,true)pcall(function()ce(Value)end)end;if tonumber(cO.Text)<cA then Value=cA;cQ=cA;cK.Position=UDim2.new(((cA or cA)-cA)/(cB-cA),0,0,0)cQ.Position=UDim2.new(((cA or cA)-cA)/(cB-cA),0,0,0)pcall(function()ce(Value)end)end else cO.Text=""or Value;cQ.Text=Value end end end;cO.Focused:Connect(function()cO.Changed:Connect(set)end)cO.FocusLost:Connect(function(cW)if not cW then if cO.Text==""then cO.Text=cA;cQ.Text=cA;Value=cA;cK:TweenPosition(UDim2.new((cA-cA)/(cB-cA),0,0,0),"InOut","Linear",0.08,true)cQ:TweenPosition(UDim2.new((cA-cA)/(cB-cA),0,0,0),"InOut","Linear",0.12,true)pcall(function()ce(Value)end)end;if tonumber(cO.Text)>tonumber(cB)then Value=cB;cO.Text=cB;cQ.Text=cB;cK:TweenPosition(UDim2.new(((cB or cA)-cA)/(cB-cA),0,0,0),"InOut","Linear",0.08,true)cQ:TweenPosition(UDim2.new(((cB or cA)-cA)/(cB-cA),0,0,0),"InOut","Linear",0.12,true)pcall(function()ce(Value)end)else Value=tonumber(cO.Text)end;if tonumber(cO.Text)<cA then cO.Text=cA;cQ.Text=cA;Value=cA;cK:TweenPosition(UDim2.new((cA-cA)/(cB-cA),0,0,0),"InOut","Linear",0.08,true)cQ:TweenPosition(UDim2.new((cA-cA)/(cB-cA),0,0,0),"InOut","Linear",0.12,true)pcall(function()ce(Value)end)else Value=tonumber(cO.Text)end end;if tonumber(cO.Text)>cB then cO.Text=cB;cQ.Text=cB;Value=cB;cK:TweenPosition(UDim2.new(((cB or cA)-cA)/(cB-cA),0,0,0),"InOut","Linear",0.08,true)cQ:TweenPosition(UDim2.new(((cB or cA)-cA)/(cB-cA),0,0,0),"InOut","Linear",0.12,true)pcall(function()ce(Value)end)else Value=tonumber(cO.Text)end;if tonumber(cO.Text)<cA then cO.Text=cA;cQ.Text=cA;Value=cA;cK.Position=UDim2.new((cA-cA)/(cB-cA),0,0,0)cQ.Position=UDim2.new((cA-cA)/(cB-cA),0,0,0)pcall(function()ce(Value)end)else Value=tonumber(cO.Text)end;if cO.Text==""then cO.Text=cA;cQ.Text=cA;Value=cA;cK:TweenPosition(UDim2.new((cA-cA)/(cB-cA),0,0,0),"InOut","Linear",0.08,true)cQ:TweenPosition(UDim2.new((cA-cA)/(cB-cA),0,0,0),"InOut","Linear",0.12,true)pcall(function()ce(Value)end)end end)return cD end;function cd:Textbox(c,cX,ce)local cY=Instance.new("Frame")local cZ=Instance.new("UICorner")local c_=Instance.new("Frame")local d0=Instance.new("UICorner")local d1=Instance.new("TextLabel")local d2=Instance.new("TextButton")local d3=Instance.new("TextBox")local r=Instance.new("UICorner")cY.Name="Textbox"cY.Parent=b_;cY.BackgroundColor3=_G.Color;cY.BackgroundTransparency=0;cY.Size=UDim2.new(0,387,0,31)cZ.CornerRadius=UDim.new(0,5)cZ.Name="TextboxCorner"cZ.Parent=cY;c_.Name="Textboxx"c_.Parent=cY;c_.BackgroundColor3=Color3.fromRGB(45,45,45)c_.Position=UDim2.new(0,1,0,1)c_.Size=UDim2.new(0,385,0,29)d0.CornerRadius=UDim.new(0,5)d0.Name="TextboxxCorner"d0.Parent=c_;d1.Name="TextboxLabel"d1.Parent=cY;d1.BackgroundColor3=_G.Color;d1.BackgroundTransparency=1.000;d1.Position=UDim2.new(0,15,0,0)d1.Text=c;d1.Size=UDim2.new(0,145,0,31)d1.Font=Enum.Font.GothamSemibold;d1.TextColor3=Color3.fromRGB(255,255,255)d1.TextSize=16.000;d1.TextTransparency=0;d1.TextXAlignment=Enum.TextXAlignment.Left;d2.Name="txtbtn"d2.Parent=cY;d2.BackgroundColor3=Color3.fromRGB(255,255,255)d2.BackgroundTransparency=1.000;d2.Position=UDim2.new(0,1,0,1)d2.Size=UDim2.new(0,387,0,29)d2.Font=Enum.Font.SourceSans;d2.Text=""d2.TextColor3=Color3.fromRGB(0,0,0)d2.TextSize=14.000;d3.Name="RealTextbox"d3.Parent=cY;d3.BackgroundColor3=Color3.fromRGB(0,0,0)d3.BackgroundTransparency=0;d3.Position=UDim2.new(0,275,0,4)d3.Size=UDim2.new(0,100,0,24)d3.Font=Enum.Font.GothamSemibold;d3.Text=""d3.TextColor3=Color3.fromRGB(225,225,225)d3.TextSize=11.000;d3.TextTransparency=0;d3.FocusLost:Connect(function()ce(d3.Text)if cX then d3.Text=""end end)r.CornerRadius=UDim.new(0,5)r.Parent=d3 end;function cd:Label(c)local d4=Instance.new("TextLabel")local d5=Instance.new("UIPadding")local d6={}d4.Name="Label"d4.Parent=b_;d4.BackgroundColor3=Color3.fromRGB(255,255,255)d4.BackgroundTransparency=1.000;d4.Size=UDim2.new(0,410,0,20)d4.Font=Enum.Font.GothamSemibold;d4.TextColor3=Color3.fromRGB(225,225,225)d4.TextSize=16.000;d4.Text=c;d4.TextXAlignment=Enum.TextXAlignment.Left;d5.PaddingLeft=UDim.new(0,15)d5.Parent=d4;d5.Name="PaddingLabel"function d6:Set(d7)d4.Text=d7 end;return d6 end;function cd:Label1(c)local d8=Instance.new("TextLabel")local d9=Instance.new("UIPadding")local da={}d8.Name="Label1"d8.Parent=b_;d8.BackgroundColor3=Color3.fromRGB(255,255,255)d8.BackgroundTransparency=1.000;d8.Size=UDim2.new(0,410,0,20)d8.Font=Enum.Font.GothamSemibold;d8.TextColor3=Color3.fromRGB(255,255,255)d8.TextSize=15.000;d8.Text=c;d8.TextXAlignment=Enum.TextXAlignment.Left;d9.PaddingLeft=UDim.new(0,15)d9.Parent=d8;d9.Name="PaddingLabel1"function da:Refresh(db)d8.Text=db end;return da end;function cd:Textbox(c,cX,ce)local cY=Instance.new("Frame")local cZ=Instance.new("UICorner")local c_=Instance.new("Frame")local d0=Instance.new("UICorner")local d1=Instance.new("TextLabel")local d2=Instance.new("TextButton")local d3=Instance.new("TextBox")local r=Instance.new("UICorner")cY.Name="Textbox"cY.Parent=b_;cY.BackgroundColor3=_G.Color;cY.BackgroundTransparency=0;cY.Size=UDim2.new(0,387,0,31)cZ.CornerRadius=UDim.new(0,5)cZ.Name="TextboxCorner"cZ.Parent=cY;c_.Name="Textboxx"c_.Parent=cY;c_.BackgroundColor3=Color3.fromRGB(45,45,45)c_.Position=UDim2.new(0,1,0,1)c_.Size=UDim2.new(0,385,0,29)d0.CornerRadius=UDim.new(0,3)d0.Name="TextboxxCorner"d0.Parent=c_;d1.Name="TextboxLabel"d1.Parent=cY;d1.BackgroundColor3=_G.Color;d1.BackgroundTransparency=1.000;d1.Position=UDim2.new(0,15,0,0)d1.Text=c;d1.Size=UDim2.new(0,145,0,31)d1.Font=Enum.Font.GothamSemibold;d1.TextColor3=Color3.fromRGB(225,225,225)d1.TextSize=16.000;d1.TextTransparency=0;d1.TextXAlignment=Enum.TextXAlignment.Left;d2.Name="txtbtn"d2.Parent=cY;d2.BackgroundColor3=_G.Color;d2.BackgroundTransparency=1.000;d2.Position=UDim2.new(0,1,0,1)d2.Size=UDim2.new(0,387,0,29)d2.Font=Enum.Font.SourceSans;d2.Text=""d2.TextColor3=Color3.fromRGB(0,0,0)d2.TextSize=14.000;d3.Name="RealTextbox"d3.Parent=cY;d3.BackgroundColor3=Color3.fromRGB(0,0,0)d3.BackgroundTransparency=0;d3.Position=UDim2.new(0,275,0,4)d3.Size=UDim2.new(0,100,0,24)d3.Font=Enum.Font.GothamSemibold;d3.Text=""d3.TextColor3=Color3.fromRGB(225,225,225)d3.TextSize=11.000;d3.TextTransparency=0;d3.FocusLost:Connect(function()ce(d3.Text)if cX then d3.Text=""end end)r.CornerRadius=UDim.new(0,3)r.Parent=d3 end;function cd:Label(c)local d4=Instance.new("TextLabel")local d5=Instance.new("UIPadding")local d6={}d4.Name="Label"d4.Parent=b_;d4.BackgroundColor3=Color3.fromRGB(255,255,255)d4.BackgroundTransparency=1.000;d4.Size=UDim2.new(0,410,0,20)d4.Font=Enum.Font.GothamSemibold;d4.TextColor3=Color3.fromRGB(225,225,225)d4.TextSize=16.000;d4.Text=c;d4.TextXAlignment=Enum.TextXAlignment.Left;d5.PaddingLeft=UDim.new(0,15)d5.Parent=d4;d5.Name="PaddingLabel"function d6:Set(d7)d4.Text=d7 end;return d6 end;function cd:Label1(c)local d8=Instance.new("TextLabel")local d9=Instance.new("UIPadding")local da={}d8.Name="Label1"d8.Parent=b_;d8.BackgroundColor3=Color3.fromRGB(255,255,255)d8.BackgroundTransparency=1.000;d8.Size=UDim2.new(0,410,0,20)d8.Font=Enum.Font.GothamSemibold;d8.TextColor3=Color3.fromRGB(255,255,255)d8.TextSize=15.000;d8.Text=c;d8.RichText=true;d8.TextXAlignment=Enum.TextXAlignment.Left;d9.PaddingLeft=UDim.new(0,15)d9.Parent=d8;d9.Name="PaddingLabel1"function da:Refresh(db)d8.Text=db end;return da end;function cd:Dis(c,dc)local d8=Instance.new("TextLabel")local d9=Instance.new("UIPadding")local da={}d8.Name="Label1"d8.Parent=b_;d8.BackgroundColor3=Color3.fromRGB(255,255,255)d8.BackgroundTransparency=1.000;d8.Size=UDim2.new(0,410,0,20)d8.Font=Enum.Font.GothamSemibold;d8.TextColor3=Color3.fromRGB(255,255,255)d8.TextSize=15.000;d8.Text=c;d8.TextXAlignment=Enum.TextXAlignment.Left;Labeld.Name="Labeld"Labeld.Parent=b_;Labeld.BackgroundColor3=Color3.fromRGB(255,255,255)Labeld.BackgroundTransparency=1.000;Labeld.Size=UDim2.new(0,410,0,20)Labeld.Font=Enum.Font.GothamSemibold;Labeld.TextColor3=_G.Color;Labeld.TextSize=15.000;Labeld.Text=dc or""Labeld.TextXAlignment=Enum.TextXAlignment.Left;d9.PaddingLeft=UDim.new(0,15)d9.Parent=d8;d9.Name="PaddingLabel1"function da:Refresh(db)d8.Text=db end;return da end;function cd:Seperator(c)task.wait(0.1)local dd=Instance.new("Frame")local de=Instance.new("Frame")local df=Instance.new("TextLabel")local dg=Instance.new("Frame")dd.Name="Seperator"dd.Parent=b_;dd.BackgroundColor3=Color3.fromRGB(255,255,255)dd.BackgroundTransparency=1.000;dd.Size=UDim2.new(0,310,0,20)de.Name="Sep1"de.Parent=dd;de.BackgroundColor3=Color3.new(125,125,125)de.BorderSizePixel=0;de.Position=UDim2.new(0,0,0,10)de.Size=UDim2.new(0,80,0,1)df.Name="Sep2"df.Parent=dd;df.BackgroundColor3=Color3.fromRGB(255,255,255)df.BackgroundTransparency=1.000;df.Position=UDim2.new(0,140,0,0)df.Size=UDim2.new(0,100,0,20)df.Font=Enum.Font.GothamSemibold;df.Text=c;df.TextColor3=Color3.fromRGB(255,255,255)df.TextSize=14.000;dg.Name="Sep3"dg.Parent=dd;dg.BackgroundColor3=Color3.new(125,125,125)dg.BorderSizePixel=0;dg.Position=UDim2.new(0,300,0,10)dg.Size=UDim2.new(0,80,0,1)end;function cd:Line()local dh=Instance.new("Frame")local cc=Instance.new("Frame")dh.Name="Linee"dh.Parent=b_;dh.BackgroundColor3=Color3.fromRGB(255,255,255)dh.BackgroundTransparency=1.000;dh.Position=UDim2.new(0,0,0.119999997,0)dh.Size=UDim2.new(0,310,0,20)cc.Name="Line"cc.Parent=dh;cc.BackgroundColor3=Color3.new(125,125,125)cc.BorderSizePixel=0;cc.Position=UDim2.new(0,0,0,10)cc.Size=UDim2.new(0,410,0,1)end;return cd end;return bS end;local di=bm:Window("Vector Hub","",Enum.KeyCode.F1)local dj=di:Tab("General","rbxassetid://11446900930")local dk=di:Tab("Setting","rbxassetid://11446835336")local dl=di:Tab("Stats","rbxassetid://7040410130")local dm=di:Tab("Teleport","rbxassetid://6035190846")local dn=di:Tab("Item","rbxassetid://12499842920")local dp=di:Tab("Mastery","rbxassetid://11717242503")local dq=di:Tab("DevilFruit","rbxassetid://130882646")local dr=di:Tab("Raid","rbxassetid://13180179055")local ds=di:Tab("Combat","rbxassetid://7485051715")local dt=di:Tab("Mirage","rbxassetid://12598594243")local du=di:Tab("RaceV4","rbxassetid://7558782590")local dv=di:Tab("SeaEvent","rbxassetid://7052520309")local dw=di:Tab("Kitsune","rbxassetid://8028233454")local dx=di:Tab("Shop","rbxassetid://6031265976")local dy=di:Tab("Misc","rbxassetid://11447063791")dj:Seperator("Vector Hub")Time=dj:Label("..")dj:Label("Username : "..game.Players.LocalPlayer.DisplayName)function UpdateTime()local dz=math.floor(workspace.DistributedGameTime+0.5)local dA=math.floor(dz/60^2)%24;local dB=math.floor(dz/60^1)%60;local dC=math.floor(dz/60^0)%60;Time:Set("[GameTime] : Hours : "..dA.." Minutes : "..dB.." Seconds : "..dC)end;spawn(function()while task.wait()do pcall(function()UpdateTime()end)end end)Client=dj:Label1("Client")function UpdateClient()local dD=workspace:GetRealPhysicsFPS()Client:Refresh("[Fps] : "..dD)end;spawn(function()while true do wait(.1)UpdateClient()end end)Client1=dj:Label1("Client")function UpdateClient1()local dE=game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()Client1:Refresh("[Ping] : "..dE)end;spawn(function()while true do wait(.1)UpdateClient1()end end)dj:Label("เข้าดิสคอร์ดเพื่อข่าวสารต่างๆ")dj:Button("ก็อปปี้ลิ้งดิสคอร์ด",function()setclipboard("https://discord.gg/977JQXX82w")game:GetService("StarterGui"):SetCore("SendNotification",{Title="VectorHub",Text="คัดลอกเรียบร้อยแล้ว",Icon="rbxassetid://16129235054",Duration=3})end)dj:Toggle("ออโต้ฟาร์มเลเวล",_G.Settings.AutoFarm,function(dF)_G.AutoFarm=dF;_G.Settings.AutoFarm=dF;SaveSettings()if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end end)dj:Toggle("เซฟโหมด",_G.Settings.SafeMode,function(dF)_G.SafeMode=dF;_G.Settings.SafeMode=dF;SaveSettings()spawn(function()while _G.Settings.SafeMode do task.wait()if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")then local dG=game.Players.LocalPlayer.Character.Humanoid.Health/game.Players.LocalPlayer.Character.Humanoid.MaxHealth*100;if dG<20 then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,100,0)game:GetService("StarterGui"):SetCore("SendNotification",{Title="VectorHub",Text="เซฟโหมดทำงาน..",Icon="rbxassetid://16129235054",Duration=1})end end;task.wait()end end)end)dj:Toggle("ฟาร์มมอนรอบๆ",_G.Settings.NeareastFarm,function(dF)_G.NeareastFarm=dF;_G.Settings.NeareastFarm=dF;SaveSettings()if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end end)spawn(function()while wait(.1)do if _G.Settings.NeareastFarm then pcall(function()for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name and z:FindFirstChild("Humanoid")then if z.Humanoid.Health>0 and(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=1500 then repeat game:GetService("RunService").Heartbeat:wait()EquipWeapon(_G.SelectWeapon)PosMon=z.HumanoidRootPart.CFrame;z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.Head.CanCollide=false;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)BringMob=true;FastAttack=true;aw(z.HumanoidRootPart.CFrame*MethodFarm)if not FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;PosMon=z.HumanoidRootPart.CFrame until not _G.NeareastFarm or not z.Parent or z.Humanoid.Health==0 or not game.Workspace.Enemies:FindFirstChild(z.Name)end end end end)end end end)if World1 then dj:Toggle("ฟาร์มลัดเลเวล 1-300",_G.AutoFarmFast,function(dF)_G.AutoFarmFast=dF end)AttackRandomType_MonCFrame=1;spawn(function()while wait()do AttackRandomType_MonCFrame=math.random(1,5)wait(0.3)end end)local SetCFarme=1;spawn(function()while wait()do local dH=game.Players.LocalPlayer.Data.Level.Value;local dI=game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest;pcall(function()if _G.AutoFarm then if _G.AutoFarmFast and(dH>=15 and dH<=300)then if dH>=15 and dH<=300 then Auto_Farm_Level_Fast()return end else if dI.Visible==true then if game:GetService("Workspace").Enemies:FindFirstChild(Q()[3])then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name==Q()[3]then if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat task.wait()if _G.Auto_CFrame then SetCFarme=1 end;if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,Q()[6])then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")else PosMon=z.HumanoidRootPart.CFrame;z.HumanoidRootPart.Size=Vector3.new(60,60,60)z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.Head.CanCollide=false;BringMob=true;_G.FastType="Fast"EquipWeapon(_G.SelectWeapon)z.HumanoidRootPart.Transparency=1;aw(z.HumanoidRootPart.CFrame*MethodFarm)if not _G.AutoFarm or not _G.Auto_Farm_LevelO or _G.Auto_Farm_Level or _G.Auto_Farm_LevelO then _G.FastAttack=true end end until not _G.AutoFarm or not z.Parent or z.Humanoid.Health<=0 or dI.Visible==false or not z:FindFirstChild("HumanoidRootPart")end end end else if _G.Auto_CFrame and not _G.AutoFarmFast then aw(Q()[7][SetCFarme]*MethodFarm)if(Q()[7][SetCFarme].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then if SetCFarme==nil or SetCFarme==''then SetCFarme=1 elseif SetCFarme>=#Q()[7]then SetCFarme=1 end;SetCFarme=SetCFarme+1;wait(0.5)end else if not _G.AutoFarmFast then if AttackRandomType_MonCFrame==1 then aw(Q()[7][1]*CFrame.new(0,30,20))elseif AttackRandomType_MonCFrame==2 then aw(Q()[7][1]*CFrame.new(0,30,-20))elseif AttackRandomType_MonCFrame==3 then aw(Q()[7][1]*CFrame.new(20,30,0))elseif AttackRandomType_MonCFrame==4 then aw(Q()[7][1]*CFrame.new(0,30,-20))elseif AttackRandomType_MonCFrame==5 then aw(Q()[7][1]*CFrame.new(-20,30,0))else aw(Q()[7][1]*CFrame.new(0,30,20))end end end end else aw(Q()[2])if(Q()[2].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=1 then BringMob=false;wait(0.2)game:GetService('ReplicatedStorage').Remotes.CommF_:InvokeServer("StartQuest",Q()[4],Q()[1])wait(0.5)aw(Q()[7][1]*MethodFarm)end end end end end)end end)_G.ChackPlayer=0;_G.ChackPlayer2=_G.ChackPlayer;local AllPlayersTableSkipFarm={}function Auto_Farm_Level_Fast()local dJ=game.Players:GetPlayers()local dK=game.Players.LocalPlayer.Data.Level.Value;local dL=game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text;local dM=string.split(dL," ")[2]getgenv().SelectPly=string.split(dL," ")[2]pcall(function()local dH=game.Players.LocalPlayer.Data.Level.Value;local dI=game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest;CFrameMon=CFrame.new(-7719.66895,5611.42334,-1445.98816,0.906745553,-1.43169192e-08,-0.421678245,5.939971e-08,1,9.37764852e-08,0.421678245,-1.10078972e-07,0.906745553)if _G.AutoFarm and dH>=15 and dH<=69 and(CFrameMon.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude>1000 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-7894.6176757813,5547.1416015625,-380.29119873047))end;if dH>=15 and dH<=69 then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if z.Name=="Royal Squad"then if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")repeat task.wait()z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.Head.CanCollide=false;BringMob=true;EquipWeapon(_G.SelectWeapon)if dH>=70 and dH<=310 then if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==false then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("PlayerHunter")end end;_G.FastType="Slow"PosMon=z.HumanoidRootPart.CFrame;z.HumanoidRootPart.Size=Vector3.new(60,60,60)z.HumanoidRootPart.Transparency=1;aw(z.HumanoidRootPart.CFrame*MethodFarm)if not _G.AutoFarm or not _G.Auto_Farm_LevelO or _G.Auto_Farm_Level or _G.Auto_Farm_LevelO or _G.SuperFastAttack then _G.FastAttack=true end until not z.Parent or not _G.AutoFarm or z.Humanoid.Health<0;aw(CFrameMon)end else BringMob=false;aw(CFrameMon)end end elseif dH>=70 and dH<=310 then if dI.Visible==false then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("PlayerHunter")elseif dI.Visible==true then if string.find(dL,"Defeat")then repeat task.wait()if game:GetService("Players").LocalPlayer.PlayerGui.Main.PvpDisabled.Visible==true then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EnablePvp")end;EquipWeapon(_G.SelectWeapon)aw(game:GetService("Players")[getgenv().SelectPly].Character.HumanoidRootPart.CFrame*CFrame.new(0,0,5))game:GetService("Players")[getgenv().SelectPly].Character.HumanoidRootPart.Size=Vector3.new(120,120,120)if(game:GetService("Players")[getgenv().SelectPly].Character.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=6 then game:service('VirtualInputManager'):SendKeyEvent(true,"X",false,game)game:service('VirtualInputManager'):SendKeyEvent(false,"X",false,game)end;if(game:GetService("Players")[getgenv().SelectPly].Character.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=6 then game:service('VirtualInputManager'):SendKeyEvent(true,"Z",false,game)game:service('VirtualInputManager'):SendKeyEvent(false,"Z",false,game)end;_G.FastType="Fast"if not _G.AutoFarm or not _G.Auto_Farm_LevelO or _G.Auto_Farm_Level or _G.Auto_Farm_LevelO or _G.SuperFastAttack then _G.FastAttack=true end until game.Players[getgenv().SelectPly].Character.Humanoid.Health<=0 or not Auto_Farm_Level_Fast()or dH>=310 end end end end)end;spawn(function()game:GetService("RunService").Heartbeat:Connect(function()pcall(function()if _G.BringMob then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if _G.AutoFarm and BringMob and z.Name==Mon and(z.HumanoidRootPart.Position-PosMon.Position).magnitude<=200 then z.HumanoidRootPart.CFrame=PosMon;z.HumanoidRootPart.CanCollide=false;z.HumanoidRootPart.Size=Vector3.new(60,60,60)if z.Humanoid:FindFirstChild("Animator")then z.Humanoid.Animator:Destroy()end;sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)end end end end)end)end)dj:Line()dj:Toggle("ฟาร์มกล่อง {บินเก็บ}",_G.Settings.AutoFarmChest,function(dF)_G.AutoFarmChest=dF;_G.Settings.AutoFarmChest=dF;SaveSettings()if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end end)dj:Toggle("ออโต้ฟาร์มกล่อง {เร็ว:เสี่ยง}",_G.ChestBypass,function(dF)_G.ChestBypass=dF end)_G.MagnitudeAdd=0;spawn(function()while wait()do if _G.AutoFarmChest then for y,z in pairs(game:GetService("Workspace"):GetChildren())do if z.Name:find("Chest")then if game:GetService("Workspace"):FindFirstChild(z.Name)then if(z.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=5000+_G.MagnitudeAdd then repeat wait()if game:GetService("Workspace"):FindFirstChild(z.Name)then EquipWeapon(_G.SelectWeapon)aw(z.CFrame)UnEquipWeapon(_G.SelectWeapon)end until _G.AutoFarmChest==false or not z.Parent;aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)_G.MagnitudeAdd=_G.MagnitudeAdd+1500;break end end end end end end end)spawn(function()while wait()do if _G.ChestBypass then pcall(function()for y,z in pairs(game:GetService("Workspace"):GetChildren())do if string.find(z.Name,"Chest")then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=z.CFrame;wait(.15)end end;for H,z in pairs(game:GetService("Workspace"):GetDescendants())do if string.find(z.Name,"Chest")and z:IsA("TouchTransmitter")then firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,z.Parent,0)wait()firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,z.Parent,1)end end end)end end end)spawn(function()while task.wait()do if _G.ChestBypass then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(ohString1,ohString2)end end end)if World1 then dj:Label("สถานะ : โลก 1")dj:Toggle("ออโต้โลก 2",_G.AutoNewWorld,function(dF)_G.AutoNewWorld=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoNewWorld then if game.Players.LocalPlayer.Data.Level.Value>=700 then if _G.AutoFarm then _G.AutoFarm=false end;if game.Workspace.Map.Ice.Door.CanCollide==true and game.Workspace.Map.Ice.Door.Transparency==0 then wait(.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("DressrosaQuestProgress","Detective")EquipWeapon("Key")repeat task.wait()aw(CFrame.new(1347.7124,37.3751602,-1325.6488))until(CFrame.new(1347.7124,37.3751602,-1325.6488).Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=3 or not _G.AutoNewWorld;wait(3)elseif game.Workspace.Map.Ice.Door.CanCollide==false and game.Workspace.Map.Ice.Door.Transparency==1 then if game:GetService("Workspace").Enemies:FindFirstChild("Ice Admiral")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Ice Admiral"and z.Humanoid.Health>0 then repeat task.wait()EquipWeapon(_G.SelectWeapon)aw(z.HumanoidRootPart.CFrame*MethodFarm)FastAttack=true;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")until z.Humanoid.Health<=0 or not z.Parent;game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")end end else aw(CFrame.new(1347.7124,37.3751602,-1325.6488))end else game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")end end end end)end end)dj:Toggle("ออโต้ดาบแชงค์",_G.AutoSaber,function(dF)_G.AutoSaber=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end;game:GetService("StarterGui"):SetCore("SendNotification",{Title="VectorHub",Text="ปิดวาร์ปเร็ว",Icon="rbxassetid://16129235054",Duration=1})end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoSaber and game.Players.LocalPlayer.Data.Level.Value>=200 and not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Saber")and not game.Players.LocalPlayer.Character:FindFirstChild("Saber")then if _G.AutoFarm then _G.AutoFarm=false;_G.BypassTP=false end;if game:GetService("Workspace").Map.Jungle.Final.Part.Transparency==0 then if game:GetService("Workspace").Map.Jungle.QuestPlates.Door.Transparency==0 then if(CFrame.new(-1612.55884,36.9774132,148.719543,0.37091279,3.0717151e-09,-0.928667724,3.97099491e-08,1,1.91679348e-08,0.928667724,-4.39869794e-08,0.37091279).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=100 then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Map.Jungle.QuestPlates.Plate1.Button.CFrame;wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Map.Jungle.QuestPlates.Plate2.Button.CFrame;wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Map.Jungle.QuestPlates.Plate3.Button.CFrame;wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Map.Jungle.QuestPlates.Plate4.Button.CFrame;wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Map.Jungle.QuestPlates.Plate5.Button.CFrame;wait(1)else aw(CFrame.new(-1612.55884,36.9774132,148.719543,0.37091279,3.0717151e-09,-0.928667724,3.97099491e-08,1,1.91679348e-08,0.928667724,-4.39869794e-08,0.37091279))end else if game:GetService("Workspace").Map.Desert.Burn.Part.Transparency==0 then if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Torch")or game.Players.LocalPlayer.Character:FindFirstChild("Torch")then EquipWeapon("Torch")aw(CFrame.new(1114.61475,5.04679728,4350.22803,-0.648466587,-1.28799094e-09,0.761243105,-5.70652914e-10,1,1.20584542e-09,-0.761243105,3.47544882e-10,-0.648466587))else aw(CFrame.new(-1610.00757,11.5049858,164.001587,0.984807551,-0.167722285,-0.0449818149,0.17364943,0.951244235,0.254912198,3.42372805e-05,-0.258850515,0.965917408))end else if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","SickMan")~=0 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","GetCup")wait(0.5)EquipWeapon("Cup")wait(0.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","FillCup",game:GetService("Players").LocalPlayer.Character.Cup)wait(0)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","SickMan")else if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","RichSon")==nil then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","RichSon")elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","RichSon")==0 then if game:GetService("Workspace").Enemies:FindFirstChild("Mob Leader")or game:GetService("ReplicatedStorage"):FindFirstChild("Mob Leader")then aw(CFrame.new(-2967.59521,-4.91089821,5328.70703,0.342208564,-0.0227849055,0.939347804,0.0251603816,0.999569714,0.0150796166,-0.939287126,0.0184739735,0.342634559))for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Mob Leader"then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;aw(z.HumanoidRootPart.CFrame*MethodFarm)PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)until z.Humanoid.Health<=0 or _G.AutoSaber==false end end end elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","RichSon")==1 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","RichSon")wait(0.5)EquipWeapon("Relic")wait(0.5)aw(CFrame.new(-1404.91504,29.9773273,3.80598116,0.876514494,5.66906877e-09,0.481375456,2.53851997e-08,1,-5.79995607e-08,-0.481375456,6.30572643e-08,0.876514494))end end end end else if game:GetService("Workspace").Enemies:FindFirstChild("Saber Expert")or game:GetService("ReplicatedStorage"):FindFirstChild("Saber Expert")then aw(CFrame.new(-1401.85046,29.9773273,8.81916237,0.85820812,8.76083845e-08,0.513301849,-8.55007443e-08,1,-2.77243419e-08,-0.513301849,-2.00944328e-08,0.85820812))for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Saber Expert"then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;aw(z.HumanoidRootPart.CFrame*MethodFarm)PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")until z.Humanoid.Health<=0 or _G.AutoSaber==false;if z.Humanoid.Health<=0 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","PlaceRelic")end end end end end end end)end end)dj:Toggle("ออโต้กระบองเอเนล",_G.AutoPole,function(dF)_G.AutoPole=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoPole then if game.ReplicatedStorage:FindFirstChild("Thunder God")or game.Workspace.Enemies:FindFirstChild("Thunder God")then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if z.Name=="Thunder God"and z:FindFirstChild("HumanoidRootPart")and z:FindFirstChild("Humanoid")and z.Humanoid.Health>0 then repeat task.wait()if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then Farmtween=aw(z.HumanoidRootPart.Position,z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Farmtween then Farmtween:Stop()end;BringMob=true;FastAttack=true;EquipWeapon(_G.SelectWeapon)aw(z.HumanoidRootPart.CFrame*MethodFarm)PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")end until not _G.AutoPole or z.Humanoid.Health<=0 or not z.Parent;BringMob=false;FastAttack=false end end else Questtween=aw(CFrame.new(-7900.66406,5606.90918,-2267.46436).Position,CFrame.new(-7900.66406,5606.90918,-2267.46436))if(CFrame.new(-7900.66406,5606.90918,-2267.46436).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Questtween then Questtween:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-7900.66406,5606.90918,-2267.46436)end end end end)end end)dj:Toggle("ออโต้ซื้อฮาคิอัติโนมัติ",_G.AutoBuyAbility,function(dF)_G.AutoBuyAbility=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoBuyAbility then local dN=game:GetService("Players").LocalPlayer.Data.Beli.Value;local dO=false;local dP=false;local dQ=false;local dR=false;if dN>=885000 then repeat task.wait()local aE={[1]="BuyHaki",[2]="Buso"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))dO=true;local aE={[1]="BuyHaki",[2]="Geppo"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))dQ=true;local aE={[1]="BuyHaki",[2]="Soru"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))dP=true;local aE={[1]="KenTalk",[2]="Start"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))local aE={[1]="KenTalk",[2]="Buy"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))dR=true;if World1 then local aE={[1]="LoadItem",[2]="Black Cape"}game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(aE))end;if W2 then local aE={[1]="LoadItem",[2]="Warrior Helmet"}game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(aE))end;if W3 then local aE={[1]="LoadItem",[2]="Warrior Helmet"}game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(aE))end;while task.wait()do game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Black Cape")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")end until not dO and not dQ and not dP and not dR or not _G.AutoBuyAbility end end end)end end)elseif World2 then dj:Label("สถานะ : โลก 2")dj:Toggle("ออโต้โลก 3",_G.AutoThirdSea,function(dF)_G.AutoThirdSea=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoThirdSea then if game.Players.LocalPlayer.Data.Level.Value>=1500 then if _G.AutoFarm then _G.AutoFarm=false end;if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo")==3 then if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables").FlamingoAccess~=nil then Com("F_","TravelZou")if game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("ZQuestProgress","Check")==0 then if game.Workspace.Enemies:FindFirstChild("rip_indra")then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if z.Name=="rip_indra"and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat task.wait()if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then Farmtween=aw(z.HumanoidRootPart.Position,z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Farmtween then Farmtween:Stop()end;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)end until not _G.AutoThirdSea or not z.Parent or z.Humanoid.Health<=0;wait(.5)Check=2;repeat task.wait()Com("F_","TravelZou")until Check==1;FastAttack=false end end else Com("F_","ZQuestProgress","Check")Com("F_","ZQuestProgress","Begin")end elseif game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("ZQuestProgress","Check")==1 then Com("F_","TravelZou")else if game.Workspace.Enemies:FindFirstChild("Don Swan")then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if z.Name=="Don Swan"and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat task.wait()if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then Farmtween=aw(z.HumanoidRootPart.Position,z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Farmtween then Farmtween:Stop()end;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)z.Humanoid:ChangeState(11)aw(z.HumanoidRootPart.CFrame*MethodFarm)end until not _G.AutoThirdSea or not z.Parent or z.Humanoid.Health<=0;FastAttack=false end end else TweenDonSwanthireworld=aw(CFrame.new(2288.802,15.1870775,863.034607).Position,CFrame.new(2288.802,15.1870775,863.034607))if(CFrame.new(2288.802,15.1870775,863.034607).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if TweenDonSwanthireworld then TweenDonSwanthireworld:Stop()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(2288.802,15.1870775,863.034607)end end end end else if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables").FlamingoAccess==nil then TabelDevilFruitStore={}TabelDevilFruitOpen={}for y,z in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryFruits"))do for V,W in pairs(z)do if V=="Name"then table.insert(TabelDevilFruitStore,W)end end end;for y,z in next,game.ReplicatedStorage:WaitForChild("Remotes").CommF_:InvokeServer("GetFruits")do if z.Price>=1000000 then table.insert(TabelDevilFruitOpen,z.Name)end end;for y,dS in pairs(TabelDevilFruitOpen)do for V,dT in pairs(TabelDevilFruitStore)do if dS==dT and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables").FlamingoAccess==nil then if not game.Players.LocalPlayer.Backpack:FindFirstChild(dT)then Com("F_","LoadFruit",dT)else Com("F_","TalkTrevor","1")Com("F_","TalkTrevor","2")Com("F_","TalkTrevor","3")end end end end;Com("F_","TalkTrevor","1")Com("F_","TalkTrevor","2")Com("F_","TalkTrevor","3")end end else if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo")==0 then if string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Swan Pirates")and string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"50")and game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible==true then if game.Workspace.Enemies:FindFirstChild("Swan Pirate")then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if z.Name=="Swan Pirate"then pcall(function()repeat task.wait()if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then Farmtween=aw(z.HumanoidRootPart.Position,z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Farmtween then Farmtween:Stop()end;FastAttack=true;BringMob=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.FastType)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)end until not z.Parent or z.Humanoid.Health<=0 or _G.AutoThirdSea==false or game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible==false;FastAttack=false;BringMob=false end)end end else Questtween=aw(CFrame.new(960.9769897460938,141.33583068847656,1216.1959228515625).Position,CFrame.new(960.9769897460938,141.33583068847656,1216.1959228515625))if(CFrame.new(960.9769897460938,141.33583068847656,1216.1959228515625).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Bartilotween then Bartilotween:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(960.9769897460938,141.33583068847656,1216.1959228515625)end end else Bartilotween=aw(CFrame.new(-456.28952,73.0200958,299.895966).Position,CFrame.new(-456.28952,73.0200958,299.895966))if(CFrame.new(-456.28952,73.0200958,299.895966).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Bartilotween then Bartilotween:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-456.28952,73.0200958,299.895966)Com("F_","StartQuest","BartiloQuest",1)end end elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo")==1 then if game.Workspace.Enemies:FindFirstChild("Jeremy")then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if z.Name=="Jeremy"then repeat task.wait()if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then Farmtween=aw(z.HumanoidRootPart.Position,z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Farmtween then Farmtween:Stop()end;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)end until not z.Parent or z.Humanoid.Health<=0 or _G.AutoThirdSea==false;FastAttack=false end end else Bartilotween=aw(CFrame.new(2099.88159,448.931,648.997375).Position,CFrame.new(2099.88159,448.931,648.997375))if(CFrame.new(2099.88159,448.931,648.997375).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Bartilotween then Bartilotween:Stop()end;game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(2099.88159,448.931,648.997375)end end elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo")==2 then if(CFrame.new(-1836,11,1714).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then Bartilotween=aw(CFrame.new(-1836,11,1714).Position,CFrame.new(-1836,11,1714))elseif(CFrame.new(-1836,11,1714).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Bartilotween then Bartilotween:Stop()end;game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1836,11,1714)wait(.5)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1850.49329,13.1789551,1750.89685)wait(.1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1858.87305,19.3777466,1712.01807)wait(.1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1803.94324,16.5789185,1750.89685)wait(.1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1858.55835,16.8604317,1724.79541)wait(.1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1869.54224,15.987854,1681.00659)wait(.1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1800.0979,16.4978027,1684.52368)wait(.1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1819.26343,14.795166,1717.90625)wait(.1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1813.51843,14.8604736,1724.79541)end end end end end end)end end)spawn(function()game:GetService("RunService").Heartbeat:Connect(function()pcall(function()for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if _G.Auto_Evo_Race_V2 and StartEvoMagnet and z.Name=="Swan Pirate"and(z.HumanoidRootPart.Position-PosMonEvo.Position).magnitude<=350 then z.HumanoidRootPart.CFrame=PosMonEvo;z.HumanoidRootPart.CanCollide=false;z.HumanoidRootPart.Size=Vector3.new(50,50,50)if z.Humanoid:FindFirstChild("Animator")then z.Humanoid.Animator:Destroy()end;sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)end end end)end)end)dj:Toggle("ออโต้อีโวเผ่าขั้นสอง",_G.Auto_Evo_Race_V2,function(dF)_G.Auto_Evo_Race_V2=dF end)spawn(function()while wait()do pcall(function()if _G.Auto_Evo_Race_V2 then if not game:GetService("Players").LocalPlayer.Data.Race:FindFirstChild("Evolved")then if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Alchemist","1")==0 then two(CFrame.new(-2779.83521,72.9661407,-3574.02002,-0.730484903,6.39014104e-08,-0.68292886,3.59963224e-08,1,5.50667032e-08,0.68292886,1.56424669e-08,-0.730484903))if(Vector3.new(-2779.83521,72.9661407,-3574.02002)-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=4 then wait(1.3)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Alchemist","2")end elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Alchemist","1")==1 then pcall(function()if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flower 1")and not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flower 1")then two(game:GetService("Workspace").Flower1.CFrame)elseif not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flower 2")and not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flower 2")then two(game:GetService("Workspace").Flower2.CFrame)elseif not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flower 3")and not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flower 3")then if game:GetService("Workspace").Enemies:FindFirstChild("Swan Pirate")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if string.find(z.Name,"Swan Pirate")then repeat wait()EquipWeapon(_G.SelectWeapon)two(z.HumanoidRootPart.CFrame*MethodFarm)z.HumanoidRootPart.CanCollide=false;z.HumanoidRootPart.Size=Vector3.new(50,50,50)game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))PosMonEvo=z.HumanoidRootPart.CFrame;StartEvoMagnet=true until game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flower 3")or not z.Parent or z.Humanoid.Health<=0 or _G.Auto_Evo_Race_V2==false;StartEvoMagnet=false end end else StartEvoMagnet=false;two(CFrame.new(980.0985107421875,121.331298828125,1287.2093505859375))end end end)elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Alchemist","1")==2 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Alchemist","3")end end end end)end end)dj:Toggle("ออโต้บาโธโลมีโอเควส",_G.Settings.AutoBartiloQuest,function(dF)_G.AutoBartiloQuest=dF;_G.Settings.AutoBartiloQuest=dF;SaveSettings()if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)end;task.spawn(function()while task.wait()do pcall(function()if _G.Settings.AutoBartiloQuest then if game.Players.LocalPlayer.Data.Level.Value>=850 then if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo")==0 then if string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Swan Pirates")and string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"50")and game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible==true then if game.Workspace.Enemies:FindFirstChild("Swan Pirate")then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if z.Name=="Swan Pirate"then pcall(function()repeat task.wait()if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then Farmtween=aw(z.HumanoidRootPart.Position,z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Farmtween then Farmtween:Stop()end;FastAttack=true;BringMob=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService"VirtualUser":CaptureController()game:GetService"VirtualUser":Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)end until not z.Parent or z.Humanoid.Health<=0 or _G.AutoBartiloQuest==false or game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible==false;BringMob=false;FastAttack=false end)end end else Questtween=aw(CFrame.new(960.9769897460938,141.33583068847656,1216.1959228515625).Position,CFrame.new(960.9769897460938,141.33583068847656,1216.1959228515625))if(CFrame.new(960.9769897460938,141.33583068847656,1216.1959228515625).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Questtween then Questtween:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(960.9769897460938,141.33583068847656,1216.1959228515625)end end else Bartilotween=aw(CFrame.new(-456.28952,73.0200958,299.895966).Position,CFrame.new(-456.28952,73.0200958,299.895966))if(CFrame.new(-456.28952,73.0200958,299.895966).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Bartilotween then Bartilotween:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-456.28952,73.0200958,299.895966)local aE={[1]="StartQuest",[2]="BartiloQuest",[3]=1}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end end end elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo")==1 then if game.Workspace.Enemies:FindFirstChild("Jeremy")then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if z.Name=="Jeremy"then repeat task.wait()if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then Farmtween=aw(z.HumanoidRootPart.Position,z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Farmtween then Farmtween:Stop()end;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService"VirtualUser":CaptureController()game:GetService"VirtualUser":Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)end until not z.Parent or z.Humanoid.Health<=0 or _G.AutoBartiloQues==false;FastAttack=false end end else Bartilotween=aw(CFrame.new(2099.88159,448.931,648.997375).Position,CFrame.new(2099.88159,448.931,648.997375))if(CFrame.new(2099.88159,448.931,648.997375).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Bartilotween then Bartilotween:Stop()end;game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(2099.88159,448.931,648.997375)end end elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo")==2 then if(CFrame.new(-1836,11,1714).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then Bartilotween=aw(CFrame.new(-1836,11,1714).Position,CFrame.new(-1836,11,1714))elseif(CFrame.new(-1836,11,1714).Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if Bartilotween then Bartilotween:Stop()end;game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1836,11,1714)wait(.5)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1850.49329,13.1789551,1750.89685)wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1858.87305,19.3777466,1712.01807)wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1803.94324,16.5789185,1750.89685)wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1858.55835,16.8604317,1724.79541)wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1869.54224,15.987854,1681.00659)wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1800.0979,16.4978027,1684.52368)wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1819.26343,14.795166,1717.90625)wait(1)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1813.51843,14.8604736,1724.79541)end end end end)end end)dj:Toggle("ออโต้ผ้าคลุมหนวดดำ",_G.AutoDarkCoat,function(dF)_G.AutoDarkCoat=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoDarkCoat then if game:GetService("Workspace").Enemies:FindFirstChild("Darkbeard")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name==("Darkbeard"or z.Name=="Darkbeard")and z.Humanoid.Health>0 and z:IsA("Model")and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService"VirtualUser":CaptureController()game:GetService"VirtualUser":Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until _G.AutoDarkCoat==false or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end else aw(CFrame.new(3677.08203125,62.751937866211,-3144.8332519531))end end end)end end)dj:Toggle("ออโต้เอ็กโตพลาสซึม",_G.AutoEctoplasm,function(dF)_G.AutoEctoplasm=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoEctoplasm then if game:GetService("Workspace").Enemies:FindFirstChild("Ship Deckhand")or game:GetService("Workspace").Enemies:FindFirstChild("Ship Engineer")or game:GetService("Workspace").Enemies:FindFirstChild("Ship Steward")or game:GetService("Workspace").Enemies:FindFirstChild("Ship Officer")or game:GetService("Workspace").Enemies:FindFirstChild("Arctic Warrior")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Ship Deckhand"or z.Name=="Ship Engineer"or z.Name=="Ship Steward"or z.Name=="Ship Officer"or z.Name=="Arctic Warrior"then if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoEctoplasm or not z.Parent or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end end else BringMob=false;game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(923.21252441406,126.9760055542,32852.83203125))end end end)end end)dj:Toggle("ออโต้ตีโรงงาน",_G.AutoFactory,function(dF)_G.AutoFactory=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoFactory then if workspace.Map.Dressrosa.SmileFactory.Door.Transparency==1 then repeat task.wait()FastAttack=true;EquipWeapon(_G.SelectWeapon)if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;aw(CFrame.new(456.917724609375,182.5244903564453,-430.490966796875))until not _G.AutoFactory or workspace.Map.Dressrosa.SmileFactory.Door.Transparency==0;FastAttack=false end elseif workspace.Map.Dressrosa.SmileFactory.Door.Transparency==0 then _G.AutoFactory=false end end)end end)dj:Toggle("ออโต้สามดาบ",_G.AutoTrueTriplKatana,function(dF)_G.AutoTrueTriplKatana=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoTrueTriplKatana then local dU="MysteriousMan"local dV="2"local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU,dV)end end)end end)dj:Toggle("ออโต้ดาบเรนโกคุ",_G.AutoRengoku,function(dF)_G.AutoRengoku=dF;if dF==false then aw(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoRengoku then if game.Players.LocalPlayer.Backpack:FindFirstChild("Hidden Key")or game.Players.LocalPlayer.Character:FindFirstChild("Hidden Key")then EquipWeapon("Hidden Key")aw(CFrame.new(6571.1201171875,299.23028564453,-6967.841796875))elseif game.Workspace.Enemies:FindFirstChild("Snow Lurker")or game:GetService("Workspace").Enemies:FindFirstChild("Arctic Warrior")then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if(z.Name=="Snow Lurker"or z.Name=="Arctic Warrior")and z.Humanoid.Health>0 then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until game.Players.LocalPlayer.Backpack:FindFirstChild("Hidden Key")or not _G.AutoRengoku or not z.Parent or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end else BringMob=false;FastAttack=false;aw(CFrame.new(5525.7045898438,262.90060424805,-6755.1186523438))end end end)end end)dj:Toggle("ออโต้แว่นตาโดฟา",_G.AutoSwanGlasses,function(dF)_G.AutoSwanGlasses=dF;if dF==false then aw(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoSwanGlasses then if game:GetService("Workspace").Enemies:FindFirstChild("Don Swan")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Don Swan"and z.Humanoid.Health>0 and z:IsA("Model")and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")then repeat task.wait()BringMob=true;FastAttack=true;EquipWeapon(_G.SelectWeapon)PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoSwanGlasses or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end else repeat task.wait()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(2284.912109375,15.537666320801,905.48291015625))until(CFrame.new(2284.912109375,15.537666320801,905.48291015625).Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=4 or not _G.AutoSwanGlasses end end end)end end)elseif World3 then dj:Label("สถานะ : โลก 3")dj:Toggle("ออโต้ฮาคิสีรุ้ง",_G.AutoRainbowHaki,function(dF)_G.AutoRainbowHaki=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)end;task.spawn(function()while task.wait()do pcall(function()if _G.AutoRainbowHaki then if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==false then aw(CFrame.new(-11892.0703125,930.57672119141,-8760.1591796875))if(Vector3.new(-11892.0703125,930.57672119141,-8760.1591796875)-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=30 then wait(1.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("HornedMan","Bet")end elseif game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==true and string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Stone")then if game:GetService("Workspace").Enemies:FindFirstChild("Stone")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Stone"then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoRainbowHaki or z.Humanoid.Health<=0 or not z.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==false;BringMob=false;FastAttack=false end end else aw(CFrame.new(-1086.11621,38.8425903,6768.71436,0.0231462717,-0.592676699,0.805107772,2.03251839e-05,0.805323839,0.592835128,-0.999732077,-0.0137055516,0.0186523199))end elseif game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==true and string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Island Empress")then if game:GetService("Workspace").Enemies:FindFirstChild("Island Empress")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Island Empress"then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoRainbowHaki or z.Humanoid.Health<=0 or not z.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==false;BringMob=false;FastAttack=false end end else aw(CFrame.new(5713.98877,601.922974,202.751251,-0.101080291,-0,-0.994878292,-0,1,-0,0.994878292,0,-0.101080291))end elseif string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Kilo Admiral")then if game:GetService("Workspace").Enemies:FindFirstChild("Kilo Admiral")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Kilo Admiral"then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoRainbowHaki or z.Humanoid.Health<=0 or not z.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==false;BringMob=false;FastAttack=false end end else aw(CFrame.new(2877.61743,423.558685,-7207.31006,-0.989591599,-0,-0.143904909,-0,1.00000012,-0,0.143904924,0,-0.989591479))end elseif string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Captain Elephant")then if game:GetService("Workspace").Enemies:FindFirstChild("Captain Elephant")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Captain Elephant"then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoRainbowHaki or z.Humanoid.Health<=0 or not z.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==false;BringMob=false;FastAttack=false end end else aw(CFrame.new(-13485.0283,331.709259,-8012.4873,0.714521289,7.98849911e-08,0.69961375,-1.02065748e-07,1,-9.94383065e-09,-0.69961375,-6.43015241e-08,0.714521289))end elseif string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Beautiful Pirate")then if game:GetService("Workspace").Enemies:FindFirstChild("Beautiful Pirate")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Beautiful Pirate"then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoRainbowHaki or z.Humanoid.Health<=0 or not z.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==false;BringMob=false;FastAttack=false end end else aw(CFrame.new(5312.3598632813,20.141201019287,-10.158538818359))end else aw(CFrame.new(-11892.0703125,930.57672119141,-8760.1591796875))if(Vector3.new(-11892.0703125,930.57672119141,-8760.1591796875)-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=30 then wait(1.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("HornedMan","Bet")end end end end)end end)dj:Toggle("ออโต้ฮาคิสังเกตขั้นสอง",_G.AutoKenHakiV2,function(dF)_G.AutoKenHakiV2=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoKenHakiV2 then if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==false then repeat aw(CFrame.new(-12444.78515625,332.40396118164,-7673.1806640625))task.wait()until not _G.AutoKenHakiV2 or(game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-12444.78515625,332.40396118164,-7673.1806640625)).Magnitude<=10;wait(.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress","Citizen")wait(1)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StartQuest","CitizenQuest",1)else if game.Players.LocalPlayer.Backpack:FindFirstChild("Banana")and game.Players.LocalPlayer.Backpack:FindFirstChild("Apple")and game.Players.LocalPlayer.Backpack:FindFirstChild("Pineapple")then repeat aw(CFrame.new(-12444.78515625,332.40396118164,-7673.1806640625))task.wait()until not _G.AutoKenHakiV2 or(game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-12444.78515625,332.40396118164,-7673.1806640625)).Magnitude<=10;wait(.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress","Citizen")elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Fruit Bowl")or game.Players.LocalPlayer.Character:FindFirstChild("Fruit Bowl")then repeat aw(CFrame.new(-10920.125,624.20275878906,-10266.995117188))task.wait()until not _G.AutoKenHakiV2 or(game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-10920.125,624.20275878906,-10266.995117188)).Magnitude<=10;wait(.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk2","Start")wait(1)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk2","Buy")elseif string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Defeat 50 Forest Pirates")then if game:GetService("Workspace").Enemies:FindFirstChild("Forest Pirate")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Forest Pirate"then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoKenHakiV2 or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end else repeat aw(CFrame.new(-13277.568359375,370.34185791016,-7821.1572265625))task.wait()until not _G.AutoKenHakiV2 or(game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-13277.568359375,370.34185791016,-7821.1572265625)).Magnitude<=10 end elseif game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text=="Defeat  Captain Elephant (0/1)"then if game:GetService("Workspace").Enemies:FindFirstChild("Captain Elephant")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Captain Elephant"then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoKenHakiV2 or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end else repeat aw(CFrame.new(-13493.12890625,318.89553833008,-8373.7919921875))task.wait()until not _G.AutoKenHakiV2 or(game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-13493.12890625,318.89553833008,-8373.7919921875)).Magnitude<=10 end else for y,z in pairs(game.Workspace:GetDescendants())do if z.Name=="Apple"or z.Name=="Banana"or z.Name=="Pineapple"then z.Handle.CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,1,10)task.wait()firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,z.Handle,0)task.wait()end end end end end end)end end)dj:Line()dj:Seperator("<<โคมไฟ>>")dj:Toggle("ออโต้จุดโคมไฟ",_G.AutoHolyTorch,function(dF)_G.AutoHolyTorch=dF;_G.BypassTP=false;if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end end)spawn(function()while wait()do if _G.AutoHolyTorch then if game.ReplicatedStorage:FindFirstChild("rip_indra True Form [Lv. 5000] [Raid Boss]")or game.Workspace.Enemies:FindFirstChild("rip_indra True Form [Lv. 5000] [Raid Boss]")and game:GetService("Workspace").Map.Turtle.TushitaGate.TushitaGate.Transparency==1 then if game.Players.LocalPlayer.Backpack:FindFirstChild("Holy Torch")then EquipWeapon("Holy Torch")elseif game.Players.LocalPlayer.Character:FindFirstChild("Holy Torch")then if game:GetService("Workspace").Map.Turtle.QuestTorches.Torch1.Particles.Main.Enabled~=true then if(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch1.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then HolyTorchtween=TP(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch1.Position,game:GetService("Workspace").Map.Turtle.QuestTorches.Torch1.CFrame)elseif(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch1.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if HolyTorchtween then HolyTorchtween:Stop()end;game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game.Workspace.Map.Turtle.QuestTorches.Torch1.CFrame end elseif game:GetService("Workspace").Map.Turtle.QuestTorches.Torch2.Particles.Main.Enabled~=true then if(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch2.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then HolyTorchtween=TP(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch2.Position,game:GetService("Workspace").Map.Turtle.QuestTorches.Torch2.CFrame)elseif(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch2.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if HolyTorchtween then HolyTorchtween:Stop()end;game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game.Workspace.Map.Turtle.QuestTorches.Torch2.CFrame end elseif game:GetService("Workspace").Map.Turtle.QuestTorches.Torch3.Particles.Main.Enabled~=true then if(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch3.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then HolyTorchtween=TP(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch3.Position,game:GetService("Workspace").Map.Turtle.QuestTorches.Torch3.CFrame)elseif(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch3.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if HolyTorchtween then HolyTorchtween:Stop()end;game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game.Workspace.Map.Turtle.QuestTorches.Torch3.CFrame end elseif game:GetService("Workspace").Map.Turtle.QuestTorches.Torch4.Particles.Main.Enabled~=true then if(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch4.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then HolyTorchtween=TP(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch4.Position,game:GetService("Workspace").Map.Turtle.QuestTorches.Torch4.CFrame)elseif(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch4.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if HolyTorchtween then HolyTorchtween:Stop()end;game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game.Workspace.Map.Turtle.QuestTorches.Torch4.CFrame end elseif game:GetService("Workspace").Map.Turtle.QuestTorches.Torch5.Particles.Main.Enabled~=true then if(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch5.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>300 then HolyTorchtween=TP(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch5.Position,game:GetService("Workspace").Map.Turtle.QuestTorches.Torch5.CFrame)elseif(game:GetService("Workspace").Map.Turtle.QuestTorches.Torch5.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=300 then if HolyTorchtween then HolyTorchtween:Stop()end;game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game.Workspace.Map.Turtle.QuestTorches.Torch5.CFrame end end else game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Map.Waterfall.SecretRoom.Room.Door.Door.Hitbox.CFrame end end end end end)function Elite()task.spawn(function()while task.wait()do pcall(function()if _G.AutoEliteHunter then if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible==true then if string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Diablo")or string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Urban")or string.find(game.Players.LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Deandre")then for y,z in pairs(game.ReplicatedStorage:GetChildren())do if string.find(z.Name,"Diablo")then EliteHunter=aw(z.HumanoidRootPart.CFrame)if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=150 then if EliteHunter then EliteHunter:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=z.HumanoidRootPart.CFrame end end;if string.find(z.Name,"Urban")then EliteHunter=aw(z.HumanoidRootPart.CFrame)if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=150 then if EliteHunter then EliteHunter:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=z.HumanoidRootPart.CFrame end end;if string.find(z.Name,"Deandre")then EliteHunter=aw(z.HumanoidRootPart.CFrame)if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=150 then if EliteHunter then EliteHunter:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=z.HumanoidRootPart.CFrame end end end;for y,z in pairs(game.Workspace.Enemies:GetChildren())do if _G.AutoEliteHunter and string.find(z.Name,"Diablo")and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat task.wait()if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>150 then Farmtween=aw(z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=150 then if Farmtween then Farmtween:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=z.HumanoidRootPart.CFrame*MethodFarm;FastAttack=true;EquipWeapon(_G.SelectWeapon)end until not _G.AutoEliteHunter or not z.Parent or z.Humanoid.Health<=0;FastAttack=false end;if _G.AutoEliteHunter and string.find(z.Name,"Urban")and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat task.wait()if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>150 then Farmtween=aw(z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=150 then if Farmtween then Farmtween:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=z.HumanoidRootPart.CFrame*MethodFarm;FastAttack=true;EquipWeapon(_G.SelectWeapon)end until not _G.AutoEliteHunter or not z.Parent or z.Humanoid.Health<=0;FastAttack=false end;if _G.AutoEliteHunter and string.find(z.Name,"Deandre")and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat task.wait()if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>150 then Farmtween=aw(z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=150 then if Farmtween then Farmtween:Stop()end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=z.HumanoidRootPart.CFrame*MethodFarm;FastAttack=true;EquipWeapon(_G.SelectWeapon)end until not _G.AutoEliteHunter or not z.Parent or z.Humanoid.Health<=0;FastAttack=false end end else local dU="EliteHunter"local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU)end else local dU="EliteHunter"local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU)end end end)end end)if _G.AutoEliteHunterHop then if not(game.Workspace.Enemies:FindFirstChild("Deandre")or game.Workspace.Enemies:FindFirstChild("Urban")or game.Workspace.Enemies:FindFirstChild("Diablo")or game.ReplicatedStorage:FindFirstChild("Deandre")or game.ReplicatedStorage:FindFirstChild("Urban")or game.ReplicatedStorage:FindFirstChild("Diablo"))then wait(10)Teleport()Hop()end end end;local dX=dj:Label("Status : N/Q")task.spawn(function()while task.wait()do pcall(function()if game:GetService("ReplicatedStorage"):FindFirstChild("Diablo")or game:GetService("ReplicatedStorage"):FindFirstChild("Deandre")or game:GetService("ReplicatedStorage"):FindFirstChild("Urban")or game:GetService("Workspace").Enemies:FindFirstChild("Diablo")or game:GetService("Workspace").Enemies:FindFirstChild("Deandre")or game:GetService("Workspace").Enemies:FindFirstChild("Urban")then dX:Set("Status : Spawned")else dX:Set("Status : Not Spawned")end end)end end)local dY=dj:Label("")spawn(function()pcall(function()while task.wait()do dY:Set("Already killed Elite : "..game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter","Progress"))end end)end)dj:Seperator("<<อีลลิธ>>")dj:Toggle("ออโต้ นักล่าชั้นยอด & ย้ายเซิฟ",_G.AutoEliteHunterHop,function(dF)_G.AutoEliteHunterHop=dF;Elite()if dF==false then aw(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)end end)dj:Toggle("ออโต้นักล่าชั้นยอด",_G.AutoEliteHunter,function(dF)_G.AutoEliteHunter=dF;Elite()if dF==false then aw(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)end end)dj:Toggle("ออโต้ตีโจรเกาะกลาง",_G.AutoCastleRaid,function(dF)_G.AutoCastleRaid=dF;if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end end)spawn(function()while wait()do pcall(function()if _G.AutoCastleRaid then if(CFrame.new(-5118.48682,314.54129,-2958.64404,-0.387232125,1.81507858e-08,0.921982229,-7.54388907e-08,1,-5.13709999e-08,-0.921982229,-8.94458196e-08,-0.387232125).Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=2000 then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 and(z.HumanoidRootPart.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=1000 then repeat wait()PosMon=z.HumanoidRootPart.CFrame;EquipWeapon(_G.SelectWeapon)z.HumanoidRootPart.Size=Vector3.new(60,60,60)BringMob=true;aw(z.HumanoidRootPart.CFrame*MethodFarm)if(z.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then game:GetService("VirtualUser"):CaptureController()game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))end until not _G.AutoCastleRaid or not z.Parent or z.Humanoid.Health<=0;BringMob=false end end else if(CFrame.new(-5118.48682,314.54129,-2958.64404,-0.387232125,1.81507858e-08,0.921982229,-7.54388907e-08,1,-5.13709999e-08,-0.921982229,-8.94458196e-08,-0.387232125).Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=2000 then for y,z in pairs(game.ReplicatedStorage:GetChildren())do if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 and(z.HumanoidRootPart.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=1000 then aw(z.HumanoidRootPart.CFrame*MethodFarm)end end end;aw(CFrame.new(-5118.48682,314.54129,-2958.64404,-0.387232125,1.81507858e-08,0.921982229,-7.54388907e-08,1,-5.13709999e-08,-0.921982229,-8.94458196e-08,-0.387232125))end end end)end end)dj:Seperator("<<กระดูก>>")local dZ=0;local d_=dj:Label('กระดูก : '..dZ,true)spawn(function()while task.wait()do local e0=game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check")d_:Set('Bone : '..e0)wait(1)end end)dj:Toggle("ออโต้ฟาร์มกระดูก",_G.Settings.AutoFarmBone,function(dF)_G.AutoFarmBone=dF;_G.Settings.AutoFarmBone=dF;SaveSettings()if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)dj:Toggle("ออโต้สุ่มกระดูก",_G.AutoRandomBone,function(dF)_G.AutoRandomBone=dF end)spawn(function()while wait(.1)do if _G.AutoRandomBone then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,1)end end end)spawn(function()game:GetService("RunService").Heartbeat:Connect(function()pcall(function()for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if _G.BringMob and _G.AutoFarmBone and StartMagnetBoneMon and(z.Name=="Reborn Skeleton"or z.Name=="Living Zombie"or z.Name=="Demonic Soul"or z.Name=="Posessed Mummy")and(z.HumanoidRootPart.Position-PosMonBone.Position).magnitude<=1000 then z.HumanoidRootPart.CFrame=PosMonBone;z.HumanoidRootPart.CanCollide=false;z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.Size=Vector3.new(50,50,50)if z.Humanoid:FindFirstChild("Animator")then z.Humanoid.Animator:Destroy()end;sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)end end end)end)end)local e1=1;local e2={["Mon"]={"Reborn Skeleton","Demonic Soul","Living Zombie","Posessed Mummy"},["Boss"]={"Soul Reaper"},["Item"]="Hallow Essence"}local e3=1;function GetBone_CFrame_Mon()local S={}for H,Mon in ipairs(e2["Mon"])do local J=Mon:gsub("Lv. ",""):gsub("[%[%]]",""):gsub("%d+",""):gsub("%s+","")for H,z in ipairs(game.workspace.EnemySpawns:GetChildren())do if z.Name==J then table.insert(S,z.CFrame)end end end;return S end;spawn(function()while wait()do pcall(function()if _G.AutoFarmBone then for H,e4 in ipairs(e2["Boss"])do local e5=e2["Item"]if game:GetService("Workspace").Enemies:FindFirstChild(e4)or game:GetService("ReplicatedStorage"):FindFirstChild(e4)then for H,I in pairs(game:GetService("Workspace").Enemies:GetChildren())do if string.find(I.Name,e4)then if I:FindFirstChild("Humanoid")and I:FindFirstChild("HumanoidRootPart")and I.Humanoid.Health>0 then repeat wait()EquipWeapon(_G.SelectWeapon)I.HumanoidRootPart.Size=Vector3.new(60,60,60)BringMob=true;aw(I.HumanoidRootPart.CFrame*MethodFarm)if(I.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then _G.FastAttack=true end until not _G.AutoFarmBone or I.Humanoid.Health<=0 or not I.Parent or I.Humanoid.Health<=0;BringMob=false end end end else if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(e5)or game:GetService("Players").LocalPlayer.Character:FindFirstChild(e5)then EquipWeapon(e5)aw(workspace.Map["Haunted Castle"].Summoner.Detection.CFrame)else for H,e6 in next,e2["Mon"]do if game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton")or game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie")or game:GetService("Workspace").Enemies:FindFirstChild("Demonic Soul")or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if string.find(z.Name,e6)then if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat wait()PosMon=z.HumanoidRootPart.CFrame;EquipWeapon(_G.SelectWeapon)z.HumanoidRootPart.Size=Vector3.new(60,60,60)BringMob=true;aw(z.HumanoidRootPart.CFrame*MethodFarm)if(z.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then _G.FastAttack=true end until not _G.AutoFarmBone or z.Humanoid.Health<=0 or not z.Parent or z.Humanoid.Health<=0 else local CFrameMon=CFrame.new(-9504.8564453125,172.14292907714844,6057.259765625)repeat wait()aw(CFrameMon)until(CFrameMon.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=20 or not _G.AutoFarmBone end end end else if _G.Auto_CFrame then aw(GetBone_CFrame_Mon()[e3]*MethodFarm)if(GetBone_CFrame_Mon()[e3].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then if e3==nil or e3==''then e3=1 elseif e3>=#GetBone_CFrame_Mon()then e3=1 end;e3=e3+1;wait(0.5)end else if AttackRandomType_MonCFrame==1 then aw(GetBone_CFrame_Mon()[1]*CFrame.new(0,30,20))elseif AttackRandomType_MonCFrame==2 then aw(GetBone_CFrame_Mon()[1]*CFrame.new(0,30,-20))elseif AttackRandomType_MonCFrame==3 then aw(GetBone_CFrame_Mon()[1]*CFrame.new(20,30,0))elseif AttackRandomType_MonCFrame==4 then aw(GetBone_CFrame_Mon()[1]*CFrame.new(0,30,-20))elseif AttackRandomType_MonCFrame==5 then aw(GetBone_CFrame_Mon()[1]*CFrame.new(-20,30,0))else aw(GetBone_CFrame_Mon()[1]*CFrame.new(0,30,20))end end end end end end end end end)end end)dj:Seperator("<<DOUGH>>")local e7=dj:Label("NeedkillMon : Loading...",true)spawn(function()while true do pcall(function()local e8=game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")if string.len(e8)==88 then e7:Set("NeedkillMon : "..string.sub(e8,39,41))elseif string.len(e8)==87 then e7:Set("NeedkillMon : "..string.sub(e8,39,40))elseif string.len(e8)==86 then e7:Set("NeedkillMon : "..string.sub(e8,39,39))else e7:Set("BossIsSpawn..")end end)wait(1)end end)dj:Toggle("Auto Cake Prince",_G.AutoCakePrince,function(dF)_G.AutoCakePrince=dF;if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end end)spawn(function()while wait()do if _G.AutoCakePrince then pcall(function()if game.ReplicatedStorage:FindFirstChild("Cake Prince")or game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince")or game.ReplicatedStorage:FindFirstChild("Dough King")or game:GetService("Workspace").Enemies:FindFirstChild("Dough King")then if _G.BypassTP then _G.BypassTP=false end;if not game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince")then for H,e9 in pairs(game.ReplicatedStorage:GetChildren())do if e9.Name=="Cake Prince"or e9.Name=="Dough King"then if(e9.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude>1000 then _G.BypassTP=false;wait(1.5)aw(CFrame.new(-2145.89722,70.0088272,-12399.6016,0.99999702,1.58276379e-08,0.00245277886,-1.57982978e-08,1,-1.19813057e-08,-0.00245277886,1.19425199e-08,0.99999702))return end end end end;for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Cake Prince"then if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat task.wait()if(z.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude>1000 then aw(CFrame.new(-2145.89722,70.0088272,-12399.6016,0.99999702,1.58276379e-08,0.00245277886,-1.57982978e-08,1,-1.19813057e-08,-0.00245277886,1.19425199e-08,0.99999702))return end;EquipWeapon(_G.SelectWeapon)z.HumanoidRootPart.Size=Vector3.new(60,60,60)BringMob=true;aw(z.HumanoidRootPart.CFrame*MethodFarm)if(z.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then _G.FastAttack=true end;sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)until not _G.AutoCakePrince or not z.Parent or z.Humanoid.Health<=0 end else for H,e9 in pairs(game.ReplicatedStorage:GetChildren())do if e9.Name=="Cake Prince"or e9.Name=="Dough King"then if(e9.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude>1000 then aw(CFrame.new(-2145.89722,70.0088272,-12399.6016,0.99999702,1.58276379e-08,0.00245277886,-1.57982978e-08,1,-1.19813057e-08,-0.00245277886,1.19425199e-08,0.99999702))return end end end end end else if game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince")or game.ReplicatedStorage:FindFirstChild("Cake Prince")then for H,e9 in pairs(game.ReplicatedStorage:GetChildren())do if e9.Name=="Cake Prince"or e9.Name=="Dough King"then if(e9.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude>1000 then aw(CFrame.new(-2145.89722,70.0088272,-12399.6016,0.99999702,1.58276379e-08,0.00245277886,-1.57982978e-08,1,-1.19813057e-08,-0.00245277886,1.19425199e-08,0.99999702))return end end end else if game.Workspace.Enemies:FindFirstChild("Baking Staff")or game.Workspace.Enemies:FindFirstChild("Head Baker")or game.Workspace.Enemies:FindFirstChild("Cake Guard")or game.Workspace.Enemies:FindFirstChild("Cookie Crafter")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if(z.Name=="Baking Staff"or z.Name=="Head Baker"or z.Name=="Cake Guard"or z.Name=="Cookie Crafter")and z.Humanoid.Health>0 then repeat wait()PosMon=z.HumanoidRootPart.CFrame;EquipWeapon(_G.SelectWeapon)z.HumanoidRootPart.Size=Vector3.new(60,60,60)BringMob=true;aw(z.HumanoidRootPart.CFrame*MethodFarm)if(z.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then _G.FastAttack=true end until _G.AutoCakePrince==false or game:GetService("ReplicatedStorage"):FindFirstChild("Cake Prince")or not z.Parent or z.Humanoid.Health<=0 end end else BringMob=false;aw(GetCake_CFrame_Mon()*MethodFarm)wait(0.5)end end end end)end end end)dj:Toggle("Auto Spawn Katakuri",_G.AutoCakePrince,function(dF)_G.Spawnka=dF;while _G.Spawnka do wait()game.ReplicatedStorage.Remotes.CommF_:InvokeServer("CakePrinceSpawner")end end)dj:Seperator("<<Farm Materail>>")dj:Dropdown("Select Material",bc,function(dF)SelectModeMaterial=dF end)dj:Toggle("Auto Farm Material",AutoFarmMaterial,function(e9)AutoFarmMaterial=e9;if e9==false then aw(game.Players.LocalPlayer.Character.HumanoidRootPart.Position,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)end end)task.spawn(function()while task.wait()do if AutoFarmMaterial then xpcall(function()if SelectModeMaterial~=""then bf(SelectModeMaterial)if bd(MaterialMob)then for y,W in pairs(game:GetService("Workspace").Enemies:GetChildren())do if AutoFarmMaterial and table.find(MaterialMob,W.Name)and W:FindFirstChild("HumanoidRootPart")and W:FindFirstChild("Humanoid")and W.Humanoid.Health>0 then repeat task.wait()FarmtoTarget=aw(W.HumanoidRootPart.CFrame*CFrame.new(0,30,1))if W:FindFirstChild("HumanoidRootPart")and W:FindFirstChild("Humanoid")and(W.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=150 then if FarmtoTarget then FarmtoTarget:Stop()end;FastAttack=true;EquipWeapon(_G.SelectWeapon)spawn(function()for y,ea in pairs(game:GetService("Workspace").Enemies:GetChildren())do if ea.Name==W.Name then spawn(function()if InMyNetWork(ea.HumanoidRootPart)then ea.HumanoidRootPart.CFrame=W.HumanoidRootPart.CFrame;ea.Humanoid.JumpPower=0;ea.Humanoid.WalkSpeed=0;ea.HumanoidRootPart.CanCollide=false;ea.Humanoid:ChangeState(14)ea.Humanoid:ChangeState(16)ea.Humanoid:ChangeState(11)ea.HumanoidRootPart.Size=Vector3.new(55,55,55)end end)end end end)if game.Players.LocalPlayer.Character:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Character:FindFirstChild("Black Leg").Level.Value>=150 then game:service("VirtualInputManager"):SendKeyEvent(true,"V",false,game)game:service("VirtualInputManager"):SendKeyEvent(false,"V",false,game)end;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=W.HumanoidRootPart.CFrame*CFrame.new(0,30,1)end until not bd(MaterialMob)or not AutoFarmMaterial or W.Humanoid.Health<=0 or not W.Parent;FastAttack=false end end else FastAttack=false;w=aw(CFrameMon)if World1 and table.find(MaterialMob,"Fishman Commando")and(CFrameMon.Position-game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude>50000 then if w then w:Stop()end;wait(0.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625,11.6796875,1819.7841796875))elseif World1 and not table.find(MaterialMob,"Fishman Commando")and(CFrameMon.Position-game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude>50000 then if w then w:Stop()end;wait(0.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(3864.8515625,6.6796875,-1926.7841796875))elseif World1 and table.find(MaterialMob,"God's Guard")and(CFrameMon.Position-game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude>3000 then if w then w:Stop()end;wait(0.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.8227539063,872.54248046875,-1667.5568847656))elseif(CFrameMon.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=150 then if w then w:Stop()end end end end end,function(e9)end)else break end end end)Vec("<Color=Cyan>Vector Hub loaded successfully<Color=/>")dk:Seperator("⚙️")Weapon={"Melee","Sword","Fruit"}dk:Dropdown("Select Weapon",Weapon,function(dF)SelectWeapon=dF end)task.spawn(function()while wait()do pcall(function()if SelectWeapon=="Melee"then for y,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do if z.ToolTip=="Melee"then if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(z.Name))then _G.SelectWeapon=z.Name end end end elseif SelectWeapon=="Sword"then for y,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do if z.ToolTip=="Sword"then if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(z.Name))then _G.SelectWeapon=z.Name end end end elseif SelectWeapon=="Fruit"then for y,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do if z.ToolTip=="Blox Fruit"then if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(z.Name))then _G.SelectWeapon=z.Name end end end else for y,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do if z.ToolTip=="Melee"then if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(z.Name))then _G.SelectWeapon=z.Name end end end end end)end end)local eb={"Fast","Normal","Slow"}coroutine.wrap(function()while task.wait(0)do local a8=a3.activeController;if a8 and a8.equipped then task.wait(0.04)if FastAttack or _G.FastAttack then yakmefan()if _G.FastType=="Normal"then if tick()-a7>.9 then wait(.1)a7=tick()end elseif _G.FastType=="Fast"then if tick()-a7>1.5 then wait(.01)a7=tick()end elseif _G.FastType=="Slow"then if tick()-a7>.3 then wait(1)a7=tick()end end;setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)end end end end)()_G.FastType="Fast"local Time=0.04;task.spawn(function()while _G.FastAttack do task.wait()require(game.ReplicatedStorage.Util.CameraShaker):Stop()Bruh=require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)Ryu=debug.getupvalues(Bruh)[2]task.spawn(function()while true do task.wait()if _G.FastAttack then if typeof(Ryu)=="table"then pcall(function()Ryu.activeController.timeToNextAttack=0;Ryu.activeController.active=false;Ryu.activeController.timeToNextBlock=0;Ryu.activeController.focusStart=0;Ryu.activeController.increment=4;Ryu.activeController.blocking=false;Ryu.activeController.attacking=false;Ryu.activeController.humanoid.AutoRotate=false end)end end end end)end end)local ec={"Upper","Behind","Below"}if _G.Method==nil then _G.Method="Upper"end;if _G.DistanceAutoFarm==nil then _G.DistanceAutoFarm=30 end;dk:Dropdown("Select Farm Method",ec,function(dF)_G.Method=dF end)dk:Slider("Distance Auto Farm",1,80,30,function(dF)_G.DistanceAutoFarm=dF end)task.spawn(function()while task.wait(0)do pcall(function()if _G.Method=="Behind"then MethodFarm=CFrame.new(0,0,_G.DistanceAutoFarm)elseif _G.Method=="Below"then MethodFarm=CFrame.new(0,-_G.DistanceAutoFarm,0)*CFrame.Angles(math.rad(90),0,0)elseif _G.Method=="Upper"then MethodFarm=CFrame.new(0,_G.DistanceAutoFarm,0)*CFrame.Angles(math.rad(0),0,0)else MethodFarm=CFrame.new(0,_G.DistanceAutoFarm,0)end end)end end)dk:Toggle('Fast Attack:4',true,function(dF)_G.FastAttack1=dF end)dk:Toggle("Auto Haki",true,function(dF)_G.AutoHaki=dF end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoHaki then if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")end end end)end end)dk:Toggle("Auto Ken",true,function(dF)_G.AutoKen=dF end)spawn(function()while wait()do if _G.AutoKen then local aE={[1]="Ken",[2]=true}game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(aE))end end end)local l=game:GetService("RunService")dk:Toggle("White Screen",false,function(dF)_G.WhiteScreen=dF;if dF then game.RunService:Set3dRenderingEnabled(false)else game.RunService:Set3dRenderingEnabled(true)end end)dk:Toggle("Black Screen",false,function(dF)_G.BlackScreen=dF;if dF then game.RunService:Set3dRenderingEnabled(false)game:GetService("Players").LocalPlayer.PlayerGui.Main.Blackscreen.Size=UDim2.new(500,0,500,500)else game.RunService:Set3dRenderingEnabled(true)game:GetService("Players").LocalPlayer.PlayerGui.Main.Blackscreen.Size=UDim2.new(1,0,500,500)end end)dk:Toggle("HideNotification",false,function(dF)game:GetService("Players").LocalPlayer.PlayerGui.Notifications.Enabled=not game:GetService("Players").LocalPlayer.PlayerGui.Notifications.Enabled end)dk:Toggle("Bring Mon",true,function(dF)_G.BringMob=dF end)_G.Auto_CFrame=true;dk:Toggle("Disabled Damage",true,function(dF)_G.Disdamage=dF;DisabledDamage()end)dk:Toggle("Camera Shaker",true,function(dF)_G.CameraShaker=dF;CameraShaker()end)dl:Seperator("📊")dl:Dropdown("Select Stats",{"Melee","Defense","Sword","Gun","Fruit"},function(dF)_G.SelectStats=dF end)dl:Toggle("Auto Stats",_G.EnabledAutoStats,function(dF)_G.EnabledAutoStats=dF end)spawn(function()pcall(function()while task.wait()do if _G.EnabledAutoStats then if _G.SelectStats=="Melee"then local aE={[1]="AddPoint",[2]="Melee",[3]=100}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))elseif _G.SelectStats=="Defense"then local aE={[1]="AddPoint",[2]="Defense",[3]=100}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))elseif _G.SelectStats=="Sword"then local aE={[1]="AddPoint",[2]="Sword",[3]=100}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))elseif _G.SelectStats=="Gun"then local aE={[1]="AddPoint",[2]="Gun",[3]=100}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))elseif _G.SelectStats=="Fruit"then local aE={[1]="AddPoint",[2]="Demon Fruit",[3]=100}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end end end end)end)dl:Toggle("Auto Stat Kaitun",_G.AutoStatsKaitun,function(dF)_G.AutoStatsKaitun=dF end)spawn(function()while task.wait()do if _G.AutoStatsKaitun then if game:GetService("Players").LocalPlayer.Data.Stats.Melee.Level.Value<=2549 then local aE={[1]="AddPoint",[2]="Melee",[3]=100}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))else local aE={[1]="AddPoint",[2]="Defense",[3]=100}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end end end end)dl:Toggle("Redeem Code",_G.EnabledAutoRedeemCode,function(dF)_G.EnabledAutoRedeemCode=dF end)spawn(function()while task.wait()do if _G.EnabledAutoRedeemCode or _G.AutoFarm then function UseCode(ed)game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(ed)end;UseCode("Sub2UncleKizaru")UseCode("SUB2NOOBMASTER123")UseCode("StrawHatMaine")UseCode("Sub2OfficialNoobie")UseCode("SUB2GAMERROBOT_EXP1")UseCode("SUB2GAMERROBOT_RESET1")UseCode("THEGREATACE")UseCode("BIGNEWS")UseCode("FUDD10")UseCode("fudd10_v2")UseCode("Bluxxy")UseCode("Starcodeheo")UseCode("JCWK")UseCode("Magicbus")UseCode("Sub2Fer999")UseCode("kittgaming")UseCode("GAMERROBOT")UseCode("SUBGAMERROBOT")UseCode("ADMINGIVEAWAY")UseCode("KITT_RESET")UseCode("SECRET_ADMIN")UseCode("Sub2Daigrock")UseCode("Axiore")UseCode("TantaiGaming")end end end)dl:Seperator("<<FightingStyle>>")dl:Toggle("Auto God Human",_G.AutoGodHuman,function(dF)_G.AutoGodHuman=dF;game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")BuyGodhuman=tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true))if BuyGodhuman then if BuyGodhuman~=1 then GetAllMeleeFarm()end end end)spawn(function()while task.wait()do if _G.Auto_God_Human then pcall(function()if game.Players.LocalPlayer.Character:FindFirstChild("Superhuman")or game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Black Leg")or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Black Leg")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Death Step")or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Death Step")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fishman Karate")or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fishman Karate")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sharkman Karate")or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Sharkman Karate")or game.Players.LocalPlayer.Backpack:FindFirstChild("Electro")or game.Players.LocalPlayer.Character:FindFirstChild("Electro")or game.Players.LocalPlayer.Backpack:FindFirstChild("Electric Claw")or game.Players.LocalPlayer.Character:FindFirstChild("Electric Claw")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dragon Claw")or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dragon Claw")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dragon Talon")or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dragon Talon")or game.Players.LocalPlayer.Character:FindFirstChild("Godhuman")or game.Players.LocalPlayer.Backpack:FindFirstChild("Godhuman")then if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman",true)==1 then if game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman")and game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman").Level.Value>=400 or game.Players.LocalPlayer.Character:FindFirstChild("Superhuman")and game.Players.LocalPlayer.Character:FindFirstChild("Superhuman").Level.Value>=400 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")end else game.StarterGui:SetCore("SendNotification",{Title="Notification",Text="Not Have Superhuman",Icon="http://www.roblox.com/asset/?id=16129235054",Duration=2.5})end;if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep",true)==1 then if game.Players.LocalPlayer.Backpack:FindFirstChild("Death Step")and game.Players.LocalPlayer.Backpack:FindFirstChild("Death Step").Level.Value>=400 or game.Players.LocalPlayer.Character:FindFirstChild("Death Step")and game.Players.LocalPlayer.Character:FindFirstChild("Death Step").Level.Value>=400 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")end else game.StarterGui:SetCore("SendNotification",{Title="Notification",Text="Not Have Death Step",Icon="http://www.roblox.com/asset/?id=16129235054",Duration=2.5})end;if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)==1 then if game.Players.LocalPlayer.Backpack:FindFirstChild("Sharkman Karate")and game.Players.LocalPlayer.Backpack:FindFirstChild("Sharkman Karate").Level.Value>=400 or game.Players.LocalPlayer.Character:FindFirstChild("Sharkman Karate")and game.Players.LocalPlayer.Character:FindFirstChild("Sharkman Karate").Level.Value>=400 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")end else game.StarterGui:SetCore("SendNotification",{Title="Notification",Text="Not Have SharkMan Karate",Icon="http://www.roblox.com/asset/?id=16129235054",Duration=2.5})end;if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw",true)==1 then if game.Players.LocalPlayer.Backpack:FindFirstChild("Electric Claw")and game.Players.LocalPlayer.Backpack:FindFirstChild("Electric Claw").Level.Value>=400 or game.Players.LocalPlayer.Character:FindFirstChild("Electric Claw")and game.Players.LocalPlayer.Character:FindFirstChild("Electric Claw").Level.Value>=400 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")end else game.StarterGui:SetCore("SendNotification",{Title="Notification",Text="Not Have Electric Claw",Icon="http://www.roblox.com/asset/?id=16129235054",Duration=2.5})end;if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon",true)==1 then if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon")and game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon").Level.Value>=400 or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon")and game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon").Level.Value>=400 then if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true),"Bring")then game.StarterGui:SetCore("SendNotification",{Title="Notification",Text="Not Have Enough Material",Icon="http://www.roblox.com/asset/?id=16129235054",Duration=2.5})else game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")end end else game.StarterGui:SetCore("SendNotification",{Title="Notification",Text="Not Have Dragon Talon",Icon="http://www.roblox.com/asset/?id=16129235054",Duration=2.5})end else game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")end end)end end end)dl:Toggle("Auto Superhuman",_G.AutoSuperhuman,function(dF)_G.AutoSuperhuman=dF end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoSuperhuman then if game.Players.LocalPlayer:FindFirstChild("WeaponAssetCache")then if not game.Players.LocalPlayer.Backpack:FindFirstChild("Combat")and not game.Players.LocalPlayer.Character:FindFirstChild("Combat")then if not game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg")and not game.Players.LocalPlayer.Character:FindFirstChild("Black Leg")then if not game.Players.LocalPlayer.Backpack:FindFirstChild("Electro")and not game.Players.LocalPlayer.Character:FindFirstChild("Electro")then if not game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate")and not game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate")then if not game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw")and not game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw")then if not game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman")and not game.Players.LocalPlayer.Character:FindFirstChild("Superhuman")then local aE={[1]="BuyElectro"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end end end end end end;_G.SelectWeapon=GetFightingStyle("Melee")if game.Players.LocalPlayer.Backpack:FindFirstChild("Combat")or game.Players.LocalPlayer.Character:FindFirstChild("Combat")then local aE={[1]="BuyElectro"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end;if game.Players.LocalPlayer.Backpack:FindFirstChild("Electro")and game.Players.LocalPlayer.Backpack:FindFirstChild("Electro").Level.Value>=300 then local aE={[1]="BuyBlackLeg"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end;if game.Players.LocalPlayer.Character:FindFirstChild("Electro")and game.Players.LocalPlayer.Character:FindFirstChild("Electro").Level.Value>=300 then local aE={[1]="BuyBlackLeg"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end;if game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg").Level.Value>=300 then local aE={[1]="BuyFishmanKarate"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end;if game.Players.LocalPlayer.Character:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Character:FindFirstChild("Black Leg").Level.Value>=300 then local aE={[1]="BuyFishmanKarate"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end;if game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate")and game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate").Level.Value>=300 then local aE={[1]="BlackbeardReward",[2]="DragonClaw",[3]="2"}HaveDragonClaw=game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))if _G.AutoSuperhuman and game.Players.LocalPlayer.Data.Fragments.Value<=1500 and HaveDragonClaw==0 then if game.Players.LocalPlayer.Data.Level.Value>1100 then _G.SelectRaids="Flame"_G.AutoRaids=true;if _G.AutoFarm then _G.AutoFarm=false end end else _G.AutoRaids=false;if _G.AutoFarm then _G.AutoFarm=true end;local aE={[1]="BlackbeardReward",[2]="DragonClaw",[3]="2"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))_G.AutoRaids=false;if _G.AutoFarm then _G.AutoFarm=true end end end;if game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate")and game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate").Level.Value>=300 then local aE={[1]="BlackbeardReward",[2]="DragonClaw",[3]="2"}HaveDragonClaw=game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))if _G.AutoSuperhuman and game.Players.LocalPlayer.Data.Fragments.Value<=1500 and HaveDragonClaw==0 then if game.Players.LocalPlayer.Data.Level.Value>1100 then _G.Get_Fruit=true;_G.SelectRaids="Flame"_G.AutoRaids=true;if _G.AutoFarm then _G.AutoFarm=false end end else _G.AutoRaids=false;_G.Get_Fruit=false;if _G.AutoFarm then _G.AutoFarm=true end;local aE={[1]="BlackbeardReward",[2]="DragonClaw",[3]="2"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))_G.AutoRaids=false;if _G.AutoFarm then _G.AutoFarm=true end end end;if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw")and game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw").Level.Value>=300 then local aE={[1]="BuySuperhuman"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end;if game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw")and game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw").Level.Value>=300 then local aE={[1]="BuySuperhuman"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end end end end)end end)if _G.Get_Fruit then if Inventory_Fruit then Inventory_Fruit=nil end;TabelDevilFruitStore={}for y,z in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryFruits"))do for V,W in pairs(z)do if V=="Name"then table.insert(TabelDevilFruitStore,W)end end end;fruit=game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryFruits")for V,z in pairs(TabelDevilFruitStore)do if not game.Players.LocalPlayer.Backpack:FindFirstChild(TabelDevilFruitStore)then for y,z in pairs(fruit)do if z["Price"]<10000000 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("LoadFruit",z["Name"])end end end end end;dl:Toggle("Auto Electric Claw",_G.AutoElectricClaw,function(dF)_G.AutoElectricClaw=dF;if _G.AutoElectricClaw then Com("F_","BuyElectro")end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoElectricClaw then if game.Players.LocalPlayer:FindFirstChild("WeaponAssetCache")then if game.Players.LocalPlayer.Backpack:FindFirstChild("Electro")and game.Players.LocalPlayer.Backpack:FindFirstChild("Electro").Level.Value<400 then _G.SelectWeapon="Electro"end;if game.Players.LocalPlayer.Character:FindFirstChild("Electro")and game.Players.LocalPlayer.Character:FindFirstChild("Electro").Level.Value<400 then _G.SelectWeapon="Electro"end;if game.Players.LocalPlayer.Backpack:FindFirstChild("Electro")and game.Players.LocalPlayer.Backpack:FindFirstChild("Electro").Level.Value>=400 then local ee=game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectricClaw",true)if ee==4 then local ef=game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectricClaw","Start")if ef==nil then game.Players.localPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-12548,337,-7481)end else local dU="BuyElectricClaw"local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU)end end;if game.Players.LocalPlayer.Character:FindFirstChild("Electro")and game.Players.LocalPlayer.Character:FindFirstChild("Electro").Level.Value>=400 then local ee=game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectricClaw",true)if ee==4 then local ef=game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectricClaw","Start")if ef==nil then game.Players.localPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-12548,337,-7481)end else local dU="BuyElectricClaw"local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU)end end end end end)end end)dl:Toggle("Auto Death Step",_G.AutoDeathStep,function(dF)_G.AutoDeathStep=dF;if _G.AutoDeathStep then Com("F_","BuyBlackLeg")end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoDeathStep then if game.Players.LocalPlayer:FindFirstChild("WeaponAssetCache")then if game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg").Level.Value>=400 then local aE={[1]="BuyDeathStep"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))_G.SelectWeapon="Death Step"end;if game.Players.LocalPlayer.Character:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Character:FindFirstChild("Black Leg").Level.Value>=400 then local aE={[1]="BuyDeathStep"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))_G.SelectWeapon="Death Step"end;if game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg").Level.Value<400 then _G.SelectWeapon="Black Leg"end end elseif _G.AutoFullyDeathStep then if game.Players.LocalPlayer.Character:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Character:FindFirstChild("Black Leg").Level.Value>=400 or game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg").Level.Value>=400 then if game:GetService("Workspace").Map.IceCastle.Hall.LibraryDoor.PhoeyuDoor.Transparency==0 then if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Library Key")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Library Key")then EquipWeapon("Library Key")repeat task.wait()aw(CFrame.new(6371.2001953125,296.63433837890625,-6841.18115234375))until(CFrame.new(6371.2001953125,296.63433837890625,-6841.18115234375).Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=3 or not _G.AutoDeathStep;if(CFrame.new(6371.2001953125,296.63433837890625,-6841.18115234375).Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=3 then wait(1.2)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep",true)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")wait(0.5)end elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg").Level.Value>=450 or game.Players.LocalPlayer.Character:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Character:FindFirstChild("Black Leg").Level.Value>=450 then if game:GetService("ReplicatedStorage"):FindFirstChild("Awakened Ice Admiral")or game:GetService("Workspace").Enemies:FindFirstChild("Awakened Ice Admiral")then if game:GetService("Workspace").Enemies:FindFirstChild("Awakened Ice Admiral")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Awakened Ice Admiral"then repeat task.wait()task.wait()if game.Workspace.Enemies:FindFirstChild(z.Name)then if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>200 then Farmtween=aw(z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=200 then if Farmtween then Farmtween:Stop()end;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(60,60,60)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)aw(z.HumanoidRootPart.CFrame*MethodFarm)if game.Players.LocalPlayer.Character:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Character:FindFirstChild("Black Leg").Level.Value>=150 then game:service('VirtualInputManager'):SendKeyEvent(true,"V",false,game)game:service('VirtualInputManager'):SendKeyEvent(false,"V",false,game)end end end until not z.Parent or z.Humanoid.Health<=0 or _G.AutoDeathStep==false or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Library Key")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Library Key")FastAttack=false end end else aw(game:GetService("ReplicatedStorage"):FindFirstChild("Awakened Ice Admiral").HumanoidRootPart.CFrame)end end end end else game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")end end end)end end)dl:Toggle("Auto SharkmanKarate",_G.AutoSharkManKarate,function(dF)_G.AutoSharkManKarate=dF;if _G.AutoSharkManKarate then Com("F_","BuySharkmanKarate")end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoSharkManKarate then if game.Players.LocalPlayer:FindFirstChild("WeaponAssetCache")then if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fishman Karate")or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fishman Karate")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sharkman Karate")or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Sharkman Karate")then if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fishman Karate")and game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fishman Karate").Level.Value>=400 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")_G.SelectWeapon="Sharkman Karate"end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fishman Karate")and game:GetService("Players").LocalPlayer.Character:FindFirstChild("Fishman Karate").Level.Value>=400 then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")_G.SelectWeapon="Sharkman Karate"end;if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fishman Karate")and game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fishman Karate").Level.Value<=400 then _G.SelectWeapon="Fishman Karate"end else game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")end end elseif _G.AutoFullySharkManKarate then if game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate")and game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate").Level.Value>=400 or game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate")and game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate").Level.Value>=400 then if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate"),"keys")then if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Water Key")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Water Key")then repeat task.wait()aw(-2604.6958,239.432526,-10315.1982,0.0425701365,0,-0.999093413,0,1,0,0.999093413,0,0.0425701365)until(CFrame.new(-2604.6958,239.432526,-10315.1982,0.0425701365,0,-0.999093413,0,1,0,0.999093413,0,0.0425701365).Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=3 or not _G.Auto_Fully_SharkMan_Karate;if(CFrame.new(-2604.6958,239.432526,-10315.1982,0.0425701365,0,-0.999093413,0,1,0,0.999093413,0,0.0425701365).Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=3 then wait(1.2)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")wait(0.5)end elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate")and game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate").Level.Value>=400 or game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate")and game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate").Level.Value>=400 then if game:GetService("ReplicatedStorage"):FindFirstChild("Tide Keeper")or game:GetService("Workspace").Enemies:FindFirstChild("Tide Keeper")then if game:GetService("Workspace").Enemies:FindFirstChild("Tide Keeper")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Tide Keeper"then repeat task.wait()if game.Workspace.Enemies:FindFirstChild(z.Name)then if(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>200 then Farmtween=aw(z.HumanoidRootPart.CFrame)elseif(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=200 then if Farmtween then Farmtween:Stop()end;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(60,60,60)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)aw(z.HumanoidRootPart.CFrame*MethodFarm)if game.Players.LocalPlayer.Character:FindFirstChild("Black Leg")and game.Players.LocalPlayer.Character:FindFirstChild("Black Leg").Level.Value>=150 then game:service('VirtualInputManager'):SendKeyEvent(true,"V",false,game)game:service('VirtualInputManager'):SendKeyEvent(false,"V",false,game)end end end until not z.Parent or z.Humanoid.Health<=0 or _G.AutoDeathStep==false or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Library Key")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Library Key")FastAttack=false end end else aw(game:GetService("ReplicatedStorage"):FindFirstChild("Tide Keeper").HumanoidRootPart.CFrame)end end end else game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")end else game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")end end end)end end)dl:Toggle("Auto Dragon Talon",_G.AutoDragonTalon,function(dF)_G.AutoDragonTalon=dF;if _G.AutoDragonTalon then Com("F_","BlackbeardReward","DragonClaw","2")end end)task.spawn(function()while task.wait()do pcall(function()if _G.AutoDragonTalon then if game.Players.LocalPlayer:FindFirstChild("WeaponAssetCache")then if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw")and game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw").Level.Value<=399 and game.Players.LocalPlayer.Character.Humanoid.Health>0 then _G.SelectWeapon="Dragon Claw"end;if game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw")and game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw").Level.Value<=399 and game.Players.LocalPlayer.Character.Humanoid.Health>0 then _G.SelectWeapon="Dragon Claw"end;if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw")and game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw").Level.Value>=400 and game.Players.LocalPlayer.Character.Humanoid.Health>0 then _G.SelectWeapon="Dragon Claw"if game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon",true)==3 then local dU="Bones"local dV="Buy"local eg=1;local eh=1;local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU,dV,eg,eh)local dU="BuyDragonTalon"local ei=true;local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU,ei)elseif game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon",true)==1 then game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon")else local dU="BuyDragonTalon"local ei=true;local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU,ei)local dU="BuyDragonTalon"local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU)end end;if game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw")and game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw").Level.Value>=400 and game.Players.LocalPlayer.Character.Humanoid.Health>0 then _G.SelectWeapon="Dragon Claw"if game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon",true)==3 then local dU="Bones"local dV="Buy"local eg=1;local eh=1;local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU,dV,eg,eh)local dU="BuyDragonTalon"local ei=true;local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU,ei)elseif game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon",true)==1 then game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon")else local dU="BuyDragonTalon"local ei=true;local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU,ei)local dU="BuyDragonTalon"local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU)end end end end end)end end)dm:Seperator("🚀")dm:Button("Teleport to World 1",function(dF)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")end)dm:Button("Teleport to World 2",function(dF)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")end)dm:Button("Teleport to World 3",function(dF)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")end)TeleportTable={}if World1 then TeleportTable={"StraterIsland","Marine1","Marine2","Midle Town","Jungle","Pirate Village","Desert","Frozen Village","Colosseum","Prison","Mob Leader","Magma Village","UnderWater Gate","UnderWater City","Fountain City","Sky1","Sky2","Sky3"}elseif World2 then TeleportTable={"Dock","Mansion","Kingdom Of Rose","Cafe","Sunflower Field","Jeramy Mountain","Colossuem","Factory","The Bridge","Green Bit","Graveyard","Dark Area","Snow Mountain","Hot Island","Cold Island","Ice Castle","Usopp's Island","inscription Island","Forgotten Island","Ghost Ship"}elseif World3 then TeleportTable={"Port Town","Hydra Island","Gaint Tree","Mansion","Castle on the Sea","Haunted Castle","Icecream Island","Peanut Island","Cake Loaf","Candy Isand","TikiOutpost"}end;dm:Line()dm:Dropdown("Select Place",TeleportTable,function(dF)_G.SelectLocalTeleport=dF end)dm:Toggle("Teleport To Select",_G.TeleportIsland,function(dF)_G.TeleportIsland=dF;if _G.TeleportIsland then if World1 then if _G.SelectLocalTeleport=="Jones Salad"then aw(CFrame.new(1042.1501464844,16.299360275269,1444.3442382813))end;if _G.SelectLocalTeleport=="Marine1"then aw(CFrame.new(-2599.6655273438,6.9146227836609,2062.2216796875))end;if _G.SelectLocalTeleport=="Marine2"then aw(CFrame.new(-5081.3452148438,85.221641540527,4257.3588867188))end;if _G.SelectLocalTeleport=="Midle Town"then aw(CFrame.new(-655.97088623047,7.878026008606,1573.7612304688))end;if _G.SelectLocalTeleport=="Jungle"then aw(CFrame.new(-1499.9877929688,22.877912521362,353.87060546875))end;if _G.SelectLocalTeleport=="Pirate Village"then aw(CFrame.new(-1163.3889160156,44.777843475342,3842.8276367188))end;if _G.SelectLocalTeleport=="Desert"then aw(CFrame.new(954.02056884766,6.6275520324707,4262.611328125))end;if _G.SelectLocalTeleport=="Frozen Village"then aw(CFrame.new(1144.5270996094,7.3292083740234,-1164.7322998047))end;if _G.SelectLocalTeleport=="Colosseum"then aw(CFrame.new(-1667.5869140625,39.385631561279,-3135.5817871094))end;if _G.SelectLocalTeleport=="Prison"then aw(CFrame.new(4857.6982421875,5.6780304908752,732.75750732422))end;if _G.SelectLocalTeleport=="Mob Leader"then aw(CFrame.new(-2841.9604492188,7.3560485839844,5318.1040039063))end;if _G.SelectLocalTeleport=="Magma Village"then aw(CFrame.new(-5328.8740234375,8.6164798736572,8427.3994140625))end;if _G.SelectLocalTeleport=="UnderWater Gate"then aw(CFrame.new(3893.953125,5.3989524841309,-1893.4851074219))end;if _G.SelectLocalTeleport=="UnderWater City"then aw(CFrame.new(61191.12109375,18.497436523438,1561.8873291016))end;if _G.SelectLocalTeleport=="Fountain City"then aw(CFrame.new(5244.7133789063,38.526943206787,4073.4987792969))end;if _G.SelectLocalTeleport=="Sky1"then aw(CFrame.new(-4878.0415039063,717.71246337891,-2637.7294921875))end;if _G.SelectLocalTeleport=="Sky2"then aw(CFrame.new(-7899.6157226563,5545.6030273438,-422.21798706055))end;if _G.SelectLocalTeleport=="Sky3"then aw(CFrame.new(-7868.5288085938,5638.205078125,-1482.5548095703))end elseif World2 then if _G.SelectLocalTeleport=="Dock"then aw(CFrame.new(-12.519311904907,19.302536010742,2827.853515625))end;if _G.SelectLocalTeleport=="Mansion"then aw(CFrame.new(-390.34829711914,321.89730834961,869.00506591797))end;if _G.SelectLocalTeleport=="Kingdom Of Rose"then aw(CFrame.new(-388.29895019531,138.35575866699,1132.1662597656))end;if _G.SelectLocalTeleport=="Cafe"then aw(CFrame.new(-379.70889282227,73.0458984375,304.84692382813))end;if _G.SelectLocalTeleport=="Sunflower Field"then aw(CFrame.new(-1576.7171630859,198.61849975586,13.725157737732))end;if _G.SelectLocalTeleport=="Jeramy Mountain"then aw(CFrame.new(1986.3519287109,448.95678710938,796.70239257813))end;if _G.SelectLocalTeleport=="Colossuem"then aw(CFrame.new(-1871.8974609375,45.820514678955,1359.6843261719))end;if _G.SelectLocalTeleport=="Factory"then aw(CFrame.new(349.53750610352,74.446998596191,-355.62420654297))end;if _G.SelectLocalTeleport=="The Bridge"then aw(CFrame.new(-1860.6354980469,88.384948730469,-1859.1593017578))end;if _G.SelectLocalTeleport=="Green Bit"then aw(CFrame.new(-2202.3706054688,73.097663879395,-2819.2687988281))end;if _G.SelectLocalTeleport=="Graveyard"then aw(CFrame.new(-5617.5927734375,492.22183227539,-778.3017578125))end;if _G.SelectLocalTeleport=="Dark Area"then aw(CFrame.new(3464.7700195313,13.375151634216,-3368.90234375))end;if _G.SelectLocalTeleport=="Snow Mountain"then aw(CFrame.new(561.23834228516,401.44781494141,-5297.14453125))end;if _G.SelectLocalTeleport=="Hot Island"then aw(CFrame.new(-5505.9633789063,15.977565765381,-5366.6123046875))end;if _G.SelectLocalTeleport=="Cold Island"then aw(CFrame.new(-5924.716796875,15.977565765381,-4996.427734375))end;if _G.SelectLocalTeleport=="Ice Castle"then aw(CFrame.new(6111.7109375,294.41259765625,-6716.4829101563))end;if _G.SelectLocalTeleport=="Usopp's Island"then aw(CFrame.new(4760.4985351563,8.3444719314575,2849.2426757813))end;if _G.SelectLocalTeleport=="inscription Island"then aw(CFrame.new(-5099.01171875,98.241539001465,2424.4035644531))end;if _G.SelectLocalTeleport=="Forgotten Island"then aw(CFrame.new(-3051.9514160156,238.87203979492,-10250.807617188))end;if _G.SelectLocalTeleport=="Ghost Ship"then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(923.21252441406,126.9760055542,32852.83203125))end elseif World3 then if _G.SelectLocalTeleport=="Port Town"then aw(CFrame.new(-275.21615600586,43.755737304688,5451.0659179688))end;if _G.SelectLocalTeleport=="Mansion"then local aE={[1]="requestEntrance",[2]=Vector3.new(-12548.595703125,337.17001342773,-7554.6103515625)}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end;if _G.SelectLocalTeleport=="Castle on the Sea"then local aE={[1]="requestEntrance",[2]=Vector3.new(-5079.44677734375,313.7293395996094,-3151.065185546875)}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end;if _G.SelectLocalTeleport=="Hydra Island"then aw(CFrame.new(5541.2685546875,668.30456542969,195.48069763184))end;if _G.SelectLocalTeleport=="Gaint Tree"then aw(CFrame.new(2276.0859375,25.87850189209,-6493.03125))end;if _G.SelectLocalTeleport=="Haunted Castle"then aw(CFrame.new(-9515.07324,142.130615,5537.58398))end;if _G.SelectLocalTeleport=="Icecream Island"then aw(CFrame.new(-880.894531,118.245354,-11030.7607,-0.867174983,1.48501234e-09,0.498003572,2.70457789e-08,1,4.41129586e-08,-0.498003572,5.1722548e-08,-0.867174983))end;if _G.SelectLocalTeleport=="Peanut Island"then aw(CFrame.new(-2124.06738,44.0723495,-10179.8281,-0.623125494,-2.55908191e-07,-0.782121837,-1.40530574e-07,1,-2.15235005e-07,0.782121837,-2.42063933e-08,-0.623125494))end;if _G.SelectLocalTeleport=="Lab"then aw(CFrame.new(-5057.146484375,314.54132080078,-2934.7995605469))end;if _G.SelectLocalTeleport=="Cake Loaf"then aw(CFrame.new(-1977.36767578125,251.509521484375,-12380.4189453125))end;if _G.SelectLocalTeleport=="Candy Isand"then aw(CFrame.new(-1067.02246,14.6404228,-14448.1455,0.907635272,-7.29340499e-08,0.419759721,6.73669618e-08,1,2.8086113e-08,-0.419759721,2.78598944e-09,0.907635272)*CFrame.new(0,100,0))end;if _G.SelectLocalTeleport=="TikiOutpost"then aw(CFrame.new(-16753.5977,189.528107,451.797333,-0.777145505,0,-0.629321039,0,1,0,0.629321039,0,-0.777145505))end end end end)dm:Toggle("BypassTP[For All Teleport]",_G.BypassTP,function(dF)_G.BypassTP=dF;game:GetService("StarterGui"):SetCore("SendNotification",{Title="VectorHub",Text="If Bug Turn Off",Icon="rbxassetid://16129235054",Duration=3})end)dm:Button("Stop Teleport",function(dF)aw(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)end)dj:Seperator("<<Observation Hki>>")local ej=dj:Label("...")spawn(function()while wait()do pcall(function()ej:Set("Observation Range Level : "..math.floor(game:GetService("Players").LocalPlayer.VisionRadius.Value))end)end end)dj:Toggle("Auto Farm Observation",_G.Settings.AutoObservation,function(dF)_G.AutoObservation=dF;_G.Settings.AutoObservation=dF;SaveSettings()if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)spawn(function()while wait()do pcall(function()if _G.Settings.AutoObservation then repeat task.wait()if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")then wait(5)game:GetService("VirtualUser"):CaptureController()game:GetService("VirtualUser"):SetKeyDown("0x65")wait(2)game:GetService("VirtualUser"):SetKeyUp("0x65")end until game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")or not _G.AutoObservation end end)end end)dj:Toggle("Auto Farm Observation Hop",_G.AutoObservation_Hop,function(dF)_G.AutoObservation_Hop=dF end)spawn(function()pcall(function()while wait()do if _G.Settings.AutoObservation then if game:GetService("Players").LocalPlayer.VisionRadius.Value>=6000 then game:GetService("StarterGui"):SetCore("SendNotification",{Icon="rbxassetid://16129235054",Title="Observation",Text="You Have Max Observation"})wait(2)else if World2 then if game:GetService("Workspace").Enemies:FindFirstChild("Lava Pirate")then if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")then repeat task.wait()game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Enemies:FindFirstChild("Lava Pirate").HumanoidRootPart.CFrame*CFrame.new(3,0,0)until _G.AutoObservation==false or not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")else repeat task.wait()game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Enemies:FindFirstChild("Lava Pirate").HumanoidRootPart.CFrame*CFrame.new(0,50,0)wait(1)if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")and _G.AutoObservation_Hop==true then game:GetService("TeleportService"):Teleport(game.PlaceId,game:GetService("Players").LocalPlayer)end until _G.AutoObservation==false or game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")end else two(CFrame.new(-5478.39209,15.9775667,-5246.9126))end elseif World1 then if game:GetService("Workspace").Enemies:FindFirstChild("Galley Captain")then if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")then repeat task.wait()game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Enemies:FindFirstChild("Galley Captain").HumanoidRootPart.CFrame*CFrame.new(3,0,0)until _G.AutoObservation==false or not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")else repeat task.wait()game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Enemies:FindFirstChild("Galley Captain").HumanoidRootPart.CFrame*CFrame.new(0,50,0)wait(1)if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")and _G.AutoObservation_Hop==true then game:GetService("TeleportService"):Teleport(game.PlaceId,game:GetService("Players").LocalPlayer)end until _G.AutoObservation==false or game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")end else two(CFrame.new(5533.29785,88.1079102,4852.3916))end elseif World3 then if game:GetService("Workspace").Enemies:FindFirstChild("Giant Islander")then if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")then repeat task.wait()game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Enemies:FindFirstChild("Giant Islander").HumanoidRootPart.CFrame*CFrame.new(3,0,0)until _G.AutoObservation==false or not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")else repeat task.wait()game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Enemies:FindFirstChild("Giant Islander").HumanoidRootPart.CFrame*CFrame.new(0,50,0)wait(1)if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")and _G.AutoObservation_Hop==true then game:GetService("TeleportService"):Teleport(game.PlaceId,game:GetService("Players").LocalPlayer)end until _G.AutoObservation==false or game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")end else two(CFrame.new(4530.3540039063,656.75695800781,-131.60952758789))end end end end end end)end)dj:Line()dj:Seperator("<<Boss>>")local ek={}local el=dj:Dropdown("Select Boss",ek,function(dF)_G.SelectBoss=dF end)dj:Button("Refresh Boss",function()el:Clear()for y,z in pairs(game.ReplicatedStorage:GetChildren())do if z.Name=="Cyborg"or z.Name=="The Gorilla King"or z.Name=="Wysper"or z.Name=="Thunder God"or z.Name=="Mob Leader"or z.Name=="Bobby"or z.Name=="Saber Expert"or z.Name=="Warden"or z.Name=="Chief Warden"or z.Name=="Swan"or z.Name=="Magma Admiral"or z.Name=="Fishman Lord"or z.Name=="Wysper"or z.Name=="Ice Admiral"or z.Name=="Diamond"or z.Name=="Jeremy"or z.Name=="Fajita"or z.Name=="Don Swan"or z.Name=="Smoke Admiral"or z.Name=="Awakened Ice Admiral"or z.Name=="Tide Keeper"or z.Name=="Darkbeard"or z.Name=="Stone"or z.Name=="Island Empress"or z.Name=="Kilo Admiral"or z.Name=="Captain Elephant"or z.Name=="Beautiful Pirate"or z.Name=="Longma"or z.Name=="Cake Queen"or z.Name=="Greybeard"or z.Name=="Order"or z.Name=="Cursed Captain"or z.Name=="Soul Reaper"or z.Name=="Rip indra"or z.Name=="Mihawk Boss"or z.Name=="Cake Prince"or z.Name=="Dough King"or z.Name=="Cursed Skeleton Boss"or z.Name=="Factory"then table.insert(ek,z.Name)el:Add(z.Name)end end end)dj:Toggle("Auto Farm Boss",_G.AutoFarmBoss,function(dF)_G.AutoFarmBoss=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do if _G.AutoFarmBoss then pcall(function()if game:GetService("Workspace").Enemies:FindFirstChild(_G.SelectBoss)then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name==_G.SelectBoss then if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat task.wait()EquipWeapon(_G.SelectWeapon)BringMob=true;FastAttack=true;z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.Size=Vector3.new(80,80,80)aw(z.HumanoidRootPart.CFrame*MethodFarm)if not FastAttack then game:GetService("VirtualUser"):CaptureController()game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))end;sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)until not _G.AutoFarmBoss or not z.Parent or z.Humanoid.Health<=0 end end end else if game:GetService("ReplicatedStorage"):FindFirstChild(_G.SelectBoss)then aw(game:GetService("ReplicatedStorage"):FindFirstChild(_G.SelectBoss).HumanoidRootPart.CFrame*CFrame.new(0,35,0))end end end)end end end)dj:Toggle("Auto All Boss",_G.AutoAllBoss,function(dF)_G.AutoAllBoss=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)task.spawn(function()while task.wait()do if _G.AutoAllBoss then pcall(function()for y,z in pairs(game.ReplicatedStorage:GetChildren())do if z.Name=="Cyborg"or z.Name=="The Gorilla King"or z.Name=="Wysper"or z.Name=="Thunder God"or z.Name=="Mob Leader"or z.Name=="Bobby"or z.Name=="Saber Expert"or z.Name=="Warden"or z.Name=="Chief Warden"or z.Name=="Swan"or z.Name=="Magma Admiral"or z.Name=="Fishman Lord"or z.Name=="Wysper"or z.Name=="Ice Admiral"or z.Name=="Diamond"or z.Name=="Jeremy"or z.Name=="Fajita"or z.Name=="Don Swan"or z.Name=="Smoke Admiral"or z.Name=="Awakened Ice Admiral"or z.Name=="Tide Keeper"or z.Name=="Darkbeard"or z.Name=="Stone"or z.Name=="Island Empress"or z.Name=="Kilo Admiral"or z.Name=="Captain Elephant"or z.Name=="Beautiful Pirate"or z.Name=="Cake Queen"or z.Name=="Greybeard"or z.Name=="Order"or z.Name=="Cursed Captain"or z.Name=="Soul Reaper"or z.Name=="Rip indra"or z.Name=="Mihawk Boss"or z.Name=="Cake Prince"or z.Name=="Dough King"or z.Name=="Cursed Skeleton Boss"or z.Name=="Factory"then repeat task.wait()BringMob=true;FastAttack=true;EquipWeapon(_G.SelectWeapon)z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Head.CanCollide=false;z.HumanoidRootPart.Size=Vector3.new(80,80,80)aw(z.HumanoidRootPart.CFrame*MethodFarm)if not FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)until z.Humanoid.Health<=0 or _G.AutoAllBoss==false or not z.Parent end end end)end end end)local em=false;local en=false;local eo=false;local ep=false;local eq=false;local er=false;dn:Seperator("💼")dn:Toggle("Auto Hallow Scythe",_G.AutoFarmBossHallow,function(dF)_G.AutoFarmBossHallow=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()task.spawn(function()while task.wait()do pcall(function()if _G.AutoFarmBossHallow then if game:GetService("Workspace").Enemies:FindFirstChild("Soul Reaper")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if string.find(z.Name,"Soul Reaper")then repeat task.wait()BringMob=true;FastAttack=true;EquipWeapon(_G.SelectWeapon)PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(60,60,60)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until z.Humanoid.Health<=0 or not _G.AutoFarmBossHallow;BringMob=false;FastAttack=false end end else aw(CFrame.new(-9524.7890625,315.80429077148,6655.7192382813))end end end)end end)end end)dn:Toggle("Auto Buddy Swords",_G.AutoBuddySwords,function(dF)_G.AutoBuddySwords=dF;if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end;task.spawn(function()while task.wait()do pcall(function()if _G.AutoBuddySwords then if game:GetService("Workspace").Enemies:FindFirstChild("Cake Queen")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name==("Cake Queen"or z.Name=="Cake Queen")and z.Humanoid.Health>0 and z:IsA("Model")and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoBuddySwords or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end end end end)end end)end)dn:Toggle("Auto Musketeer Hat",_G.AutoMusketeerHat,function(dF)_G.AutoMusketeerHat=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end;task.spawn(function()while task.wait()do pcall(function()if _G.AutoMusketeerHat then if game:GetService("Players").LocalPlayer.Data.Level.Value>=1800 and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress").KilledBandits==false then if string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Forest Pirate")and string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"50")and game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==true then if game:GetService("Workspace").Enemies:FindFirstChild("Forest Pirate")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Forest Pirate"then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoMusketeerHat or z.Humanoid.Health<=0 or not z.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==false;BringMob=false;FastAttack=false end end else aw(CFrame.new(-13206.452148438,425.89199829102,-7964.5537109375))end else aw(CFrame.new(-12443.8671875,332.40396118164,-7675.4892578125))if(Vector3.new(-12443.8671875,332.40396118164,-7675.4892578125)-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=30 then wait(1.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StartQuest","CitizenQuest",1)end end elseif game:GetService("Players").LocalPlayer.Data.Level.Value>=1800 and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress").KilledBoss==false then if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible and string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,"Captain Elephant")and game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==true then if game:GetService("Workspace").Enemies:FindFirstChild("Captain Elephant")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Captain Elephant"then OldCFrameElephant=z.HumanoidRootPart.CFrame;repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoMusketeerHat or z.Humanoid.Health<=0 or not z.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible==false;BringMob=false;FastAttack=false end end else aw(CFrame.new(-13374.889648438,421.27752685547,-8225.208984375))end else aw(CFrame.new(-12443.8671875,332.40396118164,-7675.4892578125))if(CFrame.new(-12443.8671875,332.40396118164,-7675.4892578125).Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=4 then wait(1.5)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress","Citizen")end end elseif game:GetService("Players").LocalPlayer.Data.Level.Value>=1800 and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress","Citizen")==2 then aw(CFrame.new(-12512.138671875,340.39279174805,-9872.8203125))end end end)end end)end)dn:Toggle("Auto Cavander",_G.AutoCavander,function(dF)_G.AutoCavander=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end;task.spawn(function()while task.wait()do pcall(function()if _G.AutoCavander then if game:GetService("Workspace").Enemies:FindFirstChild("Beautiful Pirate")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name=="Beautiful Pirate"and z.Humanoid.Health>0 and z:IsA("Model")and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoCavander or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end else aw(CFrame.new(5283.609375,22.56223487854,-110.78285217285))end end end)end end)end)dn:Toggle("Auto Yama Sword",_G.AutoYamaSword,function(dF)_G.AutoYamaSword=dF;spawn(function()while task.wait()do if _G.AutoYamaSword then if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter","Progress")>=30 then repeat task.wait()fireclickdetector(game:GetService("Workspace").Map.Waterfall.SealedKatana.Handle.ClickDetector)until game.Players.LocalPlayer.Backpack:FindFirstChild("Yama")or not AutoYama end end end end)end)dn:Toggle("Auto Tushita Sword",_G.AutoTushitaSword,function(dF)_G.AutoTushitaSword=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end;task.spawn(function()while task.wait()do if _G.AutoTushitaSword then if game:GetService("Workspace").Enemies:FindFirstChild("Longma")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name==("Longma"or z.Name=="Longma")and z.Humanoid.Health>0 and z:IsA("Model")and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoTushitaSword or not z.Parent or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end else aw(CFrame.new(-10238.875976563,389.7912902832,-9549.7939453125))end end end end)end)dn:Toggle("Auto Serpent Bow",_G.AutoSerpentBow,function(dF)_G.AutoSerpentBow=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end;task.spawn(function()while task.wait()do if _G.AutoSerpentBow then if game:GetService("Workspace").Enemies:FindFirstChild("Island Empress")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name==("Island Empress"or z.Name=="Island Empress")and z.Humanoid.Health>0 and z:IsA("Model")and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoSerpentBow or not z.Parent or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end else aw(CFrame.new(5543.86328125,668.97399902344,199.0341796875))end end end end)end)dn:Toggle("Auto Dark Dagger",_G.AutoDarkDagger,function(dF)_G.AutoDarkDagger=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end;task.spawn(function()while task.wait()do pcall(function()if _G.AutoDarkDagger then if game:GetService("Workspace").Enemies:FindFirstChild("rip_indra True Form")then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name==("rip_indra True Form"or z.Name=="rip_indra True Form")and z.Humanoid.Health>0 and z:IsA("Model")and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")then repeat task.wait()BringMob=true;FastAttack=true;if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectWeapon)then task.wait()EquipWeapon(_G.SelectWeapon)end;PosMon=z.HumanoidRootPart.CFrame;if not _G.FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;z.HumanoidRootPart.Size=Vector3.new(80,80,80)z.Humanoid.JumpPower=0;z.Humanoid.WalkSpeed=0;z.HumanoidRootPart.CanCollide=false;z.Humanoid:ChangeState(11)z.Humanoid:ChangeState(14)z.Humanoid:ChangeState(16)aw(z.HumanoidRootPart.CFrame*MethodFarm)until not _G.AutoDarkDagger or not z.Parent or z.Humanoid.Health<=0;BringMob=false;FastAttack=false end end else aw(CFrame.new(-5344.822265625,423.98541259766,-2725.0930175781))end end end)end end)end)function GetAllMeleeFarm()if em==false then local aE={[1]="BuySuperhuman"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))if CheckMasteryWeapon("Superhuman",400)=="true UpTo"then em=true end end;wait(.5)if en==false then local dU="BuyElectricClaw"local dW=game:GetService("ReplicatedStorage").Remotes["CommF_"]dW:InvokeServer(dU)if CheckMasteryWeapon("Electric Claw",400)=="true UpTo"then en=true end end;wait(.5)if eo==false then game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon")if CheckMasteryWeapon("Dragon Talon",400)=="true UpTo"then eo=true end end;wait(.5)if ep==false then local aE={[1]="BuySharkmanKarate"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))if CheckMasteryWeapon("Sharkman Karate",400)=="true UpTo"then ep=true end end;wait(.5)if eq==false then local aE={[1]="BuyDeathStep"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))if CheckMasteryWeapon("Death Step",400)=="true UpTo"then eq=true end end;if er==false then local aE={[1]="BuyGodhuman"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))if CheckMasteryWeapon("Godhuman",350)=="true UpTo"then er=true end end end;spawn(function()local es=getrawmetatable(game)local et=es.__namecall;setreadonly(es,false)es.__namecall=newcclosure(function(...)local aE={...}if getnamecallmethod()=="InvokeServer"then if _G.SelectWeaponGun then if _G.SelectWeaponGun=="Soul Guitar"then if tostring(aE[2])=="TAP"then if _G.AutoFarmGunMastery and _G.UseSkill then aE[3]=PositionSkillMasteryGun end end end end end;return et(unpack(aE))end)setreadonly(es,true)end)spawn(function()while wait()do for y,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do if z:IsA("Tool")then if z.ToolTip=="Gun"then _G.SelectWeaponGun=z.Name end end end;for y,z in pairs(game.Players.LocalPlayer.Character:GetChildren())do if z:IsA("Tool")then if z.ToolTip=="Gun"then _G.SelectWeaponGun=z.Name end end end end end)spawn(function()while wait()do local dH=game.Players.LocalPlayer.Data.Level.Value;local dI=game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest;pcall(function()if _G.AutoFarmGunMastery then if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,Q()[6])then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")end;if dI.Visible==true then if game:GetService("Workspace").Enemies:FindFirstChild(Q()[3])then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name==Q()[3]then if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then PosMon=z.HumanoidRootPart.CFrame;MonHumanoidRootPart=z.HumanoidRootPart;PositionSkillMasteryGun=z.HumanoidRootPart.Position;repeat task.wait()z.HumanoidRootPart.CFrame=PosMon;if z.Humanoid.Health<=z.Humanoid.MaxHealth*_G.Settings.HealthMs/100 then _G.UseSkill=true;aw(z.HumanoidRootPart.CFrame*MethodFarm)z.HumanoidRootPart.Size=Vector3.new(120,120,120)z.HumanoidRootPart.CanCollide=false;z.Head.CanCollide=false;BringMobFarm=true;z.HumanoidRootPart.Transparency=1;EquipWeapon(_G.SelectWeaponGun)else _G.UseSkill=false;z.HumanoidRootPart.Size=Vector3.new(120,120,120)z.HumanoidRootPart.CanCollide=false;z.Head.CanCollide=false;BringMobFarm=true;EquipWeapon(_G.Select_Weapon)z.HumanoidRootPart.Transparency=1;aw(z.HumanoidRootPart.CFrame*MethodFarm)if(z.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then game:GetService("VirtualUser"):CaptureController()game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))end end until not _G.AutoFarmGunMastery or not z.Parent or z.Humanoid.Health<=0 or dI.Visible==false or not z:FindFirstChild("HumanoidRootPart")end end end else _G.UseSkill=false;UnEquipWeapon(_G.Select_Weapon)if _G.Auto_CFrame then aw(Q()[7][SetCFarme]*CFrame.new(0,30,5))if(Q()[7][SetCFarme].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then if SetCFarme==nil or SetCFarme==''then SetCFarme=1;print(SetCFarme)elseif SetCFarme>=#Q()[7]then SetCFarme=1;print(SetCFarme)end;SetCFarme=SetCFarme+1;print(SetCFarme)wait(0.5)end else if AttackRandomType_MonCFrame==1 then aw(Q()[7][1]*CFrame.new(0,30,20))elseif AttackRandomType_MonCFrame==2 then aw(Q()[7][1]*CFrame.new(0,30,-20))elseif AttackRandomType_MonCFrame==3 then aw(Q()[7][1]*CFrame.new(20,30,0))elseif AttackRandomType_MonCFrame==4 then aw(Q()[7][1]*CFrame.new(0,30,-20))elseif AttackRandomType_MonCFrame==5 then aw(Q()[7][1]*CFrame.new(-20,30,0))else aw(Q()[7][1]*CFrame.new(0,30,20))end end end else aw(Q()[2])if(Q()[2].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=1 then BringMobFarm=false;wait(0.2)game:GetService('ReplicatedStorage').Remotes.CommF_:InvokeServer("StartQuest",Q()[4],Q()[1])wait(0.5)aw(Q()[7][1]*CFrame.new(0,30,5))end end end end)end end)local eu=workspace.CurrentCamera;local ev=true;function lookAt(aH,ew)eu.CFrame=CFrame.new(aH,ew)end;function CheckMonFF(ex)local ey=nil;local ez=math.huge;for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name==Q()[3]then local eA,eB=workspace.CurrentCamera:WorldToViewportPoint(z[ex].Position)local eC=Vector2.new(eA.x,eA.y)local eD=Vector2.new(workspace.CurrentCamera.ViewportSize.x/2,workspace.CurrentCamera.ViewportSize.y/2)local eE=(eC-eD).magnitude;if eE<ez and eB and ev==true and eE<1500 then ez=eE;ey=z end end end;return ey end;spawn(function()while wait()do if _G.AutoFarmGunMastery and _G.UseSkill==true then local eF=CheckMonFF("HumanoidRootPart")lookAt(eu.CFrame.p,eF:FindFirstChild("HumanoidRootPart").Position)local aE={[1]=PositionSkillMasteryGun}game:GetService("Players").LocalPlayer.Character[_G.SelectWeaponGun].RemoteEvent:FireServer(unpack(aE))if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,Q()[6])then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")end end end end)spawn(function()while wait()do if _G.AutoFarmGunMastery and _G.UseSkill==true then local aE={[1]=PositionSkillMasteryGun,[2]=MonHumanoidRootPart}game:GetService("Players").LocalPlayer.Character[_G.SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(aE))end end end)spawn(function()while wait()do if _G.AutoFarmGunMastery then game:GetService("VirtualUser"):CaptureController()game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))end end end)spawn(function()while wait()do local dH=game.Players.LocalPlayer.Data.Level.Value;local dI=game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest;pcall(function()if _G.AutoFarmFruitMastery then if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,Q()[6])then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")end;if dI.Visible==true then if game:GetService("Workspace").Enemies:FindFirstChild(Q()[3])then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if z.Name==Q()[3]then if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and z.Humanoid.Health>0 then repeat task.wait()if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,Q()[6])then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")else if z.Humanoid.Health<=z.Humanoid.MaxHealth*_G.Settings.HealthMs/100 then _G.UseSkill=true;EquipBloxFruit()aw(z.HumanoidRootPart.CFrame*MethodFarm)PosMon=z.HumanoidRootPart.CFrame;z.HumanoidRootPart.Size=Vector3.new(60,60,60)z.HumanoidRootPart.CanCollide=false;z.Humanoid.WalkSpeed=0;z.Head.CanCollide=false;BringMobFarm=true;z.HumanoidRootPart.TranAsparency=1 else _G.UseSkill=false;PosMon=z.HumanoidRootPart.CFrame;z.HumanoidRootPart.Size=Vector3.new(60,60,60)z.HumanoidRootPart.CanCollide=false;z.Head.CanCollide=false;BringMobFarm=true;EquipWeapon(_G.Select_Weapon)z.HumanoidRootPart.Transparency=1;aw(z.HumanoidRootPart.CFrame*MethodFarm)if(z.HumanoidRootPart.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then game:GetService("VirtualUser"):CaptureController()game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))end end end until not _G.AutoFarmFruitMastery or not z.Parent or z.Humanoid.Health<=0 or dI.Visible==false or not z:FindFirstChild("HumanoidRootPart")end end end else _G.UseSkill=false;UnEquipWeapon(_G.Select_Weapon)if _G.Auto_CFrame then aw(Q()[7][SetCFarme]*CFrame.new(0,30,5))if(Q()[7][SetCFarme].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=50 then if SetCFarme==nil or SetCFarme==''then SetCFarme=1;print(SetCFarme)elseif SetCFarme>=#Q()[7]then SetCFarme=1;print(SetCFarme)end;SetCFarme=SetCFarme+1;print(SetCFarme)wait(0.5)end else if AttackRandomType_MonCFrame==1 then aw(Q()[7][1]*CFrame.new(0,30,20))elseif AttackRandomType_MonCFrame==2 then aw(Q()[7][1]*CFrame.new(0,30,-20))elseif AttackRandomType_MonCFrame==3 then aw(Q()[7][1]*CFrame.new(20,30,0))elseif AttackRandomType_MonCFrame==4 then aw(Q()[7][1]*CFrame.new(0,30,-20))elseif AttackRandomType_MonCFrame==5 then aw(Q()[7][1]*CFrame.new(-20,30,0))else aw(Q()[7][1]*CFrame.new(0,30,20))end end end else aw(Q()[2])if(Q()[2].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=1 then BringMobFarm=false;wait(0.2)game:GetService('ReplicatedStorage').Remotes.CommF_:InvokeServer("StartQuest",Q()[4],Q()[1])wait(0.5)aw(Q()[7][1]*CFrame.new(0,30,5))end end end end)end end)dp:Seperator("✨")_G.HealthMs=25;dp:Toggle("Auto Fruit Mastery",_G.Settings.AutoFarmFruitMastery,function(dF)_G.AutoFarmFruitMastery=dF;_G.Settings.AutoFarmFruitMastery=dF;SaveSettings()if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end end)spawn(function()while task.wait()do pcall(function()if _G.AutoFarmFruitMastery then local eG={[1]=FruitPos.Position}game:GetService("Players").LocalPlayer.Character[game:GetService("Players").LocalPlayer.Data.DevilFruit.Value].RemoteEvent:FireServer(unpack(eG))else local eH={[1]=nil}game:GetService("Players").LocalPlayer.Character[game:GetService("Players").LocalPlayer.Data.DevilFruit.Value].RemoteEvent:FireServer(unpack(eH))end end)end end)dp:Toggle("Auto Gun Mastery",_G.Settings.AutoFarmGunMastery,function(dF)_G.AutoFarmGunMastery=dF;_G.Settings.AutoFarmGunMastery=dF;SaveSettings()if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end end)dp:Slider("Kill At (%)",1,100,25,function(dF)_G.HealthMs=dF end)dp:Label("Skill List")dp:Toggle("Skill Z",_G.SkillZ,function(dF)_G.SkillZ=dF end)dp:Toggle("Skill X",_G.SkillX,function(dF)_G.SkillX=dF end)dp:Toggle("Skill C",_G.SkillC,function(dF)_G.SkillC=dF end)dp:Toggle("Skill V",_G.SkillV,function(dF)_G.SkillV=dF end)dp:Toggle("Skill F",_G.SkillF,function(dF)_G.SkillF=dF end)if _G.AutoFarmGunMastery or _G.AutoFarmFruitMastery then _G.Select_Fast_Attack="Slow"else _G.Select_Fast_Attack="Fast"end;dq:Seperator("🍈")dq:Toggle("BringFruit",_G.Auto_Bring_Fruit,function(dF)_G.Auto_Bring_Fruit=dF end)dq:Toggle("Auto Random Fruits",_G.AutoBuyRandomFruits,function(dF)_G.AutoBuyRandomFruits=dF end)dq:Button("Buy Random Fruits",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")end)dq:Button("Devil Fruit Shop",function()local aE={[1]="GetFruits"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))game.Players.localPlayer.PlayerGui.Main.FruitShop.Visible=true end)spawn(function()while task.wait()do if _G.AutoBuyRandomFruits then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")end end end)dq:Toggle("Auto Store Fruits",_G.AutoStoreFruits,function(dF)_G.AutoStoreFruits=dF end)dq:Toggle("Auto Store Fruits&Drop",_G.AutoStoreFruits,function(dF)_G.AutoStoreFruits=dF end)spawn(function()while wait()do if _G.Auto_Bring_Fruit then pcall(function()for y,z in pairs(game:GetService("Workspace"):GetChildren())do if z:IsA("Tool")and string.find(z.Name,"Fruit")then if(z.Handle.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude>=1500 then aB(z.Handle.CFrame*CFrame.new(0,50,0))repeat wait()aB(z.Handle.CFrame*CFrame.new(0,50,0))until(z.Handle.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=1 or not _G.Auto_Bring_Fruit;repeat wait()two(z.Handle.CFrame)until(z.Handle.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=1 or not _G.Auto_Bring_Fruit else repeat wait()two(z.Handle.CFrame)until(z.Handle.CFrame.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=1 or not _G.Auto_Bring_Fruit end end end end)end end end)spawn(function()while task.wait()do if _G.AutoStoreFruits then pcall(function()task.wait()if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bomb Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Bomb-Bomb",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bomb Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spike Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spike Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Spike-Spike",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spike Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spike Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Chop Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Chop Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Chop-Chop",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Chop Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Chop Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spring Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spring Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Spring-Spring",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spring Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spring Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kilo Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Kilo Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Kilo-Kilo",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kilo Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Kilo Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Smoke Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Smoke Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Smoke-Smoke",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Smoke Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Smoke Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spin Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spin Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Spin-Spin",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spin Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spin Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flame Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flame Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Flame-Flame",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flame Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flame Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bird: Falcon Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bird: Falcon Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Bird-Bird: Falcon",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bird: Falcon Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bird: Falcon Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Ice Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Ice Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Ice-Ice",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Ice Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Ice Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Sand Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sand Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Sand-Sand",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Sand Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sand Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dark Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dark Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Dark-Dark",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dark Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dark Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Revive Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Revive Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Revive-Revive",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Revive Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Revive Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Diamond Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Diamond Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Diamond-Diamond",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Diamond Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Diamond Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Light Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Light Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Light-Light",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Light Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Light Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Love Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Love Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Love-Love",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Love Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Love Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rubber Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Rubber Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Rubber-Rubber",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rubber Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Rubber Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Barrier Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Barrier Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Barrier-Barrier",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Barrier Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Barrier Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Magma Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Magma Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Magma-Magma",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Magma Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Magma Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Door Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Door Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Door-Door",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Door Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Door Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Quake Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Quake Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Quake-Quake",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Quake Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Quake Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Human-Human: Buddha Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Human-Human: Buddha Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Human-Human: Buddha",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Human-Human: Buddha Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Human-Human: Buddha Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("String Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("String Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","String-String",game:GetService("Players").LocalPlayer.Character:FindFirstChild("String Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("String Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bird: Phoenix Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bird: Phoenix Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Bird-Bird: Phoenix",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bird: Phoenix Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bird: Phoenix Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rumble Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Rumble Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Rumble-Rumble",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rumble Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Rumble Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Paw Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Paw Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Paw-Paw",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Paw Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Paw Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Gravity Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Gravity Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Gravity-Gravity",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Gravity Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Gravity Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dough Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dough Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Dough-Dough",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dough Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dough Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Shadow Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Shadow Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Shadow-Shadow",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Shadow Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Shadow Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Venom Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Venom Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Venom-Venom",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Venom Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Venom Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Control Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Control Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Control-Control",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Control Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Control Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dragon Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dragon Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Dragon-Dragon",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dragon Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dragon Fruit"))end;if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Leopard Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Leopard Fruit")then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Leopard-Leopard",game:GetService("Players").LocalPlayer.Character:FindFirstChild("Leopard Fruit")or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Leopard Fruit"))end end)end end end)local eI={"Flame","Ice","Quake","Light","Dark","String","Rumble","Magma","Human: Buddha","Sand","Bird: Phoenix","Dough"}dr:Seperator("⚔️")dr:Dropdown("Select Raids",eI,function(dF)_G.SelectRaids=dF end)dr:Toggle("Auto Raids",_G.AutoRaids,function(dF)_G.AutoRaids=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)dr:Toggle("Kill Aura",_G.KillAura,function(dF)_G.KillAura=dF end)dr:Toggle("Auto Next Place",_G.AutoNextPlace,function(dF)_G.AutoNextPlace=dF;if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end end)dr:Toggle("Auto Awakened",_G.AutoAwakened,function(dF)_G.AutoAwakened=dF end)task.spawn(function()while task.wait()do if _G.AutoRaids and not _G.AutoFarm then if game.Players.LocalPlayer.Backpack:FindFirstChild("Special Microchip")or game.Players.LocalPlayer.Character:FindFirstChild("Special Microchip")or game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5")or game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4")or game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3")or game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2")or game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1")then if game.Players.LocalPlayer.Backpack:FindFirstChild("Special Microchip")or game.Players.LocalPlayer.Character:FindFirstChild("Special Microchip")and game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible==false then if World2 then fireclickdetector(Workspace.Map.CircleIsland.RaidSummon2.Button.Main.ClickDetector)elseif World3 then fireclickdetector(Workspace.Map["Boat Castle"].RaidSummon2.Button.Main.ClickDetector)end;wait(0)elseif game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible==true then pcall(function()repeat task.wait()if game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible==false then elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5")then game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5").CFrame=CFrame.new(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5").CFrame.x,60,game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5").CFrame.z)if(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>350 then Farmtween=aw(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5").CFrame)elseif(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=350 then if Farmtween then Farmtween:Stop()end;aw(game:GetService("Workspace")["_WorldOrigin"].Locations["Island 5"].CFrame*CFrame.new(4,65,10))end elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4")then game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4").CFrame=CFrame.new(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4").CFrame.x,60,game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4").CFrame.z)if(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>350 then Farmtween=aw(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4").CFrame)elseif(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=350 then if Farmtween then Farmtween:Stop()end;aw(game:GetService("Workspace")["_WorldOrigin"].Locations["Island 4"].CFrame*CFrame.new(4,65,10))end elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3")then game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3").CFrame=CFrame.new(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3").CFrame.x,60,game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3").CFrame.z)if(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>350 then Farmtween=aw(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3").CFrame)elseif(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=350 then if Farmtween then Farmtween:Stop()end;aw(game:GetService("Workspace")["_WorldOrigin"].Locations["Island 3"].CFrame*CFrame.new(4,65,10))end elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2")then game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2").CFrame=CFrame.new(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2").CFrame.x,60,game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2").CFrame.z)if(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>350 then Farmtween=aw(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2").CFrame)elseif(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=350 then if Farmtween then Farmtween:Stop()end;aw(game:GetService("Workspace")["_WorldOrigin"].Locations["Island 2"].CFrame*CFrame.new(4,65,10))end elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1")then game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1").CFrame=CFrame.new(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1").CFrame.x,60,game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1").CFrame.z)if(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude>350 then Farmtween=aw(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1").CFrame)elseif(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=350 then if Farmtween then Farmtween:Stop()end;aw(game:GetService("Workspace")["_WorldOrigin"].Locations["Island 1"].CFrame*CFrame.new(4,65,10))end end;for y,z in pairs(game.Workspace.Enemies:GetChildren())do if _G.AutoRaids and game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible==true and z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and(z.HumanoidRootPart.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=400 then repeat task.wait()z.Humanoid.Health=0;z:BreakJoints()until not _G.AutoRaids or z.Humanoid.Health<=0 or not z.Parent end end;if _G.AutoAwakened then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Awakener","Awaken")end until not game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5")or not game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4")or not game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3")or not game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2")or not game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1")or game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible==false;if _G.AutoAwakened then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Awakener","Awaken")end end)end else if _G.AutoAwakened then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Awakener","Awaken")end;local aE={[1]="RaidsNpc",[2]="Select",[3]=tostring(_G.SelectRaids)}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end end end end)spawn(function()while task.wait(0)do if _G.KillAura then for y,z in pairs(game.Workspace.Enemies:GetChildren())do if z:FindFirstChild("Humanoid")and z:FindFirstChild("HumanoidRootPart")and(z.HumanoidRootPart.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=400 then pcall(function()repeat task.wait(.1)sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)z.Humanoid.Health=0;z.HumanoidRootPart.CanCollide=false;z.HumanoidRootPart.Size=Vector3.new(50,50,50)z.HumanoidRootPart.Transparency=0.5 until not _G.KillAura or z.Humanoid.Health<=0 or not z.Parent end)end end end end end)spawn(function()pcall(function()while task.wait()do if _G.AutoNextPlace then if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.Timer.Visible==true and game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5")or game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4")or game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3")or game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2")or game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1")then if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5")then aw(game:GetService("Workspace")["_WorldOrigin"].Locations["Island 5"].CFrame*CFrame.new(4,65,10))elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4")then aw(game:GetService("Workspace")["_WorldOrigin"].Locations["Island 4"].CFrame*CFrame.new(4,65,10))elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3")then aw(game:GetService("Workspace")["_WorldOrigin"].Locations["Island 3"].CFrame*CFrame.new(4,65,10))elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2")then aw(game:GetService("Workspace")["_WorldOrigin"].Locations["Island 2"].CFrame*CFrame.new(4,65,10))elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1")then aw(game:GetService("Workspace")["_WorldOrigin"].Locations["Island 1"].CFrame*CFrame.new(4,65,10))end elseif World2 then aw(CFrame.new(-6438.73535,250.645355,-4501.50684))elseif World3 then aw(CFrame.new(-5057.146484375,314.54132080078,-2934.7995605469))end end end end)end)local eJ=game:GetService("Players").LocalPlayer;local eK={}local eL={}local eM={}ds:Seperator("<<PVP>>")do for y,z in pairs(game:GetService("Workspace").Characters:GetChildren())do if z.Name~=eJ.Name then table.insert(eK,z.Name)end end;for y,z in pairs(eJ.Backpack:GetChildren())do if z:IsA("Tool")then table.insert(eM,z.Name)end end end;local eN=ds:Dropdown("Select Player",eK,function(dF)SelectPlayer=dF end)ds:Button("Refresh",function()eN:Clear()for y,z in next,game:GetService("Workspace").Characters:GetChildren()do if z.Name~=eJ.Name then if z:FindFirstChild("HumanoidRootPart")then eN:Add(z.Name)end end end end)ds:Toggle("Teleport to Player",teleporttop,function(dF)teleporttop=dF;if dF==false then task.wait()aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)task.wait()end end)ds:Toggle("Spectate Player",SpectatePlys,function(dF)SpectatePlys=dF;local eO=game:GetService("Players").LocalPlayer.Character.Humanoid;local eP=game:GetService("Players"):FindFirstChild(SelectPlayer)repeat wait(.1)game:GetService("Workspace").Camera.CameraSubject=game:GetService("Players"):FindFirstChild(SelectPlayer).Character.Humanoid until SpectatePlys==false;game:GetService("Workspace").Camera.CameraSubject=game:GetService("Players").LocalPlayer.Character.Humanoid end)spawn(function()while task.wait()do if teleporttop then pcall(function()if game.Players:FindFirstChild(SelectPlayer)then aw(game.Players[SelectPlayer].Character.HumanoidRootPart.CFrame)end end)end end end)ds:Toggle("Aimbot Gun",false,function(dF)Aimbot=dF end)ds:Toggle("Aimbot Skill",false,function(dF)Skillaimbot=dF end)local eQ=getrawmetatable(game)local et=eQ.__namecall;setreadonly(eQ,false)eQ.__namecall=newcclosure(function(...)local eR=getnamecallmethod()local aE={...}if tostring(eR)=="FireServer"then if tostring(aE[1])=="RemoteEvent"then if tostring(aE[2])~="true"and tostring(aE[2])~="false"then if Skillaimbot then aE[2]=AimBotSkillPosition;return et(unpack(aE))end end end end;return et(...)end)spawn(function()while task.wait()do for y,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do if z:IsA("Tool")then if z:FindFirstChild("RemoteFunctionShoot")then SelectToolWeaponGun=z.Name end end end;for y,z in pairs(game.Players.LocalPlayer.Character:GetChildren())do if z:IsA("Tool")then if z:FindFirstChild("RemoteFunctionShoot")then SelectToolWeaponGun=z.Name end end end end end)task.spawn(function()while task.wait()do if Skillaimbot then if game.Players:FindFirstChild(SelectPlayer)and game.Players:FindFirstChild(SelectPlayer).Character:FindFirstChild("HumanoidRootPart")and game.Players:FindFirstChild(SelectPlayer).Character:FindFirstChild("Humanoid")and game.Players:FindFirstChild(SelectPlayer).Character.Humanoid.Health>0 then AimBotSkillPosition=game.Players:FindFirstChild(SelectPlayer).Character:FindFirstChild("HumanoidRootPart").Position end end end end)task.spawn(function()while task.wait()do if Skillaimbot then if game.Players:FindFirstChild(AllPlayersTableSkipFarm)and game.Players:FindFirstChild(AllPlayersTableSkipFarm).Character:FindFirstChild("HumanoidRootPart")and game.Players:FindFirstChild(AllPlayersTableSkipFarm).Character:FindFirstChild("Humanoid")and game.Players:FindFirstChild(AllPlayersTableSkipFarm).Character.Humanoid.Health>0 then AimBotSkillPosition=game.Players:FindFirstChild(AllPlayersTableSkipFarm).Character:FindFirstChild("HumanoidRootPart").Position end end end end)local eS=game:GetService('Players').LocalPlayer;local eT=eS:GetMouse()eT.Button1Down:Connect(function()if Aimbot and game.Players.LocalPlayer.Character:FindFirstChild(SelectToolWeaponGun)and game:GetService("Players"):FindFirstChild(SelectPlayer)then tool=game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun]r7=workspace:FindPartOnRayWithIgnoreList(Ray.new(tool.Handle.CFrame.p,(game:GetService("Players"):FindFirstChild(SelectPlayer).Character.HumanoidRootPart.Position-tool.Handle.CFrame.p).unit*100),{game.Players.LocalPlayer.Character,workspace._WorldOrigin})game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun].RemoteFunctionShoot:InvokeServer(game:GetService("Players"):FindFirstChild(SelectPlayer).Character.HumanoidRootPart.Position,require(game.ReplicatedStorage.Util).Other.hrpFromPart(r7))end end)ds:Seperator("<<ESP>>")ds:Toggle("ESPPlayer",_G.ESPPlayer,function(dF)ESPPlayer=dF end)spawn(function()while task.wait()do if ESPPlayer then UpdatePlayerChams()end end end)ds:Toggle("ESPChest",_G.ChestEsp,function(dF)ChestESP=dF end)spawn(function()while ChestESP do task.wait()UpdateChestEsp()end end)ds:Toggle("ESPDevilFruit",_G.DevilFruitESP,function(dF)DevilFruitESP=dF end)spawn(function()while DevilFruitESP do task.wait()UpdateBfEsp()end end)ds:Toggle("ESPFlower",_G.DevilFruitESP,function(dF)FlowerESP=dF end)spawn(function()while FlowerESP do task.wait()UpdateFlowerEsp()end end)ds:Toggle("ESPIsland",_G.DevilFruitESP,function(dF)IslandESP=dF end)spawn(function()while IslandESP do task.wait()UpdateIslandESP()end end)function isnil(eU)return eU==nil end;local function eV(eW)return math.floor(tonumber(eW)+0.5)end;Number=math.random(1,1000000)function UpdatePlayerChams()for y,z in pairs(game:GetService'Players':GetChildren())do pcall(function()if not isnil(z.Character)then if ESPPlayer then if not isnil(z.Character.Head)and not z.Character.Head:FindFirstChild('NameEsp'..Number)then local eX=Instance.new('BillboardGui',z.Character.Head)eX.Name='NameEsp'..Number;eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z.Character.Head;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="Code"eY.FontSize="Size14"eY.TextWrapped=true;eY.Text=z.Name..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Character.Head.Position).Magnitude/3)..' M'eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;if z.Team==game.Players.LocalPlayer.Team then eY.TextColor3=Color3.new(255,0,0)else eY.TextColor3=Color3.new(0,0,255)end else z.Character.Head['NameEsp'..Number].TextLabel.Text=z.Name..' | '..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Character.Head.Position).Magnitude/3)..' M\nHealth : '..eV(z.Character.Humanoid.Health*100/z.Character.Humanoid.MaxHealth)..'%'end else if z.Character.Head:FindFirstChild('NameEsp'..Number)then z.Character.Head:FindFirstChild('NameEsp'..Number):Destroy()end end end end)end end;function UpdateSeaBeastsESP()for y,z in pairs(game:GetService("Workspace").SeaBeasts:GetChildren())do pcall(function()if SeaBeastsESP then if z.Name~="SeaBeast"then if not z:FindFirstChild('NameEsp')then local eX=Instance.new('BillboardGui',z)eX.Name='NameEsp'eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="Code"eY.FontSize="Size14"eY.TextWrapped=true;eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;eY.TextColor3=Color3.fromRGB(80,245,245)else z['NameEsp'].TextLabel.Text=z.Name..'   \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'end end else if z:FindFirstChild('NameEsp')then z:FindFirstChild('NameEsp'):Destroy()end end end)end end;function UpdateIslandESP()for y,z in pairs(game:GetService("Workspace")["_WorldOrigin"].Locations:GetChildren())do pcall(function()if IslandESP then if z.Name~="Sea"then if not z:FindFirstChild('NameEsp')then local eX=Instance.new('BillboardGui',z)eX.Name='NameEsp'eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="Code"eY.FontSize="Size14"eY.TextWrapped=true;eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;eY.TextColor3=Color3.fromRGB(67,186,28)else z['NameEsp'].TextLabel.Text=z.Name..'   \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'end end else if z:FindFirstChild('NameEsp')then z:FindFirstChild('NameEsp'):Destroy()end end end)end end;function UpdateChestEsp()for y,z in pairs(game:GetService("Workspace"):GetChildren())do pcall(function()if string.find(z.Name,"Chest")then if ChestESP then if string.find(z.Name,"Chest")then if not z:FindFirstChild('NameEsp'..Number)then local eX=Instance.new('BillboardGui',z)eX.Name='NameEsp'..Number;eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="Code"eY.FontSize="Size14"eY.TextWrapped=true;eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;eY.TextColor3=Color3.fromRGB(186,186,28)if z.Name=="Chest1"then eY.Text="Chest 1"..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'end;if z.Name=="Chest2"then eY.Text="Chest 2"..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'end;if z.Name=="Chest3"then eY.Text="Chest 3"..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'end else z['NameEsp'..Number].TextLabel.Text=z.Name..'   \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'end end else if z:FindFirstChild('NameEsp'..Number)then z:FindFirstChild('NameEsp'..Number):Destroy()end end end end)end end;function UpdateBfEsp()for y,z in pairs(game:GetService("Workspace"):GetChildren())do pcall(function()if DevilFruitESP then if string.find(z.Name,"Fruit")then if not z.Handle:FindFirstChild('NameEsp'..Number)then local eX=Instance.new('BillboardGui',z.Handle)eX.Name='NameEsp'..Number;eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z.Handle;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="Code"eY.FontSize="Size14"eY.TextWrapped=true;eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;eY.TextColor3=Color3.fromRGB(255,255,255)eY.Text=z.Name..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Handle.Position).Magnitude/3)..' M'else z.Handle['NameEsp'..Number].TextLabel.Text=z.Name..'   \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Handle.Position).Magnitude/3)..' M'end end else if z.Handle:FindFirstChild('NameEsp'..Number)then z.Handle:FindFirstChild('NameEsp'..Number):Destroy()end end end)end end;function UpdateFlowerEsp()for y,z in pairs(game:GetService("Workspace"):GetChildren())do pcall(function()if z.Name=="Flower2"or z.Name=="Flower1"then if FlowerESP then if not z:FindFirstChild('NameEsp'..Number)then local eX=Instance.new('BillboardGui',z)eX.Name='NameEsp'..Number;eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="Code"eY.FontSize="Size14"eY.TextWrapped=true;eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;eY.TextColor3=Color3.fromRGB(255,0,0)if z.Name=="Flower1"then eY.Text="Blue Flower"..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'eY.TextColor3=Color3.fromRGB(0,0,255)end;if z.Name=="Flower2"then eY.Text="Red Flower"..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'eY.TextColor3=Color3.fromRGB(255,0,0)end else z['NameEsp'..Number].TextLabel.Text=z.Name..'   \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'end else if z:FindFirstChild('NameEsp'..Number)then z:FindFirstChild('NameEsp'..Number):Destroy()end end end end)end end;function UpdateRealFruitChams()for y,z in pairs(game.Workspace.AppleSpawner:GetChildren())do if z:IsA("Tool")then if RealFruitESP then if not z.Handle:FindFirstChild('NameEsp'..Number)then local eX=Instance.new('BillboardGui',z.Handle)eX.Name='NameEsp'..Number;eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z.Handle;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="Code"eY.FontSize="Size14"eY.TextWrapped=true;eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;eY.TextColor3=Color3.fromRGB(255,0,0)eY.Text=z.Name..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Handle.Position).Magnitude/3)..' M'else z.Handle['NameEsp'..Number].TextLabel.Text=z.Name..' '..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Handle.Position).Magnitude/3)..' M'end else if z.Handle:FindFirstChild('NameEsp'..Number)then z.Handle:FindFirstChild('NameEsp'..Number):Destroy()end end end end;for y,z in pairs(game.Workspace.PineappleSpawner:GetChildren())do if z:IsA("Tool")then if RealFruitESP then if not z.Handle:FindFirstChild('NameEsp'..Number)then local eX=Instance.new('BillboardGui',z.Handle)eX.Name='NameEsp'..Number;eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z.Handle;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="Code"eY.FontSize="Size14"eY.TextWrapped=true;eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;eY.TextColor3=Color3.fromRGB(255,174,0)eY.Text=z.Name..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Handle.Position).Magnitude/3)..' M'else z.Handle['NameEsp'..Number].TextLabel.Text=z.Name..' '..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Handle.Position).Magnitude/3)..' M'end else if z.Handle:FindFirstChild('NameEsp'..Number)then z.Handle:FindFirstChild('NameEsp'..Number):Destroy()end end end end;for y,z in pairs(game.Workspace.BananaSpawner:GetChildren())do if z:IsA("Tool")then if RealFruitESP then if not z.Handle:FindFirstChild('NameEsp'..Number)then local eX=Instance.new('BillboardGui',z.Handle)eX.Name='NameEsp'..Number;eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z.Handle;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="Code"eY.FontSize="Size14"eY.TextWrapped=true;eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;eY.TextColor3=Color3.fromRGB(251,255,0)eY.Text=z.Name..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Handle.Position).Magnitude/3)..' M'else z.Handle['NameEsp'..Number].TextLabel.Text=z.Name..' '..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Handle.Position).Magnitude/3)..' M'end else if z.Handle:FindFirstChild('NameEsp'..Number)then z.Handle:FindFirstChild('NameEsp'..Number):Destroy()end end end end end;function UpdatePlayerChams()for y,z in pairs(game:GetService'Players':GetChildren())do pcall(function()if not isnil(z.Character)then if ESPPlayer then if not isnil(z.Character.Head)and not z.Character.Head:FindFirstChild('NameEsp'..Number)then local eX=Instance.new('BillboardGui',z.Character.Head)eX.Name='NameEsp'..Number;eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z.Character.Head;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="Code"eY.FontSize="Size14"eY.TextWrapped=true;eY.Text=z.Name..' \n'..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Character.Head.Position).Magnitude/3)..' M'eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;if z.Team==game.Players.LocalPlayer.Team then eY.TextColor3=Color3.new(255,0,0)else eY.TextColor3=Color3.new(0,0,255)end else z.Character.Head['NameEsp'..Number].TextLabel.Text=z.Name..' | '..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Character.Head.Position).Magnitude/3)..' M\nHealth : '..eV(z.Character.Humanoid.Health*100/z.Character.Humanoid.MaxHealth)..'%'end else if z.Character.Head:FindFirstChild('NameEsp'..Number)then z.Character.Head:FindFirstChild('NameEsp'..Number):Destroy()end end end end)end end;dt:Seperator("🏝️")local eZ=dt:Label('...')spawn(function()pcall(function()while task.wait()do if game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island')then eZ:Set('🏝️ : Spawned')else eZ:Set('🏝️ : Not Spawned')end end end)end)dt:Toggle("Auto Mirage Island",_G.Settings.AutoMirageIsland,function(dF)_G.Mirage=dF;_G.Settings.Mirage=dF;SaveSettings()_G.AutoMirageIsland=dF;if dF==false then aw(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)end end)dt:Toggle("Auto Mirage Island [HOP]",_G.Settings.MirageHop,function(dF)_G.MirageHop=dF;_G.Settings.MirageHop=dF;_G.AutoMirageIslandHop=dF;game:GetService("StarterGui"):SetCore("SendNotification",{Title="VectorHub",Text="HopServer...",Icon="rbxassetid://16129235054",Duration=5})if _G.MirageHop and not game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island')then while _G.MirageHop do wait(10)Teleport()end else aw(workspace.Map.MysticIsland.PrimaryPart.CFrame*CFrame.new(0,300,0))end end)spawn(function()pcall(function()while task.wait()do if _G.AutoMirageIsland or _G.Mirage then if game:GetService("Workspace").Map:FindFirstChild("MysticIsland")then aw(workspace.Map.MysticIsland.PrimaryPart.CFrame*CFrame.new(0,300,0))else game:GetService("StarterGui"):SetCore("SendNotification",{Title="VectorHub",Text="Mirage not Found!",Icon="rbxassetid://16129235054",Duration=1})end end end end)end)local function eV(eW)return math.floor(tonumber(eW)+0.5)end;Number=math.random(1,1000000)function ESPMirageIsland()pcall(function()if _G.ESPMirageIsland then for y,z in pairs(game:GetService("Workspace").Map.MysticIsland:GetChildren())do pcall(function()if z.Name=='Center'then if not z:FindFirstChild('EspMirage')then local eX=Instance.new('BillboardGui',z)eX.Name='EspMirage'eX.ExtentsOffset=Vector3.new(0,1,0)eX.Size=UDim2.new(1,200,1,30)eX.Adornee=z;eX.AlwaysOnTop=true;local eY=Instance.new('TextLabel',eX)eY.Font="GothamBold"eY.FontSize="Size14"eY.TextWrapped=true;eY.Size=UDim2.new(1,0,1,0)eY.TextYAlignment='Top'eY.BackgroundTransparency=1;eY.TextStrokeTransparency=0.5;eY.TextColor3=Color3.fromRGB(255,255,255)eY.Text="Mirage Island"..' \n'.." [ "..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'.." ] "else z.EspMirage.TextLabel.Text="Mirage Island"..' \n'.." [ "..eV((game:GetService('Players').LocalPlayer.Character.Head.Position-z.Position).Magnitude/3)..' M'.." ] "z.EspMirage.TextLabel.TextColor3=Color3.fromRGB(255,255,255)end end end)end else for y,z in pairs(game:GetService("Workspace").Map.MysticIsland:GetChildren())do if z.Name=='Center'then if z:FindFirstChild('EspMirage')then z:FindFirstChild('EspMirage'):Destroy()end end end end end)end;spawn(function()while wait()do if _G.ESPMirageIsland then ESPMirageIsland()end end end)dt:Toggle("ESPMirageIsland",_G.ESPMirageIsland,function(dF)_G.ESPMirageIsland=dF;ESPMirageIsland()end)dt:Toggle("Teleport To Advanced Fruit Dealer",_G.TPNPCDF,function(dF)spawn(function()pcall(function()while wait()do if _G.TPNPCDF then if game:GetService("Workspace").NPCs:FindFirstChild("Advanced Fruit Dealer")then aw(CFrame.new(game:GetService("Workspace").NPCs["Advanced Fruit Dealer"].HumanoidRootPart.Position))end end end end)end)end)dt:Toggle("Teleport To Gear",_G.Settings.Auto_Gear,function(dF)_G.Auto_Gear=dF;_G.Settings.Auto_Gear=dF;SaveSettings()task.spawn(function()while task.wait(.01)do if _G.Auto_Gear then for y,z in pairs(game:GetService("Workspace").Map:FindFirstChild('MysticIsland'):GetChildren())do if z.Name=="Part"then if z.ClassName=="MeshPart"then aw(z.CFrame)z.Transparency=0 end end end end end end)end)function LockMoon()local e_=game:GetService("Lighting")local eu=game.Workspace.CurrentCamera;local f0,f1=CFrame.new,CFrame.Angles;local f2=math.asin;local a1=workspace.CurrentCamera;local dM=game.Players.LocalPlayer;local f3=dM.Character;local f4=f3:WaitForChild("HumanoidRootPart")local f5=f3:FindFirstChild("Neck",true)local f6=f5.C0.Y;game:GetService("RunService").RenderStepped:Connect(function()if _G.LockMoon then game:GetService("ReplicatedStorage").Remotes.CommE:FireServer("ActivateAbility")local bp=Vector3.new(0,0,0)local lookAt=e_:GetMoonDirection()local f7=CFrame.new(bp,lookAt)workspace.CurrentCamera.CFrame=f7;local f8=f4.CFrame:toObjectSpace(f7).lookVector.unit;if f5 and Lock then f5.C0=f0(0,f6,0)*f1(0,-f2(f8.x),0)*f1(f2(f8.y),0,0)end else eu.FieldOfView=70 end end)end;dt:Toggle("LockMoon",_G.LockMoon,function(dF)_G.LockMoon=dF;LockMoon()end)du:Seperator("🐰")du:Toggle("Auto Active RaceV3",_G.AutoActiveRace,function(dF)_G.AutoActiveRace=dF;while _G.AutoActiveRace do wait()game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.T,false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,Enum.KeyCode.T,false,game)end end)du:Toggle("Auto Active RaceV4",_G.AutoActiveRaceV4,function(dF)_G.AutoActiveRaceV4=dF;while _G.AutoActiveRaceV4 do wait()game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Y,false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,Enum.KeyCode.Y,false,game)end end)du:Button("Teleport To Top GreatTree",function()aw(CFrame.new(2947.556884765625,2281.630615234375,-7213.54931640625))end)du:Button("Teleport To Timple Of Time",function()Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(28286.35546875,14895.3017578125,102.62469482421875)end)du:Button("Teleport To Lever Pull",function()aw(CFrame.new(28575.181640625,14936.6279296875,72.31636810302734))end)du:Button("Teleport To Acient One",function()aw(CFrame.new(28981.552734375,14888.4267578125,-120.245849609375))end)du:Button("Unlock Lever.",function()if game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt")then game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()else end;wait(0.1)local f9=Instance.new("ProximityPrompt")f9.Parent=game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt;f9.MaxActivationDistance=10;f9.ActionText="Secrets Beholds Inside"f9.ObjectText="An unknown lever of time"function onProximity()local aN=game:GetService("Workspace").Map["Temple of Time"].MainDoor1;local i=game:GetService("TweenService")local fa=aN.Position;local fb=fa+Vector3.new(0,-50,0)local fc=TweenInfo.new(10,Enum.EasingStyle.Linear,Enum.EasingDirection.Out)local j=i:Create(aN,fc,{Position=fb})j:Play()local fd=game:GetService("Workspace").Map["Temple of Time"].MainDoor2;local i=game:GetService("TweenService")local fa=fd.Position;local fb=fa+Vector3.new(0,-50,0)local fc=TweenInfo.new(10,Enum.EasingStyle.Linear,Enum.EasingDirection.Out)local j=i:Create(fd,fc,{Position=fb})j:Play()local fe=Instance.new("Sound")fe.Parent=workspace;fe.SoundId="rbxassetid://1904813041"fe:Play()fe.Name="POwfpxzxzfFfFF"game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()wait(5)workspace:FindFirstChild("POwfpxzxzfFfFF"):Remove()game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()end;f9.Triggered:Connect(onProximity)end)du:Button("Teleport Cyborg Door ",function()aw(CFrame.new(28492.4140625,14894.4267578125,-422.1100158691406))end)du:Button("Teleport Fish Door ",function()aw(CFrame.new(28224.056640625,14889.4267578125,-210.5872039794922))end)du:Button("Teleport Ghoul Door",function()aw(CFrame.new(28672.720703125,14889.1279296875,454.5961608886719))end)du:Button("Teleport Human Door ",function()aw(CFrame.new(29237.294921875,14889.4267578125,-206.94955444335938))end)du:Button("Teleport Mink Door ",function()aw(CFrame.new(29020.66015625,14889.4267578125,-379.2682800292969))end)du:Button("Teleport Sky Door ",function()aw(CFrame.new(28967.408203125,14918.0751953125,234.31198120117188))end)du:Seperator("<<Auto Trials>>")du:Button("Auto Complete Angel Trial",function(cz)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game.Workspace.Map.SkyTrial.Model.FinishPart.CFrame end)du:Button("Auto Complete Rabbit Trial",function(cz)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").Map.MinkTrial.Ceiling.CFrame*CFrame.new(0,-5,0)end)du:Button("Auto Complete Cyborg Trial",function(cz)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,300,0)end)du:Button("Teleport PVP Zone",function()aw(CFrame.new(28766.681640625,14967.1455078125,-164.13290405273438))end)du:Button("Teleport To Safe Zone When PVP",function()aw(CFrame.new(28273.0859375,14896.5078125,157.42063903808594))end)function FullBright()pcall(function()local ff=game:GetService("Lighting")ff.Ambient=Color3.fromRGB(255,255,255)ff.Brightness=1;ff.FogEnd=1e10;for y,z in pairs(ff:GetDescendants())do if z:IsA("BloomEffect")or z:IsA("BlurEffect")or z:IsA("ColorCorrectionEffect")or z:IsA("SunRaysEffect")then z.Enabled=false end end;ff.Changed:Connect(function()ff.Ambient=Color3.fromRGB(255,255,255)ff.Brightness=1;ff.FogEnd=1e10 end)spawn(function()local fg=game:GetService("Players").LocalPlayer.Character;while wait()do repeat wait()until fg~=nil;if not fg.HumanoidRootPart:FindFirstChildWhichIsA("PointLight")then local fh=Instance.new("PointLight",fg.HumanoidRootPart)fh.Brightness=1;fh.Range=60 end end end)end)repeat task.wait()until game:IsLoaded()wait(5)for y,z in pairs(game.Lighting:GetChildren())do if z:IsA("")or z:IsA("Sky")or z:IsA("BlurEffect")or z:IsA("BloomEffect")or z:IsA("SunRaysEffect")then z:Destroy()end end;game.Lighting.Ambient=Color3.fromRGB(255,255,255)game.Lighting.Brightness=1;game.Lighting.ClockTime=14;game.Lighting.ColorShift_Bottom=Color3.fromRGB(255,255,255)game.Lighting.ColorShift_Top=Color3.fromRGB(255,255,255)game.Lighting.ExposureCompensation=0;game.Lighting.FogColor=Color3.fromRGB(255,255,255)game.Lighting.FogEnd=999999999;game.Lighting.GeographicLatitude=41.733;game.Lighting.OutdoorAmbient=Color3.fromRGB(255,255,255)game.Lighting.GlobalShadows=true;game.Lighting.Changed:Connect(function()game.Lighting.Ambient=Color3.fromRGB(255,255,255)game.Lighting.Brightness=1;game.Lighting.ClockTime=14;game.Lighting.ColorShift_Bottom=Color3.fromRGB(255,255,255)game.Lighting.ColorShift_Top=Color3.fromRGB(255,255,255)game.Lighting.ExposureCompensation=0;game.Lighting.FogColor=Color3.fromRGB(255,255,255)game.Lighting.FogEnd=999999999;game.Lighting.GeographicLatitude=41.733;game.Lighting.OutdoorAmbient=Color3.fromRGB(255,255,255)game.Lighting.GlobalShadows=true end)game.Lighting.DescendantAdded:Connect(function(fi)if fi:IsA("")or fi:IsA("Sky")or fi:IsA("BlurEffect")or fi:IsA("BloomEffect")or fi:IsA("SunRaysEffect")then fi:Destroy()end end)end;dv:Seperator("🌊")dv:Toggle("Auto Kill Mon Sea Event",_G.AutoEvent,function(dF)_G.AutoEvent=dF;spawn(function()while wait()do if _G.AutoEvent then for y,z in pairs(game:GetService("Workspace").Enemies:GetChildren())do if string.find(z.Name,"Fish Crew Member")or string.find(z.Name,"Piranha")or string.find(z.Name,"Shark")or string.find(z.Name,"Terror")and(z.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=500 then if z.Humanoid.Health>0 then repeat game:GetService("RunService").Heartbeat:wait()EquipWeapon(_G.SelectWeapon)PosMon=z.HumanoidRootPart.CFrame;z.Head.CanCollide=false;z.HumanoidRootPart.Size=Vector3.new(100,100,100)FastAttack=true;aw(z.HumanoidRootPart.CFrame*MethodFarm)if not FastAttack then game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(1280,672))end;PosMon=z.HumanoidRootPart.CFrame until not _G.AutoEvent or not z.Parent or z.Humanoid.Health==0 or not game.Workspace.Enemies:FindFirstChild(z.Name)end end end end end end)end)dv:Toggle("Accept Quest Kill 20 Sharks",_G.QRepairBoat,function(dF)_G.QRepairBoat=dF;spawn(function()while wait()do if _G.QRepairBoat then repeat wait()aw(CFrame.new(-16529.4922,75.8897476,310.603882,-0.292773664,-7.61506485e-08,-0.956181765,-4.15630765e-08,1,-6.69141258e-08,0.956181765,2.01511625e-08,-0.292773664))until(Vector3.new(-16529.4922,75.8897476,310.603882,-0.292773664,-7.61506485e-08,-0.956181765,-4.15630765e-08,1,-6.69141258e-08,0.956181765,2.01511625e-08,-0.292773664)-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=1 or not _G.QRepairBoat;local aE={[1]="Shipwright"}game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/InteractSubclassQuest"):InvokeServer(unpack(aE))wait(1)local aE={[1]="Shipwright"}game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/StartSubclassQuest"):InvokeServer(unpack(aE))wait(1)local aE={[1]="Shipwright"}game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/InteractSubclassQuest"):InvokeServer(unpack(aE))Vec("<Color=Red>English Version\n:Kill 20 sharks:<Color=/>")wait(1)repeat wait()aw(CFrame.new(-16931.9766,9.08636189,444.637634,0.247219667,3.04388195e-08,0.968959451,-2.25711698e-08,1,-2.56551314e-08,-0.968959451,-1.55280944e-08,0.247219667))until(Vector3.new(-16931.9766,9.08636189,444.637634,0.247219667,3.04388195e-08,0.968959451,-2.25711698e-08,1,-2.56551314e-08,-0.968959451,-1.55280944e-08,0.247219667)-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=1 or not _G.QRepaiBoat end end end)end)dv:Toggle("Click After Kill 20 Shark{Beta}",_G.QRepairBoat2,function(dF)_G.QRepairBoat2=dF;spawn(function()while wait()do if _G.QRepairBoat2 then repeat wait()aw(CFrame.new(-16529.4922,75.8897476,310.603882,-0.292773664,-7.61506485e-08,-0.956181765,-4.15630765e-08,1,-6.69141258e-08,0.956181765,2.01511625e-08,-0.292773664))until(Vector3.new(-16529.4922,75.8897476,310.603882,-0.292773664,-7.61506485e-08,-0.956181765,-4.15630765e-08,1,-6.69141258e-08,0.956181765,2.01511625e-08,-0.292773664)-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=1 or not _G.QRepairBoat2;local aE={[1]="Shipwright"}game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/InteractSubclassQuest"):InvokeServer(unpack(aE))local aE={[1]="Shipwright"}game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SubclassNetwork"):WaitForChild("PurchaseSubclass"):InvokeServer(unpack(aE))local aE={[1]="Shipwright"}game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SubclassNetwork"):WaitForChild("EquipSubclass"):InvokeServer(unpack(aE))end end end)end)dv:Toggle("Farm-WoodPlank{Beta|",_G.WoodPlank,function(dF)_G.WoodPlank=dF;spawn(function()while wait()do if _G.WoodPlank then aw(CFrame.new(-16484.3125,527.77948,476.465302,0.314159244,-2.17963532e-08,0.949370325,-1.05681153e-08,1,2.64558757e-08,-0.949370325,-1.83444122e-08,0.314159244)*CFrame.new(0,0,10))wait(1)aw(CFrame.new(-16597.0312,527.77948,482.512787,0.203417599,1.26229915e-08,0.979092062,1.91620697e-09,1,-1.32906619e-08,-0.979092062,4.57969751e-09,0.203417599)*CFrame.new(0,0,10))wait(1)aw(CFrame.new(-16690.9844,527.77948,339.35199,-0.0264198873,3.29540164e-08,0.999650955,9.8076347e-09,1,-3.27063141e-08,-0.999650955,8.94011354e-09,-0.0264198873)*CFrame.new(0,0,10))wait(1)aw(CFrame.new(-16425.9297,527.77948,319.027832,0.369603723,-9.8490041e-08,0.929189503,7.75970719e-08,1,7.51298614e-08,-0.929189503,4.43341115e-08,0.369603723)*CFrame.new(0,0,10))wait(1)end end end)end)spawn(function()while wait()do if _G.WoodPlank then repeat wait()for y,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do if z.ToolTip=="Melee"then if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(z.Name))then EquipWeapon(z.Name)end end;game:GetService("VirtualInputManager"):SendKeyEvent(true,"Z",false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,"Z",false,game)wait(0.2)game:GetService("VirtualInputManager"):SendKeyEvent(true,"X",false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,"X",false,game)wait(0.2)game:GetService("VirtualInputManager"):SendKeyEvent(true,"C",false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,"C",false,game)if z.ToolTip=="Sword"then if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(z.Name))then EquipWeapon(z.Name)end end end;game:GetService("VirtualInputManager"):SendKeyEvent(true,"Z",false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,"Z",false,game)wait(0.2)game:GetService("VirtualInputManager"):SendKeyEvent(true,"X",false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,"X",false,game)for y,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do if z.ToolTip=="Blox Fruit"then if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(z.Name))then EquipWeapon(z.Name)end end end;game:GetService("VirtualInputManager"):SendKeyEvent(true,"Z",false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,"Z",false,game)wait(0.2)game:GetService("VirtualInputManager"):SendKeyEvent(true,"X",false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,"X",false,game)wait(0.2)game:GetService("VirtualInputManager"):SendKeyEvent(true,"C",false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,"C",false,game)wait(0.2)game:GetService("VirtualInputManager"):SendKeyEvent(true,"F",false,game)game:GetService("VirtualInputManager"):SendKeyEvent(false,"F",false,game)wait(0.2)until not _G.WoodPlank end end end)AllBoat={"Dinghy","PirateSloop","PirateBrigade","PirateGrandBrigade","MarineSloop","MarineBrigade","MarineGrandBrigade"}local fj=nil;dv:Dropdown("Select Boat",AllBoat,function(dF)AllBoat=dF end)function CheckNotifyBuy()for y,z in pairs(game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("Notifications"):GetChildren())do if z.Name=="NotificationTemplate"then if string.lower(z.Text):find("bought")then return true end end end;return false end;dv:Toggle("Auto Buy Boat",_G.Bboat,function(dF)_G.Bboat=dF;while _G.Bboat do wait()aw(CFrame.new(-16931.9766,9.08636189,444.637634,0.247219667,3.04388195e-08,0.968959451,-2.25711698e-08,1,-2.56551314e-08,-0.968959451,-1.55280944e-08,0.247219667))if(Vector3.new(-16931.9766,9.08636189,444.637634,0.247219667,3.04388195e-08,0.968959451,-2.25711698e-08,1,-2.56551314e-08,-0.968959451,-1.55280944e-08,0.247219667)-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude<=5 and CheckNotifyBuy()==false then repeat wait()if fj then local aE={[1]="BuyBoat",[2]=fj}game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(aE))end until CheckNotifyBuy()==true or not _G.Bboat end end;for y,z in pairs(game.Workspace.Boats[fj]:GetChildren())do if z:IsA("VehicleSeat")and game.Players.LocalPlayer.Name==game.Workspace.Boats[fj].Owner.Value.Name then if(z.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=1000 then repeat task.wait()local CFrame=z.CFrame;twoboat(CFrame)until(z.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=5 or not _G.Bboat end end end end)Seatable={"Sea1[Low]","Sea2[Medium]","Sea3[High]","Sea4[Extreme]","Sea5[Crazy]","Sea6[???]"}dv:Dropdown("Select Sea Level",Seatable,function(dF)_G.SelectLocalTeleportSea=dF end)dv:Toggle("Teleport to The Selected Sea",_G.TeleportSea,function(dF)_G.TeleportSea=dF;local fk=game.Workspace.Boats[fj]if _G.TeleportSea then repeat wait()if _G.SelectLocalTeleportSea=="Sea1[Low]"then aI(fk,CFrame.new(-22526.0098,-0.3221744,1716.89185,-0.210707203,1.100981e-07,0.977549195,2.74631451e-09,1,-1.12034698e-07,-0.977549195,-2.09218598e-08,-0.210707203))elseif _G.SelectLocalTeleportSea=="Sea2[Medium]"then aI(fk,CFrame.new(-25645.3535,-0.3221744,2554.41016,-0.334876329,-5.05522451e-08,0.942262113,-3.13346469e-08,1,4.25136619e-08,-0.942262113,-1.52886308e-08,-0.334876329))elseif _G.SelectLocalTeleportSea=="Sea3[High]"then aI(fk,CFrame.new(-29842.2227,-0.3221744,4070.85767,-0.270609587,3.60968606e-08,0.962689161,-4.47193429e-08,1,-5.00663617e-08,-0.962689161,-5.65992657e-08,-0.270609587))elseif _G.SelectLocalTeleportSea=="Sea4[Extreme]"then aI(fk,CFrame.new(-32654.7188,-0.3221744,4788.14697,-0.183276221,2.0033232e-08,0.983061433,3.66669433e-08,1,-1.35424418e-08,-0.983061433,3.35638504e-08,-0.183276221))elseif _G.SelectLocalTeleportSea=="Sea5[Crazy]"then aI(fk,CFrame.new(-37813.6953,-0.3221744,6105.16895,-0.252362996,4.13621581e-09,0.967632651,2.87320709e-08,1,3.21888249e-09,-0.967632651,2.86144175e-08,-0.252362996))elseif _G.SelectLocalTeleportSea=="Sea6[???]"then aI(fk,CFrame.new(-42250.2227,-0.3221744,9247.07715,-0.45916447,6.39043236e-08,0.888351262,-3.36711423e-08,1,-8.93395651e-08,-0.888351262,-7.09333605e-08,-0.45916447))end until not _G.TeleportSea end end)dv:Toggle("Stop Boat",_G.stpboat,function(dF)_G.stpboat=dF;local fl=game.Workspace.Boats[fj]aI(fl,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)while _G.stpboat do wait()StopBoatF()end end)dv:Toggle("Increaseboatspeed",_G.increaseboatspeed,function(dF)_G.increaseboatspeed=dF;local fm={}for y,z in pairs(game.Workspace.Boats:GetDescendants())do if z:IsA("VehicleSeat")then table.insert(fm,z)end end;if _G.increaseboatspeed then for H,z in pairs(fm)do z.MaxSpeed=350 end else for H,z in pairs(fm)do z.MaxSpeed=100 end end end)dv:Toggle("AutoSail",_G.AutoSail,function(dF)_G.AutoSail=dF;while _G.AutoSail do task.wait(0)game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.W,false,game)end end)dv:Toggle("Noclip Rock",_G.Nocliprock,function(dF)_G.Nocliprock=dF;spawn(function()while wait()do if _G.Nocliprock then if game.Players.LocalPlayer.Character.Humanoid.Sit==true then for H,z in pairs(game.Workspace.Boats:GetDescendants())do if z:IsA("BasePart")and z.CanCollide==true then z.CanCollide=false end end;for H,z in pairs(game.Players.LocalPlayer.Character:GetDescendants())do if z:IsA("BasePart")and z.CanCollide==true then z.CanCollide=false end end elseif game.Players.LocalPlayer.Character.Humanoid.Sit==false then for H,z in pairs(game.Workspace.Boats:GetDescendants())do if z:IsA("BasePart")and z.CanCollide==false then z.CanCollide=true end end;for H,z in pairs(game.Players.LocalPlayer.Character:GetDescendants())do if z:IsA("BasePart")and z.CanCollide==false then z.CanCollide=true end end end end end end)end)dv:Button("FullBright",function()FullBright()end)dw:Seperator("🦊")local fn=dw:Label('...')spawn(function()pcall(function()while task.wait()do if game.Workspace._WorldOrigin.Locations:FindFirstChild('Kitsune Island')then fn:Set('🦊 : Spawned')else fn:Set('🦊 : Not Spawned')end end end)end)local fo=dw:Label('...')task.spawn(function()while task.wait()do pcall(function()if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431"then fo:Set("5/5 🌕: Moon Status")elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052"then fo:Set("4/5 🌖 : Moon Status")elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733"then fo:Set("3/5 🌗 : Moon Status")elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401"then fo:Set("2/5 🌘 : Moon Status")elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680"then fo:Set("1/5 🌘 : Moon Status")else fo:Set("0/5 🌘 : Moon Status")end end)end end)dw:Toggle("Teleport To Kitsune Island",_G.TptoKisuneIsland,function(dF)_G.TptoKisuneIsland=dF;spawn(function()while task.wait()do if _G.TptoKisuneIsland then aw(game.Workspace.Map.KitsuneIsland.ShrineActive.NeonShrinePart.CFrame*CFrame.new(0,100,0))end end end)end)dw:Toggle("Teleport To Kitsune Shrine",_G.TptoKisuneshrine,function(dF)_G.TptoKisuneshrine=dF;spawn(function()while task.wait()do if _G.TptoKisuneshrine then aw(game.Workspace.Map.KitsuneIsland.ShrineActive.NeonShrinePart.CFrame*CFrame.new(0,0,10))end end end)end)dw:Toggle("Collect Azure Ember",_G.Ez,function(dF)_G.Ez=dF;spawn(function()while _G.Ez do wait()pcall(function()if game.Workspace.EmberTemplate then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game.Workspace.EmberTemplate.Part.CFrame end end)end end)end)dx:Seperator("🛒")dx:Label("Auto Buy")dj:Toggle("Auto Buy Zoro Sword",_G.AutoBuyLegendarySword,function(dF)_G.AutoBuyLegendarySword=dF;task.spawn(function()while task.wait()do pcall(function()if _G.AutoBuyLegendarySword then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("LegendarySwordDealer","1")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("LegendarySwordDealer","2")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("LegendarySwordDealer","3")end end)end end)end)dx:Toggle("Auto Buy Zoro Sword Hop",_G.Settings.AutoBuyLegendarySwordHop,function(dF)_G.AutoBuyLegendarySwordHop=dF;_G.Settings.AutoBuyLegendarySwordHop=dF;SaveSettings()end)spawn(function()while task.wait()do pcall(function()if _G.Settings.AutoBuyLegendarySwordHop then game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("LegendarySwordDealer","1")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("LegendarySwordDealer","2")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("LegendarySwordDealer","3")game:GetService("StarterGui"):SetCore("SendNotification",{Title="VectorHub",Text="HopServer...",Icon="rbxassetid://16129235054",Duration=5})while _G.AutoBuyLegendarySwordHop do task.wait()wait(10)Teleport()Hop()end end end)end end)dx:Toggle("Auto Buy Color Haki",_G.AutoBuyEnchanmentHaki,function(dF)_G.AutoBuyEnchanmentHaki=dF;task.spawn(function()while task.wait()do pcall(function()if _G.AutoBuyEnchanmentHaki then local aE={[1]="ColorsDealer",[2]="2"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end end)end end)end)dx:Toggle("Auto Buy Color Haki Hop",_G.Settings.AutoBuyEnchanmentHakiHop,function(dF)_G.AutoBuyEnchanmentHakiHop=dF;_G.Settings.AutoBuyEnchanmentHakiHop=dF;SaveSettings()task.spawn(function()while task.wait()do pcall(function()if _G.Settings.AutoBuyEnchanmentHakiHop then local aE={[1]="ColorsDealer",[2]="2"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))game:GetService("StarterGui"):SetCore("SendNotification",{Title="VectorHub",Text="HopServer...",Icon="rbxassetid://16129235054",Duration=5})while _G.AutoBuyEnchanmentHakiHop do task.wait()wait(10)Teleport()Hop()end end end)end end)end)if _G.AutoBuyEnchanmentHaki then local aE={[1]="ColorsDealer",[2]="2"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))end;dx:Seperator("<<Fragment>>")dx:Button("Refund Stat [2,500F]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","2")end)dx:Button("Reroll Race [3,000F]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","2")end)dx:Seperator("<<Abilities>>")dx:Button("Haki [25,00$]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")end)dx:Button("Geppo [10,000$]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")end)dx:Button("Soru [100,000$]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")end)dx:Button("KenHaki [750,000$]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")end)dx:Seperator("<<Auto Buy Fighting Style>>")dx:Button("Black Leg [150,000$]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")end)dx:Button("Electro [500,000$]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")end)dx:Button("Fishman Karate [750,000$]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")end)dx:Button("Dragon Claw [1,500F]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")end)dx:Button("Superhuman [3,000,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")end)dx:Button("Death Step [2,500,000/5,000F]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")end)dx:Button("Sharkman Karate [2,500,000/5,000F]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")end)dx:Button("Electric Claw [3,000,000/5,000F]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw",true)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")end)dx:Button("Dragon Talon [3,000,000/5,000F]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon",true)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")end)dx:Button("Godhuman [5,000,000/5,000F]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")end)dx:Button("SanguineArt [5,000,000/5,000F]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt",true)game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")end)dx:Seperator("<<Sword>>")dx:Button("Katana [1,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Katana")end)dx:Button("Cutlass [1,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Cutlass")end)dx:Button("Duel Katana [12,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Duel Katana")end)dx:Button("Iron Mace [25,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Iron Mace")end)dx:Button("Pipe [100,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Pipe")end)dx:Button("Triple Katana [60,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Triple Katana")end)dx:Button("Dual-Headed Blade [400,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Dual-Headed Blade")end)dx:Button("Bisento [1,000,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Bisento")end)dx:Button("Soul Cane [750,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Soul Cane")end)dx:Seperator("<<Gun>>")dx:Button("Slingshot [5,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Slingshot")end)dx:Button("Musket [8,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Musket")end)dx:Button("Flintlock [10,500]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Flintlock")end)dx:Button("Refined Flintlock [65,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Refined Flintlock")end)dx:Button("Cannon [100,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Cannon")end)dx:Button("Kabucha [1500F]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Slingshot","1")game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Slingshot","2")end)dx:Seperator("<<Accessory>>")dx:Button("Black Cape [50,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Black Cape")end)dx:Button("Toemo Ring [500,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Tomoe Ring")end)dx:Button("Swordsman Hat [150,000]",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Swordsman Hat")end)dy:Seperator("🧍")local fp=game:GetService("TeleportService")local fq=game:GetService("Players").LocalPlayer;dy:Textbox("JobID","",function(e9)JobId_Textbox=e9 end)dy:Button("Join JobID",function()fp:TeleportToPlaceInstance(game.PlaceId,JobId_Textbox,fq)game:GetService("StarterGui"):SetCore("SendNotification",{Title="VectorHub",Text="Success JobID Please Wait",Icon="rbxassetid://16129235054",Duration=3})end)dy:Button("Copy JobID",function()setclipboard(game.JobId)game:GetService("StarterGui"):SetCore("SendNotification",{Title="VectorHub",Text="Success Copy JobID",Icon="rbxassetid://16129235054",Duration=3})end)dy:Button("Join Pirates Team",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Pirates")end)dy:Button("Join Marines Team",function()game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Marines")end)function kaituncap()local g=game:GetService("UserInputService")local i=game:GetService("TweenService")local l=game:GetService("RunService")local m=game:GetService("Players").LocalPlayer;local n=m:GetMouse()do local fr=game:GetService("Lighting"):FindFirstChild("Blur")if fr then fr:Destroy()end end;local fs=Instance.new("BlurEffect")i:Create(fs,TweenInfo.new(.4,Enum.EasingStyle.Back,Enum.EasingDirection.InOut),{Size=50}):Play()fs.Parent=game.Lighting;local q=Instance.new("UIStroke")local r=Instance.new("UICorner")local s=Instance.new("ScreenGui")local t=Instance.new("ImageButton")local u=Enum.ButtonStyle.RobloxButton;s.Parent=game.CoreGui;s.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;local ft=require(game:GetService("Players").LocalPlayer.PlayerGui.Main.UIController.Inventory)local fu=game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")local fv={}local fw={"Mythical","Legendary","Rare","Uncommon","Common"}local fx={["Common"]=Color3.fromRGB(179,179,179),["Uncommon"]=Color3.fromRGB(92,140,211),["Rare"]=Color3.fromRGB(140,82,255),["Legendary"]=Color3.fromRGB(213,43,228),["Mythical"]=Color3.fromRGB(238,47,50)}function GetRaity(fy)for k,z in pairs(fx)do if z==fy then return k end end end;for k,z in pairs(fu)do fv[z.Name]=z end;local fz=#getupvalue(ft.UpdateRender,4)local fA={}local fB={}local fC=0;while fC<fz do local y=0;while y<25000 and fC<fz do game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.ScrollingFrame.CanvasPosition=Vector2.new(0,y)for k,z in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.ScrollingFrame.Frame:GetChildren())do if z:IsA("Frame")and not fA[z.ItemName.Text]and z.ItemName.Visible==true then local fD=GetRaity(z.Background.BackgroundColor3)if fD then if not fB[fD]then fB[fD]={}end;table.insert(fB[fD],z:Clone())end;fC=fC+1;fA[z.ItemName.Text]=true end end;y=y+20 end;task.wait()end;function GetXY(fE)return fE*100 end;local fF=Instance.new("UIListLayout")fF.FillDirection=Enum.FillDirection.Vertical;fF.SortOrder=2;fF.Padding=UDim.new(0,10)local fG=Instance.new("Frame",game.Players.LocalPlayer.PlayerGui.BubbleChat)fG.BackgroundTransparency=1;fG.Size=UDim2.new(.5,0,1,0)fF.Parent=fG;local fH=Instance.new("Frame",game.Players.LocalPlayer.PlayerGui.BubbleChat)fH.BackgroundTransparency=1;fH.Size=UDim2.new(.5,0,1,0)fH.Position=UDim2.new(.6,0,0,0)fF:Clone().Parent=fH;for k,z in pairs(fB)do local ft=Instance.new("Frame",fG)ft.BackgroundTransparency=1;ft.Size=UDim2.new(1,0,0,0)ft.LayoutOrder=table.find(fw,k)local fI=Instance.new("Frame",fH)fI.BackgroundTransparency=1;fI.Size=UDim2.new(1,0,0,0)fI.LayoutOrder=table.find(fw,k)local fF=Instance.new("UIGridLayout",ft)fF.CellPadding=UDim2.new(.005,0,.005,0)fF.CellSize=UDim2.new(0,70,0,70)fF.FillDirectionMaxCells=100;fF.FillDirection=Enum.FillDirection.Horizontal;local fJ=fF:Clone()fJ.Parent=fI;for k,z in pairs(z)do if fv[z.ItemName.Text]and fv[z.ItemName.Text].Mastery then if z.ItemLine2.Text~="Accessory"then local fK=z.ItemName:Clone()fK.BackgroundTransparency=1;fK.TextSize=10;fK.TextXAlignment=2;fK.TextYAlignment=2;fK.ZIndex=5;fK.Text=fv[z.ItemName.Text].Mastery;fK.Size=UDim2.new(.5,0,.5,0)fK.Position=UDim2.new(.5,0,.5,0)fK.Parent=z end;z.Parent=ft elseif z.ItemLine2.Text=="Blox Fruit"then z.Parent=fI end end;ft.AutomaticSize=2;fI.AutomaticSize=2 end;local fL={["Superhuman"]=Vector2.new(3,2),["DeathStep"]=Vector2.new(4,3),["ElectricClaw"]=Vector2.new(2,0),["SharkmanKarate"]=Vector2.new(0,0),["DragonTalon"]=Vector2.new(1,5)}local fM=Instance.new("Frame",fG)fM.BackgroundTransparency=1;fM.Size=UDim2.new(1,0,0,0)fM.LayoutOrder=table.find(fw,k)fM.AutomaticSize=2;fM.LayoutOrder=100;local fF=Instance.new("UIGridLayout",fM)fF.CellPadding=UDim2.new(.005,0,.005,0)fF.CellSize=UDim2.new(0,70,0,70)fF.FillDirectionMaxCells=100;fF.FillDirection=Enum.FillDirection.Horizontal;local ft={"Superhuman","ElectricClaw","DragonTalon","SharkmanKarate","DeathStep","GodHuman","SanguineArt"}for k,z in pairs(ft)do if fL[z]and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy"..z,true)==1 then local fN=Instance.new("ImageLabel",fM)fN.Image="rbxassetid://9945562382"fN.ImageRectSize=Vector2.new(100,100)fN.ImageRectOffset=fL[z]*100 end end;function formatNumber(z)return tostring(z):reverse():gsub("%d%d%d","%1,"):reverse():gsub("^,","")end;game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.AnchorPoint=Vector2.new(0.5,0.5)game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Position=UDim2.new(0,1120,0,700)game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.AnchorPoint=Vector2.new(0.5,0.5)game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.Position=UDim2.new(0,1150,0,750)local Name=game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone()Name.Name="Name"Name.Parent=game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli;Name.Position=UDim2.new(0,0,-1.5,0)Name.Size=UDim2.new(1,0,1,0)Name.TextColor3=Color3.fromRGB(255,255,255)Name.Text=game.Players.LocalPlayer.Name;local fO=game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone()fO.Name="FragmentsCheck"fO.Parent=game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli;fO.Position=UDim2.new(0,0,-0.75,0)fO.Size=UDim2.new(1,0,1,0)fO.Text='ƒ'..formatNumber(game:GetService("Players").LocalPlayer.Data.Fragments.Value)local aE={[1]="getAwakenedAbilities"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))game.Players.LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible=true;game:GetService("Players").LocalPlayer.PlayerGui.Main.AwakeningToggler.Position=UDim2.new(0.48,10,0.908,2)game:GetService("Players").LocalPlayer.PlayerGui.Main.AwakeningToggler.Size=UDim2.new(1,0,0.22,0)pcall(function()game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton.Visible=false end)pcall(function()game:GetService("Players").LocalPlayer.PlayerGui.Main.RaceEnergy.Visible=false end)pcall(function()game:GetService("Players").LocalPlayer.PlayerGui.Main.SafeZone.Visible=false end)pcall(function()game:GetService("Players").LocalPlayer.PlayerGui.Main.HP.Visible=false end)pcall(function()game:GetService("Players").LocalPlayer.PlayerGui.Backpack.Enabled.Visible=false end)pcall(function()game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy.Visible=false end)for k,z in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Main:GetChildren())do if z:IsA("ImageButton")then z:Destroy()end end;pcall(function()game:GetService("Players").LocalPlayer.PlayerGui.Main.Compass.Visible=false end)end;dy:Seperator("<<Change Server>>")dy:Button("Hop Little Player Server",function()Teleport()end)dy:Button("Hop Server",function()Hop()end)dy:Button("Rejoin",function()local fP=game:GetService("TeleportService")local fQ=game.Players.LocalPlayer;fP:Teleport(game.PlaceId,fQ)end)dy:Line()dy:Button("Kaitun Cap",function()kaituncap()end)dy:Button("Show Awakened Skill",function()local aE={[1]="getAwakenedAbilities"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))game.Players.LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible=true end)dy:Button("Show Title Name",function()local aE={[1]="getTitles"}game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(aE))game.Players.localPlayer.PlayerGui.Main.Titles.Visible=true end)dy:Button("Show Color Haki",function()game.Players.localPlayer.PlayerGui.Main.Colors.Visible=true end)function InfAbility()if _G.InfAbility then if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility")then local fR=Instance.new("ParticleEmitter")fR.Acceleration=Vector3.new(0,0,0)fR.Archivable=true;fR.Drag=20;fR.EmissionDirection=Enum.NormalId.Top;fR.Enabled=true;fR.Lifetime=NumberRange.new(0.2,0.2)fR.LightInfluence=0;fR.LockedToPart=true;fR.Name="Agility"fR.Rate=500;local fS={NumberSequenceKeypoint.new(0,0),NumberSequenceKeypoint.new(1,4)}fR.Size=NumberSequence.new(fS)fR.RotSpeed=NumberRange.new(999,9999)fR.Rotation=NumberRange.new(0,0)fR.Speed=NumberRange.new(30,30)fR.SpreadAngle=Vector2.new(360,360)fR.Texture="rbxassetid://243098098"fR.VelocityInheritance=0;fR.ZOffset=2;fR.Transparency=NumberSequence.new(0)fR.Color=ColorSequence.new(Color3.fromRGB(0,255,255),Color3.fromRGB(0,255,255))fR.Parent=game:GetService("Players").LocalPlayer.Character.HumanoidRootPart end else if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility")then game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()end end end;dy:Toggle("Remove Fog",false,function(dF)_G.Remove_Fog=dF;while wait()do if _G.Remove_Fog then game:GetService("Lighting").FogEnd=9e99 else game:GetService("Lighting").FogEnd=1500 end end end)dy:Toggle("Auto Click",false,function(dF)_G.click=dF end)spawn(function()game:GetService("RunService").RenderStepped:Connect(function()if _G.click then pcall(function()game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(0,1,0,1))end)end end)end)dy:Toggle("ออโต้คลิก",false,function(dF)_G.click=dF end)spawn(function()game:GetService("RunService").RenderStepped:Connect(function()if _G.click then pcall(function()game:GetService'VirtualUser':CaptureController()game:GetService'VirtualUser':Button1Down(Vector2.new(0,1,0,1))end)end end)end)dy:Toggle("High Graphic",false,function(z)if z then getgenv().mode="Autumn"local a=game.Lighting;a.Ambient=Color3.fromRGB(33,33,33)a.Brightness=0.3;a.ColorShift_Bottom=Color3.fromRGB(0,0,0)a.ColorShift_Top=Color3.fromRGB(255,247,237)a.EnvironmentDiffuseScale=0.105;a.EnvironmentSpecularScale=0.522;a.GlobalShadows=true;a.OutdoorAmbient=Color3.fromRGB(51,54,67)a.ShadowSoftness=0.04;a.GeographicLatitude=-15.525;a.ExposureCompensation=0.75;local fT=Instance.new("BloomEffect",a)fT.Name="BloomEffect_Graphic"fT.Enabled=true;fT.Intensity=0.04;fT.Size=1900;fT.Threshold=0.915;local b5=Instance.new("ColorCorrectionEffect",a)b5.Name='ColorCorrectionEffect1_Graphic'b5.Brightness=0.176;b5.Contrast=0.39;b5.Enabled=true;b5.Saturation=0.2;b5.TintColor=Color3.fromRGB(217,145,57)if getgenv().mode=="Summer"then b5.TintColor=Color3.fromRGB(255,220,148)elseif getgenv().mode=="Autumn"then b5.TintColor=Color3.fromRGB(242,193,79)end;local fU=Instance.new("DepthOfFieldEffect",Graphic)fU.Name='DepthOfFieldEffect_Graphic'fU.Enabled=true;fU.FarIntensity=0.077;fU.FocusDistance=21.54;fU.InFocusRadius=20.77;fU.NearIntensity=0.277;local ea=Instance.new("ColorCorrectionEffect",a)ea.Name='ColorCorrectionEffect2_Graphic'ea.Brightness=0;ea.Contrast=-0.07;ea.Saturation=0;ea.Enabled=true;ea.TintColor=Color3.fromRGB(255,247,239)local fV=Instance.new("ColorCorrectionEffect",a)fV.Name='ColorCorrectionEffect3_Graphic'fV.Brightness=0.2;fV.Contrast=0.45;fV.Saturation=-0.1;fV.Enabled=true;fV.TintColor=Color3.fromRGB(255,255,255)local fW=Instance.new("SunRaysEffect",a)fW.Name='SunRaysEffect_Graphic'fW.Enabled=false;fW.Intensity=0.01;fW.Spread=0.146 else local a=game.Lighting;a.Ambient=Color3.fromRGB(170,170,170)a.Brightness=2;a.ColorShift_Bottom=Color3.fromRGB(0,0,0)a.ColorShift_Top=Color3.fromRGB(0,0,0)a.EnvironmentDiffuseScale=0.105;a.EnvironmentSpecularScale=0.522;a.GlobalShadows=false;a.OutdoorAmbient=Color3.fromRGB(127,127,127)a.ShadowSoftness=0;a.GeographicLatitude=66;a.ExposureCompensation=0.2;game:GetService("Lighting")["BloomEffect_Graphic"]:Destroy()game:GetService("Lighting")["ColorCorrectionEffect1_Graphic"]:Destroy()game:GetService("Lighting")["ColorCorrectionEffect2_Graphic"]:Destroy()game:GetService("Lighting")["ColorCorrectionEffect3_Graphic"]:Destroy()game:GetService("Lighting")["SunRaysEffect_Graphic"]:Destroy()end end)dy:Toggle("Walk on Water",fasle,function(dF)_G.WalkWater=dF end)spawn(function()while task.wait()do pcall(function()if _G.WalkWater then game:GetService("Workspace").Map["WaterBase-Plane"].Size=Vector3.new(1000,112,1000)else game:GetService("Workspace").Map["WaterBase-Plane"].Size=Vector3.new(1000,80,1000)end end)end end)dy:Toggle("InfAbility",false,function(dF)_G.InfAbility=dF;InfAbility()end)dy:Toggle("Infinities Dash",_G.NoDashCooldown,function(dF)_G.NoDashCooldown=dF;DodgeNoCoolDown()end)function DodgeNoCoolDown()if _G.NoDashCooldown then for y,z in next,getgc()do if game.Players.LocalPlayer.Character.Dodge then if typeof(z)=="function"and getfenv(z).script==game.Players.LocalPlayer.Character.Dodge then for X,Y in next,getupvalues(z)do if tostring(Y)=="0.4"then repeat wait(.1)setupvalue(z,X,0)until not _G.NoDashCooldown end end end end end end end;dy:Toggle("Infinities Geppo",_G.InfinitiesSkyJump,function(dF)_G.InfinitiesSkyJump=dF;SkyJumpNoCoolDown()end)function SkyJumpNoCoolDown()if _G.InfinitiesSkyJump then for y,z in next,getgc()do if game.Players.LocalPlayer.Character.Geppo then if typeof(z)=="function"and getfenv(z).script==game.Players.LocalPlayer.Character.Geppo then for X,Y in next,getupvalues(z)do if tostring(Y)=="0"then repeat wait(.1)setupvalue(z,X,0)until not _G.InfinitiesSkyJump end end end end end end end;dy:Toggle("Infinities Energy",_G.InfinitiesEnergy,function(dF)_G.InfinitiesEnergy=dF;InfinitiesEnergy()end)_G.AutoRejoin=true;spawn(function()while task.wait()do if _G.AutoRejoin then _G.AutoRejoin=game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(fX)if fX.Name=='ErrorPrompt'and fX:FindFirstChild('MessageArea')and fX.MessageArea:FindFirstChild("ErrorFrame")then game:GetService("TeleportService"):Teleport(game.PlaceId)end end)end end end)return bm
+ǝʇɐpd∩ uɹnʇǝɹ
+(puǝ
+puǝ
+puǝ    
+(puǝ        
+puǝ            
+(pIǝɔɐlԀ˙ǝɯɐƃ)ʇɹodǝlǝ┴:(,,ǝɔᴉʌɹǝSʇɹodǝlǝ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ǝɯɐɹℲɹoɹɹƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɐǝɹ∀ǝƃɐssǝW˙plᴉɥɔ puɐ (,ɐǝɹ∀ǝƃɐssǝW,)plᴉɥƆʇsɹᴉℲpuᴉℲ:plᴉɥɔ puɐ ,ʇdɯoɹԀɹoɹɹƎ, == ǝɯɐN˙plᴉɥɔ ɟᴉ                
+(plᴉɥɔ)uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝpp∀plᴉɥƆ˙ʎɐlɹǝʌOʇdɯoɹd˙ᴉnפʇdɯoɹԀxolqoɹ˙(,,ᴉnפǝɹoƆ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ =  uᴉoɾǝɹoʇn∀˙פ‾        
+uǝɥʇ  uᴉoɾǝɹoʇn∀˙פ‾ ɟᴉ    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds
+ǝnɹʇ = uᴉoɾǝɹoʇn∀˙פ‾
+
+(puǝ
+()ʎƃɹǝuƎsǝᴉʇᴉuᴉɟuI    
+ǝnlɐʌ = ʎƃɹǝuƎsǝᴉʇᴉuᴉɟuI˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʎƃɹǝuƎsǝᴉʇᴉuᴉɟuI˙פ‾ ',,ʎƃɹǝuƎ sǝᴉʇᴉuᴉɟuI,,)ǝlƃƃo┴:ᄅƖǝƃɐd
+
+puǝ
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+dɯnſʎʞSsǝᴉʇᴉuᴉɟuI˙פ‾ ʇou lᴉʇun                            
+(0 'ᄅᴉ 'ʌ)ǝnlɐʌdnʇǝs                                
+(Ɩ˙)ʇᴉɐʍ                                
+ʇɐǝdǝɹ                            
+uǝɥʇ ,,0,, == (ᄅʌ)ƃuᴉɹʇsoʇ ɟᴉ                        
+op (ʌ)sǝnlɐʌdnʇǝƃ 'ʇxǝu uᴉ ᄅʌ 'ᄅᴉ ɹoɟ                    
+uǝɥʇ oddǝפ˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ == ʇdᴉɹɔs˙(ʌ)ʌuǝɟʇǝƃ puɐ ,,uoᴉʇɔunɟ,, == (ʌ)ɟoǝdʎʇ ɟᴉ                
+uǝɥʇ oddǝפ˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ            
+op ()ɔƃʇǝƃ 'ʇxǝu uᴉ ʌ 'ᴉ ɹoɟ        
+uǝɥʇ dɯnſʎʞSsǝᴉʇᴉuᴉɟuI˙פ‾ ɟᴉ    
+()uʍoplooƆoNdɯnſʎʞS uoᴉʇɔunɟ
+
+(puǝ
+()uʍoplooƆoNdɯnſʎʞS    
+ǝnlɐʌ = dɯnſʎʞSsǝᴉʇᴉuᴉɟuI˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'dɯnſʎʞSsǝᴉʇᴉuᴉɟuI˙פ‾ ',,oddǝפ sǝᴉʇᴉuᴉɟuI,,)ǝlƃƃo┴:ᄅƖǝƃɐd
+
+puǝ
+puǝ
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+puǝ                    
+uʍoplooƆɥsɐpoN˙פ‾ ʇou lᴉʇun                        
+(0 'ᄅᴉ 'ʌ)ǝnlɐʌdnʇǝs                            
+(Ɩ˙)ʇᴉɐʍ                            
+ʇɐǝdǝɹ                        
+uǝɥʇ ,,ㄣ˙0,, == (ᄅʌ)ƃuᴉɹʇsoʇ ɟᴉ                    
+op (ʌ)sǝnlɐʌdnʇǝƃ 'ʇxǝu uᴉ ᄅʌ 'ᄅᴉ ɹoɟ                
+uǝɥʇ ǝƃpop˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ == ʇdᴉɹɔs˙(ʌ)ʌuǝɟʇǝƃ puɐ ,,uoᴉʇɔunɟ,, == (ʌ)ɟoǝdʎʇ ɟᴉ            
+uǝɥʇ ǝƃpop˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ        
+op ()ɔƃʇǝƃ 'ʇxǝu uᴉ ʌ 'ᴉ ɹoɟ    
+uǝɥʇ uʍoplooƆɥsɐpoN˙פ‾ ɟᴉ
+()uʍoplooƆoNǝƃpop uoᴉʇɔunɟ
+(puǝ
+()uʍoplooƆoNǝƃpop    
+ǝnlɐʌ = uʍoplooƆɥsɐpoN˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'uʍoplooƆɥsɐpoN˙פ‾ ',,ɥsɐp sǝᴉʇᴉuᴉɟuI,,)ǝlƃƃo┴:ᄅƖǝƃɐd
+
+(puǝ
+()ʎʇᴉlᴉq∀ɟuI    
+ǝnlɐʌ = ʎʇᴉlᴉq∀ɟuI˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝslɐɟ ',,ʎʇᴉlᴉq∀ɟuI,,)ǝlƃƃo┴:ᄅƖǝƃɐd
+(puǝ        
+puǝ            
+(puǝ                
+puǝ                    
+(000Ɩ'08'000Ɩ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙[,,ǝuɐlԀ-ǝsɐqɹǝʇɐM,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+ǝslǝ                    
+(000Ɩ'ᄅƖƖ'000Ɩ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙[,,ǝuɐlԀ-ǝsɐqɹǝʇɐM,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+uǝɥʇ ɹǝʇɐMʞlɐM˙פ‾ ɟᴉ                    
+()uoᴉʇɔunɟ)llɐɔd                
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ            
+()uoᴉʇɔunɟ)uʍɐds    
+(puǝ    
+ǝnlɐʌ = ɹǝʇɐMʞlɐM˙פ‾        
+(ǝnlɐʌ)uoᴉʇɔunɟ'ǝlsɐɟ',,ɹǝʇɐM uo ʞlɐM,,)ǝlƃƃo┴:ᄅƖǝƃɐd    
+
+(puǝ
+puǝ    
+()ʎoɹʇsǝp:[,,ɔᴉɥdɐɹפ‾ʇɔǝɟɟƎsʎɐɹunS,,](,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+()ʎoɹʇsǝp:[,,ɔᴉɥdɐɹפ‾ƐʇɔǝɟɟƎuoᴉʇɔǝɹɹoƆɹoloƆ,,](,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+()ʎoɹʇsǝp:[,,ɔᴉɥdɐɹפ‾ᄅʇɔǝɟɟƎuoᴉʇɔǝɹɹoƆɹoloƆ,,](,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+()ʎoɹʇsǝp:[,,ɔᴉɥdɐɹפ‾ƖʇɔǝɟɟƎuoᴉʇɔǝɹɹoƆɹoloƆ,,](,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+()ʎoɹʇsǝp:[,,ɔᴉɥdɐɹפ‾ʇɔǝɟɟƎɯoolq,,](,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+ᄅ˙0 = uoᴉʇɐsuǝdɯoƆǝɹnsodxƎ˙ɐ        
+99 = ǝpnʇᴉʇɐ˥ɔᴉɥdɐɹƃoǝפ˙ɐ        
+0 = ssǝuʇɟoSʍopɐɥS˙ɐ        
+(ㄥᄅƖ 'ㄥᄅƖ 'ㄥᄅƖ)qפɹɯoɹɟ˙ƐɹoloƆ = ʇuǝᴉqɯ∀ɹoopʇnO˙ɐ        
+ǝslɐɟ = sʍopɐɥSlɐqolפ˙ɐ        
+ᄅᄅϛ˙0 = ǝlɐɔSɹɐlnɔǝdSʇuǝɯuoɹᴉʌuƎ˙ɐ        
+ϛ0Ɩ˙0 = ǝlɐɔSǝsnɟɟᴉpʇuǝɯuoɹᴉʌuƎ˙ɐ        
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = do┴‾ʇɟᴉɥSɹoloƆ˙ɐ        
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ɯoʇʇoq‾ʇɟᴉɥSɹoloƆ˙ɐ        
+ᄅ = ssǝuʇɥƃᴉɹq˙ɐ        
+(0ㄥƖ '0ㄥƖ '0ㄥƖ)qפɹɯoɹɟ˙ƐɹoloƆ = ʇuǝᴉqɯ∀˙ɐ        
+ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ = ɐ lɐɔol        
+ǝslǝ    
+9ㄣƖ˙0 = pɐǝɹdS˙s        
+Ɩ0˙0 = ʎʇᴉsuǝʇuI˙s        
+ǝslɐɟ = pǝlqɐuƎ˙s        
+,ɔᴉɥdɐɹפ‾ʇɔǝɟɟƎsʎɐɹunS, = ǝɯɐN˙s        
+(ɐ ',,ʇɔǝɟɟƎsʎɐɹunS,,)ʍǝu˙ǝɔuɐʇsuI = s lɐɔol        
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ɹoloƆʇuᴉ┴˙ᄅǝ        
+ǝnɹʇ = pǝlqɐuƎ˙ᄅǝ        
+Ɩ˙0- = uoᴉʇɐɹnʇɐS˙ᄅǝ        
+ϛㄣ˙0 = ʇsɐɹʇuoƆ˙ᄅǝ        
+ᄅ˙0 = ssǝuʇɥƃᴉɹq˙ᄅǝ        
+,ɔᴉɥdɐɹפ‾ƐʇɔǝɟɟƎuoᴉʇɔǝɹɹoƆɹoloƆ, = ǝɯɐN˙ᄅǝ        
+(ɐ ',,ʇɔǝɟɟƎuoᴉʇɔǝɹɹoƆɹoloƆ,,)ʍǝu˙ǝɔuɐʇsuI = ᄅǝ lɐɔol        
+(6Ɛᄅ 'ㄥㄣᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ɹoloƆʇuᴉ┴˙ǝ        
+ǝnɹʇ = pǝlqɐuƎ˙ǝ        
+0 = uoᴉʇɐɹnʇɐS˙ǝ        
+ㄥ0˙0- = ʇsɐɹʇuoƆ˙ǝ        
+0 = ssǝuʇɥƃᴉɹq˙ǝ        
+,ɔᴉɥdɐɹפ‾ᄅʇɔǝɟɟƎuoᴉʇɔǝɹɹoƆɹoloƆ, = ǝɯɐN˙ǝ        
+(ɐ ',,ʇɔǝɟɟƎuoᴉʇɔǝɹɹoƆɹoloƆ,,)ʍǝu˙ǝɔuɐʇsuI = ǝ lɐɔol        
+ㄥㄥᄅ˙0 = ʎʇᴉsuǝʇuIɹɐǝN˙p        
+ㄥㄥ˙0ᄅ = snᴉpɐɹsnɔoℲuI˙p        
+ㄣϛ˙Ɩᄅ = ǝɔuɐʇsᴉpsnɔoℲ˙p        
+ㄥㄥ0˙0 = ʎʇᴉsuǝʇuIɹɐℲ˙p        
+ǝnɹʇ = pǝlqɐuƎ˙p        
+,ɔᴉɥdɐɹפ‾ʇɔǝɟɟƎplǝᴉℲɟOɥʇdǝp,  = ǝɯɐN˙p        
+(ɔᴉɥdɐɹפ ',,ʇɔǝɟɟƎplǝᴉℲɟOɥʇdǝp,,)ʍǝu˙ǝɔuɐʇsuI = p lɐɔol        
+puǝ        
+(6ㄥ 'Ɛ6Ɩ 'ᄅㄣᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ɹoloƆʇuᴉ┴˙ɔ            
+uǝɥʇ ,,uɯnʇn∀,, == ǝpoɯ˙()ʌuǝƃʇǝƃ ɟᴉǝslǝ        
+(8ㄣƖ '0ᄅᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ɹoloƆʇuᴉ┴˙ɔ            
+uǝɥʇ ,,ɹǝɯɯnS,, == ǝpoɯ˙()ʌuǝƃʇǝƃ ɟᴉ        
+(ㄥϛ 'ϛㄣƖ 'ㄥƖᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ɹoloƆʇuᴉ┴˙ɔ        
+ᄅ˙0 = uoᴉʇɐɹnʇɐS˙ɔ        
+ǝnɹʇ = pǝlqɐuƎ˙ɔ        
+6Ɛ˙0 = ʇsɐɹʇuoƆ˙ɔ        
+9ㄥƖ˙0 = ssǝuʇɥƃᴉɹq˙ɔ        
+,ɔᴉɥdɐɹפ‾ƖʇɔǝɟɟƎuoᴉʇɔǝɹɹoƆɹoloƆ, = ǝɯɐN˙ɔ        
+(ɐ ',,ʇɔǝɟɟƎuoᴉʇɔǝɹɹoƆɹoloƆ,,)ʍǝu˙ǝɔuɐʇsuI = ɔ lɐɔol        
+ϛƖ6˙0 = ploɥsǝɹɥ┴˙q        
+006Ɩ = ǝzᴉS˙q        
+ㄣ0˙0 = ʎʇᴉsuǝʇuI˙q        
+ǝnɹʇ = pǝlqɐuƎ˙q        
+,,ɔᴉɥdɐɹפ‾ʇɔǝɟɟƎɯoolq,, = ǝɯɐN˙q        
+(ɐ ',,ʇɔǝɟɟƎɯoolq,,)ʍǝu˙ǝɔuɐʇsuI = q lɐɔol        
+ϛㄥ˙0 = uoᴉʇɐsuǝdɯoƆǝɹnsodxƎ˙ɐ        
+ϛᄅϛ˙ϛƖ- = ǝpnʇᴉʇɐ˥ɔᴉɥdɐɹƃoǝפ˙ɐ        
+ㄣ0˙0 = ssǝuʇɟoSʍopɐɥS˙ɐ        
+(ㄥ9 'ㄣϛ 'Ɩϛ)qפɹɯoɹɟ˙ƐɹoloƆ = ʇuǝᴉqɯ∀ɹoopʇnO˙ɐ        
+ǝnɹʇ = sʍopɐɥSlɐqolפ˙ɐ        
+ᄅᄅϛ˙0 = ǝlɐɔSɹɐlnɔǝdSʇuǝɯuoɹᴉʌuƎ˙ɐ        
+ϛ0Ɩ˙0 = ǝlɐɔSǝsnɟɟᴉpʇuǝɯuoɹᴉʌuƎ˙ɐ        
+(ㄥƐᄅ 'ㄥㄣᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = do┴‾ʇɟᴉɥSɹoloƆ˙ɐ        
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ɯoʇʇoq‾ʇɟᴉɥSɹoloƆ˙ɐ        
+Ɛ˙0 = ssǝuʇɥƃᴉɹq˙ɐ        
+(ƐƐ 'ƐƐ 'ƐƐ)qפɹɯoɹɟ˙ƐɹoloƆ = ʇuǝᴉqɯ∀˙ɐ        
+ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ = ɐ lɐɔol        
+uɯnʇn∀ puɐ ɹǝɯɯnS ɯoɹɟ ǝsooɥƆ -- ,,uɯnʇn∀,, = ǝpoɯ˙()ʌuǝƃʇǝƃ        
+uǝɥʇ ʌ ɟᴉ    
+(ʌ)uoᴉʇɔunɟ'ǝslɐɟ',,ɔᴉɥdɐɹפ ɥƃᴉH,,)ǝlƃƃo┴:ᄅƖǝƃɐd
+
+
+(puǝ    
+(puǝ        
+puǝ            
+(puǝ                
+((Ɩ'0'Ɩ'0)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ,ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ,ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+()uoᴉʇɔunɟ)llɐɔd                 
+uǝɥʇ ʞɔᴉlɔ˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝddǝʇSɹǝpuǝɹ˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+()uoᴉʇɔunɟ)uʍɐds        
+  (puǝ        
+ǝnlɐʌ = ʞɔᴉlɔ˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'ǝslɐɟ',,กิลค้ตโออ,,)ǝlƃƃo┴:ᄅƖǝƃɐd    
+(puǝ    
+(puǝ        
+puǝ            
+(puǝ                
+((Ɩ'0'Ɩ'0)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ,ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ,ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+()uoᴉʇɔunɟ)llɐɔd                 
+uǝɥʇ ʞɔᴉlɔ˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝddǝʇSɹǝpuǝɹ˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+()uoᴉʇɔunɟ)uʍɐds        
+  (puǝ        
+ǝnlɐʌ = ʞɔᴉlɔ˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'ǝslɐɟ',,ʞɔᴉlƆ oʇn∀,,)ǝlƃƃo┴:ᄅƖǝƃɐd
+
+(puǝ
+			puǝ    
+puǝ        
+00ϛƖ = puƎƃoℲ˙(,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+ǝslǝ        
+66ǝ6 = puƎƃoℲ˙(,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ ƃoℲ‾ǝʌoɯǝɹ˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+ǝnlɐʌ = ƃoℲ‾ǝʌoɯǝɹ˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'ǝslɐɟ',,ƃoℲ ǝʌoɯǝɹ,,)ǝlƃƃo┴:ᄅƖǝƃɐd
+puǝ
+puǝ
+puǝ    
+()ʎoɹʇsǝp:(,,ʎʇᴉlᴉƃ∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ        
+uǝɥʇ (,,ʎʇᴉlᴉƃ∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ    
+ǝslǝ
+puǝ    
+ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇuǝɹɐԀ˙ɟuᴉ        
+((ϛϛᄅ 'ϛϛᄅ '0)qפɹɯoɹɟ˙ƐɹoloƆ '(ϛϛᄅ 'ϛϛᄅ '0)qפɹɯoɹɟ˙ƐɹoloƆ)ʍǝu˙ǝɔuǝnbǝSɹoloƆ = ɹoloƆ˙ɟuᴉ        
+(0)ʍǝu˙ǝɔuǝnbǝSɹǝqɯnN = ʎɔuǝɹɐdsuɐɹ┴˙ɟuᴉ        
+ᄅ = ʇǝsɟɟOZ˙ɟuᴉ        
+0 = ǝɔuɐʇᴉɹǝɥuIʎʇᴉɔolǝΛ˙ɟuᴉ        
+,,860860Ɛㄣᄅ//:pᴉʇǝssɐxqɹ,, = ǝɹnʇxǝ┴˙ɟuᴉ        
+(09Ɛ '09Ɛ)ʍǝu˙ᄅɹoʇɔǝΛ = ǝlƃu∀pɐǝɹdS˙ɟuᴉ        
+(0Ɛ '0Ɛ)ʍǝu˙ǝƃuɐɹɹǝqɯnN = pǝǝdS˙ɟuᴉ        
+(0 '0)ʍǝu˙ǝƃuɐɹɹǝqɯnN = uoᴉʇɐʇoɹ˙ɟuᴉ        
+(6666 '666)ʍǝu˙ǝƃuɐɹɹǝqɯnN = pǝǝdSʇoɹ˙ɟuᴉ        
+(ᄅsʇuᴉodʎǝʞɹǝqɯnu)ʍǝu˙ǝɔuǝnbǝSɹǝqɯnN = ǝzᴉS˙ɟuᴉ        
+{        
+'(ㄣ 'Ɩ)ʍǝu˙ʇuᴉodʎǝʞǝɔuǝnbǝSɹǝqɯnN            
+'(0 '0)ʍǝu˙ʇuᴉodʎǝʞǝɔuǝnbǝSɹǝqɯnN            
+} = ᄅsʇuᴉodʎǝʞɹǝqɯnu lɐɔol        
+00ϛ = ǝʇɐɹ˙ɟuᴉ        
+,,ʎʇᴉlᴉƃ∀,, = ǝɯɐN˙ɟuᴉ        
+ǝnɹʇ = ʇɹɐԀo┴pǝʞɔo˥˙ɟuᴉ        
+0 = ǝɔuǝnlɟuIʇɥƃᴉ˥˙ɟuᴉ        
+(ᄅ˙0 'ᄅ˙0)ʍǝu˙ǝƃuɐɹɹǝqɯnN = ǝɯᴉʇǝɟᴉ˥˙ɟuᴉ        
+ǝnɹʇ = pǝlqɐuƎ˙ɟuᴉ        
+do┴˙pIlɐɯɹoN˙ɯnuƎ = uoᴉʇɔǝɹᴉpuoᴉssᴉɯƎ˙ɟuᴉ        
+0ᄅ = ƃɐɹp˙ɟuᴉ        
+ǝnɹʇ = ǝlqɐʌᴉɥɔɹ∀˙ɟuᴉ        
+(0 '0 '0)ʍǝu˙ƐɹoʇɔǝΛ = uoᴉʇɐɹǝlǝɔɔ∀˙ɟuᴉ        
+(,,ɹǝʇʇᴉɯƎǝlɔᴉʇɹɐԀ,,)ʍǝu˙ǝɔuɐʇsuI = ɟuᴉ lɐɔol        
+uǝɥʇ (,,ʎʇᴉlᴉƃ∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ    
+uǝɥʇ ʎʇᴉlᴉq∀ɟuI˙פ‾ ɟᴉ
+()ʎʇᴉlᴉq∀ɟuI uoᴉʇɔunɟ
+(puǝ
+ǝnɹʇ = ǝlqᴉsᴉΛ˙sɹoloƆ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔol˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()uoᴉʇɔunɟ ',,ᴉʞɐH ɹoloƆ ʍoɥS,,)uoʇʇnq:ᄅƖǝƃɐd
+(puǝ
+ǝnɹʇ = ǝlqᴉsᴉΛ˙sǝlʇᴉ┴˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔol˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+{    
+,,sǝlʇᴉ┴ʇǝƃ,, = [Ɩ]    
+} = sƃɹɐ lɐɔol    
+()uoᴉʇɔunɟ ',,ǝɯɐN ǝlʇᴉ┴ ʍoɥS,,)uoʇʇnq:ᄅƖǝƃɐd
+(puǝ
+ǝnɹʇ = ǝlqᴉsᴉΛ˙ɹǝlƃƃo┴ƃuᴉuǝʞɐʍ∀˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+
+{    
+,,sǝᴉʇᴉlᴉq∀pǝuǝʞɐʍ∀ʇǝƃ,, = [Ɩ]    
+} = sƃɹɐ lɐɔol    
+()uoᴉʇɔunɟ ',,llᴉʞS pǝuǝʞɐʍ∀ ʍoɥS,,)uoʇʇnq:ᄅƖǝƃɐd
+(puǝ
+()dɐɔunʇᴉɐʞ
+()uoᴉʇɔunɟ ',,dɐƆ unʇᴉɐʞ,,)uoʇʇnq:ᄅƖǝƃɐd
+()ǝuᴉ˥:ᄅƖǝƃɐd
+(puǝ
+(d 'pIǝɔɐlԀ˙ǝɯɐƃ)ʇɹodǝlǝ┴:sʇ    
+ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = d lɐɔol    
+(,,ǝɔᴉʌɹǝSʇɹodǝlǝ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = sʇ lɐɔol    
+()uoᴉʇɔunɟ ',,uᴉoɾǝɹ,,)uoʇʇnq:ᄅƖǝƃɐd
+
+(puǝ
+()doH    
+()uoᴉʇɔunɟ ',,ɹǝʌɹǝS doH,,)uoʇʇnq:ᄅƖǝƃɐd
+(puǝ
+()ʇɹodǝlǝ┴    
+()uoᴉʇɔunɟ ',,ɹǝʌɹǝS ɹǝʎɐlԀ ǝlʇʇᴉ˥ doH,,)uoʇʇnq:ᄅƖǝƃɐd
+(,,<<ɹǝʌɹǝS ǝƃuɐɥƆ>>,,)ɹoʇɐɹǝdǝS:ᄅƖǝƃɐd
+
+puǝ
+(puǝ
+ǝslɐɟ = ǝlqᴉsᴉΛ˙ssɐdɯoƆ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)llɐɔd
+puǝ
+puǝ    
+()ʎoɹʇsǝp:ʌ        
+uǝɥʇ (,,uoʇʇnqǝƃɐɯI,,)∀sI:ʌ ɟᴉ    
+op (()uǝɹplᴉɥƆʇǝפ:uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ʞ ɹoɟ
+(puǝ
+ǝslɐɟ = ǝlqᴉsᴉΛ˙ʎƃɹǝuƎ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)llɐɔd
+(puǝ
+ǝslɐɟ = ǝlqᴉsᴉΛ˙pǝlqɐuƎ˙ʞɔɐdʞɔɐq˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)llɐɔd
+(puǝ
+ǝslɐɟ = ǝlqᴉsᴉΛ˙ԀH˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)llɐɔd
+(puǝ
+ǝslɐɟ = ǝlqᴉsᴉΛ˙ǝuoZǝɟɐS˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)llɐɔd
+(puǝ
+ǝslɐɟ = ǝlqᴉsᴉΛ˙ʎƃɹǝuƎǝɔɐɹ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)llɐɔd
+(puǝ
+ǝslɐɟ = ǝlqᴉsᴉΛ˙uoʇʇnqnuǝW˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)llɐɔd
+
+(0 'ᄅᄅ˙0 '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ɹǝlƃƃo┴ƃuᴉuǝʞɐʍ∀˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(ᄅ '806˙0 '0Ɩ '8ㄣ˙0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ɹǝlƃƃo┴ƃuᴉuǝʞɐʍ∀˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+ǝnɹʇ = ǝlqᴉsᴉΛ˙ɹǝlƃƃo┴ƃuᴉuǝʞɐʍ∀˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+{
+,,sǝᴉʇᴉlᴉq∀pǝuǝʞɐʍ∀ʇǝƃ,, = [Ɩ]    
+} = sƃɹɐ lɐɔol
+(ǝnlɐΛ˙sʇuǝɯƃɐɹℲ˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ɹǝqɯnNʇɐɯɹoɟ ˙˙ ,ƒ, = ʇxǝ┴˙sʇuǝɯƃɐɹℲ
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙sʇuǝɯƃɐɹℲ
+(0 'ϛㄥ˙0- '0 '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙sʇuǝɯƃɐɹℲ
+ᴉlǝq˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇuǝɹɐԀ˙sʇuǝɯƃɐɹℲ
+,,ʞɔǝɥƆsʇuǝɯƃɐɹℲ,, = ǝɯɐN˙sʇuǝɯƃɐɹℲ
+()ǝuolƆ:sʇuǝɯƃɐɹℲ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = sʇuǝɯƃɐɹℲ lɐɔol
+
+ǝɯɐN˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ʇxǝ┴˙ǝɯɐN
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐN
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐN
+(0 'ϛ˙Ɩ- '0 '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝɯɐN
+ᴉlǝq˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇuǝɹɐԀ˙ǝɯɐN
+,,ǝɯɐN,, = ǝɯɐN˙ǝɯɐN
+()ǝuolƆ:sʇuǝɯƃɐɹℲ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐN lɐɔol
+(0ϛㄥ '0 '0ϛƖƖ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙lǝʌǝ˥˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(ϛ˙0 'ϛ˙0)ʍǝu˙ᄅɹoʇɔǝΛ = ʇuᴉoԀɹoɥɔu∀˙lǝʌǝ˥˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+
+(00ㄥ '0 '0ᄅƖƖ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ᴉlǝq˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(ϛ˙0 'ϛ˙0)ʍǝu˙ᄅɹoʇɔǝΛ = ʇuᴉoԀɹoɥɔu∀˙ᴉlǝq˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+
+puǝ
+(,,,, ',,'^,,)qnsƃ:()ǝsɹǝʌǝɹ:(,,'Ɩ%,, ',,p%p%p%,,)qnsƃ:()ǝsɹǝʌǝɹ:(ʌ)ƃuᴉɹʇsoʇ uɹnʇǝɹ    
+(ʌ)ɹǝqɯnNʇɐɯɹoɟ uoᴉʇɔunɟ
+puǝ
+puǝ    
+00Ɩ * [ʌ]nɥnHʇsᴉ˥ = ʇǝsɟɟOʇɔǝɹǝƃɐɯI˙nɥnɥ        
+(00Ɩ '00Ɩ)ʍǝu˙ᄅɹoʇɔǝΛ = ǝzᴉSʇɔǝɹǝƃɐɯI˙nɥnɥ        
+,,ᄅ8Ɛᄅ9ϛϛㄣ66//:pᴉʇǝssɐxqɹ,, = ǝƃɐɯI˙nɥnɥ        
+(פǝǝlǝW ',,lǝqɐ˥ǝƃɐɯI,,)ʍǝu˙ǝɔuɐʇsuI = nɥnɥ lɐɔol        
+uǝɥʇ Ɩ == (ǝnɹʇ 'ʌ ˙˙ ,,ʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ [ʌ]nɥnHʇsᴉ˥ ɟᴉ    
+op (ɔɐɔ)sɹᴉɐd uᴉ ʌ 'ʞ ɹoɟ
+{,,ʇɹ∀ǝuᴉnƃuɐS,, ',,uɐɯnHpoפ,, ',,dǝʇSɥʇɐǝp,, ',,ǝʇɐɹɐʞuɐɯʞɹɐɥS,, ',,uolɐ┴uoƃɐɹp,, ',,ʍɐlƆɔᴉɹʇɔǝlƎ,, ',,uɐɯnɥɹǝdnS,, } = ɔɐɔ lɐɔol
+
+lɐʇuozᴉɹoH˙uoᴉʇɔǝɹᴉpllᴉℲ˙ɯnuƎ = uoᴉʇɔǝɹᴉpllᴉℲ˙ʞʌʇ
+00Ɩ = sllǝƆxɐWuoᴉʇɔǝɹᴉpllᴉℲ˙ʞʌʇ
+(0ㄥ '0 '0ㄥ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉSllǝƆ˙ʞʌʇ
+(0 'ϛ00˙ '0 'ϛ00˙)ʍǝu˙ᄅɯᴉp∩ = ƃuᴉppɐԀllǝƆ˙ʞʌʇ
+(פǝǝlǝW ',,ʇnoʎɐ˥pᴉɹפI∩,,)ʍǝu˙ǝɔuɐʇsuI = ʞʌʇ lɐɔol
+00Ɩ = ɹǝpɹOʇnoʎɐ˥˙פǝǝlǝW
+ᄅ = ǝzᴉSɔᴉʇɐɯoʇn∀˙פǝǝlǝW
+(ʞ 'lǝʌǝ˥ʎʇᴉɐɹ)puᴉɟ˙ǝlqɐʇ = ɹǝpɹOʇnoʎɐ˥˙פǝǝlǝW
+(0 '0 '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙פǝǝlǝW
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙פǝǝlǝW
+(ʇɟǝ˥ ',,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = פǝǝlǝW lɐɔol
+{
+(ϛ 'Ɩ)ʍǝu˙ᄅɹoʇɔǝΛ = [,,uolɐ┴uoƃɐɹp,,]    
+'(0 '0)ʍǝu˙ᄅɹoʇɔǝΛ = [,,ǝʇɐɹɐʞuɐɯʞɹɐɥS,,]    
+'(0 'ᄅ)ʍǝu˙ᄅɹoʇɔǝΛ = [,,ʍɐlƆɔᴉɹʇɔǝlƎ,,]    
+'(Ɛ 'ㄣ)ʍǝu˙ᄅɹoʇɔǝΛ = [,,dǝʇSɥʇɐǝp,,]    
+'(ᄅ 'Ɛ)ʍǝu˙ᄅɹoʇɔǝΛ = [,,uɐɯnɥɹǝdnS,,]    
+} = nɥnHʇsᴉ˥ lɐɔol
+puǝ
+ᄅ = ǝzᴉSɔᴉʇɐɯoʇn∀˙ᄅɔɐɔ    
+ᄅ = ǝzᴉSɔᴉʇɐɯoʇn∀˙ɔɐɔ    
+puǝ    
+puǝ        
+ᄅɔɐɔ = ʇuǝɹɐԀ˙ʌ            
+uǝɥʇ ,,ʇᴉnɹℲ xolq,, == ʇxǝ┴˙ᄅǝuᴉ˥ɯǝʇI˙ʌ ɟᴉǝslǝ        
+ɔɐɔ = ʇuǝɹɐԀ˙ʌ            
+puǝ            
+ʌ =                 ʇuǝɹɐԀ˙ɔɐɔnq                
+(0 'ϛ˙ '0 'ϛ˙)ʍǝu˙ᄅɯᴉp∩ =               uoᴉʇᴉsoԀ˙ɔɐɔnq                
+(0 'ϛ˙ '0 'ϛ˙)ʍǝu˙ᄅɯᴉp∩ =                   ǝzᴉS˙ɔɐɔnq                
+ʎɹǝʇsɐW˙[ʇxǝ┴˙ǝɯɐNɯǝʇI˙ʌ]sɯǝʇI =                   ʇxǝ┴˙ɔɐɔnq                
+ϛ =                 xǝpuIZ˙ɔɐɔnq                
+ᄅ =         ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ɔɐɔnq                
+ᄅ =         ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɔɐɔnq                
+0Ɩ =               ǝzᴉSʇxǝ┴˙ɔɐɔnq                
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ɔɐɔnq                
+()ǝuolƆ:ǝɯɐNɯǝʇI˙ʌ =                  ɔɐɔnq lɐɔol                
+uǝɥʇ ,,ʎɹossǝɔɔ∀,, =~ ʇxǝ┴˙ᄅǝuᴉ˥ɯǝʇI˙ʌ ɟᴉ            
+uǝɥʇ ʎɹǝʇsɐW˙[ʇxǝ┴˙ǝɯɐNɯǝʇI˙ʌ]sɯǝʇI puɐ [ʇxǝ┴˙ǝɯɐNɯǝʇI˙ʌ]sɯǝʇI ɟᴉ        
+op (ʌ)sɹᴉɐd uᴉ ʌ 'ʞ ɹoɟ    
+ᄅɔɐɔ = ʇuǝɹɐԀ˙ɔɔɔ    
+()ǝuolƆ:ʞʌʇ = ɔɔɔ lɐɔol    
+
+lɐʇuozᴉɹoH˙uoᴉʇɔǝɹᴉpllᴉℲ˙ɯnuƎ = uoᴉʇɔǝɹᴉpllᴉℲ˙ʞʌʇ    
+00Ɩ = sllǝƆxɐWuoᴉʇɔǝɹᴉpllᴉℲ˙ʞʌʇ    
+(0ㄥ '0 '0ㄥ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉSllǝƆ˙ʞʌʇ    
+(0 'ϛ00˙ '0 'ϛ00˙)ʍǝu˙ᄅɯᴉp∩ = ƃuᴉppɐԀllǝƆ˙ʞʌʇ    
+(ɔɐɔ ',,ʇnoʎɐ˥pᴉɹפI∩,,)ʍǝu˙ǝɔuɐʇsuI = ʞʌʇ lɐɔol    
+
+(ʞ 'lǝʌǝ˥ʎʇᴉɐɹ)puᴉɟ˙ǝlqɐʇ = ɹǝpɹOʇnoʎɐ˥˙ᄅɔɐɔ    
+(0 '0 '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ᄅɔɐɔ    
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ᄅɔɐɔ    
+(ʇɥƃᴉɹ ',,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ᄅɔɐɔ lɐɔol    
+
+(ʞ 'lǝʌǝ˥ʎʇᴉɐɹ)puᴉɟ˙ǝlqɐʇ = ɹǝpɹOʇnoʎɐ˥˙ɔɐɔ    
+(0 '0 '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ɔɐɔ    
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ɔɐɔ    
+(ʇɟǝ˥ ',,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ɔɐɔ lɐɔol    
+op (ɯǝʇᴉllɐ)sɹᴉɐd uᴉ ʌ 'ʞ ɹoɟ
+ʇɥƃᴉɹ = ʇuǝɹɐԀ˙()ǝuolƆ:ʞʌʇ
+(0 '0 '0 '9˙)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ʇɥƃᴉɹ
+(0 'Ɩ '0 'ϛ˙)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ʇɥƃᴉɹ
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ʇɥƃᴉɹ
+(ʇɐɥƆǝlqqnq˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ',,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ʇɥƃᴉɹ lɐɔol
+
+ʇɟǝ˥ = ʇuǝɹɐԀ˙ʞʌʇ
+(0 'Ɩ '0 'ϛ˙)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ʇɟǝ˥
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ʇɟǝ˥
+(ʇɐɥƆǝlqqnq˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ',,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ʇɟǝ˥ lɐɔol
+
+(0Ɩ '0)ʍǝu˙ɯᴉp∩ = ƃuᴉppɐԀ˙ʞʌʇ
+ᄅ = ɹǝpɹOʇɹoS˙ʞʌʇ
+lɐɔᴉʇɹǝΛ˙uoᴉʇɔǝɹᴉpllᴉℲ˙ɯnuƎ = uoᴉʇɔǝɹᴉpllᴉℲ˙ʞʌʇ
+(,,ʇnoʎɐ˥ʇsᴉ˥I∩,,)ʍǝu˙ǝɔuɐʇsuI = ʞʌʇ lɐɔol
+
+puǝ
+00Ɩ * ɔǝʌ uɹnʇǝɹ    
+(ɔǝʌ)⅄Xʇǝפ uoᴉʇɔunɟ
+puǝ
+()ʇᴉɐʍ˙ʞsɐʇ    
+puǝ    
+0ᄅ + ᴉ = ᴉ        
+puǝ        
+puǝ            
+ǝnɹʇ = [ʇxǝ┴˙ǝɯɐNɯǝʇI˙ʌ]ɔɐɹ                
+Ɩ + ᄅlɐʇoʇ = ᄅlɐʇoʇ                
+puǝ                
+(()ǝuolƆ:ʌ '[nɥnɥᴉɐʌ]ɯǝʇᴉllɐ)ʇɹǝsuᴉ˙ǝlqɐʇ                    
+puǝ                    
+{} = [nɥnɥᴉɐʌ]ɯǝʇᴉllɐ                        
+uǝɥʇ [nɥnɥᴉɐʌ]ɯǝʇᴉllɐ ʇou ɟᴉ                    
+uǝɥʇ nɥnɥᴉɐʌ ɟᴉ                
+(ƐɹoloƆpunoɹƃʞɔɐq˙punoɹƃʞɔɐq˙ʌ)ʎʇᴉɐɹʇǝפ = nɥnɥᴉɐʌ lɐɔol                
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ǝɯɐNɯǝʇI˙ʌ puɐ [ʇxǝ┴˙ǝɯɐNɯǝʇI˙ʌ]ɔɐɹ ʇou puɐ (,,ǝɯɐɹℲ,,)∀sI:ʌ ɟᴉ            
+op (()uǝɹplᴉɥƆʇǝפ:ǝɯɐɹℲ˙ǝɯɐɹℲƃuᴉlloɹɔS˙ʇuǝʇuoƆ˙ʇɥƃᴉɹ˙ɹǝuᴉɐʇuoƆʎɹoʇuǝʌuI˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ʞ ɹoɟ        
+(ᴉ '0)ʍǝu˙ᄅɹoʇɔǝΛ = uoᴉʇᴉsoԀsɐʌuɐƆ˙ǝɯɐɹℲƃuᴉlloɹɔS˙ʇuǝʇuoƆ˙ʇɥƃᴉɹ˙ɹǝuᴉɐʇuoƆʎɹoʇuǝʌuI˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+op lɐʇoʇ > ᄅlɐʇoʇ puɐ 000ϛᄅ > ᴉ ǝlᴉɥʍ    
+0 = ᴉ lɐɔol    
+op lɐʇoʇ > ᄅlɐʇoʇ ǝlᴉɥʍ
+0 = ᄅlɐʇoʇ lɐɔol
+{} = ɯǝʇᴉllɐ lɐɔol
+{} = ɔɐɹ lɐɔol
+(ㄣ 'ɹǝpuǝɹǝʇɐpd∩˙ɔɐɔ)ǝnlɐʌdnʇǝƃ# = lɐʇoʇ lɐɔol
+
+puǝ
+ʌ = [ǝɯɐN˙ʌ]sɯǝʇI    
+op (ʎɹoʇuǝʌuI)sɹᴉɐd uᴉ ʌ 'ʞ ɹoɟ
+
+puǝ
+puǝ    
+puǝ ʞ uɹnʇǝɹ uǝɥʇ ɹoloɔ == ʌ ɟᴉ        
+op (ɹoloƆʎʇᴉɐɹ)sɹᴉɐd uᴉ ʌ 'ʞ ɹoɟ    
+(ɹoloɔ)ʎʇᴉɐɹʇǝפ uoᴉʇɔunɟ
+{
+(0ϛ 'ㄥㄣ '8Ɛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = [,,lɐɔᴉɥʇʎW,,]    
+'(8ᄅᄅ 'Ɛㄣ 'ƐƖᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = [,,ʎɹɐpuǝƃǝ˥,,]    
+'(ϛϛᄅ 'ᄅ8 '0ㄣƖ)qפɹɯoɹɟ˙ƐɹoloƆ = [,,ǝɹɐɹ,,]    
+'(ƖƖᄅ '0ㄣƖ 'ᄅ6)qפɹɯoɹɟ˙ƐɹoloƆ = [,,uoɯɯoɔu∩,,]    
+'(6ㄥƖ '6ㄥƖ '6ㄥƖ)qפɹɯoɹɟ˙ƐɹoloƆ = [,,uoɯɯoƆ,,]    
+} = ɹoloƆʎʇᴉɐɹ lɐɔol
+{ ,,uoɯɯoƆ,, ',,uoɯɯoɔu∩,, ',,ǝɹɐɹ,, ',,ʎɹɐpuǝƃǝ˥,, ',,lɐɔᴉɥʇʎW,, } = lǝʌǝ˥ʎʇᴉɐɹ lɐɔol
+{} = sɯǝʇI lɐɔol
+(,,ʎɹoʇuǝʌuIʇǝƃ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʎɹoʇuǝʌuI lɐɔol
+(ʎɹoʇuǝʌuI˙ɹǝlloɹʇuoƆI∩˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ǝɹᴉnbǝɹ = ɔɐɔ lɐɔol
+
+ƃuᴉlqᴉS˙ɹoᴉʌɐɥǝqxǝpuIZ˙ɯnuƎ = ɹoᴉʌɐɥǝqxǝpuIZ˙ᴉnפuǝǝɹɔS
+ᴉnפǝɹoƆ˙ǝɯɐƃ = ʇuǝɹɐԀ˙ᴉnפuǝǝɹɔS
+
+uoʇʇnqxolqoɹ˙ǝlʎʇSuoʇʇnq˙ɯnuƎ = uoʇʇnqxolqoɹ lɐɔol
+(,,uoʇʇnqǝƃɐɯI,,)ʍǝu˙ǝɔuɐʇsuI = uoʇʇnqǝƃɐɯI lɐɔol
+(,,ᴉnפuǝǝɹɔS,,)ʍǝu˙ǝɔuɐʇsuI = ᴉnפuǝǝɹɔS lɐɔol
+
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆI∩ lɐɔol
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSI∩ lɐɔol
+ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ = ʇuǝɹɐԀ˙ɹnlq
+()ʎɐlԀ:({ 0ϛ = ǝzᴉS }'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ʞɔɐq˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ㄣ˙)ʍǝu˙oɟuIuǝǝʍ┴'ɹnlq)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴
+(,,ʇɔǝɟɟƎɹnlq,,)ʍǝu˙ǝɔuɐʇsuI = ɹnlq lɐɔol
+puǝ
+puǝ ()ʎoɹʇsǝp:ᴉn uǝɥʇ ᴉn ɟᴉ    
+(,,ɹnlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ᴉn lɐɔol    
+op
+()ǝsnoWʇǝפ:ɹǝʎɐlԀlɐɔo˥ = ǝsnoW lɐɔol
+ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ɹǝʎɐlԀlɐɔo˥ lɐɔol
+(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSunɹ lɐɔol
+(,,ǝɔᴉʌɹǝSuǝǝʍ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSuǝǝʍ┴ lɐɔol
+(,,ǝɔᴉʌɹǝSʇnduIɹǝs∩,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSʇnduIɹǝs∩ lɐɔol
+()dɐɔunʇᴉɐʞ uoᴉʇɔunɟ
+(puǝ
+(,,sǝuᴉɹɐW,, ',,ɯɐǝ┴ʇǝS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ ',,ɯɐǝ┴ sǝuᴉɹɐW uᴉoſ,,)uoʇʇnq:ᄅƖǝƃɐd
+
+(puǝ
+(,,sǝʇɐɹᴉԀ,, ',,ɯɐǝ┴ʇǝS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ ',,ɯɐǝ┴ sǝʇɐɹᴉԀ uᴉoſ,,)uoʇʇnq:ᄅƖǝƃɐd
+(puǝ
+   ({Ɛ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI',,pIqoſ ʎdoƆ ssǝɔɔnS,, = ʇxǝ┴',,qnHɹoʇɔǝΛ,, = ǝlʇᴉ┴}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(pIqoſ˙ǝɯɐƃ)pɹɐoqdᴉlɔʇǝs    
+()uoᴉʇɔunɟ',,pIqoſ ʎdoƆ,,)uoʇʇnq:ᄅƖǝƃɐd
+
+(puǝ
+ ({Ɛ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI',,ʇᴉɐM ǝsɐǝlԀ pIqoſ ssǝɔɔnS,, = ʇxǝ┴',,qnHɹoʇɔǝΛ,, = ǝlʇᴉ┴}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(Ԁ˥ 'xoqʇxǝ┴‾pIqoſ 'pIǝɔɐlԀ˙ǝɯɐƃ)ǝɔuɐʇsuIǝɔɐlԀo┴ʇɹodǝlǝ┴:SԀ┴    
+()uoᴉʇɔunɟ',,pIqoſ uᴉoſ,,)uoʇʇnq:ᄅƖǝƃɐd
+(puǝ
+x = xoqʇxǝ┴‾pIqoſ
+(x)uoᴉʇɔunɟ',,,,',,pIqoſ,,)xoqʇxǝ┴:ᄅƖǝƃɐd
+
+ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = Ԁ˥ lɐɔol
+(,,ǝɔᴉʌɹǝSʇɹodǝlǝ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = SԀ┴ lɐɔol
+
+(,,��,,)ɹoʇɐɹǝdǝS:ᄅƖǝƃɐd
+(puǝ
+(,,ʇɐH uɐɯspɹoʍS,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'0ϛƖ] ʇɐH uɐɯspɹoʍS,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ƃuᴉɹ ǝoɯo┴,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'00ϛ] ƃuᴉɹ oɯǝo┴,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ǝdɐƆ ʞɔɐlq,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'0ϛ] ǝdɐƆ ʞɔɐlq,,)uoʇʇnq:ƖƖǝƃɐd
+(,,<<ʎɹossǝɔɔ∀>>,,)ɹoʇɐɹǝdǝS:ƖƖǝƃɐd
+(puǝ
+(,,ᄅ,, ',,ʇoɥsƃuᴉlS,, ',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(,,Ɩ,, ',,ʇoɥsƃuᴉlS,, ',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[Ⅎ00ϛƖ] ɐɥɔnqɐʞ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,uouuɐƆ,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'00Ɩ] uouuɐƆ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ʞɔolʇuᴉlℲ pǝuᴉɟǝɹ,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'ϛ9] ʞɔolʇuᴉlℲ pǝuᴉɟǝɹ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ʞɔolʇuᴉlℲ,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[00ϛ'0Ɩ] ʞɔolʇuᴉlℲ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ʇǝʞsnW,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'8] ʇǝʞsnW,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ʇoɥsƃuᴉlS,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'ϛ] ʇoɥsƃuᴉlS,,)uoʇʇnq:ƖƖǝƃɐd
+(,,<<unפ>>,,)ɹoʇɐɹǝdǝS:ƖƖǝƃɐd
+(puǝ
+(,,ǝuɐƆ lnoS,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'0ϛㄥ] ǝuɐƆ lnoS,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,oʇuǝsᴉq,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'000'Ɩ] oʇuǝsᴉq,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ǝpɐlq pǝpɐǝH-lɐnp,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'00ㄣ] ǝpɐlq pǝpɐǝH-lɐnp,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ɐuɐʇɐʞ ǝldᴉɹ┴,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'09] ɐuɐʇɐʞ ǝldᴉɹ┴,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ǝdᴉԀ,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'00Ɩ] ǝdᴉԀ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ǝɔɐW uoɹI,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'ϛᄅ] ǝɔɐW uoɹI,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ɐuɐʇɐʞ lǝnp,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'ᄅƖ] ɐuɐʇɐʞ lǝnp,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ssɐlʇnƆ,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'Ɩ] ssɐlʇnƆ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ɐuɐʇɐʞ,, ',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'Ɩ] ɐuɐʇɐʞ,,)uoʇʇnq:ƖƖǝƃɐd
+(,,<<pɹoʍS>>,,)ɹoʇɐɹǝdǝS:ƖƖǝƃɐd
+(puǝ
+(,,ʇɹ∀ǝuᴉnƃuɐSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(ǝnɹʇ ',,ʇɹ∀ǝuᴉnƃuɐSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[Ⅎ000'ϛ/000'000'ϛ] ʇɹ∀ǝuᴉnƃuɐS,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,uɐɯnɥpoפʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(ǝnɹʇ ',,uɐɯnɥpoפʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[Ⅎ000'ϛ/000'000'ϛ] uɐɯnɥpoפ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(ǝnɹʇ ',,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[Ⅎ000'ϛ/000'000'Ɛ] uolɐ┴ uoƃɐɹp,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(ǝnɹʇ ',,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[Ⅎ000'ϛ/000'000'Ɛ] ʍɐlƆ ɔᴉɹʇɔǝlƎ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(ǝnɹʇ ',,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[Ⅎ000'ϛ/000'00ϛ'ᄅ] ǝʇɐɹɐʞ uɐɯʞɹɐɥS,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,dǝʇSɥʇɐǝpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[Ⅎ000'ϛ/000'00ϛ'ᄅ] dǝʇS ɥʇɐǝp,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,uɐɯnɥɹǝdnSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[000'000'Ɛ] uɐɯnɥɹǝdnS,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ᄅ,, ',,ʍɐlƆuoƃɐɹp,, ',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(,,Ɩ,, ',,ʍɐlƆuoƃɐɹp,, ',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[Ⅎ00ϛ'Ɩ] ʍɐlƆ uoƃɐɹp,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ǝʇɐɹɐʞuɐɯɥsᴉℲʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[$000'0ϛㄥ] ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,oɹʇɔǝlƎʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[$000'00ϛ] oɹʇɔǝlƎ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ƃǝ˥ʞɔɐlqʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[$000'0ϛƖ] ƃǝ˥ ʞɔɐlq,,)uoʇʇnq:ƖƖǝƃɐd
+(,,<<ǝlʎʇS ƃuᴉʇɥƃᴉℲ ʎnq oʇn∀>>,,)ɹoʇɐɹǝdǝS:ƖƖǝƃɐd
+(puǝ
+(,,ʎnq,, ',,ʞlɐ┴uǝʞ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[$000'0ϛㄥ] ᴉʞɐHuǝʞ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,nɹoS,, ',,ᴉʞɐHʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[$000'00Ɩ] nɹoS,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,oddǝפ,, ',,ᴉʞɐHʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[$000'0Ɩ] oddǝפ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,osnq,, ',,ᴉʞɐHʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[$00'ϛᄅ] ᴉʞɐH,,)uoʇʇnq:ƖƖǝƃɐd
+(,,<<sǝᴉʇᴉlᴉq∀>>,,)ɹoʇɐɹǝdǝS:ƖƖǝƃɐd
+(puǝ
+(,,ᄅ,, ',,lloɹǝɹ,, ',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(,,Ɩ,, ',,lloɹǝɹ,, ',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[Ⅎ000'Ɛ] ǝɔɐɹ lloɹǝɹ,,)uoʇʇnq:ƖƖǝƃɐd
+(puǝ
+(,,ᄅ,, ',,punɟǝɹ,, ',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(,,Ɩ,, ',,punɟǝɹ,, ',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,[Ⅎ00ϛ'ᄅ] ʇɐʇS punɟǝɹ,,)uoʇʇnq:ƖƖǝƃɐd
+(,,<<ʇuǝɯƃɐɹℲ>>,,)ɹoʇɐɹǝdǝS:ƖƖǝƃɐd
+puǝ
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+{
+,,ᄅ,, = [ᄅ]    
+',,ɹǝlɐǝpsɹoloƆ,, = [Ɩ]    
+} = sƃɹɐ lɐɔol
+uǝɥʇ ᴉʞɐHʇuǝɯuɐɥɔuƎʎnqoʇn∀˙פ‾ ɟᴉ
+(puǝ
+(puǝ    
+puǝ        
+(puǝ            
+puǝ                
+puǝ                    
+()doH                    
+()ʇɹodǝlǝ┴                    
+(0Ɩ)ʇᴉɐʍ                    
+()ʇᴉɐʍ˙ʞsɐʇ op doHᴉʞɐHʇuǝɯuɐɥɔuƎʎnqoʇn∀˙פ‾ ǝlᴉɥʍ                    
+({ϛ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI',,˙˙˙ɹǝʌɹǝSdoH,, = ʇxǝ┴',,qnHɹoʇɔǝΛ,, = ǝlʇᴉ┴}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+{                    
+,,ᄅ,, = [ᄅ]                        
+',,ɹǝlɐǝpsɹoloƆ,, = [Ɩ]                        
+} = sƃɹɐ lɐɔol                    
+uǝɥʇ doHᴉʞɐHʇuǝɯuɐɥɔuƎʎnqoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ    
+()sƃuᴉʇʇǝSǝʌɐS    
+ǝnlɐʌ = doHᴉʞɐHʇuǝɯuɐɥɔuƎʎnqoʇn∀˙sƃuᴉʇʇǝS˙פ‾    
+ǝnlɐʌ = doHᴉʞɐHʇuǝɯuɐɥɔuƎʎnqoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'doHᴉʞɐHʇuǝɯuɐɥɔuƎʎnqoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ',,doH ᴉʞɐH ɹoloƆ ʎnq oʇn∀,,)ǝlƃƃo┴:ƖƖǝƃɐd
+(puǝ
+(puǝ    
+puǝ        
+(puǝ            
+puǝ                
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+{                    
+,,ᄅ,, = [ᄅ]                        
+',,ɹǝlɐǝpsɹoloƆ,, = [Ɩ]                        
+} = sƃɹɐ lɐɔol                    
+uǝɥʇ ᴉʞɐHʇuǝɯuɐɥɔuƎʎnqoʇn∀˙פ‾ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ    
+ǝnlɐʌ = ᴉʞɐHʇuǝɯuɐɥɔuƎʎnqoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ᴉʞɐHʇuǝɯuɐɥɔuƎʎnqoʇn∀˙פ‾ ',,ᴉʞɐH ɹoloƆ ʎnq oʇn∀,,)ǝlƃƃo┴:ƖƖǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+()doH                    
+()ʇɹodǝlǝ┴                    
+(0Ɩ)ʇᴉɐʍ                    
+()ʇᴉɐʍ˙ʞsɐʇ op doHpɹoʍSʎɹɐpuǝƃǝ˥ʎnqoʇn∀˙פ‾ ǝlᴉɥʍ                    
+({ϛ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI',,˙˙˙ɹǝʌɹǝSdoH,, = ʇxǝ┴',,qnHɹoʇɔǝΛ,, = ǝlʇᴉ┴}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+(,,Ɛ,, ',,ɹǝlɐǝppɹoʍSʎɹɐpuǝƃǝ˥,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+(,,ᄅ,, ',,ɹǝlɐǝppɹoʍSʎɹɐpuǝƃǝ˥,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+(,,Ɩ,, ',,ɹǝlɐǝppɹoʍSʎɹɐpuǝƃǝ˥,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+uǝɥʇ doHpɹoʍSʎɹɐpuǝƃǝ˥ʎnqoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+()sƃuᴉʇʇǝSǝʌɐS    
+ǝnlɐʌ = doHpɹoʍSʎɹɐpuǝƃǝ˥ʎnqoʇn∀˙sƃuᴉʇʇǝS˙פ‾
+ǝnlɐʌ = doHpɹoʍSʎɹɐpuǝƃǝ˥ʎnqoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'doHpɹoʍSʎɹɐpuǝƃǝ˥ʎnqoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ',,doH pɹoʍS oɹoZ ʎnq oʇn∀,,)ǝlƃƃo┴:ƖƖǝƃɐd
+ (puǝ
+(puǝ    
+puǝ        
+(puǝ            
+puǝ                
+(,,Ɛ,, ',,ɹǝlɐǝppɹoʍSʎɹɐpuǝƃǝ˥,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+(,,ᄅ,, ',,ɹǝlɐǝppɹoʍSʎɹɐpuǝƃǝ˥,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+(,,Ɩ,, ',,ɹǝlɐǝppɹoʍSʎɹɐpuǝƃǝ˥,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+uǝɥʇ pɹoʍSʎɹɐpuǝƃǝ˥ʎnqoʇn∀˙פ‾ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ    
+ǝnlɐʌ = pɹoʍSʎɹɐpuǝƃǝ˥ʎnqoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'pɹoʍSʎɹɐpuǝƃǝ˥ʎnqoʇn∀˙פ‾ ',,pɹoʍS oɹoZ ʎnq oʇn∀,,)ǝlƃƃo┴:Ɩǝƃɐd
+(,,ʎnq oʇn∀,,)lǝqɐ˥:ƖƖǝƃɐd
+(,,��,,)ɹoʇɐɹǝdǝS:ƖƖǝƃɐd
+
+(puǝ
+(puǝ    
+puǝ        
+(puǝ            
+puǝ                
+ǝɯɐɹℲƆ˙ʇɹɐԀ˙ǝʇɐldɯǝ┴ɹǝqɯƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                
+uǝɥʇ ǝʇɐldɯǝ┴ɹǝqɯƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd            
+()ʇᴉɐʍ op zƎ˙פ‾ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds    
+ǝnlɐʌ = zƎ˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'zƎ˙פ‾ ',,ɹǝqɯƎ ǝɹnz∀ ʇɔǝlloƆ,,)ǝlƃƃo┴:ϛƖǝƃɐd
+
+(puǝ
+(puǝ    
+puǝ        
+puǝ            
+((0Ɩ'0'0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀǝuᴉɹɥSuoǝN˙ǝʌᴉʇɔ∀ǝuᴉɹɥS˙puɐlsIǝunsʇᴉʞ˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                
+uǝɥʇ ǝuᴉɹɥsǝunsᴉʞoʇd┴˙פ‾ ɟᴉ            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds    
+ǝnlɐʌ = ǝuᴉɹɥsǝunsᴉʞoʇd┴˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝuᴉɹɥsǝunsᴉʞoʇd┴˙פ‾ ',,ǝuᴉɹɥS ǝunsʇᴉʞ o┴ ʇɹodǝlǝ┴,,)ǝlƃƃo┴:ϛƖǝƃɐd
+
+
+(puǝ
+(puǝ    
+puǝ        
+puǝ            
+((0'00Ɩ'0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀǝuᴉɹɥSuoǝN˙ǝʌᴉʇɔ∀ǝuᴉɹɥS˙puɐlsIǝunsʇᴉʞ˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                
+uǝɥʇ puɐlsIǝunsᴉʞoʇd┴˙פ‾ ɟᴉ            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds    
+ǝnlɐʌ = puɐlsIǝunsᴉʞoʇd┴˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'puɐlsIǝunsᴉʞoʇd┴˙פ‾ ',,puɐlsI ǝunsʇᴉʞ o┴ ʇɹodǝlǝ┴,,)ǝlƃƃo┴:ϛƖǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+(,,snʇɐʇS uooW : �� ϛ/0,,)ʇǝS:WℲ                
+ǝslǝ            
+(,,snʇɐʇS uooW : �� ϛ/Ɩ,,)ʇǝS:WℲ                
+uǝɥʇ ,,0896ㄣƖ60ㄥ6=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,,==pIǝɹnʇxǝ┴uooW˙ʎʞS˙(,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ            
+(,,snʇɐʇS uooW : �� ϛ/ᄅ,,)ʇǝS:WℲ                
+uǝɥʇ ,,Ɩ0ㄣ0ϛƖ60ㄥ6=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,,==pIǝɹnʇxǝ┴uooW˙ʎʞS˙(,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ            
+(,,snʇɐʇS uooW : �� ϛ/Ɛ,,)ʇǝS:WℲ                
+uǝɥʇ ,,ƐƐㄥƐㄣƖ60ㄥ6=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,,==pIǝɹnʇxǝ┴uooW˙ʎʞS˙(,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ            
+(,,snʇɐʇS uooW : �� ϛ/ㄣ,,)ʇǝS:WℲ                
+uǝɥʇ ,,ᄅϛ06ㄣƖ60ㄥ6=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,,==pIǝɹnʇxǝ┴uooW˙ʎʞS˙(,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ            
+(,,snʇɐʇS uooW :�� ϛ/ϛ,,)ʇǝS:WℲ                
+uǝɥʇ ,,ƖƐㄣ6ㄣƖ60ㄥ6=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,,==pIǝɹnʇxǝ┴uooW˙ʎʞS˙(,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(,˙˙˙,)lǝqɐ˥:ϛƖǝƃɐd = WℲ lɐɔol
+(puǝ
+(puǝ    
+puǝ        
+puǝ            
+(,pǝuʍɐdS ʇoN : ��,)ʇǝS:ʞɔǝɥɔǝunsʇᴉʞ                
+ǝslǝ            
+(,pǝuʍɐdS : ��,)ʇǝS:ʞɔǝɥɔǝunsʇᴉʞ                
+uǝɥʇ (,puɐlsI ǝunsʇᴉʞ,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙uᴉƃᴉɹOplɹoM‾˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)llɐɔd    
+()uoᴉʇɔunɟ)uʍɐds
+(,˙˙˙,)lǝqɐ˥:ϛƖǝƃɐd = ʞɔǝɥɔǝunsʇᴉʞ lɐɔol
+(,,��,,)ɹoʇɐɹǝdǝS:ϛƖǝƃɐd
+ 
+(puǝ
+()ʇɥƃᴉɹqllnℲ    
+()uoᴉʇɔunɟ ',,ʇɥƃᴉɹqllnℲ,,)uoʇʇnq:ㄣƖǝƃɐd        
+(puǝ        
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+ǝnɹʇ = ǝpᴉlloƆuɐƆ˙ʌ                                
+uǝɥʇ ǝslɐɟ == ǝpᴉlloƆuɐƆ˙ʌ puɐ (,,ʇɹɐԀǝsɐq,,)∀sI:ʌ ɟᴉ                            
+op (()sʇuɐpuǝɔsǝpʇǝפ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ '‾ ɹoɟ                        
+puǝ                        
+puǝ                            
+ǝnɹʇ = ǝpᴉlloƆuɐƆ˙ʌ                                
+uǝɥʇ ǝslɐɟ == ǝpᴉlloƆuɐƆ˙ʌ puɐ (,,ʇɹɐԀǝsɐq,,)∀sI:ʌ ɟᴉ                            
+op (()sʇuɐpuǝɔsǝpʇǝפ:sʇɐoq˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ '‾ ɹoɟ                        
+uǝɥʇ ǝslɐɟ == ʇᴉS˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉǝslǝ                    
+puǝ                        
+puǝ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʌ                                
+uǝɥʇ ǝnɹʇ == ǝpᴉlloƆuɐƆ˙ʌ puɐ (,,ʇɹɐԀǝsɐq,,)∀sI:ʌ ɟᴉ                            
+op (()sʇuɐpuǝɔsǝpʇǝפ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ '‾ ɹoɟ                        
+puǝ                        
+puǝ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʌ                                
+uǝɥʇ ǝnɹʇ == ǝpᴉlloƆuɐƆ˙ʌ puɐ (,,ʇɹɐԀǝsɐq,,)∀sI:ʌ ɟᴉ                            
+op (()sʇuɐpuǝɔsǝpʇǝפ:sʇɐoq˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ '‾ ɹoɟ                        
+uǝɥʇ ǝnɹʇ == ʇᴉS˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+uǝɥʇ ʞɔoɹdᴉlɔoN˙פ‾ ɟᴉ                
+op ()ʇᴉɐʍ ǝlᴉɥʍ            
+()uoᴉʇɔunɟ)uʍɐds    
+ǝnlɐʌ = ʞɔoɹdᴉlɔoN˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʞɔoɹdᴉlɔoN˙פ‾',,ʞɔoɹ dᴉlɔoN,,)ǝlƃƃo┴:ㄣƖǝƃɐd
+(puǝ
+puǝ    
+(ǝɯɐƃ'ǝslɐɟ'M˙ǝpoƆʎǝʞ˙ɯnuƎ'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(0)ʇᴉɐʍ˙ʞsɐʇ op lᴉɐSoʇn∀˙פ‾ ǝlᴉɥʍ    
+ǝnlɐʌ = lᴉɐSoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'lᴉɐSoʇn∀˙פ‾',,lᴉɐSoʇn∀,,)ǝlƃƃo┴:ㄣƖǝƃɐd
+(puǝ
+puǝ    
+puǝ        
+00Ɩ = pǝǝdSxɐW˙ʌ            
+op (sʇɐǝSǝlɔᴉɥǝʌ)sɹᴉɐd uᴉ ʌ '‾ ɹoɟ        
+ǝslǝ    
+puǝ        
+0ϛƐ = pǝǝdSxɐW˙ʌ            
+op (sʇɐǝSǝlɔᴉɥǝʌ)sɹᴉɐd uᴉ ʌ '‾ ɹoɟ        
+uǝɥʇ pǝǝdsʇɐoqǝsɐǝɹɔuᴉ˙פ‾ ɟᴉ    
+puǝ    
+puǝ        
+(ʌ 'sʇɐǝSǝlɔᴉɥǝʌ)ʇɹǝsuᴉ˙ǝlqɐʇ            
+uǝɥʇ (,,ʇɐǝSǝlɔᴉɥǝΛ,,)∀sI:ʌ ɟᴉ        
+op (()sʇuɐpuǝɔsǝpʇǝפ:sʇɐoq˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ    
+{} = sʇɐǝSǝlɔᴉɥǝʌ lɐɔol    
+ǝnlɐʌ = pǝǝdsʇɐoqǝsɐǝɹɔuᴉ˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'pǝǝdsʇɐoqǝsɐǝɹɔuᴉ˙פ‾',,pǝǝdsʇɐoqǝsɐǝɹɔuI,,)ǝlƃƃo┴:ㄣƖǝƃɐd
+(puǝ
+puǝ    
+()ℲʇɐoqdoʇS        
+()ʇᴉɐʍ op ʇɐoqdʇs˙פ‾ ǝlᴉɥʍ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ 'doʇsʇɐoq)lǝpoWuǝǝʍʇ    
+[ʇɐoqʇɔǝlǝS]sʇɐoq˙ǝɔɐdsʞɹoM˙ǝɯɐƃ = doʇsʇɐoq lɐɔol    
+ǝnlɐʌ = ʇɐoqdʇs˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʇɐoqdʇs˙פ‾ ',,ʇɐoq doʇS,,)ǝlƃƃo┴:ㄣƖǝƃɐd
+(puǝ
+puǝ    
+ɐǝSʇɹodǝlǝ┴˙פ‾ ʇou lᴉʇun        
+puǝ            
+((ㄥㄣㄣ9Ɩ6ϛㄣ˙0- '80-ǝϛ09ƐƐƐ60˙ㄥ- 'ᄅ9ᄅƖϛƐ888˙0- '80-ǝƖϛ9ϛ6ƐƐ6˙8- 'Ɩ '80-ǝƐᄅㄣƖƖㄥ9Ɛ˙Ɛ- 'ᄅ9ᄅƖϛƐ888˙0 '80-ǝ9ƐᄅƐㄣ06Ɛ˙9 'ㄥㄣㄣ9Ɩ6ϛㄣ˙0- 'ϛƖㄥㄥ0˙ㄥㄣᄅ6 'ㄣㄣㄥƖᄅᄅƐ˙0- 'ㄥᄅᄅᄅ˙0ϛᄅᄅㄣ-)ʍǝu˙ǝɯɐɹℲƆ 'ʇɐoq)lǝpoWuǝǝʍʇ                
+uǝɥʇ ,,[¿¿¿]9ɐǝS,, == ɐǝSʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉǝslǝ        
+((966ᄅ9Ɛᄅϛᄅ˙0- '80-ǝϛㄥƖㄣㄣƖ98˙ᄅ 'Ɩϛ9ᄅƐ9ㄥ96˙0- '60-ǝ6ㄣᄅ888Ɩᄅ˙Ɛ 'Ɩ '80-ǝ60ㄥ0ᄅƐㄥ8˙ᄅ 'Ɩϛ9ᄅƐ9ㄥ96˙0 '60-ǝƖ8ϛƖᄅ9ƐƖ˙ㄣ '966ᄅ9Ɛᄅϛᄅ˙0- 'ϛ689Ɩ˙ϛ0Ɩ9 'ㄣㄣㄥƖᄅᄅƐ˙0- 'Ɛϛ69˙ƐƖ8ㄥƐ-)ʍǝu˙ǝɯɐɹℲƆ 'ʇɐoq)lǝpoWuǝǝʍʇ                
+uǝɥʇ ,,[ʎzɐɹƆ]ϛɐǝS,, == ɐǝSʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉǝslǝ        
+((Ɩᄅᄅ9ㄥᄅƐ8Ɩ˙0- '80-ǝㄣ0ϛ8Ɛ9ϛƐ˙Ɛ 'ƐƐㄣƖ90Ɛ86˙0- '80-ǝ8ƖㄣㄣᄅㄣϛƐ˙Ɩ- 'Ɩ '80-ǝƐƐㄣ69999˙Ɛ 'ƐƐㄣƖ90Ɛ86˙0 '80-ǝᄅƐᄅƐƐ00˙ᄅ 'Ɩᄅᄅ9ㄥᄅƐ8Ɩ˙0- 'ㄥ69ㄣƖ˙88ㄥㄣ 'ㄣㄣㄥƖᄅᄅƐ˙0- '88Ɩㄥ˙ㄣϛ9ᄅƐ-)ʍǝu˙ǝɯɐɹℲƆ 'ʇɐoq)lǝpoWuǝǝʍʇ                
+uǝɥʇ ,,[ǝɯǝɹʇxƎ]ㄣɐǝS,, == ɐǝSʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉǝslǝ        
+((ㄥ8ϛ6090ㄥᄅ˙0- '80-ǝㄥϛ9ᄅ66ϛ9˙ϛ- 'Ɩ9Ɩ689ᄅ96˙0- '80-ǝㄥƖ9Ɛ9900˙ϛ- 'Ɩ '80-ǝ6ᄅㄣƐ6Ɩㄥㄣ˙ㄣ- 'Ɩ9Ɩ689ᄅ96˙0 '80-ǝ90989609˙Ɛ 'ㄥ8ϛ6090ㄥᄅ˙0- 'ㄥ9ㄥϛ8˙0ㄥ0ㄣ 'ㄣㄣㄥƖᄅᄅƐ˙0- 'ㄥᄅᄅᄅ˙ᄅㄣ86ᄅ-)ʍǝu˙ǝɯɐɹℲƆ 'ʇɐoq)lǝpoWuǝǝʍʇ                
+uǝɥʇ ,,[ɥƃᴉH]ƐɐǝS,, == ɐǝSʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉǝslǝ        
+((6ᄅƐ9ㄥ8ㄣƐƐ˙0- '80-ǝ80Ɛ988ᄅϛ˙Ɩ- 'ƐƖƖᄅ9ᄅᄅㄣ6˙0- '80-ǝ6Ɩ99ƐƖϛᄅ˙ㄣ 'Ɩ '80-ǝ69ㄣ9ㄣƐƐƖ˙Ɛ- 'ƐƖƖᄅ9ᄅᄅㄣ6˙0 '80-ǝƖϛㄣᄅᄅϛϛ0˙ϛ- '6ᄅƐ9ㄥ8ㄣƐƐ˙0- '9Ɩ0Ɩㄣ˙ㄣϛϛᄅ 'ㄣㄣㄥƖᄅᄅƐ˙0- 'ϛƐϛƐ˙ϛㄣ9ϛᄅ-)ʍǝu˙ǝɯɐɹℲƆ 'ʇɐoq)lǝpoWuǝǝʍʇ                
+uǝɥʇ ,,[ɯnᴉpǝW]ᄅɐǝS,, == ɐǝSʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉǝslǝ        
+((Ɛ0ᄅㄥ0ㄥ0Ɩᄅ˙0- '80-ǝ86ϛ8Ɩᄅ60˙ᄅ- 'ϛ6Ɩ6ㄣϛㄥㄥ6˙0- 'ㄥ0-ǝ869ㄣƐ0ᄅƖ˙Ɩ- 'Ɩ '60-ǝƖϛㄣƖƐ9ㄣㄥ˙ᄅ 'ϛ6Ɩ6ㄣϛㄥㄥ6˙0 'ㄥ0-ǝƖ8600Ɩ˙Ɩ 'Ɛ0ᄅㄥ0ㄥ0Ɩᄅ˙0- 'ϛ8Ɩ68˙9ƖㄥƖ 'ㄣㄣㄥƖᄅᄅƐ˙0- '8600˙9ᄅϛᄅᄅ-)ʍǝu˙ǝɯɐɹℲƆ 'ʇɐoq)lǝpoWuǝǝʍʇ                
+uǝɥʇ ,,[ʍo˥]ƖɐǝS,, == ɐǝSʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ            
+()ʇᴉɐʍ ʇɐǝdǝɹ        
+uǝɥʇ ɐǝSʇɹodǝlǝ┴˙פ‾ ɟᴉ    
+[ʇɐoqʇɔǝlǝS]sʇɐoq˙ǝɔɐdsʞɹoM˙ǝɯɐƃ = ʇɐoq lɐɔol    
+ǝnlɐʌ = ɐǝSʇɹodǝlǝ┴˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɐǝSʇɹodǝlǝ┴˙פ‾ ',,ɐǝS pǝʇɔǝlǝS ǝɥ┴ oʇ ʇɹodǝlǝ┴,,)ǝlƃƃo┴:ㄣƖǝƃɐd
+
+(puǝ
+ǝnlɐʌ = ɐǝSʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ ' ǝlqɐʇɐǝS   ',,lǝʌǝ˥ ɐǝS ʇɔǝlǝS,,)uʍopdoɹp:ㄣƖǝƃɐd
+{,,[¿¿¿]9ɐǝS,,',,[ʎzɐɹƆ]ϛɐǝS,,',,[ǝɯǝɹʇxƎ]ㄣɐǝS,,',,[ɥƃᴉH]ƐɐǝS,,',,[ɯnᴉpǝW]ᄅɐǝS,,',,[ʍo˥]ƖɐǝS,,} = ǝlqɐʇɐǝS
+  
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+ʇɐoqq˙פ‾ ʇou ɹo ϛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʌ) lᴉʇun                
+(ǝɯɐɹℲƆ)ʇɐoqoʍʇ                    
+ǝɯɐɹℲƆ˙ʌ = ǝɯɐɹℲƆ lɐɔol                    
+()ʇᴉɐʍ˙ʞsɐʇ                    
+ʇɐǝdǝɹ                
+uǝɥʇ 000Ɩ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʌ) ɟᴉ            
+ uǝɥʇ ǝɯɐN˙ǝnlɐΛ˙ɹǝuʍO˙[ʇɐoqʇɔǝlǝS]sʇɐoq˙ǝɔɐdsʞɹoM˙ǝɯɐƃ == ǝɯɐN˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ  puɐ (,,ʇɐǝSǝlɔᴉɥǝΛ,,)∀sI:ʌ ɟᴉ        
+op (()uǝɹplᴉɥƆʇǝפ:[ʇɐoqʇɔǝlǝS]sʇɐoq˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+puǝ    
+puǝ        
+ʇɐoqq˙פ‾ ʇou ɹo ǝnɹʇ == ()ʎnqʎɟᴉʇoNʞɔǝɥƆ lᴉʇun            
+puǝ            
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:(,,‾ℲɯɯoƆ,,)plᴉɥƆɹoℲʇᴉɐM:(,,sǝʇoɯǝɹ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+{                
+ʇɐoqʇɔǝlǝS = [ᄅ]                    
+',,ʇɐoqʎnq,, = [Ɩ]                    
+} = sƃɹɐ lɐɔol                
+ uǝɥʇ ʇɐoqʇɔǝlǝS ɟᴉ            
+()ʇᴉɐʍ ʇɐǝdǝɹ            
+uǝɥʇ ǝslɐɟ == ()ʎnqʎɟᴉʇoNʞɔǝɥƆ puɐ ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - (ㄥ996Ɩᄅㄥㄣᄅ˙0 '80-ǝㄣㄣ608ᄅϛϛ˙Ɩ- 'Ɩϛㄣ6ϛ6896˙0- '80-ǝㄣƖƐƖϛϛ9ϛ˙ᄅ- 'Ɩ '80-ǝ869ƖƖㄥϛᄅ˙ᄅ- 'Ɩϛㄣ6ϛ6896˙0 '80-ǝϛ6Ɩ88Ɛㄣ0˙Ɛ 'ㄥ996Ɩᄅㄥㄣᄅ˙0 'ㄣƐ9ㄥƐ9˙ㄣㄣㄣ '68Ɩ9Ɛ980˙6 '99ㄥ6˙ƖƐ69Ɩ-)ʍǝu˙ƐɹoʇɔǝΛ) ɟᴉ        
+((ㄥ996Ɩᄅㄥㄣᄅ˙0 '80-ǝㄣㄣ608ᄅϛϛ˙Ɩ- 'Ɩϛㄣ6ϛ6896˙0- '80-ǝㄣƖƐƖϛϛ9ϛ˙ᄅ- 'Ɩ '80-ǝ869ƖƖㄥϛᄅ˙ᄅ- 'Ɩϛㄣ6ϛ6896˙0 '80-ǝϛ6Ɩ88Ɛㄣ0˙Ɛ 'ㄥ996Ɩᄅㄥㄣᄅ˙0 'ㄣƐ9ㄥƐ9˙ㄣㄣㄣ '68Ɩ9Ɛ980˙6 '99ㄥ6˙ƖƐ69Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()ʇᴉɐʍ op ʇɐoqq˙פ‾ ǝlᴉɥʍ
+ǝnlɐʌ = ʇɐoqq˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʇɐoqq˙פ‾ ',,ʇɐoq ʎnq oʇn∀,,)ǝlƃƃo┴:ㄣƖǝƃɐd
+puǝ
+ǝslɐɟ uɹnʇǝɹ    
+puǝ    
+puǝ        
+puǝ            
+ǝnɹʇ uɹnʇǝɹ                
+uǝɥʇ (,,ʇɥƃnoq,,)puᴉɟ:(ʇxǝ┴˙ʌ)ɹǝʍol˙ƃuᴉɹʇs ɟᴉ            
+uǝɥʇ ,,ǝʇɐldɯǝ┴uoᴉʇɐɔᴉɟᴉʇoN,, == ǝɯɐN˙ʌ ɟᴉ        
+op (()uǝɹplᴉɥƆʇǝפ:(,,suoᴉʇɐɔᴉɟᴉʇoN,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפɹǝʎɐlԀ˙[,,ɹǝʎɐlԀlɐɔo˥,,](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ    
+()ʎnqʎɟᴉʇoNʞɔǝɥƆ uoᴉʇɔunɟ
+  (puǝ
+ǝnlɐʌ = ʇɐoqll∀    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʇɐoqll∀',,ʇɐoq ʇɔǝlǝS,,)uʍopdoɹp:ㄣƖǝƃɐd
+lᴉu = ʇɐoqʇɔǝlǝS lɐɔol
+{,,ǝpɐƃᴉɹqpuɐɹפǝuᴉɹɐW,,',,ǝpɐƃᴉɹqǝuᴉɹɐW,,',,doolSǝuᴉɹɐW,,',,ǝpɐƃᴉɹqpuɐɹפǝʇɐɹᴉԀ,,',,ǝpɐƃᴉɹqǝʇɐɹᴉԀ,,',,doolSǝʇɐɹᴉԀ,,',,ʎɥƃuᴉp,,} = ʇɐoqll∀
+
+(puǝ        
+puǝ            
+puǝ                
+ʞuɐlԀpooM˙פ‾ ʇou lᴉʇun                    
+(ᄅ˙0)ʇᴉɐʍ                        
+(ǝɯɐƃ'ǝslɐɟ',,Ⅎ,,'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ǝɯɐƃ'ǝslɐɟ',,Ⅎ,,'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ᄅ˙0)ʇᴉɐʍ                        
+(ǝɯɐƃ'ǝslɐɟ',,Ɔ,,'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ǝɯɐƃ'ǝslɐɟ',,Ɔ,,'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ᄅ˙0)ʇᴉɐʍ                        
+(ǝɯɐƃ'ǝslɐɟ',,X,,'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ǝɯɐƃ'ǝslɐɟ',,X,,'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ᄅ˙0)ʇᴉɐʍ                        
+(ǝɯɐƃ'ǝslɐɟ',,Z,,'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ǝɯɐƃ'ǝslɐɟ',,Z,,'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+puǝ                        
+puǝ                            
+puǝ                                
+(ǝɯɐN˙ʌ)uodɐǝMdᴉnbƎ                                    
+uǝɥʇ ((ǝɯɐN˙ʌ)ƃuᴉɹʇsoʇ)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                                
+uǝɥʇ ,,ʇᴉnɹℲ xolq,, == dᴉ┴loo┴˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ' ᴉ ɹoɟ                        
+(ǝɯɐƃ'ǝslɐɟ',,X,,'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ǝɯɐƃ'ǝslɐɟ',,X,,'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ᄅ˙0)ʇᴉɐʍ                        
+(ǝɯɐƃ'ǝslɐɟ',,Z,,'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ǝɯɐƃ'ǝslɐɟ',,Z,,'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+puǝ                        
+puǝ                            
+puǝ                                
+(ǝɯɐN˙ʌ)uodɐǝMdᴉnbƎ                                    
+uǝɥʇ ((ǝɯɐN˙ʌ)ƃuᴉɹʇsoʇ)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                                
+uǝɥʇ ,,pɹoʍS,, == dᴉ┴loo┴˙ʌ ɟᴉ                            
+(ǝɯɐƃ'ǝslɐɟ',,Ɔ,,'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ǝɯɐƃ'ǝslɐɟ',,Ɔ,,'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ᄅ˙0)ʇᴉɐʍ                        
+(ǝɯɐƃ'ǝslɐɟ',,X,,'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ǝɯɐƃ'ǝslɐɟ',,X,,'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ᄅ˙0)ʇᴉɐʍ                        
+(ǝɯɐƃ'ǝslɐɟ',,Z,,'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ǝɯɐƃ'ǝslɐɟ',,Z,,'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+puǝ                        
+puǝ                            
+(ǝɯɐN˙ʌ)uodɐǝMdᴉnbƎ                                
+uǝɥʇ ((ǝɯɐN˙ʌ)ƃuᴉɹʇsoʇ)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                            
+uǝɥʇ ,,ǝǝlǝW,, == dᴉ┴loo┴˙ʌ ɟᴉ                        
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ' ᴉ ɹoɟ                    
+()ʇᴉɐʍ ʇɐǝdǝɹ                
+uǝɥʇ ʞuɐlԀpooM˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+(puǝ    
+puǝ        
+puǝ            
+(Ɩ)ʇᴉɐʍ            
+((0Ɩ'0'0)ʍǝu˙ǝɯɐɹℲƆ * (ƐᄅㄥƐ0969Ɛ˙0 '80-ǝϛƖƖƖㄣƐƐㄣ˙ㄣ 'Ɛ0ϛ68Ɩ6ᄅ6˙0- '80-ǝㄣƖ986ᄅƖϛ˙ㄥ 'Ɩ '80-ǝ6Ɩㄥ0ㄥ6ϛㄥ˙ㄥ 'Ɛ0ϛ68Ɩ6ᄅ6˙0 '80-ǝƖㄣ006ㄣ8˙6- 'ƐᄅㄥƐ0969Ɛ˙0 'ᄅƐ8ㄥᄅ0˙6ƖƐ '8ㄣ6ㄥㄥ˙ㄥᄅϛ 'ㄥ6ᄅ6˙ϛᄅㄣ9Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ            
+(Ɩ)ʇᴉɐʍ            
+((0Ɩ'0'0)ʍǝu˙ǝɯɐɹℲƆ * (Ɛㄥ886Ɩㄣ9ᄅ0˙0- '60-ǝㄣϛƐƖƖ0ㄣ6˙8 'ϛϛ60ϛ9666˙0- '80-ǝƖㄣƖƐ90ㄥᄅ˙Ɛ- 'Ɩ '60-ǝㄥㄣƐ9ㄥ08˙6 'ϛϛ60ϛ9666˙0 '80-ǝㄣ9Ɩ0ㄣϛ6ᄅ˙Ɛ 'Ɛㄥ886Ɩㄣ9ᄅ0˙0- '66ƖϛƐ˙6ƐƐ '8ㄣ6ㄥㄥ˙ㄥᄅϛ 'ㄣㄣ86˙0699Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ            
+(Ɩ)ʇᴉɐʍ            
+((0Ɩ'0'0)ʍǝu˙ǝɯɐɹℲƆ * (66ϛㄥƖㄣƐ0ᄅ˙0 '60-ǝƖϛㄥ696ㄥϛ˙ㄣ 'ᄅ90ᄅ606ㄥ6˙0- '80-ǝ6Ɩ9906ᄅƐ˙Ɩ- 'Ɩ '60-ǝㄥ690ᄅ9Ɩ6˙Ɩ 'ᄅ90ᄅ606ㄥ6˙0 '80-ǝϛƖ66ᄅᄅ9ᄅ˙Ɩ '66ϛㄥƖㄣƐ0ᄅ˙0 'ㄥ8ㄥᄅƖϛ˙ᄅ8ㄣ '8ㄣ6ㄥㄥ˙ㄥᄅϛ 'ᄅƖƐ0˙ㄥ6ϛ9Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ            
+(Ɩ)ʇᴉɐʍ            
+((0Ɩ'0'0)ʍǝu˙ǝɯɐɹℲƆ * (ㄣㄣᄅ6ϛƖㄣƖƐ˙0 '80-ǝᄅᄅƖㄣㄣㄣƐ8˙Ɩ- 'ϛᄅƐ0ㄥƐ6ㄣ6˙0- '80-ǝㄥϛㄥ8ϛϛㄣ9˙ᄅ 'Ɩ '80-ǝƐϛƖƖ89ϛ0˙Ɩ- 'ϛᄅƐ0ㄥƐ6ㄣ6˙0 '80-ǝᄅƐϛƐ96ㄥƖ˙ᄅ- 'ㄣㄣᄅ6ϛƖㄣƖƐ˙0 'ᄅ0Ɛϛ9ㄣ˙9ㄥㄣ '8ㄣ6ㄥㄥ˙ㄥᄅϛ 'ϛᄅƖƐ˙ㄣ8ㄣ9Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ            
+uǝɥʇ ʞuɐlԀpooM˙פ‾ ɟᴉ            
+op ()ʇᴉɐʍ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds    
+ǝnlɐʌ = ʞuɐlԀpooM˙פ‾        
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʞuɐlԀpooM˙פ‾ ',,|ɐʇǝq}ʞuɐlԀpooM-ɯɹɐℲ,,)ǝlƃƃo┴:ㄣƖǝƃɐd
+(puǝ    
+(puǝ        
+puǝ            
+puǝ                
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:(,,ssɐlɔqnSdᴉnbƎ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ʞɹoʍʇǝNssɐlɔqnS,,)plᴉɥƆɹoℲʇᴉɐM:(,,sǝʇoɯǝɹ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+    
+{                
+,,ʇɥƃᴉɹʍdᴉɥS,, = [Ɩ]                    
+} = sƃɹɐ lɐɔol                
+    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:(,,ssɐlɔqnSǝsɐɥɔɹnԀ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ʞɹoʍʇǝNssɐlɔqnS,,)plᴉɥƆɹoℲʇᴉɐM:(,,sǝʇoɯǝɹ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+    
+{                
+,,ʇɥƃᴉɹʍdᴉɥS,, = [Ɩ]                    
+} = sƃɹɐ lɐɔol                
+    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:(,,ʇsǝnQssɐlɔqnSʇɔɐɹǝʇuI/Ⅎɹ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ʇǝN,,)plᴉɥƆɹoℲʇᴉɐM:(,,sǝlnpoW,,)plᴉɥƆɹoℲʇᴉɐM:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+    
+{                
+,,ʇɥƃᴉɹʍdᴉɥS,, = [Ɩ]                    
+} = sƃɹɐ lɐɔol                
+ᄅʇɐoqɹᴉɐdǝɹQ˙פ‾ ʇou ɹo Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - (ㄣ99Ɛㄥㄥᄅ6ᄅ˙0- '80-ǝϛᄅ9ƖƖϛƖ0˙ᄅ 'ϛ9ㄥƖ8Ɩ9ϛ6˙0 '80-ǝ8ϛᄅƖㄣƖ69˙9- 'Ɩ '80-ǝϛ9ㄥ0Ɛ9ϛƖ˙ㄣ- 'ϛ9ㄥƖ8Ɩ9ϛ6˙0- '80-ǝϛ8ㄣ90ϛƖ9˙ㄥ- 'ㄣ99Ɛㄥㄥᄅ6ᄅ˙0- 'ᄅ88Ɛ09˙0ƖƐ '9ㄥㄣㄥ688˙ϛㄥ 'ᄅᄅ6ㄣ˙6ᄅϛ9Ɩ-)ʍǝu˙ƐɹoʇɔǝΛ) lᴉʇun ((ㄣ99Ɛㄥㄥᄅ6ᄅ˙0- '80-ǝϛᄅ9ƖƖϛƖ0˙ᄅ 'ϛ9ㄥƖ8Ɩ9ϛ6˙0 '80-ǝ8ϛᄅƖㄣƖ69˙9- 'Ɩ '80-ǝϛ9ㄥ0Ɛ9ϛƖ˙ㄣ- 'ϛ9ㄥƖ8Ɩ9ϛ6˙0- '80-ǝϛ8ㄣ90ϛƖ9˙ㄥ- 'ㄣ99Ɛㄥㄥᄅ6ᄅ˙0- 'ᄅ88Ɛ09˙0ƖƐ '9ㄥㄣㄥ688˙ϛㄥ 'ᄅᄅ6ㄣ˙6ᄅϛ9Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ ()ʇᴉɐʍ ʇɐǝdǝɹ                    
+uǝɥʇ ᄅʇɐoqɹᴉɐdǝɹQ˙פ‾ ɟᴉ                
+op ()ʇᴉɐʍ ǝlᴉɥʍ            
+()uoᴉʇɔunɟ)uʍɐds        
+ǝnlɐʌ = ᄅʇɐoqɹᴉɐdǝɹQ˙פ‾        
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ᄅʇɐoqɹᴉɐdǝɹQ˙פ‾ ',,{ɐʇǝq}ʞɹɐɥS 0ᄅ llᴉʞ ɹǝʇɟ∀ ʞɔᴉlƆ,,)ǝlƃƃo┴:ㄣƖǝƃɐd
+(puǝ
+(puǝ    
+puǝ        
+puǝ            
+            
+ʇɐoqᴉɐdǝɹQ˙פ‾ ʇou ɹo Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - (ㄥ996Ɩᄅㄥㄣᄅ˙0 '80-ǝㄣㄣ608ᄅϛϛ˙Ɩ- 'Ɩϛㄣ6ϛ6896˙0- '80-ǝㄣƖƐƖϛϛ9ϛ˙ᄅ- 'Ɩ '80-ǝ869ƖƖㄥϛᄅ˙ᄅ- 'Ɩϛㄣ6ϛ6896˙0 '80-ǝϛ6Ɩ88Ɛㄣ0˙Ɛ 'ㄥ996Ɩᄅㄥㄣᄅ˙0 'ㄣƐ9ㄥƐ9˙ㄣㄣㄣ '68Ɩ9Ɛ980˙6 '99ㄥ6˙ƖƐ69Ɩ-)ʍǝu˙ƐɹoʇɔǝΛ)  lᴉʇun ((ㄥ996Ɩᄅㄥㄣᄅ˙0 '80-ǝㄣㄣ608ᄅϛϛ˙Ɩ- 'Ɩϛㄣ6ϛ6896˙0- '80-ǝㄣƖƐƖϛϛ9ϛ˙ᄅ- 'Ɩ '80-ǝ869ƖƖㄥϛᄅ˙ᄅ- 'Ɩϛㄣ6ϛ6896˙0 '80-ǝϛ6Ɩ88Ɛㄣ0˙Ɛ 'ㄥ996Ɩᄅㄥㄣᄅ˙0 'ㄣƐ9ㄥƐ9˙ㄣㄣㄣ '68Ɩ9Ɛ980˙6 '99ㄥ6˙ƖƐ69Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ  ()ʇᴉɐʍ ʇɐǝdǝɹ            
+(Ɩ)ʇᴉɐʍ            
+(,,</=ɹoloƆ>:sʞɹɐɥs 0ᄅ llᴉʞ:u\uoᴉsɹǝΛ ɥsᴉlƃuƎ<pǝɹ=ɹoloƆ>,,)ɔǝΛ                
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:(,,ʇsǝnQssɐlɔqnSʇɔɐɹǝʇuI/Ⅎɹ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ʇǝN,,)plᴉɥƆɹoℲʇᴉɐM:(,,sǝlnpoW,,)plᴉɥƆɹoℲʇᴉɐM:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+
+{            
+,,ʇɥƃᴉɹʍdᴉɥS,, = [Ɩ]                
+} = sƃɹɐ lɐɔol            
+(Ɩ)ʇᴉɐʍ            
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:(,,ʇsǝnQssɐlɔqnSʇɹɐʇS/Ⅎɹ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ʇǝN,,)plᴉɥƆɹoℲʇᴉɐM:(,,sǝlnpoW,,)plᴉɥƆɹoℲʇᴉɐM:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+
+{            
+,,ʇɥƃᴉɹʍdᴉɥS,, = [Ɩ]                
+} = sƃɹɐ lɐɔol            
+(Ɩ)ʇᴉɐʍ            
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:(,,ʇsǝnQssɐlɔqnSʇɔɐɹǝʇuI/Ⅎɹ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ʇǝN,,)plᴉɥƆɹoℲʇᴉɐM:(,,sǝlnpoW,,)plᴉɥƆɹoℲʇᴉɐM:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+
+{            
+,,ʇɥƃᴉɹʍdᴉɥS,, = [Ɩ]                
+} = sƃɹɐ lɐɔol            
+ʇɐoqɹᴉɐdǝɹQ˙פ‾ ʇou ɹo Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - (ㄣ99Ɛㄥㄥᄅ6ᄅ˙0- '80-ǝϛᄅ9ƖƖϛƖ0˙ᄅ 'ϛ9ㄥƖ8Ɩ9ϛ6˙0 '80-ǝ8ϛᄅƖㄣƖ69˙9- 'Ɩ '80-ǝϛ9ㄥ0Ɛ9ϛƖ˙ㄣ- 'ϛ9ㄥƖ8Ɩ9ϛ6˙0- '80-ǝϛ8ㄣ90ϛƖ9˙ㄥ- 'ㄣ99Ɛㄥㄥᄅ6ᄅ˙0- 'ᄅ88Ɛ09˙0ƖƐ '9ㄥㄣㄥ688˙ϛㄥ 'ᄅᄅ6ㄣ˙6ᄅϛ9Ɩ-)ʍǝu˙ƐɹoʇɔǝΛ) lᴉʇun ((ㄣ99Ɛㄥㄥᄅ6ᄅ˙0- '80-ǝϛᄅ9ƖƖϛƖ0˙ᄅ 'ϛ9ㄥƖ8Ɩ9ϛ6˙0 '80-ǝ8ϛᄅƖㄣƖ69˙9- 'Ɩ '80-ǝϛ9ㄥ0Ɛ9ϛƖ˙ㄣ- 'ϛ9ㄥƖ8Ɩ9ϛ6˙0- '80-ǝϛ8ㄣ90ϛƖ9˙ㄥ- 'ㄣ99Ɛㄥㄥᄅ6ᄅ˙0- 'ᄅ88Ɛ09˙0ƖƐ '9ㄥㄣㄥ688˙ϛㄥ 'ᄅᄅ6ㄣ˙6ᄅϛ9Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ ()ʇᴉɐʍ ʇɐǝdǝɹ            
+uǝɥʇ ʇɐoqɹᴉɐdǝɹQ˙פ‾ ɟᴉ            
+op ()ʇᴉɐʍ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds    
+ǝnlɐʌ = ʇɐoqɹᴉɐdǝɹQ˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʇɐoqɹᴉɐdǝɹQ˙פ‾ ',,sʞɹɐɥS 0ᄅ llᴉʞ ʇsǝnQ ʇdǝɔɔ∀,,)ǝlƃƃo┴:ㄣƖǝƃɐd
+(puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+ (ǝɯɐN˙ʌ)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ʇou ɹo 0 == ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ʇuǝʌƎoʇn∀˙פ‾ ʇou lᴉʇun                                
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ ʇou ɟᴉ                                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+(00Ɩ'00Ɩ'00Ɩ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                    
+()ʇᴉɐʍ:ʇɐǝqʇɹɐǝH˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+ʇɐǝdǝɹ                                
+ uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɟᴉ                            
+ uǝɥʇ 00ϛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ (,,ɹoɹɹǝ┴,, ' ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɹo (,,ʞɹɐɥS,,'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɹo (,,ɐɥuɐɹᴉԀ,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɹo (,,ɹǝqɯǝW ʍǝɹƆ ɥsᴉℲ,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                    
+ uǝɥʇ ʇuǝʌƎoʇn∀˙פ‾ ɟᴉ                
+ op ()ʇᴉɐʍ ǝlᴉɥʍ            
+()uoᴉʇɔunɟ)uʍɐds        
+ǝnlɐʌ = ʇuǝʌƎoʇn∀˙פ‾        
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʇuǝʌƎoʇn∀˙פ‾ ',,ʇuǝʌƎ ɐǝS uoW llᴉʞ oʇn∀,,)ǝlƃƃo┴:ㄣƖǝƃɐd    
+(,,��,,)ɹoʇɐɹǝdǝS:ㄣƖǝƃɐd    
+
+puǝ
+(puǝ    
+puǝ        
+()ʎoɹʇsǝp:ɾqo            
+uǝɥʇ (,,ʇɔǝɟɟƎsʎɐɹunS,,)∀sI:ɾqo ɹo (,,ʇɔǝɟɟƎɯoolq,,)∀sI:ɾqo ɹo (,,ʇɔǝɟɟƎɹnlq,,)∀sI:ɾqo ɹo (,,ʎʞS,,)∀sI:ɾqo ɹo (,,,,)∀sI:ɾqo ɟᴉ        
+(ɾqo)uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝpp∀ʇuɐpuǝɔsǝp˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ
+(puǝ        
+ǝnɹʇ = sʍopɐɥSlɐqolפ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ʇuǝᴉqɯ∀ɹoopʇnO˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+ƐƐㄥ˙Ɩㄣ = ǝpnʇᴉʇɐ˥ɔᴉɥdɐɹƃoǝפ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+666666666 = puƎƃoℲ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ɹoloƆƃoℲ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+0 = uoᴉʇɐsuǝdɯoƆǝɹnsodxƎ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = do┴‾ʇɟᴉɥSɹoloƆ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ɯoʇʇoq‾ʇɟᴉɥSɹoloƆ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+ㄣƖ = ǝɯᴉ┴ʞɔolƆ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+Ɩ = ssǝuʇɥƃᴉɹq˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ʇuǝᴉqɯ∀˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝƃuɐɥƆ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+ǝnɹʇ = sʍopɐɥSlɐqolפ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ʇuǝᴉqɯ∀ɹoopʇnO˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+ƐƐㄥ˙Ɩㄣ = ǝpnʇᴉʇɐ˥ɔᴉɥdɐɹƃoǝפ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+666666666 = puƎƃoℲ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ɹoloƆƃoℲ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+0 = uoᴉʇɐsuǝdɯoƆǝɹnsodxƎ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = do┴‾ʇɟᴉɥSɹoloƆ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ɯoʇʇoq‾ʇɟᴉɥSɹoloƆ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+ㄣƖ = ǝɯᴉ┴ʞɔolƆ˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+Ɩ = ssǝuʇɥƃᴉɹq˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ʇuǝᴉqɯ∀˙ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ            
+puǝ    
+puǝ        
+()ʎoɹʇsǝp:ʌ            
+uǝɥʇ (,,ʇɔǝɟɟƎsʎɐɹunS,,)∀sI:ʌ ɹo (,,ʇɔǝɟɟƎɯoolq,,)∀sI:ʌ ɹo (,,ʇɔǝɟɟƎɹnlq,,)∀sI:ʌ ɹo (,,ʎʞS,,)∀sI:ʌ ɹo (,,,,)∀sI:ʌ ɟᴉ        
+op (()uǝɹplᴉɥƆʇǝפ:ƃuᴉʇɥƃᴉ˥˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ    
+(ϛ)ʇᴉɐʍ    
+()pǝpɐo˥sI:ǝɯɐƃ lᴉʇun    
+()ʇᴉɐʍ˙ʞsɐʇ        
+ʇɐǝdǝɹ    
+(puǝ            
+(puǝ                
+puǝ                    
+puǝ                        
+09 = ǝƃuɐɹ˙ʇɥƃᴉlpɐǝɥ                            
+Ɩ = ssǝuʇɥƃᴉɹq˙ʇɥƃᴉlpɐǝɥ                            
+(ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥɔ ',,ʇɥƃᴉ˥ʇuᴉoԀ,,)ʍǝu˙ǝɔuɐʇsuI = ʇɥƃᴉlpɐǝɥ lɐɔol                            
+uǝɥʇ (,,ʇɥƃᴉ˥ʇuᴉoԀ,,)∀sIɥɔᴉɥMplᴉɥƆʇsɹᴉℲpuᴉℲ:ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥɔ ʇou ɟᴉ                        
+lᴉu =~ ɹǝʇɔɐɹɐɥɔ lᴉʇun                        
+()ʇᴉɐʍ                            
+ʇɐǝdǝɹ                        
+op ()ʇᴉɐʍ ǝlᴉɥʍ                    
+ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ɹǝʇɔɐɹɐɥɔ lɐɔol                    
+()uoᴉʇɔunɟ)uʍɐds            
+(puǝ                
+0ƖǝƖ = puƎƃoℲ˙ƃuᴉʇɥƃᴉl                    
+Ɩ = ssǝuʇɥƃᴉɹq˙ƃuᴉʇɥƃᴉl                    
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ʇuǝᴉqɯ∀˙ƃuᴉʇɥƃᴉl                    
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝƃuɐɥƆ˙ƃuᴉʇɥƃᴉl            
+puǝ            
+puǝ                
+ǝslɐɟ = pǝlqɐuƎ˙ʌ                    
+uǝɥʇ                 
+(,,ʇɔǝɟɟƎsʎɐɹunS,,)∀sI:ʌ                        
+ɹo (,,ʇɔǝɟɟƎuoᴉʇɔǝɹɹoƆɹoloƆ,,)∀sI:ʌ ɹo (,,ʇɔǝɟɟƎɹnlq,,)∀sI:ʌ ɹo (,,ʇɔǝɟɟƎɯoolq,,)∀sI:ʌ                    
+ɟᴉ                
+op (()sʇuɐpuǝɔsǝpʇǝפ:ƃuᴉʇɥƃᴉl)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ            
+0ƖǝƖ = puƎƃoℲ˙ƃuᴉʇɥƃᴉl            
+Ɩ = ssǝuʇɥƃᴉɹq˙ƃuᴉʇɥƃᴉl            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ʇuǝᴉqɯ∀˙ƃuᴉʇɥƃᴉl            
+(,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ƃuᴉʇɥƃᴉl lɐɔol            
+()uoᴉʇɔunɟ)llɐɔd    
+()ʇɥƃᴉɹqllnℲ uoᴉʇɔunɟ
+(puǝ
+((ㄣ6ϛ808Ɛ06Ɛ90ᄅㄣ˙ㄥϛƖ 'ϛᄅƖ8ㄥ0ϛ˙968ㄣƖ 'ϛㄥƐ6ϛ80˙Ɛㄥᄅ8ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',,ԀΛԀ uǝɥM ǝuoZ ǝɟɐS o┴ ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+(puǝ
+((8ƐㄣƐㄥᄅϛ0ㄣ06ᄅƐƖ˙ㄣ9Ɩ- 'ϛᄅƖ8ㄥ0ϛϛㄣƖ˙ㄥ96ㄣƖ 'ϛᄅ90ㄣ9Ɩ89˙99ㄥ8ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',,ǝuoZ ԀΛԀ ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+(puǝ
+(0 '00Ɛ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+(ʇ)uoᴉʇɔunɟ ',,lɐᴉɹ┴ ƃɹoqʎƆ ǝʇǝldɯoƆ oʇn∀,,)uoʇʇnq:0Ɩǝƃɐd
+(puǝ
+(0 'ϛ- '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ƃuᴉlᴉǝƆ˙lɐᴉɹ┴ʞuᴉW˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+(ʇ)uoᴉʇɔunɟ ',,lɐᴉɹ┴ ʇᴉqqɐɹ ǝʇǝldɯoƆ oʇn∀,,)uoʇʇnq:0Ɩǝƃɐd
+(puǝ
+ǝɯɐɹℲƆ˙ʇɹɐԀɥsᴉuᴉℲ˙lǝpoW˙lɐᴉɹ┴ʎʞS˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+(ʇ)uoᴉʇɔunɟ ',,lɐᴉɹ┴ lǝƃu∀ ǝʇǝldɯoƆ oʇn∀,,)uoʇʇnq:0Ɩǝƃɐd
+
+(,,<<slɐᴉɹ┴ oʇn∀>>,,)ɹoʇɐɹǝdǝS:0Ɩǝƃɐd
+
+(puǝ
+((88ƖㄥƖƖ0ᄅƖ86ƖƖƐ˙ㄣƐᄅ 'ϛᄅƖƐϛ6Ɩϛㄥ0˙8Ɩ6ㄣƖ 'ϛᄅƖƐ0ᄅ80ㄣ˙ㄥ968ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',, ɹoop ʎʞS ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+(puǝ
+((696ᄅ6ᄅ008ᄅ89ᄅ˙6ㄥƐ- 'ϛᄅƖ8ㄥϛㄥ9ᄅㄣ˙688ㄣƖ 'ϛᄅ9ϛƖ099˙0ᄅ06ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',, ɹoop ʞuᴉW ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+(puǝ
+((8Ɛ6ϛƐƐㄣㄣㄣϛϛ6ㄣ6˙90ᄅ- 'ϛᄅƖ8ㄥϛㄥ9ᄅㄣ˙688ㄣƖ 'ϛㄥ8Ɩᄅ6ㄣ6ᄅ˙ㄥƐᄅ6ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',, ɹoop uɐɯnH ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+(puǝ
+((6Ɩㄥ988809Ɩ96ϛ˙ㄣϛㄣ 'ϛㄥ896ᄅ6ㄥᄅƖ˙688ㄣƖ 'ϛᄅƖƐ0ㄥ0ᄅㄥ˙ᄅㄥ98ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',,ɹoop lnoɥפ ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+(puǝ
+((ᄅᄅ6ㄣ6ㄥ6Ɛ0ᄅㄥ8ϛ˙0Ɩᄅ- 'ϛᄅƖ8ㄥϛㄥ9ᄅㄣ˙688ㄣƖ 'ϛᄅ90ㄣ99ϛ0˙ㄣᄅᄅ8ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',, ɹoop ɥsᴉℲ ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+(puǝ
+((90ㄣƖ698ϛƖ00ƖƖ˙ᄅᄅㄣ- 'ϛᄅƖ8ㄥϛㄥ9ᄅㄣ˙ㄣ68ㄣƖ 'ϛᄅ90ㄣƖㄣ˙ᄅ6ㄣ8ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',, ɹoop ƃɹoqʎƆ ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+
+(puǝ
+(ʎʇᴉɯᴉxoɹԀuo)ʇɔǝuuoƆ:pǝɹǝƃƃᴉɹ┴˙ʇdɯoɹԀʎʇᴉɯᴉxoɹԀ
+puǝ
+()ǝʌoɯǝɹ:ƃuᴉɥɔʇᴉlפoN˙[,,ǝɯᴉ┴ ɟo ǝldɯǝ┴,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()ǝʌoɯǝɹ:ƃuᴉɥɔʇᴉlפoN˙[,,ǝɯᴉ┴ ɟo ǝldɯǝ┴,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()ǝʌoɯǝɹ:ƃuᴉɥɔʇᴉlפoN˙[,,ǝɯᴉ┴ ɟo ǝldɯǝ┴,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()ǝʌoɯǝɹ:(,,ℲℲɟℲɟzxzxdɟʍOԀ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝɔɐdsʞɹoʍ    
+(ϛ)ʇᴉɐʍ    
+()ǝʌoɯǝɹ:(,,ʇdɯoɹԀʎʇᴉɯᴉxoɹԀ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʇdɯoɹԀ˙ɹǝʌǝ˥˙[,,ǝɯᴉ┴ ɟo ǝldɯǝ┴,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+,,ℲℲɟℲɟzxzxdɟʍOԀ,, = ǝɯɐN˙XℲSpunoS    
+()ʎɐlԀ:XℲSpunoS    
+,,Ɩㄣ0ƐƖ8ㄣ06Ɩ//:pᴉʇǝssɐxqɹ,, = pIpunoS˙XℲSpunoS    
+ǝɔɐdsʞɹoʍ = ʇuǝɹɐԀ˙XℲSpunoS    
+(,,punoS,,)ʍǝu˙ǝɔuɐʇsuI = XℲSpunoS lɐɔol    
+()ʎɐlԀ:uǝǝʍʇ    
+({ uoᴉʇᴉsoԀpuǝ = uoᴉʇᴉsoԀ } 'oɟuIuǝǝʍʇ 'ʍǝuʇɹɐd)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴ = uǝǝʍʇ lɐɔol    
+(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '0Ɩ)ʍǝu˙oɟuIuǝǝʍ┴ = oɟuIuǝǝʍʇ lɐɔol    
+(0 '0ϛ- '0)ʍǝu˙ƐɹoʇɔǝΛ + uoᴉʇᴉsoԀʇɹɐʇs = uoᴉʇᴉsoԀpuǝ lɐɔol    
+uoᴉʇᴉsoԀ˙ʍǝuʇɹɐd = uoᴉʇᴉsoԀʇɹɐʇs lɐɔol    
+(,,ǝɔᴉʌɹǝSuǝǝʍ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSuǝǝʍ┴ lɐɔol    
+ᄅɹoopuᴉɐW˙[,,ǝɯᴉ┴ ɟo ǝldɯǝ┴,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʍǝuʇɹɐd lɐɔol    
+()ʎɐlԀ:uǝǝʍʇ    
+({ uoᴉʇᴉsoԀpuǝ = uoᴉʇᴉsoԀ } 'oɟuIuǝǝʍʇ 'ʇɹɐd)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴ = uǝǝʍʇ lɐɔol    
+(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '0Ɩ)ʍǝu˙oɟuIuǝǝʍ┴ = oɟuIuǝǝʍʇ lɐɔol    
+(0 '0ϛ- '0)ʍǝu˙ƐɹoʇɔǝΛ + uoᴉʇᴉsoԀʇɹɐʇs = uoᴉʇᴉsoԀpuǝ lɐɔol    
+uoᴉʇᴉsoԀ˙ʇɹɐd = uoᴉʇᴉsoԀʇɹɐʇs lɐɔol    
+(,,ǝɔᴉʌɹǝSuǝǝʍ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSuǝǝʍ┴ lɐɔol    
+ƖɹoopuᴉɐW˙[,,ǝɯᴉ┴ ɟo ǝldɯǝ┴,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇɹɐd lɐɔol    
+()ʎʇᴉɯᴉxoɹԀuo uoᴉʇɔunɟ
+,,ǝɯᴉʇ ɟo ɹǝʌǝl uʍouʞun u∀,, = ʇxǝ┴ʇɔǝɾqO˙ʇdɯoɹԀʎʇᴉɯᴉxoɹԀ
+,,ǝpᴉsuI sploɥǝq sʇǝɹɔǝS,, = ʇxǝ┴uoᴉʇɔ∀˙ʇdɯoɹԀʎʇᴉɯᴉxoɹԀ
+0Ɩ = ǝɔuɐʇsᴉpuoᴉʇɐʌᴉʇɔ∀xɐW˙ʇdɯoɹԀʎʇᴉɯᴉxoɹԀ
+ʇdɯoɹԀ˙ɹǝʌǝ˥˙[,,ǝɯᴉ┴ ɟo ǝldɯǝ┴,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇuǝɹɐԀ˙ʇdɯoɹԀʎʇᴉɯᴉxoɹԀ
+(,,ʇdɯoɹԀʎʇᴉɯᴉxoɹԀ,,)ʍǝu˙ǝɔuɐʇsuI = ʇdɯoɹԀʎʇᴉɯᴉxoɹԀ lɐɔol
+(Ɩ˙0)ʇᴉɐʍ
+puǝ
+ǝslǝ
+()ǝʌoɯǝɹ:(,,ʇdɯoɹԀʎʇᴉɯᴉxoɹԀ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʇdɯoɹԀ˙ɹǝʌǝ˥˙[,,ǝɯᴉ┴ ɟo ǝldɯǝ┴,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+uǝɥʇ (,,ʇdɯoɹԀʎʇᴉɯᴉxoɹԀ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʇdɯoɹԀ˙ɹǝʌǝ˥˙[,,ǝɯᴉ┴ ɟo ǝldɯǝ┴,,]dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ
+()uoᴉʇɔunɟ ',,˙ɹǝʌǝ˥ ʞɔolu∩,,)uoʇʇnq:0Ɩǝƃɐd
+
+(puǝ
+((ϛㄥƐ6096ㄣ8ϛㄣᄅ˙0ᄅƖ- 'ϛᄅƖ8ㄥϛㄥ9ᄅㄣ˙888ㄣƖ 'ϛㄥƐㄣƐㄥᄅϛϛ˙Ɩ868ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',,ǝuO ʇuǝᴉɔ∀ o┴ ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+
+(puǝ
+((ㄣƐㄥᄅ0Ɛ0Ɩ89Ɛ9ƖƐ˙ᄅㄥ 'ϛㄥ896ᄅ6ㄥᄅ9˙9Ɛ6ㄣƖ 'ϛᄅ90ㄣ9Ɩ8Ɩ˙ϛㄥϛ8ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',,llnԀ ɹǝʌǝ˥ o┴ ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+
+(puǝ
+(ϛㄥ8Ɩᄅㄣᄅ8ㄣ69ㄣᄅ9˙ᄅ0Ɩ 'ϛᄅƖ8ㄥϛㄥƖ0Ɛ˙ϛ68ㄣƖ'ϛㄥ89ㄣϛϛƐ˙98ᄅ8ᄅ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐפ    
+()uoᴉʇɔunɟ ',,ǝɯᴉ┴ ɟO ǝldɯᴉ┴ o┴ ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+
+(puǝ
+((ϛᄅ90ㄣ9ƖƐ6ㄣϛ˙ƐƖᄅㄥ- 'ϛㄥƐㄣƐᄅϛƖ90Ɛ9˙Ɩ8ᄅᄅ 'ϛᄅ9ϛ9ㄥㄣ889ϛϛ˙ㄥㄣ6ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ    
+()uoᴉʇɔunɟ ',,ǝǝɹ┴ʇɐǝɹפ do┴ o┴ ʇɹodǝlǝ┴,,)uoʇʇnq:0Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(ǝɯɐƃ'ǝslɐɟ'⅄˙ǝpoƆʎǝʞ˙ɯnuƎ'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+(ǝɯɐƃ'ǝslɐɟ'⅄˙ǝpoƆʎǝʞ˙ɯnuƎ'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+()ʇᴉɐʍ op ㄣΛǝɔɐɹǝʌᴉʇɔ∀oʇn∀˙פ‾ ǝlᴉɥʍ    
+ǝnlɐʌ = ㄣΛǝɔɐɹǝʌᴉʇɔ∀oʇn∀˙פ‾
+  (ǝnlɐʌ)uoᴉʇɔunɟ'ㄣΛǝɔɐɹǝʌᴉʇɔ∀oʇn∀˙פ‾',,ㄣΛǝɔɐɹ ǝʌᴉʇɔ∀ oʇn∀,,)ǝlƃƃo┴:0Ɩǝƃɐd
+(puǝ
+puǝ    
+(ǝɯɐƃ'ǝslɐɟ'┴˙ǝpoƆʎǝʞ˙ɯnuƎ'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+(ǝɯɐƃ'ǝslɐɟ'┴˙ǝpoƆʎǝʞ˙ɯnuƎ'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+()ʇᴉɐʍ op ǝɔɐɹǝʌᴉʇɔ∀oʇn∀˙פ‾ ǝlᴉɥʍ    
+ǝnlɐʌ = ǝɔɐɹǝʌᴉʇɔ∀oʇn∀˙פ‾
+  (ǝnlɐʌ)uoᴉʇɔunɟ'ǝɔɐɹǝʌᴉʇɔ∀oʇn∀˙פ‾',,ƐΛǝɔɐɹ ǝʌᴉʇɔ∀ oʇn∀,,)ǝlƃƃo┴:0Ɩǝƃɐd
+
+(,,��,,)ɹoʇɐɹǝdǝS:0Ɩǝƃɐd
+
+(puǝ
+()uooWʞɔo˥
+ǝnlɐʌ = uooWʞɔo˥˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ ' uooWʞɔo˥˙פ‾ ',,uooWʞɔo˥,,)ǝlƃƃo┴:6ǝƃɐd
+
+puǝ
+(puǝ
+puǝ
+0ㄥ = ʍǝᴉΛɟOplǝᴉℲ˙ɯɐƆ    
+ǝslǝ
+puǝ    
+(0 '0 '(ʎ˙uoᴉʇɔǝɹᴉpɐɹǝɯɐƆ)uᴉsɐ)ƃu∀ℲƆ * (0 '(x˙uoᴉʇɔǝɹᴉpɐɹǝɯɐƆ)uᴉsɐ- '0)ƃu∀ℲƆ * (0 'ʇǝsɟɟO⅄ '0)ʍǝNℲƆ = 0Ɔ˙ʞɔǝN        
+uǝɥʇ ʞɔo˥ puɐ ʞɔǝN ɟᴉ    
+ʇᴉun˙ɹoʇɔǝΛʞool˙(ǝɯɐɹℲƆɐɹǝɯɐɔ)ǝɔɐdSʇɔǝɾqOoʇ:ǝɯɐɹℲƆ˙ʇooɹ = uoᴉʇɔǝɹᴉpɐɹǝɯɐƆ lɐɔol    
+ǝɯɐɹℲƆɐɹǝɯɐɔ = ǝɯɐɹℲƆ˙ɐɹǝɯɐƆʇuǝɹɹnƆ˙ǝɔɐdsʞɹoʍ    
+(ʇ∀ʞool 'sod)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆɐɹǝɯɐɔ lɐɔol    
+()uoᴉʇɔǝɹᴉpuooWʇǝפ:ƃuᴉʇɥƃᴉ˥ = ʇ∀ʞool lɐɔol    
+(0 '0 '0)ʍǝu˙ƐɹoʇɔǝΛ = sod lɐɔol    
+
+(,,ʎʇᴉlᴉq∀ǝʇɐʌᴉʇɔ∀,,)ɹǝʌɹǝSǝɹᴉℲ:ƎɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+uǝɥʇ uooWʞɔo˥˙פ‾ ɟᴉ
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝddǝʇSɹǝpuǝɹ˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+⅄˙0Ɔ˙ʞɔǝN = ʇǝsɟɟO⅄ lɐɔol
+(ǝnɹʇ ',,ʞɔǝN,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ = ʞɔǝN lɐɔol
+(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ = ʇooɹ lɐɔol
+ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀ = ɹǝʇɔɐɹɐɥƆ lɐɔol
+ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ɹǝʎɐlԀ lɐɔol
+ɐɹǝɯɐƆʇuǝɹɹnƆ˙ǝɔɐdsʞɹoʍ = ɐɹǝɯɐƆ lɐɔol
+
+uᴉsɐ˙ɥʇɐɯ = uᴉsɐ lɐɔol
+sǝlƃu∀˙ǝɯɐɹℲƆ 'ʍǝu˙ǝɯɐɹℲƆ = ƃu∀ℲƆ 'ʍǝNℲƆ lɐɔol
+ɐɹǝɯɐƆʇuǝɹɹnƆ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ = ɯɐƆ lɐɔol
+(,,ƃuᴉʇɥƃᴉ˥,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ƃuᴉʇɥƃᴉ˥ lɐɔol
+()uooWʞɔo˥ uoᴉʇɔunɟ
+(puǝ
+(puǝ    
+puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+0 = ʎɔuǝɹɐdsuɐɹ┴˙ʌ                            
+(ǝɯɐɹℲƆ˙ʌ)ʇǝƃɹɐ┴oʇ                            
+uǝɥʇ ,,ʇɹɐԀɥsǝW,, == ǝɯɐNssɐlƆ˙ʌ ɟᴉ                        
+uǝɥʇ ,,ʇɹɐԀ,, == ǝɯɐN˙ʌ ɟᴉ                    
+op (()uǝɹplᴉɥƆʇǝפ:(,puɐlsIɔᴉʇsʎW,)plᴉɥƆʇsɹᴉℲpuᴉℲ:dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                
+uǝɥʇ ɹɐǝפ‾oʇn∀˙פ‾ ɟᴉ            
+op (Ɩ0˙)ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ    
+ ()sƃuᴉʇʇǝSǝʌɐS        
+ǝnlɐʌ = ɹɐǝפ‾oʇn∀˙sƃuᴉʇʇǝS˙פ‾    
+ǝnlɐʌ = ɹɐǝפ‾oʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɹɐǝפ‾oʇn∀˙sƃuᴉʇʇǝS˙פ‾ ',,ɹɐǝפ o┴ ʇɹodǝlǝ┴,,)ǝlƃƃo┴:6ǝƃɐd
+(puǝ
+(puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+((uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙[,,ɹǝlɐǝp ʇᴉnɹℲ pǝɔuɐʌp∀,,]sƆԀN˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+uǝɥʇ (,,ɹǝlɐǝp ʇᴉnɹℲ pǝɔuɐʌp∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sƆԀN˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+uǝɥʇ ℲpƆԀNԀ┴˙פ‾ ɟᴉ            
+op ()ʇᴉɐʍ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)llɐɔd        
+()uoᴉʇɔunɟ)uʍɐds    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ℲpƆԀNԀ┴˙פ‾ ',,ɹǝlɐǝp ʇᴉnɹℲ pǝɔuɐʌp∀ o┴ ʇɹodǝlǝ┴,,)ǝlƃƃo┴:6ǝƃɐd
+
+(puǝ
+()puɐlsIǝƃɐɹᴉWԀSƎ    
+ǝnlɐʌ = puɐlsIǝƃɐɹᴉWԀSƎ˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'puɐlsIǝƃɐɹᴉWԀSƎ˙פ‾ ',,puɐlsIǝƃɐɹᴉWԀSƎ,,)ǝlƃƃo┴:6ǝƃɐd
+
+(puǝ
+puǝ    
+puǝ        
+()puɐlsIǝƃɐɹᴉWԀSƎ            
+uǝɥʇ puɐlsIǝƃɐɹᴉWԀSƎ˙פ‾ ɟᴉ        
+ op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+puǝ
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+()ʎoɹʇsǝp:(,ǝƃɐɹᴉWdsƎ,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ                    
+uǝɥʇ (,ǝƃɐɹᴉWdsƎ,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ                
+uǝɥʇ ,ɹǝʇuǝƆ, == ǝɯɐN˙ʌ ɟᴉ            
+op (()uǝɹplᴉɥƆʇǝפ:puɐlsIɔᴉʇsʎW˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ        
+ǝslǝ    
+puǝ        
+(puǝ            
+puǝ                
+puǝ                    
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙ǝƃɐɹᴉWdsƎ˙ʌ                        
+(,, [ ,,˙˙,W ,˙˙ (Ɛ/ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ˙˙,, ] ,,˙˙,u\ ,˙˙ ,,puɐlsI ǝƃɐɹᴉW,,) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙ǝƃɐɹᴉWdsƎ˙ʌ                        
+ǝslǝ                    
+(,, [ ,,˙˙,W ,˙˙ (Ɛ/ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ˙˙,, ] ,,˙˙,u\ ,˙˙ ,,puɐlsI ǝƃɐɹᴉW,,) = ʇxǝ┴˙ǝɯɐu                        
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                        
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu                        
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu                        
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu                        
+(0'Ɩ'0'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu                        
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu                        
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu                        
+,,ploqɯɐɥʇoפ,, = ʇuoℲ˙ǝɯɐu                        
+(llᴉq',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol                        
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq                        
+ʌ = ǝǝuɹop∀˙llᴉq                        
+(0Ɛ'Ɩ'00ᄅ'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq                        
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq                        
+,ǝƃɐɹᴉWdsƎ, = ǝɯɐN˙llᴉq                        
+(ʌ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol                        
+uǝɥʇ (,ǝƃɐɹᴉWdsƎ,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ʇou ɟᴉ                    
+uǝɥʇ ,ɹǝʇuǝƆ, == ǝɯɐN˙ʌ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd            
+op (()uǝɹplᴉɥƆʇǝפ:puɐlsIɔᴉʇsʎW˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ        
+uǝɥʇ puɐlsIǝƃɐɹᴉWԀSƎ˙פ‾ ɟᴉ    
+()uoᴉʇɔunɟ)llɐɔd
+()puɐlsIǝƃɐɹᴉWԀSƎ uoᴉʇɔunɟ
+(000000Ɩ 'Ɩ)ɯopuɐɹ˙ɥʇɐɯ = ɹǝqɯnN
+
+puǝ
+(ϛ˙0 + (u)ɹǝqɯnuoʇ)ɹoolɟ˙ɥʇɐɯ uɹnʇǝɹ
+(u)punoɹ uoᴉʇɔunɟ lɐɔol
+(puǝ
+(puǝ    
+puǝ        
+puǝ            
+puǝ                
+({Ɩ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI',,¡punoℲ ʇou ǝƃɐɹᴉW,, = ʇxǝ┴',,qnHɹoʇɔǝΛ,, = ǝlʇᴉ┴}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+ǝslǝ                
+((0 '00Ɛ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʎɹɐɯᴉɹԀ˙puɐlsIɔᴉʇsʎW˙dɐW˙ǝɔɐdsʞɹoʍ)ʇǝƃɹɐ┴oʇ                        
+uǝɥʇ (,,puɐlsIɔᴉʇsʎW,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+uǝɥʇ ǝƃɐɹᴉW˙פ‾ ɹo puɐlsIǝƃɐɹᴉWoʇn∀˙פ‾ ɟᴉ            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)llɐɔd    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+
+puǝ
+((0 '00Ɛ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʎɹɐɯᴉɹԀ˙puɐlsIɔᴉʇsʎW˙dɐW˙ǝɔɐdsʞɹoʍ)ʇǝƃɹɐ┴oʇ    
+ǝslǝ
+puǝ    
+()ʇɹodǝlǝ┴        
+(0Ɩ)ʇᴉɐʍ op doHǝƃɐɹᴉW˙פ‾ ǝlᴉɥʍ    
+uǝɥʇ (,puɐlsI ǝƃɐɹᴉW,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙uᴉƃᴉɹOplɹoM‾˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ʇou puɐ doHǝƃɐɹᴉW˙פ‾ ɟᴉ
+({ϛ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI',,˙˙˙ɹǝʌɹǝSdoH,, = ʇxǝ┴',,qnHɹoʇɔǝΛ,, = ǝlʇᴉ┴}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+ǝnlɐʌ = doHpuɐlsIǝƃɐɹᴉWoʇn∀˙פ‾
+ǝnlɐʌ = doHǝƃɐɹᴉW˙sƃuᴉʇʇǝS˙פ‾
+ǝnlɐʌ = doHǝƃɐɹᴉW˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'doHǝƃɐɹᴉW˙sƃuᴉʇʇǝS˙פ‾ ',,[ԀOH] puɐlsI ǝƃɐɹᴉW oʇn∀,,)ǝlƃƃo┴:6ǝƃɐd
+
+(puǝ
+puǝ
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ    
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ
+ ǝnlɐʌ = puɐlsIǝƃɐɹᴉWoʇn∀˙פ‾
+ ()sƃuᴉʇʇǝSǝʌɐS
+ǝnlɐʌ = ǝƃɐɹᴉW˙sƃuᴉʇʇǝS˙פ‾
+ǝnlɐʌ = ǝƃɐɹᴉW˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'puɐlsIǝƃɐɹᴉWoʇn∀˙sƃuᴉʇʇǝS˙פ‾  ',,puɐlsI ǝƃɐɹᴉW oʇn∀,,)ǝlƃƃo┴:6ǝƃɐd
+
+(puǝ
+(puǝ    
+puǝ        
+puǝ            
+(,pǝuʍɐdS ʇoN : ️��,)ʇǝS:ʞɔǝɥɔǝƃɐɹɹᴉW                
+ǝslǝ            
+(,pǝuʍɐdS : ️��,)ʇǝS:ʞɔǝɥɔǝƃɐɹɹᴉW                
+uǝɥʇ (,puɐlsI ǝƃɐɹᴉW,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙uᴉƃᴉɹOplɹoM‾˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)llɐɔd    
+()uoᴉʇɔunɟ)uʍɐds
+(,˙˙˙,)lǝqɐ˥:6ǝƃɐd = ʞɔǝɥɔǝƃɐɹɹᴉW lɐɔol
+(,,️��,,)ɹoʇɐɹǝdǝS:6ǝƃɐd
+puǝ
+puǝ
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+()ʎoɹʇsǝp:(ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ                
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ ɟᴉ            
+ǝslǝ        
+puǝ            
+(,%, ˙˙ (ɥʇlɐǝHxɐW˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ʌ / 00Ɩ * ɥʇlɐǝH˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ʌ)punoɹ ˙˙ , : ɥʇlɐǝHu\W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ , | , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙[ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,]pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ                
+ǝslǝ            
+puǝ                
+(ϛϛᄅ '0 '0)ʍǝu˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                    
+ǝslǝ                
+(0 '0 'ϛϛᄅ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                    
+uǝɥʇ ɯɐǝ┴˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ == ɯɐǝ┴˙ʌ ɟᴉ                
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu                
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu                
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu                
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu                
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙ǝɯɐu                
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu                
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu                
+,,ǝpoƆ,, = ʇuoℲ˙ǝɯɐu                
+(llᴉq ',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol                
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq                
+pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ = ǝǝuɹop∀˙llᴉq                
+(0Ɛ 'Ɩ '00ᄅ 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq                
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq                
+ɹǝqɯnN ˙˙ ,dsƎǝɯɐN, = ǝɯɐN˙llᴉq                
+(pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol                
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ ʇou puɐ (pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ)lᴉusᴉ ʇou ɟᴉ            
+uǝɥʇ ɹǝʎɐlԀԀSƎ ɟᴉ        
+uǝɥʇ (ɹǝʇɔɐɹɐɥƆ˙ʌ)lᴉusᴉ ʇou ɟᴉ    
+()uoᴉʇɔunɟ)llɐɔd
+op (()uǝɹplᴉɥƆʇǝפ:,sɹǝʎɐlԀ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+()sɯɐɥƆɹǝʎɐlԀǝʇɐpd∩ uoᴉʇɔunɟ
+puǝ
+puǝ
+puǝ
+puǝ    
+puǝ        
+()ʎoɹʇsǝp:(ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ            
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ ɟᴉ        
+ǝslǝ    
+puǝ        
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝlpuɐH˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ , , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙[ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,]ǝlpuɐH˙ʌ            
+ǝslǝ        
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝlpuɐH˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙ǝɯɐu            
+(0 'ϛϛᄅ 'Ɩϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu            
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu            
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu            
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu            
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu            
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu            
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu            
+,,ǝpoƆ,, = ʇuoℲ˙ǝɯɐu            
+(llᴉq ',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol            
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq            
+ǝlpuɐH˙ʌ = ǝǝuɹop∀˙llᴉq            
+(0Ɛ 'Ɩ '00ᄅ 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq            
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq            
+ɹǝqɯnN ˙˙ ,dsƎǝɯɐN, = ǝɯɐN˙llᴉq            
+(ǝlpuɐH˙ʌ ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol            
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ ʇou ɟᴉ        
+uǝɥʇ ԀSƎʇᴉnɹℲlɐǝɹ ɟᴉ    
+uǝɥʇ (,,loo┴,,)∀sI:ʌ ɟᴉ
+op (()uǝɹplᴉɥƆʇǝפ:ɹǝuʍɐdSɐuɐuɐq˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+puǝ
+puǝ
+puǝ    
+puǝ        
+()ʎoɹʇsǝp:(ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ            
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ ɟᴉ        
+ǝslǝ    
+puǝ        
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝlpuɐH˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ , , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙[ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,]ǝlpuɐH˙ʌ            
+ǝslǝ        
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝlpuɐH˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙ǝɯɐu            
+(0 'ㄣㄥƖ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu            
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu            
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu            
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu            
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu            
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu            
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu            
+,,ǝpoƆ,, = ʇuoℲ˙ǝɯɐu            
+(llᴉq ',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol            
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq            
+ǝlpuɐH˙ʌ = ǝǝuɹop∀˙llᴉq            
+(0Ɛ 'Ɩ '00ᄅ 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq            
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq            
+ɹǝqɯnN ˙˙ ,dsƎǝɯɐN, = ǝɯɐN˙llᴉq            
+(ǝlpuɐH˙ʌ ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol            
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ ʇou ɟᴉ        
+uǝɥʇ ԀSƎʇᴉnɹℲlɐǝɹ ɟᴉ    
+uǝɥʇ (,,loo┴,,)∀sI:ʌ ɟᴉ
+op (()uǝɹplᴉɥƆʇǝפ:ɹǝuʍɐdSǝlddɐǝuᴉԀ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+puǝ
+puǝ
+puǝ    
+puǝ        
+()ʎoɹʇsǝp:(ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ            
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ ɟᴉ        
+ǝslǝ    
+puǝ        
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝlpuɐH˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ , , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙[ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,]ǝlpuɐH˙ʌ            
+ǝslǝ        
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝlpuɐH˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙ǝɯɐu            
+(0 '0 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu            
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu            
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu            
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu            
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu            
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu            
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu            
+,,ǝpoƆ,, = ʇuoℲ˙ǝɯɐu            
+(llᴉq ',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol            
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq            
+ǝlpuɐH˙ʌ = ǝǝuɹop∀˙llᴉq            
+(0Ɛ 'Ɩ '00ᄅ 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq            
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq            
+ɹǝqɯnN ˙˙ ,dsƎǝɯɐN, = ǝɯɐN˙llᴉq            
+(ǝlpuɐH˙ʌ ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol            
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ ʇou ɟᴉ        
+uǝɥʇ ԀSƎʇᴉnɹℲlɐǝɹ ɟᴉ    
+uǝɥʇ (,,loo┴,,)∀sI:ʌ ɟᴉ
+op (()uǝɹplᴉɥƆʇǝפ:ɹǝuʍɐdSǝldd∀˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+()sɯɐɥƆʇᴉnɹℲlɐǝɹǝʇɐpd∩ uoᴉʇɔunɟ
+puǝ
+puǝ
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+()ʎoɹʇsǝp:(ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ                
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ            
+ǝslǝ        
+puǝ            
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\   , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙[ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,]ʌ                
+ǝslǝ            
+puǝ                
+(0 '0 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                    
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ,,ɹǝʍolℲ pǝɹ,,) = ʇxǝ┴˙ǝɯɐu                    
+uǝɥʇ ,,ᄅɹǝʍolℲ,, == ǝɯɐN˙ʌ ɟᴉ                
+puǝ                
+(ϛϛᄅ '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                    
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ,,ɹǝʍolℲ ǝnlq,,) = ʇxǝ┴˙ǝɯɐu                    
+uǝɥʇ ,,ƖɹǝʍolℲ,, == ǝɯɐN˙ʌ ɟᴉ                
+(0 '0 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu                
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu                
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu                
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu                
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu                
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu                
+,,ǝpoƆ,, = ʇuoℲ˙ǝɯɐu                
+(llᴉq ',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol                
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq                
+ʌ = ǝǝuɹop∀˙llᴉq                
+(0Ɛ 'Ɩ '00ᄅ 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq                
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq                
+ɹǝqɯnN ˙˙ ,dsƎǝɯɐN, = ǝɯɐN˙llᴉq                
+(ʌ ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol                
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ʇou ɟᴉ            
+uǝɥʇ ԀSƎɹǝʍolℲ ɟᴉ        
+uǝɥʇ ,,ƖɹǝʍolℲ,, == ǝɯɐN˙ʌ ɹo ,,ᄅɹǝʍolℲ,, == ǝɯɐN˙ʌ ɟᴉ    
+()uoᴉʇɔunɟ)llɐɔd
+op (()uǝɹplᴉɥƆʇǝפ:(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+()dsƎɹǝʍolℲǝʇɐpd∩ uoᴉʇɔunɟ
+puǝ
+puǝ
+(puǝ
+puǝ    
+puǝ        
+()ʎoɹʇsǝp:(ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ            
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ ɟᴉ        
+ǝslǝ    
+puǝ        
+puǝ            
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝlpuɐH˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\   , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙[ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,]ǝlpuɐH˙ʌ                
+ǝslǝ            
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝlpuɐH˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙ǝɯɐu                
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu                
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu                
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu                
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu                
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu                
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu                
+,,ǝpoƆ,, = ʇuoℲ˙ǝɯɐu                
+(llᴉq ',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol                
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq                
+ǝlpuɐH˙ʌ = ǝǝuɹop∀˙llᴉq                
+(0Ɛ 'Ɩ '00ᄅ 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq                
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq                
+ɹǝqɯnN ˙˙ ,dsƎǝɯɐN, = ǝɯɐN˙llᴉq                
+(ǝlpuɐH˙ʌ ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol                
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝlpuɐH˙ʌ ʇou ɟᴉ            
+uǝɥʇ (,,ʇᴉnɹℲ,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ        
+uǝɥʇ ԀSƎʇᴉnɹℲlᴉʌǝp ɟᴉ    
+()uoᴉʇɔunɟ)llɐɔd
+op (()uǝɹplᴉɥƆʇǝפ:(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+()dsƎɟqǝʇɐpd∩ uoᴉʇɔunɟ
+puǝ
+puǝ
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+()ʎoɹʇsǝp:(ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ                
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ            
+ǝslǝ        
+puǝ            
+puǝ                
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\   , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙[ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,]ʌ                    
+ǝslǝ                
+puǝ                    
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ,,Ɛ ʇsǝɥƆ,,) = ʇxǝ┴˙ǝɯɐu                        
+uǝɥʇ ,,ƐʇsǝɥƆ,, == ǝɯɐN˙ʌ ɟᴉ                    
+puǝ                    
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ,,ᄅ ʇsǝɥƆ,,) = ʇxǝ┴˙ǝɯɐu                        
+uǝɥʇ ,,ᄅʇsǝɥƆ,, == ǝɯɐN˙ʌ ɟᴉ                    
+puǝ                    
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ,,Ɩ ʇsǝɥƆ,,) = ʇxǝ┴˙ǝɯɐu                        
+uǝɥʇ ,,ƖʇsǝɥƆ,, == ǝɯɐN˙ʌ ɟᴉ                    
+(8ᄅ '98Ɩ '98Ɩ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                    
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu                    
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu                    
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu                    
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu                    
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu                    
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu                    
+,,ǝpoƆ,, = ʇuoℲ˙ǝɯɐu                    
+(llᴉq ',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol                    
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq                    
+ʌ = ǝǝuɹop∀˙llᴉq                    
+(0Ɛ 'Ɩ '00ᄅ 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq                    
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq                    
+ɹǝqɯnN ˙˙ ,dsƎǝɯɐN, = ǝɯɐN˙llᴉq                    
+(ʌ ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol                    
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ʇou ɟᴉ                
+uǝɥʇ (,,ʇsǝɥƆ,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ            
+uǝɥʇ ԀSƎʇsǝɥƆ ɟᴉ        
+uǝɥʇ (,,ʇsǝɥƆ,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ    
+()uoᴉʇɔunɟ)llɐɔd
+op (()uǝɹplᴉɥƆʇǝפ:(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+()dsƎʇsǝɥƆǝʇɐpd∩ uoᴉʇɔunɟ
+puǝ
+puǝ
+(puǝ
+puǝ    
+puǝ        
+()ʎoɹʇsǝp:(,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ            
+uǝɥʇ (,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ        
+ǝslǝ    
+puǝ        
+puǝ            
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\   , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙[,dsƎǝɯɐN,]ʌ                
+ǝslǝ            
+(8ᄅ '98Ɩ 'ㄥ9)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu                
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu                
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu                
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu                
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu                
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu                
+,,ǝpoƆ,, = ʇuoℲ˙ǝɯɐu                
+(llᴉq ',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol                
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq                
+ʌ = ǝǝuɹop∀˙llᴉq                
+(0Ɛ 'Ɩ '00ᄅ 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq                
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq                
+,dsƎǝɯɐN, = ǝɯɐN˙llᴉq                
+(ʌ ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol                
+uǝɥʇ (,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ʇou ɟᴉ            
+uǝɥʇ ,,ɐǝS,, =~ ǝɯɐN˙ʌ ɟᴉ        
+uǝɥʇ ԀSƎpuɐlsI ɟᴉ    
+()uoᴉʇɔunɟ)llɐɔd
+op (()uǝɹplᴉɥƆʇǝפ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+()ԀSƎpuɐlsIǝʇɐpd∩ uoᴉʇɔunɟ
+puǝ
+puǝ
+(puǝ
+puǝ    
+puǝ        
+()ʎoɹʇsǝp:(,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ            
+uǝɥʇ (,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ        
+ǝslǝ    
+puǝ        
+puǝ            
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\   , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙[,dsƎǝɯɐN,]ʌ                
+ǝslǝ            
+(ϛㄣᄅ 'ϛㄣᄅ '08)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu                
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu                
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu                
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu                
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu                
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu                
+,,ǝpoƆ,, = ʇuoℲ˙ǝɯɐu                
+(llᴉq ',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol                
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq                
+ʌ = ǝǝuɹop∀˙llᴉq                
+(0Ɛ 'Ɩ '00ᄅ 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq                
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq                
+,dsƎǝɯɐN, = ǝɯɐN˙llᴉq                
+(ʌ ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol                
+uǝɥʇ (,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ʇou ɟᴉ            
+uǝɥʇ ,,ʇsɐǝqɐǝS,, =~ ǝɯɐN˙ʌ ɟᴉ        
+uǝɥʇ ԀSƎsʇsɐǝqɐǝS ɟᴉ    
+()uoᴉʇɔunɟ)llɐɔd
+op (()uǝɹplᴉɥƆʇǝפ:sʇsɐǝqɐǝS˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+()ԀSƎsʇsɐǝqɐǝSǝʇɐpd∩ uoᴉʇɔunɟ
+puǝ
+puǝ
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+()ʎoɹʇsǝp:(ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ                
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ ɟᴉ            
+ǝslǝ        
+puǝ            
+(,%, ˙˙ (ɥʇlɐǝHxɐW˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ʌ / 00Ɩ * ɥʇlɐǝH˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ʌ)punoɹ ˙˙ , : ɥʇlɐǝHu\W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ , | , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴˙[ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,]pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ                
+ǝslǝ            
+puǝ                
+(ϛϛᄅ '0 '0)ʍǝu˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                    
+ǝslǝ                
+(0 '0 'ϛϛᄅ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝɯɐu                    
+uǝɥʇ ɯɐǝ┴˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ == ɯɐǝ┴˙ʌ ɟᴉ                
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ǝʞoɹʇSʇxǝ┴˙ǝɯɐu                
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐu                
+,do┴, = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ǝɯɐu                
+(0 'Ɩ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐu                
+(,W , ˙˙ (Ɛ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ - uoᴉʇᴉsoԀ˙pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ))punoɹ ˙˙ ,u\ , ˙˙ ǝɯɐN˙ʌ) = ʇxǝ┴˙ǝɯɐu                
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ǝɯɐu                
+,,ㄣƖǝzᴉS,, = ǝzᴉSʇuoℲ˙ǝɯɐu                
+,,ǝpoƆ,, = ʇuoℲ˙ǝɯɐu                
+(llᴉq ',lǝqɐ˥ʇxǝ┴,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐu lɐɔol                
+ǝnɹʇ = do┴uOsʎɐʍl∀˙llᴉq                
+pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ = ǝǝuɹop∀˙llᴉq                
+(0Ɛ 'Ɩ '00ᄅ 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙llᴉq                
+(0 'Ɩ '0)ʍǝu˙ƐɹoʇɔǝΛ = ʇǝsɟɟOsʇuǝʇxƎ˙llᴉq                
+ɹǝqɯnN ˙˙ ,dsƎǝɯɐN, = ǝɯɐN˙llᴉq                
+(pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ ',ᴉnפpɹɐoqllᴉq,)ʍǝu˙ǝɔuɐʇsuI = llᴉq lɐɔol                
+uǝɥʇ (ɹǝqɯnN ˙˙ ,dsƎǝɯɐN,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ ʇou puɐ (pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ʌ)lᴉusᴉ ʇou ɟᴉ            
+uǝɥʇ ɹǝʎɐlԀԀSƎ ɟᴉ        
+uǝɥʇ (ɹǝʇɔɐɹɐɥƆ˙ʌ)lᴉusᴉ ʇou ɟᴉ    
+()uoᴉʇɔunɟ)llɐɔd
+op (()uǝɹplᴉɥƆʇǝפ:,sɹǝʎɐlԀ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+()sɯɐɥƆɹǝʎɐlԀǝʇɐpd∩ uoᴉʇɔunɟ
+(000000Ɩ 'Ɩ)ɯopuɐɹ˙ɥʇɐɯ = ɹǝqɯnN
+puǝ
+(ϛ˙0 + (u)ɹǝqɯnuoʇ)ɹoolɟ˙ɥʇɐɯ uɹnʇǝɹ
+(u)punoɹ uoᴉʇɔunɟ lɐɔol
+puǝ
+(lᴉu == ƃuᴉɥʇ) uɹnʇǝɹ
+(ƃuᴉɥʇ)lᴉusᴉ uoᴉʇɔunɟ
+(puǝ
+puǝ    
+()ԀSƎpuɐlsIǝʇɐpd∩        
+()ʇᴉɐʍ˙ʞsɐʇ        
+op ԀSƎpuɐlsI ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+ǝnlɐʌ = ԀSƎpuɐlsI
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ԀSƎʇᴉnɹℲlᴉʌǝp˙פ‾ ',,puɐlsIԀSƎ,,)ǝlƃƃo┴:ƐƖǝƃɐd
+(puǝ
+puǝ    
+()dsƎɹǝʍolℲǝʇɐpd∩        
+()ʇᴉɐʍ˙ʞsɐʇ        
+op ԀSƎɹǝʍolℲ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+ǝnlɐʌ = ԀSƎɹǝʍolℲ
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ԀSƎʇᴉnɹℲlᴉʌǝp˙פ‾ ',,ɹǝʍolℲԀSƎ,,)ǝlƃƃo┴:ƐƖǝƃɐd
+(puǝ
+puǝ    
+()dsƎɟqǝʇɐpd∩        
+()ʇᴉɐʍ˙ʞsɐʇ        
+op ԀSƎʇᴉnɹℲlᴉʌǝp ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+ǝnlɐʌ = ԀSƎʇᴉnɹℲlᴉʌǝp
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ԀSƎʇᴉnɹℲlᴉʌǝp˙פ‾ ',,ʇᴉnɹℲlᴉʌǝpԀSƎ,,)ǝlƃƃo┴:ƐƖǝƃɐd
+(puǝ
+puǝ    
+()dsƎʇsǝɥƆǝʇɐpd∩        
+()ʇᴉɐʍ˙ʞsɐʇ        
+op ԀSƎʇsǝɥƆ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+ǝnlɐʌ = ԀSƎʇsǝɥƆ
+(ǝnlɐʌ)uoᴉʇɔunɟ 'dsƎʇsǝɥƆ˙פ‾ ',,ʇsǝɥƆԀSƎ,,)ǝlƃƃo┴:ƐƖǝƃɐd
+(puǝ
+puǝ
+puǝ    
+()sɯɐɥƆɹǝʎɐlԀǝʇɐpd∩        
+uǝɥʇ ɹǝʎɐlԀԀSƎ ɟᴉ    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+ǝnlɐʌ = ɹǝʎɐlԀԀSƎ
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɹǝʎɐlԀԀSƎ˙פ‾ ',,ɹǝʎɐlԀԀSƎ,,)ǝlƃƃo┴:ƐƖǝƃɐd
+(,,<<ԀSƎ>>,,)ɹoʇɐɹǝdǝS:ƐƖǝƃɐd
+
+(puǝ
+puǝ
+;(((ㄥɹ)ʇɹɐԀɯoɹℲdɹɥ˙ɹǝɥʇO˙(lᴉʇ∩˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)ǝɹᴉnbǝɹ)'uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙(ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ɹǝʌɹǝSǝʞoʌuI:ʇooɥSuoᴉʇɔunℲǝʇoɯǝɹ˙[unפuodɐǝMloo┴ʇɔǝlǝS]ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+;({ uᴉƃᴉɹOplɹoM‾˙ǝɔɐdsʞɹoʍ 'ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ } '(00Ɩ * ʇᴉun˙(d˙ǝɯɐɹℲƆ˙ǝlpuɐH˙looʇ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙(ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)'d˙ǝɯɐɹℲƆ˙ǝlpuɐH˙looʇ)ʍǝu˙ʎɐɹ)ʇsᴉ˥ǝɹouƃIɥʇᴉMʎɐɹuOʇɹɐԀpuᴉℲ:ǝɔɐdsʞɹoʍ = ㄥɹ
+[unפuodɐǝMloo┴ʇɔǝlǝS]ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = looʇ
+uǝɥʇ (ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ (unפuodɐǝMloo┴ʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ ʇoqɯᴉ∀ ɟᴉ
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:uʍopƖuoʇʇnq˙ǝsnoɯ
+()ǝsnoWʇǝפ:dl = ǝsnoɯ lɐɔol
+ɹǝʎɐlԀlɐɔo˥˙(,sɹǝʎɐlԀ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = dl lɐɔol
+[unƃ ʇoqɯᴉɐ]--
+(puǝ
+puǝ
+puǝ
+puǝ    
+uoᴉʇᴉsoԀ˙(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙(ɯɹɐℲdᴉʞSǝlqɐ┴sɹǝʎɐlԀll∀)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ = uoᴉʇᴉsoԀllᴉʞSʇoqɯᴉ∀        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙(ɯɹɐℲdᴉʞSǝlqɐ┴sɹǝʎɐlԀll∀)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙(ɯɹɐℲdᴉʞSǝlqɐ┴sɹǝʎɐlԀll∀)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙(ɯɹɐℲdᴉʞSǝlqɐ┴sɹǝʎɐlԀll∀)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (ɯɹɐℲdᴉʞSǝlqɐ┴sɹǝʎɐlԀll∀)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ    
+uǝɥʇ ʇoqɯᴉɐllᴉʞS ɟᴉ
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ
+puǝ
+puǝ    
+uoᴉʇᴉsoԀ˙(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙(ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ = uoᴉʇᴉsoԀllᴉʞSʇoqɯᴉ∀        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙(ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙(ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙(ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ    
+uǝɥʇ ʇoqɯᴉɐllᴉʞS ɟᴉ
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+[llᴉʞs ʇoqɯᴉɐ]--
+(puǝ
+puǝ
+puǝ
+puǝ    
+puǝ        
+ǝɯɐN˙ʌ = unפuodɐǝMloo┴ʇɔǝlǝS            
+uǝɥʇ (,,ʇooɥSuoᴉʇɔunℲǝʇoɯǝɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ        
+uǝɥʇ (,,loo┴,,)∀sI:ʌ ɟᴉ    
+op (()uǝɹplᴉɥƆʇǝפ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+puǝ
+puǝ    
+puǝ        
+ǝɯɐN˙ʌ = unפuodɐǝMloo┴ʇɔǝlǝS            
+uǝɥʇ (,,ʇooɥSuoᴉʇɔunℲǝʇoɯǝɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ        
+uǝɥʇ (,,loo┴,,)∀sI:ʌ ɟᴉ    
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+(˙˙˙)plo uɹnʇǝɹ
+puǝ
+puǝ
+puǝ    
+puǝ        
+((sƃɹɐ)ʞɔɐdun)plo uɹnʇǝɹ            
+uoᴉʇᴉsoԀllᴉʞSʇoqɯᴉ∀ = [ᄅ]sƃɹɐ            
+uǝɥʇ ʇoqɯᴉɐllᴉʞS ɟᴉ        
+uǝɥʇ ,,ǝslɐɟ,, =~ ([ᄅ]sƃɹɐ)ƃuᴉɹʇsoʇ puɐ ,,ǝnɹʇ,, =~ ([ᄅ]sƃɹɐ)ƃuᴉɹʇsoʇ ɟᴉ    
+uǝɥʇ ,,ʇuǝʌƎǝʇoɯǝɹ,, == ([Ɩ]sƃɹɐ)ƃuᴉɹʇsoʇ ɟᴉ
+uǝɥʇ ,,ɹǝʌɹǝSǝɹᴉℲ,, == (poɥʇǝɯ)ƃuᴉɹʇsoʇ ɟᴉ
+{ ˙˙˙ } = sƃɹɐ lɐɔol
+()poɥʇǝɯllɐɔǝɯɐuʇǝƃ = poɥʇǝɯ lɐɔol
+(˙˙˙)uoᴉʇɔunɟ)ǝɹnsolɔɔʍǝu = llɐɔǝɯɐu‾‾˙ƃƃ
+(ǝslɐɟ 'ƃƃ)ʎluopɐǝɹʇǝs
+llɐɔǝɯɐu‾‾˙ƃƃ = plo lɐɔol
+(ǝɯɐƃ)ǝlqɐʇɐʇǝɯʍɐɹʇǝƃ = ƃƃ lɐɔol
+
+(puǝ
+ǝnlɐʌ = ʇoqɯᴉɐllᴉʞS    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝslɐɟ ',,llᴉʞS ʇoqɯᴉ∀,,)ǝlƃƃo┴:ƐƖǝƃɐd
+(puǝ
+ǝnlɐʌ = ʇoqɯᴉ∀    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝslɐɟ ',,unפ ʇoqɯᴉ∀,,)ǝlƃƃo┴:ƐƖǝƃɐd
+(puǝ
+puǝ    
+puǝ        
+(puǝ            
+puǝ                
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[ɹǝʎɐlԀʇɔǝlǝS]sɹǝʎɐlԀ˙ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                    
+uǝɥʇ (ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd            
+uǝɥʇ doʇʇɹodǝlǝʇ ɟᴉ        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇɔǝɾqnSɐɹǝɯɐƆ˙ɐɹǝɯɐƆ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+ǝslɐɟ == sʎlԀǝʇɐʇɔǝdS lᴉʇun    
+pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙            
+(ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇɔǝɾqnSɐɹǝɯɐƆ˙ɐɹǝɯɐƆ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+(Ɩ˙)ʇᴉɐʍ        
+ʇɐǝdǝɹ    
+(ɹǝʎɐlԀʇɔǝlǝS)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ᄅɹld lɐɔol    
+pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = Ɩɹld lɐɔol    
+ǝnlɐʌ = sʎlԀǝʇɐʇɔǝdS    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'sʎlԀǝʇɐʇɔǝdS ',,ɹǝʎɐlԀ ǝʇɐʇɔǝdS,,)ǝlƃƃo┴:ƐƖǝƃɐd
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = doʇʇɹodǝlǝʇ    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'doʇʇɹodǝlǝʇ ',,ɹǝʎɐlԀ oʇ ʇɹodǝlǝ┴,,)ǝlƃƃo┴:ƐƖǝƃɐd
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+(ǝɯɐN˙ʌ)pp∀:doɹpɹǝʎɐlԀ                
+uǝɥʇ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ            
+uǝɥʇ ǝɯɐN˙ɹld =~ ǝɯɐN˙ʌ ɟᴉ        
+op ()uǝɹplᴉɥƆʇǝפ:sɹǝʇɔɐɹɐɥƆ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ 'ʇxǝu uᴉ ʌ 'ᴉ ɹoɟ    
+()ɹɐǝlƆ:doɹpɹǝʎɐlԀ    
+()uoᴉʇɔunɟ ',,ɥsǝɹɟǝɹ,,)uoʇʇnq:ƐƖǝƃɐd
+(puǝ
+ǝnlɐʌ = ɹǝʎɐlԀʇɔǝlǝS    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'sɹǝʎɐldʇǝƃ',,ɹǝʎɐlԀ ʇɔǝlǝS,,)uʍopdoɹp:ƐƖǝƃɐd = doɹpɹǝʎɐlԀ lɐɔol
+puǝ
+puǝ    
+puǝ        
+(ǝɯɐN˙ʌ 'qǝʍʇǝƃ)ʇɹǝsuᴉ˙ǝlqɐʇ            
+uǝɥʇ (,,loo┴,,)∀sI:ʌ ɟᴉ        
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹld)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ    
+puǝ    
+puǝ        
+(ǝɯɐN˙ʌ 'sɹǝʎɐldʇǝƃ)ʇɹǝsuᴉ˙ǝlqɐʇ            
+uǝɥʇ ǝɯɐN˙ɹld =~ ǝɯɐN˙ʌ ɟᴉ        
+op (()uǝɹplᴉɥƆʇǝפ:sɹǝʇɔɐɹɐɥƆ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ    
+op
+(,,<<ԀΛԀ>>,,)ɹoʇɐɹǝdǝS:ƐƖǝƃɐd    
+
+{} = qǝʍʇǝƃ lɐɔol
+{} = sɯǝʇᴉʇǝƃ lɐɔol
+{} = sɹǝʎɐldʇǝƃ lɐɔol
+;ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ɹld lɐɔol
+
+(puǝ
+(puǝ    
+puǝ        
+puǝ            
+puǝ                
+((69ㄣϛ09ϛ66ㄥ˙ㄣƐ6ᄅ- '8ㄥ0080ᄅƐƖㄣϛ˙ㄣƖƐ 'ϛㄥƐㄣ8ㄣ9ㄣƖ˙ㄥϛ0ϛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+uǝɥʇ ƐplɹoM ɟᴉǝslǝ                
+((ㄣ890ϛ˙Ɩ0ϛㄣ- 'ϛϛƐϛㄣ9˙0ϛᄅ 'ϛƐϛƐㄥ˙8Ɛㄣ9-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+uǝɥʇ ᄅplɹoM ɟᴉǝslǝ                
+puǝ                    
+((0Ɩ 'ϛ9 'ㄣ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙[,,Ɩ puɐlsI,,]suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                        
+uǝɥʇ (,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+((0Ɩ 'ϛ9 'ㄣ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙[,,ᄅ puɐlsI,,]suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                        
+uǝɥʇ (,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+((0Ɩ 'ϛ9 'ㄣ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙[,,Ɛ puɐlsI,,]suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                        
+uǝɥʇ (,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+((0Ɩ 'ϛ9 'ㄣ)ʍǝu˙ǝɯɐɹℲƆ  * ǝɯɐɹℲƆ˙[,,ㄣ puɐlsI,,]suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                        
+uǝɥʇ (,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+((0Ɩ 'ϛ9 'ㄣ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙[,,ϛ puɐlsI,,]suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                        
+uǝɥʇ (,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ ǝnɹʇ == ǝlqᴉsᴉΛ˙ɹǝɯᴉ┴˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙[,,ɹǝʎɐlԀlɐɔo˥,,](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+uǝɥʇ ǝɔɐlԀʇxǝNoʇn∀˙פ‾ ɟᴉ            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)llɐɔd    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+(puǝ                    
+ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ɐɹn∀llᴉʞ˙פ‾ ʇou lᴉʇun                        
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ							
+(0ϛ'0ϛ'0ϛ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+0 = ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ                            
+(ǝƃnɥ˙ɥʇɐɯ ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs                            
+(Ɩ˙)ʇᴉɐʍ˙ʞsɐʇ ʇɐǝdǝɹ                        
+()uoᴉʇɔunɟ)llɐɔd                    
+uǝɥʇ 00ㄣ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ  ɟᴉ                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ            
+uǝɥʇ ɐɹn∀llᴉʞ˙פ‾ ɟᴉ        
+op (0)ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+puǝ
+puǝ    
+puǝ        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+{            
+(spᴉɐɹʇɔǝlǝS˙פ‾)ƃuᴉɹʇsoʇ = [Ɛ]                
+',,ʇɔǝlǝS,, = [ᄅ]                
+',,ɔdNspᴉɐɹ,, = [Ɩ]                
+} = sƃɹɐ lɐɔol            
+puǝ            
+(,,uǝʞɐʍ∀,, ',,ɹǝuǝʞɐʍ∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ pǝuǝʞɐʍ∀oʇn∀˙פ‾ ɟᴉ            
+ǝslǝ        
+puǝ            
+(puǝ                
+puǝ                    
+(,,uǝʞɐʍ∀,, ',,ɹǝuǝʞɐʍ∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+uǝɥʇ pǝuǝʞɐʍ∀oʇn∀˙פ‾ ɟᴉ                    
+ǝslɐɟ == ǝlqᴉsᴉΛ˙ɹǝɯᴉ┴˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou ɹo (,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou ɹo (,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou ɹo (,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou ɹo (,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou lᴉʇun                    
+puǝ                        
+(,,uǝʞɐʍ∀,, ',,ɹǝuǝʞɐʍ∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ pǝuǝʞɐʍ∀oʇn∀˙פ‾ ɟᴉ                        
+puǝ                        
+puǝ                            
+ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo spᴉɐɹoʇn∀˙פ‾ ʇou lᴉʇun                                
+()sʇuᴉoſʞɐǝɹq:ʌ                                    
+0 = ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+uǝɥʇ 00ㄣ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ ǝnɹʇ == ǝlqᴉsᴉΛ˙ɹǝɯᴉ┴˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ spᴉɐɹoʇn∀˙פ‾ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                        
+puǝ                        
+puǝ                            
+((0Ɩ 'ϛ9 'ㄣ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙[,,Ɩ puɐlsI,,]suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                                
+puǝ                                
+()doʇS:uǝǝʍʇɯɹɐℲ                                    
+uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                
+uǝɥʇ 0ϛƐ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉǝslǝ                            
+(ǝɯɐɹℲƆ˙(,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                
+uǝɥʇ 0ϛƐ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                            
+(z˙ǝɯɐɹℲƆ˙(,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'09 'x˙ǝɯɐɹℲƆ˙(,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙(,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ (,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                        
+puǝ                            
+((0Ɩ 'ϛ9 'ㄣ)ʍǝu˙ǝɯɐɹℲƆ* ǝɯɐɹℲƆ˙[,,ᄅ puɐlsI,,]suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                                
+puǝ                                
+()doʇS:uǝǝʍʇɯɹɐℲ                                    
+uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                
+uǝɥʇ 0ϛƐ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉǝslǝ                            
+(ǝɯɐɹℲƆ˙(,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                
+uǝɥʇ 0ϛƐ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                            
+(z˙ǝɯɐɹℲƆ˙(,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'09 'x˙ǝɯɐɹℲƆ˙(,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙(,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ (,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                        
+puǝ                            
+((0Ɩ 'ϛ9 'ㄣ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙[,,Ɛ puɐlsI,,]suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                                
+puǝ                                
+()doʇS:uǝǝʍʇɯɹɐℲ                                    
+uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                
+uǝɥʇ 0ϛƐ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉǝslǝ                            
+(ǝɯɐɹℲƆ˙(,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                
+uǝɥʇ 0ϛƐ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                            
+(z˙ǝɯɐɹℲƆ˙(,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'09 'x˙ǝɯɐɹℲƆ˙(,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙(,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ (,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                        
+puǝ                            
+((0Ɩ 'ϛ9 'ㄣ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙[,,ㄣ puɐlsI,,]suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                                
+puǝ                                
+()doʇS:uǝǝʍʇɯɹɐℲ                                    
+uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                
+uǝɥʇ 0ϛƐ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉǝslǝ                            
+(ǝɯɐɹℲƆ˙(,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                
+uǝɥʇ 0ϛƐ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                            
+(z˙ǝɯɐɹℲƆ˙(,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'09 'x˙ǝɯɐɹℲƆ˙(,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙(,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ (,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                        
+puǝ                            
+((0Ɩ 'ϛ9 'ㄣ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙[,,ϛ puɐlsI,,]suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                                
+puǝ                                
+()doʇS:uǝǝʍʇɯɹɐℲ                                    
+uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                
+uǝɥʇ 0ϛƐ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉǝslǝ                            
+(ǝɯɐɹℲƆ˙(,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                
+uǝɥʇ 0ϛƐ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                            
+(z˙ǝɯɐɹℲƆ˙(,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'09 'x˙ǝɯɐɹℲƆ˙(,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙(,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ (,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                        
+uǝɥʇ ǝslɐɟ == ǝlqᴉsᴉΛ˙ɹǝɯᴉ┴˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                        
+()ʇᴉɐʍ˙ʞsɐʇ                        
+ʇɐǝdǝɹ                    
+()uoᴉʇɔunɟ)llɐɔd                
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ɹǝɯᴉ┴˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉǝslǝ            
+(0)ʇᴉɐʍ                
+puǝ                
+(ɹoʇɔǝʇǝpʞɔᴉlƆ˙uᴉɐW˙uoʇʇnq˙ᄅuoɯɯnSpᴉɐɹ˙[,,ǝlʇsɐƆ ʇɐoq,,]dɐW˙ǝɔɐdsʞɹoM)ɹoʇɔǝʇǝpʞɔᴉlɔǝɹᴉɟ                    
+uǝɥʇ ƐplɹoM ɟᴉǝslǝ                
+(ɹoʇɔǝʇǝpʞɔᴉlƆ˙uᴉɐW˙uoʇʇnq˙ᄅuoɯɯnSpᴉɐɹ˙puɐlsIǝlɔɹᴉƆ˙dɐW˙ǝɔɐdsʞɹoM)ɹoʇɔǝʇǝpʞɔᴉlɔǝɹᴉɟ                    
+uǝɥʇ ᄅplɹoM ɟᴉ                
+uǝɥʇ ǝslɐɟ == ǝlqᴉsᴉΛ˙ɹǝɯᴉ┴˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,dᴉɥɔoɹɔᴉW lɐᴉɔǝdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,dᴉɥɔoɹɔᴉW lɐᴉɔǝdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ            
+uǝɥʇ (,,Ɩ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ᄅ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,Ɛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ㄣ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ϛ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:suoᴉʇɐɔo˥˙[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,dᴉɥɔoɹɔᴉW lɐᴉɔǝdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,dᴉɥɔoɹɔᴉW lɐᴉɔǝdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ        
+uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ʇou puɐ spᴉɐɹoʇn∀˙פ‾ ɟᴉ    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+
+(puǝ
+ǝnlɐʌ = pǝuǝʞɐʍ∀oʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'pǝuǝʞɐʍ∀oʇn∀˙פ‾ ',,pǝuǝʞɐʍ∀ oʇn∀,,)ǝlƃƃo┴:8ǝƃɐd
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = ǝɔɐlԀʇxǝNoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝɔɐlԀʇxǝNoʇn∀˙פ‾ ',,ǝɔɐlԀ ʇxǝN oʇn∀,,)ǝlƃƃo┴:8ǝƃɐd
+(puǝ
+ǝnlɐʌ = ɐɹn∀llᴉʞ˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɐɹn∀llᴉʞ˙פ‾ ',,ɐɹn∀ llᴉʞ,,)ǝlƃƃo┴:8ǝƃɐd
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = spᴉɐɹoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'spᴉɐɹoʇn∀˙פ‾ ',,spᴉɐɹ oʇn∀,,)ǝlƃƃo┴:8ǝƃɐd
+(puǝ
+ǝnlɐʌ = spᴉɐɹʇɔǝlǝS˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'spᴉɐɹʇɔǝlǝS',,spᴉɐɹ ʇɔǝlǝS,,)uʍopdoɹp:8ǝƃɐd
+
+(,,️⚔,,)ɹoʇɐɹǝdǝS:8ǝƃɐd
+{,,ɥƃnop,,',,xᴉuǝoɥԀ :pɹᴉq,,',,puɐS,,',,ɐɥppnq :uɐɯnH,,',,ɐɯƃɐW,,',,ǝlqɯnɹ,,',,ƃuᴉɹʇS,,',,ʞɹɐp,,',,ʇɥƃᴉ˥,,',,ǝʞɐnQ,,',,ǝɔI,,',,ǝɯɐlℲ,,} = spᴉɐɹʇɔǝlǝS lɐɔol
+(puǝ
+puǝ
+puǝ    
+(puǝ        
+puǝ            
+((,,ʇᴉnɹℲ pɹɐdoǝ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ pɹɐdoǝ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,pɹɐdoǝ˥-pɹɐdoǝ˥,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ pɹɐdoǝ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ pɹɐdoǝ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+',,uoƃɐɹp-uoƃɐɹp,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ loɹʇuoƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ loɹʇuoƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,loɹʇuoƆ-loɹʇuoƆ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ loɹʇuoƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ loɹʇuoƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ɯouǝΛ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɯouǝΛ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ɯouǝΛ-ɯouǝΛ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ɯouǝΛ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɯouǝΛ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ʍopɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ʍopɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ʍopɐɥS-ʍopɐɥS,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ʍopɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ʍopɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ɥƃnop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɥƃnop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ɥƃnop-ɥƃnop,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ɥƃnop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɥƃnop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ʎʇᴉʌɐɹפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ʎʇᴉʌɐɹפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ʎʇᴉʌɐɹפ-ʎʇᴉʌɐɹפ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ʎʇᴉʌɐɹפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ʎʇᴉʌɐɹפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ʍɐԀ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+ɹo (,,ʇᴉnɹℲ ʍɐԀ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ʍɐԀ-ʍɐԀ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ʍɐԀ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ʍɐԀ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ǝlqɯnɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝlqɯnɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ǝlqɯnɹ-ǝlqɯnɹ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ǝlqɯnɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝlqɯnɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ xᴉuǝoɥԀ :pɹᴉq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ xᴉuǝoɥԀ :pɹᴉq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,xᴉuǝoɥԀ :pɹᴉq-pɹᴉq,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ xᴉuǝoɥԀ :pɹᴉq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ xᴉuǝoɥԀ :pɹᴉq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ƃuᴉɹʇS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ƃuᴉɹʇS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ƃuᴉɹʇS-ƃuᴉɹʇS,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ƃuᴉɹʇS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ƃuᴉɹʇS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ɐɥppnq :uɐɯnH-uɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɐɥppnq :uɐɯnH-uɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ɐɥppnq :uɐɯnH-uɐɯnH,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ɐɥppnq :uɐɯnH-uɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɐɥppnq :uɐɯnH-uɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ǝʞɐnQ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝʞɐnQ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ǝʞɐnQ-ǝʞɐnQ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ǝʞɐnQ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝʞɐnQ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ɹoop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɹoop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ɹoop-ɹoop,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ɹoop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɹoop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ɐɯƃɐW,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+ɹo (,,ʇᴉnɹℲ ɐɯƃɐW,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ɐɯƃɐW-ɐɯƃɐW,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ɐɯƃɐW,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɐɯƃɐW,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ɹǝᴉɹɹɐq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɹǝᴉɹɹɐq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ɹǝᴉɹɹɐq-ɹǝᴉɹɹɐq,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ɹǝᴉɹɹɐq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɹǝᴉɹɹɐq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ɹǝqqnɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɹǝqqnɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ɹǝqqnɹ-ɹǝqqnɹ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ɹǝqqnɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ɹǝqqnɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ǝʌo˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝʌo˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ǝʌo˥-ǝʌo˥,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ǝʌo˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝʌo˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ʇɥƃᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ʇɥƃᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ʇɥƃᴉ˥-ʇɥƃᴉ˥,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ʇɥƃᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ʇɥƃᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ puoɯɐᴉp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ puoɯɐᴉp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,puoɯɐᴉp-puoɯɐᴉp,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ puoɯɐᴉp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ puoɯɐᴉp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ǝʌᴉʌǝɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝʌᴉʌǝɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ǝʌᴉʌǝɹ-ǝʌᴉʌǝɹ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ǝʌᴉʌǝɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝʌᴉʌǝɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ʞɹɐp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ʞɹɐp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ʞɹɐp-ʞɹɐp,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ʞɹɐp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ʞɹɐp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ puɐS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ puɐS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,puɐS-puɐS,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ puɐS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ puɐS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ǝɔI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝɔI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ǝɔI-ǝɔI,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ǝɔI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝɔI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ uoɔlɐℲ :pɹᴉq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ uoɔlɐℲ :pɹᴉq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,uoɔlɐℲ :pɹᴉq-pɹᴉq,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ uoɔlɐℲ :pɹᴉq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ uoɔlɐℲ :pɹᴉq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ǝɯɐlℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝɯɐlℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ǝɯɐlℲ-ǝɯɐlℲ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ǝɯɐlℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝɯɐlℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ uᴉdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ uᴉdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,uᴉdS-uᴉdS,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ uᴉdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ uᴉdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ǝʞoɯS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝʞoɯS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ǝʞoɯS-ǝʞoɯS,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ǝʞoɯS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝʞoɯS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ olᴉʞ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ olᴉʞ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,olᴉʞ-olᴉʞ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ olᴉʞ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ olᴉʞ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ƃuᴉɹdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ƃuᴉɹdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ƃuᴉɹdS-ƃuᴉɹdS,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ƃuᴉɹdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ƃuᴉɹdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ doɥƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ doɥƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,doɥƆ-doɥƆ,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ doɥƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ doɥƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ ǝʞᴉdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝʞᴉdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,ǝʞᴉdS-ǝʞᴉdS,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ ǝʞᴉdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ ǝʞᴉdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+puǝ            
+((,,ʇᴉnɹℲ qɯoq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ qɯoq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+',,qɯoq-qɯoq,, ',,ʇᴉnɹℲǝɹoʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ (,,ʇᴉnɹℲ qɯoq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇᴉnɹℲ qɯoq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+()ʇᴉɐʍ˙ʞsɐʇ            
+()uoᴉʇɔunɟ)llɐɔd        
+uǝɥʇ sʇᴉnɹℲǝɹoʇSoʇn∀˙פ‾ ɟᴉ    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+puǝ    
+puǝ        
+(puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+ʇᴉnɹℲ‾ƃuᴉɹq‾oʇn∀˙פ‾ ʇou ɹo Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ǝlpuɐH˙ʌ) lᴉʇun (ǝɯɐɹℲƆ˙ǝlpuɐH˙ʌ)oʍʇ ()ʇᴉɐʍ ʇɐǝdǝɹ                            
+ǝslǝ                        
+ʇᴉnɹℲ‾ƃuᴉɹq‾oʇn∀˙פ‾ ʇou ɹo Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ǝlpuɐH˙ʌ) lᴉʇun (ǝɯɐɹℲƆ˙ǝlpuɐH˙ʌ)oʍʇ ()ʇᴉɐʍ ʇɐǝdǝɹ                            
+ʇᴉnɹℲ‾ƃuᴉɹq‾oʇn∀˙פ‾ ʇou ɹo Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ǝlpuɐH˙ʌ) lᴉʇun ((0'0ϛ'0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ǝlpuɐH˙ʌ)ssɐdʎq ()ʇᴉɐʍ ʇɐǝdǝɹ                            
+((0'0ϛ'0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ǝlpuɐH˙ʌ)ssɐdʎq                            
+uǝɥʇ 00ϛƖ =< ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ǝlpuɐH˙ʌ) ɟᴉ                        
+ uǝɥʇ (,,ʇᴉnɹℲ,,'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs puɐ (,,loo┴,,)∀sI:ʌ ɟᴉ                    
+op (()uǝɹplᴉɥƆʇǝפ:(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                
+()uoᴉʇɔunɟ)llɐɔd            
+uǝɥʇ ʇᴉnɹℲ‾ƃuᴉɹq‾oʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+ǝnlɐʌ = sʇᴉnɹℲǝɹoʇSoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'sʇᴉnɹℲǝɹoʇSoʇn∀˙פ‾ ',,doɹp⅋sʇᴉnɹℲ ǝɹoʇS oʇn∀,,)ǝlƃƃo┴:ㄥǝƃɐd
+(puǝ
+ǝnlɐʌ = sʇᴉnɹℲǝɹoʇSoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'sʇᴉnɹℲǝɹoʇSoʇn∀˙פ‾ ',,sʇᴉnɹℲ ǝɹoʇS oʇn∀,,)ǝlƃƃo┴:ㄥǝƃɐd
+
+(puǝ
+puǝ    
+puǝ        
+(,,ʎnq,, ',,uᴉsnoƆ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ sʇᴉnɹℲɯopuɐɹʎnqoʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+ǝnɹʇ = ǝlqᴉsᴉΛ˙doɥSʇᴉnɹℲ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔol˙sɹǝʎɐlԀ˙ǝɯɐƃ
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+{
+,,sʇᴉnɹℲʇǝפ,, = [Ɩ]    
+} = sƃɹɐ lɐɔol
+()uoᴉʇɔunɟ ',,doɥS ʇᴉnɹℲ lᴉʌǝp,,)uoʇʇnq:ㄥǝƃɐd
+
+(puǝ
+(,,ʎnq,, ',,uᴉsnoƆ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ ',,sʇᴉnɹℲ ɯopuɐɹ ʎnq,,)uoʇʇnq:ㄥǝƃɐd
+(puǝ
+ǝnlɐʌ = sʇᴉnɹℲɯopuɐɹʎnqoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'sʇᴉnɹℲɯopuɐɹʎnqoʇn∀˙פ‾ ',,sʇᴉnɹℲ ɯopuɐɹ oʇn∀,,)ǝlƃƃo┴:ㄥǝƃɐd
+(puǝ
+ǝnlɐʌ =  ʇᴉnɹℲ‾ƃuᴉɹq‾oʇn∀˙פ‾     
+(ǝnlɐʌ)uoᴉʇɔunɟ ' ʇᴉnɹℲ‾ƃuᴉɹq‾oʇn∀˙פ‾',,ʇᴉnɹℲƃuᴉɹq,,)ǝlƃƃo┴:ㄥǝƃɐd
+
+(,,��,,)ɹoʇɐɹǝdǝS:ㄥǝƃɐd
+puǝ
+,,ʇsɐℲ,, = ʞɔɐʇʇ∀‾ʇsɐℲ‾ʇɔǝlǝS˙פ‾
+ǝslǝ
+,,ʍolS,, = ʞɔɐʇʇ∀‾ʇsɐℲ‾ʇɔǝlǝS˙פ‾
+uǝɥʇ ʎɹǝʇsɐWʇᴉnɹℲɯɹɐℲoʇn∀˙פ‾ ɹo ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙פ‾ ɟᴉ
+
+(puǝ
+ǝnlɐʌ = ℲllᴉʞS˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ℲllᴉʞS˙פ‾',,Ⅎ llᴉʞS,,)ǝlƃƃo┴:9ǝƃɐd
+
+(puǝ
+ǝnlɐʌ = ΛllᴉʞS˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ΛllᴉʞS˙פ‾ ',,Λ llᴉʞS,,)ǝlƃƃo┴:9ǝƃɐd
+
+(puǝ
+ǝnlɐʌ = ƆllᴉʞS˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ƆllᴉʞS˙פ‾ ',,Ɔ llᴉʞS,,)ǝlƃƃo┴:9ǝƃɐd
+
+(puǝ
+ǝnlɐʌ = XllᴉʞS˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'XllᴉʞS˙פ‾ ',,X llᴉʞS,,)ǝlƃƃo┴:9ǝƃɐd
+(puǝ
+ǝnlɐʌ = ZllᴉʞS˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ZllᴉʞS˙פ‾ ',,Z llᴉʞS,,)ǝlƃƃo┴:9ǝƃɐd
+(,,ʇsᴉ˥ llᴉʞS,,)lǝqɐ˥:9ǝƃɐd
+
+(puǝ
+ǝnlɐʌ = sWɥʇlɐǝH˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'ϛᄅ'00Ɩ'Ɩ',,(%) ʇ∀ llᴉʞ,,)ɹǝpᴉlS:9ǝƃɐd
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ    
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+()sƃuᴉʇʇǝSǝʌɐS
+ǝnlɐʌ = ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙sƃuᴉʇʇǝS˙פ‾
+ǝnlɐʌ = ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ',,ʎɹǝʇsɐW unפ oʇn∀,,)ǝlƃƃo┴:9ǝƃɐd
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+ ((ɟɟO)ʞɔɐdun)ɹǝʌɹǝSǝɹᴉℲ:ʇuǝʌƎǝʇoɯǝɹ˙[ǝnlɐΛ˙ʇᴉnɹℲlᴉʌǝp˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ]ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+{                
+lᴉu = [Ɩ]                    
+} = ɟɟO lɐɔol               
+ǝslǝ            
+((uO)ʞɔɐdun)ɹǝʌɹǝSǝɹᴉℲ:ʇuǝʌƎǝʇoɯǝɹ˙[ǝnlɐΛ˙ʇᴉnɹℲlᴉʌǝp˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ]ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+{                
+uoᴉʇᴉsoԀ˙soԀʇᴉnɹℲ = [Ɩ]                    
+} = uO lɐɔol                
+uǝɥʇ ʎɹǝʇsɐWʇᴉnɹℲɯɹɐℲoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+puǝ
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ    
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ
+()sƃuᴉʇʇǝSǝʌɐS
+ǝnlɐʌ = ʎɹǝʇsɐWʇᴉnɹℲɯɹɐℲoʇn∀˙sƃuᴉʇʇǝS˙פ‾
+ǝnlɐʌ = ʎɹǝʇsɐWʇᴉnɹℲɯɹɐℲoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʎɹǝʇsɐWʇᴉnɹℲɯɹɐℲoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ',,ʎɹǝʇsɐW ʇᴉnɹℲ oʇn∀,,)ǝlƃƃo┴:9ǝƃɐd
+ϛᄅ = sWɥʇlɐǝH˙פ‾
+(,,✨,,)ɹoʇɐɹǝdǝS:9ǝƃɐd
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+((ϛ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                        
+ (ϛ˙0)ʇᴉɐʍ ([Ɩ]()ʞɔǝɥƆʇsǝnQ '[ㄣ]()ʞɔǝɥƆʇsǝnQ ',,ʇsǝnQʇɹɐʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ᄅ˙0)ʇᴉɐʍ                        
+ǝslɐɟ = ɯɹɐℲqoWƃuᴉɹq                        
+uǝɥʇ Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙[ᄅ]()ʞɔǝɥƆʇsǝnQ) ɟᴉ                    
+([ᄅ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+((0ᄅ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+ǝslǝ                            
+((0'0Ɛ'0ᄅ-)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ ϛ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                            
+((0ᄅ-'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ ㄣ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                            
+((0'0Ɛ'0ᄅ)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ Ɛ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                            
+((0ᄅ-'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ ᄅ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                            
+((0ᄅ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ Ɩ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉ                            
+ǝslǝ                        
+puǝ                            
+(ϛ˙0)ʇᴉɐʍ                                
+(ǝɯɹɐℲƆʇǝS)ʇuᴉɹd                                
+
+Ɩ + ǝɯɹɐℲƆʇǝS  = ǝɯɹɐℲƆʇǝS                                
+puǝ                                
+(ǝɯɹɐℲƆʇǝS)ʇuᴉɹd                                    
+Ɩ = ǝɯɹɐℲƆʇǝS                                    
+uǝɥʇ [ㄥ]()ʞɔǝɥƆʇsǝnQ# =< ǝɯɹɐℲƆʇǝS ɟᴉǝslǝ                                
+(ǝɯɹɐℲƆʇǝS)ʇuᴉɹd                                    
+Ɩ = ǝɯɹɐℲƆʇǝS                                    
+uǝɥʇ ,, == ǝɯɹɐℲƆʇǝS ɹo lᴉu == ǝɯɹɐℲƆʇǝS ɟᴉ                                
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙[ǝɯɹɐℲƆʇǝS][ㄥ]()ʞɔǝɥƆʇsǝnQ) ɟᴉ                            
+((ϛ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [ǝɯɹɐℲƆʇǝS][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                            
+uǝɥʇ ǝɯɐɹℲƆ‾oʇn∀˙פ‾ ɟᴉ                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎu∩                        
+ǝslɐɟ = llᴉʞSǝs∩˙פ‾                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ʇou ɹo ǝslɐɟ == ǝlqᴉsᴉΛ˙ƆʇsǝnQ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ʎɹǝʇsɐWʇᴉnɹℲɯɹɐℲoʇn∀˙פ‾ ʇou lᴉʇun                                    
+puǝ                                        
+puǝ                                            
+puǝ                                                
+((ᄅㄥ9'08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                    
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                    
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                
+ǝnɹʇ = ɯɹɐℲqoWƃuᴉɹq                                                
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ                                                
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                
+(09'09'09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                                
+ǝslɐɟ = llᴉʞSǝs∩˙פ‾                                                
+ǝslǝ                                            
+Ɩ = ʎɔuǝɹɐds∀uɐɹ┴˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                
+ǝnɹʇ = ɯɹɐℲqoWƃuᴉɹq                                                
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ                                                
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                                
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                
+(09'09'09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                
+()ʇᴉnɹℲxolqdᴉnbƎ                                                
+ǝnɹʇ = llᴉʞSǝs∩˙פ‾                                                
+ uǝɥʇ 00Ɩ/sWɥʇlɐǝH˙sƃuᴉʇʇǝS˙פ‾ * ɥʇlɐǝHxɐW˙pᴉouɐɯnH˙ʌ => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɟᴉ                                            
+ǝslǝ                                        
+(,,ʇsǝnQuopuɐq∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+uǝɥʇ ([9]()ʞɔǝɥƆʇsǝnQ 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ʇou ɟᴉ                                        
+()ʇᴉɐʍ˙ʞsɐʇ ʇɐǝdǝɹ                                    
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ                                
+uǝɥʇ [Ɛ]()ʞɔǝɥƆʇsǝnQ == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                        
+uǝɥʇ ([Ɛ]()ʞɔǝɥƆʇsǝnQ)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ƆʇsǝnQ ɟᴉ                
+puǝ                
+(,,ʇsǝnQuopuɐq∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+uǝɥʇ ([9]()ʞɔǝɥƆʇsǝnQ 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ʇou ɟᴉ                
+uǝɥʇ ʎɹǝʇsɐWʇᴉnɹℲɯɹɐℲoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ƆʇsǝnQ lɐɔol        
+ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = lǝʌǝ˥ʎW lɐɔol        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+ 
+
+(puǝ
+puǝ    
+puǝ        
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+puǝ    
+puǝ        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:ʇooɥSuoᴉʇɔunℲǝʇoɯǝɹ˙[unפuodɐǝMʇɔǝlǝS˙פ‾]ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+{            
+ʇɹɐԀʇooɹpᴉouɐɯnHuoW = [ᄅ]                
+'unפʎɹǝʇsɐWllᴉʞSuoᴉʇᴉsoԀ = [Ɩ]                
+} = sƃɹɐ lɐɔol            
+uǝɥʇ ǝnɹʇ == llᴉʞSǝs∩˙פ‾ puɐ ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+(,,ʇsǝnQuopuɐq∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ ([9]()ʞɔǝɥƆʇsǝnQ 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ʇou ɟᴉ            
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝɹᴉℲ:ʇuǝʌƎǝʇoɯǝɹ˙[unפuodɐǝMʇɔǝlǝS˙פ‾]ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+            
+{            
+unפʎɹǝʇsɐWllᴉʞSuoᴉʇᴉsoԀ = [Ɩ]                
+} = sƃɹɐ lɐɔol            
+(uoᴉʇᴉsoԀ˙(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʇsǝsolɔ 'd˙ǝɯɐɹℲƆ˙ɯɐƆ)ʇ∀ʞool            
+(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)ℲℲuoWʞɔǝɥƆ = ʇsǝsolɔ lɐɔol            
+uǝɥʇ ǝnɹʇ == llᴉʞSǝs∩˙פ‾ puɐ ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+puǝ
+ʇsǝɹɐǝu uɹnʇǝɹ    
+puǝ    
+puǝ        
+puǝ            
+ʌ = ʇsǝɹɐǝu                
+ǝɔuɐʇsᴉp = ʇsɐl                
+uǝɥʇ 00ϛƖ > ǝɔuɐʇsᴉp puɐ ǝnɹʇ == ʎǝʞʇoɥ puɐ ssssᴉʌ puɐ ʇsɐl > ǝɔuɐʇsᴉp ɟᴉ            
+ǝpnʇᴉuƃɐɯ˙(soԀǝsnoɯ - soԀɔɔ∀) = ǝɔuɐʇsᴉp lɐɔol            
+(ᄅ / ʎ˙ǝzᴉSʇɹodʍǝᴉΛ˙ɐɹǝɯɐƆʇuǝɹɹnƆ˙ǝɔɐdsʞɹoʍ 'ᄅ / x˙ǝzᴉSʇɹodʍǝᴉΛ˙ɐɹǝɯɐƆʇuǝɹɹnƆ˙ǝɔɐdsʞɹoʍ)ʍǝu˙ᄅɹoʇɔǝΛ = soԀǝsnoɯ lɐɔol            
+(ʎ˙soԀǝ 'x˙soԀǝ)ʍǝu˙ᄅɹoʇɔǝΛ = soԀɔɔ∀ lɐɔol            
+(uoᴉʇᴉsoԀ˙[ʇɹɐd‾ƃɹʇ]ʌ)ʇuᴉoԀʇɹodʍǝᴉΛo┴plɹoM:ɐɹǝɯɐƆʇuǝɹɹnƆ˙ǝɔɐdsʞɹoʍ = ssssᴉʌ 'soԀǝ lɐɔol            
+uǝɥʇ [Ɛ]()ʞɔǝɥƆʇsǝnQ == ǝɯɐN˙ʌ ɟᴉ        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ    
+ǝƃnɥ˙ɥʇɐɯ = ʇsɐl lɐɔol    
+lᴉu = ʇsǝɹɐǝu lɐɔol    
+(ʇɹɐd‾ƃɹʇ)ℲℲuoWʞɔǝɥƆ uoᴉʇɔunɟ
+puǝ
+(ǝʎǝ 'ʇǝƃɹɐʇ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ɯɐƆ    
+(ǝʎǝ 'ʇǝƃɹɐʇ)ʇ∀ʞool uoᴉʇɔunɟ
+ǝnɹʇ = ʎǝʞʇoɥ lɐɔol
+ɐɹǝɯɐƆʇuǝɹɹnƆ˙ǝɔɐdsʞɹoʍ = ɯɐƆ lɐɔol
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+((ϛ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                        
+(ϛ˙0)ʇᴉɐʍ ([Ɩ]()ʞɔǝɥƆʇsǝnQ '[ㄣ]()ʞɔǝɥƆʇsǝnQ ',,ʇsǝnQʇɹɐʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ᄅ˙0)ʇᴉɐʍ                        
+ǝslɐɟ = ɯɹɐℲqoWƃuᴉɹq                        
+uǝɥʇ Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙[ᄅ]()ʞɔǝɥƆʇsǝnQ) ɟᴉ                    
+([ᄅ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+((0ᄅ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+ǝslǝ                            
+((0'0Ɛ'0ᄅ-)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ ϛ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                            
+((0ᄅ-'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ ㄣ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                            
+((0'0Ɛ'0ᄅ)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ Ɛ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                            
+((0ᄅ-'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ ᄅ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                            
+((0ᄅ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ Ɩ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉ                            
+ǝslǝ                        
+puǝ                            
+(ϛ˙0)ʇᴉɐʍ                                
+(ǝɯɹɐℲƆʇǝS)ʇuᴉɹd                                
+
+Ɩ + ǝɯɹɐℲƆʇǝS  = ǝɯɹɐℲƆʇǝS                                
+puǝ                                
+(ǝɯɹɐℲƆʇǝS)ʇuᴉɹd                                    
+Ɩ = ǝɯɹɐℲƆʇǝS                                    
+uǝɥʇ [ㄥ]()ʞɔǝɥƆʇsǝnQ# =< ǝɯɹɐℲƆʇǝS ɟᴉǝslǝ                                
+(ǝɯɹɐℲƆʇǝS)ʇuᴉɹd                                    
+Ɩ = ǝɯɹɐℲƆʇǝS                                    
+uǝɥʇ ,, == ǝɯɹɐℲƆʇǝS ɹo lᴉu == ǝɯɹɐℲƆʇǝS ɟᴉ                                
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙[ǝɯɹɐℲƆʇǝS][ㄥ]()ʞɔǝɥƆʇsǝnQ) ɟᴉ                            
+ ((ϛ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [ǝɯɹɐℲƆʇǝS][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ                            
+uǝɥʇ ǝɯɐɹℲƆ‾oʇn∀˙פ‾ ɟᴉ                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎu∩                        
+ǝslɐɟ = llᴉʞSǝs∩˙פ‾                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ʇou ɹo ǝslɐɟ == ǝlqᴉsᴉΛ˙ƆʇsǝnQ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙פ‾ ʇou lᴉʇun                                    
+puǝ                                        
+puǝ                                            
+((ᄅㄥ9'08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                            
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                            
+ǝnɹʇ = ɯɹɐℲqoWƃuᴉɹq                                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ                                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+(0ᄅƖ'0ᄅƖ'0ᄅƖ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+ǝslɐɟ = llᴉʞSǝs∩˙פ‾                                            
+ǝslǝ                                        
+(unפuodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                            
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+ǝnɹʇ = ɯɹɐℲqoWƃuᴉɹq                                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ                                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+(0ᄅƖ'0ᄅƖ'0ᄅƖ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                            
+ǝnɹʇ = llᴉʞSǝs∩˙פ‾                                            
+ uǝɥʇ 00Ɩ/sWɥʇlɐǝH˙sƃuᴉʇʇǝS˙פ‾ * ɥʇlɐǝHxɐW˙pᴉouɐɯnH˙ʌ => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɟᴉ                                        
+uoWsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                        
+()ʇᴉɐʍ˙ʞsɐʇ ʇɐǝdǝɹ                                    
+uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = unפʎɹǝʇsɐWllᴉʞSuoᴉʇᴉsoԀ                                    
+ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = ʇɹɐԀʇooɹpᴉouɐɯnHuoW                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ                                
+uǝɥʇ [Ɛ]()ʞɔǝɥƆʇsǝnQ == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                        
+uǝɥʇ ([Ɛ]()ʞɔǝɥƆʇsǝnQ)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ƆʇsǝnQ ɟᴉ                
+puǝ                
+(,,ʇsǝnQuopuɐq∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+uǝɥʇ ([9]()ʞɔǝɥƆʇsǝnQ 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ʇou ɟᴉ                
+uǝɥʇ ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ƆʇsǝnQ lɐɔol        
+ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = lǝʌǝ˥ʎW lɐɔol        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+ǝɯɐN˙ʌ = unפuodɐǝMʇɔǝlǝS˙פ‾                    
+uǝɥʇ ,,unפ,, == dᴉ┴loo┴˙ʌ ɟᴉ                
+uǝɥʇ (,,loo┴,,)∀sI:ʌ ɟᴉ            
+  op (()uǝɹplᴉɥƆʇǝפ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ        
+puǝ        
+puǝ            
+puǝ                
+ǝɯɐN˙ʌ = unפuodɐǝMʇɔǝlǝS˙פ‾                    
+uǝɥʇ ,,unפ,, == dᴉ┴loo┴˙ʌ ɟᴉ                
+uǝɥʇ (,,loo┴,,)∀sI:ʌ ɟᴉ            
+  op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+(ǝnɹʇ'ʇƃ)ʎluopɐǝɹʇǝs    
+(puǝ    
+((sƃɹɐ)ʞɔɐdun)plo uɹnʇǝɹ        
+puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+unפʎɹǝʇsɐWllᴉʞSuoᴉʇᴉsoԀ = [Ɛ]sƃɹɐ                            
+uǝɥʇ llᴉʞSǝs∩˙פ‾ puɐ ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙פ‾  ɟᴉ                        
+uǝɥʇ ,,Ԁ∀┴,, == ([ᄅ]sƃɹɐ)ƃuᴉɹʇsoʇ ɟᴉ                    
+uǝɥʇ ,,ɹɐʇᴉnפ lnoS,, == unפuodɐǝMʇɔǝlǝS˙פ‾ ɟᴉ                
+uǝɥʇ unפuodɐǝMʇɔǝlǝS˙פ‾ ɟᴉ            
+ uǝɥʇ ,,ɹǝʌɹǝSǝʞoʌuI,, == ()poɥʇǝɯllɐɔǝɯɐuʇǝƃ ɟᴉ        
+{˙˙˙} = sƃɹɐ lɐɔol        
+(˙˙˙)uoᴉʇɔunɟ)ǝɹnsolɔɔʍǝu = llɐɔǝɯɐu‾‾˙ʇƃ    
+(ǝslɐɟ'ʇƃ)ʎluopɐǝɹʇǝs    
+llɐɔǝɯɐu‾‾˙ʇƃ = plo lɐɔol    
+(ǝɯɐƃ)ǝlqɐʇɐʇǝɯʍɐɹʇǝƃ = ʇƃ lɐɔol    
+()uoᴉʇɔunɟ)uʍɐds
+
+puǝ
+puǝ
+puǝ
+ǝnɹʇ = ǝʇǝldɯoƆpoפ    
+uǝɥʇ ,,o┴d∩ ǝnɹʇ,, == (0ϛƐ ',,uɐɯnɥpoפ,,)uodɐǝMʎɹǝʇsɐWʞɔǝɥƆ ɟᴉ
+
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+{
+,,uɐɯnɥpoפʎnq,, = [Ɩ]    
+} = sƃɹɐ lɐɔol
+uǝɥʇ ǝslɐɟ == ǝʇǝldɯoƆpoפ ɟᴉ
+puǝ
+puǝ
+ǝnɹʇ = ǝʇǝldɯoƆɥʇɐǝp    
+uǝɥʇ ,,o┴d∩ ǝnɹʇ,, == (00ㄣ ',,dǝʇS ɥʇɐǝp,,)uodɐǝMʎɹǝʇsɐWʞɔǝɥƆ ɟᴉ
+
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+{
+,,dǝʇSɥʇɐǝpʎnq,, = [Ɩ]    
+} = sƃɹɐ lɐɔol
+uǝɥʇ ǝslɐɟ == ǝʇǝldɯoƆɥʇɐǝp ɟᴉ
+(ϛ˙)ʇᴉɐʍ
+puǝ
+puǝ
+ǝnɹʇ = ǝʇǝldɯoƆʞɹɐɥS    
+uǝɥʇ ,,o┴d∩ ǝnɹʇ,, == (00ㄣ ',,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,,)uodɐǝMʎɹǝʇsɐWʞɔǝɥƆ ɟᴉ
+
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+{
+,,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,, = [Ɩ]    
+} = sƃɹɐ lɐɔol
+uǝɥʇ ǝslɐɟ == ǝʇǝldɯoƆʞɹɐɥS ɟᴉ
+(ϛ˙)ʇᴉɐʍ
+puǝ
+puǝ
+ǝnɹʇ = ǝʇǝldɯoƆlɐ┴    
+uǝɥʇ ,,o┴d∩ ǝnɹʇ,, == (00ㄣ ',,uolɐ┴ uoƃɐɹp,,)uodɐǝMʎɹǝʇsɐWʞɔǝɥƆ ɟᴉ
+
+(,,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ
+uǝɥʇ ǝslɐɟ == ǝʇǝldɯoƆlɐ┴ ɟᴉ
+(ϛ˙)ʇᴉɐʍ
+puǝ
+puǝ
+ǝnɹʇ = ǝʇǝldɯoƆʍɐlƆƎ    
+uǝɥʇ ,,o┴d∩ ǝnɹʇ,, == (00ㄣ ',,ʍɐlƆ ɔᴉɹʇɔǝlƎ,,)uodɐǝMʎɹǝʇsɐWʞɔǝɥƆ ɟᴉ
+
+;(Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴
+;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol
+;,,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,, = Ɩ‾ƃuᴉɹʇs lɐɔol
+uǝɥʇ ǝslɐɟ == ǝʇǝldɯoƆʍɐlƆƎ ɟᴉ
+(ϛ˙)ʇᴉɐʍ
+puǝ
+puǝ
+ǝnɹʇ = ǝʇǝldɯoƆdnS    
+uǝɥʇ ,,o┴d∩ ǝnɹʇ,, == (00ㄣ ',,uɐɯnɥɹǝdnS,,)uodɐǝMʎɹǝʇsɐWʞɔǝɥƆ ɟᴉ
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+{
+,,uɐɯnɥɹǝdnSʎnq,, = [Ɩ]    
+} = sƃɹɐ lɐɔol
+uǝɥʇ ǝslɐɟ == ǝʇǝldɯoƆdnS ɟᴉ
+()ɯɹɐℲǝǝlǝWll∀ʇǝפ uoᴉʇɔunɟ
+(puǝ
+(puǝ
+puǝ
+(puǝ    
+puǝ        
+puǝ            
+((Ɩ8ㄥϛㄥƖ0Ɛ60˙ϛᄅㄥᄅ- '99ㄥ6ϛᄅƖㄣϛ86˙Ɛᄅㄣ 'ϛᄅ9ϛ9ᄅᄅᄅ8˙ㄣㄣƐϛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                
+ǝslǝ            
+puǝ                
+puǝ                    
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                            
+ǝslɐɟ = qoWƃuᴉɹq                        
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ɹǝƃƃɐpʞɹɐpoʇn∀˙פ‾ ʇou lᴉʇun                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                            
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                            
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                            
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+puǝ                            
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                            
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                            
+puǝ                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                
+()ʇᴉɐʍ˙ʞsɐʇ                                
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                            
+ǝnɹʇ = qoWƃuᴉɹq                            
+()ʇᴉɐʍ˙ʞsɐʇ                            
+ʇɐǝdǝɹ                        
+uǝɥʇ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,lǝpoW,,)∀sI:ʌ puɐ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ɯɹoℲ ǝnɹ┴ ɐɹpuᴉ‾dᴉɹ,, == ǝɯɐN˙ʌ ɹo ,,ɯɹoℲ ǝnɹ┴ ɐɹpuᴉ‾dᴉɹ,,) == ǝɯɐN˙ʌ ɟᴉ                    
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                
+uǝɥʇ (,,ɯɹoℲ ǝnɹ┴ ɐɹpuᴉ‾dᴉɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+uǝɥʇ ɹǝƃƃɐpʞɹɐpoʇn∀˙פ‾ ɟᴉ        
+()uoᴉʇɔunɟ)llɐɔd    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+puǝ
+()ʇᴉɐʍ˙ʞsɐʇ
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ
+()ʇᴉɐʍ˙ʞsɐʇ
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ
+ǝnlɐʌ = ɹǝƃƃɐpʞɹɐpoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɹǝƃƃɐpʞɹɐpoʇn∀˙פ‾ ',,ɹǝƃƃɐp ʞɹɐp oʇn∀,,)ǝlƃƃo┴:ϛǝƃɐd
+(puǝ
+(puǝ
+puǝ
+puǝ    
+puǝ        
+((ϛㄥ896ㄥƖㄣƐ0˙66Ɩ 'ㄣㄣƐᄅ0666Ɛㄥ6˙899 'ϛᄅƖ8ᄅƐ98˙Ɛㄣϛϛ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ            
+ǝslǝ        
+puǝ            
+puǝ                
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                    
+ǝslɐɟ = qoWƃuᴉɹq                    
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ʍoqʇuǝdɹǝSoʇn∀˙פ‾ ʇou lᴉʇun                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                        
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                        
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                        
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                        
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                        
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                        
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                        
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                        
+puǝ                        
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                        
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                        
+puǝ                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                            
+()ʇᴉɐʍ˙ʞsɐʇ                            
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                        
+ǝnɹʇ = qoWƃuᴉɹq                        
+()ʇᴉɐʍ˙ʞsɐʇ                        
+ʇɐǝdǝɹ                    
+uǝɥʇ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,lǝpoW,,)∀sI:ʌ puɐ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ssǝɹdɯƎ puɐlsI,, == ǝɯɐN˙ʌ ɹo ,,ssǝɹdɯƎ puɐlsI,,) == ǝɯɐN˙ʌ ɟᴉ                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ            
+uǝɥʇ (,,ssǝɹdɯƎ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ        
+uǝɥʇ ʍoqʇuǝdɹǝSoʇn∀˙פ‾ ɟᴉ    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+puǝ
+()ʇᴉɐʍ˙ʞsɐʇ
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ
+()ʇᴉɐʍ˙ʞsɐʇ
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ
+ǝnlɐʌ = ʍoqʇuǝdɹǝSoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʍoqʇuǝdɹǝSoʇn∀˙פ‾ ',,ʍoq ʇuǝdɹǝS oʇn∀,,)ǝlƃƃo┴:ϛǝƃɐd
+
+(puǝ
+(puǝ
+puǝ
+puǝ    
+puǝ        
+((ϛᄅƖƐϛㄣ6Ɛ6ㄥ˙6ㄣϛ6- 'ᄅƐ8ᄅ06ᄅƖ6ㄥ˙68Ɛ 'Ɛ9ϛ9ㄥ6ϛㄥ8˙8Ɛᄅ0Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ            
+ǝslǝ        
+puǝ            
+puǝ                
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                    
+ǝslɐɟ = qoWƃuᴉɹq                    
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo pɹoʍSɐʇᴉɥsn┴oʇn∀˙פ‾ ʇou lᴉʇun                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                        
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                        
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                        
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                        
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                        
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                        
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                        
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                        
+puǝ                        
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                        
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                        
+puǝ                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                            
+()ʇᴉɐʍ˙ʞsɐʇ                            
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                        
+ǝnɹʇ = qoWƃuᴉɹq                        
+()ʇᴉɐʍ˙ʞsɐʇ                        
+ʇɐǝdǝɹ                    
+uǝɥʇ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,lǝpoW,,)∀sI:ʌ puɐ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ɐɯƃuo˥,, == ǝɯɐN˙ʌ ɹo ,,ɐɯƃuo˥,,) == ǝɯɐN˙ʌ ɟᴉ                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ            
+uǝɥʇ (,,ɐɯƃuo˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ        
+uǝɥʇ pɹoʍSɐʇᴉɥsn┴oʇn∀˙פ‾ ɟᴉ    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+puǝ
+()ʇᴉɐʍ˙ʞsɐʇ
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ
+()ʇᴉɐʍ˙ʞsɐʇ
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ
+ǝnlɐʌ = pɹoʍSɐʇᴉɥsn┴oʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'pɹoʍSɐʇᴉɥsn┴oʇn∀˙פ‾ ',,pɹoʍS ɐʇᴉɥsn┴ oʇn∀,,)ǝlƃƃo┴:ϛǝƃɐd
+
+(puǝ
+(puǝ
+puǝ
+puǝ    
+puǝ        
+ɐɯɐ⅄oʇn∀ ʇou ɹo (,,ɐɯɐ⅄,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ lᴉʇun            
+(ɹoʇɔǝʇǝpʞɔᴉlƆ˙ǝlpuɐH˙ɐuɐʇɐʞpǝlɐǝS˙llɐɟɹǝʇɐM˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ɹoʇɔǝʇǝpʞɔᴉlɔǝɹᴉɟ                
+()ʇᴉɐʍ˙ʞsɐʇ                
+ʇɐǝdǝɹ            
+uǝɥʇ 0Ɛ =< (,,ssǝɹƃoɹԀ,, ',,ɹǝʇunHǝʇᴉlƎ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ        
+uǝɥʇ pɹoʍSɐɯɐ⅄oʇn∀˙פ‾ ɟᴉ    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds
+ǝnlɐʌ = pɹoʍSɐɯɐ⅄oʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'pɹoʍSɐɯɐ⅄oʇn∀˙פ‾ ',,pɹoʍS ɐɯɐ⅄ oʇn∀,,)ǝlƃƃo┴:ϛǝƃɐd
+
+(puǝ
+(puǝ
+puǝ
+(puǝ    
+puǝ        
+puǝ            
+((ϛ8ᄅㄥƖᄅϛ8ᄅ8ㄥ˙0ƖƖ- 'ㄣϛ8ㄥ8ㄣƐᄅᄅ9ϛ˙ᄅᄅ 'ϛㄥƐ609˙Ɛ8ᄅϛ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                
+ǝslǝ            
+puǝ                
+puǝ                    
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                        
+ǝslɐɟ = qoWƃuᴉɹq                        
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ɹǝpuɐʌɐƆoʇn∀˙פ‾ ʇou lᴉʇun                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                            
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                            
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                            
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+puǝ                            
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                            
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                            
+puǝ                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                
+()ʇᴉɐʍ˙ʞsɐʇ                                
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                            
+ǝnɹʇ = qoWƃuᴉɹq                            
+()ʇᴉɐʍ˙ʞsɐʇ                            
+ʇɐǝdǝɹ                        
+uǝɥʇ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,lǝpoW,,)∀sI:ʌ puɐ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ǝʇɐɹᴉԀ lnɟᴉʇnɐǝq,,) == ǝɯɐN˙ʌ ɟᴉ                    
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                
+uǝɥʇ (,,ǝʇɐɹᴉԀ lnɟᴉʇnɐǝq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+uǝɥʇ ɹǝpuɐʌɐƆoʇn∀˙פ‾ ɟᴉ        
+()uoᴉʇɔunɟ)llɐɔd    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+puǝ
+()ʇᴉɐʍ˙ʞsɐʇ
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ
+()ʇᴉɐʍ˙ʞsɐʇ
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ
+ǝnlɐʌ = ɹǝpuɐʌɐƆoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɹǝpuɐʌɐƆoʇn∀˙פ‾ ',,ɹǝpuɐʌɐƆ oʇn∀,,)ǝlƃƃo┴:ϛǝƃɐd
+
+(puǝ
+(puǝ
+puǝ
+(puǝ    
+puǝ        
+puǝ            
+((ϛᄅƖƐ0ᄅ8˙ᄅㄥ86- 'ϛ08ㄣㄥƖ6ㄥᄅ6Ɛ˙0ㄣƐ 'ϛㄥ8Ɩㄥ98ƐƖ˙ᄅƖϛᄅƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                
+uǝɥʇ ᄅ == (,,uǝzᴉʇᴉƆ,, ',,ssǝɹƃoɹԀʇsǝnQuǝzᴉʇᴉƆ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ 008Ɩ =< ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ            
+puǝ                
+puǝ                    
+(,,uǝzᴉʇᴉƆ,, ',,ssǝɹƃoɹԀʇsǝnQuǝzᴉʇᴉƆ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ϛ˙Ɩ)ʇᴉɐʍ                        
+uǝɥʇ ㄣ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛᄅƖ8ㄥϛᄅ68ㄣ˙ϛㄥ9ㄥ- 'ㄣ9Ɩ8ƖƖ96Ɛ0ㄣ˙ᄅƐƐ 'ϛㄥ8Ɩㄥ98˙ƐㄣㄣᄅƖ-)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                    
+((ϛᄅƖ8ㄥϛᄅ68ㄣ˙ϛㄥ9ㄥ- 'ㄣ9Ɩ8ƖƖ96Ɛ0ㄣ˙ᄅƐƐ 'ϛㄥ8Ɩㄥ98˙ƐㄣㄣᄅƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+ǝslǝ                
+puǝ                    
+((ϛㄥƐㄣ8680ᄅ˙ϛᄅᄅ8- 'ㄥㄣϛϛ89ᄅϛㄥㄥᄅ˙Ɩᄅㄣ '8Ɛㄣ8ㄣ9688˙ㄣㄥƐƐƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ǝslɐɟ = qoWƃuᴉɹq                                
+ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇɐHɹǝǝʇǝʞsnWoʇn∀˙פ‾ ʇou lᴉʇun                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+puǝ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝnɹʇ = qoWƃuᴉɹq                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = ʇuɐɥdǝlƎǝɯɐɹℲƆplO                                
+uǝɥʇ ,,ʇuɐɥdǝlƎ uᴉɐʇdɐƆ,, == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                        
+uǝɥʇ (,,ʇuɐɥdǝlƎ uᴉɐʇdɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ (,,ʇuɐɥdǝlƎ uᴉɐʇdɐƆ,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs puɐ ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+uǝɥʇ ǝslɐɟ == ssoqpǝllᴉʞ˙(,,ssǝɹƃoɹԀʇsǝnQuǝzᴉʇᴉƆ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ 008Ɩ =< ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ            
+puǝ                
+puǝ                    
+(Ɩ ',,ʇsǝnQuǝzᴉʇᴉƆ,,',,ʇsǝnQʇɹɐʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ϛ˙Ɩ)ʇᴉɐʍ                        
+uǝɥʇ 0Ɛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - (ϛᄅƖ8ㄥϛᄅ68ㄣ˙ϛㄥ9ㄥ- 'ㄣ9Ɩ8ƖƖ96Ɛ0ㄣ˙ᄅƐƐ 'ϛㄥ8Ɩㄥ98˙ƐㄣㄣᄅƖ-)ʍǝu˙ƐɹoʇɔǝΛ) ɟᴉ                    
+((ϛᄅƖ8ㄥϛᄅ68ㄣ˙ϛㄥ9ㄥ- 'ㄣ9Ɩ8ƖƖ96Ɛ0ㄣ˙ᄅƐƐ 'ϛㄥ8Ɩㄥ98˙ƐㄣㄣᄅƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+ǝslǝ                
+puǝ                    
+((ϛㄥƐ60ƖㄥƐϛϛ˙ㄣ96ㄥ- 'ᄅ0Ɩ6ᄅ866Ɩ68˙ϛᄅㄣ '8Ɛㄣ8ㄣƖᄅϛㄣ˙90ᄅƐƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ǝslɐɟ = qoWƃuᴉɹq                                
+ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇɐHɹǝǝʇǝʞsnWoʇn∀˙פ‾ ʇou lᴉʇun                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+puǝ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝnɹʇ = qoWƃuᴉɹq                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+uǝɥʇ ,,ǝʇɐɹᴉԀ ʇsǝɹoℲ,, == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                        
+uǝɥʇ (,,ǝʇɐɹᴉԀ ʇsǝɹoℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ (,,0ϛ,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs puɐ (,,ǝʇɐɹᴉԀ ʇsǝɹoℲ,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                
+uǝɥʇ ǝslɐɟ == sʇᴉpuɐqpǝllᴉʞ˙(,,ssǝɹƃoɹԀʇsǝnQuǝzᴉʇᴉƆ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ 008Ɩ =< ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+uǝɥʇ ʇɐHɹǝǝʇǝʞsnWoʇn∀˙פ‾ ɟᴉ        
+()uoᴉʇɔunɟ)llɐɔd    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+puǝ
+()ʇᴉɐʍ˙ʞsɐʇ
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ
+()ʇᴉɐʍ˙ʞsɐʇ
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ
+ǝnlɐʌ = ʇɐHɹǝǝʇǝʞsnWoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʇɐHɹǝǝʇǝʞsnWoʇn∀˙פ‾ ',,ʇɐH ɹǝǝʇǝʞsnW oʇn∀,,)ǝlƃƃo┴:ϛǝƃɐd
+
+(puǝ
+(puǝ
+puǝ
+(puǝ    
+puǝ        
+puǝ            
+puǝ                
+puǝ                    
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                        
+ǝslɐɟ = qoWƃuᴉɹq                        
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo spɹoʍSʎppnqoʇn∀˙פ‾ ʇou lᴉʇun                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                            
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                            
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                            
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+puǝ                            
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                            
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                            
+puǝ                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                
+()ʇᴉɐʍ˙ʞsɐʇ                                
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                            
+ǝnɹʇ = qoWƃuᴉɹq                            
+()ʇᴉɐʍ˙ʞsɐʇ                            
+ʇɐǝdǝɹ                        
+uǝɥʇ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,lǝpoW,,)∀sI:ʌ puɐ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,uǝǝnQ ǝʞɐƆ,, == ǝɯɐN˙ʌ ɹo ,,uǝǝnQ ǝʞɐƆ,,) == ǝɯɐN˙ʌ ɟᴉ                    
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                
+uǝɥʇ (,,uǝǝnQ ǝʞɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+uǝɥʇ spɹoʍSʎppnqoʇn∀˙פ‾ ɟᴉ        
+()uoᴉʇɔunɟ)llɐɔd    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+puǝ
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ
+ǝnlɐʌ = spɹoʍSʎppnqoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'spɹoʍSʎppnqoʇn∀˙פ‾ ',,spɹoʍS ʎppnq oʇn∀,,)ǝlƃƃo┴:ϛǝƃɐd
+(puǝ    
+puǝ        
+(puǝ            
+puǝ                
+(puǝ                    
+puǝ                        
+puǝ                            
+((ƐƖ8ᄅ8Ɛᄅ6Ɩㄥ˙ϛϛ99 '8ㄣƖㄥㄥ06ᄅㄣ08˙ϛƖƐ 'ϛᄅ9068ㄥ˙ㄣᄅϛ6-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                
+ǝslǝ                            
+puǝ                                
+puǝ                                    
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                        
+ǝslɐɟ = qoWƃuᴉɹq                                        
+ʍollɐHssoqɯɹɐℲoʇn∀˙פ‾ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ lᴉʇun                                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                            
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                            
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                            
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                            
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                            
+(09'09'09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+puǝ                                            
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ,ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ,ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                            
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                            
+ǝnɹʇ = qoWƃuᴉɹq                                            
+()ʇᴉɐʍ˙ʞsɐʇ ʇɐǝdǝɹ                                        
+uǝɥʇ (,,ɹǝdɐǝɹ lnoS,, ' ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                                    
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                                
+uǝɥʇ (,,ɹǝdɐǝɹ lnoS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                            
+uǝɥʇ ʍollɐHssoqɯɹɐℲoʇn∀˙פ‾ ɟᴉ                        
+()uoᴉʇɔunɟ)llɐɔd                    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ                
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ            
+()ʇᴉɐʍ˙ʞsɐʇ            
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ            
+()ʇᴉɐʍ˙ʞsɐʇ            
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ        
+ǝnlɐʌ = ʍollɐHssoqɯɹɐℲoʇn∀˙פ‾        
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʍollɐHssoqɯɹɐℲoʇn∀˙פ‾ ',,ǝɥʇʎɔS ʍollɐH oʇn∀,,)ǝlƃƃo┴:ϛǝƃɐd    
+(,,��,,)ɹoʇɐɹǝdǝS:ϛǝƃɐd
+
+ǝslɐɟ = ǝʇǝldɯoƆpoפ lɐɔol
+ǝslɐɟ = ǝʇǝldɯoƆɥʇɐǝp lɐɔol
+ǝslɐɟ = ǝʇǝldɯoƆʞɹɐɥS lɐɔol
+ǝslɐɟ = ǝʇǝldɯoƆlɐ┴ lɐɔol
+ǝslɐɟ = ǝʇǝldɯoƆʍɐlƆƎ lɐɔol
+ǝslɐɟ = ǝʇǝldɯoƆdnS lɐɔol
+(puǝ
+puǝ    
+puǝ        
+(puǝ            
+puǝ                
+puǝ                    
+ ʇuǝɹɐԀ˙ʌ ʇou ɹo ǝslɐɟ == ssoqll∀oʇn∀˙פ‾ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ lᴉʇun                        
+(ǝƃnɥ˙ɥʇɐɯ ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs                            
+puǝ                            
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+ uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ ʇou ɟᴉ                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                            
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                            
+ǝnɹʇ = qoWƃuᴉɹq                            
+()ʇᴉɐʍ˙ʞsɐʇ                            
+ʇɐǝdǝɹ                        
+uǝɥʇ                    
+ ,,ʎɹoʇɔɐℲ,, == ǝɯɐN˙ʌ ɹo ,,ssoq uoʇǝlǝʞS pǝsɹnƆ,, == ǝɯɐN˙ʌ ɹo ,,ƃuᴉʞ ɥƃnop,, == ǝɯɐN˙ʌ ɹo ,,ǝɔuᴉɹԀ ǝʞɐƆ,, == ǝɯɐN˙ʌ ɹo ,,ssoq ʞʍɐɥᴉW,, == ǝɯɐN˙ʌ ɹo ,,ɐɹpuᴉ dᴉɹ,, == ǝɯɐN˙ʌ ɹo ,,ɹǝdɐǝɹ lnoS,, == ǝɯɐN˙ʌ ɹo ,,uᴉɐʇdɐƆ pǝsɹnƆ,, == ǝɯɐN˙ʌ ɹo ,,ɹǝpɹO,, == ǝɯɐN˙ʌ ɹo ,,pɹɐǝqʎǝɹפ,, == ǝɯɐN˙ʌ ɹo ,,uǝǝnQ ǝʞɐƆ,, == ǝɯɐN˙ʌ ɹo ,,ǝʇɐɹᴉԀ lnɟᴉʇnɐǝq,, == ǝɯɐN˙ʌ ɹo ,,ʇuɐɥdǝlƎ uᴉɐʇdɐƆ,, == ǝɯɐN˙ʌ ɹo ,,lɐɹᴉɯp∀ olᴉʞ,, == ǝɯɐN˙ʌ ɹo ,,ssǝɹdɯƎ puɐlsI,, == ǝɯɐN˙ʌ ɹo ,,ǝuoʇS,, == ǝɯɐN˙ʌ ɹo ,,pɹɐǝqʞɹɐp,, == ǝɯɐN˙ʌ ɹo ,,ɹǝdǝǝʞ ǝpᴉ┴,, == ǝɯɐN˙ʌ ɹo ,,lɐɹᴉɯp∀ ǝɔI pǝuǝʞɐʍ∀,, == ǝɯɐN˙ʌ ɹo ,,lɐɹᴉɯp∀ ǝʞoɯS,, == ǝɯɐN˙ʌ ɹo ,,uɐʍS uop,, == ǝɯɐN˙ʌ ɹo ,,ɐʇᴉɾɐℲ,, == ǝɯɐN˙ʌ ɹo ,,ʎɯǝɹǝſ,, == ǝɯɐN˙ʌ ɹo ,,puoɯɐᴉp,, == ǝɯɐN˙ʌ ɹo ,,lɐɹᴉɯp∀ ǝɔI,, == ǝɯɐN˙ʌ ɹo ,,ɹǝdsʎM,, == ǝɯɐN˙ʌ ɹo ,,pɹo˥ uɐɯɥsᴉℲ,, == ǝɯɐN˙ʌ ɹo  ,,lɐɹᴉɯp∀ ɐɯƃɐW,, == ǝɯɐN˙ʌ ɹo ,,uɐʍS,, == ǝɯɐN˙ʌ ɹo ,,uǝpɹɐM ɟǝᴉɥƆ,, == ǝɯɐN˙ʌ ɹo ,,uǝpɹɐM,, == ǝɯɐN˙ʌ ɹo ,,ʇɹǝdxƎ ɹǝqɐS,, == ǝɯɐN˙ʌ ɹo ,,ʎqqoq,, == ǝɯɐN˙ʌ ɹo ,,ɹǝpɐǝ˥ qoW,, == ǝɯɐN˙ʌ ɹo ,,poפ ɹǝpunɥ┴,, == ǝɯɐN˙ʌ ɹo ,,ɹǝdsʎM,, == ǝɯɐN˙ʌ ɹo ,,ƃuᴉʞ ɐllᴉɹoפ ǝɥ┴,, == ǝɯɐN˙ʌ ɹo ,,ƃɹoqʎƆ,, == ǝɯɐN˙ʌ ɟᴉ                    
+op (()uǝɹplᴉɥƆʇǝפ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                
+()uoᴉʇɔunɟ)llɐɔd            
+uǝɥʇ ssoqll∀oʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ        
+ǝnlɐʌ = ssoqll∀oʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ssoqll∀oʇn∀˙פ‾ ',,ssoq ll∀ oʇn∀,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+puǝ        
+(puǝ            
+puǝ                
+puǝ                    
+((0 'ϛƐ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙(ssoqʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                        
+uǝɥʇ (ssoqʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ssoqɯɹɐℲoʇn∀˙פ‾ ʇou lᴉʇun                                
+(ǝƃnɥ˙ɥʇɐɯ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ ʇou ɟᴉ                                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝnɹʇ = qoWƃuᴉɹq                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ                            
+uǝɥʇ ssoqʇɔǝlǝS˙פ‾ == ǝɯɐN˙ʌ ɟᴉ                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                    
+uǝɥʇ (ssoqʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd            
+uǝɥʇ ssoqɯɹɐℲoʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = ssoqɯɹɐℲoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ssoqɯɹɐℲoʇn∀˙פ‾ ',,ssoq ɯɹɐℲ oʇn∀,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+puǝ        
+ (ǝɯɐN˙ʌ)pp∀:ǝɯɐNssoq        
+(ǝɯɐN˙ʌ 'ssoq)ʇɹǝsuᴉ˙ǝlqɐʇ        
+uǝɥʇ  ,,ʎɹoʇɔɐℲ,, == ǝɯɐN˙ʌ ɹo ,,ssoq uoʇǝlǝʞS pǝsɹnƆ,, == ǝɯɐN˙ʌ ɹo ,,ƃuᴉʞ ɥƃnop,, == ǝɯɐN˙ʌ ɹo ,,ǝɔuᴉɹԀ ǝʞɐƆ,, == ǝɯɐN˙ʌ ɹo ,,ssoq ʞʍɐɥᴉW,, == ǝɯɐN˙ʌ ɹo ,,ɐɹpuᴉ dᴉɹ,, == ǝɯɐN˙ʌ ɹo ,,ɹǝdɐǝɹ lnoS,, == ǝɯɐN˙ʌ ɹo ,,uᴉɐʇdɐƆ pǝsɹnƆ,, == ǝɯɐN˙ʌ ɹo ,,ɹǝpɹO,, == ǝɯɐN˙ʌ ɹo ,,pɹɐǝqʎǝɹפ,, == ǝɯɐN˙ʌ ɹo ,,uǝǝnQ ǝʞɐƆ,, == ǝɯɐN˙ʌ ɹo ,,ɐɯƃuo˥,, == ǝɯɐN˙ʌ ɹo ,,ǝʇɐɹᴉԀ lnɟᴉʇnɐǝq,, == ǝɯɐN˙ʌ ɹo ,,ʇuɐɥdǝlƎ uᴉɐʇdɐƆ,, == ǝɯɐN˙ʌ ɹo ,,lɐɹᴉɯp∀ olᴉʞ,, == ǝɯɐN˙ʌ ɹo ,,ssǝɹdɯƎ puɐlsI,, == ǝɯɐN˙ʌ ɹo ,,ǝuoʇS,, == ǝɯɐN˙ʌ ɹo ,,pɹɐǝqʞɹɐp,, == ǝɯɐN˙ʌ ɹo ,,ɹǝdǝǝʞ ǝpᴉ┴,, == ǝɯɐN˙ʌ ɹo ,,lɐɹᴉɯp∀ ǝɔI pǝuǝʞɐʍ∀,, == ǝɯɐN˙ʌ ɹo ,,lɐɹᴉɯp∀ ǝʞoɯS,, == ǝɯɐN˙ʌ ɹo ,,uɐʍS uop,, == ǝɯɐN˙ʌ ɹo ,,ɐʇᴉɾɐℲ,, == ǝɯɐN˙ʌ ɹo ,,ʎɯǝɹǝſ,, == ǝɯɐN˙ʌ ɹo ,,puoɯɐᴉp,, == ǝɯɐN˙ʌ ɹo ,,lɐɹᴉɯp∀ ǝɔI,, == ǝɯɐN˙ʌ ɹo ,,ɹǝdsʎM,, == ǝɯɐN˙ʌ ɹo ,,pɹo˥ uɐɯɥsᴉℲ,, == ǝɯɐN˙ʌ ɹo  ,,lɐɹᴉɯp∀ ɐɯƃɐW,, == ǝɯɐN˙ʌ ɹo ,,uɐʍS,, == ǝɯɐN˙ʌ ɹo ,,uǝpɹɐM ɟǝᴉɥƆ,, == ǝɯɐN˙ʌ ɹo ,,uǝpɹɐM,, == ǝɯɐN˙ʌ ɹo ,,ʇɹǝdxƎ ɹǝqɐS,, == ǝɯɐN˙ʌ ɹo ,,ʎqqoq,, == ǝɯɐN˙ʌ ɹo ,,ɹǝpɐǝ˥ qoW,, == ǝɯɐN˙ʌ ɹo ,,poפ ɹǝpunɥ┴,, == ǝɯɐN˙ʌ ɹo ,,ɹǝdsʎM,, == ǝɯɐN˙ʌ ɹo ,,ƃuᴉʞ ɐllᴉɹoפ ǝɥ┴,, == ǝɯɐN˙ʌ ɹo ,,ƃɹoqʎƆ,, == ǝɯɐN˙ʌ ɟᴉ        
+op (()uǝɹplᴉɥƆʇǝפ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ    
+()ɹɐǝlƆ:ǝɯɐNssoq
+()uoᴉʇɔunɟ',,ssoq ɥsǝɹɟǝɹ,,)uoʇʇnq:Ɩǝƃɐd
+(puǝ
+ǝnlɐʌ = ssoqʇɔǝlǝS˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ssoq',,ssoq ʇɔǝlǝS,,)uʍopdoɹp:Ɩǝƃɐd = ǝɯɐNssoq lɐɔol
+{} = ssoq lɐɔol
+ (,,<<ssoq>>,,)ɹoʇɐɹǝdǝS:Ɩǝƃɐd
+()ǝuᴉ˥:Ɩǝƃɐd
+(puǝ        
+(puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+((68ㄥ8ϛㄥᄅϛ609˙ƖƐƖ- 'Ɩ8ㄥ008ϛ69ϛㄥ˙9ϛ9 'Ɛ906Ɛ00ㄣϛƐ˙0Ɛϛㄣ)ʍǝu˙ǝɯɐɹℲƆ)oʍʇ                                    
+ǝslǝ                                
+puǝ                                    
+(,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+ɹo ǝslɐɟ == uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ lᴉʇun                                        
+puǝ                                            
+(ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'pIǝɔɐlԀ˙ǝɯɐƃ)ʇɹodǝlǝ┴:(,,ǝɔᴉʌɹǝSʇɹodǝlǝ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+uǝɥʇ                                             
+ǝnɹʇ == doH‾uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ puɐ (,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou                                                
+ɟᴉ                                            
+(Ɩ)ʇᴉɐʍ                                            
+(0 '0ϛ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙(,,ɹǝpuɐlsI ʇuɐᴉפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+= ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+ʇɐǝdǝɹ                                        
+ǝslǝ                                    
+(,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou                                            
+ɹo ǝslɐɟ == uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ lᴉʇun                                        
+(0 '0 'Ɛ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙(,,ɹǝpuɐlsI ʇuɐᴉפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+= ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+ʇɐǝdǝɹ                                        
+uǝɥʇ                                     
+(,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+ɟᴉ                                    
+uǝɥʇ (,,ɹǝpuɐlsI ʇuɐᴉפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                
+uǝɥʇ ƐplɹoM ɟᴉǝslǝ                            
+puǝ                                
+((9Ɩ6Ɛ˙ᄅϛ8ㄣ 'ᄅ0Ɩ6ㄥ0Ɩ˙88 'ϛ8ㄥ6ᄅ˙ƐƐϛϛ)ʍǝu˙ǝɯɐɹℲƆ)oʍʇ                                    
+ǝslǝ                                
+puǝ                                    
+(,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+ɹo ǝslɐɟ == uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ lᴉʇun                                        
+puǝ                                            
+(ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'pIǝɔɐlԀ˙ǝɯɐƃ)ʇɹodǝlǝ┴:(,,ǝɔᴉʌɹǝSʇɹodǝlǝ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+uǝɥʇ                                             
+ǝnɹʇ == doH‾uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ puɐ (,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou                                                
+ɟᴉ                                            
+(Ɩ)ʇᴉɐʍ                                                
+(0 '0ϛ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙(,,uᴉɐʇdɐƆ ʎǝllɐפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+ʇɐǝdǝɹ                                        
+ǝslǝ                                    
+(,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou                                            
+ɹo ǝslɐɟ == uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ lᴉʇun                                        
+(0 '0 'Ɛ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙(,,uᴉɐʇdɐƆ ʎǝllɐפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+= ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+ʇɐǝdǝɹ                                        
+uǝɥʇ                                     
+(,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+ɟᴉ                                    
+uǝɥʇ (,,uᴉɐʇdɐƆ ʎǝllɐפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                
+uǝɥʇ ƖplɹoM ɟᴉǝslǝ                            
+puǝ                                
+((9ᄅƖ6˙9ㄣᄅϛ- 'ㄥ99ϛㄥㄥ6˙ϛƖ '60ᄅ6Ɛ˙8ㄥㄣϛ-)ʍǝu˙ǝɯɐɹℲƆ)oʍʇ                                    
+ǝslǝ                                
+puǝ                                    
+(,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+ɹo ǝslɐɟ == uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ lᴉʇun                                        
+puǝ                                            
+(ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'pIǝɔɐlԀ˙ǝɯɐƃ)ʇɹodǝlǝ┴:(,,ǝɔᴉʌɹǝSʇɹodǝlǝ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+uǝɥʇ                                             
+ǝnɹʇ == doH‾uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ puɐ (,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou                                                
+ɟᴉ                                            
+(Ɩ)ʇᴉɐʍ                                                
+(0 '0ϛ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙(,,ǝʇɐɹᴉԀ ɐʌɐ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+ʇɐǝdǝɹ                                        
+ǝslǝ                                    
+(,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou                                            
+ɹo ǝslɐɟ == uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ lᴉʇun                                        
+(0 '0 'Ɛ)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙(,,ǝʇɐɹᴉԀ ɐʌɐ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+ʇɐǝdǝɹ                                        
+uǝɥʇ                                     
+(,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+ɟᴉ                                    
+uǝɥʇ (,,ǝʇɐɹᴉԀ ɐʌɐ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                
+uǝɥʇ ᄅplɹoM ɟᴉ                            
+ǝslǝ                        
+(ᄅ)ʇᴉɐʍ                            
+({,,uoᴉʇɐʌɹǝsqO xɐW ǝʌɐH no⅄,, = ʇxǝ┴',,uoᴉʇɐʌɹǝsqO,, = ǝlʇᴉ┴',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ 0009 =< ǝnlɐΛ˙snᴉpɐɹuoᴉsᴉΛ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+uǝɥʇ uoᴉʇɐʌɹǝsqOoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ɟᴉ                    
+op ()ʇᴉɐʍ ǝlᴉɥʍ                
+()uoᴉʇɔunɟ)llɐɔd        
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+ǝnlɐʌ = doH‾uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'doH‾uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾',,doH uoᴉʇɐʌɹǝsqO ɯɹɐℲ oʇn∀,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ ʇou ɹo (,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ lᴉʇun                
+puǝ                    
+(,,ϛ9x0,,)d∩ʎǝʞʇǝS:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ᄅ)ʇᴉɐʍ                        
+(,,ϛ9x0,,)uʍopʎǝʞʇǝS:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ϛ)ʇᴉɐʍ                        
+uǝɥʇ (,,lǝqɐ˥ǝƃɐɯI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ᴉnפuǝǝɹɔS˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou ɟᴉ                    
+()ʇᴉɐʍ˙ʞsɐʇ                    
+ʇɐǝdǝɹ                
+uǝɥʇ uoᴉʇɐʌɹǝsqOoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd    
+op ()ʇᴉɐʍ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ ()sƃuᴉʇʇǝSǝʌɐS    
+ǝnlɐʌ = uoᴉʇɐʌɹǝsqOoʇn∀˙sƃuᴉʇʇǝS˙פ‾    
+ǝnlɐʌ = uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'uoᴉʇɐʌɹǝsqOoʇn∀˙sƃuᴉʇʇǝS˙פ‾',,uoᴉʇɐʌɹǝsqO ɯɹɐℲ oʇn∀,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ    
+puǝ        
+(puǝ            
+((ǝnlɐΛ˙snᴉpɐɹuoᴉsᴉΛ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ɹoolɟ˙ɥʇɐɯ˙˙,, : lǝʌǝ˥ ǝƃuɐɹ uoᴉʇɐʌɹǝsqO,,)ʇǝS:ǝƃuɐɹuoᴉʇɐʌɹǝsqO                
+()uoᴉʇɔunɟ)llɐɔd            
+op ()ʇᴉɐʍ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds
+(,,˙˙˙,,)lǝqɐ˥:Ɩǝƃɐd = ǝƃuɐɹuoᴉʇɐʌɹǝsqO lɐɔol
+ (,,<<ᴉʞH uoᴉʇɐʌɹǝsqO>>,,)ɹoʇɐɹǝdǝS:Ɩǝƃɐd
+(puǝ
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʇǝƃɹɐ┴oʇ    
+(ǝnlɐʌ)uoᴉʇɔunɟ ',,ʇɹodǝlǝ┴ doʇS,,)uoʇʇnq:ㄣǝƃɐd
+ 
+(puǝ
+({Ɛ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI',,ɟɟO uɹn┴ ƃnq ɟI,, = ʇxǝ┴',,qnHɹoʇɔǝΛ,, = ǝlʇᴉ┴}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+ǝnlɐʌ = Ԁ┴ssɐdʎq˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'Ԁ┴ssɐdʎq˙פ‾ ',,[ʇɹodǝlǝ┴ ll∀ ɹoℲ]Ԁ┴ssɐdʎq,,)ǝlƃƃo┴:ㄣǝƃɐd
+
+(puǝ
+puǝ
+puǝ    
+puǝ    
+((ϛ0ϛϛㄣƖㄥㄥㄥ˙0- '0 '6Ɛ0ƖᄅƐ6ᄅ9˙0 '0 'Ɩ '0 '6Ɛ0ƖᄅƐ6ᄅ9˙0- '0 'ϛ0ϛϛㄣƖㄥㄥㄥ˙0- 'ƐƐƐㄥ6ㄥ˙Ɩϛㄣ 'ㄥ0Ɩ8ᄅϛ˙68Ɩ 'ㄥㄥ6ϛ˙Ɛϛㄥ9Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ʇsodʇnOᴉʞᴉ┴,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((0'00Ɩ'0)ʍǝu˙ǝɯɐɹℲƆ * (ᄅㄥᄅϛƐ9ㄥ06˙0 '60-ǝㄣㄣ686ϛ8ㄥ˙ᄅ 'Ɩᄅㄥ6ϛㄥ6Ɩㄣ˙0- '80-ǝƐƖƖ9808˙ᄅ 'Ɩ '80-ǝ8Ɩ9699Ɛㄥ˙9 'Ɩᄅㄥ6ϛㄥ6Ɩㄣ˙0 '80-ǝ66ㄣ0ㄣƐ6ᄅ˙ㄥ- 'ᄅㄥᄅϛƐ9ㄥ06˙0 'ϛϛㄣƖ˙8ㄣㄣㄣƖ- '8ᄅᄅㄣ0ㄣ9˙ㄣƖ '9ㄣᄅᄅ0˙ㄥ90Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,puɐsI ʎpuɐƆ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛᄅƖƐϛㄣ68Ɩㄣ˙08ƐᄅƖ- 'ϛㄥƐㄣ8ㄣƖᄅϛ60ϛ˙Ɩϛᄅ 'ϛᄅƖ8ㄥϛㄥ9ㄥ9Ɛ˙ㄥㄥ6Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ɟɐo˥ ǝʞɐƆ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((69ㄣϛ09ϛ66ㄥ˙ㄣƐ6ᄅ- '8ㄥ0080ᄅƐƖㄣϛ˙ㄣƖƐ 'ϛㄥƐㄣ8ㄣ9ㄣƖ˙ㄥϛ0ϛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,qɐ˥,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ㄣ6ㄣϛᄅƖƐᄅ9˙0- '80-ǝƐƐ6Ɛ90ᄅㄣ˙ᄅ- 'ㄥƐ8ƖᄅƖᄅ8ㄥ˙0 'ㄥ0-ǝϛ00ϛƐᄅϛƖ˙ᄅ- 'Ɩ 'ㄥ0-ǝㄣㄥϛ0Ɛϛ0ㄣ˙Ɩ-            
+'ㄥƐ8ƖᄅƖᄅ8ㄥ˙0- 'ㄥ0-ǝƖ6Ɩ806ϛϛ˙ᄅ- 'ㄣ6ㄣϛᄅƖƐᄅ9˙0- 'Ɩ8ᄅ8˙6ㄥƖ0Ɩ- 'ϛ6ㄣƐᄅㄥ0˙ㄣㄣ '8Ɛㄥ90˙ㄣᄅƖᄅ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,puɐlsI ʇnuɐǝԀ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((Ɛ86ㄣㄥƖㄥ98˙0- '80-ǝ8ㄣϛᄅᄅㄥƖ˙ϛ 'ᄅㄥϛƐ0086ㄣ˙0- '80-ǝ98ϛ6ᄅƖƖㄣ˙ㄣ 'Ɩ '80-ǝ68ㄥㄥϛㄣ0ㄥ˙ᄅ            
+'ᄅㄥϛƐ0086ㄣ˙0 '60-ǝㄣƐᄅƖ0ϛ8ㄣ˙Ɩ 'Ɛ86ㄣㄥƖㄥ98˙0- 'ㄥ09ㄥ˙0Ɛ0ƖƖ- 'ㄣϛƐϛㄣᄅ˙8ƖƖ 'ƖƐϛㄣ68˙088-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,puɐlsI ɯɐǝɹɔǝɔI,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((86Ɛ8ϛ˙ㄥƐϛϛ 'ϛƖ90ƐƖ˙ᄅㄣƖ 'ㄣᄅƐㄥ0˙ϛƖϛ6-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝlʇsɐƆ pǝʇunɐH,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛᄅƖƐ0˙Ɛ6ㄣ9- '60ᄅ68Ɩ0ϛ8ㄥ8˙ϛᄅ 'ϛㄥƐ6ϛ80˙9ㄥᄅᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝǝɹ┴ ʇuᴉɐפ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ㄣ8ƖƐ9ㄥ6908ㄣ˙ϛ6Ɩ '696ᄅㄣϛ9ϛㄣ0Ɛ˙899 'ϛㄥ89ㄣϛϛ89ᄅ˙Ɩㄣϛϛ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,puɐlsI ɐɹpʎH,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+{        
+(ϛㄥ89ㄣϛϛ8Ɩϛ90˙ƖϛƖƐ- 'ㄣ60966ϛ6ƐƐ6ᄅㄥ˙ƐƖƐ 'ϛㄥƐㄣƐㄥㄥㄥ9ㄣㄣ˙6ㄥ0ϛ-)ʍǝu˙ƐɹoʇɔǝΛ = [ᄅ]            
+',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,, = [Ɩ]            
+} = sƃɹɐ lɐɔol        
+uǝɥʇ ,,ɐǝS ǝɥʇ uo ǝlʇsɐƆ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+{        
+(ϛᄅ9ϛƖϛƐ0Ɩ9˙ㄣϛϛㄥ- 'ƐㄥㄥᄅㄣƐƖ00ㄥƖ˙ㄥƐƐ 'ϛᄅƖƐ0ㄥϛ6ϛ˙8ㄣϛᄅƖ-)ʍǝu˙ƐɹoʇɔǝΛ = [ᄅ]            
+',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,, = [Ɩ]            
+} = sƃɹɐ lɐɔol        
+uǝɥʇ ,,uoᴉsuɐW,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((8896ㄥƖ6ϛ90˙Ɩϛㄣϛ '889ㄣ0ƐㄥƐㄥϛϛㄥ˙Ɛㄣ '98ϛ009ϛƖ9Ɩᄅ˙ϛㄥᄅ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,uʍo┴ ʇɹoԀ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+uǝɥʇ ƐplɹoM ɟᴉǝslǝ
+puǝ    
+((ϛᄅƖƐ0ᄅƐ8˙ᄅϛ8ᄅƐ 'ᄅㄣϛϛϛ009ㄥ6˙9ᄅƖ '90ㄣƖㄣㄣᄅϛᄅƖᄅ˙Ɛᄅ6)ʍǝu˙ƐɹoʇɔǝΛ',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+uǝɥʇ ,,dᴉɥS ʇsoɥפ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((88ƖㄥƖ9ㄥ08˙0ϛᄅ0Ɩ- 'ᄅ6ㄣ6ㄥ6Ɛ0ᄅㄥ8˙8Ɛᄅ '9ϛƖ09ƖㄣƖϛ6˙Ɩϛ0Ɛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,puɐlsI uǝʇʇoƃɹoℲ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ƖƐϛㄣㄣ9ϛƐ0ㄣ˙ㄣᄅㄣᄅ 'ϛ9ㄣƖ006ƐϛƖㄣᄅ˙86 'ϛㄥ8ƖㄥƖƖ0˙660ϛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,puɐlsI uoᴉʇdᴉɹɔsuᴉ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ƐƖ8ㄥϛㄥ9ᄅㄣᄅ˙6ㄣ8ᄅ 'ϛㄥϛㄣƖƐ6ƖㄥㄣㄣㄣƐ˙8 'Ɛ9ϛƖϛƐϛ86ㄣ˙09ㄥㄣ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,puɐlsI s,ddos∩,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((Ɛ9ϛƖ0Ɩ6ᄅ8ㄣ˙9Ɩㄥ9- 'ϛᄅ9ϛ9ㄥ6ϛᄅƖㄣ˙ㄣ6ᄅ 'ϛㄥƐ60Ɩㄥ˙ƖƖƖ9)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝlʇsɐƆ ǝɔI,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛㄥƐㄣƐㄥㄥᄅㄣ˙966ㄣ- 'Ɩ8Ɛϛ9ㄥϛ9ϛㄥㄥ6˙ϛƖ 'ϛㄥ896ㄥ9Ɩㄥ˙ㄣᄅ6ϛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,puɐlsI ploƆ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛㄥ89ㄣ0ƐᄅƖ9˙99Ɛϛ- 'Ɩ8Ɛϛ9ㄥϛ9ϛㄥㄥ6˙ϛƖ 'Ɛ9068ㄥƐƐ96˙ϛ0ϛϛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,puɐlsI ʇoH,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛᄅƖƐϛㄣㄣƖ˙ㄥ6ᄅϛ- 'ƖㄣƖㄣ6ㄣƖ8ㄥㄣㄣ˙Ɩ0ㄣ '9Ɩϛ8ᄅᄅㄣƐ8Ɛᄅ˙Ɩ9ϛ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,uᴉɐʇunoW ʍouS,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛㄥƐㄣƐᄅ06˙89ƐƐ- '9ƖᄅㄣƐ9ƖϛƖϛㄥƐ˙ƐƖ 'ƐƖƐϛ6Ɩ00ㄥㄥ˙ㄣ9ㄣƐ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ɐǝɹ∀ ʞɹɐp,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛᄅƖ8ㄥϛㄥƖ0Ɛ˙8ㄥㄥ- '6ƐϛㄥᄅᄅƐ8Ɩᄅᄅ˙ᄅ6ㄣ 'ϛㄥƐㄣƐㄥㄥᄅ6ϛ˙ㄥƖ9ϛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,pɹɐʎǝʌɐɹפ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((Ɩ8ᄅ886ㄥ89ᄅ˙6Ɩ8ᄅ- 'ϛ6Ɛ6ㄥ8Ɛ99ㄥ60˙Ɛㄥ '889ㄣϛ090ㄥƐ˙ᄅ0ᄅᄅ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ʇᴉq uǝǝɹפ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((8ㄥϛㄥƖ0Ɛ6ϛƖ˙6ϛ8Ɩ- '69ㄣ0Ɛㄥ8ㄣ6ㄣ8Ɛ˙88 '69ㄣ086ㄣϛƐ9˙098Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝƃpᴉɹq ǝɥ┴,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ㄥ6ᄅㄣϛ90ᄅㄣᄅ9˙ϛϛƐ- 'Ɩ6Ɩ96ϛ8669ㄣㄣ˙ㄣㄥ 'ᄅϛƐ0Ɩ90ϛㄥƐϛ˙6ㄣƐ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ʎɹoʇɔɐℲ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((6ƖㄥƖ9ᄅƐㄣ89˙6ϛƐƖ 'ϛϛ68ㄥ9ㄣƖϛ0ᄅ8˙ϛㄣ 'ϛㄥƐ609ㄣㄥ68˙Ɩㄥ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ɯǝnssoloƆ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ƐƖ8ㄥϛᄅ6Ɛᄅ0ㄥ˙96ㄥ '8Ɛ60Ɩㄥ8ㄥ9ϛ6˙8ㄣㄣ '60Ɩㄥ8ᄅ6ƖϛƐ˙986Ɩ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,uᴉɐʇunoW ʎɯɐɹǝſ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ᄅƐㄥㄥƐㄥㄥϛƖϛᄅㄥ˙ƐƖ '98ϛϛㄥ66ㄣ8Ɩ9˙86Ɩ '6ϛ80Ɛ9ƖㄥƖㄥ˙9ㄥϛƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,plǝᴉℲ ɹǝʍolɟunS,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ƐƖ8ᄅ8Ɛᄅ69ㄣ8˙ㄣ0Ɛ 'ϛㄥƐㄣ868ϛㄣ0˙Ɛㄥ 'ㄥᄅᄅᄅ8ᄅ6880ㄥ˙6ㄥƐ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝɟɐƆ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((9ϛ9ㄥ6ϛᄅ99Ɩ˙ᄅƐƖƖ '669998ϛㄥϛϛƐ˙8ƐƖ 'ƖƐϛ6Ɩ0ϛ686ᄅ˙88Ɛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝsoɹ ɟO ɯopƃuᴉʞ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ㄥ6ㄥƖ6ϛ90ϛ00˙698 'Ɩ96ㄣƐ80Ɛㄥ68˙ƖᄅƐ 'ㄣƖ6ƖƖㄥ6ᄅ8ㄣƐ˙06Ɛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,uoᴉsuɐW,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛᄅ9ϛƖϛƐϛ8˙ㄥᄅ8ᄅ 'ᄅㄣㄥ0Ɩ09Ɛϛᄅ0Ɛ˙6Ɩ 'ㄥ06ㄣ06ƖƖƐ6Ɩϛ˙ᄅƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ʞɔop,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+uǝɥʇ ᄅplɹoM ɟᴉǝslǝ
+puǝ    
+((Ɛ0ㄥϛ608ㄣϛϛ˙ᄅ8ㄣƖ- 'ϛᄅƖ8ㄥ0ϛ0ᄅ˙8Ɛ9ϛ '8Ɛ6ϛ8088ᄅϛ˙898ㄥ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ƐʎʞS,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛϛ090ㄥ86ㄥƖᄅ˙ᄅᄅㄣ- '8ƐㄣƐㄥᄅ0Ɛ09˙ϛㄣϛϛ 'Ɛ9ϛ9ᄅᄅㄥϛƖ9˙668ㄥ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ᄅʎʞS,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛㄥ8Ɩᄅ6ㄣ6ᄅㄥ˙ㄥƐ9ᄅ- 'Ɩ68ㄥƐƐ9ㄣᄅƖㄥ˙ㄥƖㄥ 'Ɛ906Ɛ0ϛƖㄣ0˙8ㄥ8ㄣ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ƖʎʞS,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((696ᄅ6ㄥㄥ86ㄣ˙Ɛㄥ0ㄣ 'ㄥ8ㄥ90ᄅƐㄣ69ᄅϛ˙8Ɛ 'Ɛ9068ㄥƐƐƖㄥ˙ㄣㄣᄅϛ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ʎʇᴉƆ uᴉɐʇunoℲ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((9Ɩ0Ɩ6ᄅƐㄥ88˙Ɩ9ϛƖ '8ƐㄣƐᄅϛ9Ɛㄣㄥ6ㄣ˙8Ɩ 'ϛㄥƐ60ƖᄅƖ˙Ɩ6ƖƖ9)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ʎʇᴉƆ ɹǝʇɐMɹǝpu∩,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((6Ɩᄅㄣㄥ0Ɩϛ8ㄣ˙Ɛ68Ɩ- '60ƐƖㄣ8ㄣᄅϛ686Ɛ˙ϛ 'ϛᄅƖƐϛ6˙Ɛ68Ɛ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝʇɐפ ɹǝʇɐMɹǝpu∩,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛᄅ90ㄣƖㄣ66Ɛ˙ㄥᄅㄣ8 'ᄅㄥϛ9Ɛㄥ86ㄥㄣ9Ɩ9˙8 'ϛㄥƐㄣƐᄅ0ㄣㄥ8˙8ᄅƐϛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝƃɐllᴉΛ ɐɯƃɐW,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((Ɛ906Ɛ00ㄣ0Ɩ˙8ƖƐϛ 'ㄣㄣ86Ɛ8ϛ8ㄣ09ϛƐ˙ㄥ '88Ɩᄅ6ㄣㄣ096˙Ɩㄣ8ᄅ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ɹǝpɐǝ˥ qoW,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ᄅᄅㄣᄅƐㄥ0ϛㄥϛㄥ˙ᄅƐㄥ 'ᄅϛㄥ806ㄣ0Ɛ08ㄥ9˙ϛ 'ϛㄥ8Ɩᄅㄣᄅ869˙ㄥϛ8ㄣ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,uosᴉɹԀ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ㄣ60Ɩㄥ8ㄥƖ8ϛ˙ϛƐƖƐ- '6ㄥᄅƖ9ϛƖƐ9ϛ8Ɛ˙6Ɛ 'ϛᄅ90ㄣƖ698ϛ˙ㄥ99Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ɯnǝssoloƆ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ㄥㄣ0866ᄅᄅƐㄥ˙ㄣ9ƖƖ- 'ㄣƐᄅ0ㄣㄥƐ80ᄅ6ᄅƐ˙ㄥ 'ㄣ609660ㄥᄅϛ˙ㄣㄣƖƖ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝƃɐllᴉΛ uǝzoɹℲ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛᄅƖ8ᄅƐƖƖ9˙ᄅ9ᄅㄣ 'ㄥ0ㄥㄣᄅƐ0ᄅϛϛㄥᄅ9˙9 '99ㄥㄣ889ϛ0ᄅ0˙ㄣϛ6)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ʇɹǝsǝp,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((88Ɩㄥ9Ɛ9ㄥᄅ8˙ᄅㄣ8Ɛ 'ᄅㄣƐϛㄥㄣƐㄣ8ㄥㄥㄥ˙ㄣㄣ '9ϛƖ09Ɩ688Ɛ˙Ɛ9ƖƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝƃɐllᴉΛ ǝʇɐɹᴉԀ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛㄥ89ㄣϛ090ㄥ8˙ƐϛƐ 'ᄅ9ƐƖᄅϛᄅƖ6ㄥㄥ8˙ᄅᄅ '8896ᄅ6ㄥㄥ86˙66ㄣƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ǝlƃunſ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((889ㄣ0ƐᄅƖ9ㄥ˙ƐㄥϛƖ '9098009ᄅ08ㄥ8˙ㄥ 'ㄥㄣ0Ɛᄅ9880ㄥ6˙ϛϛ9-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,uʍo┴ ǝlpᴉW,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((88Ɩㄥ9888ϛƐ˙ㄥϛᄅㄣ 'ㄥᄅϛ0ㄣϛƖㄣ9Ɩᄅᄅ˙ϛ8 '8Ɛㄣ8ㄣƖᄅϛㄣƐ˙Ɩ80ϛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ᄅǝuᴉɹɐW,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ϛㄥ896ㄥ9Ɩᄅᄅ˙ᄅ90ᄅ '6099Ɛ8ㄥᄅᄅ9ㄣƖ6˙9 '8ƐㄣƐㄥᄅϛϛ99˙66ϛᄅ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,ƖǝuᴉɹɐW,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+puǝ    
+((ƐƖ8ᄅ8ƐᄅㄣㄣƐ˙ㄣㄣㄣƖ '69ᄅϛㄥᄅ09Ɛ66ᄅ˙9Ɩ 'ㄣㄣ8ㄣ9ㄣƖ0ϛƖ˙ᄅㄣ0Ɩ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ,,pɐlɐS sǝuoſ,, == ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾ ɟᴉ    
+uǝɥʇ  ƖplɹoM ɟᴉ
+uǝɥʇ puɐlsIʇɹodǝlǝ┴˙פ‾ ɟᴉ
+ǝnlɐʌ = puɐlsIʇɹodǝlǝ┴˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ'puɐlsIʇɹodǝlǝ┴˙פ‾ ',,ʇɔǝlǝS o┴ ʇɹodǝlǝ┴,,)ǝlƃƃo┴:ㄣǝƃɐd
+
+(puǝ
+ǝnlɐʌ = ʇɹodǝlǝ┴lɐɔo˥ʇɔǝlǝS˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝlqɐ┴ʇɹodǝlǝ┴',,ǝɔɐlԀ ʇɔǝlǝS,,)uʍopdoɹp:ㄣǝƃɐd
+
+()ǝuᴉ˥:ㄣǝƃɐd
+puǝ
+{ ,,ʇsodʇnOᴉʞᴉ┴,, ',,puɐsI ʎpuɐƆ,, ',,ɟɐo˥ ǝʞɐƆ,, ',,puɐlsI ʇnuɐǝԀ,, ',,puɐlsI ɯɐǝɹɔǝɔI,,',,ǝlʇsɐƆ pǝʇunɐH,, ',,ɐǝS ǝɥʇ uo ǝlʇsɐƆ,, ',,uoᴉsuɐW,, ',,ǝǝɹ┴ ʇuᴉɐפ,, ',,puɐlsI ɐɹpʎH,, ',,uʍo┴ ʇɹoԀ,, } = ǝlqɐ┴ʇɹodǝlǝ┴
+uǝɥʇ ƐplɹoM ɟᴉǝslǝ
+{ ,,dᴉɥS ʇsoɥפ,, ',,puɐlsI uǝʇʇoƃɹoℲ,, ',,puɐlsI uoᴉʇdᴉɹɔsuᴉ,, ',,puɐlsI s,ddos∩,, ',,ǝlʇsɐƆ ǝɔI,,',,puɐlsI ploƆ,, ',,puɐlsI ʇoH,, ',,uᴉɐʇunoW ʍouS,, ',,ɐǝɹ∀ ʞɹɐp,, ',,pɹɐʎǝʌɐɹפ,, ',,ʇᴉq uǝǝɹפ,, ',,ǝƃpᴉɹq ǝɥ┴,, ',,ʎɹoʇɔɐℲ,,',,ɯǝnssoloƆ,, ',,uᴉɐʇunoW ʎɯɐɹǝſ,, ',,plǝᴉℲ ɹǝʍolɟunS,, ',,ǝɟɐƆ,, ',,ǝsoɹ ɟO ɯopƃuᴉʞ,, ',,uoᴉsuɐW,, ',,ʞɔop,, } = ǝlqɐ┴ʇɹodǝlǝ┴
+uǝɥʇ ᄅplɹoM ɟᴉǝslǝ
+{ ,,ƐʎʞS,, ',,ᄅʎʞS,, ',,ƖʎʞS,, ',,ʎʇᴉƆ uᴉɐʇunoℲ,,',,ʎʇᴉƆ ɹǝʇɐMɹǝpu∩,, ',,ǝʇɐפ ɹǝʇɐMɹǝpu∩,, ',,ǝƃɐllᴉΛ ɐɯƃɐW,, ',,ɹǝpɐǝ˥ qoW,, ',,uosᴉɹԀ,, ',,ɯnǝssoloƆ,, ',,ǝƃɐllᴉΛ uǝzoɹℲ,,',,ʇɹǝsǝp,, ',,ǝƃɐllᴉΛ ǝʇɐɹᴉԀ,, ',,ǝlƃunſ,, ',,uʍo┴ ǝlpᴉW,, ',,ᄅǝuᴉɹɐW,, ',,ƖǝuᴉɹɐW,, ',,puɐlsIɹǝʇɐɹʇS,, } = ǝlqɐ┴ʇɹodǝlǝ┴
+uǝɥʇ ƖplɹoM ɟᴉ
+{} = ǝlqɐ┴ʇɹodǝlǝ┴
+
+(puǝ
+(,,noZlǝʌɐɹ┴,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(ǝnlɐʌ)uoᴉʇɔunɟ ',,Ɛ plɹoM oʇ ʇɹodǝlǝ┴,,)uoʇʇnq:ㄣǝƃɐd
+
+(puǝ
+(,,ɐsoɹssǝɹplǝʌɐɹ┴,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(ǝnlɐʌ)uoᴉʇɔunɟ ',,ᄅ plɹoM oʇ ʇɹodǝlǝ┴,,)uoʇʇnq:ㄣǝƃɐd
+
+(puǝ
+(,,uᴉɐWlǝʌɐɹ┴,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(ǝnlɐʌ)uoᴉʇɔunɟ ',,Ɩ plɹoM oʇ ʇɹodǝlǝ┴,,)uoʇʇnq:ㄣǝƃɐd
+
+(,,��,,)ɹoʇɐɹǝdǝS:ㄣǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+;(Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;,,uolɐ┴uoƃɐɹpʎnq,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+;(Ɩ‾looq 'Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;ǝnɹʇ = Ɩ‾looq lɐɔol                            
+;,,uolɐ┴uoƃɐɹpʎnq,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+ǝslǝ                        
+(,,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ                            
+uǝɥʇ Ɩ == (ǝnɹʇ ',,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɟᴉǝslǝ                        
+;(Ɩ‾looq 'Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;ǝnɹʇ = Ɩ‾looq lɐɔol                            
+;,,uolɐ┴uoƃɐɹpʎnq,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+
+;(ᄅ‾ɹǝqɯnu 'Ɩ‾ɹǝqɯnu 'ᄅ‾ƃuᴉɹʇs 'Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;Ɩ = ᄅ‾ɹǝqɯnu lɐɔol                            
+;Ɩ = Ɩ‾ɹǝqɯnu lɐɔol                            
+;,,ʎnq,, = ᄅ‾ƃuᴉɹʇs lɐɔol                            
+;,,sǝuoq,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+uǝɥʇ Ɛ == (ǝnɹʇ ',,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɟᴉ                        
+,,ʍɐlƆ uoƃɐɹp,, = uodɐǝMʇɔǝlǝS˙פ‾                        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+
+puǝ                    
+puǝ                        
+;(Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;,,uolɐ┴uoƃɐɹpʎnq,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+;(Ɩ‾looq 'Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;ǝnɹʇ = Ɩ‾looq lɐɔol;,,uolɐ┴uoƃɐɹpʎnq,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+ǝslǝ                        
+(,,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ                            
+uǝɥʇ Ɩ == (ǝnɹʇ ',,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɟᴉǝslǝ                        
+;(Ɩ‾looq 'Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴                            
+;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;ǝnɹʇ = Ɩ‾looq lɐɔol                            
+;,,uolɐ┴uoƃɐɹpʎnq,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+
+;(ᄅ‾ɹǝqɯnu 'Ɩ‾ɹǝqɯnu 'ᄅ‾ƃuᴉɹʇs 'Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴                            
+;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;Ɩ = ᄅ‾ɹǝqɯnu lɐɔol                            
+;Ɩ = Ɩ‾ɹǝqɯnu lɐɔol                            
+;,,ʎnq,, = ᄅ‾ƃuᴉɹʇs lɐɔol                            
+;,,sǝuoq,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+uǝɥʇ Ɛ == (ǝnɹʇ ',,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɟᴉ                        
+,,ʍɐlƆ uoƃɐɹp,, = uodɐǝMʇɔǝlǝS˙פ‾                        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+
+puǝ                    
+,,ʍɐlƆ uoƃɐɹp,, = uodɐǝMʇɔǝlǝS˙פ‾                        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ 66Ɛ => ǝnlɐΛ˙lǝʌǝ˥˙(,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+,,ʍɐlƆ uoƃɐɹp,, = uodɐǝMʇɔǝlǝS˙פ‾                        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ 66Ɛ => ǝnlɐΛ˙lǝʌǝ˥˙(,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,ǝɥɔɐƆʇǝss∀uodɐǝM,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ uolɐ┴uoƃɐɹpoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ    
+(,,ᄅ,, ',,ʍɐlƆuoƃɐɹp,, ',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,, ',,‾Ⅎ,,)ɯoƆ        
+uǝɥʇ uolɐ┴uoƃɐɹpoʇn∀˙פ‾ ɟᴉ    
+ǝnlɐʌ = uolɐ┴uoƃɐɹpoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ ' uolɐ┴uoƃɐɹpoʇn∀˙פ‾  ',,uolɐ┴ uoƃɐɹp oʇn∀,,)ǝlƃƃo┴:Ɛǝƃɐd
+      
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+(,,ǝʇɐɹɐʞuɐɯɥsᴉℲʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+ǝslǝ                
+puǝ                    
+(,,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙(,,ɹǝdǝǝʞ ǝpᴉ┴,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                                    
+ǝslǝ                                
+puǝ                                    
+puǝ                                        
+ ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                                
+(,,ʎǝʞ ʎɹɐɹqᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʎǝʞ ʎɹɐɹqᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo ǝslɐɟ == dǝʇSɥʇɐǝpoʇn∀˙פ‾ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou lᴉʇun                                            
+puǝ                                                
+puǝ                                                    
+puǝ                                                        
+(ǝɯɐƃ 'ǝslɐɟ ',,Λ,, 'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,)ǝɔᴉʌɹǝs:ǝɯɐƃ                                                            
+(ǝɯɐƃ 'ǝslɐɟ ',,Λ,, 'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,)ǝɔᴉʌɹǝs:ǝɯɐƃ                                                            
+uǝɥʇ 0ϛƖ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                                                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                        
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                        
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                        
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                                        
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                                        
+(09 '09 '09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                        
+puǝ                                                        
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                            
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                                        
+puǝ                                                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                                            
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                        
+puǝ ()doʇS:uǝǝʍʇɯɹɐℲ uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                                        
+uǝɥʇ 00ᄅ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                                    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                                        
+uǝɥʇ 00ᄅ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                                    
+uǝɥʇ (ǝɯɐN˙ʌ)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                                                
+()ʇᴉɐʍ˙ʞsɐʇ                                                
+ʇɐǝdǝɹ                                            
+uǝɥʇ ,,ɹǝdǝǝʞ ǝpᴉ┴,, == ǝɯɐN˙ʌ ɟᴉ                                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                    
+uǝɥʇ (,,ɹǝdǝǝʞ ǝpᴉ┴,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                
+uǝɥʇ (,,ɹǝdǝǝʞ ǝpᴉ┴,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ɹǝdǝǝʞ ǝpᴉ┴,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                            
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉǝslǝ                        
+puǝ                            
+(ϛ˙0)ʇᴉɐʍ                                
+(,,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+(ǝnɹʇ ',,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+(ᄅ˙Ɩ)ʇᴉɐʍ                                
+uǝɥʇ Ɛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛ9ƐƖ0ㄥϛᄅㄣ0˙0 '0 'ƐƖㄣƐ60666˙0 '0 'Ɩ '0 'ƐƖㄣƐ60666˙0- '0 'ϛ9ƐƖ0ㄥϛᄅㄣ0˙0 'ᄅ86Ɩ˙ϛƖƐ0Ɩ- '9ᄅϛᄅƐㄣ˙6Ɛᄅ '8ϛ69˙ㄣ09ᄅ-)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                            
+ǝʇɐɹɐʞ‾uɐWʞɹɐɥS‾ʎllnℲ‾oʇn∀˙פ‾ ʇou ɹo Ɛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛ9ƐƖ0ㄥϛᄅㄣ0˙0 '0 'ƐƖㄣƐ60666˙0 '0 'Ɩ '0 'ƐƖㄣƐ60666˙0- '0 'ϛ9ƐƖ0ㄥϛᄅㄣ0˙0 'ᄅ86Ɩ˙ϛƖƐ0Ɩ- '9ᄅϛᄅƐㄣ˙6Ɛᄅ '8ϛ69˙ㄣ09ᄅ-)ʍǝu˙ǝɯɐɹℲƆ) lᴉʇun                            
+(ϛ9ƐƖ0ㄥϛᄅㄣ0˙0 '0 'ƐƖㄣƐ60666˙0 '0'Ɩ '0'ƐƖㄣƐ60666˙0- '0 'ϛ9ƐƖ0ㄥϛᄅㄣ0˙0 'ᄅ86Ɩ˙ϛƖƐ0Ɩ- '9ᄅϛᄅƐㄣ˙6Ɛᄅ '8ϛ69˙ㄣ09ᄅ-)ʇǝƃɹɐ┴oʇ                                
+()ʇᴉɐʍ˙ʞsɐʇ                                
+ʇɐǝdǝɹ                            
+uǝɥʇ (,,ʎǝʞ ɹǝʇɐM,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʎǝʞ ɹǝʇɐM,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+uǝɥʇ (,,sʎǝʞ,, '(,,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                    
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ ǝʇɐɹɐʞuɐWʞɹɐɥSʎllnℲoʇn∀˙פ‾ ɟᴉǝslǝ            
+puǝ                
+puǝ                    
+(,,ǝʇɐɹɐʞuɐɯɥsᴉℲʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+ǝslǝ                    
+puǝ                        
+,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,, = uodɐǝMʇɔǝlǝS˙פ‾                            
+uǝɥʇ 00ㄣ => ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+puǝ                        
+,,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,, =  uodɐǝMʇɔǝlǝS˙פ‾                                
+(,,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+puǝ                        
+,,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,, =  uodɐǝMʇɔǝlǝS˙פ‾                                
+(,,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+uǝɥʇ (,,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,ǝɥɔɐƆʇǝss∀uodɐǝM,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ ǝʇɐɹɐʞuɐWʞɹɐɥSoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ    
+(,,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,, ',,‾Ⅎ,,)ɯoƆ        
+uǝɥʇ ǝʇɐɹɐʞuɐWʞɹɐɥSoʇn∀˙פ‾ ɟᴉ    
+ǝnlɐʌ = ǝʇɐɹɐʞuɐWʞɹɐɥSoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝʇɐɹɐʞuɐWʞɹɐɥSoʇn∀˙פ‾',,ǝʇɐɹɐʞuɐɯʞɹɐɥS oʇn∀,,)ǝlƃƃo┴:Ɛǝƃɐd
+  
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+(,,ƃǝ˥ʞɔɐlqʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙(,,lɐɹᴉɯp∀ ǝɔI pǝuǝʞɐʍ∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                                    
+ǝslǝ                                
+puǝ                                    
+puǝ                                        
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                            
+(,,ʎǝʞ ʎɹɐɹqᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʎǝʞ ʎɹɐɹqᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo ǝslɐɟ == dǝʇSɥʇɐǝpoʇn∀˙פ‾ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou lᴉʇun                                            
+puǝ                                                
+puǝ                                                    
+puǝ                                                        
+(ǝɯɐƃ 'ǝslɐɟ ',,Λ,, 'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,)ǝɔᴉʌɹǝs:ǝɯɐƃ                                                            
+(ǝɯɐƃ 'ǝslɐɟ ',,Λ,, 'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,)ǝɔᴉʌɹǝs:ǝɯɐƃ                                                            
+uǝɥʇ 0ϛƖ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                                                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                        
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                        
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                        
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                                        
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                                        
+(09 '09 '09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                        
+puǝ                                                        
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                            
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                                        
+puǝ                                                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                                            
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                        
+puǝ ()doʇS:uǝǝʍʇɯɹɐℲ uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                                        
+uǝɥʇ 00ᄅ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                                    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                                        
+uǝɥʇ 00ᄅ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                                    
+uǝɥʇ (ǝɯɐN˙ʌ)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                                                
+()ʇᴉɐʍ˙ʞsɐʇ ()ʇᴉɐʍ˙ʞsɐʇ                                                
+ʇɐǝdǝɹ                                            
+uǝɥʇ ,,lɐɹᴉɯp∀ ǝɔI pǝuǝʞɐʍ∀,, == ǝɯɐN˙ʌ ɟᴉ                                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                    
+uǝɥʇ (,,lɐɹᴉɯp∀ ǝɔI pǝuǝʞɐʍ∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                
+uǝɥʇ (,,lɐɹᴉɯp∀ ǝɔI pǝuǝʞɐʍ∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,lɐɹᴉɯp∀ ǝɔI pǝuǝʞɐʍ∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                            
+uǝɥʇ 0ϛㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo 0ϛㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉǝslǝ                        
+puǝ                            
+(ϛ˙0)ʇᴉɐʍ                                
+(,,dǝʇSɥʇɐǝpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+(ǝnɹʇ',,dǝʇSɥʇɐǝpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+(ᄅ˙Ɩ)ʇᴉɐʍ                                
+uǝɥʇ Ɛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛㄥƐㄣƐᄅϛƖƖ8Ɩ˙Ɩㄣ89- 'ϛᄅ9068ㄥƐ8ƐƐㄣƐ9˙96ᄅ 'ϛᄅƖƐϛ6Ɩ00ᄅ˙ƖㄥƐ9)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                            
+dǝʇSɥʇɐǝpoʇn∀˙פ‾ ʇou ɹo Ɛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛㄥƐㄣƐᄅϛƖƖ8Ɩ˙Ɩㄣ89- 'ϛᄅ9068ㄥƐ8ƐƐㄣƐ9˙96ᄅ 'ϛᄅƖƐϛ6Ɩ00ᄅ˙ƖㄥƐ9)ʍǝu˙ǝɯɐɹℲƆ) lᴉʇun                            
+((ϛㄥƐㄣƐᄅϛƖƖ8Ɩ˙Ɩㄣ89- 'ϛᄅ9068ㄥƐ8ƐƐㄣƐ9˙96ᄅ 'ϛᄅƖƐϛ6Ɩ00ᄅ˙ƖㄥƐ9)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                
+()ʇᴉɐʍ˙ʞsɐʇ                                
+ʇɐǝdǝɹ                            
+(,,ʎǝʞ ʎɹɐɹqᴉ˥,,)uodɐǝMdᴉnbƎ                            
+uǝɥʇ (,,ʎǝʞ ʎɹɐɹqᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʎǝʞ ʎɹɐɹqᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+uǝɥʇ 0 == ʎɔuǝɹɐdsuɐɹ┴˙ɹoopnʎǝoɥԀ˙ɹoopʎɹɐɹqᴉ˥˙llɐH˙ǝlʇsɐƆǝɔI˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ dǝʇSɥʇɐǝpʎllnℲoʇn∀˙פ‾ ɟᴉǝslǝ            
+puǝ                
+puǝ                    
+,,ƃǝ˥ ʞɔɐlq,, = uodɐǝMʇɔǝlǝS˙פ‾                        
+uǝɥʇ 00ㄣ > ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+,,dǝʇS ɥʇɐǝp,, = uodɐǝMʇɔǝlǝS˙פ‾                        
+
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,dǝʇSɥʇɐǝpʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+,,dǝʇS ɥʇɐǝp,, = uodɐǝMʇɔǝlǝS˙פ‾                        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,dǝʇSɥʇɐǝpʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,ǝɥɔɐƆʇǝss∀uodɐǝM,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ dǝʇSɥʇɐǝpoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ    
+(,,ƃǝ˥ʞɔɐlqʎnq,, ',,‾Ⅎ,,)ɯoƆ        
+uǝɥʇ dǝʇSɥʇɐǝpoʇn∀˙פ‾ ɟᴉ    
+ǝnlɐʌ = dǝʇSɥʇɐǝpoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'dǝʇSɥʇɐǝpoʇn∀˙פ‾ ',,dǝʇS ɥʇɐǝp oʇn∀,,)ǝlƃƃo┴:Ɛǝƃɐd
+  
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+;(Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴                            
+;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;,,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+ǝslǝ                        
+puǝ                            
+(Ɩ8ㄣㄥ- 'ㄥƐƐ                                    
+'8ㄣϛᄅƖ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔol˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+uǝɥʇ lᴉu == 9ㄥɹ ɟᴉ                            
+;(,,ʇɹɐʇS,,                                
+',,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ = 9ㄥɹ lɐɔol                            
+uǝɥʇ ㄣ == ϛㄥɹ ɟᴉ                        
+;(ǝnɹʇ ',,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ = ϛㄥɹ lɐɔol                        
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+puǝ                        
+;(Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴                            
+;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;,,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+ǝslǝ                        
+puǝ                            
+(Ɩ8ㄣㄥ- 'ㄥƐƐ                                    
+'8ㄣϛᄅƖ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔol˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+uǝɥʇ lᴉu == 9ㄥɹ ɟᴉ                            
+;(,,ʇɹɐʇS,,                                
+',,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ = 9ㄥɹ lɐɔol                            
+uǝɥʇ ㄣ == ϛㄥɹ ɟᴉ                        
+;(ǝnɹʇ ',,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ = ϛㄥɹ lɐɔol                        
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+,,oɹʇɔǝlƎ,, = uodɐǝMʇɔǝlǝS˙פ‾                        
+uǝɥʇ 00ㄣ > ǝnlɐΛ˙lǝʌǝ˥˙(,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+,,oɹʇɔǝlƎ,, = uodɐǝMʇɔǝlǝS˙פ‾                        
+uǝɥʇ 00ㄣ > ǝnlɐΛ˙lǝʌǝ˥˙(,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,ǝɥɔɐƆʇǝss∀uodɐǝM,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ ʍɐlƆɔᴉɹʇɔǝlƎoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ    
+(,,oɹʇɔǝlƎʎnq,, ',,‾Ⅎ,,)ɯoƆ        
+uǝɥʇ ʍɐlƆɔᴉɹʇɔǝlƎoʇn∀˙פ‾ ɟᴉ    
+ǝnlɐʌ = ʍɐlƆɔᴉɹʇɔǝlƎoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʍɐlƆɔᴉɹʇɔǝlƎoʇn∀˙פ‾ ',,ʍɐlƆ ɔᴉɹʇɔǝlƎ oʇn∀,,)ǝlƃƃo┴:Ɛǝƃɐd
+
+
+
+puǝ
+puǝ    
+puǝ    
+puǝ        
+puǝ                
+([,,ǝɯɐN,,]ʌ',,ʇᴉnɹℲpɐo˥,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+uǝɥʇ 0000000Ɩ > [,,ǝɔᴉɹԀ,,]ʌ ɟᴉ    
+op (ʇᴉnɹɟ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ        
+uǝɥʇ (ǝɹoʇSʇᴉnɹℲlᴉʌǝplǝqɐ┴)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ    
+op (ǝɹoʇSʇᴉnɹℲlᴉʌǝplǝqɐ┴)sɹᴉɐd uᴉ ʌ 'Ɩᴉ ɹoɟ
+(,,sʇᴉnɹℲʎɹoʇuǝʌuIʇǝƃ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇᴉnɹɟ
+
+puǝ    
+puǝ        
+puǝ            
+(ɹ 'ǝɹoʇSʇᴉnɹℲlᴉʌǝplǝqɐ┴)ʇɹǝsuᴉ˙ǝlqɐʇ            
+uǝɥʇ ,,ǝɯɐN,, == Ɩᴉ ɟᴉ        
+op (ʌ)sɹᴉɐd uᴉ ɹ 'Ɩᴉ ɹoɟ    
+op ((,,sʇᴉnɹℲʎɹoʇuǝʌuIʇǝƃ,,)ɹǝʌɹǝSǝʞoʌuI:[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+
+{} = ǝɹoʇSʇᴉnɹℲlᴉʌǝplǝqɐ┴
+puǝ
+lᴉu = ʇᴉnɹℲ‾ʎɹoʇuǝʌuI    
+uǝɥʇ ʇᴉnɹℲ‾ʎɹoʇuǝʌuI ɟᴉ
+uǝɥʇ ʇᴉnɹℲ‾ʇǝפ˙פ‾ ɟᴉ
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,uɐɯnɥɹǝdnSʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ 00Ɛ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,uɐɯnɥɹǝdnSʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ 00Ɛ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+
+puǝ                    
+puǝ                        
+puǝ ǝnɹʇ = ɯɹɐℲoʇn∀˙פ‾ uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ                            
+ǝslɐɟ = spᴉɐɹoʇn∀˙פ‾                            
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+{                            
+,,ᄅ,, = [Ɛ]                                
+',,ʍɐlƆuoƃɐɹp,, = [ᄅ]                                
+',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,, = [Ɩ]                                
+} = sƃɹɐ lɐɔol                            
+puǝ ǝnɹʇ = ɯɹɐℲoʇn∀˙פ‾ uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ                            
+ǝslɐɟ = ʇᴉnɹℲ‾ʇǝפ˙פ‾                            
+ǝslɐɟ = spᴉɐɹoʇn∀˙פ‾                            
+ǝslǝ                        
+puǝ                            
+puǝ ǝslɐɟ = ɯɹɐℲoʇn∀˙פ‾ uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ                                
+ǝnɹʇ = spᴉɐɹoʇn∀˙פ‾                                
+,,ǝɯɐlℲ,, = spᴉɐɹʇɔǝlǝS˙פ‾                                
+ǝnɹʇ = ʇᴉnɹℲ‾ʇǝפ˙פ‾                                
+uǝɥʇ 00ƖƖ < ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                            
+uǝɥʇ 0 == ʍɐlƆuoƃɐɹpǝʌɐH puɐ 00ϛƖ => ǝnlɐΛ˙sʇuǝɯƃɐɹℲ˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ uɐɯnɥɹǝdnSoʇn∀˙פ‾ ɟᴉ                        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʍɐlƆuoƃɐɹpǝʌɐH                        
+{                        
+,,ᄅ,, = [Ɛ]                            
+',,ʍɐlƆuoƃɐɹp,, = [ᄅ]                            
+',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ 00Ɛ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+puǝ                        
+puǝ ǝnɹʇ = ɯɹɐℲoʇn∀˙פ‾ uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ                            
+ǝslɐɟ = spᴉɐɹoʇn∀˙פ‾                            
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+{                            
+,,ᄅ,, = [Ɛ]                                
+',,ʍɐlƆuoƃɐɹp,, = [ᄅ]                                
+',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,, = [Ɩ]                                
+} = sƃɹɐ lɐɔol                            
+puǝ ǝnɹʇ = ɯɹɐℲoʇn∀˙פ‾ uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ                            
+ǝslɐɟ = spᴉɐɹoʇn∀˙פ‾                            
+ǝslǝ                        
+puǝ                            
+puǝ ǝslɐɟ = ɯɹɐℲoʇn∀˙פ‾ uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ                                
+ǝnɹʇ = spᴉɐɹoʇn∀˙פ‾                                
+,,ǝɯɐlℲ,, = spᴉɐɹʇɔǝlǝS˙פ‾                                
+uǝɥʇ 00ƖƖ < ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                            
+uǝɥʇ 0 == ʍɐlƆuoƃɐɹpǝʌɐH puɐ 00ϛƖ => ǝnlɐΛ˙sʇuǝɯƃɐɹℲ˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ uɐɯnɥɹǝdnSoʇn∀˙פ‾ ɟᴉ                        
+((sƃɹɐ                                
+)ʞɔɐdun                            
+)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʍɐlƆuoƃɐɹpǝʌɐH                        
+{                        
+,,ᄅ,, = [Ɛ]                            
+',,ʍɐlƆuoƃɐɹp,, = [ᄅ]                            
+',,pɹɐʍǝɹpɹɐǝqʞɔɐlq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ 00Ɛ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,ǝʇɐɹɐʞuɐɯɥsᴉℲʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ 00Ɛ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,ǝʇɐɹɐʞuɐɯɥsᴉℲʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ 00Ɛ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,ƃǝ˥ʞɔɐlqʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ 00Ɛ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,ƃǝ˥ʞɔɐlqʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ 00Ɛ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,oɹʇɔǝlƎʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+uǝɥʇ (,,ʇɐqɯoƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,ʇɐqɯoƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+(,,ǝǝlǝW,,)ǝlʎʇSƃuᴉʇɥƃᴉℲʇǝפ = uodɐǝMʇɔǝlǝS˙פ‾                    
+puǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+puǝ                                    
+puǝ                                        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+{                                            
+,,oɹʇɔǝlƎʎnq,, = [Ɩ]                                                
+} = sƃɹɐ lɐɔol                                            
+uǝɥʇ (,,uɐɯnɥɹǝdnS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou puɐ (,,uɐɯnɥɹǝdnS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                        
+uǝɥʇ (,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou puɐ (,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                    
+uǝɥʇ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou puɐ (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                
+uǝɥʇ (,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou puɐ (,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                            
+uǝɥʇ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                        
+uǝɥʇ (,,ʇɐqɯoƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou puɐ (,,ʇɐqɯoƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                    
+uǝɥʇ (,,ǝɥɔɐƆʇǝss∀uodɐǝM,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ uɐɯnɥɹǝdnSoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+ǝnlɐʌ = uɐɯnɥɹǝdnSoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'uɐɯnɥɹǝdnSoʇn∀˙פ‾ ',,uɐɯnɥɹǝdnS oʇn∀,,)ǝlƃƃo┴:Ɛǝƃɐd
+
+
+(puǝ
+puǝ    
+puǝ        
+(puǝ            
+puǝ                
+(,,uɐɯnɥɹǝdnSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+ǝslǝ                
+puǝ                    
+({ϛ˙ᄅ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,, = uoɔI' ,,uolɐ┴ uoƃɐɹp ǝʌɐH ʇoN,, = ʇxǝ┴ ',,uoᴉʇɐɔᴉɟᴉʇoN,, = ǝlʇᴉ┴} ',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:ᴉnפɹǝʇɹɐʇS˙ǝɯɐƃ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+(,,uɐɯnɥpoפʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+ǝslǝ                            
+({ϛ˙ᄅ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,, = uoɔI' ,,lɐᴉɹǝʇɐW ɥƃnouƎ ǝʌɐH ʇoN,, = ʇxǝ┴ ',,uoᴉʇɐɔᴉɟᴉʇoN,, = ǝlʇᴉ┴} ',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:ᴉnפɹǝʇɹɐʇS˙ǝɯɐƃ                                
+uǝɥʇ (,,ƃuᴉɹq,, '(ǝnɹʇ',,uɐɯnɥpoפʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                            
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,uolɐ┴ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,uolɐ┴ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,uolɐ┴ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,uolɐ┴ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                        
+uǝɥʇ Ɩ == (ǝnɹʇ',,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+puǝ                    
+({ϛ˙ᄅ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,, = uoɔI' ,,ʍɐlƆ ɔᴉɹʇɔǝlƎ ǝʌɐH ʇoN,, = ʇxǝ┴ ',,uoᴉʇɐɔᴉɟᴉʇoN,, = ǝlʇᴉ┴} ',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:ᴉnפɹǝʇɹɐʇS˙ǝɯɐƃ                        
+ǝslǝ                    
+puǝ                        
+(,,uolɐ┴uoƃɐɹpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ʍɐlƆ ɔᴉɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ʍɐlƆ ɔᴉɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ʍɐlƆ ɔᴉɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ʍɐlƆ ɔᴉɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                        
+uǝɥʇ Ɩ == (ǝnɹʇ',,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+puǝ                    
+({ϛ˙ᄅ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,, = uoɔI' ,,ǝʇɐɹɐʞ uɐWʞɹɐɥS ǝʌɐH ʇoN,, = ʇxǝ┴ ',,uoᴉʇɐɔᴉɟᴉʇoN,, = ǝlʇᴉ┴} ',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:ᴉnפɹǝʇɹɐʇS˙ǝɯɐƃ                        
+ǝslǝ                    
+puǝ                        
+(,,ʍɐlƆɔᴉɹʇɔǝlƎʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                        
+uǝɥʇ Ɩ == (ǝnɹʇ',,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+puǝ                    
+({ϛ˙ᄅ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,, = uoɔI' ,,dǝʇS ɥʇɐǝp ǝʌɐH ʇoN,, = ʇxǝ┴ ',,uoᴉʇɐɔᴉɟᴉʇoN,, = ǝlʇᴉ┴} ',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:ᴉnפɹǝʇɹɐʇS˙ǝɯɐƃ                        
+ǝslǝ                    
+puǝ                        
+(,,ǝʇɐɹɐʞuɐɯʞɹɐɥSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,dǝʇS ɥʇɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,dǝʇS ɥʇɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,dǝʇS ɥʇɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,dǝʇS ɥʇɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                        
+uǝɥʇ Ɩ == (ǝnɹʇ',,dǝʇSɥʇɐǝpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+puǝ                    
+({ϛ˙ᄅ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ=pᴉ¿/ʇǝssɐ/ɯoɔ˙xolqoɹ˙ʍʍʍ//:dʇʇɥ,, = uoɔI' ,,uɐɯnɥɹǝdnS ǝʌɐH ʇoN,, = ʇxǝ┴ ',,uoᴉʇɐɔᴉɟᴉʇoN,, = ǝlʇᴉ┴} ',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:ᴉnפɹǝʇɹɐʇS˙ǝɯɐƃ                        
+ǝslǝ                    
+puǝ                        
+(,,dǝʇSɥʇɐǝpʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,uɐɯnɥɹǝdnS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,uɐɯnɥɹǝdnS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo 00ㄣ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,uɐɯnɥɹǝdnS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,uɐɯnɥɹǝdnS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                        
+uǝɥʇ Ɩ == (ǝnɹʇ',,uɐɯnɥɹǝdnSʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,uɐɯnɥpoפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,uɐɯnɥpoפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,uolɐ┴ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,uolɐ┴ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʍɐlƆ uoƃɐɹp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʍɐlƆ ɔᴉɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,ʍɐlƆ ɔᴉɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,oɹʇɔǝlƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ǝʇɐɹɐʞ uɐɯʞɹɐɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ǝʇɐɹɐʞ uɐɯɥsᴉℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,dǝʇS ɥʇɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,dǝʇS ɥʇɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,uɐɯnɥɹǝdnS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,uɐɯnɥɹǝdnS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd            
+uǝɥʇ uɐɯnH‾poפ‾oʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+puǝ    
+puǝ        
+()ɯɹɐℲǝǝlǝWll∀ʇǝפ            
+uǝɥʇ Ɩ =~ uɐɯnɥpoפʎnq ɟᴉ        
+uǝɥʇ uɐɯnɥpoפʎnq ɟᴉ    
+((ǝnɹʇ ',,uɐɯnɥpoפʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ɹǝqɯnuoʇ = uɐɯnɥpoפʎnq    
+(,,uɐɯnɥpoפʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(ǝnɹʇ ',,uɐɯnɥpoפʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+ǝnlɐʌ = uɐɯnHpoפoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'uɐɯnHpoפoʇn∀˙פ‾ ',,uɐɯnH poפ oʇn∀,,)ǝlƃƃo┴:Ɛǝƃɐd
+ (,,<<ǝlʎʇSƃuᴉʇɥƃᴉℲ>>,,)ɹoʇɐɹǝdǝS:Ɛǝƃɐd
+
+(puǝ
+puǝ    
+puǝ        
+(,,ƃuᴉɯɐפᴉɐʇuɐ┴,,)ǝpoƆǝs∩            
+(,,ǝɹoᴉx∀,,)ǝpoƆǝs∩            
+(,,ʞɔoɹƃᴉɐpᄅqnS,,)ǝpoƆǝs∩            
+(,,NIWp∀‾┴ƎɹƆƎS,,)ǝpoƆǝs∩            
+(,,┴ƎSƎɹ‾┴┴Iʞ,,)ǝpoƆǝs∩            
+(,,⅄∀M∀ƎΛIפNIWp∀,,)ǝpoƆǝs∩            
+(,,┴OqOɹɹƎW∀פq∩S,,)ǝpoƆǝs∩            
+(,,┴OqOɹɹƎW∀פ,,)ǝpoƆǝs∩            
+(,,ƃuᴉɯɐƃʇʇᴉʞ,,)ǝpoƆǝs∩            
+(,,666ɹǝℲᄅqnS,,)ǝpoƆǝs∩            
+(,,snqɔᴉƃɐW,,)ǝpoƆǝs∩            
+(,,ʞMƆſ,,)ǝpoƆǝs∩            
+(,,oǝɥǝpoɔɹɐʇS,,)ǝpoƆǝs∩            
+(,,ʎxxnlq,,)ǝpoƆǝs∩            
+(,,ᄅʌ‾0Ɩppnɟ,,)ǝpoƆǝs∩            
+(,,0Ɩpp∩Ⅎ,,)ǝpoƆǝs∩            
+(,,SMƎNפIq,,)ǝpoƆǝs∩            
+(,,ƎƆ∀┴∀ƎɹפƎH┴,,)ǝpoƆǝs∩            
+(,,Ɩ┴ƎSƎɹ‾┴OqOɹɹƎW∀פᄅq∩S,,)ǝpoƆǝs∩            
+(,,ƖԀXƎ‾┴OqOɹɹƎW∀פᄅq∩S,,)ǝpoƆǝs∩            
+(,,ǝᴉqooNlɐᴉɔᴉɟɟOᄅqnS,,)ǝpoƆǝs∩            
+(,,ǝuᴉɐWʇɐHʍɐɹʇS,,)ǝpoƆǝs∩            
+(,,ƐᄅƖɹƎ┴S∀WqOONᄅq∩S,,)ǝpoƆǝs∩            
+(,,nɹɐzᴉʞǝlɔu∩ᄅqnS,,)ǝpoƆǝs∩            
+puǝ            
+(ʇxǝ┴)ɹǝʌɹǝSǝʞoʌuI:ɯǝǝpǝɹ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+(ʇxǝ┴)ǝpoƆǝs∩ uoᴉʇɔunɟ            
+uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɹo ǝpoƆɯǝǝpǝɹoʇn∀pǝlqɐuƎ˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+ǝnlɐʌ = ǝpoƆɯǝǝpǝɹoʇn∀pǝlqɐuƎ˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝpoƆɯǝǝpǝɹoʇn∀pǝlqɐuƎ˙פ‾ ',,ǝpoƆ ɯǝǝpǝɹ,,)ǝlƃƃo┴:Ɛǝƃɐd
+
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+{                
+00Ɩ = [Ɛ]                    
+',,ǝsuǝɟǝp,, = [ᄅ]                    
+',,ʇuᴉoԀpp∀,, = [Ɩ]                    
+} = sƃɹɐ lɐɔol                
+ǝslǝ            
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+{                
+00Ɩ = [Ɛ]                    
+',,ǝǝlǝW,, = [ᄅ]                    
+',,ʇuᴉoԀpp∀,, = [Ɩ]                    
+} = sƃɹɐ lɐɔol                
+uǝɥʇ 6ㄣϛᄅ => ǝnlɐΛ˙lǝʌǝ˥˙ǝǝlǝW˙sʇɐʇS˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+uǝɥʇ unʇᴉɐʞsʇɐʇSoʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+ǝnlɐʌ = unʇᴉɐʞsʇɐʇSoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'unʇᴉɐʞsʇɐʇSoʇn∀˙פ‾ ',,unʇᴉɐʞ ʇɐʇS oʇn∀,,)ǝlƃƃo┴:Ɛǝƃɐd
+
+(puǝ
+(puǝ    
+puǝ        
+puǝ            
+puǝ                
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+{                    
+00Ɩ = [Ɛ]                        
+',,ʇᴉnɹℲ uoɯǝp,, = [ᄅ]                        
+',,ʇuᴉoԀpp∀,, = [Ɩ]                        
+} = sƃɹɐ lɐɔol                    
+uǝɥʇ ,,ʇᴉnɹℲ,, == sʇɐʇSʇɔǝlǝS˙פ‾ ɟᴉǝslǝ                
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+{                    
+00Ɩ = [Ɛ]                        
+',,unפ,, = [ᄅ]                        
+',,ʇuᴉoԀpp∀,, = [Ɩ]                        
+} = sƃɹɐ lɐɔol                    
+uǝɥʇ ,,unפ,, == sʇɐʇSʇɔǝlǝS˙פ‾ ɟᴉǝslǝ                
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+{                    
+00Ɩ = [Ɛ]                        
+',,pɹoʍS,, = [ᄅ]                        
+',,ʇuᴉoԀpp∀,, = [Ɩ]                        
+} = sƃɹɐ lɐɔol                    
+uǝɥʇ ,,pɹoʍS,, == sʇɐʇSʇɔǝlǝS˙פ‾ ɟᴉǝslǝ                
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+{                    
+00Ɩ = [Ɛ]                        
+',,ǝsuǝɟǝp,, = [ᄅ]                        
+',,ʇuᴉoԀpp∀,, = [Ɩ]                        
+} = sƃɹɐ lɐɔol                    
+uǝɥʇ ,,ǝsuǝɟǝp,, == sʇɐʇSʇɔǝlǝS˙פ‾ ɟᴉǝslǝ                
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+{                    
+00Ɩ = [Ɛ]                        
+',,ǝǝlǝW,, = [ᄅ]                        
+',,ʇuᴉoԀpp∀,, = [Ɩ]                        
+} = sƃɹɐ lɐɔol                    
+uǝɥʇ ,,ǝǝlǝW,, == sʇɐʇSʇɔǝlǝS˙פ‾ ɟᴉ                
+uǝɥʇ sʇɐʇSoʇn∀pǝlqɐuƎ˙פ‾ ɟᴉ            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)llɐɔd    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+ǝnlɐʌ = sʇɐʇSoʇn∀pǝlqɐuƎ˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'sʇɐʇSoʇn∀pǝlqɐuƎ˙פ‾ ',,sʇɐʇS oʇn∀,,)ǝlƃƃo┴:Ɛǝƃɐd
+
+(puǝ
+ǝnlɐʌ = sʇɐʇSʇɔǝlǝS˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'{,,ʇᴉnɹℲ,,',,unפ,,',,pɹoʍS,,',,ǝsuǝɟǝp,,',,ǝǝlǝW,,}',,sʇɐʇS ʇɔǝlǝS,,)uʍopdoɹp:Ɛǝƃɐd
+(,,��,,)ɹoʇɐɹǝdǝS:Ɛǝƃɐd
+
+(puǝ
+()ɹǝʞɐɥSɐɹǝɯɐƆ
+ǝnlɐʌ = ɹǝʞɐɥSɐɹǝɯɐƆ˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝnɹʇ ',,ɹǝʞɐɥS ɐɹǝɯɐƆ,,)ǝlƃƃo┴:ᄅǝƃɐd
+
+(puǝ
+()ǝƃɐɯɐppǝlqɐsᴉp
+ǝnlɐʌ = ǝƃɐɯɐpsᴉp˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝnɹʇ  ',,ǝƃɐɯɐp pǝlqɐsᴉp,,)ǝlƃƃo┴:ᄅǝƃɐd
+ǝnɹʇ = ǝɯɐɹℲƆ‾oʇn∀˙פ‾
+(puǝ
+ǝnlɐʌ = qoWƃuᴉɹq˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝnɹʇ ',,uoW ƃuᴉɹq,,)ǝlƃƃo┴:ᄅǝƃɐd
+
+(puǝ
+pǝlqɐuƎ˙suoᴉʇɐɔᴉɟᴉʇoN˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou = pǝlqɐuƎ˙suoᴉʇɐɔᴉɟᴉʇoN˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝslɐɟ ',,uoᴉʇɐɔᴉɟᴉʇoNǝpᴉH,,)ǝlƃƃo┴:ᄅǝƃɐd
+
+(puǝ
+puǝ
+(00ϛ '00ϛ '0 'Ɩ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uǝǝɹɔsʞɔɐlq˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(ǝnɹʇ)pǝlqɐuƎƃuᴉɹǝpuǝɹpƐʇǝS:ǝɔᴉʌɹǝSunɹ˙ǝɯɐƃ    
+ǝslǝ
+(00ϛ '00ϛ '0 '00ϛ)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uǝǝɹɔsʞɔɐlq˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(ǝslɐɟ)pǝlqɐuƎƃuᴉɹǝpuǝɹpƐʇǝS:ǝɔᴉʌɹǝSunɹ˙ǝɯɐƃ    
+uǝɥʇ ǝnlɐʌ ɟᴉ
+ǝnlɐʌ = uǝǝɹɔSʞɔɐlq˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝslɐɟ ',,uǝǝɹɔS ʞɔɐlq,,)ǝlƃƃo┴:ᄅǝƃɐd
+
+(puǝ
+puǝ
+(ǝnɹʇ)pǝlqɐuƎƃuᴉɹǝpuǝɹpƐʇǝS:ǝɔᴉʌɹǝSunɹ˙ǝɯɐƃ    
+ǝslǝ
+(ǝslɐɟ)pǝlqɐuƎƃuᴉɹǝpuǝɹpƐʇǝS:ǝɔᴉʌɹǝSunɹ˙ǝɯɐƃ    
+uǝɥʇ ǝnlɐʌ ɟᴉ
+ǝnlɐʌ = uǝǝɹɔSǝʇᴉɥM˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝslɐɟ ',,uǝǝɹɔS ǝʇᴉɥM,,)ǝlƃƃo┴:ᄅǝƃɐd
+
+(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSunɹ lɐɔol
+
+(puǝ
+puǝ    
+puǝ        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝɹᴉℲ:ƎɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+        
+{            
+ǝnɹʇ = [ᄅ]                
+',,uǝʞ,, = [Ɩ]                
+} = sƃɹɐ lɐɔol            
+uǝɥʇ uǝʞoʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(puǝ
+ǝnlɐʌ = uǝʞoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝnɹʇ ',,uǝʞ oʇn∀,,)ǝlƃƃo┴:ᄅǝƃɐd
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+(,,osnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+uǝɥʇ (,,osnqsɐH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                
+uǝɥʇ ᴉʞɐHoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+ǝnlɐʌ = ᴉʞɐHoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝnɹʇ ',,ᴉʞɐH oʇn∀,,)ǝlƃƃo┴:ᄅǝƃɐd
+(puǝ
+ǝnlɐʌ = ʞɔɐʇʇ∀ʇsɐℲ˙פ‾	
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝnɹʇ',ㄣ:ʞɔɐʇʇ∀ ʇsɐℲ,)ǝlƃƃo┴:ᄅǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+(0 'ɯɹɐℲoʇn∀ǝɔuɐʇsᴉp˙פ‾  '0)ʍǝu˙ǝɯɐɹℲƆ = ɯɹɐℲpoɥʇǝW                
+ǝslǝ            
+(0 '0 '(0)pɐɹ˙ɥʇɐɯ)sǝlƃu∀˙ǝɯɐɹℲƆ * (0 'ɯɹɐℲoʇn∀ǝɔuɐʇsᴉp˙פ‾  '0)ʍǝu˙ǝɯɐɹℲƆ = ɯɹɐℲpoɥʇǝW                
+uǝɥʇ ,,ɹǝdd∩,, == poɥʇǝW˙פ‾ ɟᴉǝslǝ            
+(0 '0 '(06)pɐɹ˙ɥʇɐɯ)sǝlƃu∀˙ǝɯɐɹℲƆ * (0 'ɯɹɐℲoʇn∀ǝɔuɐʇsᴉp˙פ‾ - '0)ʍǝu˙ǝɯɐɹℲƆ = ɯɹɐℲpoɥʇǝW                
+uǝɥʇ ,,ʍolǝq,, == poɥʇǝW˙פ‾ ɟᴉǝslǝ            
+(ɯɹɐℲoʇn∀ǝɔuɐʇsᴉp˙פ‾  '0 '0)ʍǝu˙ǝɯɐɹℲƆ = ɯɹɐℲpoɥʇǝW                
+uǝɥʇ ,,puᴉɥǝq,, == poɥʇǝW˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op (0)ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+    
+(puǝ
+ǝnlɐʌ = ɯɹɐℲoʇn∀ǝɔuɐʇsᴉp˙פ‾ 
+(ǝnlɐʌ)uoᴉʇɔunɟ'0Ɛ'08'Ɩ',,ɯɹɐℲ oʇn∀ ǝɔuɐʇsᴉp,,)ɹǝpᴉlS:ᄅǝƃɐd
+    
+(puǝ
+ǝnlɐʌ = poɥʇǝW˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'poɥʇǝW',,poɥʇǝW ɯɹɐℲ ʇɔǝlǝS,,)uʍopdoɹp:ᄅǝƃɐd
+  
+puǝ
+0Ɛ = ɯɹɐℲoʇn∀ǝɔuɐʇsᴉp˙פ‾    
+uǝɥʇ lᴉu == ɯɹɐℲoʇn∀ǝɔuɐʇsᴉp˙פ‾  ɟᴉ
+puǝ
+,,ɹǝdd∩,, = poɥʇǝW˙פ‾
+uǝɥʇ lᴉu == poɥʇǝW˙פ‾ ɟᴉ
+{,,ʍolǝq,,',,puᴉɥǝq,,',,ɹǝdd∩,,} = poɥʇǝW lɐɔol
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+(puǝ                        
+ǝslɐɟ = ǝʇɐʇoɹoʇn∀˙pᴉouɐɯnɥ˙ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙nʎɹ                        
+ǝslɐɟ = ƃuᴉʞɔɐʇʇɐ˙ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙nʎɹ                        
+ǝslɐɟ = ƃuᴉʞɔolq˙ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙nʎɹ                        
+ㄣ = ʇuǝɯǝɹɔuᴉ˙ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙nʎɹ                        
+0 = ʇɹɐʇSsnɔoɟ˙ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙nʎɹ                        
+0 = ʞɔolqʇxǝNo┴ǝɯᴉʇ˙ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙nʎɹ                        
+ǝslɐɟ = ǝʌᴉʇɔɐ˙ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙nʎɹ                        
+0 = ʞɔɐʇʇ∀ʇxǝNo┴ǝɯᴉʇ˙ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙nʎɹ                        
+(ǝƃnɥ˙ɥʇɐɯ^ǝƃnɥ˙ɥʇɐɯ^ǝƃnɥ˙ɥʇɐɯ)- = ʞɔɐʇʇ∀ʇxǝNo┴ǝɯᴉʇ˙ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙nʎɹ --                       
+()uoᴉʇɔunɟ)llɐɔd                    
+uǝɥʇ ,,ǝlqɐʇ,, == (nʎɹ)ɟoǝdʎʇ ɟᴉ                
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ɟᴉ            
+()ʇᴉɐʍ˙ʞsɐʇ op ǝnɹʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ    
+[ᄅ](ɥnɹq)sǝnlɐʌdnʇǝƃ˙ƃnqǝp = nʎɹ    
+(ʞɹoʍǝɯɐɹℲʇɐqɯoƆ˙sʇdᴉɹɔSɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ǝɹᴉnbǝɹ = ɥnɹq    
+()doʇS:(ɹǝʞɐɥSɐɹǝɯɐƆ˙lᴉʇ∩˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)ǝɹᴉnbǝɹ    
+()ʇᴉɐʍ˙ʞsɐʇ op ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+ㄣ0˙0 = ǝɯᴉ┴ lɐɔol
+ ,,ʇsɐℲ,, = ǝdʎ┴ʇsɐℲ˙פ‾
+()(puǝ
+puǝ
+puǝ
+puǝ    
+(ǝƃnɥ˙ɥʇɐɯ ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs        
+(ǝnɹʇ ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ǝlqɐʇdᴉɹɔsʇǝs        
+puǝ        
+puǝ ()ʞɔᴉʇ = ʞɔɐʇʇɐʇsɐɟuʍoplooɔ (Ɩ)ʇᴉɐʍ uǝɥʇ Ɛ˙ < ʞɔɐʇʇɐʇsɐɟuʍoplooɔ - ()ʞɔᴉʇ ɟᴉ            
+uǝɥʇ ,,ʍolS,, == ǝdʎ┴ʇsɐℲ˙פ‾ ɟᴉǝslǝ        
+puǝ ()ʞɔᴉʇ = ʞɔɐʇʇɐʇsɐɟuʍoplooɔ (Ɩ0˙)ʇᴉɐʍ uǝɥʇ ϛ˙Ɩ < ʞɔɐʇʇɐʇsɐɟuʍoplooɔ - ()ʞɔᴉʇ ɟᴉ            
+uǝɥʇ ,,ʇsɐℲ,, == ǝdʎ┴ʇsɐℲ˙פ‾ ɟᴉǝslǝ        
+puǝ ()ʞɔᴉʇ = ʞɔɐʇʇɐʇsɐɟuʍoplooɔ (Ɩ˙)ʇᴉɐʍ uǝɥʇ 6˙ < ʞɔɐʇʇɐʇsɐɟuʍoplooɔ - ()ʞɔᴉʇ ɟᴉ            
+uǝɥʇ ,,lɐɯɹoN,, == ǝdʎ┴ʇsɐℲ˙פ‾ ɟᴉ        
+()uɐɟǝɯʞɐʎ        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ɹo ʞɔɐʇʇ∀ʇsɐℲ ɟᴉ    
+(ㄣ0˙0)ʇᴉɐʍ˙ʞsɐʇ    
+uǝɥʇ pǝddᴉnbǝ˙ɔɐ puɐ ɔɐ ɟᴉ
+ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙ɹʞɹoʍǝɯɐɹℲʇɐqɯoƆ = ɔɐ lɐɔol
+op (0)ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)dɐɹʍ˙ǝuᴉʇnoɹoɔ
+{,,ʍolS,,',,lɐɯɹoN,,',,ʇsɐℲ,,} = ǝdʎ┴ʞɔɐʇʇ∀ʇsɐℲ lɐɔol
+(puǝ
+puǝ
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+ǝɯɐN˙ʌ = uodɐǝMʇɔǝlǝS˙פ‾                    
+uǝɥʇ ((ǝɯɐN˙ʌ)ƃuᴉɹʇsoʇ)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ ,,ǝǝlǝW,, == dᴉ┴loo┴˙ʌ ɟᴉ            
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ' ᴉ ɹoɟ        
+ǝslǝ    
+puǝ        
+puǝ            
+puǝ                
+ǝɯɐN˙ʌ = uodɐǝMʇɔǝlǝS˙פ‾                    
+uǝɥʇ ((ǝɯɐN˙ʌ)ƃuᴉɹʇsoʇ)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ ,,ʇᴉnɹℲ xolq,, == dᴉ┴loo┴˙ʌ ɟᴉ            
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ        
+uǝɥʇ ,,ʇᴉnɹℲ,, == uodɐǝMʇɔǝlǝS ɟᴉǝslǝ    
+puǝ        
+puǝ            
+puǝ                
+ǝɯɐN˙ʌ = uodɐǝMʇɔǝlǝS˙פ‾                    
+uǝɥʇ ((ǝɯɐN˙ʌ)ƃuᴉɹʇsoʇ)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ ,,pɹoʍS,, == dᴉ┴loo┴˙ʌ ɟᴉ            
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ        
+uǝɥʇ ,,pɹoʍS,, == uodɐǝMʇɔǝlǝS ɟᴉǝslǝ    
+puǝ        
+puǝ            
+puǝ                
+ǝɯɐN˙ʌ = uodɐǝMʇɔǝlǝS˙פ‾                    
+uǝɥʇ ((ǝɯɐN˙ʌ)ƃuᴉɹʇsoʇ)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ ,,ǝǝlǝW,, == dᴉ┴loo┴˙ʌ ɟᴉ            
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ        
+uǝɥʇ ,,ǝǝlǝW,, == uodɐǝMʇɔǝlǝS ɟᴉ    
+()uoᴉʇɔunɟ)llɐɔd
+op ()ʇᴉɐʍ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+ǝnlɐʌ = uodɐǝMʇɔǝlǝS
+(ǝnlɐʌ)uoᴉʇɔunɟ 'uodɐǝM',,uodɐǝM ʇɔǝlǝS,,)uʍopdoɹp:ᄅǝƃɐd
+{,,ʇᴉnɹℲ,,',,pɹoʍS,,',,ǝǝlǝW,,} = uodɐǝM
+
+(,,️⚙,,)ɹoʇɐɹǝdǝS:ᄅǝƃɐd
+                                                           (,,</=ɹoloƆ>ʎllnɟssǝɔɔns pǝpɐol qnH ɹoʇɔǝΛ<uɐʎƆ=ɹoloƆ>,,)ɔǝΛ
+  
+(puǝ
+puǝ    
+puǝ        
+;ʞɐǝɹq            
+ǝslǝ        
+(puǝ            
+                
+(x)uoᴉʇɔunɟ 'puǝ            
+puǝ                
+puǝ                    
+puǝ                    
+puǝ ()doʇS:ʍ uǝɥʇ ʍ ɟᴉ                            
+uǝɥʇ (0ϛƖ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙uoWǝɯɐɹℲƆ)) ɟᴉǝslǝ                        
+;((9ϛ9ㄥㄣ889ϛϛ˙ㄥ99Ɩ- 'ϛㄥ89ㄣ08ㄣᄅㄣϛ˙ᄅㄥ8 'Ɛ906Ɛϛㄥᄅᄅ8˙ㄥ09ㄣ-)ʍǝu˙ƐɹoʇɔǝΛ',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ;(ϛ˙0)ʇᴉɐʍ                            
+puǝ ;()doʇS:ʍ uǝɥʇ ʍ ɟᴉ                            
+uǝɥʇ ((000Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙uoWǝɯɐɹℲƆ)) puɐ ((,,pɹɐnפ s,poפ,, 'qoWlɐᴉɹǝʇɐW)puᴉɟ˙ǝlqɐʇ) puɐ ƖplɹoM) ɟᴉǝslǝ                        
+;((ϛㄥ896ㄥƖㄣ8ㄥ˙9ᄅ6Ɩ- 'ϛㄥ896ㄥ9˙9 'ϛᄅ9ϛƖϛ8˙ㄣ98Ɛ)ʍǝu˙ƐɹoʇɔǝΛ ',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ;(ϛ˙0)ʇᴉɐʍ                            
+puǝ ;()doʇS:ʍ uǝɥʇ ʍ ɟᴉ                            
+uǝɥʇ ((0000ϛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙uoWǝɯɐɹℲƆ)) puɐ ((,,opuɐɯɯoƆ uɐɯɥsᴉℲ,, 'qoWlɐᴉɹǝʇɐW)puᴉɟ˙ǝlqɐʇ) ʇou puɐ ƖplɹoM) ɟᴉǝslǝ                        
+;((ϛㄥ896ㄥƖㄣ8ㄥ˙6Ɩ8Ɩ 'ϛㄥ896ㄥ9˙ƖƖ 'ϛᄅ9ϛƖϛ8˙Ɛ9ƖƖ9)ʍǝu˙ƐɹoʇɔǝΛ ',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ;(ϛ˙0)ʇᴉɐʍ                            
+puǝ ;()doʇS:ʍ uǝɥʇ ʍ ɟᴉ                            
+uǝɥʇ ((0000ϛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙uoWǝɯɐɹℲƆ)) puɐ ((,,opuɐɯɯoƆ uɐɯɥsᴉℲ,, 'qoWlɐᴉɹǝʇɐW)puᴉɟ˙ǝlqɐʇ) puɐ ƖplɹoM) ɟᴉ                        
+;(uoWǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ = ʍ                        
+;ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+;ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ʇuǝɹɐԀ˙ɹ ʇou ɹo (0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ɹ) ɹo lɐᴉɹǝʇɐWɯɹɐℲoʇn∀ ʇou ɹo (qoWlɐᴉɹǝʇɐW)plᴉɥƆʇsɹᴉℲpuᴉℲɯoʇsnƆ ʇou lᴉʇun                                
+puǝ                                    
+;(Ɩ '0Ɛ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                        
+puǝ                                        
+;(ǝɯɐƃ 'ǝslɐɟ',,Λ,, 'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝs:ǝɯɐƃ                                            
+;(ǝɯɐƃ'ǝslɐɟ ',,Λ,, 'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝs:ǝɯɐƃ                                            
+uǝɥʇ ((0ϛƖ =< ǝnlɐΛ˙lǝʌǝ˥˙(,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ) puɐ (,,ƃǝ˥ ʞɔɐlq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ) ɟᴉ                                        
+;(puǝ                                        
+puǝ                                            
+puǝ                                                
+;(puǝ                                                    
+puǝ                                                        
+;(ϛϛ 'ϛϛ 'ϛϛ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ǝ                                                            
+;(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ǝ                                                            
+;(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ǝ                                                            
+;(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ǝ                                                            
+;ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ǝ                                                            
+;0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ǝ                                                            
+;0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ǝ                                                            
+;ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ǝ                                                            
+uǝɥʇ (ʇɹɐԀʇooɹpᴉouɐɯnH˙ǝ)ʞɹoMʇǝNʎWuI ɟᴉ                                                        
+()uoᴉʇɔunɟ)uʍɐds                                                    
+uǝɥʇ (ǝɯɐN˙ɹ == ǝɯɐN˙ǝ) ɟᴉ                                                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ǝ 'ᴉ ɹoɟ                                            
+()uoᴉʇɔunɟ)uʍɐds                                        
+;(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+;ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                        
+puǝ ;()doʇS:ʇǝƃɹɐ┴oʇɯɹɐℲ uǝɥʇ ʇǝƃɹɐ┴oʇɯɹɐℲ ɟᴉ                                        
+uǝɥʇ ((0ϛƖ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹ)) puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹ) ɟᴉ                                    
+;((Ɩ '0Ɛ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹ)ʇǝƃɹɐ┴oʇ = ʇǝƃɹɐ┴oʇɯɹɐℲ                                    
+;()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+uǝɥʇ ((0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ɹ) puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹ puɐ (ǝɯɐN˙ɹ 'qoWlɐᴉɹǝʇɐW)puᴉɟ˙ǝlqɐʇ puɐ lɐᴉɹǝʇɐWɯɹɐℲoʇn∀) ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ɹ 'ᴉ ɹoɟ                        
+uǝɥʇ (qoWlɐᴉɹǝʇɐW)plᴉɥƆʇsɹᴉℲpuᴉℲɯoʇsnƆ ɟᴉ                    
+;(lɐᴉɹǝʇɐWǝpoWʇɔǝlǝS)lɐᴉɹǝʇɐWʞɔǝɥƆ                    
+uǝɥʇ (,,,, =~ lɐᴉɹǝʇɐWǝpoWʇɔǝlǝS) ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔdx            
+uǝɥʇ lɐᴉɹǝʇɐWɯɹɐℲoʇn∀ ɟᴉ        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ'uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == x ɟᴉ    
+x = lɐᴉɹǝʇɐWɯɹɐℲoʇn∀    
+(x)uoᴉʇɔunɟ 'lɐᴉɹǝʇɐWɯɹɐℲoʇn∀ ',,lɐᴉɹǝʇɐW ɯɹɐℲ oʇn∀,,)ǝlƃƃo┴:Ɩǝƃɐd
+(puǝ
+ǝnlɐʌ = lɐᴉɹǝʇɐWǝpoWʇɔǝlǝS
+(ǝnlɐʌ)uoᴉʇɔunɟ 'lɐᴉɹǝʇɐWll∀',,lɐᴉɹǝʇɐW ʇɔǝlǝS,,)uʍopdoɹp:Ɩǝƃɐd
+  (,,<<lᴉɐɹǝʇɐW ɯɹɐℲ>>,,)ɹoʇɐɹǝdǝS:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(,,ɹǝuʍɐdSǝɔuᴉɹԀǝʞɐƆ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ    
+()ʇᴉɐʍ op ɐʞuʍɐdS˙פ‾ ǝlᴉɥʍ    
+ǝnlɐʌ = ɐʞuʍɐdS˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ' ǝɔuᴉɹԀǝʞɐƆoʇn∀˙פ‾ ',,ᴉɹnʞɐʇɐʞ uʍɐdS oʇn∀,,)ǝlƃƃo┴:Ɩǝƃɐd
+(puǝ    
+puǝ        
+puǝ            
+(puǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+(ϛ˙0)ʇᴉɐʍ                                
+(ɯɹɐℲpoɥʇǝW * ()uoW‾ǝɯɐɹℲƆ‾ǝʞɐƆʇǝפ)ʇǝƃɹɐ┴oʇ                                
+ǝslɐɟ = qoWƃuᴉɹq                                
+ǝslǝ                            
+puǝ                                
+puǝ                                    
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo (,,ǝɔuᴉɹԀ ǝʞɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo ǝslɐɟ == ǝɔuᴉɹԀǝʞɐƆoʇn∀˙פ‾ lᴉʇun                                        
+puǝ                                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ˙פ‾                                                
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                            
+ǝnɹʇ = qoWƃuᴉɹq                                            
+  (09 '09 '09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                            
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                            
+()ʇᴉɐʍ ʇɐǝdǝɹ                                        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ɹǝʇɟɐɹƆ ǝᴉʞooƆ,, == ǝɯɐN˙ʌ ɹo ,,pɹɐnפ ǝʞɐƆ,, == ǝɯɐN˙ʌ ɹo ,,ɹǝʞɐq pɐǝH,, == ǝɯɐN˙ʌ ɹo ,,ɟɟɐʇS ƃuᴉʞɐq,, == ǝɯɐN˙ʌ) ɟᴉ                                    
+  op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                                
+uǝɥʇ  (,,ɹǝʇɟɐɹƆ ǝᴉʞooƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɹo (,,pɹɐnפ ǝʞɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɹo (,,ɹǝʞɐq pɐǝH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɹo (,,ɟɟɐʇS ƃuᴉʞɐq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                            
+ǝslǝ                        
+puǝ                            
+puǝ                                
+puǝ                                    
+uɹnʇǝɹ                                        
+((ᄅ0ㄥ66666˙0 '80-ǝ66Ɩϛᄅㄣ6Ɩ˙Ɩ '988ㄥㄥᄅϛㄣᄅ00˙0- '80-ǝㄥϛ0ƐƖ86Ɩ˙Ɩ- 'Ɩ '80-ǝ8ㄥ6ᄅ86ㄥϛ˙Ɩ- '988ㄥㄥᄅϛㄣᄅ00˙0 '80-ǝ6ㄥƐ9ㄥᄅ8ϛ˙Ɩ 'ᄅ0ㄥ66666˙0 '9Ɩ09˙66ƐᄅƖ- 'ᄅㄥᄅ8800˙0ㄥ 'ᄅᄅㄥ68˙ϛㄣƖᄅ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                        
+uǝɥʇ 000Ɩ < ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙x) ɟᴉ                                    
+uǝɥʇ ,,ƃuᴉʞ ɥƃnop,, == ǝɯɐN˙x ɹo ,,ǝɔuᴉɹԀ ǝʞɐƆ,, == ǝɯɐN˙x ɟᴉ                                
+ op (()uǝɹplᴉɥƆʇǝפ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)sɹᴉɐd uᴉ x'‾ ɹoɟ                            
+uǝɥʇ (,,ǝɔuᴉɹԀ ǝʞɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɹo (,,ǝɔuᴉɹԀ ǝʞɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+ ǝslǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+puǝ                                    
+puǝ                                        
+uɹnʇǝɹ                                            
+((ᄅ0ㄥ66666˙0 '80-ǝ66Ɩϛᄅㄣ6Ɩ˙Ɩ '988ㄥㄥᄅϛㄣᄅ00˙0- '80-ǝㄥϛ0ƐƖ86Ɩ˙Ɩ- 'Ɩ '80-ǝ8ㄥ6ᄅ86ㄥϛ˙Ɩ- '988ㄥㄥᄅϛㄣᄅ00˙0 '80-ǝ6ㄥƐ9ㄥᄅ8ϛ˙Ɩ 'ᄅ0ㄥ66666˙0 '9Ɩ09˙66ƐᄅƖ- 'ᄅㄥᄅ8800˙0ㄥ 'ᄅᄅㄥ68˙ϛㄣƖᄅ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                            
+uǝɥʇ 000Ɩ < ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙x) ɟᴉ                                        
+uǝɥʇ ,,ƃuᴉʞ ɥƃnop,, == ǝɯɐN˙x ɹo ,,ǝɔuᴉɹԀ ǝʞɐƆ,, == ǝɯɐN˙x ɟᴉ                                    
+ op (()uǝɹplᴉɥƆʇǝפ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)sɹᴉɐd uᴉ x'‾ ɹoɟ                                
+ǝslǝ                            
+puǝ                                
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ǝɔuᴉɹԀǝʞɐƆoʇn∀˙פ‾ ʇou lᴉʇun                                    
+(ǝƃnɥ˙ɥʇɐɯ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,,'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs                                        
+puǝ                                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ˙פ‾                                            
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                        
+ǝnɹʇ = qoWƃuᴉɹq                                        
+  (09 '09 '09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+puǝ                                        
+uɹnʇǝɹ                                            
+((ᄅ0ㄥ66666˙0 '80-ǝ66Ɩϛᄅㄣ6Ɩ˙Ɩ '988ㄥㄥᄅϛㄣᄅ00˙0- '80-ǝㄥϛ0ƐƖ86Ɩ˙Ɩ- 'Ɩ '80-ǝ8ㄥ6ᄅ86ㄥϛ˙Ɩ- '988ㄥㄥᄅϛㄣᄅ00˙0 '80-ǝ6ㄥƐ9ㄥᄅ8ϛ˙Ɩ 'ᄅ0ㄥ66666˙0 '9Ɩ09˙66ƐᄅƖ- 'ᄅㄥᄅ8800˙0ㄥ 'ᄅᄅㄥ68˙ϛㄣƖᄅ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                            
+uǝɥʇ 000Ɩ < ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                        
+()ʇᴉɐʍ˙ʞsɐʇ ʇɐǝdǝɹ                                    
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ                                
+uǝɥʇ ,,ǝɔuᴉɹԀ ǝʞɐƆ,, == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                        
+
+puǝ                        
+puǝ                            
+puǝ                                
+puǝ                                    
+uɹnʇǝɹ                                        
+((ᄅ0ㄥ66666˙0 '80-ǝ66Ɩϛᄅㄣ6Ɩ˙Ɩ '988ㄥㄥᄅϛㄣᄅ00˙0- '80-ǝㄥϛ0ƐƖ86Ɩ˙Ɩ- 'Ɩ '80-ǝ8ㄥ6ᄅ86ㄥϛ˙Ɩ- '988ㄥㄥᄅϛㄣᄅ00˙0 '80-ǝ6ㄥƐ9ㄥᄅ8ϛ˙Ɩ 'ᄅ0ㄥ66666˙0 '9Ɩ09˙66ƐᄅƖ- 'ᄅㄥᄅ8800˙0ㄥ 'ᄅᄅㄥ68˙ϛㄣƖᄅ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                        
+(ϛ˙Ɩ)ʇᴉɐʍ                                        
+ǝslɐɟ = Ԁ┴ssɐdʎq˙פ‾                                        
+uǝɥʇ 000Ɩ < ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙x) ɟᴉ                                    
+uǝɥʇ ,,ƃuᴉʞ ɥƃnop,, == ǝɯɐN˙x ɹo ,,ǝɔuᴉɹԀ ǝʞɐƆ,, == ǝɯɐN˙x ɟᴉ                                
+ op (()uǝɹplᴉɥƆʇǝפ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)sɹᴉɐd uᴉ x'‾ ɹoɟ                            
+uǝɥʇ (,,ǝɔuᴉɹԀ ǝʞɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou ɟᴉ                        
+puǝ                        
+ǝslɐɟ = Ԁ┴ssɐdʎq˙פ‾                            
+uǝɥʇ Ԁ┴ssɐdʎq˙פ‾ ɟᴉ                            
+   uǝɥʇ (,,ƃuᴉʞ ɥƃnop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ƃuᴉʞ ɥƃnop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ  ɹo (,,ǝɔuᴉɹԀ ǝʞɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ǝɔuᴉɹԀ ǝʞɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɟᴉ                    
+()uoᴉʇɔunɟ)llɐɔd                
+uǝɥʇ ǝɔuᴉɹԀǝʞɐƆoʇn∀˙פ‾ ɟᴉ            
+op ()ʇᴉɐʍ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds    
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ =  ǝɔuᴉɹԀǝʞɐƆoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ' ǝɔuᴉɹԀǝʞɐƆoʇn∀˙פ‾ ',,ǝɔuᴉɹԀ ǝʞɐƆ oʇn∀,,)ǝlƃƃo┴:Ɩǝƃɐd
+(puǝ
+puǝ
+(Ɩ)ʇᴉɐʍ    
+(puǝ    
+puǝ        
+(,,˙˙uʍɐdSsIssoq,,)ʇǝS:lǝqɐ˥pǝllᴉʞqoW            
+ǝslǝ        
+((6Ɛ '6Ɛ 'snʇɐʇSǝʞɐɔ)qns˙ƃuᴉɹʇs ˙˙ ,, : uoWllᴉʞpǝǝN,,)ʇǝS:lǝqɐ˥pǝllᴉʞqoW            
+uǝɥʇ 98 == (snʇɐʇSǝʞɐɔ)uǝl˙ƃuᴉɹʇs ɟᴉǝslǝ        
+((0ㄣ '6Ɛ 'snʇɐʇSǝʞɐɔ)qns˙ƃuᴉɹʇs ˙˙ ,, : uoWllᴉʞpǝǝN,,)ʇǝS:lǝqɐ˥pǝllᴉʞqoW            
+uǝɥʇ ㄥ8 == (snʇɐʇSǝʞɐɔ)uǝl˙ƃuᴉɹʇs ɟᴉǝslǝ        
+((Ɩㄣ '6Ɛ 'snʇɐʇSǝʞɐɔ)qns˙ƃuᴉɹʇs ˙˙ ,, : uoWllᴉʞpǝǝN,,)ʇǝS:lǝqɐ˥pǝllᴉʞqoW            
+uǝɥʇ 88 == (snʇɐʇSǝʞɐɔ)uǝl˙ƃuᴉɹʇs ɟᴉ        
+(,,ɹǝuʍɐdSǝɔuᴉɹԀǝʞɐƆ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = snʇɐʇSǝʞɐɔ lɐɔol        
+()uoᴉʇɔunɟ)llɐɔd    
+op ǝnɹʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds
+(ǝnɹʇ ',,˙˙˙ƃuᴉpɐo˥ : uoWllᴉʞpǝǝN,,)lǝqɐ˥:Ɩǝƃɐd = lǝqɐ˥pǝllᴉʞqoW lɐɔol
+  (,,<<Hפ∩Op>>,,)ɹoʇɐɹǝdǝS:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+puǝ                                    
+puǝ                                        
+((0ᄅ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ]()uoW‾ǝɯɐɹℲƆ‾ǝuoqʇǝפ)ʇǝƃɹɐ┴oʇ                                            
+ǝslǝ                                        
+((0'0Ɛ'0ᄅ-)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ]()uoW‾ǝɯɐɹℲƆ‾ǝuoqʇǝפ)ʇǝƃɹɐ┴oʇ                                            
+uǝɥʇ ϛ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                                        
+((0ᄅ-'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ]()uoW‾ǝɯɐɹℲƆ‾ǝuoqʇǝפ)ʇǝƃɹɐ┴oʇ                                            
+uǝɥʇ ㄣ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                                        
+((0'0Ɛ'0ᄅ)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ]()uoW‾ǝɯɐɹℲƆ‾ǝuoqʇǝפ)ʇǝƃɹɐ┴oʇ                                            
+uǝɥʇ Ɛ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                                        
+((0ᄅ-'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ]()uoW‾ǝɯɐɹℲƆ‾ǝuoqʇǝפ)ʇǝƃɹɐ┴oʇ                                            
+uǝɥʇ ᄅ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ                                        
+((0ᄅ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ]()uoW‾ǝɯɐɹℲƆ‾ǝuoqʇǝפ)ʇǝƃɹɐ┴oʇ                                            
+uǝɥʇ Ɩ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉ                                        
+ǝslǝ                                    
+puǝ                                        
+(ϛ˙0)ʇᴉɐʍ                                            
+Ɩ + ǝuoqǝɯɹɐℲƆʇǝS  = ǝuoqǝɯɹɐℲƆʇǝS                                            
+puǝ                                            
+Ɩ = ǝuoqǝɯɹɐℲƆʇǝS                                                
+uǝɥʇ ()uoW‾ǝɯɐɹℲƆ‾ǝuoqʇǝפ# =< ǝuoqǝɯɹɐℲƆʇǝS ɟᴉǝslǝ                                            
+Ɩ = ǝuoqǝɯɹɐℲƆʇǝS                                                
+uǝɥʇ ,, == ǝuoqǝɯɹɐℲƆʇǝS ɹo lᴉu == ǝuoqǝɯɹɐℲƆʇǝS ɟᴉ                                            
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙[ǝuoqǝɯɹɐℲƆʇǝS]()uoW‾ǝɯɐɹℲƆ‾ǝuoqʇǝפ) ɟᴉ                                        
+(ɯɹɐℲpoɥʇǝW * [ǝuoqǝɯɹɐℲƆʇǝS]()uoW‾ǝɯɐɹℲƆ‾ǝuoqʇǝפ)ʇǝƃɹɐ┴oʇ                                        
+uǝɥʇ ǝɯɐɹℲƆ‾oʇn∀˙פ‾ ɟᴉ                                    
+ǝslǝ                                
+puǝ                                    
+puǝ                                        
+puǝ                                            
+ǝuoqɯɹɐℲoʇn∀˙פ‾ ʇou ɹo 0ᄅ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙uoWǝɯɐɹℲƆ) lᴉʇun (uoWǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ ()ʇᴉɐʍ ʇɐǝdǝɹ                                                
+(ϛᄅ9ϛ9ㄥ6ϛᄅ˙ㄥϛ09 'ㄣㄣ8ㄣƖㄥㄥ06ᄅ6ᄅㄣƖ˙ᄅㄥƖ 'ϛᄅƖƐϛㄣㄣ9ϛ8˙ㄣ0ϛ6-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ lɐɔol                                                
+ǝslǝ                                            
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ǝuoqɯɹɐℲoʇn∀˙פ‾ ʇou lᴉʇun                                                
+puǝ                                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ˙פ‾                                                        
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                    
+ǝnɹʇ = qoWƃuᴉɹq                                                    
+  (09 '09 '09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                                    
+()ʇᴉɐʍ ʇɐǝdǝɹ                                                
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ                                            
+uǝɥʇ (uoW‾ 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                                    
+uǝɥʇ (,,ʎɯɯnW pǝssǝsoԀ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,lnoS ɔᴉuoɯǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ǝᴉqɯoZ ƃuᴉʌᴉ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,uoʇǝlǝʞS uɹoqǝɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                
+op [,,uoW,,]lǝqɐ┴ǝuoq 'ʇxǝu uᴉ uoW‾ '‾ ɹoɟ                            
+ǝslǝ                        
+(ǝɯɐɹℲƆ˙uoᴉʇɔǝʇǝp˙ɹǝuoɯɯnS˙[,,ǝlʇsɐƆ pǝʇunɐH,,]dɐW˙ǝɔɐdsʞɹoʍ)ʇǝƃɹɐ┴oʇ                            
+(ɯǝʇI‾)uodɐǝMdᴉnbƎ                            
+uǝɥʇ (ɯǝʇI‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (ɯǝʇI‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+ǝslɐɟ = qoWƃuᴉɹq                                    
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ɹ‾ ɹo ʇuǝɹɐԀ˙ɹ‾ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ɹ‾ ɹo ǝuoqɯɹɐℲoʇn∀˙פ‾ ʇou lᴉʇun                                    
+puǝ                                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ˙פ‾                                            
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹ‾) ɟᴉ                                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹ‾)ʇǝƃɹɐ┴oʇ                                        
+ǝnɹʇ = qoWƃuᴉɹq                                        
+  (09 '09 '09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹ‾                                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+()ʇᴉɐʍ ʇɐǝdǝɹ                                    
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ɹ‾ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹ‾ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹ‾ ɟᴉ                                
+uǝɥʇ (ssoq‾ 'ǝɯɐN˙ɹ‾)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ɹ‾ '‾ ɹoɟ                        
+uǝɥʇ (ssoq‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (ssoq‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+[,,ɯǝʇI,,]lǝqɐ┴ǝuoq = ɯǝʇI‾ lɐɔol                    
+op ([,,ssoq,,]lǝqɐ┴ǝuoq)sɹᴉɐdᴉ uᴉ ssoq‾ '‾ ɹoɟ                
+uǝɥʇ ǝuoqɯɹɐℲoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+puǝ
+sǝɯɐɹℲƆƃuᴉɥɔʇɐɯ uɹnʇǝɹ    
+    
+puǝ    
+puǝ        
+puǝ            
+(ǝɯɐɹℲƆ˙ʌ 'sǝɯɐɹℲƆƃuᴉɥɔʇɐɯ)ʇɹǝsuᴉ˙ǝlqɐʇ                
+uǝɥʇ ʇlnsǝɹ == ǝɯɐN˙ʌ ɟᴉ            
+op (()uǝɹplᴉɥƆʇǝפ:suʍɐdSʎɯǝuƎ˙ǝɔɐdsʞɹoʍ˙ǝɯɐƃ)sɹᴉɐdᴉ uᴉ ʌ '‾ ɹoɟ        
+        
+(,,,, ',,+s%,,)qnsƃ:(,,,, ',,+p%,,)qnsƃ:(,,,, ',,[[%]%],,)qnsƃ:(,,,, ',, ˙ʌ˥,,)qnsƃ:uoW = ʇlnsǝɹ lɐɔol        
+op ([,,uoW,,]lǝqɐ┴ǝuoq)sɹᴉɐdᴉ uᴉ uoW '‾ ɹoɟ    
+
+{} = sǝɯɐɹℲƆƃuᴉɥɔʇɐɯ lɐɔol    
+()uoW‾ǝɯɐɹℲƆ‾ǝuoqʇǝפ uoᴉʇɔunɟ
+Ɩ = ǝuoqǝɯɹɐℲƆʇǝS lɐɔol
+
+{
+',,ǝɔuǝssƎ ʍollɐH,, = [,,ɯǝʇI,,]    
+'{,,ɹǝdɐǝɹ lnoS,,} = [,,ssoq,,]    
+'{,,ʎɯɯnW pǝssǝsoԀ,,',,ǝᴉqɯoZ ƃuᴉʌᴉ˥,,',,lnoS ɔᴉuoɯǝp,,',,uoʇǝlǝʞS uɹoqǝɹ,,} = [,,uoW,,]    
+} = lǝqɐ┴ǝuoq lɐɔol
+Ɩ = ᄅɹǝqɯnN lɐɔol
+
+(puǝ
+(puǝ    
+(puǝ        
+puǝ            
+puǝ                
+(ǝƃnɥ˙ɥʇɐɯ  ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs                    
+puǝ                    
+()ʎoɹʇsǝp:ɹoʇɐɯᴉu∀˙pᴉouɐɯnH˙ʌ                        
+uǝɥʇ (,,ɹoʇɐɯᴉu∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pᴉouɐɯnH˙ʌ ɟᴉ                    
+(0ϛ'0ϛ'0ϛ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                    
+ǝuoquoWsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                    
+uǝɥʇ 000Ɩ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ǝuoquoWsoԀ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ (,,ʎɯɯnW pǝssǝsoԀ,, == ǝɯɐN˙ʌ ɹo ,,lnoS ɔᴉuoɯǝp,, == ǝɯɐN˙ʌ ɹo ,,ǝᴉqɯoZ ƃuᴉʌᴉ˥,, == ǝɯɐN˙ʌ ɹo ,,uoʇǝlǝʞS uɹoqǝɹ,, == ǝɯɐN˙ʌ) puɐ uoWǝuoqʇǝuƃɐWʇɹɐʇS puɐ ǝuoqɯɹɐℲoʇn∀˙פ‾ puɐ qoWƃuᴉɹq˙פ‾ ɟᴉ                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ            
+()uoᴉʇɔunɟ)llɐɔd        
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʇɐǝqʇɹɐǝH˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+puǝ    
+puǝ        
+(Ɩ 'Ɩ ',,ʎnq,, ',,sǝuoq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ ǝuoqɯopuɐɹoʇn∀˙פ‾ ɟᴉ        
+op (Ɩ˙)ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+ǝnlɐʌ = ǝuoqɯopuɐɹoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝuoqɯopuɐɹoʇn∀˙פ‾ ',,กูดะรกมุ่ส้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+
+ ()sƃuᴉʇʇǝSǝʌɐS    
+ǝnlɐʌ = ǝuoqɯɹɐℲoʇn∀˙sƃuᴉʇʇǝS˙פ‾    
+ǝnlɐʌ =  ǝuoqɯɹɐℲoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ ' ǝuoqɯɹɐℲoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ',,กูดะรกม์ราฟ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+ (Ɩ)ʇᴉɐʍ        
+(snʇɐʇSǝuoq ˙˙ , : ǝuoq,)ʇǝS:ʞɔɐʇs‾ʇunoɔ        
+(,,ʞɔǝɥƆ,, ',,sǝuoq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = snʇɐʇSǝuoq lɐɔol        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+(ǝnɹʇ 'ɹǝqɯnu‾ʇunoɔ ˙˙ , : กูดะรก,)lǝqɐ˥:Ɩǝƃɐd = ʞɔɐʇs‾ʇunoɔ lɐɔol
+0 = ɹǝqɯnu‾ʇunoɔ lɐɔol
+(,,<<กูดะรก>>,,)ɹoʇɐɹǝdǝS:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+  (puǝ        
+puǝ            
+puǝ                
+((ϛᄅƖᄅƐᄅㄥ8Ɛ˙0- '80-ǝ96Ɩ8ϛㄣㄣ6˙8- '6ᄅᄅᄅ86Ɩᄅ6˙0- '80-ǝ66660ㄥƐƖ˙ϛ- 'Ɩ '80-ǝㄥ0688Ɛㄣϛ˙ㄥ- '6ᄅᄅᄅ86Ɩᄅ6˙0 '80-ǝ8ϛ8ㄥ0ϛƖ8˙Ɩ 'ϛᄅƖᄅƐᄅㄥ8Ɛ˙0- 'ㄣ0ㄣㄣ9˙8ϛ6ᄅ- '6ᄅƖㄣϛ˙ㄣƖƐ 'ᄅ898ㄣ˙8ƖƖϛ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+puǝ                    
+puǝ                        
+puǝ                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                
+uǝɥʇ 000Ɩ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ-uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                        
+uǝɥʇ 000ᄅ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛᄅƖᄅƐᄅㄥ8Ɛ˙0- '80-ǝ96Ɩ8ϛㄣㄣ6˙8- '6ᄅᄅᄅ86Ɩᄅ6˙0- '80-ǝ66660ㄥƐƖ˙ϛ- 'Ɩ '80-ǝㄥ0688Ɛㄣϛ˙ㄥ- '6ᄅᄅᄅ86Ɩᄅ6˙0 '80-ǝ8ϛ8ㄥ0ϛƖ8˙Ɩ 'ϛᄅƖᄅƐᄅㄥ8Ɛ˙0- 'ㄣ0ㄣㄣ9˙8ϛ6ᄅ- '6ᄅƖㄣϛ˙ㄣƖƐ 'ᄅ898ㄣ˙8ƖƖϛ-)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+ǝslɐɟ = qoWƃuᴉɹq                            
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo pᴉɐɹǝlʇsɐƆoʇn∀˙פ‾ ʇou lᴉʇun                            
+puǝ                                
+((ᄅㄥ9'08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                
+ǝnɹʇ = qoWƃuᴉɹq                                
+  (09 '09 '09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                
+()ʇᴉɐʍ ʇɐǝdǝɹ                            
+uǝɥʇ 000Ɩ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ-uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                    
+uǝɥʇ 000ᄅ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛᄅƖᄅƐᄅㄥ8Ɛ˙0- '80-ǝ96Ɩ8ϛㄣㄣ6˙8- '6ᄅᄅᄅ86Ɩᄅ6˙0- '80-ǝ66660ㄥƐƖ˙ϛ- 'Ɩ '80-ǝㄥ0688Ɛㄣϛ˙ㄥ- '6ᄅᄅᄅ86Ɩᄅ6˙0 '80-ǝ8ϛ8ㄥ0ϛƖ8˙Ɩ 'ϛᄅƖᄅƐᄅㄥ8Ɛ˙0- 'ㄣ0ㄣㄣ9˙8ϛ6ᄅ- '6ᄅƖㄣϛ˙ㄣƖƐ 'ᄅ898ㄣ˙8ƖƖϛ-)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                
+uǝɥʇ pᴉɐɹǝlʇsɐƆoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = pᴉɐɹǝlʇsɐƆoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'pᴉɐɹǝlʇsɐƆoʇn∀˙פ‾ ',,งาลกะากเรจโีต้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+()ǝʇᴉlƎ
+ǝnlɐʌ = ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ'ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ',,ดอยน้ัชา่ลกัน้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+()ǝʇᴉlƎ    
+ǝnlɐʌ = doHɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'doHɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾',,ฟิซเยา้ย ⅋ ดอยน้ัชา่ลกัน ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+(,,<<ธิลลีอ>>,,)ɹoʇɐɹǝdǝS:Ɩǝƃɐd
+(puǝ
+(puǝ    
+puǝ        
+((,,ssǝɹƃoɹԀ,, ',,ɹǝʇunHǝʇᴉlƎ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+˙˙ ,, : ǝʇᴉlƎ pǝllᴉʞ ʎpɐǝɹl∀,,)ʇǝS:ssǝɹƃoɹԀǝʇᴉlƎ            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)llɐɔd    
+()uoᴉʇɔunɟ)uʍɐds
+(,,,,)lǝqɐ˥:Ɩǝƃɐd = ssǝɹƃoɹԀǝʇᴉlƎ lɐɔol
+(puǝ    
+puǝ        
+(puǝ            
+puǝ                
+(,,pǝuʍɐdS ʇoN : snʇɐʇS,,)ʇǝS:snʇɐʇS‾ɹǝʇunH‾ǝʇᴉlƎ                    
+ǝslǝ                
+ (,,pǝuʍɐdS : snʇɐʇS,,)ʇǝS:snʇɐʇS‾ɹǝʇunH‾ǝʇᴉlƎ                    
+uǝɥʇ (,,uɐqɹ∩,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ǝɹpuɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,olqɐᴉp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,uɐqɹ∩,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ǝɹpuɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,olqɐᴉp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ    
+(,,Q/N : snʇɐʇS,,)lǝqɐ˥:Ɩǝƃɐd = snʇɐʇS‾ɹǝʇunH‾ǝʇᴉlƎ lɐɔol
+       puǝ
+puǝ    
+puǝ        
+()doH            
+()ʇɹodǝlǝ┴            
+(0Ɩ)ʇᴉɐʍ            
+uǝɥʇ ((,,olqɐᴉp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɹo (,,uɐqɹ∩,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɹo (,,ǝɹpuɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɹo (,,olqɐᴉp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɹo (,,uɐqɹ∩,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɹo (,,ǝɹpuɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ) ʇou ɟᴉ        
+  uǝɥʇ doHɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ɟᴉ    
+(puǝ        
+puǝ            
+(puǝ                
+puǝ                    
+puǝ                        
+;(Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴                            
+;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                            
+;,,ɹǝʇunHǝʇᴉlƎ,, = Ɩ‾ƃuᴉɹʇs lɐɔol                            
+ǝslǝ                        
+puǝ                            
+;(Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴                                
+;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                                
+;,,ɹǝʇunHǝʇᴉlƎ,, = Ɩ‾ƃuᴉɹʇs lɐɔol                                
+ǝslǝ                            
+puǝ                                
+puǝ                                    
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                        
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ʇou lᴉʇun                                        
+puǝ                                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                
+ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ ʌ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                                
+puǝ                                                
+()doʇS:uǝǝʍʇɯɹɐℲ                                                    
+uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                                
+uǝɥʇ 0ϛƖ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                            
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                                
+uǝɥʇ 0ϛƖ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+ʇɐǝdǝɹ                                        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,ǝɹpuɐǝp,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs puɐ ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ɟᴉ                                    
+puǝ                                    
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                            
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ʇou lᴉʇun                                        
+puǝ                                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                
+ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ ʌ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                                
+puǝ                                                
+()doʇS:uǝǝʍʇɯɹɐℲ                                                    
+uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                                
+uǝɥʇ 0ϛƖ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                            
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                                
+uǝɥʇ 0ϛƖ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+ʇɐǝdǝɹ                                        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,uɐqɹ∩,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs puɐ ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ɟᴉ                                    
+puǝ                                    
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                            
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ʇou lᴉʇun                                        
+puǝ                                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                
+ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ ʌ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                                
+puǝ                                                
+()doʇS:uǝǝʍʇɯɹɐℲ                                                    
+uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                                
+uǝɥʇ 0ϛƖ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                            
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                                
+uǝɥʇ 0ϛƖ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+ʇɐǝdǝɹ                                        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,olqɐᴉp,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs puɐ ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ɟᴉ                                    
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                
+puǝ                                
+puǝ                                    
+puǝ                                        
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙                                                
+ʌ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                            
+puǝ                                            
+()doʇS:ɹǝʇunHǝʇᴉlƎ                                                
+uǝɥʇ ɹǝʇunHǝʇᴉlƎ ɟᴉ                                            
+uǝɥʇ 0ϛƖ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = ɹǝʇunHǝʇᴉlƎ                                        
+uǝɥʇ (,,ǝɹpuɐǝp,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                                    
+puǝ                                    
+puǝ                                        
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙                                                
+ʌ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                            
+puǝ                                            
+()doʇS:ɹǝʇunHǝʇᴉlƎ                                                
+uǝɥʇ ɹǝʇunHǝʇᴉlƎ ɟᴉ                                            
+uǝɥʇ 0ϛƖ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = ɹǝʇunHǝʇᴉlƎ                                        
+uǝɥʇ (,,uɐqɹ∩,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                                    
+puǝ                                    
+puǝ                                        
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙                                                
+ʌ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                            
+puǝ                                            
+()doʇS:ɹǝʇunHǝʇᴉlƎ                                                
+uǝɥʇ ɹǝʇunHǝʇᴉlƎ ɟᴉ                                            
+uǝɥʇ 0ϛƖ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = ɹǝʇunHǝʇᴉlƎ                                        
+uǝɥʇ (,,olqɐᴉp,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                                    
+op (()uǝɹplᴉɥƆʇǝפ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                
+uǝɥʇ (,,ǝɹpuɐǝp,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɹo (,,uɐqɹ∩,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɹo (,,olqɐᴉp,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                            
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                        
+uǝɥʇ ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ɟᴉ                    
+()uoᴉʇɔunɟ)llɐɔd                
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ            
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ        
+()ǝʇᴉlƎ uoᴉʇɔunɟ
+
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+ǝɯɐɹℲƆ˙xoqʇᴉH˙ɹoop˙ɹoop˙ɯooɹ˙ɯooɹʇǝɹɔǝS˙llɐɟɹǝʇɐM˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+ǝɯɐɹℲƆ˙ϛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+puǝ                            
+()doʇS:uǝǝʍʇɥɔɹo┴ʎloH                                
+uǝɥʇ uǝǝʍʇɥɔɹo┴ʎloH ɟᴉ                            
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ϛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉǝslǝ                        
+(ǝɯɐɹℲƆ˙ϛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'uoᴉʇᴉsoԀ˙ϛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)Ԁ┴ = uǝǝʍʇɥɔɹo┴ʎloH                            
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ϛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                        
+uǝɥʇ ǝnɹʇ =~ pǝlqɐuƎ˙uᴉɐW˙sǝlɔᴉʇɹɐԀ˙ϛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+puǝ                        
+ǝɯɐɹℲƆ˙ㄣɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+puǝ                            
+()doʇS:uǝǝʍʇɥɔɹo┴ʎloH                                
+uǝɥʇ uǝǝʍʇɥɔɹo┴ʎloH ɟᴉ                            
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ㄣɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉǝslǝ                        
+(ǝɯɐɹℲƆ˙ㄣɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'uoᴉʇᴉsoԀ˙ㄣɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)Ԁ┴ = uǝǝʍʇɥɔɹo┴ʎloH                            
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ㄣɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                        
+uǝɥʇ ǝnɹʇ =~ pǝlqɐuƎ˙uᴉɐW˙sǝlɔᴉʇɹɐԀ˙ㄣɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+puǝ                        
+ǝɯɐɹℲƆ˙Ɛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+puǝ                            
+()doʇS:uǝǝʍʇɥɔɹo┴ʎloH                                
+uǝɥʇ uǝǝʍʇɥɔɹo┴ʎloH ɟᴉ                            
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙Ɛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉǝslǝ                        
+(ǝɯɐɹℲƆ˙Ɛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'uoᴉʇᴉsoԀ˙Ɛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)Ԁ┴ = uǝǝʍʇɥɔɹo┴ʎloH                            
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙Ɛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                        
+uǝɥʇ ǝnɹʇ =~ pǝlqɐuƎ˙uᴉɐW˙sǝlɔᴉʇɹɐԀ˙Ɛɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+puǝ                        
+ǝɯɐɹℲƆ˙ᄅɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+puǝ                            
+()doʇS:uǝǝʍʇɥɔɹo┴ʎloH                                
+uǝɥʇ uǝǝʍʇɥɔɹo┴ʎloH ɟᴉ                            
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ᄅɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉǝslǝ                        
+(ǝɯɐɹℲƆ˙ᄅɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'uoᴉʇᴉsoԀ˙ᄅɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)Ԁ┴ = uǝǝʍʇɥɔɹo┴ʎloH                            
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ᄅɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                        
+uǝɥʇ ǝnɹʇ =~ pǝlqɐuƎ˙uᴉɐW˙sǝlɔᴉʇɹɐԀ˙ᄅɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+puǝ                        
+ǝɯɐɹℲƆ˙Ɩɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+puǝ                            
+()doʇS:uǝǝʍʇɥɔɹo┴ʎloH                                
+uǝɥʇ uǝǝʍʇɥɔɹo┴ʎloH ɟᴉ                            
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙Ɩɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉǝslǝ                        
+(ǝɯɐɹℲƆ˙Ɩɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ'uoᴉʇᴉsoԀ˙Ɩɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)Ԁ┴ = uǝǝʍʇɥɔɹo┴ʎloH                            
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙Ɩɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                        
+uǝɥʇ ǝnɹʇ =~ pǝlqɐuƎ˙uᴉɐW˙sǝlɔᴉʇɹɐԀ˙Ɩɥɔɹo┴˙sǝɥɔɹo┴ʇsǝnQ˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,ɥɔɹo┴ ʎloH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉǝslǝ                
+(,,ɥɔɹo┴ ʎloH,,)uodɐǝMdᴉnbƎ                    
+uǝɥʇ (,,ɥɔɹo┴ ʎloH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ Ɩ == ʎɔuǝɹɐdsuɐɹ┴˙ǝʇɐפɐʇᴉɥsn┴˙ǝʇɐפɐʇᴉɥsn┴˙ǝlʇɹn┴˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ (,,[ssoq pᴉɐɹ] [000ϛ ˙ʌ˥] ɯɹoℲ ǝnɹ┴ ɐɹpuᴉ‾dᴉɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɹo (,,[ssoq pᴉɐɹ] [000ϛ ˙ʌ˥] ɯɹoℲ ǝnɹ┴ ɐɹpuᴉ‾dᴉɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɟᴉ            
+uǝɥʇ ɥɔɹo┴ʎloHoʇn∀˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝslɐɟ = Ԁ┴ssɐdʎq˙פ‾    
+ǝnlɐʌ = ɥɔɹo┴ʎloHoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɥɔɹo┴ʎloHoʇn∀˙פ‾ ',,ฟไมคโดุจ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+(,,<<ฟไมคโ>>,,)ɹoʇɐɹǝdǝS:Ɩǝƃɐd
+()ǝuᴉ˥:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+(0 'ǝlpuɐH˙ʌ'ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʇsǝɹǝʇuᴉɥɔnoʇǝɹᴉɟ                                
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+(0Ɩ 'Ɩ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ǝɯɐɹℲƆ˙ǝlpuɐH˙ʌ                                
+uǝɥʇ ,,ǝlddɐǝuᴉԀ,, == ǝɯɐN˙ʌ ɹo ,,ɐuɐuɐq,, == ǝɯɐN˙ʌ ɹo ,,ǝldd∀,, == ǝɯɐN˙ʌ ɟᴉ                            
+op (()sʇuɐpuǝɔsǝpʇǝפ:ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                        
+ǝslǝ                    
+puǝ                        
+0Ɩ => ǝpnʇᴉuƃɐW˙((ϛㄥ8Ɩᄅ66Ɩ6ㄥ˙ƐㄥƐ8- '800ƐƐ8Ɛϛϛ68˙8ƖƐ 'ϛᄅ9068ᄅƖ˙Ɛ6ㄣƐƖ-)ʍǝu˙ƐɹoʇɔǝΛ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ) ɹo ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾ ʇou lᴉʇun                            
+()ʇᴉɐʍ˙ʞsɐʇ                                
+((ϛㄥ8Ɩᄅ66Ɩ6ㄥ˙ƐㄥƐ8- '800ƐƐ8Ɛϛϛ68˙8ƖƐ 'ϛᄅ9068ᄅƖ˙Ɛ6ㄣƐƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                
+ʇɐǝdǝɹ                            
+ǝslǝ                        
+puǝ                            
+puǝ                                
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝslɐɟ = qoWƃuᴉɹq                                    
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾ ʇou lᴉʇun                                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                        
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                        
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                        
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                        
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                        
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                        
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                        
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                        
+puǝ                                        
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                        
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                        
+puǝ                                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                        
+ǝnɹʇ = qoWƃuᴉɹq                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+ʇɐǝdǝɹ                                    
+uǝɥʇ ,,ʇuɐɥdǝlƎ uᴉɐʇdɐƆ,, == ǝɯɐN˙ʌ ɟᴉ                                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                            
+uǝɥʇ (,,ʇuɐɥdǝlƎ uᴉɐʇdɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+uǝɥʇ ,,(Ɩ/0) ʇuɐɥdǝlƎ uᴉɐʇdɐƆ  ʇɐǝɟǝp,, == ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+puǝ                        
+0Ɩ => ǝpnʇᴉuƃɐW˙((ϛᄅ9ϛ9ᄅᄅㄥϛƖ˙Ɩᄅ8ㄥ- '9Ɩ0Ɩ6ㄥϛ8ƖㄣƐ˙0ㄥƐ 'ϛㄥƐ6ϛƐ89ϛ˙ㄥㄥᄅƐƖ-)ʍǝu˙ƐɹoʇɔǝΛ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ) ɹo ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾ ʇou lᴉʇun                            
+()ʇᴉɐʍ˙ʞsɐʇ                                
+((ϛᄅ9ϛ9ᄅᄅㄥϛƖ˙Ɩᄅ8ㄥ- '9Ɩ0Ɩ6ㄥϛ8ƖㄣƐ˙0ㄥƐ 'ϛㄥƐ6ϛƐ89ϛ˙ㄥㄥᄅƐƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                
+ʇɐǝdǝɹ                            
+ǝslǝ                        
+puǝ                            
+puǝ                                
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝslɐɟ = qoWƃuᴉɹq                                    
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾ ʇou lᴉʇun                                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                        
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                        
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                        
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                        
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                        
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                        
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                        
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                        
+puǝ                                        
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                        
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                        
+puǝ                                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                        
+ǝnɹʇ = qoWƃuᴉɹq                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+ʇɐǝdǝɹ                                    
+uǝɥʇ ,,ǝʇɐɹᴉԀ ʇsǝɹoℲ,, == ǝɯɐN˙ʌ ɟᴉ                                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                            
+uǝɥʇ (,,ǝʇɐɹᴉԀ ʇsǝɹoℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+uǝɥʇ (,,sǝʇɐɹᴉԀ ʇsǝɹoℲ 0ϛ ʇɐǝɟǝp,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɟᴉǝslǝ                    
+(,,ʎnq,,',,ᄅʞlɐ┴uǝʞ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(Ɩ)ʇᴉɐʍ                        
+(,,ʇɹɐʇS,,',,ᄅʞlɐ┴uǝʞ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ϛ˙)ʇᴉɐʍ                        
+0Ɩ => ǝpnʇᴉuƃɐW˙((88ƖㄥƖƖϛ66˙99ᄅ0Ɩ- '9068ㄥ8ϛㄥᄅ0ᄅ˙ㄣᄅ9 'ϛᄅƖ˙0ᄅ60Ɩ-)ʍǝu˙ƐɹoʇɔǝΛ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ) ɹo ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾ ʇou lᴉʇun                        
+()ʇᴉɐʍ˙ʞsɐʇ                            
+((88ƖㄥƖƖϛ66˙99ᄅ0Ɩ- '9068ㄥ8ϛㄥᄅ0ᄅ˙ㄣᄅ9 'ϛᄅƖ˙0ᄅ60Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                            
+ʇɐǝdǝɹ                        
+uǝɥʇ (,,lʍoq ʇᴉnɹℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,lʍoq ʇᴉnɹℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉǝslǝ                    
+(,,uǝzᴉʇᴉƆ,, ',,ssǝɹƃoɹԀʇsǝnQuǝzᴉʇᴉƆ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ϛ˙)ʇᴉɐʍ                        
+0Ɩ => ǝpnʇᴉuƃɐW˙((ϛᄅ90ㄣ9908Ɩ˙Ɛㄥ9ㄥ- 'ㄣ9Ɩ8ƖƖ96Ɛ0ㄣ˙ᄅƐƐ 'ϛᄅ9ϛƖϛ8ㄥ˙ㄣㄣㄣᄅƖ-)ʍǝu˙ƐɹoʇɔǝΛ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ) ɹo ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾ ʇou lᴉʇun                        
+()ʇᴉɐʍ˙ʞsɐʇ                            
+((ϛᄅ90ㄣ9908Ɩ˙Ɛㄥ9ㄥ- 'ㄣ9Ɩ8ƖƖ96Ɛ0ㄣ˙ᄅƐƐ 'ϛᄅ9ϛƖϛ8ㄥ˙ㄣㄣㄣᄅƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                            
+ʇɐǝdǝɹ                        
+uǝɥʇ (,,ǝlddɐǝuᴉԀ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ǝldd∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,ɐuɐuɐq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+ǝslǝ                
+(Ɩ ',,ʇsǝnQuǝzᴉʇᴉƆ,,',,ʇsǝnQʇɹɐʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+(Ɩ)ʇᴉɐʍ                    
+(,,uǝzᴉʇᴉƆ,,',,ssǝɹƃoɹԀʇsǝnQuǝzᴉʇᴉƆ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+(ϛ˙)ʇᴉɐʍ                    
+0Ɩ => ǝpnʇᴉuƃɐW˙((ϛᄅ90ㄣ9908Ɩ˙Ɛㄥ9ㄥ- 'ㄣ9Ɩ8ƖƖ96Ɛ0ㄣ˙ᄅƐƐ 'ϛᄅ9ϛƖϛ8ㄥ˙ㄣㄣㄣᄅƖ-)ʍǝu˙ƐɹoʇɔǝΛ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ) ɹo ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾ ʇou lᴉʇun                    
+()ʇᴉɐʍ˙ʞsɐʇ                        
+((ϛᄅ90ㄣ9908Ɩ˙Ɛㄥ9ㄥ- 'ㄣ9Ɩ8ƖƖ96Ɛ0ㄣ˙ᄅƐƐ 'ϛᄅ9ϛƖϛ8ㄥ˙ㄣㄣㄣᄅƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+ʇɐǝdǝɹ                    
+uǝɥʇ ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+uǝɥʇ ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ    
+puǝ        
+()ʇᴉɐʍ˙ʞsɐʇ            
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ            
+()ʇᴉɐʍ˙ʞsɐʇ            
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ        
+ǝnlɐʌ = ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾',,งอสน้ัขตกเงัสิคาฮ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+         (puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+(,,ʇǝq,,',,uɐWpǝuɹoH,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ϛ˙Ɩ)ʇᴉɐʍ                        
+uǝɥʇ 0Ɛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - (ϛㄥ896ㄥƖ6ϛƖ˙09ㄥ8- 'ƖㄣƖ6ƖƖᄅㄥ9ㄥϛ˙0Ɛ6 'ϛᄅƖƐ0ㄥ0˙ᄅ68ƖƖ-)ʍǝu˙ƐɹoʇɔǝΛ) ɟᴉ                    
+((ϛㄥ896ㄥƖ6ϛƖ˙09ㄥ8- 'ƖㄣƖ6ƖƖᄅㄥ9ㄥϛ˙0Ɛ6 'ϛᄅƖƐ0ㄥ0˙ᄅ68ƖƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+ǝslǝ                
+puǝ                    
+((6ϛƐ8Ɩ88Ɛϛ8ϛƖ˙0Ɩ- 'ㄥ8ᄅ6Ɩ0Ɩ0ᄅƖㄣƖ˙0ᄅ 'ƐƖ8ᄅƐ986ϛƐ˙ᄅƖƐϛ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ǝslɐɟ = qoWƃuᴉɹq                                
+ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ᴉʞɐHʍoquᴉɐɹoʇn∀˙פ‾ ʇou lᴉʇun                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+puǝ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝnɹʇ = qoWƃuᴉɹq                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+uǝɥʇ ,,ǝʇɐɹᴉԀ lnɟᴉʇnɐǝq,, == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                        
+uǝɥʇ (,,ǝʇɐɹᴉԀ lnɟᴉʇnɐǝq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,ǝʇɐɹᴉԀ lnɟᴉʇnɐǝq,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɟᴉǝslǝ                
+puǝ                    
+((68ᄅƖᄅϛㄣƖㄥ˙0'80-ǝƖㄣᄅϛƖ0Ɛㄣ˙9- 'ϛㄥƐƖ9669˙0- '60-ǝϛ90Ɛ8Ɛㄣ6˙6- 'Ɩ 'ㄥ0-ǝ8ㄣㄥϛ90ᄅ0˙Ɩ- 'ϛㄥƐƖ9669˙0'80-ǝƖƖ66ㄣ886˙ㄥ'68ᄅƖᄅϛㄣƖㄥ˙0 'Ɛㄥ8ㄣ˙ᄅƖ08- '6ϛᄅ60ㄥ˙ƖƐƐ 'Ɛ8ᄅ0˙ϛ8ㄣƐƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝslɐɟ = qoWƃuᴉɹq                                
+ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ᴉʞɐHʍoquᴉɐɹoʇn∀˙פ‾ ʇou lᴉʇun                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+puǝ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝnɹʇ = qoWƃuᴉɹq                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+uǝɥʇ ,,ʇuɐɥdǝlƎ uᴉɐʇdɐƆ,, == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                        
+uǝɥʇ (,,ʇuɐɥdǝlƎ uᴉɐʇdɐƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,ʇuɐɥdǝlƎ uᴉɐʇdɐƆ,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɟᴉǝslǝ                
+puǝ                    
+((6ㄥㄣƖ6ϛ686˙0- '0 'ㄣᄅ6ㄣ06ƐㄣƖ˙0 '0- 'ᄅƖ000000˙Ɩ '0- '606ㄣ06ƐㄣƖ˙0-'0- '66ϛƖ6ϛ686˙0- '900ƖƐ˙ㄥ0ᄅㄥ- 'ϛ898ϛϛ˙Ɛᄅㄣ 'ƐㄣㄥƖ9˙ㄥㄥ8ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ǝslɐɟ = qoWƃuᴉɹq                                
+ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ᴉʞɐHʍoquᴉɐɹoʇn∀˙פ‾ ʇou lᴉʇun                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+puǝ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝnɹʇ = qoWƃuᴉɹq                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+uǝɥʇ ,,lɐɹᴉɯp∀ olᴉʞ,, == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                        
+uǝɥʇ (,,lɐɹᴉɯp∀ olᴉʞ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,lɐɹᴉɯp∀ olᴉʞ,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɟᴉǝslǝ                
+puǝ                    
+((Ɩ6ᄅ080Ɩ0Ɩ˙0- '0 'ᄅ6ᄅ8ㄥ8ㄣ66˙0 '0- 'Ɩ '0- 'ᄅ6ᄅ8ㄥ8ㄣ66˙0-'0- 'Ɩ6ᄅ080Ɩ0Ɩ˙0- 'ƖϛᄅƖϛㄥ˙ᄅ0ᄅ 'ㄣㄥ6ᄅᄅ6˙Ɩ09 'ㄥㄥ886˙ƐƖㄥϛ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ǝslɐɟ = qoWƃuᴉɹq                                
+ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ᴉʞɐHʍoquᴉɐɹoʇn∀˙פ‾ ʇou lᴉʇun                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+puǝ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝnɹʇ = qoWƃuᴉɹq                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+uǝɥʇ ,,ssǝɹdɯƎ puɐlsI,, == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                        
+uǝɥʇ (,,ssǝɹdɯƎ puɐlsI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,ssǝɹdɯƎ puɐlsI,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs puɐ ǝnɹʇ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                
+puǝ                    
+((66ƖƐᄅϛ98Ɩ0˙0 '9Ɩϛϛϛ0ㄥƐƖ0˙0-'ㄥㄥ0ᄅƐㄥ666˙0- '8ᄅƖϛƐ8ᄅ6ϛ˙0 '6Ɛ8ƐᄅƐϛ08˙0 'ϛ0-ǝ6Ɛ8ƖϛᄅƐ0˙ᄅ 'ᄅㄥㄥㄥ0Ɩϛ08˙0'6699ㄥ9ᄅ6ϛ˙0-'ㄥƖㄥᄅ9ㄣƖƐᄅ0˙0 '9ƐㄣƖㄥ˙89ㄥ9 'Ɛ06ϛᄅㄣ8˙8Ɛ 'Ɩᄅ9ƖƖ˙980Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ǝslɐɟ = qoWƃuᴉɹq                                
+ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ᴉʞɐHʍoquᴉɐɹoʇn∀˙פ‾ ʇou lᴉʇun                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+puǝ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝnɹʇ = qoWƃuᴉɹq                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+uǝɥʇ ,,ǝuoʇS,, == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                        
+uǝɥʇ (,,ǝuoʇS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,ǝuoʇS,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs puɐ ǝnɹʇ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                
+puǝ                    
+(,,ʇǝq,,                            
+',,uɐWpǝuɹoH,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ϛ˙Ɩ)ʇᴉɐʍ                        
+uǝɥʇ 0Ɛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - (ϛㄥ896ㄥƖ6ϛƖ˙09ㄥ8- 'ƖㄣƖ6ƖƖᄅㄥ9ㄥϛ˙0Ɛ6 'ϛᄅƖƐ0ㄥ0˙ᄅ68ƖƖ-)ʍǝu˙ƐɹoʇɔǝΛ) ɟᴉ                    
+((ϛㄥ896ㄥƖ6ϛƖ˙09ㄥ8- 'ƖㄣƖ6ƖƖᄅㄥ9ㄥϛ˙0Ɛ6 'ϛᄅƖƐ0ㄥ0˙ᄅ68ƖƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+uǝɥʇ ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+uǝɥʇ ᴉʞɐHʍoquᴉɐɹoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+puǝ        
+(puǝ            
+puǝ                
+()ʇᴉɐʍ˙ʞsɐʇ                    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                    
+()ʇᴉɐʍ˙ʞsɐʇ                    
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ                
+ǝnlɐʌ = ᴉʞɐHʍoquᴉɐɹoʇn∀˙פ‾            
+(ǝnlɐʌ)uoᴉʇɔunɟ'ᴉʞɐHʍoquᴉɐɹoʇn∀˙פ‾ ',,งุ้รีสิคาฮ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd        
+(,,Ɛ กลโ : ะนาถส,,)lǝqɐ˥:Ɩǝƃɐd        
+uǝɥʇ ƐplɹoM ɟᴉǝslǝ
+                                                                                                (puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+sǝssɐlפuɐʍSoʇn∀˙פ‾ ʇou ɹo ㄣ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛᄅ9ϛƖ0Ɩ6ᄅ8ㄣ˙ϛ06 'Ɩ080ᄅƐ999ㄥƐϛ˙ϛƖ 'ϛㄥƐ60ƖᄅƖ6˙ㄣ8ᄅᄅ)ʍǝu˙ǝɯɐɹℲƆ) lᴉʇun                    
+((ϛᄅ9ϛƖ0Ɩ6ᄅ8ㄣ˙ϛ06 'Ɩ080ᄅƐ999ㄥƐϛ˙ϛƖ 'ϛㄥƐ60ƖᄅƖ6˙ㄣ8ᄅᄅ)ʍǝu˙ƐɹoʇɔǝΛ',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+()ʇᴉɐʍ˙ʞsɐʇ                        
+ʇɐǝdǝɹ                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                            
+ǝslɐɟ = qoWƃuᴉɹq                            
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo sǝssɐlפuɐʍSoʇn∀˙פ‾ ʇou lᴉʇun                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                
+puǝ                                
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ǝnɹʇ = qoWƃuᴉɹq                                
+()ʇᴉɐʍ˙ʞsɐʇ                                
+ʇɐǝdǝɹ                            
+uǝɥʇ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,lǝpoW,,)∀sI:ʌ puɐ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ ,,uɐʍS uop,, == ǝɯɐN˙ʌ ɟᴉ                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                    
+uǝɥʇ (,,uɐʍS uop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+uǝɥʇ sǝssɐlפuɐʍSoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = sǝssɐlפuɐʍSoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'sǝssɐlפuɐʍSoʇn∀˙פ‾ ',,าฟดโาตน่วแ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+    
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+((8ƐㄣƐᄅϛ98ƖƖ˙ϛϛㄥ9- 'ϛ08ㄣᄅㄣ09006˙ᄅ9ᄅ '8Ɛㄣ868ϛㄣ0ㄥ˙ϛᄅϛϛ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                        
+ǝslɐɟ = qoWƃuᴉɹq                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ǝslɐɟ = qoWƃuᴉɹq                            
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo nʞoƃuǝɹoʇn∀˙פ‾ ʇou ɹo (,,ʎǝʞ uǝppᴉH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ lᴉʇun                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                
+puǝ                                
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                
+puǝ                                
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ǝnɹʇ = qoWƃuᴉɹq                                
+()ʇᴉɐʍ˙ʞsɐʇ                                
+ʇɐǝdǝɹ                            
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ɹoᴉɹɹɐM ɔᴉʇɔɹ∀,, == ǝɯɐN˙ʌ ɹo ,,ɹǝʞɹn˥ ʍouS,, == ǝɯɐN˙ʌ) ɟᴉ                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                    
+uǝɥʇ (,,ɹoᴉɹɹɐM ɔᴉʇɔɹ∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ɹǝʞɹn˥ ʍouS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉǝslǝ                
+((ϛㄥ896ㄥƖㄣ8˙ㄥ969- 'Ɛϛㄣㄣ9ϛ8ᄅ0Ɛᄅ˙66ᄅ 'ϛㄥ8ƖㄥƖƖ0ᄅƖ˙Ɩㄥϛ9)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+(,,ʎǝʞ uǝppᴉH,,)uodɐǝMdᴉnbƎ                    
+uǝɥʇ (,,ʎǝʞ uǝppᴉH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,ʎǝʞ uǝppᴉH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ nʞoƃuǝɹoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = nʞoƃuǝɹoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'nʞoƃuǝɹoʇn∀˙פ‾ ',,ุคกโนรเบาด้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+;(ᄅ‾ƃuᴉɹʇs 'Ɩ‾ƃuᴉɹʇs)ɹǝʌɹǝSǝʞoʌuI:ʇǝƃɹɐ┴                
+;[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇǝƃɹɐ┴ lɐɔol                
+;,,ᄅ,, = ᄅ‾ƃuᴉɹʇs lɐɔol                
+;,,uɐWsnoᴉɹǝʇsʎW,, = Ɩ‾ƃuᴉɹʇs lɐɔol                
+uǝɥʇ ɐuɐʇɐʞldᴉɹ┴ǝnɹ┴oʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = ɐuɐʇɐʞldᴉɹ┴ǝnɹ┴oʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɐuɐʇɐʞldᴉɹ┴ǝnɹ┴oʇn∀˙פ‾ ',,บาดมาส้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+ǝslɐɟ = ʎɹoʇɔɐℲoʇn∀˙פ‾                
+uǝɥʇ 0 == ʎɔuǝɹɐdsuɐɹ┴˙ɹoop˙ʎɹoʇɔɐℲǝlᴉɯS˙ɐsoɹssǝɹp˙dɐW˙ǝɔɐdsʞɹoʍ ɟᴉǝslǝ            
+puǝ                
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                        
+0 == ʎɔuǝɹɐdsuɐɹ┴˙ɹoop˙ʎɹoʇɔɐℲǝlᴉɯS˙ɐsoɹssǝɹp˙dɐW˙ǝɔɐdsʞɹoʍ ɹo ʎɹoʇɔɐℲoʇn∀˙פ‾ ʇou lᴉʇun                    
+((ϛㄥ896ㄥ99606ㄣ˙0Ɛㄣ- 'Ɛϛㄣㄣ9ϛƐ06ㄣㄣᄅϛ˙ᄅ8Ɩ 'ϛㄥƐ609ㄣᄅㄥㄥƖ6˙9ϛㄣ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+puǝ                        
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                        
+()ʇᴉɐʍ˙ʞsɐʇ                        
+ʇɐǝdǝɹ                    
+uǝɥʇ Ɩ == ʎɔuǝɹɐdsuɐɹ┴˙ɹoop˙ʎɹoʇɔɐℲǝlᴉɯS˙ɐsoɹssǝɹp˙dɐW˙ǝɔɐdsʞɹoʍ ɟᴉ                
+uǝɥʇ ʎɹoʇɔɐℲoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = ʎɹoʇɔɐℲoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'ʎɹoʇɔɐℲoʇn∀˙פ‾',,นางงรโีต้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+((ϛᄅƖƐ0ᄅƐ8˙ᄅϛ8ᄅƐ 'ᄅㄣϛϛϛ009ㄥ6˙9ᄅƖ '90ㄣƖㄣㄣᄅϛᄅƖᄅ˙Ɛᄅ6)ʍǝu˙ƐɹoʇɔǝΛ',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+ǝslɐɟ = qoWƃuᴉɹq    
+ǝslǝ
+puǝ    
+puǝ        
+puǝ            
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                
+ǝslɐɟ = qoWƃuᴉɹq                
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ɯsɐldoʇɔƎoʇn∀˙פ‾ ʇou lᴉʇun                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                    
+puǝ                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                    
+puǝ                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                        
+()ʇᴉɐʍ˙ʞsɐʇ                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                    
+ǝnɹʇ = qoWƃuᴉɹq                    
+()ʇᴉɐʍ˙ʞsɐʇ                    
+ʇɐǝdǝɹ                
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ            
+uǝɥʇ ,,ɹoᴉɹɹɐM ɔᴉʇɔɹ∀,, == ǝɯɐN˙ʌ ɹo ,,ɹǝɔᴉɟɟO dᴉɥS,, == ǝɯɐN˙ʌ ɹo ,,pɹɐʍǝʇS dᴉɥS,, == ǝɯɐN˙ʌ ɹo ,,ɹǝǝuᴉƃuƎ dᴉɥS,, == ǝɯɐN˙ʌ ɹo ,,puɐɥʞɔǝp dᴉɥS,, == ǝɯɐN˙ʌ ɟᴉ        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ    
+uǝɥʇ (,,ɹoᴉɹɹɐM ɔᴉʇɔɹ∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ɹǝɔᴉɟɟO dᴉɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,pɹɐʍǝʇS dᴉɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ɹǝǝuᴉƃuƎ dᴉɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,puɐɥʞɔǝp dᴉɥS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ
+uǝɥʇ ɯsɐldoʇɔƎoʇn∀˙פ‾ ɟᴉ
+()uoᴉʇɔunɟ)llɐɔd
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+
+(puǝ    
+puǝ        
+()ʇᴉɐʍ˙ʞsɐʇ            
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ            
+()ʇᴉɐʍ˙ʞsɐʇ            
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ        
+ǝnlɐʌ = ɯsɐldoʇɔƎoʇn∀˙פ‾        
+(ǝnlɐʌ)uoᴉʇɔunɟ'ɯsɐldoʇɔƎoʇn∀˙פ‾',,มึซสาลพตโก็อเ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+((ƖƐϛ6ƖϛᄅƐƐ8˙ㄣㄣƖƐ- 'ƖƖᄅ998ㄥƐ6Ɩϛㄥ˙ᄅ9 'ϛᄅƖƐ0ᄅ80˙ㄥㄥ9Ɛ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                            
+ǝslɐɟ = qoWƃuᴉɹq                            
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ǝslɐɟ == ʇɐoƆʞɹɐpoʇn∀˙פ‾ lᴉʇun                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                
+puǝ                                
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,,ɹǝs∩lɐnʇɹᴉΛ,, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,,ɹǝs∩lɐnʇɹᴉΛ,, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                
+puǝ                                
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                
+ǝnɹʇ = qoWƃuᴉɹq                                
+()ʇᴉɐʍ˙ʞsɐʇ                                
+ʇɐǝdǝɹ                            
+uǝɥʇ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,lǝpoW,,)∀sI:ʌ puɐ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,pɹɐǝqʞɹɐp,, == ǝɯɐN˙ʌ ɹo ,,pɹɐǝqʞɹɐp,,) == ǝɯɐN˙ʌ ɟᴉ                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                    
+uǝɥʇ (,,pɹɐǝqʞɹɐp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+uǝɥʇ ʇɐoƆʞɹɐpoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = ʇɐoƆʞɹɐpoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ'ʇɐoƆʞɹɐpoʇn∀˙פ‾',,ำดดวนหมุลคา้ผ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+                        (puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+(Ɩㄣϛ6ㄥ˙ㄣᄅㄥƖ '9Ɛㄥㄣ098˙ㄣƖ 'Ɛㄣ8Ɩϛ˙ƐƖ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+(ϛᄅ906˙ㄥƖㄥƖ '99Ɩϛ6ㄥ˙ㄣƖ 'ƐㄣƐ9ᄅ˙6Ɩ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+(89Ɛᄅϛ˙ㄣ89Ɩ 'ㄥᄅ08ㄥ6ㄣ˙9Ɩ '6ㄥ60˙008Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+(6ϛ900˙Ɩ89Ɩ 'ㄣϛ8ㄥ86˙ϛƖ 'ㄣᄅᄅㄣϛ˙698Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+(Ɩㄣϛ6ㄥ˙ㄣᄅㄥƖ 'ㄥƖƐㄣ098˙9Ɩ 'ϛƐ8ϛϛ˙8ϛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+(ϛ8968˙0ϛㄥƖ 'ϛ8Ɩ68ㄥϛ˙9Ɩ 'ㄣᄅƐㄣ6˙Ɛ08Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+(ㄥ08Ɩ0˙ᄅƖㄥƖ '99ㄣㄥㄥㄥƐ˙6Ɩ 'ϛ0Ɛㄥ8˙8ϛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+(ϛ8968˙0ϛㄥƖ 'Ɩϛϛ68ㄥƖ˙ƐƖ '6ᄅƐ6ㄣ˙0ϛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(ϛ˙)ʇᴉɐʍ                            
+(ㄣƖㄥƖ 'ƖƖ '9Ɛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+puǝ                            
+()doʇS:uǝǝʍʇolᴉʇɹɐq                                
+uǝɥʇ uǝǝʍʇolᴉʇɹɐq ɟᴉ                            
+uǝɥʇ                            
+00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ㄣƖㄥƖ 'ƖƖ '9Ɛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)                            
+ɟᴉǝslǝ                        
+((ㄣƖㄥƖ 'ƖƖ '9Ɛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ 'uoᴉʇᴉsoԀ˙(ㄣƖㄥƖ 'ƖƖ '9Ɛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇolᴉʇɹɐq                            
+uǝɥʇ                            
+00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ㄣƖㄥƖ 'ƖƖ '9Ɛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)                            
+ɟᴉ                        
+uǝɥʇ                        
+ᄅ == (,,olᴉʇɹɐq,,',,ssǝɹƃoɹԀʇsǝnQolᴉʇɹɐq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+ɟᴉǝslǝ                    
+puǝ                        
+puǝ                            
+(ϛㄥƐㄥ66˙8ㄣ9 'ƖƐ6˙8ㄣㄣ '6ϛƖ88˙660ᄅ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+puǝ                                
+()doʇS:uǝǝʍʇolᴉʇɹɐq                                    
+uǝɥʇ uǝǝʍʇolᴉʇɹɐq ɟᴉ                                
+uǝɥʇ                                
+00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛㄥƐㄥ66˙8ㄣ9 'ƖƐ6˙8ㄣㄣ '6ϛƖ88˙660ᄅ)ʍǝu˙ǝɯɐɹℲƆ)                                
+ɟᴉ                            
+((ϛㄥƐㄥ66˙8ㄣ9 'ƖƐ6˙8ㄣㄣ '6ϛƖ88˙660ᄅ)ʍǝu˙ǝɯɐɹℲƆ'uoᴉʇᴉsoԀ˙(ϛㄥƐㄥ66˙8ㄣ9 'ƖƐ6˙8ㄣㄣ '6ϛƖ88˙660ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇolᴉʇɹɐq                            
+ǝslǝ                        
+puǝ                            
+puǝ                                
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝslɐɟ == sǝnQolᴉʇɹɐqoʇn∀˙פ‾ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou lᴉʇun                                    
+puǝ                                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                            
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                            
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                            
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                            
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                            
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                            
+puǝ                                            
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,,ɹǝs∩lɐnʇɹᴉΛ,, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,,ɹǝs∩lɐnʇɹᴉΛ,, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                            
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                            
+puǝ                                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                
+()ʇᴉɐʍ˙ʞsɐʇ                                                
+uǝɥʇ                                                
+(uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                            
+puǝ                                            
+()doʇS:uǝǝʍʇɯɹɐℲ                                                
+uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                            
+uǝɥʇ                                            
+00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)                                            
+ɟᴉǝslǝ                                        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ 'uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                            
+uǝɥʇ                                            
+00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)                                            
+ɟᴉ                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+ʇɐǝdǝɹ                                    
+uǝɥʇ ,,ʎɯǝɹǝſ,, == ǝɯɐN˙ʌ ɟᴉ                                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                            
+uǝɥʇ (,,ʎɯǝɹǝſ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                        
+uǝɥʇ                        
+Ɩ == (,,olᴉʇɹɐq,,',,ssǝɹƃoɹԀʇsǝnQolᴉʇɹɐq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+ɟᴉǝslǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+{                                    
+Ɩ = [Ɛ]                                        
+',,ʇsǝnQolᴉʇɹɐq,, = [ᄅ]                                        
+',,ʇsǝnQʇɹɐʇS,, = [Ɩ]                                        
+} = sƃɹɐ lɐɔol                                    
+(996ϛ68˙66ᄅ '8ϛ600ᄅ0˙Ɛㄥ 'ᄅϛ68ᄅ˙9ϛㄣ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                    
+puǝ                                    
+()doʇS:uǝǝʍʇolᴉʇɹɐq                                        
+uǝɥʇ uǝǝʍʇolᴉʇɹɐq ɟᴉ                                    
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(996ϛ68˙66ᄅ '8ϛ600ᄅ0˙Ɛㄥ 'ᄅϛ68ᄅ˙9ϛㄣ-)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                                
+((996ϛ68˙66ᄅ '8ϛ600ᄅ0˙Ɛㄥ 'ᄅϛ68ᄅ˙9ϛㄣ-)ʍǝu˙ǝɯɐɹℲƆ'uoᴉʇᴉsoԀ˙(996ϛ68˙66ᄅ '8ϛ600ᄅ0˙Ɛㄥ 'ᄅϛ68ᄅ˙9ϛㄣ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇolᴉʇɹɐq                                
+ǝslǝ                            
+puǝ                                
+puǝ                                    
+(ϛᄅ9ϛƖϛ8ᄅᄅ6ϛ6Ɩ˙9ƖᄅƖ '9ϛ9ㄥㄣ8890Ɛ8ϛƐƐ˙ƖㄣƖ '8Ɛ609ㄣㄥ6869ㄥ6˙096)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                        
+puǝ                                        
+()doʇS:uǝǝʍʇʇsǝnQ                                            
+uǝɥʇ uǝǝʍʇʇsǝnQ ɟᴉ                                        
+uǝɥʇ                                        
+00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛᄅ9ϛƖϛ8ᄅᄅ6ϛ6Ɩ˙9ƖᄅƖ '9ϛ9ㄥㄣ8890Ɛ8ϛƐƐ˙ƖㄣƖ '8Ɛ609ㄣㄥ6869ㄥ6˙096)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                                    
+((ϛᄅ9ϛƖϛ8ᄅᄅ6ϛ6Ɩ˙9ƖᄅƖ '9ϛ9ㄥㄣ8890Ɛ8ϛƐƐ˙ƖㄣƖ '8Ɛ609ㄣㄥ6869ㄥ6˙096)ʍǝu˙ǝɯɐɹℲƆ'uoᴉʇᴉsoԀ˙(ϛᄅ9ϛƖϛ8ᄅᄅ6ϛ6Ɩ˙9ƖᄅƖ '9ϛ9ㄥㄣ8890Ɛ8ϛƐƐ˙ƖㄣƖ '8Ɛ609ㄣㄥ6869ㄥ6˙096)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇʇsǝnQ                                    
+ǝslǝ                                
+puǝ                                    
+puǝ                                        
+(puǝ                                                
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                                    
+ǝslɐɟ = qoWƃuᴉɹq                                                    
+ ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo ǝslɐɟ == ʇsǝnQolᴉʇɹɐqoʇn∀˙פ‾ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou lᴉʇun                                                    
+puǝ                                                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                            
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                            
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                            
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                                            
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                                            
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                            
+puǝ                                                            
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,,ɹǝs∩lɐnʇɹᴉΛ,, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                                
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,,ɹǝs∩lɐnʇɹᴉΛ,, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                                
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                                            
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                                            
+puǝ                                                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                                
+()ʇᴉɐʍ˙ʞsɐʇ                                                                
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                                            
+ǝnɹʇ = qoWƃuᴉɹq                                                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                            
+puǝ                                                            
+()doʇS:uǝǝʍʇɯɹɐℲ                                                                
+uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                                            
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                                        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ'uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                                            
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                                        
+ʇɐǝdǝɹ                                                    
+()uoᴉʇɔunɟ)llɐɔd                                            
+uǝɥʇ ,,ǝʇɐɹᴉԀ uɐʍS,, == ǝɯɐN˙ʌ ɟᴉ                                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                    
+uǝɥʇ (,,ǝʇɐɹᴉԀ uɐʍS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                                
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,0ϛ,,'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs puɐ (,,sǝʇɐɹᴉԀ uɐʍS,,'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                            
+uǝɥʇ 0 == (,,olᴉʇɹɐq,,',,ssǝɹƃoɹԀʇsǝnQolᴉʇɹɐq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+uǝɥʇ 0ϛ8 =< ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                    
+uǝɥʇ ʇsǝnQolᴉʇɹɐqoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ɟᴉ                
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+puǝ
+(puǝ    
+puǝ        
+()ʇᴉɐʍ˙ʞsɐʇ            
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ            
+()ʇᴉɐʍ˙ʞsɐʇ            
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ        
+ ()sƃuᴉʇʇǝSǝʌɐS    
+ǝnlɐʌ = ʇsǝnQolᴉʇɹɐqoʇn∀˙sƃuᴉʇʇǝS˙פ‾    
+ǝnlɐʌ =   ʇsǝnQolᴉʇɹɐqoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'ʇsǝnQolᴉʇɹɐqoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ',,สวคเอโีมลโธโาบ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+(,,Ɛ,,',,ʇsᴉɯǝɥɔl∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+uǝɥʇ ᄅ == (,,Ɩ,,',,ʇsᴉɯǝɥɔl∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+(puǝ                        
+puǝ                            
+puǝ                                
+((ϛㄥƐ6ϛ8ϛ0ϛƐ60ᄅ˙ㄥ8ᄅƖ 'ϛᄅƖ8ᄅ886ᄅƖƐƐ˙ƖᄅƖ 'ϛㄥ8Ɩᄅㄣㄥ0Ɩϛ860˙086)ʍǝu˙ǝɯɐɹℲƆ)oʍʇ                                    
+ǝslɐɟ = ʇǝuƃɐWoʌƎʇɹɐʇS                                    
+ǝslǝ                                
+puǝ                                    
+puǝ                                        
+ǝslɐɟ = ʇǝuƃɐWoʌƎʇɹɐʇS                                            
+ǝslɐɟ == ᄅΛ‾ǝɔɐɹ‾oʌƎ‾oʇn∀˙פ‾ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo (,,Ɛ ɹǝʍolℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ lᴉʇun                                            
+ǝnɹʇ = ʇǝuƃɐWoʌƎʇɹɐʇS                                                
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = oʌƎuoWsoԀ                                                
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ,ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ,ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                
+(0ϛ'0ϛ'0ϛ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)oʍʇ                                                
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                
+()ʇᴉɐʍ ʇɐǝdǝɹ                                            
+uǝɥʇ (,,ǝʇɐɹᴉԀ uɐʍS,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                                    
+uǝɥʇ (,,ǝʇɐɹᴉԀ uɐʍS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                
+uǝɥʇ (,,Ɛ ɹǝʍolℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou puɐ (,,Ɛ ɹǝʍolℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou ɟᴉǝslǝ                            
+(ǝɯɐɹℲƆ˙ᄅɹǝʍolℲ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)oʍʇ                                
+uǝɥʇ (,,ᄅ ɹǝʍolℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou puɐ (,,ᄅ ɹǝʍolℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou ɟᴉǝslǝ                            
+(ǝɯɐɹℲƆ˙ƖɹǝʍolℲ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)oʍʇ                                
+uǝɥʇ (,,Ɩ ɹǝʍolℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou puɐ (,,Ɩ ɹǝʍolℲ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou ɟᴉ                            
+()uoᴉʇɔunɟ)llɐɔd                        
+uǝɥʇ Ɩ == (,,Ɩ,,',,ʇsᴉɯǝɥɔl∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                    
+puǝ                        
+(,,ᄅ,,',,ʇsᴉɯǝɥɔl∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+(Ɛ˙Ɩ)ʇᴉɐʍ                            
+uǝɥʇ ㄣ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - (ᄅ00ᄅ0˙ㄣㄥϛƐ- 'ㄥ0ㄣƖ996˙ᄅㄥ 'ƖᄅϛƐ8˙6ㄥㄥᄅ-)ʍǝu˙ƐɹoʇɔǝΛ) ɟᴉ                        
+((Ɛ06ㄣ8ㄣ0Ɛㄥ˙0- '80-ǝ699ㄣᄅㄣ9ϛ˙Ɩ '988ᄅ6ᄅ89˙0 '80-ǝᄅƐ0ㄥ990ϛ˙ϛ 'Ɩ '80-ǝㄣᄅᄅƐ966ϛ˙Ɛ '988ᄅ6ᄅ89˙0- '80-ǝㄣ0ƖㄣƖ06Ɛ˙9 'Ɛ06ㄣ8ㄣ0Ɛㄥ˙0- 'ᄅ00ᄅ0˙ㄣㄥϛƐ- 'ㄥ0ㄣƖ996˙ᄅㄥ 'ƖᄅϛƐ8˙6ㄥㄥᄅ-)ʍǝu˙ǝɯɐɹℲƆ)oʍʇ                        
+uǝɥʇ 0 == (,,Ɩ,,',,ʇsᴉɯǝɥɔl∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,pǝʌloʌƎ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝɔɐɹ˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou ɟᴉ                
+uǝɥʇ ᄅΛ‾ǝɔɐɹ‾oʌƎ‾oʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd            
+op ()ʇᴉɐʍ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds    
+(puǝ
+ǝnlɐʌ = ᄅΛ‾ǝɔɐɹ‾oʌƎ‾oʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'ᄅΛ‾ǝɔɐɹ‾oʌƎ‾oʇn∀˙פ‾',,งอสน้ัขา่ผเวโีอ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+                    
+(puǝ
+(puǝ    
+(puǝ        
+puǝ            
+puǝ                
+(ǝƃnɥ˙ɥʇɐɯ  ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs                    
+puǝ                    
+()ʎoɹʇsǝp:ɹoʇɐɯᴉu∀˙pᴉouɐɯnH˙ʌ                        
+uǝɥʇ (,,ɹoʇɐɯᴉu∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pᴉouɐɯnH˙ʌ ɟᴉ                    
+(0ϛ'0ϛ'0ϛ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                    
+oʌƎuoWsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                    
+uǝɥʇ 0ϛƐ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙oʌƎuoWsoԀ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ ,,ǝʇɐɹᴉԀ uɐʍS,, == ǝɯɐN˙ʌ puɐ ʇǝuƃɐWoʌƎʇɹɐʇS puɐ ᄅΛ‾ǝɔɐɹ‾oʌƎ‾oʇn∀˙פ‾ ɟᴉ                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ            
+()uoᴉʇɔunɟ)llɐɔd        
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʇɐǝqʇɹɐǝH˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)uʍɐds
+
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+(Ɩㄣϛ6ㄥ˙ㄣᄅㄥƖ '9Ɛㄥㄣ098˙ㄣƖ 'Ɛㄣ8Ɩϛ˙ƐƖ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+(Ɩ˙)ʇᴉɐʍ                                
+(ϛᄅ906˙ㄥƖㄥƖ '99Ɩϛ6ㄥ˙ㄣƖ 'ƐㄣƐ9ᄅ˙6Ɩ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+(Ɩ˙)ʇᴉɐʍ                                
+(89Ɛᄅϛ˙ㄣ89Ɩ 'ㄥᄅ08ㄥ6ㄣ˙9Ɩ '6ㄥ60˙008Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+(Ɩ˙)ʇᴉɐʍ                                
+(6ϛ900˙Ɩ89Ɩ 'ㄣϛ8ㄥ86˙ϛƖ 'ㄣᄅᄅㄣϛ˙698Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+(Ɩ˙)ʇᴉɐʍ                                
+(Ɩㄣϛ6ㄥ˙ㄣᄅㄥƖ 'ㄥƖƐㄣ098˙9Ɩ 'ϛƐ8ϛϛ˙8ϛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+(Ɩ˙)ʇᴉɐʍ                                
+(ϛ8968˙0ϛㄥƖ 'ϛ8Ɩ68ㄥϛ˙9Ɩ 'ㄣᄅƐㄣ6˙Ɛ08Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+(Ɩ˙)ʇᴉɐʍ                                
+(ㄥ08Ɩ0˙ᄅƖㄥƖ '99ㄣㄥㄥㄥƐ˙6Ɩ 'ϛ0Ɛㄥ8˙8ϛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+(Ɩ˙)ʇᴉɐʍ                                
+(ϛ8968˙0ϛㄥƖ 'Ɩϛϛ68ㄥƖ˙ƐƖ '6ᄅƐ6ㄣ˙0ϛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+(ϛ˙)ʇᴉɐʍ                                
+(ㄣƖㄥƖ 'ƖƖ '9Ɛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+puǝ ()doʇS:uǝǝʍʇolᴉʇɹɐq uǝɥʇ uǝǝʍʇolᴉʇɹɐq ɟᴉ                                
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ㄣƖㄥƖ 'ƖƖ '9Ɛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉǝslǝ                            
+((ㄣƖㄥƖ 'ƖƖ '9Ɛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ'uoᴉʇᴉsoԀ˙(ㄣƖㄥƖ 'ƖƖ '9Ɛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇolᴉʇɹɐq                                
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ㄣƖㄥƖ 'ƖƖ '9Ɛ8Ɩ-)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                            
+uǝɥʇ ᄅ == (,,olᴉʇɹɐq,, ',,ssǝɹƃoɹԀʇsǝnQolᴉʇɹɐq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                        
+puǝ                            
+puǝ                                
+(ϛㄥƐㄥ66˙8ㄣ9 'ƖƐ6˙8ㄣㄣ '6ϛƖ88˙660ᄅ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+puǝ ()doʇS:uǝǝʍʇolᴉʇɹɐq uǝɥʇ uǝǝʍʇolᴉʇɹɐq ɟᴉ                                    
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛㄥƐㄥ66˙8ㄣ9 'ƖƐ6˙8ㄣㄣ '6ϛƖ88˙660ᄅ)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                                
+((ϛㄥƐㄥ66˙8ㄣ9 'ƖƐ6˙8ㄣㄣ '6ϛƖ88˙660ᄅ)ʍǝu˙ǝɯɐɹℲƆ'uoᴉʇᴉsoԀ˙(ϛㄥƐㄥ66˙8ㄣ9 'ƖƐ6˙8ㄣㄣ '6ϛƖ88˙660ᄅ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇolᴉʇɹɐq                                
+ǝslǝ                            
+puǝ                                
+puǝ                                    
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                            
+ǝslɐɟ == ɐǝSpɹᴉɥ┴oʇn∀˙פ‾ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou lᴉʇun                                        
+puǝ                                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                                
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                                
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                
+puǝ                                                
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                    
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                    
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                                
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                                
+puǝ                                                
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                                    
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                             
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                
+puǝ ()doʇS:uǝǝʍʇɯɹɐℲ uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                                
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                            
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                    
+'uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                                
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                            
+ʇɐǝdǝɹ                                        
+uǝɥʇ ,,ʎɯǝɹǝſ,, == ǝɯɐN˙ʌ ɟᴉ                                    
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                
+uǝɥʇ (,,ʎɯǝɹǝſ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                            
+uǝɥʇ Ɩ == (,,olᴉʇɹɐq,, ',,ssǝɹƃoɹԀʇsǝnQolᴉʇɹɐq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                        
+puǝ                            
+puǝ                                
+(Ɩ ',,ʇsǝnQolᴉʇɹɐq,, ',,ʇsǝnQʇɹɐʇS,, ',,‾Ⅎ,,)ɯoƆ                                    
+(996ϛ68˙66ᄅ '8ϛ600ᄅ0˙Ɛㄥ 'ᄅϛ68ᄅ˙9ϛㄣ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                    
+puǝ ()doʇS:uǝǝʍʇolᴉʇɹɐq uǝɥʇ uǝǝʍʇolᴉʇɹɐq ɟᴉ                                    
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(996ϛ68˙66ᄅ '8ϛ600ᄅ0˙Ɛㄥ 'ᄅϛ68ᄅ˙9ϛㄣ-)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                                
+((996ϛ68˙66ᄅ '8ϛ600ᄅ0˙Ɛㄥ 'ᄅϛ68ᄅ˙9ϛㄣ-)ʍǝu˙ǝɯɐɹℲƆ'uoᴉʇᴉsoԀ˙(996ϛ68˙66ᄅ '8ϛ600ᄅ0˙Ɛㄥ 'ᄅϛ68ᄅ˙9ϛㄣ-)ʍǝu˙ǝɯɐɹℲƆ                                    
+)ʇǝƃɹɐ┴oʇ = uǝǝʍʇolᴉʇɹɐq                                
+ǝslǝ                            
+puǝ                                
+puǝ                                    
+(ϛᄅ9ϛƖϛ8ᄅᄅ6ϛ6Ɩ˙9ƖᄅƖ '9ϛ9ㄥㄣ8890Ɛ8ϛƐƐ˙ƖㄣƖ '8Ɛ609ㄣㄥ6869ㄥ6˙096)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                        
+puǝ ()doʇS:uǝǝʍʇolᴉʇɹɐq uǝɥʇ uǝǝʍʇolᴉʇɹɐq ɟᴉ                                        
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ϛᄅ9ϛƖϛ8ᄅᄅ6ϛ6Ɩ˙9ƖᄅƖ '9ϛ9ㄥㄣ8890Ɛ8ϛƐƐ˙ƖㄣƖ '8Ɛ609ㄣㄥ6869ㄥ6˙096)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                                    
+((ϛᄅ9ϛƖϛ8ᄅᄅ6ϛ6Ɩ˙9ƖᄅƖ '9ϛ9ㄥㄣ8890Ɛ8ϛƐƐ˙ƖㄣƖ '8Ɛ609ㄣㄥ6869ㄥ6˙096)ʍǝu˙ǝɯɐɹℲƆ'uoᴉʇᴉsoԀ˙(ϛᄅ9ϛƖϛ8ᄅᄅ6ϛ6Ɩ˙9ƖᄅƖ '9ϛ9ㄥㄣ8890Ɛ8ϛƐƐ˙ƖㄣƖ '8Ɛ609ㄣㄥ6869ㄥ6˙096)ʍǝu˙ǝɯɐɹℲƆ                                        
+)ʇǝƃɹɐ┴oʇ = uǝǝʍʇʇsǝnQ                                    
+ǝslǝ                                
+puǝ                                    
+puǝ                                        
+(puǝ                                            
+ǝslɐɟ = qoWƃuᴉɹq                                                    
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                                    
+ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo ǝslɐɟ == ɐǝSpɹᴉɥ┴oʇn∀˙פ‾ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou lᴉʇun                                                
+puǝ                                                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                        
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                        
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                        
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                        
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                                        
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                        
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                                        
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                        
+puǝ                                                        
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                            
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                                        
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                                        
+puǝ                                                        
+(ǝdʎ┴ʇsɐℲ˙פ‾)uodɐǝMdᴉnbƎ                                                            
+()ʇᴉɐʍ˙ʞsɐʇ                                                            
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                                        
+ǝnɹʇ = qoWƃuᴉɹq                                                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                        
+puǝ ()doʇS:uǝǝʍʇɯɹɐℲ uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                                        
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                                    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                            
+'uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                                        
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                                    
+ʇɐǝdǝɹ                                                
+()uoᴉʇɔunɟ)llɐɔd                                            
+uǝɥʇ ,,ǝʇɐɹᴉԀ uɐʍS,, == ǝɯɐN˙ʌ ɟᴉ                                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                    
+uǝɥʇ (,,ǝʇɐɹᴉԀ uɐʍS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                                
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ (,,0ϛ,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs puɐ (,,sǝʇɐɹᴉԀ uɐʍS,, 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                            
+uǝɥʇ 0 == (,,olᴉʇɹɐq,, ',,ssǝɹƃoɹԀʇsǝnQolᴉʇɹɐq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+ǝslǝ                    
+puǝ                        
+puǝ                            
+(,,Ɛ,, ',,ɹoʌǝɹ┴ʞlɐ┴,, ',,‾Ⅎ,,)ɯoƆ                                
+(,,ᄅ,, ',,ɹoʌǝɹ┴ʞlɐ┴,, ',,‾Ⅎ,,)ɯoƆ                                
+(,,Ɩ,, ',,ɹoʌǝɹ┴ʞlɐ┴,, ',,‾Ⅎ,,)ɯoƆ                                
+
+puǝ                                
+puǝ                                    
+puǝ                                        
+puǝ                                            
+(,,Ɛ,, ',,ɹoʌǝɹ┴ʞlɐ┴,, ',,‾Ⅎ,,)ɯoƆ                                                
+(,,ᄅ,, ',,ɹoʌǝɹ┴ʞlɐ┴,, ',,‾Ⅎ,,)ɯoƆ                                                
+(,,Ɩ,, ',,ɹoʌǝɹ┴ʞlɐ┴,, ',,‾Ⅎ,,)ɯoƆ                                                
+ǝslǝ                                            
+(ǝɹoʇSʇᴉnɹℲlᴉʌǝp ',,ʇᴉnɹℲpɐo˥,, ',,‾Ⅎ,,)ɯoƆ                                                
+uǝɥʇ (ǝɹoʇSʇᴉnɹℲlᴉʌǝp)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                            
+uǝɥʇ lᴉu == ssǝɔɔ∀oƃuᴉɯɐlℲ˙(,,sǝlqɐʞɔolu∩ʇǝפ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ puɐ ǝɹoʇSʇᴉnɹℲlᴉʌǝp == ɹoopuǝdOʇᴉnɹℲlᴉʌǝp ɟᴉ                                        
+op (ǝɹoʇSʇᴉnɹℲlᴉʌǝplǝqɐ┴)sɹᴉɐd uᴉ ǝɹoʇSʇᴉnɹℲlᴉʌǝp 'Ɩᴉ ɹoɟ                                    
+op (uǝdOʇᴉnɹℲlᴉʌǝplǝqɐ┴)sɹᴉɐd uᴉ ɹoopuǝdOʇᴉnɹℲlᴉʌǝp 'ᴉ ɹoɟ                                
+
+puǝ                                
+puǝ                                    
+(ǝɯɐN˙ʌ 'uǝdOʇᴉnɹℲlᴉʌǝplǝqɐ┴)ʇɹǝsuᴉ˙ǝlqɐʇ                                        
+uǝɥʇ 000000Ɩ =< ǝɔᴉɹԀ˙ʌ ɟᴉ                                    
+op (,,sʇᴉnɹℲʇǝפ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙(,,sǝʇoɯǝɹ,,)plᴉɥƆɹoℲʇᴉɐM:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ 'ʇxǝu uᴉ ʌ 'ᴉ ɹoɟ                                
+
+puǝ                                
+puǝ                                    
+puǝ                                        
+(ɹ 'ǝɹoʇSʇᴉnɹℲlᴉʌǝplǝqɐ┴)ʇɹǝsuᴉ˙ǝlqɐʇ                                            
+uǝɥʇ ,,ǝɯɐN,, == Ɩᴉ ɟᴉ                                        
+op (ʌ)sɹᴉɐd uᴉ ɹ 'Ɩᴉ ɹoɟ                                    
+op ((,,sʇᴉnɹℲʎɹoʇuǝʌuIʇǝƃ,,)ɹǝʌɹǝSǝʞoʌuI:[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                
+
+{} = uǝdOʇᴉnɹℲlᴉʌǝplǝqɐ┴                                
+{} = ǝɹoʇSʇᴉnɹℲlᴉʌǝplǝqɐ┴                                
+uǝɥʇ lᴉu == ssǝɔɔ∀oƃuᴉɯɐlℲ˙(,,sǝlqɐʞɔolu∩ʇǝפ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                            
+ǝslǝ                        
+puǝ                            
+puǝ                                
+puǝ                                    
+puǝ                                        
+(ㄥ09ㄣƐ0˙Ɛ98 'ϛㄥㄥ0ㄥ8Ɩ˙ϛƖ 'ᄅ08˙88ᄅᄅ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                            
+()doʇS:plɹoʍǝɹᴉɥʇuɐʍSuopuǝǝʍ┴ uǝɥʇ plɹoʍǝɹᴉɥʇuɐʍSuopuǝǝʍ┴ ɟᴉ                                        
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(ㄥ09ㄣƐ0˙Ɛ98 'ϛㄥㄥ0ㄥ8Ɩ˙ϛƖ 'ᄅ08˙88ᄅᄅ)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                                    
+((ㄥ09ㄣƐ0˙Ɛ98 'ϛㄥㄥ0ㄥ8Ɩ˙ϛƖ 'ᄅ08˙88ᄅᄅ)ʍǝu˙ǝɯɐɹℲƆ'uoᴉʇᴉsoԀ˙(ㄥ09ㄣƐ0˙Ɛ98 'ϛㄥㄥ0ㄥ8Ɩ˙ϛƖ 'ᄅ08˙88ᄅᄅ)ʍǝu˙ǝɯɐɹℲƆ                                        
+)ʇǝƃɹɐ┴oʇ = plɹoʍǝɹᴉɥʇuɐʍSuopuǝǝʍ┴                                    
+ǝslǝ                                
+puǝ                                    
+puǝ                                        
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                            
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ɐǝSpɹᴉɥ┴oʇn∀˙פ‾ ʇou lᴉʇun                                            
+puǝ                                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                    
+puǝ                                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                                    
+puǝ                                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                    
+puǝ ()doʇS:uǝǝʍʇɯɹɐℲ uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                                    
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                                
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                        
+'uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                                    
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                                
+()ʇᴉɐʍ˙ʞsɐʇ                                                
+ʇɐǝdǝɹ                                            
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ ,,uɐʍS uop,, == ǝɯɐN˙ʌ ɟᴉ                                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                    
+uǝɥʇ (,,uɐʍS uop,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                                
+ǝslǝ                            
+(,,noZlǝʌɐɹ┴,, ',,‾Ⅎ,,)ɯoƆ                                
+uǝɥʇ Ɩ == (,,ʞɔǝɥƆ,, ',,ssǝɹƃoɹԀʇsǝnQZ,,)ɹǝʌɹǝSǝʞoʌuI:[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                            
+puǝ                                
+(,,uᴉƃǝq,, ',,ssǝɹƃoɹԀʇsǝnQZ,, ',,‾Ⅎ,,)ɯoƆ                                    
+(,,ʞɔǝɥƆ,, ',,ssǝɹƃoɹԀʇsǝnQZ,, ',,‾Ⅎ,,)ɯoƆ                                    
+ǝslǝ                                
+puǝ                                    
+puǝ                                        
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                                                
+Ɩ == ʞɔǝɥƆ lᴉʇun                                            
+(,,noZlǝʌɐɹ┴,, ',,‾Ⅎ,,)ɯoƆ                                                
+()ʇᴉɐʍ˙ʞsɐʇ                                                
+ʇɐǝdǝɹ                                            
+ᄅ = ʞɔǝɥƆ                                            
+(ϛ˙)ʇᴉɐʍ                                            
+0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ɐǝSpɹᴉɥ┴oʇn∀˙פ‾ ʇou lᴉʇun                                            
+puǝ                                                
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                    
+puǝ                                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                                    
+puǝ                                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                    
+puǝ ()doʇS:uǝǝʍʇɯɹɐℲ uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                                    
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                                
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                        
+'uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                                    
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                                
+()ʇᴉɐʍ˙ʞsɐʇ                                                
+ʇɐǝdǝɹ                                            
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ ,,ɐɹpuᴉ‾dᴉɹ,, == ǝɯɐN˙ʌ ɟᴉ                                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                    
+uǝɥʇ (,,ɐɹpuᴉ‾dᴉɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                                
+uǝɥʇ 0 == (,,ʞɔǝɥƆ,, ',,ssǝɹƃoɹԀʇsǝnQZ,,)ɹǝʌɹǝSǝʞoʌuI:[,,‾ℲɯɯoƆ,,]sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                            
+(,,noZlǝʌɐɹ┴,, ',,‾Ⅎ,,)ɯoƆ                            
+uǝɥʇ lᴉu =~ ssǝɔɔ∀oƃuᴉɯɐlℲ˙(,,sǝlqɐʞɔolu∩ʇǝפ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+uǝɥʇ Ɛ == (,,olᴉʇɹɐq,, ',,ssǝɹƃoɹԀʇsǝnQolᴉʇɹɐq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+puǝ                    
+ǝslɐɟ = ɯɹɐℲoʇn∀˙פ‾                        
+uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ                    
+uǝɥʇ 00ϛƖ =< ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ ɐǝSpɹᴉɥ┴oʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = ɐǝSpɹᴉɥ┴oʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɐǝSpɹᴉɥ┴oʇn∀˙פ‾ ',,Ɛ กลโ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+(,,ᄅ กลโ : ะนาถส,,)lǝqɐ˥:Ɩǝƃɐd
+uǝɥʇ ᄅplɹoM ɟᴉǝslǝ
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+ʎʇᴉlᴉq∀ʎnqoʇn∀˙פ‾ ʇou ɹo ʞɔǝɥƆuǝʞ ʇou puɐ ʞɔǝɥƆnɹoS ʇou puɐ ʞɔǝɥƆoddǝפ ʇou puɐ ʞɔǝɥƆosnq ʇou lᴉʇun                    
+puǝ                        
+(,,ʎnq,,                                
+',,ʞlɐ┴uǝʞ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+
+
+(,,nɹoS,,                                
+',,ᴉʞɐHʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+
+
+
+(,,oddǝפ,,                                
+',,ᴉʞɐHʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+
+(,,ǝdɐƆ ʞɔɐlq,,                                
+',,ɯǝʇIʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+
+(,,osnq,,                                
+',,ᴉʞɐHʎnq,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ                        
+puǝ                        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:(,,‾ℲɯɯoƆ,,                                
+)plᴉɥƆɹoℲʇᴉɐM:(,,sǝʇoɯǝɹ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+
+{                            
+,,ʇǝɯlǝH ɹoᴉɹɹɐM,, = [ᄅ]                                
+',,ɯǝʇIpɐo˥,, = [Ɩ]                                
+} = sƃɹɐ lɐɔol                            
+uǝɥʇ ƐM ɟᴉ                        
+puǝ                        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:(,,‾ℲɯɯoƆ,,                                
+)plᴉɥƆɹoℲʇᴉɐM:(,,sǝʇoɯǝɹ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+
+{                            
+,,ʇǝɯlǝH ɹoᴉɹɹɐM,, = [ᄅ]                                
+',,ɯǝʇIpɐo˥,, = [Ɩ]                                
+} = sƃɹɐ lɐɔol                            
+uǝɥʇ ᄅM ɟᴉ                        
+puǝ                        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:(,,‾ℲɯɯoƆ,,                                
+)plᴉɥƆɹoℲʇᴉɐM:(,,sǝʇoɯǝɹ,,)plᴉɥƆɹoℲʇᴉɐM:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+
+{                            
+,,ǝdɐƆ ʞɔɐlq,, = [ᄅ]                                
+',,ɯǝʇIpɐo˥,, = [Ɩ]                                
+} = sƃɹɐ lɐɔol                            
+uǝɥʇ ƖplɹoM ɟᴉ                        
+ǝnɹʇ = ʞɔǝɥƆuǝʞ                        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+
+{                        
+,,ʎnq,, = [ᄅ]                            
+',,ʞlɐ┴uǝʞ,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+
+{                        
+,,ʇɹɐʇS,, = [ᄅ]                            
+',,ʞlɐ┴uǝʞ,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+ǝnɹʇ = ʞɔǝɥƆnɹoS                        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,nɹoS,, = [ᄅ]                            
+',,ᴉʞɐHʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+ǝnɹʇ = ʞɔǝɥƆoddǝפ                        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+{                        
+,,oddǝפ,, = [ᄅ]                            
+',,ᴉʞɐHʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+ǝnɹʇ = ʞɔǝɥƆosnq                        
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+
+{                        
+,,osnq,, = [ᄅ]                            
+',,ᴉʞɐHʎnq,, = [Ɩ]                            
+} = sƃɹɐ lɐɔol                        
+()ʇᴉɐʍ˙ʞsɐʇ                        
+ʇɐǝdǝɹ                    
+uǝɥʇ 000ϛ88 =< ᴉlǝq ɟᴉ                
+ǝslɐɟ = ʞɔǝɥƆuǝʞ lɐɔol                
+ǝslɐɟ = ʞɔǝɥƆoddǝפ lɐɔol                
+ǝslɐɟ = ʞɔǝɥƆnɹoS lɐɔol                
+ǝslɐɟ = ʞɔǝɥƆosnq lɐɔol                
+ǝnlɐΛ˙ᴉlǝq˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ᴉlǝq lɐɔol                
+uǝɥʇ ʎʇᴉlᴉq∀ʎnqoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+           
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = ʎʇᴉlᴉq∀ʎnqoʇn∀˙פ‾
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʎʇᴉlᴉq∀ʎnqoʇn∀˙פ‾',,ิตัมนโิตัอิคาฮอ้ืซ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+(9Ɛㄣ9ㄣ˙ㄥ9ᄅᄅ- '8Ɩ606˙909ϛ'90ㄣ99˙006ㄥ-)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                        
+puǝ ()doʇS:uǝǝʍʇʇsǝnQ uǝɥʇ uǝǝʍʇʇsǝnQ ɟᴉ                        
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(9Ɛㄣ9ㄣ˙ㄥ9ᄅᄅ- '8Ɩ606˙909ϛ '90ㄣ99˙006ㄥ-)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                    
+((9Ɛㄣ9ㄣ˙ㄥ9ᄅᄅ- '8Ɩ606˙909ϛ '90ㄣ99˙006ㄥ-)ʍǝu˙ǝɯɐɹℲƆ'uoᴉʇᴉsoԀ˙(9Ɛㄣ9ㄣ˙ㄥ9ᄅᄅ- '8Ɩ606˙909ϛ '90ㄣ99˙006ㄥ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇʇsǝnQ                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+ǝslɐɟ = ʞɔɐʇʇ∀ʇsɐℲ                            
+ǝslɐɟ = qoWƃuᴉɹq                            
+ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ǝloԀoʇn∀˙פ‾ ʇou lᴉʇun                            
+puǝ                                
+(,,ʇuᴉoԀuʍɐdSʇǝS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝnɹʇ = qoWƃuᴉɹq                                    
+puǝ ()doʇS:uǝǝʍʇɯɹɐℲ uǝɥʇ uǝǝʍʇɯɹɐℲ ɟᴉ                                    
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉǝslǝ                                
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                        
+'uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ = uǝǝʍʇɯɹɐℲ                                    
+uǝɥʇ 00Ɛ < ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) ɟᴉ                                
+()ʇᴉɐʍ˙ʞsɐʇ                                
+ʇɐǝdǝɹ                            
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ ,,poפ ɹǝpunɥ┴,, == ǝɯɐN˙ʌ ɟᴉ                        
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                    
+uǝɥʇ (,,poפ ɹǝpunɥ┴,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɹo (,,poפ ɹǝpunɥ┴,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ ǝloԀoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = ǝloԀoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝloԀoʇn∀˙פ‾ ',,ลนเอเงอบะรก้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+(,,ɔᴉlǝɹǝɔɐlԀ,, ',,ssǝɹƃoɹԀʇsǝnQoɹԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+uǝɥʇ 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɟᴉ                                
+ǝslɐɟ ==  ɹǝqɐSoʇn∀˙פ‾ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ lᴉʇun                                
+(,,ʇuᴉoԀuʍɐdSʇǝS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                    
+puǝ                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+puǝ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                    
+ǝnɹʇ = qoWƃuᴉɹq                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                    
+ʇɐǝdǝɹ                                
+uǝɥʇ ,,ʇɹǝdxƎ ɹǝqɐS,, == ǝɯɐN˙ʌ ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                        
+((ᄅƖ80ᄅ8ϛ8˙0'80-ǝ8ᄅƐㄣㄣ600˙ᄅ- '6ㄣ8Ɩ0ƐƐƖϛ˙0- '80-ǝ6ƖㄣƐㄣᄅㄥㄥ˙ᄅ- 'Ɩ '80-ǝƐㄣㄣㄥ00ϛϛ˙8- '6ㄣ8Ɩ0ƐƐƖϛ˙0'80-ǝϛㄣ8Ɛ809ㄥ˙8 'ᄅƖ80ᄅ8ϛ8˙0 'ㄥƐᄅ9Ɩ6Ɩ8˙8 'ƐㄥᄅƐㄥㄥ6˙6ᄅ '9ㄣ0ϛ8˙Ɩ0ㄣƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+uǝɥʇ (,,ʇɹǝdxƎ ɹǝqɐS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ʇɹǝdxƎ ɹǝqɐS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+ǝslǝ                
+puǝ                    
+puǝ                        
+puǝ                            
+puǝ                                
+((ㄣ6ㄣㄣƖϛ9ㄥ8˙0 '80-ǝƐㄣ9ᄅㄥϛ0Ɛ˙9 '9ϛㄣϛㄥƐƖ8ㄣ˙0-'80-ǝㄥ09ϛ666ㄥ˙ϛ- 'Ɩ '80-ǝㄥ66Ɩϛ8Ɛϛ˙ᄅ '9ϛㄣϛㄥƐƖ8ㄣ˙0 '60-ǝㄥㄥ890699˙ϛ'ㄣ6ㄣㄣƖϛ9ㄥ8˙0 '9ƖƖ86ϛ08˙Ɛ 'ƐㄥᄅƐㄥㄥ6˙6ᄅ 'ㄣ0ϛƖ6˙ㄣ0ㄣƖ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                    
+(ϛ˙0)ʇᴉɐʍ                                    
+(,,ɔᴉlǝɹ,,)uodɐǝMdᴉnbƎ                                    
+(ϛ˙0)ʇᴉɐʍ                                    
+(,,uoSɥɔᴉɹ,, ',,ssǝɹƃoɹԀʇsǝnQoɹԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+uǝɥʇ Ɩ == (,,uoSɥɔᴉɹ,, ',,ssǝɹƃoɹԀʇsǝnQoɹԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                                
+puǝ                                    
+puǝ                                        
+puǝ                                            
+ǝslɐɟ ==  ɹǝqɐSoʇn∀˙פ‾ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ lᴉʇun                                                
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                    
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                    
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                                    
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                    
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                                    
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                                    
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                                    
+puǝ                                                    
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                    
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                                    
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                                    
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                                                    
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                                    
+puǝ                                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                                        
+uǝɥʇ (uodɐǝMʇɔǝlǝS˙פ‾)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                                                    
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                                    
+ǝnɹʇ = qoWƃuᴉɹq                                                    
+()ʇᴉɐʍ˙ʞsɐʇ                                                    
+ʇɐǝdǝɹ                                                
+uǝɥʇ ,,ɹǝpɐǝ˥ qoW,, == ǝɯɐN˙ʌ ɟᴉ                                            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                                        
+((6ϛϛㄣƐ9ᄅㄣƐ˙0 'ϛƐㄥ6Ɛㄥㄣ8Ɩ0˙0 '9ᄅƖㄥ8ᄅ6Ɛ6˙0- '99Ɩ96ㄥ0ϛƖ0˙0'ㄣƖㄥ69ϛ666˙0 '9Ɩ8Ɛ09Ɩϛᄅ0˙0 'ㄣ08ㄥㄣƐ6Ɛ6˙0 'ϛϛ06ㄣ8ㄥᄅᄅ0˙0-'ㄣ9ϛ80ᄅᄅㄣƐ˙0 'Ɛ0ㄥ0ㄥ˙8ᄅƐϛ 'Ɩᄅ8680Ɩ6˙ㄣ- 'Ɩᄅϛ6ϛ˙ㄥ96ᄅ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                        
+uǝɥʇ (,,ɹǝpɐǝ˥ qoW,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɹo (,,ɹǝpɐǝ˥ qoW,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                    
+uǝɥʇ 0 == (,,uoSɥɔᴉɹ,, ',,ssǝɹƃoɹԀʇsǝnQoɹԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ                                
+(,,uoSɥɔᴉɹ,, ',,ssǝɹƃoɹԀʇsǝnQoɹԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+uǝɥʇ lᴉu == (,,uoSɥɔᴉɹ,, ',,ssǝɹƃoɹԀʇsǝnQoɹԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                
+ǝslǝ                            
+(,,uɐWʞɔᴉS,, ',,ssǝɹƃoɹԀʇsǝnQoɹԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+(0)ʇᴉɐʍ                                
+(dnƆ˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+',,dnƆllᴉℲ,, ',,ssǝɹƃoɹԀʇsǝnQoɹԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ(ϛ˙0)ʇᴉɐʍ                                
+(,,dnƆ,,)uodɐǝMdᴉnbƎ                                
+(ϛ˙0)ʇᴉɐʍ                                
+(,,dnƆʇǝפ,, ',,ssǝɹƃoɹԀʇsǝnQoɹԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+uǝɥʇ 0 =~ (,,uɐWʞɔᴉS,, ',,ssǝɹƃoɹԀʇsǝnQoɹԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                            
+ǝslǝ                        
+puǝ                            
+((80ㄣㄥƖ6ϛ96˙0 'ϛƖϛ0ϛ88ϛᄅ˙0- 'ϛ0-ǝϛ08ᄅㄥƐᄅㄣ˙Ɛ'86ƖᄅƖ6ㄣϛᄅ˙0 'ϛƐᄅㄣㄣᄅƖϛ6˙0 'Ɛㄣ6ㄣ9ƐㄥƖ˙0 '6ㄣƖ8Ɩ86ㄣㄣ0˙0- 'ϛ8ᄅᄅᄅㄥㄥ9Ɩ˙0-'Ɩϛϛㄥ08ㄣ86˙0 'ㄥ8ϛƖ00˙ㄣ9Ɩ '8ϛ86ㄣ0ϛ˙ƖƖ 'ㄥϛㄥ00˙0Ɩ9Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                
+ǝslǝ                            
+((ㄥ8ϛ99ㄣ8ㄣ9˙0- '0Ɩ-ǝᄅ88ㄣㄣϛㄥㄣ˙Ɛ 'ϛ0ƖƐㄣᄅƖ9ㄥ˙0-'60-ǝᄅㄣϛㄣ8ϛ0ᄅ˙Ɩ 'Ɩ '0Ɩ-ǝㄣƖ6ᄅϛ90ㄥ˙ϛ- 'ϛ0ƖƐㄣᄅƖ9ㄥ˙0 '60-ǝㄣ6066ㄥ8ᄅ˙Ɩ-'ㄥ8ϛ99ㄣ8ㄣ9˙0- 'Ɛ08ᄅᄅ˙0ϛƐㄣ '8ᄅㄥ6ㄥ9ㄣ0˙ϛ 'ϛㄥㄣƖ9˙ㄣƖƖƖ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                                
+(,,ɥɔɹo┴,,)uodɐǝMdᴉnbƎ                                
+uǝɥʇ (,,ɥɔɹo┴,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,ɥɔɹo┴,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                            
+uǝɥʇ 0 == ʎɔuǝɹɐdsuɐɹ┴˙ʇɹɐԀ˙uɹnq˙ʇɹǝsǝp˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+ǝslǝ                    
+puǝ                        
+((6ㄥᄅƖ60ㄥƐ˙0 '80-ǝㄣ6ㄥ6986Ɛ˙ㄣ-'ㄣᄅㄥㄥ998ᄅ6˙0 '80-ǝ8ㄣƐ6ㄥ9Ɩ6˙Ɩ 'Ɩ '80-ǝƖ6ㄣ660ㄥ6˙Ɛ 'ㄣᄅㄥㄥ998ᄅ6˙0- '60-ǝƖϛƖㄥƖㄥ0˙Ɛ'6ㄥᄅƖ60ㄥƐ˙0 'Ɛㄣϛ6Ɩㄥ˙8ㄣƖ 'ᄅƐƖㄣㄥㄥ6˙9Ɛ 'ㄣ88ϛϛ˙ᄅƖ9Ɩ-)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                            
+ǝslǝ                        
+(Ɩ)ʇᴉɐʍ                            
+ǝɯɐɹℲƆ˙uoʇʇnq˙ϛǝʇɐlԀ˙sǝʇɐlԀʇsǝnQ˙ǝlƃunſ˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+ǝɯɐɹℲƆ˙uoʇʇnq˙ㄣǝʇɐlԀ˙sǝʇɐlԀʇsǝnQ˙ǝlƃunſ˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+ǝɯɐɹℲƆ˙uoʇʇnq˙ƐǝʇɐlԀ˙sǝʇɐlԀʇsǝnQ˙ǝlƃunſ˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+ǝɯɐɹℲƆ˙uoʇʇnq˙ᄅǝʇɐlԀ˙sǝʇɐlԀʇsǝnQ˙ǝlƃunſ˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+ǝɯɐɹℲƆ˙uoʇʇnq˙ƖǝʇɐlԀ˙sǝʇɐlԀʇsǝnQ˙ǝlƃunſ˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                            
+(Ɩ)ʇᴉɐʍ                            
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                            
+uǝɥʇ 00Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙(6ㄥᄅƖ60ㄥƐ˙0 '80-ǝㄣ6ㄥ6986Ɛ˙ㄣ- 'ㄣᄅㄥㄥ998ᄅ6˙0 '80-ǝ8ㄣƐ6ㄥ9Ɩ6˙Ɩ 'Ɩ '80-ǝƖ6ㄣ660ㄥ6˙Ɛ 'ㄣᄅㄥㄥ998ᄅ6˙0- '60-ǝƖϛƖㄥƖㄥ0˙Ɛ '6ㄥᄅƖ60ㄥƐ˙0 'Ɛㄣϛ6Ɩㄥ˙8ㄣƖ 'ᄅƐƖㄣㄥㄥ6˙9Ɛ 'ㄣ88ϛϛ˙ᄅƖ9Ɩ-)ʍǝu˙ǝɯɐɹℲƆ) ɟᴉ                        
+uǝɥʇ 0 == ʎɔuǝɹɐdsuɐɹ┴˙ɹoop˙sǝʇɐlԀʇsǝnQ˙ǝlƃunſ˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ 0 == ʎɔuǝɹɐdsuɐɹ┴˙ʇɹɐԀ˙lɐuᴉℲ˙ǝlƃunſ˙dɐW˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                
+puǝ                
+ǝslɐɟ = Ԁ┴ssɐdʎq˙פ‾                    
+ǝslɐɟ = ɯɹɐℲoʇn∀˙פ‾                    
+uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ                
+uǝɥʇ (,,ɹǝqɐS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou puɐ (,,ɹǝqɐS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ʇou puɐ 00ᄅ =< ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ  ɹǝqɐSoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+
+(puǝ
+({Ɩ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI',,ว็รเป์ราวดิป,, = ʇxǝ┴',,qnHɹoʇɔǝΛ,, = ǝlʇᴉ┴}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ =  ɹǝqɐSoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ ' ɹǝqɐSoʇn∀˙פ‾ ',,์คงชแบาด้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+    
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+(,,ɐsoɹssǝɹplǝʌɐɹ┴,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+ǝslǝ                    
+puǝ                        
+((88ㄣ9˙ϛᄅƐƖ- 'ᄅ09ƖϛㄥƐ˙ㄥƐ 'ㄣᄅƖㄥ˙ㄥㄣƐƖ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                            
+ǝslǝ                        
+puǝ                            
+puǝ                                
+(,,ɐsoɹssǝɹplǝʌɐɹ┴,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+ʇuǝɹɐԀ˙ʌ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ lᴉʇun                                    
+(,,ɐsoɹssǝɹplǝʌɐɹ┴,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                        
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                        
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                        
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                                        
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                        
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                                        
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                                        
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                                        
+puǝ                                        
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                            
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ˙פ‾ ʇou ɟᴉ                                        
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                                        
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                                        
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                        
+()ʇᴉɐʍ˙ʞsɐʇ                                        
+ʇɐǝdǝɹ                                    
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ ,,lɐɹᴉɯp∀ ǝɔI,, == ǝɯɐN˙ʌ ɟᴉ                                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ                            
+uǝɥʇ (,,lɐɹᴉɯp∀ ǝɔI,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                        
+uǝɥʇ Ɩ == ʎɔuǝɹɐdsuɐɹ┴˙ɹoop˙ǝɔI˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ puɐ ǝslɐɟ == ǝpᴉlloƆuɐƆ˙ɹoop˙ǝɔI˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉǝslǝ                    
+(Ɛ)ʇᴉɐʍ                        
+plɹoMʍǝNoʇn∀˙פ‾ ʇou ɹo Ɛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙(88ㄣ9˙ϛᄅƐƖ- 'ᄅ09ƖϛㄥƐ˙ㄥƐ 'ㄣᄅƖㄥ˙ㄥㄣƐƖ)ʍǝu˙ǝɯɐɹℲƆ) lᴉʇun                        
+((88ㄣ9˙ϛᄅƐƖ- 'ᄅ09ƖϛㄥƐ˙ㄥƐ 'ㄣᄅƖㄥ˙ㄥㄣƐƖ)ʍǝu˙ǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                            
+()ʇᴉɐʍ˙ʞsɐʇ                            
+ʇɐǝdǝɹ                        
+(,,ʎǝʞ,,)uodɐǝMdᴉnbƎ                        
+(,,ǝʌᴉʇɔǝʇǝp,, ',,ssǝɹƃoɹԀʇsǝnQɐsoɹssǝɹp,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+(ϛ˙)ʇᴉɐʍ                        
+uǝɥʇ 0 == ʎɔuǝɹɐdsuɐɹ┴˙ɹoop˙ǝɔI˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ puɐ ǝnɹʇ == ǝpᴉlloƆuɐƆ˙ɹoop˙ǝɔI˙dɐW˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ɟᴉ                    
+puǝ                    
+ǝslɐɟ = ɯɹɐℲoʇn∀˙פ‾                        
+uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ                    
+uǝɥʇ 00ㄥ =< ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+uǝɥʇ plɹoMʍǝNoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+(puǝ
+puǝ    
+()ʇᴉɐʍ˙ʞsɐʇ        
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+()ʇᴉɐʍ˙ʞsɐʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ǝnlɐʌ = plɹoMʍǝNoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'plɹoMʍǝNoʇn∀˙פ‾ ',,ᄅ กลโ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+(,,Ɩ กลโ : ะนาถส,,)lǝqɐ˥:Ɩǝƃɐd
+
+uǝɥʇ ƖplɹoM ɟᴉ
+
+(puǝ
+puǝ    
+puǝ         
+(ᄅƃuᴉɹʇSɥo 'ƖƃuᴉɹʇSɥo)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ ssɐdʎqʇsǝɥƆ˙פ‾ ɟᴉ        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+    
+(puǝ    
+puǝ        
+puǝ            
+(puǝ                
+puǝ                    
+puǝ                        
+ɥɔnoʇun sᴉ Ɩ -- (Ɩ 'ʇuǝɹɐԀ˙ʌ 'ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʇsǝɹǝʇuᴉɥɔnoʇǝɹᴉɟ                        
+()ʇᴉɐʍ                        
+ɥɔnoʇ sᴉ 0-- (0 'ʇuǝɹɐԀ˙ʌ 'ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʇsǝɹǝʇuᴉɥɔnoʇǝɹᴉɟ                        
+uǝɥʇ (,,ɹǝʇʇᴉɯsuɐɹ┴ɥɔno┴,,)∀sI:ʌ puɐ (,,ʇsǝɥƆ,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                        
+op (()sʇuɐpuǝɔsǝpʇǝפ:(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'‾ ɹoɟ                        
+puǝ                        
+puǝ                            
+(ϛƖ˙)ʇᴉɐʍ                                
+ǝɯɐɹℲƆ˙ʌ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                                
+uǝɥʇ (,,ʇsǝɥƆ,, 'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                            
+op (()uǝɹplᴉɥƆʇǝפ:(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                    
+()uoᴉʇɔunɟ)llɐɔd             
+uǝɥʇ ssɐdʎqʇsǝɥƆ˙פ‾ ɟᴉ    
+op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+ʞɐǝɹq                            
+00ϛƖ+pp∀ǝpnʇᴉuƃɐW˙פ‾ = pp∀ǝpnʇᴉuƃɐW˙פ‾                            
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                            
+ʇuǝɹɐԀ˙ʌ ʇou ɹo ǝslɐɟ == ʇsǝɥƆɯɹɐℲoʇn∀˙פ‾ lᴉʇun                            
+puǝ                                
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎu∩                                    
+(ǝɯɐɹℲƆ˙ʌ)ʇǝƃɹɐ┴oʇ                                    
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                                    
+uǝɥʇ (ǝɯɐN˙ʌ)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                
+()ʇᴉɐʍ ʇɐǝdǝɹ                            
+uǝɥʇ pp∀ǝpnʇᴉuƃɐW˙פ‾+000ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʌ) ɟᴉ                        
+uǝɥʇ (ǝɯɐN˙ʌ)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                    
+uǝɥʇ (,,ʇsǝɥƆ,,)puᴉɟ:ǝɯɐN˙ʌ ɟᴉ                
+ op (()uǝɹplᴉɥƆʇǝפ:(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ            
+uǝɥʇ ʇsǝɥƆɯɹɐℲoʇn∀˙פ‾ ɟᴉ        
+ op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+0 = pp∀ǝpnʇᴉuƃɐW˙פ‾
+
+(puǝ
+ǝnlɐʌ = ssɐdʎqʇsǝɥƆ˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ssɐdʎqʇsǝɥƆ˙פ‾ ',,{งย่ีสเ:ว็รเ} งอ่ลกม์ราฟ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+()sƃuᴉʇʇǝSǝʌɐS    
+ǝnlɐʌ = ʇsǝɥƆɯɹɐℲoʇn∀˙sƃuᴉʇʇǝS˙פ‾    
+ǝnlɐʌ = ʇsǝɥƆɯɹɐℲoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ʇsǝɥƆɯɹɐℲoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ',,{บ็กเนิบ} งอ่ลกม์ราฟ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+()ǝuᴉ˥:Ɩǝƃɐd
+(puǝ
+ (puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+(ǝƃnɥ˙ɥʇɐɯ  ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs                        
+puǝ                        
+()ʎoɹʇsǝp:ɹoʇɐɯᴉu∀˙pᴉouɐɯnH˙ʌ                            
+uǝɥʇ (,,ɹoʇɐɯᴉu∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pᴉouɐɯnH˙ʌ ɟᴉ                        
+(09'09'09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                        
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                        
+uoWsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                        
+uǝɥʇ 00ᄅ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙uoWsoԀ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ uoW == ǝɯɐN˙ʌ puɐ qoWƃuᴉɹq puɐ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ                    
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                
+  uǝɥʇ qoWƃuᴉɹq˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʇɐǝqʇɹɐǝH˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)uʍɐds
+
+puǝ
+(puǝ    
+puǝ        
+puǝ            
+puǝ                
+0ƖƐ =< lǝʌǝ˥ʎW ɹo ()ʇsɐℲ‾lǝʌǝ˥‾ɯɹɐℲ‾oʇn∀ ʇou ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[ʎlԀʇɔǝlǝS˙()ʌuǝƃʇǝƃ]sɹǝʎɐlԀ˙ǝɯɐƃ lᴉʇun                        
+
+puǝ                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ˙פ‾                                
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲɹǝdnS˙פ‾ ɹo Olǝʌǝ˥‾ɯɹɐℲ‾oʇn∀˙פ‾ ɹo lǝʌǝ˥‾ɯɹɐℲ‾oʇn∀˙פ‾ ɹo Olǝʌǝ˥‾ɯɹɐℲ‾oʇn∀˙פ‾ ʇou ɹo ɯɹɐℲoʇn∀˙פ‾ ʇou ɟᴉ                            
+,,ʇsɐℲ,, = ǝdʎ┴ʇsɐℲ˙פ‾                            
+puǝ                            
+(ǝɯɐƃ 'ǝslɐɟ ',,Z,, 'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,)ǝɔᴉʌɹǝs:ǝɯɐƃ                            
+(ǝɯɐƃ 'ǝslɐɟ ',,Z,, 'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,)ǝɔᴉʌɹǝs:ǝɯɐƃ                            
+uǝɥʇ 9 => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[ʎlԀʇɔǝlǝS˙()ʌuǝƃʇǝƃ](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                            
+puǝ                            
+(ǝɯɐƃ 'ǝslɐɟ ',,X,, 'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,)ǝɔᴉʌɹǝs:ǝɯɐƃ                            
+(ǝɯɐƃ 'ǝslɐɟ ',,X,, 'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,)ǝɔᴉʌɹǝs:ǝɯɐƃ                            
+uǝɥʇ 9 => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[ʎlԀʇɔǝlǝS˙()ʌuǝƃʇǝƃ](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ                            
+(0ᄅƖ'0ᄅƖ'0ᄅƖ)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[ʎlԀʇɔǝlǝS˙()ʌuǝƃʇǝƃ](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+((ϛ'0'0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[ʎlԀʇɔǝlǝS˙()ʌuǝƃʇǝƃ](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                            
+puǝ                            
+(,,dʌԀǝlqɐuƎ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙pǝlqɐsᴉpdʌԀ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                            
+()ʇᴉɐʍ˙ʞsɐʇ ʇɐǝdǝɹ                        
+uǝɥʇ (,,ʇɐǝɟǝp,,'ʇsǝnb)puᴉɟ˙ƃuᴉɹʇs ɟᴉ                
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ƆʇsǝnQ ɟᴉǝslǝ            
+(,,ɹǝʇunHɹǝʎɐlԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+uǝɥʇ ǝslɐɟ == ǝlqᴉsᴉΛ˙ƆʇsǝnQ ɟᴉ            
+ uǝɥʇ 0ƖƐ => lǝʌǝ˥ʎW puɐ 0ㄥ =< lǝʌǝ˥ʎW ɟᴉǝslǝ        
+puǝ            
+puǝ                
+(uoWǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                    
+ǝslɐɟ = qoWƃuᴉɹq                    
+ǝslǝ                
+puǝ                    
+(uoWǝɯɐɹℲƆ)ʇǝƃɹɐ┴oʇ                        
+0 > ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ɯɹɐℲoʇn∀˙פ‾ ʇou ɹo ʇuǝɹɐԀ˙ʌ ʇou lᴉʇun                        
+puǝ                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ˙פ‾                                
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲɹǝdnS˙פ‾ ɹo Olǝʌǝ˥‾ɯɹɐℲ‾oʇn∀˙פ‾ ɹo lǝʌǝ˥‾ɯɹɐℲ‾oʇn∀˙פ‾ ɹo Olǝʌǝ˥‾ɯɹɐℲ‾oʇn∀˙פ‾ ʇou ɹo ɯɹɐℲoʇn∀˙פ‾ ʇou ɟᴉ                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                            
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+(09'09'09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                            
+,,ʍolS,, = ǝdʎ┴ʇsɐℲ˙פ‾                            
+puǝ                            
+puǝ                                
+(,,ɹǝʇunHɹǝʎɐlԀ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                                    
+uǝɥʇ ǝslɐɟ == ǝlqᴉsᴉΛ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ                                
+uǝɥʇ 0ƖƐ => lǝʌǝ˥ʎW puɐ 0ㄥ =< lǝʌǝ˥ʎW ɟᴉ                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                            
+ǝnɹʇ = qoWƃuᴉɹq                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+()ʇᴉɐʍ˙ʞsɐʇ ʇɐǝdǝɹ                        
+(,,ʇsǝnQuopuɐq∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                        
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ                    
+uǝɥʇ ,,pɐnbS lɐʎoɹ,, == ǝɯɐN˙ʌ ɟᴉ                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ            
+uǝɥʇ 69 => lǝʌǝ˥ʎW puɐ ϛƖ =< lǝʌǝ˥ʎW ɟᴉ        
+puǝ        
+((ㄥㄣ0Ɛㄥ86ƖƖ6ᄅ˙08Ɛ- 'ϛᄅ9ϛƖ09ƖㄣƖ˙ㄥㄣϛϛ 'ƐƖ8ㄥϛㄥ9ㄥƖ9˙ㄣ68ㄥ-)ʍǝu˙ƐɹoʇɔǝΛ',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ 000Ɩ < ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙uoWǝɯɐɹℲƆ) puɐ 69 => lǝʌǝ˥ʎW puɐ ϛƖ =< lǝʌǝ˥ʎW puɐ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ        
+(Ɛϛϛϛㄣㄥ906˙0 'ㄥ0-ǝᄅㄥ68ㄥ00Ɩ˙Ɩ- 'ϛㄣᄅ8ㄥ9Ɩᄅㄣ˙0 '80-ǝᄅϛ8ㄣ9ㄥㄥƐ˙6 'Ɩ '80-ǝƖㄥ66Ɛ6˙ϛ 'ϛㄣᄅ8ㄥ9Ɩᄅㄣ˙0- '80-ǝᄅ6Ɩ69ƖƐㄣ˙Ɩ- 'Ɛϛϛϛㄣㄥ906˙0 '9Ɩ886˙ϛㄣㄣƖ- 'ㄣƐƐᄅㄣ˙ƖƖ9ϛ 'ϛ6899˙6Ɩㄥㄥ-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ        
+ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ƆʇsǝnQ lɐɔol        
+ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = lǝʌǝ˥ʎW lɐɔol        
+()uoᴉʇɔunɟ)llɐɔd    
+[ᄅ](,, ,,'ʇsǝnb)ʇᴉlds˙ƃuᴉɹʇs = ʎlԀʇɔǝlǝS˙()ʌuǝƃʇǝƃ    
+[ᄅ](,, ,,'ʇsǝnb)ʇᴉlds˙ƃuᴉɹʇs = ɹǝʎɐlԀ lɐɔol    
+ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇsǝnb lɐɔol    
+ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = lǝʌǝ˥ɹǝʎɐlԀ lɐɔol    
+()sɹǝʎɐlԀʇǝפ:sɹǝʎɐlԀ˙ǝɯɐƃ = ll∀sɹǝʎɐlԀ lɐɔol    
+()ʇsɐℲ‾lǝʌǝ˥‾ɯɹɐℲ‾oʇn∀ uoᴉʇɔunɟ
+{} = ɯɹɐℲdᴉʞSǝlqɐ┴sɹǝʎɐlԀll∀ lɐɔol
+ɹǝʎɐlԀʞɔɐɥƆ˙פ‾ = ᄅɹǝʎɐlԀʞɔɐɥƆ˙פ‾
+0 = ɹǝʎɐlԀʞɔɐɥƆ˙פ‾
+(puǝ	
+puǝ		
+(puǝ			
+puǝ				
+puǝ					
+puǝ						
+puǝ							
+(ɯɹɐℲpoɥʇǝW * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ								
+(ϛ˙0)ʇᴉɐʍ ([Ɩ]()ʞɔǝɥƆʇsǝnQ '[ㄣ]()ʞɔǝɥƆʇsǝnQ ',,ʇsǝnQʇɹɐʇS,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ								
+(ᄅ˙0)ʇᴉɐʍ								
+ǝslɐɟ = qoWƃuᴉɹq								
+uǝɥʇ Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙[ᄅ]()ʞɔǝɥƆʇsǝnQ) ɟᴉ							
+([ᄅ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ							
+ǝslǝ						
+puǝ							
+puǝ								
+puǝ									
+puǝ										
+((0ᄅ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ											
+ǝslǝ										
+((0'0Ɛ'0ᄅ-)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ											
+uǝɥʇ ϛ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ										
+((0ᄅ-'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ											
+uǝɥʇ ㄣ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ										
+((0'0Ɛ'0ᄅ)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ											
+uǝɥʇ Ɛ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ										
+((0ᄅ-'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ											
+uǝɥʇ ᄅ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉǝslǝ										
+((0ᄅ'0Ɛ'0)ʍǝu˙ǝɯɐɹℲƆ * [Ɩ][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ											
+uǝɥʇ Ɩ == ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀ ɟᴉ										
+uǝɥʇ ʇsɐℲɯɹɐℲoʇn∀˙פ‾ ʇou ɟᴉ									
+ǝslǝ								
+puǝ									
+(ϛ˙0)ʇᴉɐʍ										
+Ɩ + ǝɯɹɐℲƆʇǝS  = ǝɯɹɐℲƆʇǝS										
+puǝ										
+Ɩ = ǝɯɹɐℲƆʇǝS											
+uǝɥʇ [ㄥ]()ʞɔǝɥƆʇsǝnQ# =< ǝɯɹɐℲƆʇǝS ɟᴉǝslǝ										
+Ɩ = ǝɯɹɐℲƆʇǝS											
+uǝɥʇ ,, == ǝɯɹɐℲƆʇǝS ɹo lᴉu == ǝɯɹɐℲƆʇǝS ɟᴉ										
+uǝɥʇ 0ϛ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙[ǝɯɹɐℲƆʇǝS][ㄥ]()ʞɔǝɥƆʇsǝnQ) ɟᴉ									
+(ɯɹɐℲpoɥʇǝW * [ǝɯɹɐℲƆʇǝS][ㄥ]()ʞɔǝɥƆʇsǝnQ)ʇǝƃɹɐ┴oʇ									
+uǝɥʇ ʇsɐℲɯɹɐℲoʇn∀˙פ‾ ʇou puɐ ǝɯɐɹℲƆ‾oʇn∀˙פ‾ ɟᴉ								
+ǝslǝ							
+puǝ								
+puǝ									
+puǝ										
+(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ʇou ɹo ǝslɐɟ == ǝlqᴉsᴉΛ˙ƆʇsǝnQ ɹo 0 => ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ɯɹɐℲoʇn∀˙פ‾ ʇou lᴉʇun											
+puǝ												
+puǝ													
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ˙פ‾														
+uǝɥʇ Olǝʌǝ˥‾ɯɹɐℲ‾oʇn∀˙פ‾ ɹo lǝʌǝ˥‾ɯɹɐℲ‾oʇn∀˙פ‾ ɹo Olǝʌǝ˥‾ɯɹɐℲ‾oʇn∀˙פ‾ ʇou ɹo ɯɹɐℲoʇn∀˙פ‾ ʇou ɟᴉ													
+
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ													
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ													
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ													
+,,ʇsɐℲ,, = ǝdʎ┴ʇsɐℲ˙פ‾													
+ǝnɹʇ = qoWƃuᴉɹq													
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ													
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ													
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ													
+(09'09'09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ													
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ													
+ǝslǝ												
+(,,ʇsǝnQuopuɐq∀,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ													
+uǝɥʇ ([9]()ʞɔǝɥƆʇsǝnQ 'ʇxǝ┴˙ǝlʇᴉ┴˙ǝlʇᴉ┴ʇsǝnQ˙ɹǝuᴉɐʇuoƆ˙ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)puᴉɟ˙ƃuᴉɹʇs ʇou ɟᴉ												
+puǝ												
+Ɩ = ǝɯɹɐℲƆʇǝS													
+uǝɥʇ ǝɯɐɹℲƆ‾oʇn∀˙פ‾ ɟᴉ												
+()ʇᴉɐʍ˙ʞsɐʇ ʇɐǝdǝɹ											
+uǝɥʇ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ puɐ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ ɟᴉ										
+uǝɥʇ [Ɛ]()ʞɔǝɥƆʇsǝnQ == ǝɯɐN˙ʌ ɟᴉ									
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ								
+uǝɥʇ ([Ɛ]()ʞɔǝɥƆʇsǝnQ)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ							
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ƆʇsǝnQ ɟᴉ						
+ǝslǝ					
+puǝ						
+uɹnʇǝɹ							
+()ʇsɐℲ‾lǝʌǝ˥‾ɯɹɐℲ‾oʇn∀							
+uǝɥʇ 00Ɛ => lǝʌǝ˥ʎW puɐ ϛƖ =< lǝʌǝ˥ʎW ɟᴉ						
+uǝɥʇ (00Ɛ => lǝʌǝ˥ʎW puɐ ϛƖ =< lǝʌǝ˥ʎW) puɐ ʇsɐℲɯɹɐℲoʇn∀˙פ‾ ɟᴉ					
+  uǝɥʇ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ				
+()uoᴉʇɔunɟ)llɐɔd			
+ʇsǝnQ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ƆʇsǝnQ lɐɔol			
+ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = lǝʌǝ˥ʎW lɐɔol			
+op ()ʇᴉɐʍ ǝlᴉɥʍ		
+()uoᴉʇɔunɟ)uʍɐds  
+Ɩ = ǝɯɹɐℲƆʇǝS lɐɔol
+	
+(puǝ
+puǝ    
+(Ɛ˙0)ʇᴉɐʍ        
+(ϛ'Ɩ)ɯopuɐɹ˙ɥʇɐɯ = ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀        
+ op ()ʇᴉɐʍ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+Ɩ = ǝɯɐɹℲƆuoW‾ǝdʎ┴ɯopuɐɹʞɔɐʇʇ∀
+
+(puǝ
+ǝnlɐʌ = ʇsɐℲɯɹɐℲoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ'ʇsɐℲɯɹɐℲoʇn∀˙פ‾ ',,00Ɛ-Ɩ ลวเลเดัลม์ราฟ,,)ǝlƃƃo┴:Ɩǝƃɐd
+uǝɥʇ ƖplɹoM ɟᴉ
+
+(puǝ
+puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+(ǝɯɐN˙ʌ)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ ʇou ɹo 0 == ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɹo ʇuǝɹɐԀ˙ʌ ʇou ɹo ɯɹɐℲʇsɐǝɹɐǝN˙פ‾ ʇou lᴉʇun                        
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                            
+                            
+puǝ                            
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:,ɹǝs∩lɐnʇɹᴉΛ, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+uǝɥʇ ʞɔɐʇʇ∀ʇsɐℲ ʇou ɟᴉ                            
+(ɯɹɐℲpoɥʇǝW * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʇǝƃɹɐ┴oʇ                            
+ǝnɹʇ = ʞɔɐʇʇ∀ʇsɐℲ                            
+ǝnɹʇ = qoWƃuᴉɹq                            
+(9Ɩ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(08 '08 '08)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = uoWsoԀ                            
+(uodɐǝMʇɔǝlǝS˙פ‾)uodɐǝMdᴉnbƎ                            
+()ʇᴉɐʍ:ʇɐǝqʇɹɐǝH˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                            
+ʇɐǝdǝɹ                        
+uǝɥʇ 00ϛƖ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ 0 < ɥʇlɐǝH˙pᴉouɐɯnH˙ʌ ɟᴉ                    
+uǝɥʇ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ ǝɯɐN˙ʌ ɟᴉ                
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ            
+()uoᴉʇɔunɟ)llɐɔd        
+uǝɥʇ ɯɹɐℲʇsɐǝɹɐǝN˙sƃuᴉʇʇǝS˙פ‾ ɟᴉ    
+op (Ɩ˙)ʇᴉɐʍ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+ ()sƃuᴉʇʇǝSǝʌɐS    
+ǝnlɐʌ = ɯɹɐℲʇsɐǝɹɐǝN˙sƃuᴉʇʇǝS˙פ‾    
+ǝnlɐʌ = ɯɹɐℲʇsɐǝɹɐǝN˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɯɹɐℲʇsɐǝɹɐǝN˙sƃuᴉʇʇǝS˙פ‾ ',,ๆบอรนอมม์ราฟ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+       
+(puǝ
+(puǝ    
+puǝ        
+()ʇᴉɐʍ˙ʞsɐʇ            
+puǝ            
+puǝ                
+ ({Ɩ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI',,˙˙นางำทดมหโฟซเ,, = ʇxǝ┴',,qnHɹoʇɔǝΛ,, = ǝlʇᴉ┴}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+(0 '00Ɩ '0)ʍǝu˙ǝɯɐɹℲƆ * ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                    
+uǝɥʇ 0ᄅ > ʇuǝɔɹǝԀɥʇlɐǝH ɟᴉ                
+00Ɩ * ɥʇlɐǝHxɐW˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ / ɥʇlɐǝH˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ʇuǝɔɹǝԀɥʇlɐǝH lɐɔol                
+uǝɥʇ (,,pᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ            
+()ʇᴉɐʍ˙ʞsɐʇ op ǝpoWǝɟɐS˙sƃuᴉʇʇǝS˙פ‾ ǝlᴉɥʍ        
+()uoᴉʇɔunɟ)uʍɐds    
+ ()sƃuᴉʇʇǝSǝʌɐS    
+ǝnlɐʌ = ǝpoWǝɟɐS˙sƃuᴉʇʇǝS˙פ‾    
+ǝnlɐʌ = ǝpoWǝɟɐS˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ǝpoWǝɟɐS˙sƃuᴉʇʇǝS˙פ‾ ',,ดมหโฟซเ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+
+(puǝ
+puǝ    
+(ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ʇǝƃɹɐ┴oʇ        
+uǝɥʇ ǝslɐɟ == ǝnlɐʌ ɟᴉ    
+()sƃuᴉʇʇǝSǝʌɐS    
+ǝnlɐʌ = ɯɹɐℲoʇn∀˙sƃuᴉʇʇǝS˙פ‾    
+ǝnlɐʌ = ɯɹɐℲoʇn∀˙פ‾    
+(ǝnlɐʌ)uoᴉʇɔunɟ 'ɯɹɐℲoʇn∀˙sƃuᴉʇʇǝS˙פ‾ ',,ลวเลเม์ราฟ้ตโออ,,)ǝlƃƃo┴:Ɩǝƃɐd
+
+
+(puǝ
+({Ɛ = uoᴉʇɐɹnp',,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = uoɔI',,ว้ลแยอ้รบยีรเกอลดัค,, = ʇxǝ┴',,qnHɹoʇɔǝΛ,, = ǝlʇᴉ┴}',,uoᴉʇɐɔᴉɟᴉʇoNpuǝS,,)ǝɹoƆʇǝS:(,,ᴉnפɹǝʇɹɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(,,ʍᄅ8XXQſㄥㄥ6/ƃƃ˙pɹoɔsᴉp//:sdʇʇɥ,,)pɹɐoqdᴉlɔʇǝs        
+()uoᴉʇɔunɟ',,ด์รอคสิดง้ิล้ีปปอ็ก,,)uoʇʇnq:Ɩǝƃɐd    
+(,,ๆงา่ตราสวา่ขอ่ืพเด์รอคสิดา้ขเ,,)lǝqɐ˥:Ɩǝƃɐd
+ 
+(puǝ
+puǝ    
+()ƖʇuǝᴉlƆǝʇɐpd∩    
+(Ɩ˙)ʇᴉɐʍ op ǝnɹʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+puǝ
+(ƃuᴉԀ˙˙,, : [ƃuᴉԀ],,)ɥsǝɹɟǝɹ:ƖʇuǝᴉlƆ
+()ƃuᴉɹʇSǝnlɐΛʇǝפ:[,,ƃuᴉԀ ɐʇɐp,,]ɯǝʇIsʇɐʇSɹǝʌɹǝS˙ʞɹoʍʇǝN˙(,,sʇɐʇS,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ƃuᴉԀ lɐɔol
+()ƖʇuǝᴉlƆǝʇɐpd∩ uoᴉʇɔunɟ
+(,,ʇuǝᴉlƆ,,)Ɩlǝqɐ˥:Ɩǝƃɐd = ƖʇuǝᴉlƆ
+
+(puǝ
+puǝ    
+()ʇuǝᴉlƆǝʇɐpd∩    
+(Ɩ˙)ʇᴉɐʍ op ǝnɹʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+puǝ
+(sdℲ˙˙,, : [sdℲ],,)ɥsǝɹɟǝɹ:ʇuǝᴉlƆ
+()SԀℲsɔᴉsʎɥԀlɐǝɹʇǝפ:ǝɔɐdsʞɹoʍ = sdℲ lɐɔol
+()ʇuǝᴉlƆǝʇɐpd∩ uoᴉʇɔunɟ
+(,,ʇuǝᴉlƆ,,)Ɩlǝqɐ˥:Ɩǝƃɐd = ʇuǝᴉlƆ
+
+(puǝ
+puǝ    
+(puǝ        
+()ǝɯᴉ┴ǝʇɐpd∩        
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds
+
+puǝ
+(puoɔǝS˙˙,, : spuoɔǝS ,,˙˙ǝʇnuᴉW˙˙,, : sǝʇnuᴉW ,,˙˙ɹnoH˙˙,, : sɹnoH : [ǝɯᴉ┴ǝɯɐפ],,)ʇǝS:ǝɯᴉ┴
+09%((0^09)/ǝɯᴉ┴ǝɯɐפ)ɹoolɟ˙ɥʇɐɯ = puoɔǝS lɐɔol
+09%((Ɩ^09)/ǝɯᴉ┴ǝɯɐפ)ɹoolɟ˙ɥʇɐɯ = ǝʇnuᴉW lɐɔol
+ㄣᄅ%((ᄅ^09)/ǝɯᴉ┴ǝɯɐפ)ɹoolɟ˙ɥʇɐɯ = ɹnoH lɐɔol
+(ϛ˙0+ǝɯᴉ┴ǝɯɐפpǝʇnqᴉɹʇsᴉp˙ǝɔɐdsʞɹoʍ)ɹoolɟ˙ɥʇɐɯ = ǝɯᴉ┴ǝɯɐפ lɐɔol
+()ǝɯᴉ┴ǝʇɐpd∩ uoᴉʇɔunɟ
+(ǝɯɐNʎɐldsᴉp˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ˙˙,, : ǝɯɐuɹǝs∩,,)lǝqɐ˥:Ɩǝƃɐd
+(,,˙˙,,)lǝqɐ˥:Ɩǝƃɐd = ǝɯᴉ┴
+(,,qnH ɹoʇɔǝΛ,,)ɹoʇɐɹǝdǝS:Ɩǝƃɐd
+(,,Ɩ6ㄥƐ90ㄥㄣㄣƖƖ//:pᴉʇǝssɐxqɹ,,',,ɔsᴉW,,)qɐ┴:ʎɹɐɹqᴉ˥ = ᄅƖǝƃɐd lɐɔol    
+(,,9ㄥ6ϛ9ᄅƖƐ09//:pᴉʇǝssɐxqɹ,,',,doɥS,,)qɐ┴:ʎɹɐɹqᴉ˥ = ƖƖǝƃɐd lɐɔol    
+(,,ㄣϛㄣƐƐᄅ8ᄅ08//:pᴉʇǝssɐxqɹ,,',,ǝunsʇᴉʞ,,)qɐ┴:ʎɹɐɹqᴉ˥ = ϛƖǝƃɐd lɐɔol    
+(,,60Ɛ0ᄅϛᄅϛ0ㄥ//:pᴉʇǝssɐxqɹ,,',,ʇuǝʌƎɐǝS,,)qɐ┴:ʎɹɐɹqᴉ˥ = ㄣƖǝƃɐd lɐɔol    
+(,,06ϛᄅ8ㄥ8ϛϛㄥ//:pᴉʇǝssɐxqɹ,,',,ㄣΛǝɔɐɹ,,)qɐ┴:ʎɹɐɹqᴉ˥ = 0Ɩǝƃɐd lɐɔol    
+(,,Ɛㄣᄅㄣ6ϛ86ϛᄅƖ//:pᴉʇǝssɐxqɹ,,',,ǝƃɐɹᴉW,,)qɐ┴:ʎɹɐɹqᴉ˥ = 6ǝƃɐd lɐɔol    
+(,,ϛƖㄥƖϛ0ϛ8ㄣㄥ//:pᴉʇǝssɐxqɹ,,',,ʇɐqɯoƆ,,)qɐ┴:ʎɹɐɹqᴉ˥ = ƐƖǝƃɐd lɐɔol    
+(,,ϛϛ06ㄥƖ08ƖƐƖ//:pᴉʇǝssɐxqɹ,,',,pᴉɐɹ,,)qɐ┴:ʎɹɐɹqᴉ˥ = 8ǝƃɐd lɐɔol    
+(,,9ㄣ9ᄅ880ƐƖ//:pᴉʇǝssɐxqɹ,,',,ʇᴉnɹℲlᴉʌǝp,,)qɐ┴:ʎɹɐɹqᴉ˥ = ㄥǝƃɐd lɐɔol    
+(,,Ɛ0ϛᄅㄣᄅㄥƖㄥƖƖ//:pᴉʇǝssɐxqɹ,,',,ʎɹǝʇsɐW,,)qɐ┴:ʎɹɐɹqᴉ˥ = 9ǝƃɐd lɐɔol    
+(,,0ᄅ6ᄅㄣ866ㄣᄅƖ//:pᴉʇǝssɐxqɹ,,',,ɯǝʇI,,)qɐ┴:ʎɹɐɹqᴉ˥ = ϛǝƃɐd lɐɔol    
+(,,9ㄣ806ƖϛƐ09//:pᴉʇǝssɐxqɹ,,',,ʇɹodǝlǝ┴,,)qɐ┴:ʎɹɐɹqᴉ˥ = ㄣǝƃɐd lɐɔol    
+(,,0ƐƖ0Ɩㄣ0ㄣ0ㄥ//:pᴉʇǝssɐxqɹ,,',,sʇɐʇS,,)qɐ┴:ʎɹɐɹqᴉ˥ = Ɛǝƃɐd lɐɔol    
+(,,9ƐƐϛƐ89ㄣㄣƖƖ//:pᴉʇǝssɐxqɹ,,',,ƃuᴉʇʇǝS,,)qɐ┴:ʎɹɐɹqᴉ˥ = ᄅǝƃɐd lɐɔol    
+(,,0Ɛ60069ㄣㄣƖƖ//:pᴉʇǝssɐxqɹ,,',,lɐɹǝuǝפ,,)qɐ┴:ʎɹɐɹqᴉ˥ = Ɩǝƃɐd lɐɔol    
+;(ƖℲ˙ǝpoƆʎǝʞ˙ɯnuƎ',,,,',,qnH ɹoʇɔǝΛ,,)ʍopuᴉM:ǝʇɐpd∩ = ʎɹɐɹqᴉ˥ lɐɔol    
+puǝ
+qɐʇᴉn uɹnʇǝɹ    
+
+puǝ    
+uᴉɐɯ uɹnʇǝɹ        
+
+puǝ        
+(Ɩ '0 '0Ɩㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝuᴉ˥            
+(0Ɩ '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝuᴉ˥            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ǝuᴉ˥            
+(ϛᄅƖ 'ϛᄅƖ 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝuᴉ˥            
+ǝǝuᴉ˥ = ʇuǝɹɐԀ˙ǝuᴉ˥            
+,,ǝuᴉ˥,, = ǝɯɐN˙ǝuᴉ˥            
+
+(0ᄅ '0 '0ƖƐ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝǝuᴉ˥            
+(0 'ㄥ666666ƖƖ˙0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝǝuᴉ˥            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝǝuᴉ˥            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝǝuᴉ˥            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙ǝǝuᴉ˥            
+,,ǝǝuᴉ˥,, = ǝɯɐN˙ǝǝuᴉ˥            
+
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝuᴉ˥ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝǝuᴉ˥ lɐɔol            
+()ǝuᴉ˥:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+(Ɩ '0 '08 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ƐdǝS            
+(0Ɩ '0 '00Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ƐdǝS            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ƐdǝS            
+(ϛᄅƖ 'ϛᄅƖ 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ƐdǝS            
+ɹoʇɐɹǝdǝS = ʇuǝɹɐԀ˙ƐdǝS            
+,,ƐdǝS,, = ǝɯɐN˙ƐdǝS            
+
+000˙ㄣƖ = ǝzᴉSʇxǝ┴˙ᄅdǝS            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ᄅdǝS            
+ʇxǝʇ = ʇxǝ┴˙ᄅdǝS            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ᄅdǝS            
+(0ᄅ '0 '00Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ᄅdǝS            
+(0 '0 '0ㄣƖ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ᄅdǝS            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ᄅdǝS            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ᄅdǝS            
+ɹoʇɐɹǝdǝS = ʇuǝɹɐԀ˙ᄅdǝS            
+,,ᄅdǝS,, = ǝɯɐN˙ᄅdǝS            
+
+(Ɩ '0 '08 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ƖdǝS            
+(0Ɩ '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ƖdǝS            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ƖdǝS            
+(ϛᄅƖ 'ϛᄅƖ 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ƖdǝS            
+ɹoʇɐɹǝdǝS = ʇuǝɹɐԀ˙ƖdǝS            
+,,ƖdǝS,, = ǝɯɐN˙ƖdǝS            
+
+(0ᄅ '0 '0ƖƐ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ɹoʇɐɹǝdǝS            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ɹoʇɐɹǝdǝS            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ɹoʇɐɹǝdǝS            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙ɹoʇɐɹǝdǝS            
+,,ɹoʇɐɹǝdǝS,, = ǝɯɐN˙ɹoʇɐɹǝdǝS            
+
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ƐdǝS lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ᄅdǝS lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ƖdǝS lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ɹoʇɐɹǝdǝS lɐɔol            
+(Ɩ˙0)ʇᴉɐʍ˙ʞsɐʇ            
+(ʇxǝʇ)ɹoʇɐɹǝdǝS:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+ɔunɟƖlǝqɐ˥ uɹnʇǝɹ            
+
+puǝ            
+ǝƃuɐɥɔoʇ = ʇxǝ┴˙Ɩlǝqɐ˥                
+(ǝƃuɐɥɔoʇ)ɥsǝɹɟǝɹ:ɔunɟƖlǝqɐ˥ uoᴉʇɔunɟ            
+,,Ɩlǝqɐ˥ƃuᴉppɐԀ,, = ǝɯɐN˙Ɩlǝqɐ˥ƃuᴉppɐԀ            
+Ɩlǝqɐ˥ = ʇuǝɹɐԀ˙Ɩlǝqɐ˥ƃuᴉppɐԀ            
+(ϛƖ '0)ʍǝu˙ɯᴉp∩ = ʇɟǝ˥ƃuᴉppɐԀ˙Ɩlǝqɐ˥ƃuᴉppɐԀ            
+
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙plǝqɐ˥            
+,,,, ɹo ʎɐldsᴉp = ʇxǝ┴˙plǝqɐ˥            
+000˙ϛƖ = ǝzᴉSʇxǝ┴˙plǝqɐ˥            
+ ɹoloƆ˙פ‾ = ƐɹoloƆʇxǝ┴˙plǝqɐ˥            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙plǝqɐ˥            
+(0ᄅ '0 '0Ɩㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙plǝqɐ˥            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙plǝqɐ˥            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙plǝqɐ˥            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙plǝqɐ˥            
+,,plǝqɐ˥,, = ǝɯɐN˙plǝqɐ˥            
+
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙Ɩlǝqɐ˥            
+ʇxǝʇ = ʇxǝ┴˙Ɩlǝqɐ˥            
+000˙ϛƖ = ǝzᴉSʇxǝ┴˙Ɩlǝqɐ˥            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙Ɩlǝqɐ˥            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙Ɩlǝqɐ˥            
+(0ᄅ '0 '0Ɩㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙Ɩlǝqɐ˥            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙Ɩlǝqɐ˥            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙Ɩlǝqɐ˥            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙Ɩlǝqɐ˥            
+,,Ɩlǝqɐ˥,, = ǝɯɐN˙Ɩlǝqɐ˥            
+
+{} = ɔunɟƖlǝqɐ˥ lɐɔol            
+(,,ƃuᴉppɐԀI∩,,)ʍǝu˙ǝɔuɐʇsuI = Ɩlǝqɐ˥ƃuᴉppɐԀ lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = Ɩlǝqɐ˥ lɐɔol            
+(ʎɐldsᴉp 'ʇxǝʇ)sᴉp:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+ɔunɟƖlǝqɐ˥ uɹnʇǝɹ            
+
+puǝ            
+ǝƃuɐɥɔoʇ = ʇxǝ┴˙Ɩlǝqɐ˥                
+(ǝƃuɐɥɔoʇ)ɥsǝɹɟǝɹ:ɔunɟƖlǝqɐ˥ uoᴉʇɔunɟ            
+,,Ɩlǝqɐ˥ƃuᴉppɐԀ,, = ǝɯɐN˙Ɩlǝqɐ˥ƃuᴉppɐԀ            
+Ɩlǝqɐ˥ = ʇuǝɹɐԀ˙Ɩlǝqɐ˥ƃuᴉppɐԀ            
+(ϛƖ '0)ʍǝu˙ɯᴉp∩ = ʇɟǝ˥ƃuᴉppɐԀ˙Ɩlǝqɐ˥ƃuᴉppɐԀ            
+
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙Ɩlǝqɐ˥            
+ǝnɹʇ = ʇxǝ┴ɥɔᴉɹ˙Ɩlǝqɐ˥            
+ʇxǝʇ = ʇxǝ┴˙Ɩlǝqɐ˥            
+000˙ϛƖ = ǝzᴉSʇxǝ┴˙Ɩlǝqɐ˥            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙Ɩlǝqɐ˥            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙Ɩlǝqɐ˥            
+(0ᄅ '0 '0Ɩㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙Ɩlǝqɐ˥            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙Ɩlǝqɐ˥            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙Ɩlǝqɐ˥            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙Ɩlǝqɐ˥            
+,,Ɩlǝqɐ˥,, = ǝɯɐN˙Ɩlǝqɐ˥            
+
+{} = ɔunɟƖlǝqɐ˥ lɐɔol            
+(,,ƃuᴉppɐԀI∩,,)ʍǝu˙ǝɔuɐʇsuI = Ɩlǝqɐ˥ƃuᴉppɐԀ lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = Ɩlǝqɐ˥ lɐɔol            
+(ʇxǝʇ)Ɩlǝqɐ˥:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+ɔunɟlǝqɐl uɹnʇǝɹ            
+
+puǝ            
+ʇxǝʇʍǝu = ʇxǝ┴˙lǝqɐ˥                
+(ʇxǝʇʍǝu)ʇǝS:ɔunɟlǝqɐl uoᴉʇɔunɟ            
+
+,,lǝqɐ˥ƃuᴉppɐԀ,, = ǝɯɐN˙lǝqɐ˥ƃuᴉppɐԀ            
+lǝqɐ˥ = ʇuǝɹɐԀ˙lǝqɐ˥ƃuᴉppɐԀ            
+(ϛƖ '0)ʍǝu˙ɯᴉp∩ = ʇɟǝ˥ƃuᴉppɐԀ˙lǝqɐ˥ƃuᴉppɐԀ            
+
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙lǝqɐ˥            
+ʇxǝʇ = ʇxǝ┴˙lǝqɐ˥            
+000˙9Ɩ = ǝzᴉSʇxǝ┴˙lǝqɐ˥            
+(ϛᄅᄅ 'ϛᄅᄅ 'ϛᄅᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙lǝqɐ˥            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙lǝqɐ˥            
+(0ᄅ '0 '0Ɩㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙lǝqɐ˥            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙lǝqɐ˥            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙lǝqɐ˥            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙lǝqɐ˥            
+,,lǝqɐ˥,, = ǝɯɐN˙lǝqɐ˥            
+
+{} = ɔunɟlǝqɐl lɐɔol            
+(,,ƃuᴉppɐԀI∩,,)ʍǝu˙ǝɔuɐʇsuI = lǝqɐ˥ƃuᴉppɐԀ lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = lǝqɐ˥ lɐɔol            
+(ʇxǝʇ)lǝqɐ˥:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+xoqʇxǝ┴lɐǝɹ = ʇuǝɹɐԀ˙ɹǝuɹoƆI∩            
+(Ɛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆI∩            
+
+(puǝ            
+puǝ                
+,,,, = ʇxǝ┴˙xoqʇxǝ┴lɐǝɹ                    
+uǝɥʇ ɹɐǝddɐsᴉp ɟᴉ                
+(ʇxǝ┴˙xoqʇxǝ┴lɐǝɹ)ʞɔɐqllɐɔ                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʇso˥snɔoℲ˙xoqʇxǝ┴lɐǝɹ            
+
+0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴˙xoqʇxǝ┴lɐǝɹ            
+000˙ƖƖ = ǝzᴉSʇxǝ┴˙xoqʇxǝ┴lɐǝɹ            
+(ϛᄅᄅ 'ϛᄅᄅ 'ϛᄅᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙xoqʇxǝ┴lɐǝɹ            
+,,,, = ʇxǝ┴˙xoqʇxǝ┴lɐǝɹ            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙xoqʇxǝ┴lɐǝɹ            
+(ㄣᄅ '0 '00Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙xoqʇxǝ┴lɐǝɹ            
+(ㄣ '0 'ϛㄥᄅ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙xoqʇxǝ┴lɐǝɹ            
+0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙xoqʇxǝ┴lɐǝɹ            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙xoqʇxǝ┴lɐǝɹ            
+xoqʇxǝ┴ = ʇuǝɹɐԀ˙xoqʇxǝ┴lɐǝɹ            
+,,xoqʇxǝ┴lɐǝɹ,, = ǝɯɐN˙xoqʇxǝ┴lɐǝɹ            
+
+000˙ㄣƖ = ǝzᴉSʇxǝ┴˙uʇqʇxʇ            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙uʇqʇxʇ            
+,,,, = ʇxǝ┴˙uʇqʇxʇ            
+suɐSǝɔɹnoS˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙uʇqʇxʇ            
+(6ᄅ '0 'ㄥ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uʇqʇxʇ            
+(Ɩ '0 'Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙uʇqʇxʇ            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙uʇqʇxʇ            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙uʇqʇxʇ            
+xoqʇxǝ┴ = ʇuǝɹɐԀ˙uʇqʇxʇ            
+,,uʇqʇxʇ,, = ǝɯɐN˙uʇqʇxʇ            
+
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙lǝqɐ˥xoqʇxǝ┴            
+0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴˙lǝqɐ˥xoqʇxǝ┴            
+000˙9Ɩ = ǝzᴉSʇxǝ┴˙lǝqɐ˥xoqʇxǝ┴            
+(ϛᄅᄅ 'ϛᄅᄅ 'ϛᄅᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙lǝqɐ˥xoqʇxǝ┴            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙lǝqɐ˥xoqʇxǝ┴            
+(ƖƐ '0 'ϛㄣƖ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙lǝqɐ˥xoqʇxǝ┴            
+ʇxǝʇ = ʇxǝ┴˙lǝqɐ˥xoqʇxǝ┴            
+(0 '0 'ϛƖ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙lǝqɐ˥xoqʇxǝ┴            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙lǝqɐ˥xoqʇxǝ┴            
+ ɹoloƆ˙פ‾= ƐɹoloƆpunoɹƃʞɔɐq˙lǝqɐ˥xoqʇxǝ┴            
+xoqʇxǝ┴ = ʇuǝɹɐԀ˙lǝqɐ˥xoqʇxǝ┴            
+,,lǝqɐ˥xoqʇxǝ┴,, = ǝɯɐN˙lǝqɐ˥xoqʇxǝ┴            
+
+xxoqʇxǝ┴ = ʇuǝɹɐԀ˙ɹǝuɹoƆxxoqʇxǝ┴            
+,,ɹǝuɹoƆxxoqʇxǝ┴,, = ǝɯɐN˙ɹǝuɹoƆxxoqʇxǝ┴            
+(Ɛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆxxoqʇxǝ┴            
+
+(6ᄅ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙xxoqʇxǝ┴            
+(Ɩ '0 'Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙xxoqʇxǝ┴            
+(ϛㄣ 'ϛㄣ 'ϛㄣ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙xxoqʇxǝ┴            
+xoqʇxǝ┴ = ʇuǝɹɐԀ˙xxoqʇxǝ┴            
+,,xxoqʇxǝ┴,, = ǝɯɐN˙xxoqʇxǝ┴            
+
+xoqʇxǝ┴ = ʇuǝɹɐԀ˙ɹǝuɹoƆxoqʇxǝ┴            
+,,ɹǝuɹoƆxoqʇxǝ┴,, = ǝɯɐN˙ɹǝuɹoƆxoqʇxǝ┴            
+(ϛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆxoqʇxǝ┴            
+
+(ƖƐ '0 'ㄥ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙xoqʇxǝ┴            
+0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙xoqʇxǝ┴            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙xoqʇxǝ┴            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙xoqʇxǝ┴            
+,,xoqʇxǝ┴,, = ǝɯɐN˙xoqʇxǝ┴            
+
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆI∩ lɐɔol            
+(,,xoqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = xoqʇxǝ┴lɐǝɹ lɐɔol            
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = uʇqʇxʇ lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = lǝqɐ˥xoqʇxǝ┴ lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆxxoqʇxǝ┴ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = xxoqʇxǝ┴ lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆxoqʇxǝ┴ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = xoqʇxǝ┴ lɐɔol            
+(ʞɔɐqllɐɔ 'ɹɐǝddɐsᴉp 'ʇxǝʇ)xoqʇxǝ┴:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+ɔunɟƖlǝqɐ˥ uɹnʇǝɹ            
+
+puǝ            
+ǝƃuɐɥɔoʇ = ʇxǝ┴˙Ɩlǝqɐ˥                
+(ǝƃuɐɥɔoʇ)ɥsǝɹɟǝɹ:ɔunɟƖlǝqɐ˥ uoᴉʇɔunɟ            
+,,Ɩlǝqɐ˥ƃuᴉppɐԀ,, = ǝɯɐN˙Ɩlǝqɐ˥ƃuᴉppɐԀ            
+Ɩlǝqɐ˥ = ʇuǝɹɐԀ˙Ɩlǝqɐ˥ƃuᴉppɐԀ            
+(ϛƖ '0)ʍǝu˙ɯᴉp∩ = ʇɟǝ˥ƃuᴉppɐԀ˙Ɩlǝqɐ˥ƃuᴉppɐԀ            
+
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙Ɩlǝqɐ˥            
+ʇxǝʇ = ʇxǝ┴˙Ɩlǝqɐ˥            
+000˙ϛƖ = ǝzᴉSʇxǝ┴˙Ɩlǝqɐ˥            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙Ɩlǝqɐ˥            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙Ɩlǝqɐ˥            
+(0ᄅ '0 '0Ɩㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙Ɩlǝqɐ˥            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙Ɩlǝqɐ˥            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙Ɩlǝqɐ˥            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙Ɩlǝqɐ˥            
+,,Ɩlǝqɐ˥,, = ǝɯɐN˙Ɩlǝqɐ˥            
+
+{} = ɔunɟƖlǝqɐ˥ lɐɔol            
+(,,ƃuᴉppɐԀI∩,,)ʍǝu˙ǝɔuɐʇsuI = Ɩlǝqɐ˥ƃuᴉppɐԀ lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = Ɩlǝqɐ˥ lɐɔol            
+(ʇxǝʇ)Ɩlǝqɐ˥:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+ɔunɟlǝqɐl uɹnʇǝɹ            
+
+puǝ            
+ʇxǝʇʍǝu = ʇxǝ┴˙lǝqɐ˥                
+(ʇxǝʇʍǝu)ʇǝS:ɔunɟlǝqɐl uoᴉʇɔunɟ            
+
+,,lǝqɐ˥ƃuᴉppɐԀ,, = ǝɯɐN˙lǝqɐ˥ƃuᴉppɐԀ            
+lǝqɐ˥ = ʇuǝɹɐԀ˙lǝqɐ˥ƃuᴉppɐԀ            
+(ϛƖ '0)ʍǝu˙ɯᴉp∩ = ʇɟǝ˥ƃuᴉppɐԀ˙lǝqɐ˥ƃuᴉppɐԀ            
+
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙lǝqɐ˥            
+ʇxǝʇ = ʇxǝ┴˙lǝqɐ˥            
+000˙9Ɩ = ǝzᴉSʇxǝ┴˙lǝqɐ˥            
+(ϛᄅᄅ 'ϛᄅᄅ 'ϛᄅᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙lǝqɐ˥            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙lǝqɐ˥            
+(0ᄅ '0 '0Ɩㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙lǝqɐ˥            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙lǝqɐ˥            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙lǝqɐ˥            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙lǝqɐ˥            
+,,lǝqɐ˥,, = ǝɯɐN˙lǝqɐ˥            
+
+{} = ɔunɟlǝqɐl lɐɔol            
+(,,ƃuᴉppɐԀI∩,,)ʍǝu˙ǝɔuɐʇsuI = lǝqɐ˥ƃuᴉppɐԀ lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = lǝqɐ˥ lɐɔol            
+(ʇxǝʇ)lǝqɐ˥:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+xoqʇxǝ┴lɐǝɹ = ʇuǝɹɐԀ˙ɹǝuɹoƆI∩            
+(ϛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆI∩            
+
+(puǝ            
+puǝ                
+,,,, = ʇxǝ┴˙xoqʇxǝ┴lɐǝɹ                    
+uǝɥʇ ɹɐǝddɐsᴉp ɟᴉ                
+(ʇxǝ┴˙xoqʇxǝ┴lɐǝɹ)ʞɔɐqllɐɔ                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʇso˥snɔoℲ˙xoqʇxǝ┴lɐǝɹ            
+
+0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴˙xoqʇxǝ┴lɐǝɹ            
+000˙ƖƖ = ǝzᴉSʇxǝ┴˙xoqʇxǝ┴lɐǝɹ            
+(ϛᄅᄅ 'ϛᄅᄅ 'ϛᄅᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙xoqʇxǝ┴lɐǝɹ            
+,,,, = ʇxǝ┴˙xoqʇxǝ┴lɐǝɹ            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙xoqʇxǝ┴lɐǝɹ            
+(ㄣᄅ '0 '00Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙xoqʇxǝ┴lɐǝɹ            
+(ㄣ '0 'ϛㄥᄅ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙xoqʇxǝ┴lɐǝɹ            
+0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙xoqʇxǝ┴lɐǝɹ            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙xoqʇxǝ┴lɐǝɹ            
+xoqʇxǝ┴ = ʇuǝɹɐԀ˙xoqʇxǝ┴lɐǝɹ            
+,,xoqʇxǝ┴lɐǝɹ,, = ǝɯɐN˙xoqʇxǝ┴lɐǝɹ            
+
+000˙ㄣƖ = ǝzᴉSʇxǝ┴˙uʇqʇxʇ            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙uʇqʇxʇ            
+,,,, = ʇxǝ┴˙uʇqʇxʇ            
+suɐSǝɔɹnoS˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙uʇqʇxʇ            
+(6ᄅ '0 'ㄥ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uʇqʇxʇ            
+(Ɩ '0 'Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙uʇqʇxʇ            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙uʇqʇxʇ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙uʇqʇxʇ            
+xoqʇxǝ┴ = ʇuǝɹɐԀ˙uʇqʇxʇ            
+,,uʇqʇxʇ,, = ǝɯɐN˙uʇqʇxʇ            
+
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙lǝqɐ˥xoqʇxǝ┴            
+0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴˙lǝqɐ˥xoqʇxǝ┴            
+000˙9Ɩ = ǝzᴉSʇxǝ┴˙lǝqɐ˥xoqʇxǝ┴            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙lǝqɐ˥xoqʇxǝ┴            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙lǝqɐ˥xoqʇxǝ┴            
+(ƖƐ '0 'ϛㄣƖ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙lǝqɐ˥xoqʇxǝ┴            
+ʇxǝʇ = ʇxǝ┴˙lǝqɐ˥xoqʇxǝ┴            
+(0 '0 'ϛƖ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙lǝqɐ˥xoqʇxǝ┴            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙lǝqɐ˥xoqʇxǝ┴            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙lǝqɐ˥xoqʇxǝ┴            
+xoqʇxǝ┴ = ʇuǝɹɐԀ˙lǝqɐ˥xoqʇxǝ┴            
+,,lǝqɐ˥xoqʇxǝ┴,, = ǝɯɐN˙lǝqɐ˥xoqʇxǝ┴            
+
+xxoqʇxǝ┴ = ʇuǝɹɐԀ˙ɹǝuɹoƆxxoqʇxǝ┴            
+,,ɹǝuɹoƆxxoqʇxǝ┴,, = ǝɯɐN˙ɹǝuɹoƆxxoqʇxǝ┴            
+(ϛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆxxoqʇxǝ┴            
+
+(6ᄅ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙xxoqʇxǝ┴            
+(Ɩ '0 'Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙xxoqʇxǝ┴            
+(ϛㄣ 'ϛㄣ 'ϛㄣ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙xxoqʇxǝ┴            
+xoqʇxǝ┴ = ʇuǝɹɐԀ˙xxoqʇxǝ┴            
+,,xxoqʇxǝ┴,, = ǝɯɐN˙xxoqʇxǝ┴            
+
+xoqʇxǝ┴ = ʇuǝɹɐԀ˙ɹǝuɹoƆxoqʇxǝ┴            
+,,ɹǝuɹoƆxoqʇxǝ┴,, = ǝɯɐN˙ɹǝuɹoƆxoqʇxǝ┴            
+(ϛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆxoqʇxǝ┴            
+
+(ƖƐ '0 'ㄥ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙xoqʇxǝ┴            
+0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙xoqʇxǝ┴            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙xoqʇxǝ┴            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙xoqʇxǝ┴            
+,,xoqʇxǝ┴,, = ǝɯɐN˙xoqʇxǝ┴            
+
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆI∩ lɐɔol            
+(,,xoqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = xoqʇxǝ┴lɐǝɹ lɐɔol            
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = uʇqʇxʇ lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = lǝqɐ˥xoqʇxǝ┴ lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆxxoqʇxǝ┴ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = xxoqʇxǝ┴ lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆxoqʇxǝ┴ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = xoqʇxǝ┴ lɐɔol            
+(ʞɔɐqllɐɔ 'ɹɐǝddɐsᴉp 'ʇxǝʇ)xoqʇxǝ┴:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+ɔunɟɹǝpᴉls uɹnʇǝɹ            
+(puǝ            
+puǝ                
+(puǝ                    
+(ǝnlɐΛ)ʞɔɐqllɐɔ                        
+()uoᴉʇɔunɟ)llɐɔd                    
+(ǝnɹʇ 'ᄅƖ˙0 ',,ɹɐǝuᴉ˥,, ',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ᄅ‾ǝlʇᴉ┴                    
+(ǝnɹʇ                        
+'80˙0 ',,ɹɐǝuᴉ˥,, ',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ʇunoƆɹǝpᴉlS                    
+uᴉɯ = ǝnlɐΛ                    
+uᴉɯ = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                    
+uᴉɯ = ʇxǝ┴˙xoqɹǝpᴉlS                    
+uǝɥʇ ,,,, == ʇxǝ┴˙xoqɹǝpᴉlS ɟᴉ                
+puǝ                
+(ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ = ǝnlɐΛ                    
+ǝslǝ                
+(puǝ                    
+(ǝnlɐΛ)ʞɔɐqllɐɔ                        
+()uoᴉʇɔunɟ)llɐɔd                    
+(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ)))ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ᄅ‾ǝlʇᴉ┴                    
+(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ)))ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ʇunoƆɹǝpᴉlS                    
+uᴉɯ = ǝnlɐΛ                    
+uᴉɯ = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                    
+uᴉɯ = ʇxǝ┴˙xoqɹǝpᴉlS                    
+uǝɥʇ uᴉɯ > (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ ɟᴉ                
+puǝ                
+(ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ = ǝnlɐΛ                    
+ǝslǝ                
+(puǝ                    
+(ǝnlɐΛ)ʞɔɐqllɐɔ                        
+()uoᴉʇɔunɟ)llɐɔd                    
+(ǝnɹʇ                        
+'ᄅƖ˙0 ',,ɹɐǝuᴉ˥,, ',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo xɐɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ᄅ‾ǝlʇᴉ┴                    
+(ǝnɹʇ '80˙0                        
+',,ɹɐǝuᴉ˥,, ',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo xɐɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ʇunoƆɹǝpᴉlS                    
+xɐɯ = ǝnlɐΛ                    
+xɐɯ = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                    
+xɐɯ = ʇxǝ┴˙xoqɹǝpᴉlS                    
+uǝɥʇ xɐɯ < (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ ɟᴉ                
+puǝ                
+puǝ                    
+(ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ = ǝnlɐΛ                        
+ǝslǝ                    
+(puǝ                        
+(ǝnlɐΛ)ʞɔɐqllɐɔ                            
+()uoᴉʇɔunɟ)llɐɔd                        
+(ǝnɹʇ                            
+'ᄅƖ˙0 ',,ɹɐǝuᴉ˥,, ',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ᄅ‾ǝlʇᴉ┴                        
+(ǝnɹʇ '80˙0                            
+',,ɹɐǝuᴉ˥,, ',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ʇunoƆɹǝpᴉlS                        
+uᴉɯ = ǝnlɐΛ                        
+uᴉɯ = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                        
+uᴉɯ = ʇxǝ┴˙xoqɹǝpᴉlS                        
+uǝɥʇ uᴉɯ > (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ ɟᴉ                    
+puǝ                    
+(ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ = ǝnlɐΛ                        
+ǝslǝ                    
+(puǝ                        
+(ǝnlɐΛ)ʞɔɐqllɐɔ                            
+()uoᴉʇɔunɟ)llɐɔd                        
+(ǝnɹʇ 'ᄅƖ˙0                            
+',,ɹɐǝuᴉ˥,, ',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo xɐɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ᄅ‾ǝlʇᴉ┴                        
+(ǝnɹʇ '80˙0 ',,ɹɐǝuᴉ˥,,                            
+',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo xɐɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ʇunoƆɹǝpᴉlS                        
+xɐɯ = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                        
+xɐɯ = ʇxǝ┴˙xoqɹǝpᴉlS                        
+xɐɯ = ǝnlɐΛ                        
+uǝɥʇ (xɐɯ)ɹǝqɯnuoʇ < (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ ɟᴉ                    
+puǝ                    
+(puǝ                        
+(ǝnlɐΛ)ʞɔɐqllɐɔ                            
+()uoᴉʇɔunɟ)llɐɔd                        
+(ǝnɹʇ                            
+'ᄅƖ˙0 ',,ɹɐǝuᴉ˥,, ',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ᄅ‾ǝlʇᴉ┴                        
+(ǝnɹʇ '80˙0                            
+',,ɹɐǝuᴉ˥,, ',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ʇunoƆɹǝpᴉlS                        
+uᴉɯ = ǝnlɐΛ                        
+uᴉɯ = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                        
+uᴉɯ = ʇxǝ┴˙xoqɹǝpᴉlS                        
+uǝɥʇ ,,,, == ʇxǝ┴˙xoqɹǝpᴉlS ɟᴉ                    
+uǝɥʇ Ԁɹǝʇuǝ ʇou ɟᴉ                
+(Ԁɹǝʇuǝ)uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʇso˥snɔoℲ˙xoqɹǝpᴉlS            
+
+(puǝ            
+(ʇǝs)ʇɔǝuuoƆ:pǝƃuɐɥƆ˙xoqɹǝpᴉlS                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝsnɔoℲ˙xoqɹǝpᴉlS            
+
+puǝ            
+puǝ                
+puǝ                    
+ǝnlɐΛ = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                        
+ǝnlɐΛ ɹo ,,,, = ʇxǝ┴˙xoqɹǝpᴉlS                        
+ǝslǝ                    
+puǝ                        
+(puǝ                            
+(ǝnlɐΛ)ʞɔɐqllɐɔ                                
+()uoᴉʇɔunɟ)llɐɔd                            
+(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo uᴉɯ)))ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ᄅ‾ǝlʇᴉ┴                            
+(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo uᴉɯ)))ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ʇunoƆɹǝpᴉlS                            
+uᴉɯ = ᄅ‾ǝlʇᴉ┴                            
+uᴉɯ = ǝnlɐΛ                            
+uǝɥʇ uᴉɯ > (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ ɟᴉ                        
+puǝ                        
+(puǝ                            
+(ǝnlɐΛ)ʞɔɐqllɐɔ                                
+()uoᴉʇɔunɟ)llɐɔd                            
+(ǝnɹʇ 'ᄅƖ˙0 ',,ɹɐǝuᴉ˥,,                                
+',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ)))ʍǝu˙ᄅɯᴉp∩                                
+)uoᴉʇᴉsoԀuǝǝʍ┴:ᄅ‾ǝlʇᴉ┴                            
+(ǝnɹʇ '80˙0 ',,ɹɐǝuᴉ˥,,                                
+',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ)))ʍǝu˙ᄅɯᴉp∩                                
+)uoᴉʇᴉsoԀuǝǝʍ┴:ʇunoƆɹǝpᴉlS                            
+ʇxǝ┴˙xoqɹǝpᴉlS = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                            
+ʇxǝ┴˙xoqɹǝpᴉlS = ǝnlɐΛ                            
+uǝɥʇ uᴉɯ =< (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ ɟᴉ                        
+puǝ                        
+(puǝ                            
+(ǝnlɐΛ)ʞɔɐqllɐɔ                                
+()uoᴉʇɔunɟ)llɐɔd                            
+(ǝnɹʇ 'ᄅƖ˙0 ',,ɹɐǝuᴉ˥,,                                
+',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo xɐɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ᄅ‾ǝlʇᴉ┴                            
+(ǝnɹʇ '80˙0 ',,ɹɐǝuᴉ˥,,                                
+',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo xɐɯ)))ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ʇunoƆɹǝpᴉlS                            
+xɐɯ = ǝnlɐΛ                            
+xɐɯ = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                            
+xɐɯ = ʇxǝ┴˙xoqɹǝpᴉlS                            
+uǝɥʇ xɐɯ < (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ ɟᴉ                        
+puǝ                        
+(puǝ                            
+(ǝnlɐΛ)ʞɔɐqllɐɔ                                
+()uoᴉʇɔunɟ)llɐɔd                            
+(ǝnɹʇ 'ᄅƖ˙0 ',,ɹɐǝuᴉ˥,,                                
+',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ)))ʍǝu˙ᄅɯᴉp∩                                
+)uoᴉʇᴉsoԀuǝǝʍ┴:ᄅ‾ǝlʇᴉ┴                            
+(ǝnɹʇ '80˙0 ',,ɹɐǝuᴉ˥,,                                
+',,ʇnOuI,, '(0 '0 '0 '(uᴉɯ - xɐɯ) / (uᴉɯ - (uᴉɯ ɹo (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ)))ʍǝu˙ᄅɯᴉp∩                                
+)uoᴉʇᴉsoԀuǝǝʍ┴:ʇunoƆɹǝpᴉlS                            
+ʇxǝ┴˙xoqɹǝpᴉlS = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                            
+ʇxǝ┴˙xoqɹǝpᴉlS = ǝnlɐΛ                            
+uǝɥʇ xɐɯ => (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ ɟᴉ                        
+uǝɥʇ (ʇxǝ┴˙xoqɹǝpᴉlS)ɹǝqɯnuoʇ ɟᴉ                    
+uǝɥʇ ,,ʇxǝ┴,, == ʎʇɹǝdoɹd ɟᴉ                
+(ʎʇɹǝdoɹd)ʇǝs uoᴉʇɔunɟ            
+
+(puǝ            
+puǝ                
+(ʇnduᴉ)ǝpᴉls                    
+uǝɥʇ ƃuᴉƃƃɐɹp puɐ ʇnduIuoʇʇnqɹǝpᴉlS == ʇnduᴉ ɟᴉ                
+(ʇnduᴉ)uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝƃuɐɥƆʇnduI˙ǝɔᴉʌɹǝSʇnduIɹǝs∩            
+(puǝ            
+puǝ                
+()ʎɐlԀ:                        
+({ ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ } '(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '80˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ǝʞoɹʇSɹǝpᴉlS)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴˙ǝɯɐƃ                    
+()ʎɐlԀ:({ ㄥ˙0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq }                        
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '80˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ʇnduIɹǝpᴉlS)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴˙ǝɯɐƃ                    
+()ʎɐlԀ:({ ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴ }                        
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '80˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'xoqɹǝpᴉlS)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴˙ǝɯɐƃ                    
+()ʎɐlԀ:({                        
+(8Ɩ '0 '8Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS                            
+'000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq                            
+'000˙8 = ǝzᴉSʇxǝ┴                            
+'(0 '0)ʍǝu˙ᄅɹoʇɔǝΛ = ʇuᴉoԀɹoɥɔu∀                            
+}                        
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ᄅƖ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ᄅ‾ǝlʇᴉ┴)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴˙ǝɯɐƃ                    
+()ʎɐlԀ:({ (8Ɩ '0 '8Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS 'Ɛ˙0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq }                        
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '80˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ʇunoƆɹǝpᴉlS)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴˙ǝɯɐƃ                    
+ʇnduᴉ = ʇnduIuoʇʇnqɹǝpᴉlS                    
+ǝslɐɟ = ƃuᴉƃƃɐɹp                    
+uǝɥʇ ɥɔno┴˙ǝdʎ┴ʇnduIɹǝs∩˙ɯnuƎ == ǝdʎ┴ʇnduIɹǝs∩˙ʇnduᴉ ɹo ʇuǝɯǝʌoWǝsnoW˙ǝdʎ┴ʇnduIɹǝs∩˙ɯnuƎ == ǝdʎ┴ʇnduIɹǝs∩˙ʇnduᴉ ɟᴉ                
+(ʇnduᴉ)uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝpuƎʇnduI˙uoʇʇnqɹǝpᴉlS            
+(puǝ            
+(puǝ                
+puǝ                    
+ǝslɐɟ = ƃuᴉƃƃɐɹp                        
+uǝɥʇ puƎ˙ǝʇɐʇSʇnduIɹǝs∩˙ɯnuƎ == ǝdʎ┴ʇnduIɹǝs∩˙ʇnduᴉ ɟᴉ                    
+(ʇnduᴉ)uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝƃuɐɥƆ˙ʇnduᴉ                
+puǝ                
+()ʎɐlԀ:                        
+({ 0 = ʎɔuǝɹɐdsuɐɹ┴ } '(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '80˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ǝʞoɹʇSɹǝpᴉlS)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴˙ǝɯɐƃ                    
+()ʎɐlԀ:({ ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq }                        
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '80˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ʇnduIɹǝpᴉlS)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴˙ǝɯɐƃ                    
+()ʎɐlԀ:                        
+({ 0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴ }                        
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '80˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'xoqɹǝpᴉlS)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴˙ǝɯɐƃ                    
+()ʎɐlԀ:({                        
+(ϛᄅ '0 'ϛᄅ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS                            
+'0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq                            
+'000˙ƐƖ = ǝzᴉSʇxǝ┴                            
+'(8˙0 'ᄅᄅ˙0)ʍǝu˙ᄅɹoʇɔǝΛ = ʇuᴉoԀɹoɥɔu∀                            
+}                        
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ᄅƖ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ᄅ‾ǝlʇᴉ┴)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴˙ǝɯɐƃ                    
+()ʎɐlԀ:({ (ㄣƖ '0 'ㄣƖ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS '0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq }                        
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '80˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ʇunoƆɹǝpᴉlS)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴˙ǝɯɐƃ                    
+X˙uoᴉʇᴉsoԀǝʇnlosq∀˙uoʇʇnqɹǝpᴉlS = uᴉǝpᴉls                    
+X˙uoᴉʇᴉsoԀ˙ʇnduᴉ = ʇɹɐʇSuoʇʇnqɹǝpᴉlS                    
+ʇnduᴉ = ʇnduIuoʇʇnqɹǝpᴉlS                    
+ǝnɹʇ = ƃuᴉƃƃɐɹp                    
+uǝɥʇ ɥɔno┴˙ǝdʎ┴ʇnduIɹǝs∩˙ɯnuƎ == ǝdʎ┴ʇnduIɹǝs∩˙ʇnduᴉ ɹo ƖuoʇʇnqǝsnoW˙ǝdʎ┴ʇnduIɹǝs∩˙ɯnuƎ == ǝdʎ┴ʇnduIɹǝs∩˙ʇnduᴉ ɟᴉ                
+(ʇnduᴉ)uoᴉʇɔunɟ)ʇɔǝuuoƆ:uɐƃǝqʇnduI˙uoʇʇnqɹǝpᴉlS            
+
+puǝ            
+(uᴉǝpᴉls 'ǝnlɐΛ 'ʞɔɐqllɐɔ)llɐɔd                
+(ǝnlɐΛ)ƃuᴉɹʇsoʇ = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴                
+(ǝnlɐΛ)ƃuᴉɹʇsoʇ = ʇxǝ┴˙xoqɹǝpᴉlS                
+(uᴉɯ + (uᴉɯ - xɐɯ) * (xɐɯ / (xɐɯ * ǝlɐɔS˙X˙uᴉǝpᴉls)))ɹoolɟ˙ɥʇɐɯ = ǝnlɐΛ lɐɔol                
+(ǝnɹʇ 'ᄅƖ˙0 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'uᴉǝpᴉls)uoᴉʇᴉsoԀuǝǝʍ┴:ᄅ‾ǝlʇᴉ┴                
+(ǝnɹʇ '80˙0 'ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'uᴉǝpᴉls)uoᴉʇᴉsoԀuǝǝʍ┴:ʇunoƆɹǝpᴉlS                
+(0 '0                    
+'0                    
+'(Ɩ '0 'X˙ǝzᴉSǝʇnlosq∀˙uoʇʇnqɹǝpᴉlS / (X˙uoᴉʇᴉsoԀǝʇnlosq∀˙uoʇʇnqɹǝpᴉlS - X˙uoᴉʇᴉsoԀ˙ʇnduᴉ))dɯɐlɔ˙ɥʇɐɯ                    
+)ʍǝu˙ᄅɯᴉp∩ = uᴉǝpᴉls lɐɔol                
+(ʇnduᴉ)ǝpᴉls uoᴉʇɔunɟ lɐɔol            
+
+uoʇʇnqɹǝpᴉlS = ǝpᴉls lɐɔol            
+ʇnduIuoʇʇnqɹǝpᴉlS lɐɔol            
+ʇɹɐʇSuoʇʇnqɹǝpᴉlS lɐɔol            
+ƃuᴉƃƃɐɹp lɐɔol            
+-- ʇdᴉɹɔS ɹǝpᴉlS --            
+
+(ᄅ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙Ɛ‾ɹǝuɹoƆI∩            
+ǝɯɐɹℲxoq = ʇuǝɹɐԀ˙Ɛ‾ɹǝuɹoƆI∩            
+
+ǝnɹʇ = ǝlqɐʇᴉpƎʇxǝ┴˙xoqɹǝpᴉlS            
+ɹǝʇuǝƆ˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙xoqɹǝpᴉlS            
+0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴˙xoqɹǝpᴉlS            
+000˙0Ɩ = ǝzᴉSʇxǝ┴˙xoqɹǝpᴉlS            
+(00ᄅ '00ᄅ '00ᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙xoqɹǝpᴉlS            
+(0 ɹo (uᴉɯ + (uᴉɯ - xɐɯ) * (xɐɯ / ʇɹɐʇs))ɹoolɟ˙ɥʇɐɯ puɐ ʇɹɐʇs)ƃuᴉɹʇsoʇ = ʇxǝ┴˙xoqɹǝpᴉlS            
+ǝpoƆ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙xoqɹǝpᴉlS            
+ǝslɐɟ = snɔoℲuOʇxǝ┴ɹɐǝlƆ˙xoqɹǝpᴉlS            
+(ϛƖ '0 '0ϛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙xoqɹǝpᴉlS            
+(ϛ9˙Ɩ '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙xoqɹǝpᴉlS            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙xoqɹǝpᴉlS            
+(0 '0 '00ᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙xoqɹǝpᴉlS            
+ǝɯɐɹℲxoq = ʇuǝɹɐԀ˙xoqɹǝpᴉlS            
+,,xoqɹǝpᴉlS,, = ǝɯɐN˙xoqɹǝpᴉlS            
+
+(8 '0 'ƐᄅƐ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝɯɐɹℲxoq            
+(ϛƖ '0 '0ϛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐɹℲxoq            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐɹℲxoq            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝɯɐɹℲxoq            
+ᄅ‾ǝɯɐɹℲɹǝpᴉlS = ʇuǝɹɐԀ˙ǝɯɐɹℲxoq            
+,,ǝɯɐɹℲxoq,, = ǝɯɐN˙ǝɯɐɹℲxoq            
+
+ǝnɹʇ = ǝlqɐʌᴉɥɔɹ∀˙ǝʞoɹʇSɹǝpᴉlS            
+ǝnɹʇ = pǝlqɐuƎ˙ǝʞoɹʇSɹǝpᴉlS            
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴˙ǝʞoɹʇSɹǝpᴉlS            
+Ɩ = ssǝuʞɔᴉɥ┴˙ǝʞoɹʇSɹǝpᴉlS            
+punoɹ˙ǝpoWuᴉoſǝuᴉ˥˙ɯnuƎ = ǝpoWuᴉoſǝuᴉ˥˙ǝʞoɹʇSɹǝpᴉlS            
+ ɹoloƆ˙פ‾ = ɹoloƆ˙ǝʞoɹʇSɹǝpᴉlS            
+ɹǝpɹoq˙ǝpoWǝʞoɹʇSʎldd∀˙ɯnuƎ = ǝpoWǝʞoɹʇSʎldd∀˙ǝʞoɹʇSɹǝpᴉlS            
+ǝɯɐɹℲxoq = ʇuǝɹɐԀ˙ǝʞoɹʇSɹǝpᴉlS            
+,,ǝʞoɹʇSɹǝpᴉlS,, = ǝɯɐN˙ǝʞoɹʇSɹǝpᴉlS            
+
+ʇunoƆɹǝpᴉlS = ʇuǝɹɐԀ˙ɹǝuɹoƆɹǝpᴉlS            
+(00000Ɩ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆɹǝpᴉlS            
+
+(00000Ɩ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ᄅ‾ɹǝuɹoƆI∩            
+ᄅ‾ǝlʇᴉ┴ = ʇuǝɹɐԀ˙ᄅ‾ɹǝuɹoƆI∩            
+
+ɹǝʇuǝƆ˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ᄅ‾ǝlʇᴉ┴            
+000˙8 = ǝzᴉSʇxǝ┴˙ᄅ‾ǝlʇᴉ┴            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ᄅ‾ǝlʇᴉ┴            
+(0 ɹo (uᴉɯ + (uᴉɯ - xɐɯ) * (xɐɯ / ʇɹɐʇs))ɹoolɟ˙ɥʇɐɯ puɐ ʇɹɐʇs)ƃuᴉɹʇsoʇ = ʇxǝ┴˙ᄅ‾ǝlʇᴉ┴            
+ploqɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ᄅ‾ǝlʇᴉ┴            
+(8Ɩ '0 '8Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ᄅ‾ǝlʇᴉ┴            
+(0 '0 'ʇɹɐʇs '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ᄅ‾ǝlʇᴉ┴            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ᄅ‾ǝlʇᴉ┴            
+ǝslɐɟ = ɹoloƆuoʇʇnqoʇn∀˙ᄅ‾ǝlʇᴉ┴            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙ᄅ‾ǝlʇᴉ┴            
+(0 '0)ʍǝu˙ᄅɹoʇɔǝΛ = ʇuᴉoԀɹoɥɔu∀˙ᄅ‾ǝlʇᴉ┴            
+uoʇʇnqɹǝpᴉlS = ʇuǝɹɐԀ˙ᄅ‾ǝlʇᴉ┴            
+,,ᄅ‾ǝlʇᴉ┴,, = ǝɯɐN˙ᄅ‾ǝlʇᴉ┴            
+
+(8Ɩ '0 '8Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ʇunoƆɹǝpᴉlS            
+(0 '0 'ʇɹɐʇs '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ʇunoƆɹǝpᴉlS            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ʇunoƆɹǝpᴉlS            
+Ɛ˙0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ʇunoƆɹǝpᴉlS            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙ʇunoƆɹǝpᴉlS            
+uoʇʇnqɹǝpᴉlS = ʇuǝɹɐԀ˙ʇunoƆɹǝpᴉlS            
+,,ʇunoƆɹǝpᴉlS,, = ǝɯɐN˙ʇunoƆɹǝpᴉlS            
+
+(ϛᄅ '0 '9ㄣƐ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uoʇʇnqɹǝpᴉlS            
+(ㄥ- '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙uoʇʇnqɹǝpᴉlS            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙uoʇʇnqɹǝpᴉlS            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙uoʇʇnqɹǝpᴉlS            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙uoʇʇnqɹǝpᴉlS            
+ʇnduIɹǝpᴉlS = ʇuǝɹɐԀ˙uoʇʇnqɹǝpᴉlS            
+,,uoʇʇnqɹǝpᴉlS,, = ǝɯɐN˙uoʇʇnqɹǝpᴉlS            
+
+ʇnduIɹǝpᴉlS = ʇuǝɹɐԀ˙ᄅɹǝuɹoƆɹǝpᴉlS            
+(00000Ɩ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ᄅɹǝuɹoƆɹǝpᴉlS            
+
+(9 '0 'ϛ9Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ʇnduIɹǝpᴉlS            
+(ᄅㄣ '0 '8 '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ʇnduIɹǝpᴉlS            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ʇnduIɹǝpᴉlS            
+ㄥ˙0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ʇnduIɹǝpᴉlS            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙ʇnduIɹǝpᴉlS            
+ᄅ‾ǝɯɐɹℲɹǝpᴉlS = ʇuǝɹɐԀ˙ʇnduIɹǝpᴉlS            
+,,ʇnduIɹǝpᴉlS,, = ǝɯɐN˙ʇnduIɹǝpᴉlS            
+
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ǝlʇᴉ┴            
+000˙ϛƖ = ǝzᴉSʇxǝ┴˙ǝlʇᴉ┴            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝlʇᴉ┴            
+ʇxǝʇ ˙˙ ,,  |,, = ʇxǝ┴˙ǝlʇᴉ┴            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ǝlʇᴉ┴            
+(0Ɛ '0 '08ᄅ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝlʇᴉ┴            
+(ϛ '0 'ϛㄣ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝlʇᴉ┴            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝlʇᴉ┴            
+(0ϛƖ '0ϛƖ '0ϛƖ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝlʇᴉ┴            
+ᄅ‾ǝɯɐɹℲɹǝpᴉlS = ʇuǝɹɐԀ˙ǝlʇᴉ┴            
+
+
+
+
+,,//:pᴉʇǝssɐxqɹ,, = ǝƃɐɯI˙lǝqɐ˥ǝƃɐɯI            
+(0Ɛ '0 '0Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙lǝqɐ˥ǝƃɐɯI            
+(ϛ˙ㄥ '0 'ϛ˙ㄥ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙lǝqɐ˥ǝƃɐɯI            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙lǝqɐ˥ǝƃɐɯI            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙lǝqɐ˥ǝƃɐɯI            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙lǝqɐ˥ǝƃɐɯI            
+ᄅ‾ǝɯɐɹℲɹǝpᴉlS = ʇuǝɹɐԀ˙lǝqɐ˥ǝƃɐɯI            
+,,lǝqɐ˥ǝƃɐɯI,, = ǝɯɐN˙lǝqɐ˥ǝƃɐɯI            
+
+(Ɛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆI∩            
+ᄅ‾ǝɯɐɹℲɹǝpᴉlS = ʇuǝɹɐԀ˙ɹǝuɹoƆI∩            
+
+ǝnɹʇ = ǝlqɐʌᴉɥɔɹ∀˙ǝʞoɹʇSI∩            
+ǝnɹʇ = pǝlqɐuƎ˙ǝʞoɹʇSI∩            
+0 = ʎɔuǝɹɐdsuɐɹ┴˙ǝʞoɹʇSI∩            
+Ɩ = ssǝuʞɔᴉɥ┴˙ǝʞoɹʇSI∩            
+punoɹ˙ǝpoWuᴉoſǝuᴉ˥˙ɯnuƎ = ǝpoWuᴉoſǝuᴉ˥˙ǝʞoɹʇSI∩            
+ ɹoloƆ˙פ‾ = ɹoloƆ˙ǝʞoɹʇSI∩            
+ɹǝpɹoq˙ǝpoWǝʞoɹʇSʎldd∀˙ɯnuƎ = ǝpoWǝʞoɹʇSʎldd∀˙ǝʞoɹʇSI∩            
+ᄅ‾ǝɯɐɹℲɹǝpᴉlS = ʇuǝɹɐԀ˙ǝʞoɹʇSI∩            
+,,ǝʞoɹʇSI∩,, = ǝɯɐN˙ǝʞoɹʇSI∩            
+
+(09 '0 'ㄥ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ᄅ‾ǝɯɐɹℲɹǝpᴉlS            
+(Ɩ '0 'Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ᄅ‾ǝɯɐɹℲɹǝpᴉlS            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ᄅ‾ǝɯɐɹℲɹǝpᴉlS            
+0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ᄅ‾ǝɯɐɹℲɹǝpᴉlS            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ᄅ‾ǝɯɐɹℲɹǝpᴉlS            
+ǝɯɐɹℲɹǝpᴉlS = ʇuǝɹɐԀ˙ᄅ‾ǝɯɐɹℲɹǝpᴉlS            
+,,ᄅ‾ǝɯɐɹℲɹǝpᴉlS,, = ǝɯɐN˙ᄅ‾ǝɯɐɹℲɹǝpᴉlS            
+
+(09 '0 'ㄥ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐɹℲɹǝpᴉlS            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ǝɯɐɹℲɹǝpᴉlS            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐɹℲɹǝpᴉlS            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝɯɐɹℲɹǝpᴉlS            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙ǝɯɐɹℲɹǝpᴉlS            
+,,ǝɯɐɹℲɹǝpᴉlS,, ɹo ǝlʇᴉʇɹǝpᴉls = ǝɯɐN˙ǝɯɐɹℲɹǝpᴉlS            
+-- doɹԀ --            
+
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = Ɛ‾ɹǝuɹoƆI∩ lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ᄅ‾ɹǝuɹoƆI∩ lɐɔol            
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ᄅ‾ǝlʇᴉ┴ lɐɔol            
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSɹǝpᴉlS lɐɔol            
+(,,xoqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = xoqɹǝpᴉlS lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐɹℲxoq lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ᄅɹǝuɹoƆɹǝpᴉlS lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆɹǝpᴉlS lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ʇunoƆɹǝpᴉlS lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = uoʇʇnqɹǝpᴉlS lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ʇnduIɹǝpᴉlS lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ǝlʇᴉ┴ lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ǝɔɐdS lɐɔol            
+(,,lǝqɐ˥ǝƃɐɯI,,)ʍǝu˙ǝɔuɐʇsuI = lǝqɐ˥ǝƃɐɯI lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆI∩ lɐɔol            
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSI∩ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ᄅ‾ǝɯɐɹℲɹǝpᴉlS lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐɹℲɹǝpᴉlS lɐɔol            
+{} = ɔunɟɹǝpᴉls lɐɔol            
+(ʞɔɐqllɐɔ 'ʇɹɐʇs 'xɐɯ 'uᴉɯ 'ʇxǝʇ)ɹǝpᴉlS:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+ɔunɟdoɹp uɹnʇǝɹ            
+
+puǝ            
+puǝ                
+puǝ                    
+()ʎoɹʇsǝp:ʌ                        
+uǝɥʇ (,,uoʇʇnqʇxǝ┴,,)∀sI:ʌ ɟᴉ                    
+op ()uǝɹplᴉɥƆʇǝפ:lloɹɔSdoɹp 'ʇxǝu uᴉ ʌ 'ᴉ ɹoɟ                
+()ʎɐlԀ:(                
+{                    
+08Ɩ = uoᴉʇɐʇoɹ                        
+}                    
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                    
+'ǝƃɐɯIdoɹp                    
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                
+(ǝnɹʇ 'Ɛ˙0 ',,pɐnQ,, ',,ʇnO,, '(ƖƐ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:uʍopdoɹp                
+ǝslɐɟ = ƃuᴉddoɹpsᴉ                
+,, : ,, ˙˙ (ʇxǝʇ)ƃuᴉɹʇsoʇ = ʇxǝ┴˙ǝlʇᴉ┴doɹp                
+()ɹɐǝlƆ:ɔunɟdoɹp uoᴉʇɔunɟ            
+
+puǝ            
+(puǝ                
+ʇxǝ┴˙ɯǝʇI ˙˙ ,, : ,, ˙˙ ʇxǝʇ = ʇxǝ┴˙ǝlʇᴉ┴doɹp                    
+(ʇxǝ┴˙ɯǝʇI)ʞɔɐqllɐɔ                    
+()ʎɐlԀ:(                    
+{                        
+08Ɩ = uoᴉʇɐʇoɹ                            
+}                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ǝƃɐɯIdoɹp                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+(ǝnɹʇ 'Ɛ˙0 ',,pɐnQ,, ',,ʇnO,, '(ƖƐ '0 'ㄥ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:uʍopdoɹp                    
+ǝslɐɟ = ƃuᴉddoɹpsᴉ                    
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʞɔᴉlƆƖuoʇʇnqǝsnoW˙ɯǝʇI                
+
+(puǝ                
+()ʎɐlԀ:(                    
+{                        
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴                            
+}                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ɯǝʇI                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ǝʌɐǝ˥ǝsnoW˙ɯǝʇI                
+
+(puǝ                
+()ʎɐlԀ:(                    
+{                        
+0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴                            
+}                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ɯǝʇI                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ɹǝʇuƎǝsnoW˙ɯǝʇI                
+
+00ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴˙ɯǝʇI                
+000˙ƐƖ = ǝzᴉSʇxǝ┴˙ɯǝʇI                
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ɯǝʇI                
+(ʇ)ƃuᴉɹʇsoʇ = ʇxǝ┴˙ɯǝʇI                
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ɯǝʇI                
+(9ᄅ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ɯǝʇI                
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ɯǝʇI                
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ɯǝʇI                
+lloɹɔSdoɹp = ʇuǝɹɐԀ˙ɯǝʇI                
+,,ɯǝʇI,, = ǝɯɐN˙ɯǝʇI                
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ɯǝʇI lɐɔol                
+(ʇ)pp∀:ɔunɟdoɹp uoᴉʇɔunɟ            
+{} = ɔunɟdoɹp lɐɔol            
+
+(puǝ            
+puǝ                
+()ʎɐlԀ:(                    
+{                        
+08Ɩ = uoᴉʇɐʇoɹ                            
+}                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ǝƃɐɯIdoɹp                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+(ǝnɹʇ 'Ɛ˙0 ',,pɐnQ,, ',,ʇnO,, '(ƖƐ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:uʍopdoɹp                    
+ǝslɐɟ = ƃuᴉddoɹpsᴉ                    
+ǝslǝ                
+()ʎɐlԀ:(                    
+{                        
+0 = uoᴉʇɐʇoɹ                            
+}                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ǝƃɐɯIdoɹp                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+(ǝnɹʇ 'Ɛ˙0 ',,pɐnQ,, ',,ʇnO,, '(ƖƐƖ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:uʍopdoɹp                    
+ǝnɹʇ = ƃuᴉddoɹpsᴉ                    
+uǝɥʇ ǝslɐɟ == ƃuᴉddoɹpsᴉ ɟᴉ                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʞɔᴉlƆƖuoʇʇnqǝsnoW˙uoʇʇnqdoɹp            
+
+(0Ɩ + ⅄˙ǝzᴉSʇuǝʇuoƆǝʇnlosq∀˙ʇnoʎɐ˥ʇsᴉ˥I∩ '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉSsɐʌuɐƆ˙lloɹɔSdoɹp            
+
+puǝ            
+(puǝ                
+ʇxǝ┴˙ɯǝʇI ˙˙ ,, : ,, ˙˙ ʇxǝʇ = ʇxǝ┴˙ǝlʇᴉ┴doɹp                    
+(ʇxǝ┴˙ɯǝʇI)ʞɔɐqllɐɔ                    
+()ʎɐlԀ:(                    
+{                        
+08Ɩ = uoᴉʇɐʇoɹ                            
+}                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ǝƃɐɯIdoɹp                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+(ǝnɹʇ 'Ɛ˙0 ',,pɐnQ,, ',,ʇnO,, '(ƖƐ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:uʍopdoɹp                    
+ǝslɐɟ = ƃuᴉddoɹpsᴉ                    
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʞɔᴉlƆƖuoʇʇnqǝsnoW˙ɯǝʇI                
+
+(puǝ                
+()ʎɐlԀ:(                    
+{                        
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴                            
+}                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ɯǝʇI                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ǝʌɐǝ˥ǝsnoW˙ɯǝʇI                
+
+(puǝ                
+()ʎɐlԀ:(                    
+{                        
+0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴                            
+}                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ɯǝʇI                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ɹǝʇuƎǝsnoW˙ɯǝʇI                
+
+00ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴˙ɯǝʇI                
+000˙ƐƖ = ǝzᴉSʇxǝ┴˙ɯǝʇI                
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ɯǝʇI                
+(ʌ)ƃuᴉɹʇsoʇ = ʇxǝ┴˙ɯǝʇI                
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ɯǝʇI                
+(9ᄅ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ɯǝʇI                
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ɯǝʇI                
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ɯǝʇI                
+lloɹɔSdoɹp = ʇuǝɹɐԀ˙ɯǝʇI                
+,,ɯǝʇI,, = ǝɯɐN˙ɯǝʇI                
+
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ɯǝʇI lɐɔol                
+op uoᴉʇdo 'ʇxǝu uᴉ ʌ 'ᴉ ɹoɟ            
+
+000˙ㄣƖ = ǝzᴉSʇxǝ┴˙uoʇʇnqdoɹp            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙uoʇʇnqdoɹp            
+,,,, = ʇxǝ┴˙uoʇʇnqdoɹp            
+suɐSǝɔɹnoS˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙uoʇʇnqdoɹp            
+(ƖƐ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uoʇʇnqdoɹp            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙uoʇʇnqdoɹp            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙uoʇʇnqdoɹp            
+uʍopdoɹp = ʇuǝɹɐԀ˙uoʇʇnqdoɹp            
+,,uoʇʇnqdoɹp,, = ǝɯɐN˙uoʇʇnqdoɹp            
+
+(ϛ '0)ʍǝu˙ɯᴉp∩ = do┴ƃuᴉppɐԀ˙ƃuᴉppɐԀI∩            
+(ϛ '0)ʍǝu˙ɯᴉp∩ = ʇɟǝ˥ƃuᴉppɐԀ˙ƃuᴉppɐԀI∩            
+lloɹɔSdoɹp = ʇuǝɹɐԀ˙ƃuᴉppɐԀI∩            
+
+(ϛ '0)ʍǝu˙ɯᴉp∩ = ƃuᴉppɐԀ˙ʇnoʎɐ˥ʇsᴉ˥I∩            
+ɹǝpɹOʇnoʎɐ˥˙ɹǝpɹOʇɹoS˙ɯnuƎ = ɹǝpɹOʇɹoS˙ʇnoʎɐ˥ʇsᴉ˥I∩            
+lloɹɔSdoɹp = ʇuǝɹɐԀ˙ʇnoʎɐ˥ʇsᴉ˥I∩            
+
+Ɛ = ssǝuʞɔᴉɥ┴ɹɐqlloɹɔS˙lloɹɔSdoɹp            
+(0 '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉSsɐʌuɐƆ˙lloɹɔSdoɹp            
+(00Ɩ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙lloɹɔSdoɹp            
+(ƖƐ '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙lloɹɔSdoɹp            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙lloɹɔSdoɹp            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙lloɹɔSdoɹp            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙lloɹɔSdoɹp            
+ǝnɹʇ = ǝʌᴉʇɔ∀˙lloɹɔSdoɹp            
+ǝlʇᴉ┴doɹp = ʇuǝɹɐԀ˙lloɹɔSdoɹp            
+,,lloɹɔSdoɹp,, = ǝɯɐN˙lloɹɔSdoɹp            
+
+000˙ϛƖ = ǝzᴉSʇxǝ┴˙ǝlʇᴉ┴doɹp            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝlʇᴉ┴doɹp            
+ ʇxǝʇ = ʇxǝ┴˙ǝlʇᴉ┴doɹp            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ǝlʇᴉ┴doɹp            
+(ƖƐ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝlʇᴉ┴doɹp            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝlʇᴉ┴doɹp            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝlʇᴉ┴doɹp            
+uʍopdoɹp = ʇuǝɹɐԀ˙ǝlʇᴉ┴doɹp            
+,,ǝlʇᴉ┴doɹp,, = ǝɯɐN˙ǝlʇᴉ┴doɹp            
+
+uʍopdoɹp = ʇuǝɹɐԀ˙ɹǝuɹoƆI∩            
+(Ɛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆI∩            
+
+ǝnɹʇ = ǝlqɐʌᴉɥɔɹ∀˙ǝʞoɹʇSI∩            
+ǝnɹʇ = pǝlqɐuƎ˙ǝʞoɹʇSI∩            
+0 = ʎɔuǝɹɐdsuɐɹ┴˙ǝʞoɹʇSI∩            
+Ɩ = ssǝuʞɔᴉɥ┴˙ǝʞoɹʇSI∩            
+punoɹ˙ǝpoWuᴉoſǝuᴉ˥˙ɯnuƎ = ǝpoWuᴉoſǝuᴉ˥˙ǝʞoɹʇSI∩            
+ ɹoloƆ˙פ‾ = ɹoloƆ˙ǝʞoɹʇSI∩            
+ɹǝpɹoq˙ǝpoWǝʞoɹʇSʎldd∀˙ɯnuƎ = ǝpoWǝʞoɹʇSʎldd∀˙ǝʞoɹʇSI∩            
+uʍopdoɹp = ʇuǝɹɐԀ˙ǝʞoɹʇSI∩            
+,,ǝʞoɹʇSI∩,, = ǝɯɐN˙ǝʞoɹʇSI∩            
+
+(ƖƐ '0 'ㄥ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uʍopdoɹp            
+ǝnɹʇ = sʇuɐpuǝɔsǝpsdᴉlƆ˙uʍopdoɹp            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙uʍopdoɹp            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙uʍopdoɹp            
+,,uʍopdoɹp,, = ǝɯɐN˙uʍopdoɹp            
+
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSI∩ lɐɔol            
+(,,lǝqɐ˥ǝƃɐɯI,,)ʍǝu˙ǝɔuɐʇsuI = ǝƃɐɯIdoɹp lɐɔol            
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = uoʇʇnqdoɹp lɐɔol            
+(,,ƃuᴉppɐԀI∩,,)ʍǝu˙ǝɔuɐʇsuI = ƃuᴉppɐԀI∩ lɐɔol            
+(,,ʇnoʎɐ˥ʇsᴉ˥I∩,,)ʍǝu˙ǝɔuɐʇsuI = ʇnoʎɐ˥ʇsᴉ˥I∩ lɐɔol            
+(,,ǝɯɐɹℲƃuᴉlloɹɔS,,)ʍǝu˙ǝɔuɐʇsuI = lloɹɔSdoɹp lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ǝlʇᴉ┴doɹp lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆI∩ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = uʍopdoɹp lɐɔol            
+ǝslɐɟ = ƃuᴉddoɹpsᴉ lɐɔol            
+(ʞɔɐqllɐɔ 'uoᴉʇdo 'ʇxǝʇ)uʍopdoɹp:uᴉɐɯ uoᴉʇɔunɟ        
+
+puǝ        
+puǝ            
+(pǝlƃƃoʇ 'ʞɔɐqllɐɔ)llɐɔd                
+()ʎɐlԀ:(                
+{ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq }                    
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ㄣ˙0)ʍǝu˙oɟuIuǝǝʍ┴                    
+'ǝlɔɹᴉƆ                    
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                
+(ǝnɹʇ 'ㄣ˙0 ',,ǝuᴉS,, ',,ʇnO,, '(ᄅ '0 'ㄥᄅ '0)ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ǝlɔɹᴉƆ                
+ǝnɹʇ = pǝlƃƃoʇ                
+uǝɥʇ ǝnɹʇ == ƃᴉɟuoɔ ɟᴉ            
+
+(puǝ            
+(pǝlƃƃoʇ 'ʞɔɐqllɐɔ)llɐɔd                
+puǝ                
+()ʎɐlԀ:(                    
+{ (0ƖƖ '09 'ㄥᄅᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq }                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ㄣ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ǝlɔɹᴉƆ                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+(ǝnɹʇ 'ᄅ˙0 ',,ǝuᴉS,, ',,ʇnO,, '(ᄅ '0 'ᄅ '0)ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ǝlɔɹᴉƆ                    
+ǝslɐɟ = pǝlƃƃoʇ                    
+ǝslǝ                
+()ʎɐlԀ:(                    
+{ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq }                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ㄣ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ǝlɔɹᴉƆ                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+(ǝnɹʇ 'ᄅ˙0 ',,ǝuᴉS,, ',,ʇnO,, '(ᄅ '0 'ㄥᄅ '0)ʍǝu˙ᄅɯᴉp∩)uoᴉʇᴉsoԀuǝǝʍ┴:ǝlɔɹᴉƆ                    
+ǝnɹʇ = pǝlƃƃoʇ                    
+uǝɥʇ ǝslɐɟ == pǝlƃƃoʇ ɟᴉ                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʞɔᴉlƆƖuoʇʇnqǝsnoW˙uoʇʇnq            
+
+ǝlɔɹᴉƆ = ʇuǝɹɐԀ˙ㄣ‾ɹǝuɹoƆI∩            
+(0Ɩ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ㄣ‾ɹǝuɹoƆI∩            
+
+(9Ɩ '0 '9Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝlɔɹᴉƆ            
+(ᄅ '0 'ᄅ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝlɔɹᴉƆ            
+(09 '09 'ㄥᄅᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝlɔɹᴉƆ            
+ǝƃɐɯIǝlƃƃo┴ = ʇuǝɹɐԀ˙ǝlɔɹᴉƆ            
+,,ǝlɔɹᴉƆ,, = ǝɯɐN˙ǝlɔɹᴉƆ            
+
+ǝƃɐɯIǝlƃƃo┴ = ʇuǝɹɐԀ˙Ɛ‾ɹǝuɹoƆI∩            
+(0Ɩ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙Ɛ‾ɹǝuɹoƆI∩            
+
+(0ᄅ '0 'ϛㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝƃɐɯIǝlƃƃo┴            
+(9 '0 'ᄅƐƐ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝƃɐɯIǝlƃƃo┴            
+(ϛᄅᄅ 'ϛᄅᄅ 'ϛᄅᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝƃɐɯIǝlƃƃo┴            
+uoʇʇnq = ʇuǝɹɐԀ˙ǝƃɐɯIǝlƃƃo┴            
+,,ǝƃɐɯIǝlƃƃo┴,, = ǝɯɐN˙ǝƃɐɯIǝlƃƃo┴            
+
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ǝlʇᴉ┴            
+ϛƖ = ǝzᴉSʇxǝ┴˙ǝlʇᴉ┴            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝlʇᴉ┴            
+ʇxǝʇ ˙˙ ,,,, = ʇxǝ┴˙ǝlʇᴉ┴            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ǝlʇᴉ┴            
+(0Ɛ '0 '08ᄅ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝlʇᴉ┴            
+0ㄣน็ปเϛƖกาจ-- (0 '0 'ϛƖ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝlʇᴉ┴            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝlʇᴉ┴            
+(0ϛƖ '0ϛƖ '0ϛƖ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝlʇᴉ┴            
+uoʇʇnq = ʇuǝɹɐԀ˙ǝlʇᴉ┴            
+
+,,//:pᴉʇǝssɐxqɹ,, = ǝƃɐɯI˙uoɔIlǝqɐ˥ƃɯᴉ            
+(0Ɛ '0 '0Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uoɔIlǝqɐ˥ƃɯᴉ            
+(Ɩ '0 'ϛ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙uoɔIlǝqɐ˥ƃɯᴉ            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙uoɔIlǝqɐ˥ƃɯᴉ            
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙uoɔIlǝqɐ˥ƃɯᴉ            
+uoʇʇnq = ʇuǝɹɐԀ˙uoɔIlǝqɐ˥ƃɯᴉ            
+,,uoɔI,, = ǝɯɐN˙uoɔIlǝqɐ˥ƃɯᴉ            
+
+uoʇʇnq = ʇuǝɹɐԀ˙ᄅ‾ɹǝuɹoƆI∩            
+(Ɛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ᄅ‾ɹǝuɹoƆI∩            
+
+ǝnɹʇ = ǝlqɐʌᴉɥɔɹ∀˙ǝʞoɹʇSI∩            
+ǝnɹʇ = pǝlqɐuƎ˙ǝʞoɹʇSI∩            
+0 = ʎɔuǝɹɐdsuɐɹ┴˙ǝʞoɹʇSI∩            
+Ɩ = ssǝuʞɔᴉɥ┴˙ǝʞoɹʇSI∩            
+punoɹ˙ǝpoWuᴉoſǝuᴉ˥˙ɯnuƎ = ǝpoWuᴉoſǝuᴉ˥˙ǝʞoɹʇSI∩            
+ ɹoloƆ˙פ‾ = ɹoloƆ˙ǝʞoɹʇSI∩            
+ɹǝpɹoq˙ǝpoWǝʞoɹʇSʎldd∀˙ɯnuƎ = ǝpoWǝʞoɹʇSʎldd∀˙ǝʞoɹʇSI∩            
+uoʇʇnq = ʇuǝɹɐԀ˙ǝʞoɹʇSI∩            
+,,ǝʞoɹʇSI∩,, = ǝɯɐN˙ǝʞoɹʇSI∩            
+000˙ƖƖ = ǝzᴉSʇxǝ┴˙uoʇʇnq            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙uoʇʇnq            
+,,,, = ʇxǝ┴˙uoʇʇnq            
+suɐSǝɔɹnoS˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙uoʇʇnq            
+ǝslɐɟ = ɹoloƆuoʇʇnqoʇn∀˙uoʇʇnq            
+(ƖƐ '0 'ㄥ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uoʇʇnq            
+(Ɩ '0 'Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙uoʇʇnq            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙uoʇʇnq            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙uoʇʇnq            
+,,uoʇʇnq,, = ǝɯɐN˙uoʇʇnq            
+
+
+(,,lǝqɐ˥ǝƃɐɯI,,)ʍǝu˙ǝɔuɐʇsuI = uoɔIlǝqɐ˥ƃɯᴉ lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ㄣ‾ɹǝuɹoƆI∩ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝlɔɹᴉƆ lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = Ɛ‾ɹǝuɹoƆI∩ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝƃɐɯIǝlƃƃo┴ lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ǝlʇᴉ┴ lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ᄅ‾ɹǝuɹoƆI∩ lɐɔol            
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = uoʇʇnq lɐɔol            
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSI∩ lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆI∩ lɐɔol            
+ƃᴉɟuoɔ = pǝlƃƃoʇ lɐɔol            
+ǝslɐɟ ɹo ƃᴉɟuoɔ = ƃᴉɟuoɔ            
+(ʞɔɐqllɐɔ 'ƃᴉɟuoɔ 'ʇxǝʇ)ǝlƃƃo┴:uᴉɐɯ uoᴉʇɔunɟ        
+puǝ        
+(puǝ            
+()ʞɔɐqllɐɔ                
+()ʎɐlԀ:(                
+{                    
+ϛƖ = ǝzᴉSʇxǝ┴                        
+}                    
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ㄣ˙0)ʍǝu˙oɟuIuǝǝʍ┴                    
+'uʇqʇxǝ┴                    
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                
+0 = ǝzᴉSʇxǝ┴˙uʇqʇxǝ┴                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʞɔᴉlƆƖuoʇʇnqǝsnoW˙uʇqʇxǝ┴            
+(puǝ            
+()ʎɐlԀ:(                
+{                    
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq                        
+}                    
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ㄣ˙0)ʍǝu˙oɟuIuǝǝʍ┴                    
+'ʞɔɐlq                    
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ǝʌɐǝ˥ǝsnoW˙uʇqʇxǝ┴            
+(puǝ            
+()ʎɐlԀ:(                
+{                    
+ㄥ˙0 = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq                        
+}                    
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ㄣ˙0)ʍǝu˙oɟuIuǝǝʍ┴                    
+'ʞɔɐlq                    
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ɹǝʇuƎǝsnoW˙uʇqʇxǝ┴            
+
+ʞɔɐlq = ʇuǝɹɐԀ˙Ɛ‾ɹǝuɹoƆI∩            
+(ϛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙Ɛ‾ɹǝuɹoƆI∩            
+
+(6ᄅ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ʞɔɐlq            
+(Ɩ '0 'Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ʞɔɐlq            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ʞɔɐlq            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ʞɔɐlq            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ʞɔɐlq            
+uoʇʇnq = ʇuǝɹɐԀ˙ʞɔɐlq            
+,,ʞɔɐlq,, = ǝɯɐN˙ʞɔɐlq            
+
+uʇqʇxǝ┴ = ʇuǝɹɐԀ˙ᄅ‾ɹǝuɹoƆI∩            
+(ϛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ᄅ‾ɹǝuɹoƆI∩            
+
+000˙ϛƖ = ǝzᴉSʇxǝ┴˙uʇqʇxǝ┴            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙uʇqʇxǝ┴            
+ʇxǝʇ = ʇxǝ┴˙uʇqʇxǝ┴            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙uʇqʇxǝ┴            
+ǝslɐɟ = ɹoloƆuoʇʇnqoʇn∀˙uʇqʇxǝ┴            
+(ᄅƐ '0 'ϛ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uʇqʇxǝ┴            
+(Ɩ '0 'Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙uʇqʇxǝ┴            
+ ɹoloƆ˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙uʇqʇxǝ┴            
+uoʇʇnq = ʇuǝɹɐԀ˙uʇqʇxǝ┴            
+,,uʇqʇxǝ┴,, = ǝɯɐN˙uʇqʇxǝ┴            
+
+uoʇʇnq = ʇuǝɹɐԀ˙ɹǝuɹoƆI∩            
+(ϛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆI∩            
+
+(ƖƐ '0 'ㄥ8Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uoʇʇnq            
+(0 '0 '0)ʍǝu˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙uoʇʇnq            
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙uoʇʇnq            
+,,uoʇʇnq,, = ǝɯɐN˙uoʇʇnq            
+
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = Ɛ‾ɹǝuɹoƆI∩ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ʞɔɐlq lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ᄅ‾ɹǝuɹoƆI∩ lɐɔol            
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = uʇqʇxǝ┴ lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆI∩ lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = uoʇʇnq lɐɔol            
+(ʞɔɐqllɐɔ 'ʇxǝʇ)uoʇʇnq:uᴉɐɯ uoᴉʇɔunɟ        
+{} = uᴉɐɯ lɐɔol        
+
+puǝ        
+(puǝ            
+()ʎoɹʇsǝp:ploHuoᴉʇɐɔᴉɟᴉʇoN                
+
+(Ɛ˙)ʇᴉɐʍ                
+
+()ʎɐlԀ:({                    
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq                        
+}                    
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙)ʍǝu˙oɟuIuǝǝʍ┴ 'ploHuoᴉʇɐɔᴉɟᴉʇoN)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                
+
+(ㄣ˙0)ʇᴉɐʍ                
+
+(ǝnɹʇ                    
+'9˙ 'ʇɹɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ '(0 '0 '0 '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʞɔᴉlƆƖuoʇʇnqǝsnoW˙uʇqʎɐʞO            
+
+(puǝ            
+()ʎɐlԀ:({ (ϛᄅ 'ϛᄅ 'ϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq                    
+} '(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ᄅ˙)ʍǝu˙oɟuIuǝǝʍ┴ 'uʇqʎɐʞO)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ǝʌɐǝ˥ǝsnoW˙uʇqʎɐʞO            
+
+(puǝ            
+()ʎɐlԀ:({ (ㄣƐ 'ㄣƐ 'ㄣƐ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq                    
+} '(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙)ʍǝu˙oɟuIuǝǝʍ┴ 'uʇqʎɐʞO)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ɹǝʇuƎǝsnoW˙uʇqʎɐʞO            
+
+do┴˙ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀⅄ʇxǝ┴˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+ɹǝʇuǝƆ˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+000˙9Ɩ = ǝzᴉSʇxǝ┴˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+(ϛᄅƖ '0 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+ǝslɐɟ = pǝlɐɔSʇxǝ┴˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+ɔsǝpʇxǝʇ = ʇxǝ┴˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+(00ᄅ '0 '08Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+(08 '0 '0Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+ɹoloƆuoᴉʇɔǝS˙פ‾ = ƐɹoloƆpunoɹƃʞɔɐq˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN = ʇuǝɹɐԀ˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+,,ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN,, = ǝɯɐN˙ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN            
+
+(Ɩ '0 '08Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝuᴉ˥            
+(0ㄣ '0 '0Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝuᴉ˥            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ǝuᴉ˥            
+(ϛᄅƖ '0 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝuᴉ˥            
+ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN = ʇuǝɹɐԀ˙ǝuᴉ˥            
+,,ǝuᴉ˥,, = ǝɯɐN˙ǝuᴉ˥            
+
+000˙ᄅᄅ = ǝzᴉSʇxǝ┴˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+(0 '0 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+,,uoᴉʇɐɔᴉɟᴉʇoN,, = ʇxǝ┴˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+Ɛ = xǝpuIZ˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+(ϛᄅ '0 '00ㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+(0Ɩ '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+(ϛᄅƖ '0 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN = ʇuǝɹɐԀ˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+,,ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN,, = ǝɯɐN˙ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN            
+
+000˙ᄅᄅ = ǝzᴉSʇxǝ┴˙ǝlʇᴉ┴uʇqʎɐʞO            
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝlʇᴉ┴uʇqʎɐʞO            
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ǝlʇᴉ┴uʇqʎɐʞO            
+,,ʞO,, = ʇxǝ┴˙ǝlʇᴉ┴uʇqʎɐʞO            
+(0Ɛ '0 '0ϛƖ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝlʇᴉ┴uʇqʎɐʞO            
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝlʇᴉ┴uʇqʎɐʞO            
+(ϛᄅƖ '0 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝlʇᴉ┴uʇqʎɐʞO            
+uʇqʎɐʞO = ʇuǝɹɐԀ˙ǝlʇᴉ┴uʇqʎɐʞO            
+,,ǝlʇᴉ┴uʇqʎɐʞO,, = ǝɯɐN˙ǝlʇᴉ┴uʇqʎɐʞO            
+
+uʇqʎɐʞO = ʇuǝɹɐԀ˙ɹǝuɹoƆuʇqʎɐʞO            
+,,ɹǝuɹoƆuʇqʎɐʞO,, = ǝɯɐN˙ɹǝuɹoƆuʇqʎɐʞO            
+(ϛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆuʇqʎɐʞO            
+
+000˙ƐƖ = ǝzᴉSʇxǝ┴˙uʇqʎɐʞO            
+(ϛᄅƖ '0 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙uʇqʎɐʞO            
+,,,, = ʇxǝ┴˙uʇqʎɐʞO            
+suɐSǝɔɹnoS˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙uʇqʎɐʞO            
+ǝnɹʇ = ɹoloƆuoʇʇnqoʇn∀˙uʇqʎɐʞO            
+(0Ɛ '0 '0ϛƖ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uʇqʎɐʞO            
+(06Ɩ '0 'ϛᄅƖ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙uʇqʎɐʞO            
+(ϛᄅƖ '0 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆɹǝpɹoq˙uʇqʎɐʞO            
+ᄅ = lǝxᴉԀǝzᴉSɹǝpɹoq˙uʇqʎɐʞO            
+(06Ɩ '06Ɩ '06Ɩ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙uʇqʎɐʞO            
+ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN = ʇuǝɹɐԀ˙uʇqʎɐʞO            
+,,uʇqʎɐʞO,, = ǝɯɐN˙uʇqʎɐʞO            
+
+ǝnɹʇ = ǝlqɐʌᴉɥɔɹ∀˙ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN            
+ǝnɹʇ = pǝlqɐuƎ˙ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN            
+0 = ʎɔuǝɹɐdsuɐɹ┴˙ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN            
+ᄅ = ssǝuʞɔᴉɥ┴˙ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN            
+punoɹ˙ǝpoWuᴉoſǝuᴉ˥˙ɯnuƎ = ǝpoWuᴉoſǝuᴉ˥˙ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN            
+(ϛᄅƖ '0 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ɹoloƆ˙ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN            
+ɹǝpɹoq˙ǝpoWǝʞoɹʇSʎldd∀˙ɯnuƎ = ǝpoWǝʞoɹʇSʎldd∀˙ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN            
+ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN = ʇuǝɹɐԀ˙ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN            
+,,ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN,, = ǝɯɐN˙ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN            
+
+(ϛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆɟᴉʇoN            
+ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN = ʇuǝɹɐԀ˙ɹǝuɹoƆɟᴉʇoN            
+,,ɹǝuɹoƆɟᴉʇoN,, = ǝɯɐN˙ɹǝuɹoƆɟᴉʇoN            
+
+(ǝnɹʇ                
+'9˙ 'ʇɹɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ '(0ϛᄅ '0 '00ㄣ '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+
+(0 '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+(06Ɩ '0 'ϛ6ᄅ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+ǝnɹʇ = sʇuɐpuǝɔsǝpsdᴉlƆ˙ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+0 = ʎɔuǝɹɐdsuɐɹ┴˙ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+(ϛᄅƖ '0 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆɹǝpɹoq˙ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+(ϛƖ 'ϛƖ 'ϛƖ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+(ϛ˙0 'ϛ˙0)ʍǝu˙ᄅɹoʇɔǝΛ = ʇuᴉoԀɹoɥɔu∀˙ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+ploHuoᴉʇɐɔᴉɟᴉʇoN = ʇuǝɹɐԀ˙ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+,,ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN,, = ǝɯɐN˙ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN            
+
+(ㄣ˙0)ʇᴉɐʍ            
+()ʎɐlԀ:({            
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq                
+} '(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙)ʍǝu˙oɟuIuǝǝʍ┴ 'ploHuoᴉʇɐɔᴉɟᴉʇoN)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴            
+
+000˙ƐƖ = ǝzᴉSʇxǝ┴˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+(ϛᄅƖ '0 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+,,,, = ʇxǝ┴˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+suɐSǝɔɹnoS˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+ǝslɐɟ = ɹoloƆuoʇʇnqoʇn∀˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+(8ㄥƐ '0 '68ϛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+(ϛᄅƖ 'ϛᄅƖ 'ϛᄅƖ)ʍǝu˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+uᴉɐW = ʇuǝɹɐԀ˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+,,ploHuoᴉʇɐɔᴉɟᴉʇoN,, = ǝɯɐN˙ploHuoᴉʇɐɔᴉɟᴉʇoN            
+
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝuᴉ˥ lɐɔol            
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSI∩ɹǝploHɟᴉʇoN lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆɟᴉʇoN lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ɔsǝpuoᴉʇɐɔᴉɟᴉʇoN lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ǝlʇᴉ┴uoᴉʇɐɔᴉɟᴉʇoN lɐɔol            
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ǝlʇᴉ┴uʇqʎɐʞO lɐɔol            
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆuʇqʎɐʞO lɐɔol            
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = uʇqʎɐʞO lɐɔol            
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐɹℲuoᴉʇɐɔᴉɟᴉʇoN lɐɔol            
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ploHuoᴉʇɐɔᴉɟᴉʇoN lɐɔol            
+(ɔsǝpʇxǝʇ)uoᴉʇɐɔᴉɟᴉʇoN:ǝʇɐpd∩ uoᴉʇɔunɟ        
+(puǝ        
+(puǝ            
+(0ᄅ + ⅄˙ǝzᴉSʇuǝʇuoƆǝʇnlosq∀˙˥˥Ԁ '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉSsɐʌuɐƆ˙qɐ┴lloɹɔS                
+(0ᄅ + ⅄˙ǝzᴉSʇuǝʇuoƆǝʇnlosq∀˙ʇnoʎɐ˥ʇsᴉ˥I∩ '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉSsɐʌuɐƆ˙ǝƃɐԀǝɯɐɹℲuᴉɐW                
+()uoᴉʇɔunɟ)llɐɔd            
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝddǝʇS˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+
+puǝ        
+ǝnɹʇ = ɔqɐ            
+(Ɩ)xǝpuIo┴dɯnſ:ʇnoʎɐ˥ǝƃɐԀI∩            
+puǝ            
+()ʎɐlԀ:(                
+{                    
+0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴                        
+}                    
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                    
+'uoʇʇnqqɐ┴                    
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                
+puǝ                
+()ʎɐlԀ:(                    
+{                        
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴                            
+}                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ʌ                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+uǝɥʇ (,,uoʇʇnqʇxǝ┴,,)∀sI:ʌ ɟᴉ                
+op ()uǝɹplᴉɥƆʇǝפ:qɐ┴lloɹɔS 'ʇxǝu uᴉ ʌ 'ᴉ ɹoɟ            
+uǝɥʇ ǝslɐɟ == ɔqɐ ɟᴉ        
+
+(puǝ        
+puǝ            
+puǝ                
+(ʌ)o┴dɯnſ:ʇnoʎɐ˥ǝƃɐԀI∩                    
+uǝɥʇ ǝƃɐdʇuǝɹɹnɔ == ǝɯɐN˙ʌ ɟᴉ                
+,,ǝƃɐԀ‾,, ˙˙ (,,,, ',,ɹǝʌɹǝS,, 'ǝɯɐN˙uoʇʇnqqɐ┴)qnsƃ˙ƃuᴉɹʇs = ǝƃɐdʇuǝɹɹnɔ                
+op ()uǝɹplᴉɥƆʇǝפ:ʇsᴉ˥ǝƃɐԀ 'ʇxǝu uᴉ ʌ 'ᴉ ɹoɟ            
+puǝ            
+()ʎɐlԀ:(                
+{                    
+0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴                        
+}                    
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                    
+'uoʇʇnqqɐ┴                    
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                
+puǝ                
+()ʎɐlԀ:(                    
+{                        
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴                            
+}                        
+'(ʇnO˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'Ɛ˙0)ʍǝu˙oɟuIuǝǝʍ┴                        
+'ʌ                        
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴                    
+uǝɥʇ (,,uoʇʇnqʇxǝ┴,,)∀sI:ʌ ɟᴉ                
+op ()uǝɹplᴉɥƆʇǝפ:qɐ┴lloɹɔS 'ʇxǝu uᴉ ʌ 'ᴉ ɹoɟ            
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ʞɔᴉlƆƖuoʇʇnqǝsnoW˙uoʇʇnqqɐ┴        
+
+ɹǝpɹOʇnoʎɐ˥˙ɹǝpɹOʇɹoS˙ɯnuƎ = ɹǝpɹOʇɹoS˙ʇnoʎɐ˥ʇsᴉ˥I∩        
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙ʇnoʎɐ˥ʇsᴉ˥I∩        
+(ᄅƖ '0)ʍǝu˙ɯᴉp∩ = ƃuᴉppɐԀ˙ʇnoʎɐ˥ʇsᴉ˥I∩        
+
+(ϛ '0)ʍǝu˙ɯᴉp∩ = do┴ƃuᴉppɐԀ˙ƃuᴉppɐԀI∩        
+(0Ɩ '0)ʍǝu˙ɯᴉp∩ = ʇɟǝ˥ƃuᴉppɐԀ˙ƃuᴉppɐԀI∩        
+ǝƃɐԀǝɯɐɹℲuᴉɐW = ʇuǝɹɐԀ˙ƃuᴉppɐԀI∩        
+
+(,,ʇnoʎɐ˥ʇsᴉ˥I∩,,)ʍǝu˙ǝɔuɐʇsuI = ʇnoʎɐ˥ʇsᴉ˥I∩ lɐɔol        
+(,,ƃuᴉppɐԀI∩,,)ʍǝu˙ǝɔuɐʇsuI = ƃuᴉppɐԀI∩ lɐɔol        
+
+0 = ssǝuʞɔᴉɥ┴ɹɐqlloɹɔS˙ǝƃɐԀǝɯɐɹℲuᴉɐW        
+(0 '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉSsɐʌuɐƆ˙ǝƃɐԀǝɯɐɹℲuᴉɐW        
+(80Ɛ '0 '00ㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝƃɐԀǝɯɐɹℲuᴉɐW        
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ǝƃɐԀǝɯɐɹℲuᴉɐW        
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝƃɐԀǝɯɐɹℲuᴉɐW        
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝƃɐԀǝɯɐɹℲuᴉɐW        
+ǝnɹʇ = ǝʌᴉʇɔ∀˙ǝƃɐԀǝɯɐɹℲuᴉɐW        
+ʇsᴉ˥ǝƃɐԀ = ʇuǝɹɐԀ˙ǝƃɐԀǝɯɐɹℲuᴉɐW        
+,,ǝƃɐԀ‾,, ˙˙ ʇxǝʇ = ǝɯɐN˙ǝƃɐԀǝɯɐɹℲuᴉɐW        
+(,,ǝɯɐɹℲƃuᴉlloɹɔS,,)ʍǝu˙ǝɔuɐʇsuI = ǝƃɐԀǝɯɐɹℲuᴉɐW lɐɔol        
+
+ǝnɹʇ = ǝlqɐʌᴉɥɔɹ∀˙ǝʞoɹʇSuʇq        
+ǝnɹʇ = pǝlqɐuƎ˙ǝʞoɹʇSuʇq        
+0 = ʎɔuǝɹɐdsuɐɹ┴˙ǝʞoɹʇSuʇq        
+Ɩ = ssǝuʞɔᴉɥ┴˙ǝʞoɹʇSuʇq        
+punoɹ˙ǝpoWuᴉoſǝuᴉ˥˙ɯnuƎ = ǝpoWuᴉoſǝuᴉ˥˙ǝʞoɹʇSuʇq        
+ ɹoloƆ˙פ‾ = ɹoloƆ˙ǝʞoɹʇSuʇq        
+ɹǝpɹoq˙ǝpoWǝʞoɹʇSʎldd∀˙ɯnuƎ = ǝpoWǝʞoɹʇSʎldd∀˙ǝʞoɹʇSuʇq        
+uoʇʇnqqɐ┴ = ʇuǝɹɐԀ˙ǝʞoɹʇSuʇq        
+,,ǝʞoɹʇSuʇq,, = ǝɯɐN˙ǝʞoɹʇSuʇq        
+
+uoʇʇnqqɐ┴ = ʇuǝɹɐԀ˙ɹǝuɹoƆI∩┴        
+(Ɛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹǝuɹoƆI∩┴        
+ƃɯᴉ = ǝƃɐɯI˙ʞpI        
+(0ᄅ '0 '0ᄅ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ʞpI        
+(Ɛ '0 'Ɛ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ʞpI        
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ʞpI        
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ʞpI        
+uoʇʇnqqɐ┴ = ʇuǝɹɐԀ˙ʞpI        
+,,ʞpIoƃo˥,, = ǝɯɐN˙ʞpI        
+(,,lǝqɐ˥ǝƃɐɯI,,)ʍǝu˙ǝɔuɐʇsuI = ʞpI lɐɔol        
+ʇɟǝ˥˙ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ɯnuƎ = ʇuǝɯuƃᴉl∀Xʇxǝ┴˙ǝlʇᴉ┴        
+000˙ϛƖ = ǝzᴉSʇxǝ┴˙ǝlʇᴉ┴        
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙ǝlʇᴉ┴        
+ʇxǝʇ = ʇxǝ┴˙ǝlʇᴉ┴        
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙ǝlʇᴉ┴        
+(ϛᄅ '0 '00Ɩ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝlʇᴉ┴        
+(0 '0 'ϛᄅ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝlʇᴉ┴        
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝlʇᴉ┴        
+(0ϛƖ '0ϛƖ '0ϛƖ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝlʇᴉ┴        
+uoʇʇnqqɐ┴ = ʇuǝɹɐԀ˙ǝlʇᴉ┴        
+
+ϛ˙0 = ʎɔuǝɹɐdsuɐɹ┴ʇxǝ┴˙uoʇʇnqqɐ┴        
+000˙ᄅƖ = ǝzᴉSʇxǝ┴˙uoʇʇnqqɐ┴        
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙uoʇʇnqqɐ┴        
+ploqᴉɯǝSɯɐɥʇoפ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙uoʇʇnqqɐ┴        
+(ϛᄅ '0 '0ᄅƖ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uoʇʇnqqɐ┴        
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙uoʇʇnqqɐ┴        
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙uoʇʇnqqɐ┴        
+,,,, = ʇxǝ┴˙uoʇʇnqqɐ┴        
+,,ɹǝʌɹǝS,, ˙˙ ʇxǝʇ = ǝɯɐN˙uoʇʇnqqɐ┴        
+qɐ┴lloɹɔS = ʇuǝɹɐԀ˙uoʇʇnqqɐ┴        
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ǝlʇᴉ┴ lɐɔol        
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆI∩┴ lɐɔol        
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = ǝlʇᴉʇ lɐɔol        
+(,,uoʇʇnqʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = uoʇʇnqqɐ┴ lɐɔol        
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɔq lɐɔol        
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSuʇq lɐɔol        
+(ƃɯᴉ 'ʇxǝʇ)qɐ┴:qɐʇᴉn uoᴉʇɔunɟ    
+
+{} = qɐʇᴉn lɐɔol    
+puǝ 
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙lǝqɐ˥ʇxǝ┴    
+000˙8Ɩ = ǝzᴉSʇxǝ┴˙lǝqɐ˥ʇxǝ┴    
+(ϛϛᄅ '98 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙lǝqɐ˥ʇxǝ┴    
+,,uoᴉsɹǝΛ ᴉɐɥ┴,, = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴    
+ǝuOɐʞopǝɹℲ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙lǝqɐ˥ʇxǝ┴    
+(0ϛ '0 '00ᄅ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙lǝqɐ˥ʇxǝ┴    
+(0 'ϛᄅ˙0 '0 'ᄅ0Ɩㄥㄣ866Ɩ˙0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙lǝqɐ˥ʇxǝ┴    
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙lǝqɐ˥ʇxǝ┴    
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆɹǝpɹoq˙lǝqɐ˥ʇxǝ┴    
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙lǝqɐ˥ʇxǝ┴    
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙lǝqɐ˥ʇxǝ┴    
+ǝɯɐɹℲ = ʇuǝɹɐԀ˙lǝqɐ˥ʇxǝ┴    
+
+(00Ɩ '0 'ㄥᄅƐ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐɹℲ    
+(08- '8ᄅ0ϛ088ϛƖ˙0 '0ϛƖ- 'Ɩ˙0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝɯɐɹℲ    
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ǝɯɐɹℲ    
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆɹǝpɹoq˙ǝɯɐɹℲ    
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐɹℲ    
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝɯɐɹℲ    
+uᴉɐW = ʇuǝɹɐԀ˙ǝɯɐɹℲ    
+ǝslǝ 
+ǝnɹʇ = pǝddɐɹMʇxǝ┴˙lǝqɐ˥ʇxǝ┴    
+000˙8Ɩ = ǝzᴉSʇxǝ┴˙lǝqɐ˥ʇxǝ┴    
+(ϛϛᄅ '98 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆʇxǝ┴˙lǝqɐ˥ʇxǝ┴    
+,,uoᴉsɹǝΛ ɥsᴉlƃuƎ,, = ʇxǝ┴˙lǝqɐ˥ʇxǝ┴    
+ǝuOɐʞopǝɹℲ˙ʇuoℲ˙ɯnuƎ = ʇuoℲ˙lǝqɐ˥ʇxǝ┴    
+(0ϛ '0 '00ᄅ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙lǝqɐ˥ʇxǝ┴    
+(0 'ϛᄅ˙0 '0 'ᄅ0Ɩㄥㄣ866Ɩ˙0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙lǝqɐ˥ʇxǝ┴    
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙lǝqɐ˥ʇxǝ┴    
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆɹǝpɹoq˙lǝqɐ˥ʇxǝ┴    
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙lǝqɐ˥ʇxǝ┴    
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙lǝqɐ˥ʇxǝ┴    
+ǝɯɐɹℲ = ʇuǝɹɐԀ˙lǝqɐ˥ʇxǝ┴    
+
+(00Ɩ '0 'ㄥᄅƐ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝɯɐɹℲ    
+(08- '8ᄅ0ϛ088ϛƖ˙0 '0ϛƖ- 'Ɩ˙0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝɯɐɹℲ    
+0 = lǝxᴉԀǝzᴉSɹǝpɹoq˙ǝɯɐɹℲ    
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆɹǝpɹoq˙ǝɯɐɹℲ    
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝɯɐɹℲ    
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝɯɐɹℲ    
+uᴉɐW = ʇuǝɹɐԀ˙ǝɯɐɹℲ    
+uǝɥʇ ,,ɥsᴉlƃuƎ,, == ǝpoW˙פ‾ ɟᴉ 
+(puǝ    
+puǝ        
+puǝ            
+(ǝnɹʇ 'ϛ˙0 ',,pɐnQ,, ',,ʇnO,, '(0ϛƐ '0 '0ϛϛ '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:uᴉɐW                
+ǝslɐɟ = ǝpᴉɥᴉn                
+ǝslǝ            
+(ǝnɹʇ 'ㄣ˙0 ',,pɐnQ,, ',,uI,, '(0 '0 '0 '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:uᴉɐW                
+ǝnɹʇ = ǝpᴉɥᴉn                
+uǝɥʇ ǝslɐɟ == ǝpᴉɥᴉn ɟᴉ            
+uǝɥʇ ƖℲ˙ǝpoƆʎǝʞ˙ɯnuƎ == ǝpoƆʎǝʞ˙ʇnduᴉ ɟᴉ        
+(ʇnduᴉ)uoᴉʇɔunɟ)ʇɔǝuuoƆ:uɐƃǝqʇnduI˙ǝɔᴉʌɹǝSʇnduIɹǝs∩    
+
+
+(uᴉɐW 'do┴)ǝlqɐƃƃɐɹpǝʞɐW    
+
+ǝslɐɟ = pǝlqɐuƎʇnduIɥɔno┴˙ʇnoʎɐ˥ǝƃɐԀI∩    
+ǝslɐɟ = pǝlqɐuƎʇnduIlǝǝɥMlloɹɔS˙ʇnoʎɐ˥ǝƃɐԀI∩    
+ǝslɐɟ = pǝlqɐuƎʇnduIpɐdǝɯɐפ˙ʇnoʎɐ˥ǝƃɐԀI∩    
+00ㄣ˙0 = ǝɯᴉ┴uǝǝʍ┴˙ʇnoʎɐ˥ǝƃɐԀI∩    
+(0Ɩ '0)ʍǝu˙ɯᴉp∩ = ƃuᴉppɐԀ˙ʇnoʎɐ˥ǝƃɐԀI∩    
+lɐɔᴉʇɹǝΛ˙uoᴉʇɔǝɹᴉpllᴉℲ˙ɯnuƎ = uoᴉʇɔǝɹᴉpllᴉℲ˙ʇnoʎɐ˥ǝƃɐԀI∩    
+pɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ = ǝlʎʇSƃuᴉsɐƎ˙ʇnoʎɐ˥ǝƃɐԀI∩    
+ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ = uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ʇnoʎɐ˥ǝƃɐԀI∩    
+ɹǝpɹOʇnoʎɐ˥˙ɹǝpɹOʇɹoS˙ɯnuƎ = ɹǝpɹOʇɹoS˙ʇnoʎɐ˥ǝƃɐԀI∩    
+ʇsᴉ˥ǝƃɐԀ = ʇuǝɹɐԀ˙ʇnoʎɐ˥ǝƃɐԀI∩    
+
+(,,ʇnoʎɐ˥ǝƃɐԀI∩,,)ʍǝu˙ǝɔuɐʇsuI = ʇnoʎɐ˥ǝƃɐԀI∩ lɐɔol    
+
+ǝƃɐԀuᴉɐW = ʇuǝɹɐԀ˙ʇsᴉ˥ǝƃɐԀ    
+,,ʇsᴉ˥ǝƃɐԀ,, = ǝɯɐN˙ʇsᴉ˥ǝƃɐԀ    
+(,,ɹǝploℲ,,)ʍǝu˙ǝɔuɐʇsuI = ʇsᴉ˥ǝƃɐԀ lɐɔol    
+
+80Ɛ0Ɩㄣ-- (80Ɛ '0 '0Ɩㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝƃɐԀuᴉɐW    
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙ǝƃɐԀuᴉɐW    
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝƃɐԀuᴉɐW    
+ǝnɹʇ = sʇuɐpuǝɔsǝpsdᴉlƆ˙ǝƃɐԀuᴉɐW    
+ǝƃɐԀ = ʇuǝɹɐԀ˙ǝƃɐԀuᴉɐW    
+,,ǝƃɐԀuᴉɐW,, = ǝɯɐN˙ǝƃɐԀuᴉɐW    
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝƃɐԀuᴉɐW lɐɔol    
+
+(Ɛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹNƆԀ    
+ǝƃɐԀ = ʇuǝɹɐԀ˙ɹNƆԀ    
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹNƆԀ lɐɔol    
+
+(80Ɛ '0 '0Ɩㄣ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙ǝƃɐԀ    
+(0 'Ɛ00000980˙0 '0 'ㄣƐ89ᄅㄣϛϛᄅ˙0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙ǝƃɐԀ    
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙ǝƃɐԀ    
+uᴉɐW = ʇuǝɹɐԀ˙ǝƃɐԀ    
+,,ǝƃɐԀ,, = ǝɯɐN˙ǝƃɐԀ    
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝƃɐԀ lɐɔol    
+
+(,,lǝqɐ˥ʇxǝ┴,,)ʍǝu˙ǝɔuɐʇsuI = lǝqɐ˥ʇxǝ┴ lɐɔol    
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = ǝɯɐɹℲ lɐɔol    
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSuʇq lɐɔol    
+(ᄅ '0)ʍǝu˙ɯᴉp∩ = do┴ƃuᴉppɐԀ˙pԀԀ    
+(6 '0)ʍǝu˙ɯᴉp∩ = ʇɟǝ˥ƃuᴉppɐԀ˙pԀԀ    
+qɐ┴lloɹɔS = ʇuǝɹɐԀ˙pԀԀ    
+,,pԀԀ,, = ǝɯɐN˙pԀԀ    
+(,,ƃuᴉppɐԀI∩,,)ʍǝu˙ǝɔuɐʇsuI = pԀԀ lɐɔol    
+
+(ϛƖ '0)ʍǝu˙ɯᴉp∩ = ƃuᴉppɐԀ˙˥˥Ԁ    
+ɹǝpɹOʇnoʎɐ˥˙ɹǝpɹOʇɹoS˙ɯnuƎ = ɹǝpɹOʇɹoS˙˥˥Ԁ    
+qɐ┴lloɹɔS = ʇuǝɹɐԀ˙˥˥Ԁ    
+,,˥˥Ԁ,, = ǝɯɐN˙˥˥Ԁ    
+(,,ʇnoʎɐ˥ʇsᴉ˥I∩,,)ʍǝu˙ǝɔuɐʇsuI = ˥˥Ԁ lɐɔol    
+
+0 = ssǝuʞɔᴉɥ┴ɹɐqlloɹɔS˙qɐ┴lloɹɔS    
+(0 '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉSsɐʌuɐƆ˙qɐ┴lloɹɔS    
+(00Ɛ '0 'ƐƐƖ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙qɐ┴lloɹɔS    
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙qɐ┴lloɹɔS    
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙qɐ┴lloɹɔS    
+ǝnɹʇ = ǝʌᴉʇɔ∀˙qɐ┴lloɹɔS    
+qɐ┴ = ʇuǝɹɐԀ˙qɐ┴lloɹɔS    
+,,qɐ┴lloɹɔS,, = ǝɯɐN˙qɐ┴lloɹɔS    
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹƆ lɐɔol    
+(,,ǝɯɐɹℲƃuᴉlloɹɔS,,)ʍǝu˙ǝɔuɐʇsuI = qɐ┴lloɹɔS lɐɔol    
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSuʇq lɐɔol    
+(ϛƖ '0)ʍǝu˙ɯᴉp∩ = ƃuᴉppɐԀ˙ɹǝuɹoƆqɐ┴    
+ɹǝpɹOʇnoʎɐ˥˙ɹǝpɹOʇɹoS˙ɯnuƎ = ɹǝpɹOʇɹoS˙ɹǝuɹoƆqɐ┴    
+qɐ┴ = ʇuǝɹɐԀ˙ɹǝuɹoƆqɐ┴    
+,,ɹǝuɹoƆqɐ┴,, = ǝɯɐN˙ɹǝuɹoƆqɐ┴    
+(,,ʇnoʎɐ˥ʇsᴉ˥I∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆqɐ┴ lɐɔol    
+ 
+(0 '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙qɐ┴    
+
+(0ϛ '0 'ϛ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙qɐ┴    
+(ϛㄣ 'ϛㄣ 'ϛㄣ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙qɐ┴    
+uᴉɐW = ʇuǝɹɐԀ˙qɐ┴    
+,,qɐ┴,, = ǝɯɐN˙qɐ┴    
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = qɐ┴ lɐɔol    
+
+,,ㄥϛㄣᄅƖϛϛㄣ9ㄣƖ//:pᴉʇǝssɐxqɹ,, = ǝƃɐɯI˙oƃo˥    
+08ᄅ0ƐƐ-- (08 '0 '08 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙oƃo˥    
+(ϛƖƖ- '0 'ϛ '0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙oƃo˥    
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙oƃo˥    
+(ϛϛᄅ 'ϛϛᄅ 'ϛϛᄅ)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙oƃo˥    
+uᴉɐW = ʇuǝɹɐԀ˙oƃo˥    
+,,oƃo˥,, = ǝɯɐN˙oƃo˥    
+(,,lǝqɐ˥ǝƃɐɯI,,)ʍǝu˙ǝɔuɐʇsuI = oƃo˥ lɐɔol    
+
+(ϛ '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹNƆ┴    
+do┴ = ʇuǝɹɐԀ˙ɹNƆ┴    
+,,ɹNƆ┴,, = ǝɯɐN˙ɹNƆ┴    
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹNƆ┴ lɐɔol    
+000˙Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙do┴    
+(0Ɛ '0 '9ϛϛ '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙do┴    
+(ㄥᄅ '0 '9ϛ9 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙do┴--    
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙do┴    
+uᴉɐW = ʇuǝɹɐԀ˙do┴    
+,,do┴,, = ǝɯɐN˙do┴    
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = do┴ lɐɔol    
+(0 '0)ʍǝu˙ɯᴉp∩ = snᴉpɐɹɹǝuɹoƆ˙ɹNƆW    
+uᴉɐW = ʇuǝɹɐԀ˙ɹNƆW    
+,,ɹNƆW,, = ǝɯɐN˙ɹNƆW    
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹNƆW lɐɔol    
+
+ǝnɹʇ = ǝlqɐʌᴉɥɔɹ∀˙ǝʞoɹʇSuʇq    
+ǝnɹʇ = pǝlqɐuƎ˙ǝʞoɹʇSuʇq    
+0 = ʎɔuǝɹɐdsuɐɹ┴˙ǝʞoɹʇSuʇq    
+Ɩ = ssǝuʞɔᴉɥ┴˙ǝʞoɹʇSuʇq    
+punoɹ˙ǝpoWuᴉoſǝuᴉ˥˙ɯnuƎ = ǝpoWuᴉoſǝuᴉ˥˙ǝʞoɹʇSuʇq    
+ ɹoloƆ˙פ‾ = ɹoloƆ˙ǝʞoɹʇSuʇq    
+ɹǝpɹoq˙ǝpoWǝʞoɹʇSʎldd∀˙ɯnuƎ = ǝpoWǝʞoɹʇSʎldd∀˙ǝʞoɹʇSuʇq    
+uᴉɐW = ʇuǝɹɐԀ˙ǝʞoɹʇSuʇq    
+,,ǝʞoɹʇSuʇq,, = ǝɯɐN˙ǝʞoɹʇSuʇq    
+
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSuʇq lɐɔol    
+(ǝnɹʇ 'ㄣ˙0 ',,pɐnQ,, ',,ʇnO,, '(0ϛƐ '0 '0ϛϛ '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:uᴉɐW    
+(ǝnɹʇ'ㄣ˙0',,pɐnQ,,',,ʇnO,,'(0ϛƐ '0 '9ϛ9 '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:uᴉɐW--    
+(ǝnɹʇ'ㄣ˙0',,pɐnQ,,',,ʇnO,,'(00ㄣ '0 '9ϛ9 '0)ʍǝu˙ᄅɯᴉp∩)ǝzᴉSuǝǝʍ┴:uᴉɐW--    
+
+uᴉɐW = ʇuǝɹɐԀ˙ɹǝuɹoƆI∩    
+(0 '0 '0 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uᴉɐW    
+(0 'ϛ˙0 '0 'ϛ˙0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙uᴉɐW    
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙uᴉɐW    
+(ϛ˙0 'ϛ˙0)ʍǝu˙ᄅɹoʇɔǝΛ = ʇuᴉoԀɹoɥɔu∀˙uᴉɐW    
+ǝnɹʇ = sʇuɐpuǝɔsǝpsdᴉlƆ˙uᴉɐW    
+ʍopuᴉM = ʇuǝɹɐԀ˙uᴉɐW    
+,,uᴉɐW,, = ǝɯɐN˙uᴉɐW    
+(,,ǝɯɐɹℲ,,)ʍǝu˙ǝɔuɐʇsuI = uᴉɐW lɐɔol    
+
+ƃuᴉlqᴉS˙ɹoᴉʌɐɥǝqxǝpuIZ˙ɯnuƎ = ɹoᴉʌɐɥǝqxǝpuIZ˙ʍopuᴉM    
+sǝlnpoW˙ᴉnפxolqoɹ˙(,,ᴉnפǝɹoƆ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ʇuǝɹɐԀ˙ʍopuᴉM    
+,,ΛΛΛ,, = ǝɯɐN˙ʍopuᴉM    
+(,,ᴉnפuǝǝɹɔS,,)ʍǝu˙ǝɔuɐʇsuI = ʍopuᴉM lɐɔol    
+
+(,,,, ',,˙ǝpoƆʎǝʞ˙ɯnuƎ,, '(puᴉqʎǝʞ)ƃuᴉɹʇsoʇ)qnsƃ˙ƃuᴉɹʇs = ooʎ lɐɔol    
+ƖℲ˙ǝpoƆʎǝʞ˙ɯnuƎ ɹo puᴉqʎǝʞ = puᴉqʎǝʞ lɐɔol    
+,,,, = ǝƃɐdʇuǝɹɹnɔ lɐɔol    
+ǝslɐɟ = ɔqɐ lɐɔol    
+ǝslɐɟ = ǝpᴉɥᴉn lɐɔol    
+{} = ɔunɟso lɐɔol    
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆI∩ lɐɔol    
+(puᴉqʎǝʞ 'oƃol 'ʇxǝʇ)ʍopuᴉM:ǝʇɐpd∩ uoᴉʇɔunɟ
+
+{} = ǝʇɐpd∩ lɐɔol
+
+puǝ
+(    
+puǝ        
+puǝ            
+(ʇnduᴉ)ǝʇɐpd∩                
+uǝɥʇ ƃuᴉƃƃɐɹp puɐ ʇnduIƃɐɹp == ʇnduᴉ ɟᴉ            
+(ʇnduᴉ)uoᴉʇɔunɟ        
+)ʇɔǝuuoƆ:pǝƃuɐɥƆʇnduI˙ǝɔᴉʌɹǝSʇnduIɹǝs∩    
+
+(    
+puǝ        
+puǝ            
+ʇnduᴉ = ʇnduIƃɐɹp                
+uǝɥʇ            
+ɥɔno┴˙ǝdʎ┴ʇnduIɹǝs∩˙ɯnuƎ == ǝdʎ┴ʇnduIɹǝs∩˙ʇnduᴉ                
+ɹo ʇuǝɯǝʌoWǝsnoW˙ǝdʎ┴ʇnduIɹǝs∩˙ɯnuƎ == ǝdʎ┴ʇnduIɹǝs∩˙ʇnduᴉ                
+ɟᴉ            
+(ʇnduᴉ)uoᴉʇɔunɟ        
+)ʇɔǝuuoƆ:pǝƃuɐɥƆʇnduI˙ʇɔǝɾqoɹɐqdoʇ    
+
+(    
+puǝ        
+puǝ            
+(                
+puǝ                    
+puǝ                        
+ǝslɐɟ = ƃuᴉƃƃɐɹp                            
+uǝɥʇ puƎ˙ǝʇɐʇSʇnduIɹǝs∩˙ɯnuƎ == ǝʇɐʇSʇnduIɹǝs∩˙ʇnduᴉ ɟᴉ                        
+()uoᴉʇɔunɟ                    
+)ʇɔǝuuoƆ:pǝƃuɐɥƆ˙ʇnduᴉ                
+
+uoᴉʇᴉsoԀ˙ʇɔǝɾqo = uoᴉʇᴉsoԀʇɹɐʇS                
+uoᴉʇᴉsoԀ˙ʇnduᴉ = ʇɹɐʇSƃɐɹp                
+ǝnɹʇ = ƃuᴉƃƃɐɹp                
+uǝɥʇ ɥɔno┴˙ǝdʎ┴ʇnduIɹǝs∩˙ɯnuƎ == ǝdʎ┴ʇnduIɹǝs∩˙ʇnduᴉ ɹo ƖuoʇʇnqǝsnoW˙ǝdʎ┴ʇnduIɹǝs∩˙ɯnuƎ == ǝdʎ┴ʇnduIɹǝs∩˙ʇnduᴉ ɟᴉ            
+(ʇnduᴉ)uoᴉʇɔunɟ        
+)ʇɔǝuuoƆ:uɐƃǝqʇnduI˙ʇɔǝɾqoɹɐqdoʇ    
+
+puǝ    
+()ʎɐlԀ:uǝǝʍ┴        
+({        
+sod = uoᴉʇᴉsoԀ            
+} '(ϛƖ˙0)ʍǝu˙oɟuIuǝǝʍ┴ 'ʇɔǝɾqo)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴ = uǝǝʍ┴ lɐɔol        
+(⅄˙ɐʇlǝp + ʇǝsɟɟO˙⅄˙uoᴉʇᴉsoԀʇɹɐʇS            
+'ǝlɐɔS˙⅄˙uoᴉʇᴉsoԀʇɹɐʇS 'X˙ɐʇlǝp + ʇǝsɟɟO˙X˙uoᴉʇᴉsoԀʇɹɐʇS 'ǝlɐɔS˙X˙uoᴉʇᴉsoԀʇɹɐʇS)ʍǝu˙ᄅɯᴉp∩ = sod lɐɔol        
+ʇɹɐʇSƃɐɹp - uoᴉʇᴉsoԀ˙ʇnduᴉ = ɐʇlǝp lɐɔol        
+(ʇnduᴉ)ǝʇɐpd∩ uoᴉʇɔunɟ lɐɔol    
+
+lᴉu = uoᴉʇᴉsoԀʇɹɐʇS lɐɔol    
+lᴉu = ʇɹɐʇSƃɐɹp lɐɔol    
+lᴉu = ʇnduIƃɐɹp lɐɔol    
+lᴉu = ƃuᴉƃƃɐɹp lɐɔol    
+(ʇɔǝɾqo 'ʇɔǝɾqoɹɐqdoʇ)ǝlqɐƃƃɐɹpǝʞɐW uoᴉʇɔunɟ lɐɔol
+
+(,,ǝɔᴉʌɹǝSuǝǝʍ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSuǝǝʍ┴ lɐɔol
+(,,ǝɔᴉʌɹǝSʇnduIɹǝs∩,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSʇnduIɹǝs∩ lɐɔol
+puǝ ()ʎoɹʇsǝp:(,,ΛΛΛ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝlnpoW˙ᴉnפxolqoɹ˙(,,ᴉnפǝɹoƆ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ uǝɥʇ (,,ΛΛΛ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝlnpoW˙ᴉnפxolqoɹ˙(,,ᴉnפǝɹoƆ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ
+(ϛϛᄅ '98 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ɹoloƆ˙פ‾
+
+puǝ
+puǝ
+puǝ
+;(ㄣ06ϛ 'ㄣㄥ '69ㄣ-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,ǝɹᴉɐuoᴉllᴉq loʇsᴉԀ,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,ɹǝpʍodunפ,, == ɹ) ɟᴉǝslǝ
+;(8ϛƖ9 'ᄅㄥƖ 'ㄥ0ϛ6-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,lnoS ɔᴉuoɯǝp,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,dsᴉM ɔᴉuoɯǝp,, == ɹ) ɟᴉǝslǝ
+;(ϛᄅ90ㄣƖ69Ɛ˙Ɩ8ϛᄅƖ- '69ㄣϛϛƐㄣƖㄥㄣㄣ9Ɛ6˙8ㄥ '88Ɩᄅ6ㄣㄣ09ㄣㄣƐ9˙0ᄅ9)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,lǝqǝɹ ʎpuɐƆ,,        
+',,ɟǝᴉɥ┴ ʇǝǝʍS,, ',,ɹǝlʇʇɐq ɹɐq ǝʇɐloɔoɥƆ,, ',,ɹoᴉɹɹɐM ɐoɔoƆ,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,ɐoɔoƆ pǝɹnɾuoƆ,, == ɹ) ɟᴉǝslǝ
+;(6ƐƖ 'Ɛ8Ɛ 'ㄣ6ϛ9)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,ɹoᴉɹɹɐM ʍǝɹƆ uoƃɐɹp,, ',,ɹǝɥɔɹ∀ ʍǝɹƆ uoƃɐɹp,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,ǝlɐɔS uoƃɐɹp,, == ɹ) ɟᴉǝslǝ
+;(6ㄣϛ0Ɩ- 'ᄅƐƐ 'ㄥ0ƖᄅƖ-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,ǝʇɐɹᴉԀ ǝlƃunſ,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,lɐʇǝW dɐɹɔS,, == ɹ) ɟᴉǝslǝ
+;(0ㄣ68- 'ᄅƐƐ 'Ɛ660Ɩ-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,uᴉɐʇdɐƆ uɐɯɥsᴉℲ,, ',,ɹǝpᴉɐɹ uɐɯɥsᴉℲ,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,lᴉɐ┴ ɥsᴉℲ,, == ɹ) ɟᴉǝslǝ
+;(ㄥƖ69- '0ㄥㄣ 'ϛㄣϛƐƖ-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,ǝʇɐɹᴉԀ lɐɔᴉƃoloɥʇʎW,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,ʞsn┴ ᴉuᴉW,, == ɹ) ɟᴉ
+uǝɥʇ ƐplɹoM ɟᴉ
+puǝ
+puǝ
+;(ᄅㄣϛ0Ɩ- '6Ɛᄅ 'ϛ8ƐƐ-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,ɹǝᴉploS ɐǝS,, ',,ɹǝʇɥƃᴉℲ ɹǝʇɐM,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,ʇǝldoɹp ɔᴉʇsʎW,, == ɹ) ɟᴉǝslǝ
+;(ㄥƖƐƖ- 'ㄥ 'ƐƐ09-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,ǝɹᴉdɯɐΛ,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,ƃuɐℲ ǝɹᴉdɯɐΛ,, == ɹ) ɟᴉǝslǝ
+;(9ϛ- 'Ɛㄥ 'ϛ6ᄅ)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,ɟɟɐʇS ʎɹoʇɔɐℲ,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,lɐᴉɹǝʇɐW ǝʌᴉʇɔɐoᴉpɐɹ,, == ɹ) ɟᴉǝslǝ
+;(ϛƐᄅƖ 'ᄅᄅƖ '8ㄥ8)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,ǝʇɐɹᴉԀ uɐʍS,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,lɐʇǝW dɐɹɔS,, == ɹ) ɟᴉǝslǝ
+;(6ϛ6ϛ- '8ㄥ '8ᄅㄣϛ-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,ɐɾuᴉN ɐɯƃɐW,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,ǝɹO ɐɯƃɐW,, == ɹ) ɟᴉ
+uǝɥʇ ᄅplɹoM ɟᴉ
+puǝ
+puǝ
+;(69ϛƖ '6Ɩ 'ƐᄅƖƖ9)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,opuɐɯɯoƆ uɐɯɥsᴉℲ,, ',,ɹoᴉɹɹɐM uɐɯɥsᴉℲ,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,lᴉɐ┴ ɥsᴉℲ,, == ɹ) ɟᴉǝslǝ
+;(ᄅƖ6Ɩ- 'ϛㄣ8 '869ㄣ-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{,,pɹɐnפ s,poפ,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,sƃuᴉM lǝƃu∀,, == ɹ) ɟᴉǝslǝ
+;(0ϛƐㄣ 'ϛƖ 'ϛㄣƖƖ-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{,,ǝʇnɹq,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ ((,,lɐʇǝW dɐɹɔS,, == ɹ) ɹo (,,ɹǝɥʇɐǝ˥,, == ɹ)) ɟᴉǝslǝ
+;(0ᄅ88 'ㄣ8 'ϛƖ8ϛ-)ʍǝu˙ǝɯɐɹℲƆ = uoWǝɯɐɹℲƆ    
+;{ ,,ʎdS ʎɹɐʇᴉlᴉW,, ',,ɹǝᴉploS ʎɹɐʇᴉlᴉW,, } = qoWlɐᴉɹǝʇɐW    
+uǝɥʇ (,,ǝɹO ɐɯƃɐW,, == ɹ) ɟᴉ
+uǝɥʇ ƖplɹoM ɟᴉ
+(ɹ)lɐᴉɹǝʇɐWʞɔǝɥƆ uoᴉʇɔunɟ lɐɔol
+
+[lɐᴉɹǝʇɐWʞɔǝɥƆ] --
+
+puǝ
+ǝslɐɟ uɹnʇǝɹ
+puǝ
+puǝ
+ǝnɹʇ uɹnʇǝɹ    
+uǝɥʇ (ʌ)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ
+op (ǝɯɐuǝlqɐʇ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+(ǝɯɐuǝlqɐʇ)plᴉɥƆʇsɹᴉℲpuᴉℲɯoʇsnƆ uoᴉʇɔunɟ lɐɔol
+[plᴉɥƆʇsɹᴉℲpuᴉℲɯoʇsnƆ] --
+
+(lɐᴉɹǝʇɐWll∀)ʇɹos˙ǝlqɐʇ
+
+puǝ
+{',,ɹǝpʍodunפ,,',,dsᴉM ɔᴉuoɯǝp,,',,ɐoɔoƆ pǝɹnɾuoƆ,,',,ǝlɐɔS uoƃɐɹp,,',,lɐʇǝW dɐɹɔS,,',,lᴉɐ┴ ɥsᴉℲ,,',,ʞsn┴ ᴉuᴉW,,} = lɐᴉɹǝʇɐWll∀
+uǝɥʇ ƐplɹoM ɟᴉǝslǝ
+{',,ʇǝldoɹp ɔᴉʇsʎW,,',,ƃuɐℲ ǝɹᴉdɯɐΛ,,',,lɐᴉɹǝʇɐW ǝʌᴉʇɔɐoᴉpɐɹ,,',,lɐʇǝW dɐɹɔS,,',,ǝɹO ɐɯƃɐW,,} = lɐᴉɹǝʇɐWll∀
+uǝɥʇ ᄅplɹoM ɟᴉǝslǝ
+{,,lᴉɐ┴ ɥsᴉℲ,,',,sƃuᴉM lǝƃu∀,,',,lɐʇǝW dɐɹɔS,,',,ɹǝɥʇɐǝ˥,,',,ǝɹO ɐɯƃɐW,,} = lɐᴉɹǝʇɐWll∀
+uǝɥʇ ƖplɹoM ɟᴉ
+lɐᴉɹǝʇɐWll∀ lɐɔol
+
+puǝ
+0 uɹnʇǝɹ    
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+ʇunoƆ˙ʌ uɹnʇǝɹ                    
+uǝɥʇ ǝɯɐuʇɐɯ == ǝɯɐN˙ʌ ɟᴉ                
+uǝɥʇ ,,lɐᴉɹǝʇɐW,, == ǝdʎ┴˙ʌ ɟᴉ            
+uǝɥʇ ,,ǝlqɐʇ,, == (ʌ)ǝdʎʇ ɟᴉ        
+op ((,,ʎɹoʇuǝʌuIʇǝƃ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ    
+(ǝɯɐuʇɐɯ)lɐᴉɹǝʇɐWʇǝפ uoᴉʇɔunɟ
+
+[lɐᴉɹǝʇɐWʇǝפ] --
+puǝ
+ǝslɐɟ uɹnʇǝɹ
+puǝ
+puǝ
+puǝ    
+puǝ        
+ǝnɹʇ uɹnʇǝɹ            
+uǝɥʇ ǝɯɐuuodɐǝM == ǝɯɐN˙ʌ ɟᴉ        
+uǝɥʇ ,,pɹoʍS,, == ǝdʎ┴˙ʌ ɟᴉ    
+uǝɥʇ ,,ǝlqɐʇ,, == (ʌ)ǝdʎʇ ɟᴉ
+op ((,,ʎɹoʇuǝʌuIʇǝƃ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+(ǝɯɐuuodɐǝM)ʎɹoʇuǝʌuIuodɐǝMʇǝפ uoᴉʇɔunɟ
+[ʎɹoʇuǝʌuIuodɐǝMʇǝפ]--
+
+puǝ
+,,ǝslǝ,, uɹnʇǝɹ
+puǝ
+puǝ
+,,o┴d∩ ǝnɹʇ,, uɹnʇǝɹ    
+uǝɥʇ (ɯnNsɐW)ɹǝqɯnuoʇ =< (ǝnlɐΛ˙lǝʌǝ˥˙(ǝMǝɯɐN)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ɹǝqɯnuoʇ ɟᴉǝslǝ
+,,o┴uʍop ǝnɹʇ,, uɹnʇǝɹ    
+uǝɥʇ (ɯnNsɐW)ɹǝqɯnuoʇ > (ǝnlɐΛ˙lǝʌǝ˥˙(ǝMǝɯɐN)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ɹǝqɯnuoʇ ɟᴉ
+uǝɥʇ (ǝMǝɯɐN)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ
+puǝ
+puǝ
+,,o┴d∩ ǝnɹʇ,, uɹnʇǝɹ    
+uǝɥʇ (ɯnNsɐW)ɹǝqɯnuoʇ =< (ǝnlɐΛ˙lǝʌǝ˥˙(ǝMǝɯɐN)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ɹǝqɯnuoʇ ɟᴉǝslǝ
+,,o┴uʍop ǝnɹʇ,, uɹnʇǝɹ    
+uǝɥʇ (ɯnNsɐW)ɹǝqɯnuoʇ > (ǝnlɐΛ˙lǝʌǝ˥˙(ǝMǝɯɐN)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ɹǝqɯnuoʇ ɟᴉ
+uǝɥʇ (ǝMǝɯɐN)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ
+(ɯnNsɐW 'ǝMǝɯɐN)uodɐǝMʎɹǝʇsɐWʞɔǝɥƆ uoᴉʇɔunɟ
+
+puǝ
+puǝ
+,,ǝʌɐH ʇoN,, uɹnʇǝɹ
+ǝslǝ
+ʇxǝ┴uɹnʇǝɹ uɹnʇǝɹ
+uǝɥʇ ,,,, =~ ʇxǝ┴uɹnʇǝɹ ɟᴉ
+puǝ
+puǝ
+puǝ    
+ǝɯɐN˙ʌ = ʇxǝ┴uɹnʇǝɹ        
+uǝɥʇ ǝlʎʇS == dᴉ┴loo┴˙ʌ ɟᴉ    
+uǝɥʇ (,,loo┴,,)∀sI:ʌ ɟᴉ
+op (()uǝɹplᴉɥƆʇǝפ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+puǝ
+puǝ
+puǝ    
+ǝɯɐN˙ʌ = ʇxǝ┴uɹnʇǝɹ        
+uǝɥʇ ǝlʎʇS == dᴉ┴loo┴˙ʌ ɟᴉ    
+uǝɥʇ (,,loo┴,,)∀sI:ʌ ɟᴉ
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+,,,, = ʇxǝ┴uɹnʇǝɹ
+(ǝlʎʇS)ǝlʎʇSƃuᴉʇɥƃᴉℲʇǝפ uoᴉʇɔunɟ
+
+puǝ
+((ᄅㄥ9 '08ᄅƖ)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopƖuoʇʇnq:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()ɹǝlloɹʇuoƆǝɹnʇdɐƆ:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()ʞɔᴉlƆ uoᴉʇɔunɟ
+[[ʞɔᴉlƆ uoᴉʇɔunℲ]]--
+
+puǝ
+puǝ
+(ɹǝʌɹǝs 'pIǝɔɐlԀ˙ǝɯɐƃ)ǝɔuɐʇsuIǝɔɐlԀo┴ʇɹodǝlǝ┴:ǝɔᴉʌɹǝSԀ┴
+ǝslǝ
+(ɹǝʌɹǝs 'pIǝɔɐlԀ˙ǝɯɐƃ)ǝɔuɐʇsuIǝɔɐlԀo┴ʇɹodǝlǝ┴:ǝɔᴉʌɹǝSԀ┴
+()ʍǝNuᴉoɾ = ɹǝʌɹǝs lɐɔol
+(({})ǝpoɔuƎNOSſ:ǝɔᴉʌɹǝSdʇʇH ',,sss˙sɹǝʌɹǝs,,)ǝlᴉɟǝʇᴉɹʍ
+uǝɥʇ ɹǝʌɹǝs ʇou ɟᴉ
+()ʍǝNuᴉoɾ = ɹǝʌɹǝs lɐɔol
+
+puǝ
+puǝ
+puǝ
+puǝ    
+[,pᴉ,]ɹǝʌɹǝS uɹnʇǝɹ        
+()ʇᴉɐʍ        
+((uᴉoſʇuop)ǝpoɔuƎNOSſ:ǝɔᴉʌɹǝSdʇʇH ',,sss˙sɹǝʌɹǝs,,)ǝlᴉɟǝʇᴉɹʍ        
+([,,pᴉ,,]ɹǝʌɹǝS 'uᴉoſʇuop)ʇɹǝsuᴉ˙ǝlqɐʇ        
+uǝɥʇ ɾ ɟᴉ    
+puǝ    
+puǝ        
+ǝslɐɟ = ɾ            
+uǝɥʇ pᴉ˙ɹǝʌɹǝS == ɔ ɟᴉ        
+op (uᴉoſʇuop)sɹᴉɐd uᴉ ɔ 'ɐ ɹoɟ    
+ǝnɹʇ = ɾ lɐɔol    
+uǝɥʇ pIqoſ˙ǝɯɐƃ =~ ɹǝʌɹǝS ɟᴉ
+op [,,ɐʇɐp,,]sɹǝʌɹǝSɹǝɥʇO 'ʇxǝu uᴉ ɹǝʌɹǝS 'xǝpuI ɹoɟ
+
+(uᴉoſʇuop)ǝpoɔǝpNOSſ:ǝɔᴉʌɹǝSdʇʇH = uᴉoſʇuop
+(,sss˙sɹǝʌɹǝs,)ǝlᴉɟpɐǝɹ = uᴉoſʇuop lɐɔol
+puǝ
+(({})ǝpoɔuƎNOSſ:ǝɔᴉʌɹǝSdʇʇH ',sss˙sɹǝʌɹǝs,)ǝlᴉɟǝʇᴉɹʍ
+uǝɥʇ (,sss˙sɹǝʌɹǝs,)ǝlᴉɟsᴉ ʇou ɟᴉ
+()ʍǝNuᴉoɾ uoᴉʇɔunɟ
+((,,00Ɩ=ʇᴉɯᴉl⅋ɔs∀=ɹǝpɹOʇɹos¿ɔᴉlqnԀ/sɹǝʌɹǝs/,, ˙˙ pIǝɔɐlԀ˙ǝɯɐƃ
+˙˙ ,,/sǝɯɐƃ/ɹ/ɯoɔ˙xolqoɹ˙sǝɯɐƃ//:sdʇʇɥ,,)ʇǝפdʇʇH:ǝɯɐƃ)ǝpoɔǝpNOSſ:ǝɔᴉʌɹǝSdʇʇH = sɹǝʌɹǝSɹǝɥʇO lɐɔol
+;,,ǝɔᴉʌɹǝSʇɹodǝlǝ┴,, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ',,ǝɔᴉʌɹǝSdʇʇH,, ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSԀ┴ 'ǝɔᴉʌɹǝSdʇʇH lɐɔol
+ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ puɐ ()pǝpɐo˥sI:ǝɯɐƃ lᴉʇun ()ʇᴉɐʍ ʇɐǝdǝɹ
+()doH uoᴉʇɔunɟ
+[[ᄅ doH uoᴉʇɔunℲ]]--
+puǝ
+puǝ
+(puǝ
+puǝ    
+()ɹǝuɹnʇǝɹԀ┴        
+uǝɥʇ ,,,, =~ ƃuᴉɥʇʎu∀punoɟ ɟᴉ    
+()ɹǝuɹnʇǝɹԀ┴    
+()uoᴉʇɔunɟ)llɐɔd
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()ʇɹodǝlǝ┴ uoᴉʇɔunɟ
+
+puǝ
+puǝ
+puǝ
+puǝ    
+(ㄣ)ʇᴉɐʍ        
+(puǝ        
+(ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ 'pI 'pIǝɔɐlԀ)ǝɔuɐʇsuIǝɔɐlԀo┴ʇɹodǝlǝ┴:(,,ǝɔᴉʌɹǝSʇɹodǝlǝ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+()ʇᴉɐʍ˙ʞsɐʇ            
+()uoᴉʇɔunɟ)llɐɔd        
+()ʇᴉɐʍ˙ʞsɐʇ        
+(pI 'spIll∀)ʇɹǝsuᴉ˙ǝlqɐʇ        
+uǝɥʇ ǝnɹʇ == ǝlqᴉssoԀ ɟᴉ    
+puǝ    
+Ɩ + ɯnu = ɯnu        
+puǝ        
+puǝ            
+(puǝ                
+(ɹnoHlɐnʇɔɐ 'spIll∀)ʇɹǝsuᴉ˙ǝlqɐʇ                    
+{} = spIll∀                    
+()uoᴉʇɔunɟ)llɐɔd = ǝlᴉℲlǝp lɐɔol                
+uǝɥʇ (ƃuᴉʇsᴉxƎ)ɹǝqɯnuoʇ =~ (ɹnoHlɐnʇɔɐ)ɹǝqɯnuoʇ ɟᴉ            
+ǝslǝ        
+puǝ            
+ǝslɐɟ = ǝlqᴉssoԀ                
+uǝɥʇ (ƃuᴉʇsᴉxƎ)ƃuᴉɹʇsoʇ == pI ɟᴉ            
+uǝɥʇ 0 =~ ɯnu ɟᴉ        
+op (spIll∀)sɹᴉɐd uᴉ ƃuᴉʇsᴉxƎ'‾ ɹoɟ    
+uǝɥʇ (ƃuᴉʎɐld˙ʌ)ɹǝqɯnuoʇ < (sɹǝʎɐlԀxɐɯ˙ʌ)ɹǝqɯnuoʇ ɟᴉ
+(pᴉ˙ʌ)ƃuᴉɹʇsoʇ = pI
+ǝnɹʇ = ǝlqᴉssoԀ lɐɔol
+op (ɐʇɐp˙ǝʇᴉS)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ
+;0 = ɯnu lɐɔol
+puǝ
+ɹosɹnƆǝƃɐԀʇxǝu˙ǝʇᴉS = ƃuᴉɥʇʎu∀punoɟ
+uǝɥʇ lᴉu =~ ɹosɹnƆǝƃɐԀʇxǝu˙ǝʇᴉS puɐ ,,llnu,, =~ ɹosɹnƆǝƃɐԀʇxǝu˙ǝʇᴉS puɐ ɹosɹnƆǝƃɐԀʇxǝu˙ǝʇᴉS ɟᴉ
+,,,, = pI lɐɔol
+puǝ
+((ƃuᴉɥʇʎu∀punoɟ ˙˙ ,=ɹosɹnɔ⅋00Ɩ=ʇᴉɯᴉl⅋ɔs∀=ɹǝpɹOʇɹos¿ɔᴉlqnԀ/sɹǝʌɹǝs/, ˙˙ pIǝɔɐlԀ ˙˙ ,/sǝɯɐƃ/ɹ/ɯoɔ˙xolqoɹ˙sǝɯɐƃ//:sdʇʇɥ,)ʇǝפdʇʇH:ǝɯɐƃ)ǝpoɔǝpNOSſ:ǝɔᴉʌɹǝSdʇʇH˙ǝɯɐƃ = ǝʇᴉS
+ǝslǝ
+((,00Ɩ=ʇᴉɯᴉl⅋ɔs∀=ɹǝpɹOʇɹos¿ɔᴉlqnԀ/sɹǝʌɹǝs/, ˙˙ pIǝɔɐlԀ ˙˙ ,/sǝɯɐƃ/ɹ/ɯoɔ˙xolqoɹ˙sǝɯɐƃ//:sdʇʇɥ,)ʇǝפdʇʇH:ǝɯɐƃ)ǝpoɔǝpNOSſ:ǝɔᴉʌɹǝSdʇʇH˙ǝɯɐƃ = ǝʇᴉS
+uǝɥʇ ,,,, == ƃuᴉɥʇʎu∀punoɟ ɟᴉ
+;ǝʇᴉS lɐɔol
+()ɹǝuɹnʇǝɹԀ┴ uoᴉʇɔunɟ
+ǝslɐɟ = pǝʇǝlǝp lɐɔol
+ɹnoɥ˙(,,ʇ*¡,,)ǝʇɐp˙so = ɹnoHlɐnʇɔɐ lɐɔol
+,,,, = ƃuᴉɥʇʎu∀punoɟ lɐɔol
+{} = spIll∀ lɐɔol
+pIǝɔɐlԀ˙ǝɯɐƃ = pIǝɔɐlԀ lɐɔol
+
+puǝ
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+puǝ                    
+()lǝɔuɐƆ:uǝǝʍʇ                        
+()ℲʇɐoqdoʇS uoᴉʇɔunɟ                    
+()ʎɐlԀ:uǝǝʍʇ                    
+({ ǝɯɐɹℲƆo┴oƃ = ǝɯɐɹℲƆ } 'oɟuᴉ 'ʇɹɐd)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴ = uǝǝʍʇ lɐɔol                    
+(ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '00ᄅ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆo┴oƃ - uoᴉʇᴉsoԀ˙ʇɹɐd))ʍǝu˙oɟuIuǝǝʍ┴ = oɟuᴉ lɐɔol                    
+(,,ǝɔᴉʌɹǝSuǝǝʍ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSuǝǝʍ┴ lɐɔol                    
+uǝɥʇ (,,ʇɹɐԀǝsɐq,,)∀sI:ʇɹɐd ɟᴉ                
+op (()sʇuɐpuǝɔsǝpʇǝפ:lǝpoɯ)sɹᴉɐd uᴉ ʇɹɐd '‾ ɹoɟ            
+uǝɥʇ ǝɯɐN˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ == ǝɯɐNɹǝuʍo ɟᴉ        
+ǝɯɐN˙ǝnlɐΛ˙ɹǝuʍo = ǝɯɐNɹǝuʍo lɐɔol        
+uǝɥʇ ǝnlɐΛ˙ɹǝuʍo puɐ (,,ǝnlɐΛʇɔǝɾqO,,)∀sI:ɹǝuʍo puɐ ɹǝuʍo ɟᴉ    
+(,,ɹǝuʍO,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:lǝpoɯ = ɹǝuʍo lɐɔol    
+(ǝɯɐɹℲƆo┴oƃ 'lǝpoɯ)lǝpoWuǝǝʍʇ uoᴉʇɔunɟ lɐɔol
+
+puǝ	
+puǝ	
+()lǝɔuɐƆ:zuǝǝʍʇ	
+()ǝlƆuɐƆuǝǝʍ┴‾ uoᴉʇɔunɟ	
+puǝ	
+puǝ ɹɹǝ uɹnʇǝɹ uǝɥʇ uǝǝʍʇ ʇou ɟᴉ	
+(puǝ	
+()ʎɐlԀ:zuǝǝʍʇ		
+({ ǝɯɐɹℲƆoʇoƃ = ǝɯɐɹℲƆ } 'oɟuᴉ '[,,ʇɹɐԀʇooɹpᴉouɐɯnH,,]ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ǝʇɐǝɹƆ:s‾uǝǝʍʇ = zuǝǝʍʇ		
+()uoᴉʇɔunɟ)llɐɔd = ɹɹǝ 'uǝǝʍʇ	
+(ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ϛᄅƐ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆoʇoƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[,,ɹǝʎɐlԀlɐɔo˥,,](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)		
+)ʍǝu˙oɟuIuǝǝʍ┴ = oɟuᴉ lɐɔol	
+,,ǝɔᴉʌɹǝSuǝǝʍ┴,, ǝɔᴉʌɹǝs:ǝɯɐƃ = s‾uǝǝʍʇ lɐɔol	
+ǝslǝ	
+	
+(puǝ	
+()lǝɔuɐƆ:zuǝǝʍʇ		
+()uoᴉʇɔunɟ)llɐɔd	
+uǝɥʇ 0Ɩ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆoʇoƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[,,ɹǝʎɐlԀlɐɔo˥,,](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ	
+uǝǝʍ┴ --- (ǝɯɐɹℲƆoʇoƃ)ʇɐoqoʍʇ uoᴉʇɔunɟ
+
+puǝ
+(ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇǝƃɹɐʇ))ɹoolɟ˙ɥʇɐɯ uɹnʇǝɹ	
+(ʇǝƃɹɐʇ)ǝɔuɐʇsᴉpʇǝפ uoᴉʇɔunɟ
+
+puǝ
+puǝ	
+ǝslɐɟ = dᴉlƆ˙פ‾		
+()lǝɔuɐƆ:uǝǝʍʇ		
+uǝɥʇ ǝnɹʇ == uǝǝʍ┴doʇS˙פ‾ ɟᴉ	
+puǝ	
+soԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ		
+()lǝɔuɐƆ:uǝǝʍʇ		
+uǝɥʇ 0ϛᄅ => ǝɔuɐʇsᴉp ɟᴉ	
+()ʎɐlԀ:uǝǝʍʇ	
+(puǝ ({soԀ = ǝɯɐɹℲƆ}'(ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ '0Ɩᄅ/ǝɔuɐʇsᴉp)ʍǝu˙oɟuIuǝǝʍ┴'ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ǝʇɐǝɹƆ:(,,ǝɔᴉʌɹǝSuǝǝʍ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = uǝǝʍʇ ()uoᴉʇɔunɟ)llɐɔd	
+puǝ ǝslɐɟ = ʇᴉS˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ uǝɥʇ ǝnɹʇ == ʇᴉS˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ	
+ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙soԀ) = ǝɔuɐʇsᴉp	
+(soԀ)Ԁ┴ uoᴉʇɔunɟ
+
+puǝ
+puǝ
+()lǝɔuɐƆ:zuǝǝʍʇ
+()ǝlƆuɐƆuǝǝʍ┴‾ uoᴉʇɔunɟ
+puǝ
+puǝ ɹɹǝ uɹnʇǝɹ uǝɥʇ uǝǝʍʇ ʇou ɟᴉ
+(puǝ
+()ʎɐlԀ:zuǝǝʍʇ    
+({ ǝɯɐɹℲƆoʇoƃ = ǝɯɐɹℲƆ } 'oɟuᴉ '[,,ʇɹɐԀʇooɹpᴉouɐɯnH,,]ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ǝʇɐǝɹƆ:s‾uǝǝʍʇ = zuǝǝʍʇ    
+puǝ            
+;ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ʇuǝɹɐԀ˙ʇɥƃᴉlɥƃᴉH            
+(69ϛƖᄅ6˙0 'ᄅ06ㄣϛ8˙0 'ㄥ9999ᄅ˙0)ʍǝu˙ƐɹoloƆ = ɹoloƆǝuᴉlʇnO˙ʇɥƃᴉlɥƃᴉH            
+(69ϛƖᄅ6˙0 'ᄅ06ㄣϛ8˙0 'ㄥ9999ᄅ˙0)ʍǝu˙ƐɹoloƆ = ɹoloƆllᴉℲ˙ʇɥƃᴉlɥƃᴉH            
+(,,ʇɥƃᴉlɥƃᴉH,,)ʍǝu˙ǝɔuɐʇsuI = ʇɥƃᴉlɥƃᴉH lɐɔol            
+uǝɥʇ (,,ʇɥƃᴉlɥƃᴉH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ        
+()uoᴉʇɔunɟ)llɐɔd = ɹɹǝ 'uǝǝʍʇ    
+(ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ϛᄅƐ / ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆoʇoƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[,,ɹǝʎɐlԀlɐɔo˥,,](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)    
+)ʍǝu˙oɟuIuǝǝʍ┴ = oɟuᴉ lɐɔol
+,,ǝɔᴉʌɹǝSuǝǝʍ┴,, ǝɔᴉʌɹǝs:ǝɯɐƃ = s‾uǝǝʍʇ lɐɔol
+ǝslǝ
+ǝɯɐɹℲƆoʇoƃ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[,,ɹǝʎɐlԀlɐɔo˥,,](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(puǝ
+()lǝɔuɐƆ:zuǝǝʍʇ    
+()uoᴉʇɔunɟ)llɐɔd
+uǝɥʇ 00ᄅ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ǝɯɐɹℲƆoʇoƃ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙[,,ɹǝʎɐlԀlɐɔo˥,,](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ) ɟᴉ
+(puǝ
+ǝslɐɟ = pǝɹoɥɔu∀˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ
+ǝslɐɟ = ʇᴉS˙pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ
+()uoᴉʇɔunɟ)llɐɔd
+uǝǝʍ┴ --- (ǝɯɐɹℲƆoʇoƃ)oʍʇ uoᴉʇɔunɟ
+
+puǝ
+uɹnʇǝɹ    
+ǝslɐɟ = uǝǝʍ┴doʇS˙פ‾    
+()ʇᴉɐʍ    
+uoᴉʇᴉsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+()ʎoɹʇsǝp:pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+uoᴉʇᴉsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+()ʇᴉɐʍ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+    
+{    
+(ǝnlɐΛ˙ʇuᴉoԀuʍɐdS˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ƃuᴉɹʇsoʇ = [ᄅ]        
+',,ʇuᴉoԀuʍɐdSʇsɐ˥ʇǝS,, = [Ɩ]        
+} = sƃɹɐ lɐɔol    
+(ϛ˙0)ʇᴉɐʍ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+    
+{    
+(ǝnlɐΛ˙ʇuᴉoԀuʍɐdS˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ƃuᴉɹʇsoʇ = [ᄅ]        
+',,ʇuᴉoԀuʍɐdSʇsɐ˥ʇǝS,, = [Ɩ]        
+} = sƃɹɐ lɐɔol    
+()ʇᴉɐʍ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+    
+{    
+(ǝnlɐΛ˙ʇuᴉoԀuʍɐdS˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ƃuᴉɹʇsoʇ = [ᄅ]        
+',,ʇuᴉoԀuʍɐdSʇsɐ˥ʇǝS,, = [Ɩ]        
+} = sƃɹɐ lɐɔol    
+()ʇᴉɐʍ    
+(66666666'66666666'66666666)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+(66666666'66666666'66666666)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+    
+{    
+,,ʇuᴉoԀuʍɐdSʇǝS,, = [Ɩ]        
+} = sƃɹɐ lɐɔol    
+()ʇᴉɐʍ    
+uoᴉʇᴉsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+    
+{    
+(ǝnlɐΛ˙ʇuᴉoԀuʍɐdS˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ƃuᴉɹʇsoʇ = [ᄅ]        
+',,ʇuᴉoԀuʍɐdSʇsɐ˥ʇǝS,, = [Ɩ]        
+} = sƃɹɐ lɐɔol    
+()ʇᴉɐʍ    
+(66666666'66666666'66666666)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʎoɹʇsǝp:pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+(ƖƖƖƖƖƖ'ƖƖƖƖƖƖ'ƖƖƖƖƖƖ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+    
+{    
+,,ʇuᴉoԀuʍɐdSʇǝS,, = [Ɩ]        
+} = sƃɹɐ lɐɔol    
+()ʇᴉɐʍ    
+uoᴉʇᴉsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+(Ɩ˙0)ʇᴉɐʍ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+    
+{    
+,,ʇuᴉoԀuʍɐdSʇǝS,, = [Ɩ]        
+} = sƃɹɐ lɐɔol    
+()ʇᴉɐʍ    
+    
+uoᴉʇᴉsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+((sƃɹɐ)ʞɔɐdun)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+    
+{    
+,,ʇuᴉoԀuʍɐdSʇǝS,, = [Ɩ]        
+} = sƃɹɐ lɐɔol    
+()ʇᴉɐʍ    
+uoᴉʇᴉsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+()ʎoɹʇsǝp:pɐǝH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+uoᴉʇᴉsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+()ʇᴉɐʍ    
+(ƖƖƖƖƖƖ'ƖƖƖƖƖƖ'ƖƖƖƖƖƖ)ʍǝu˙ǝɯɐɹℲƆ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ    
+    
+puǝ    
+puǝ        
+((ㄥ66Ɛ96ƖϛƐ˙0 '80-ǝϛϛ8ㄣㄣƐ6ϛ˙ϛ- 'ᄅϛƐƖ09Ɛ6˙0 '80-ǝϛᄅƐ68ㄥ0Ɛ˙ᄅ- 'Ɩ '80-ǝƐᄅㄣㄣ9Ɛㄣ8˙9 'ᄅϛƐƖ09Ɛ6˙0- '80-ǝƖ8ϛƐ689ϛ˙ㄣ- 'ㄥ66Ɛ96ƖϛƐ˙0 '980ƐƖ˙ᄅϛƖƐ- '6ᄅƖㄣϛ˙ㄣƖƐ 'ㄥ0Ɩ09˙9ㄥ0ϛ-)ʍǝu˙ƐɹoʇɔǝΛ',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ 000ㄣ =< ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙soԀǝɯɐɹℲƆ) ɟᴉ        
+uǝɥʇ ƐM ɟᴉ    
+ǝnɹʇ  = uǝǝʍ┴doʇS˙פ‾    
+uoᴉʇᴉsoԀ = soԀǝɯɐɹℲƆ lɐɔol    
+(uoᴉʇᴉsoԀ)ssɐdʎq uoᴉʇɔunɟ lɐɔol
+
+puǝ
+ɔunɟuǝǝʍʇ uɹnʇǝɹ
+
+puǝ
+()ʇᴉɐM:pǝʇǝldɯoƆ˙uǝǝʍʇ
+()ʇᴉɐM:ɔunɟuǝǝʍʇ uoᴉʇɔunɟ
+puǝ
+()lǝɔuɐƆ:uǝǝʍʇ
+()doʇS:ɔunɟuǝǝʍʇ uoᴉʇɔunɟ
+(puǝ
+()ʎɐlԀ:uǝǝʍʇ
+({ ʇǝƃɹɐ┴lɐǝɹ = ǝɯɐɹℲƆ } 'oɟuᴉ '[,,ʇɹɐԀʇooɹpᴉouɐɯnH,,]ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ǝʇɐǝɹƆ:s‾uǝǝʍʇ = uǝǝʍʇ
+puǝ		
+;ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ʇuǝɹɐԀ˙ʇɥƃᴉlɥƃᴉH		
+(69ϛƖᄅ6˙0 'ᄅ06ㄣϛ8˙0 'ㄥ9999ᄅ˙0)ʍǝu˙ƐɹoloƆ = ɹoloƆǝuᴉlʇnO˙ʇɥƃᴉlɥƃᴉH        
+(69ϛƖᄅ6˙0 'ᄅ06ㄣϛ8˙0 'ㄥ9999ᄅ˙0)ʍǝu˙ƐɹoloƆ = ɹoloƆllᴉℲ˙ʇɥƃᴉlɥƃᴉH        
+(,,ʇɥƃᴉlɥƃᴉH,,)ʍǝu˙ǝɔuɐʇsuI = ʇɥƃᴉlɥƃᴉH lɐɔol		
+uǝɥʇ (,,ʇɥƃᴉlɥƃᴉH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ    
+()uoᴉʇɔunɟ)llɐɔd = ɹɹǝ 'ʍuǝǝʍʇ lɐɔol
+(ɹɐǝuᴉ˥˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'pǝǝdS / ǝpnʇᴉuƃɐW˙
+(uoᴉʇᴉsoԀ˙(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇǝƃɹɐ┴lɐǝɹ)
+)ʍǝu˙oɟuIuǝǝʍ┴ = oɟuᴉ lɐɔol
+,,ǝɔᴉʌɹǝSuǝǝʍ┴,, ǝɔᴉʌɹǝs:ǝɯɐƃ = s‾uǝǝʍʇ lɐɔol
+
+puǝ
+puǝ
+(puǝ    
+uɹnʇǝɹ        
+
+(ᄅ˙0)ʇᴉɐʍ        
+puǝ        
+(,,ʇuᴉoԀuʍɐdSʇǝS,, ',,‾Ⅎ,,)ɯoƆ            
+(Ɩ˙)ʇᴉɐʍ            
+0 < ɥʇlɐǝH˙(,,pᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ lᴉʇun ()ʇᴉɐʍ ʇɐǝdǝɹ            
+(ϛƖ)ǝʇɐʇSǝƃuɐɥƆ:(,,pᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+(80˙)ʇᴉɐʍ            
+puǝ            
+ǝnɹʇ = dɹɐʍʞɟ                
+puǝ                
+ʇǝƃɹɐ┴lɐǝɹ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                    
+uǝɥʇ ǝslɐɟ == dɹɐʍʞɟ ɟᴉ                
+uǝɥʇ 0 < ɥʇlɐǝH˙(,,pᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ            
+ǝslǝ        
+0 < ɥʇlɐǝH˙(,,pᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ lᴉʇun ()ʇᴉɐʍ ʇɐǝdǝɹ            
+(Ɩ˙0)ʇᴉɐʍ            
+(ϛƖ)ǝʇɐʇSǝƃuɐɥƆ:(,,pᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ ((ʇǝƃɹɐ┴lɐǝɹ)puɐ˥sIʇǝפ)ƃuᴉɹʇsoʇ == ǝnlɐΛ˙(,,ʇuᴉoԀuʍɐdSʇsɐ˥,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɐʇɐp˙[,,ɹǝʎɐlԀlɐɔo˥,,](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉǝslǝ        
+(,,uʍɐdSo┴ʇɹodǝlǝ┴,, ',,‾Ⅎ,,)ɯoƆ            
+(Ɩ˙)ʇᴉɐʍ            
+uǝɥʇ ((ʇǝƃɹɐ┴lɐǝɹ)puɐ˥sIʇǝפ)ƃuᴉɹʇsoʇ == ǝnlɐΛ˙(,,ʇuᴉoԀuʍɐdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɐʇɐp˙[,,ɹǝʎɐlԀlɐɔo˥,,](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ        
+
+ǝslɐɟ = dɹɐʍʞɟ        
+()lǝɔuɐƆ:uǝǝʍʇ        
+()uoᴉʇɔunɟ)llɐɔd    
+uǝɥʇ (,,ɹoᴉɹɹɐM uɐɯɥsᴉℲ,, == ǝɯɐN ɹo ,,opuɐɯɯoƆ uɐɯɥsᴉℲ,, == ǝɯɐN) ʇou puɐ ((,,ǝɔᴉlɐɥƆ ʇǝǝʍS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,ǝɔᴉlɐɥƆ ʇǝǝʍS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,ǝɔuǝssƎ ʍollɐH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,ǝɔuǝssƎ ʍollɐH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,ǝɔᴉlɐɥƆ s,poפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,ǝɔᴉlɐɥƆ s,poפ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,dᴉɥɔoɹɔᴉW lɐᴉɔǝdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɹo (,,dᴉɥɔoɹɔᴉW lɐᴉɔǝdS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ) ʇou puɐ spᴉɐɹoʇn∀˙פ‾ ʇou puɐ puɐuɐɯnHpoפoʇn∀˙פ‾ ʇou puɐ lɐᴉɹǝʇɐWɯɹɐℲoʇn∀ ʇou puɐ 000Ɛ < ǝɔuɐʇsᴉp ɟᴉ
+uǝɥʇ Ԁ┴ssɐdʎq˙פ‾ ɟᴉ
+
+
+puǝ
+0ϛƐ = pǝǝdS    
+uǝɥʇ 000Ɩ =< ǝɔuɐʇsᴉp ɟᴉǝslǝ
+00ㄣ = pǝǝdS    
+uǝɥʇ 0ϛㄥ > ǝɔuɐʇsᴉp ɟᴉǝslǝ
+08ϛ = pǝǝdS    
+uǝɥʇ 00ϛ > ǝɔuɐʇsᴉp ɟᴉǝslǝ
+06ϛ = pǝǝdS    
+uǝɥʇ 0ϛᄅ > ǝɔuɐʇsᴉp ɟᴉ
+ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙(,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇǝƃɹɐ┴lɐǝɹ) = ǝɔuɐʇsᴉp lɐɔol
+{} = ɔunɟuǝǝʍʇ lɐɔol
+
+puǝ
+(ᄅ˙0)ʇᴉɐʍ ;0 < ɥʇlɐǝH˙(,,pᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ lᴉʇun ()ʇᴉɐʍ ʇɐǝdǝɹ
+puǝ ()lǝɔuɐƆ:uǝǝʍʇ uǝɥʇ uǝǝʍʇ ɟᴉ
+uǝɥʇ 0 == ɥʇlɐǝH˙(,,pᴉouɐɯnH,,)plᴉɥƆɹoℲʇᴉɐM:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ
+
+puǝ
+((soԀʇǝƃɹɐʇlɐǝɹ)ʞɔɐdun)ʍǝu˙ǝɯɐɹℲƆ = ʇǝƃɹɐ┴lɐǝɹ
+uǝɥʇ ,,ɹǝqɯnu,, == (soԀʇǝƃɹɐʇ)ǝdʎʇ ɟᴉǝslǝ
+soԀʇǝƃɹɐʇ = ʇǝƃɹɐ┴lɐǝɹ
+uǝɥʇ ,,ɐʇɐpɹǝsn,, == (soԀʇǝƃɹɐʇ)ǝdʎʇ ɟᴉǝslǝ
+(soԀʇǝƃɹɐʇ)ʍǝu˙ǝɯɐɹℲƆ = ʇǝƃɹɐ┴lɐǝɹ
+uǝɥʇ ,,ɹoʇɔǝʌ,, == (soԀʇǝƃɹɐʇ)ǝdʎʇ ɟᴉ
+ʇǝƃɹɐ┴lɐǝɹ lɐɔol
+[Ɩ]soԀʇǝƃɹɐʇlɐǝɹ = soԀʇǝƃɹɐʇ lɐɔol
+{ ˙˙˙ } = soԀʇǝƃɹɐʇlɐǝɹ lɐɔol
+(˙˙˙)ʇǝƃɹɐ┴oʇ uoᴉʇɔunɟ lɐɔol
+
+puǝ
+puǝ
+puǝ
+ǝnlɐΛuɹnʇǝɹ uɹnʇǝɹ    
+uǝɥʇ ǝnlɐΛuɹnʇǝɹ ɟᴉ
+puǝ
+puǝ    
+ǝɯɐN˙ʌ = ǝnlɐΛuɹnʇǝɹ        
+;ǝpnʇᴉuƃɐWǝɹ = ʇnOuIʞɔǝɥƆ        
+uǝɥʇ ʇnOuIʞɔǝɥƆ > ǝpnʇᴉuƃɐWǝɹ ɟᴉ    
+;ǝpnʇᴉuƃɐW˙(d˙()ǝɯɐɹℲƆlǝpoWʇǝפ:ʌ - ʇǝƃɹɐ┴lɐǝɹ) = ǝpnʇᴉuƃɐWǝɹ lɐɔol    
+op (()uǝɹplᴉɥƆʇǝפ:((ɯɐǝ┴˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ƃuᴉɹʇsoʇ)plᴉɥƆʇsɹᴉℲpuᴉℲ:suʍɐdSɹǝʎɐlԀ˙uᴉƃᴉɹOplɹoM‾˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+uǝɥʇ ɯɐǝ┴˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ
+;ǝƃnɥ˙ɥʇɐɯ = ʇnOuIʞɔǝɥƆ lɐɔol
+ǝnlɐΛuɹnʇǝɹ lɐɔol
+
+puǝ
+d˙ʇǝƃɹɐ┴lɐǝɹ = ʇǝƃɹɐ┴lɐǝɹ
+((soԀʇǝƃɹɐʇlɐǝɹ)ʞɔɐdun)ʍǝu˙ǝɯɐɹℲƆ = ʇǝƃɹɐ┴lɐǝɹ
+uǝɥʇ ,,ɹǝqɯnu,, == (soԀʇǝƃɹɐʇ)ǝdʎʇ ɟᴉǝslǝ
+uoᴉʇᴉsoԀ˙soԀʇǝƃɹɐʇ = ʇǝƃɹɐ┴lɐǝɹ
+uǝɥʇ ,,ɐʇɐpɹǝsn,, == (soԀʇǝƃɹɐʇ)ǝdʎʇ ɟᴉǝslǝ
+soԀʇǝƃɹɐʇ = ʇǝƃɹɐ┴lɐǝɹ
+uǝɥʇ ,,ɹoʇɔǝʌ,, == (soԀʇǝƃɹɐʇ)ǝdʎʇ ɟᴉ
+ʇǝƃɹɐ┴lɐǝɹ lɐɔol
+[Ɩ]soԀʇǝƃɹɐʇlɐǝɹ = soԀʇǝƃɹɐʇ lɐɔol
+{ ˙˙˙ } = soԀʇǝƃɹɐʇlɐǝɹ lɐɔol
+(˙˙˙)puɐ˥sIʇǝפ uoᴉʇɔunɟ lɐɔol
+puǝ
+puǝ
+(˙˙˙)ɹǝʌɹǝSǝʞoʌuI:ǝʇoɯǝɹ
+uǝɥʇ (,,uoᴉʇɔunℲǝʇoɯǝɹ,,)∀sI:ǝʇoɯǝɹ ɟᴉǝslǝ
+(˙˙˙)ɹǝʌɹǝSǝɹᴉℲ:ǝʇoɯǝɹ
+uǝɥʇ (,,ʇuǝʌƎǝʇoɯǝɹ,,)∀sI:ǝʇoɯǝɹ ɟᴉ
+(ɯoɔ ˙˙ ,,ɯɯoƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:sǝʇoɯǝɹ˙(,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝʇoɯǝɹ lɐɔol
+(˙˙˙ 'ɯoɔ)ɯoƆ uoᴉʇɔunɟ
+
+puǝ
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+ (,,,, 'ᄅ 'ʇᴉɥǝpɐlq ',,ʇᴉɥ,,)ɹǝʌɹǝSǝɹᴉℲ:ʇuǝʌƎɹǝlloɹʇuoƆƃᴉɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+(0Ɩʞɔɐʇʇ∀ɔ∀ '(ϛƖᄅㄥㄥㄥ9Ɩ * 9ㄥㄥㄥᄅ9ƖƖϛ660Ɩ / ᄅƖɔ∀ɹǝqɯnN)ɹoolɟ˙ɥʇɐɯ)ɹǝʌɹǝSǝɹᴉℲ:ɹoʇɐpᴉlɐΛ˙sǝʇoɯǝɹ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ                    
+((()uodɐǝMʇuǝɹɹnƆ)ƃuᴉɹʇsoʇ',,ǝƃuɐɥƆuodɐǝʍ,,)ɹǝʌɹǝSǝɹᴉℲ:ʇuǝʌƎɹǝlloɹʇuoƆƃᴉɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                    
+uǝɥʇ [Ɩ]sǝpɐlq˙ɔɐ puɐ sǝpɐlq˙ɔɐ puɐ (,,loo┴,,)ssɐlƆɟOplᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+  puǝ                    
+(Ɩ0˙0'Ɩ0˙0'Ɩ0˙0)ʎɐlԀ:ʌ                        
+op (ɔᴉsɐq˙sɯᴉuɐ˙ɹoʇɐɯᴉuɐ˙ɔɐ)sɹᴉɐd uᴉ ʌ 'ʞ ɹoɟ                    
+(0Ɩʞɔɐʇʇ∀ɔ∀ 'ㄥ 'ʞɔɐʇʇɐ˙ɔɐ)ǝnlɐʌdnʇǝs˙ƃnqǝp                    
+(ㄥʞɔɐʇʇ∀ɔ∀ 'ㄣ 'ʞɔɐʇʇɐ˙ɔɐ)ǝnlɐʌdnʇǝs˙ƃnqǝp                    
+(6ʞɔɐʇʇ∀ɔ∀ '9 'ʞɔɐʇʇɐ˙ɔɐ)ǝnlɐʌdnʇǝs˙ƃnqǝp                    
+(8ʞɔɐʇʇ∀ɔ∀ 'ϛ 'ʞɔɐʇʇɐ˙ɔɐ)ǝnlɐʌdnʇǝs˙ƃnqǝp                    
+Ɩ + 0Ɩʞɔɐʇʇ∀ɔ∀ = 0Ɩʞɔɐʇʇ∀ɔ∀                    
+()(puǝ                    
+6ʞɔɐʇʇ∀ɔ∀ * 8ʞɔɐʇʇ∀ɔ∀ - ᄅƖɔ∀ɹǝqɯnN = ㄥʞɔɐʇʇ∀ɔ∀                        
+(6ʞɔɐʇʇ∀ɔ∀ / ᄅƖɔ∀ɹǝqɯnN)ɹoolɟ˙ɥʇɐɯ = 8ʞɔɐʇʇ∀ɔ∀                        
+9ㄥㄥㄥᄅ9ƖƖϛ660Ɩ % (ƐƖɔ∀ɹǝqɯnN + 6ʞɔɐʇʇ∀ɔ∀ * ᄅƖɔ∀ɹǝqɯnN) = ᄅƖɔ∀ɹǝqɯnN                        
+ ()uoᴉʇɔunɟ)                    
+ϛ0ㄣ86ㄥ * ㄥʞɔɐʇʇ∀ɔ∀ = ƐƖɔ∀ɹǝqɯnN lɐɔol                    
+6ʞɔɐʇʇ∀ɔ∀ % (ϛ6ϛㄥᄅㄥ * ㄥʞɔɐʇʇ∀ɔ∀ + ϛ0ㄣ86ㄥ * 8ʞɔɐʇʇ∀ɔ∀) = ᄅƖɔ∀ɹǝqɯnN lɐɔol                    
+(ㄥ 'ʞɔɐʇʇɐ˙ɔɐ)ǝnlɐʌdnʇǝƃ˙ƃnqǝp = 0Ɩʞɔɐʇʇ∀ɔ∀ lɐɔol                    
+(ㄣ 'ʞɔɐʇʇɐ˙ɔɐ)ǝnlɐʌdnʇǝƃ˙ƃnqǝp = ㄥʞɔɐʇʇ∀ɔ∀ lɐɔol                    
+(9 'ʞɔɐʇʇɐ˙ɔɐ)ǝnlɐʌdnʇǝƃ˙ƃnqǝp = 6ʞɔɐʇʇ∀ɔ∀ lɐɔol                    
+(ϛ 'ʞɔɐʇʇɐ˙ɔɐ)ǝnlɐʌdnʇǝƃ˙ƃnqǝp = 8ʞɔɐʇʇ∀ɔ∀ lɐɔol                    
+uǝɥʇ 0 < ʇᴉɥǝpɐlq# ɟᴉ                
+(09)sʇᴉHǝpɐlqll∀ʇǝƃ = ʇᴉɥǝpɐlq lɐɔol                
+op Ɩ 'Ɩ = uǝnʎɹ ɹoɟ            
+uǝɥʇ pǝddᴉnbǝ˙ɔɐ puɐ ɔɐ ɟᴉ        
+ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙ɹʞɹoʍǝɯɐɹℲʇɐqɯoƆ = ɔɐ lɐɔol    
+()uɐɟǝɯʞɐʎ uoᴉʇɔunɟ
+puǝ
+sʇᴉH uɹnʇǝɹ    
+puǝ    
+puǝ        
+puǝ            
+(ʇɹɐԀʇooɹ˙uɐɯnH'sʇᴉH)ʇɹǝsuᴉ˙ǝlqɐʇ                
+uǝɥʇ ϛ + sǝzᴉS => (uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹ˙uɐɯnH)ɹǝʇɔɐɹɐɥƆɯoɹℲǝɔuɐʇsᴉp:ʇuǝᴉlƆ puɐ 0 < ɥʇlɐǝH˙uɐɯnH puɐ ʇɹɐԀʇooɹ˙uɐɯnH puɐ uɐɯnH ɟᴉ            
+(,,pᴉouɐɯnH,,)ssɐlƆɟOplᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ = uɐɯnH lɐɔol            
+uǝɥʇ ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ =~ ʌ ɟᴉ        
+[ᴉ]sɹǝʇɔɐɹɐɥƆ = ʌ lɐɔol op sɹǝʇɔɐɹɐɥƆ#'Ɩ = ᴉ ɹoɟ    
+puǝ    
+puǝ    
+(ʇɹɐԀʇooɹ˙uɐɯnH 'sʇᴉH)ʇɹǝsuᴉ˙ǝlqɐʇ        
+uǝɥʇ ϛ + sǝzᴉS => (uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹ˙uɐɯnH)ɹǝʇɔɐɹɐɥƆɯoɹℲǝɔuɐʇsᴉp:ʇuǝᴉlƆ puɐ 0 < ɥʇlɐǝH˙uɐɯnH puɐ ʇɹɐԀʇooɹ˙uɐɯnH puɐ uɐɯnH ɟᴉ    
+(,,pᴉouɐɯnH,,)ssɐlƆɟOplᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ = uɐɯnH lɐɔol    
+[ᴉ]sǝᴉɯǝuƎ = ʌ lɐɔol    
+op sǝᴉɯǝuƎ# 'Ɩ = ᴉ ɹoɟ    
+()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = sǝᴉɯǝuƎ lɐɔol    
+()uǝɹplᴉɥƆʇǝפ:sɹǝʇɔɐɹɐɥƆ˙ǝɔɐdsʞɹoʍ = sɹǝʇɔɐɹɐɥƆ lɐɔol    
+ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ʇuǝᴉlƆ lɐɔol    
+{} = sʇᴉH lɐɔol    
+(sǝzᴉS)sʇᴉHǝpɐlqll∀ʇǝƃ uoᴉʇɔunɟ
+
+puǝ
+ʇǝɹ uɹnʇǝɹ
+puǝ ǝɯɐN˙(,,loo┴,,)ssɐlƆɟOplᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ uɹnʇǝɹ uǝɥʇ ʇǝɹ ʇou ɟᴉ
+(puǝ
+puǝ ʇuǝɹɐԀ˙ʇǝɹ = ʇǝɹ op ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ =~ ʇuǝɹɐԀ˙ʇǝɹ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)llɐɔd
+puǝ ǝɯɐN˙(,,loo┴,,)ssɐlƆɟOplᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ uɹnʇǝɹ uǝɥʇ ʇǝɹ ʇou ɟᴉ
+[Ɩ]sǝpɐlq˙ɔɐ = ʇǝɹ lɐɔol
+ɹǝlloɹʇuoƆǝʌᴉʇɔɐ˙ɹʞɹoʍǝɯɐɹℲʇɐqɯoƆ = ɔɐ lɐɔol
+()uodɐǝMʇuǝɹɹnƆ uoᴉʇɔunɟ
+[ʞɔɐʇʇ∀ʇsɐℲ] --
+
+puǝ
+()doʇS:ɐɹǝɯɐƆ
+(ɹǝʞɐɥSɐɹǝɯɐƆ˙lᴉʇ∩˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)ǝɹᴉnbǝɹ = ɐɹǝɯɐƆ lɐɔol
+()ɹǝʞɐɥSɐɹǝɯɐƆ uoᴉʇɔunɟ
+
+
+puǝ
+(puǝ
+puǝ
+(puǝ    
+puǝ        
+ǝnɹʇ = pǝlqɐuƎ˙ɹǝʇunoƆǝƃɐɯɐp˙I∩פ˙sʇǝss∀˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+ǝslǝ        
+ǝslɐɟ = pǝlqɐuƎ˙ɹǝʇunoƆǝƃɐɯɐp˙I∩פ˙sʇǝss∀˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ ǝƃɐɯɐpsᴉp˙פ‾ ɟᴉ        
+()uoᴉʇɔunɟ)llɐɔd    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+()ǝƃɐɯɐppǝlqɐsᴉp uoᴉʇɔunɟ
+[ǝɔɐɟɹǝʇuI ǝƃɐɯɐp pǝlqɐsᴉp] --
+
+()ʞɔᴉʇ = ʞɔɐʇʇɐʇsɐɟuʍoplooɔ lɐɔol
+(qᴉ˥ƃᴉɹ˙ʞɹoʍǝɯɐɹℲʇɐqɯoƆ˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)ǝɹᴉnbǝɹ = ʇᴉɥqlɐǝɹ lɐɔol
+[ᄅ](ɹǝlloɹʇuoƆƃᴉɹ)sǝnlɐʌdnʇǝƃ = ɹɹǝlloɹʇuoƆƃᴉɹ lɐɔol
+(ɹǝlloɹʇuoƆƃᴉɹ˙ʞɹoʍǝɯɐɹℲʇɐqɯoƆ˙sʇdᴉɹɔSɹǝʎɐlԀ˙[,,ɹǝʎɐlԀlɐɔo˥,,](,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ǝɹᴉnbǝɹ = ɹǝlloɹʇuoƆƃᴉɹ lɐɔol
+[ᄅ](ʞɹoʍǝɯɐɹℲʇɐqɯoƆ)sǝnlɐʌdnʇǝƃ = ɹʞɹoʍǝɯɐɹℲʇɐqɯoƆ lɐɔol
+((,,ʞɹoʍǝɯɐɹℲʇɐqɯoƆ,,)plᴉɥƆɹoℲʇᴉɐM:sʇdᴉɹɔSɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ǝɹᴉnbǝɹ = ʞɹoʍǝɯɐɹℲʇɐqɯoƆ lɐɔol
+
+[ǝlnpoɯ ǝɹᴉnbǝɹ] --
+
+puǝ
+()doʇS:ɐɹǝɯɐƆ
+(ɹǝʞɐɥSɐɹǝɯɐƆ˙lᴉʇ∩˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)ǝɹᴉnbǝɹ = ɐɹǝɯɐƆ lɐɔol
+()ɹǝʞɐɥSɐɹǝɯɐƆ uoᴉʇɔunɟ
+
+
+puǝ
+(puǝ
+puǝ
+(puǝ    
+puǝ        
+ǝnɹʇ = pǝlqɐuƎ˙ɹǝʇunoƆǝƃɐɯɐp˙I∩פ˙sʇǝss∀˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+ǝslǝ        
+ǝslɐɟ = pǝlqɐuƎ˙ɹǝʇunoƆǝƃɐɯɐp˙I∩פ˙sʇǝss∀˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ ǝƃɐɯɐpsᴉp˙פ‾ ɟᴉ        
+()uoᴉʇɔunɟ)llɐɔd    
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+()ǝƃɐɯɐppǝlqɐsᴉp uoᴉʇɔunɟ
+[ǝɔɐɟɹǝʇuI ǝƃɐɯɐp pǝlqɐsᴉp] --
+
+puǝ
+puǝ    
+()ʎoɹʇsǝp:uʍɐdsǝɹ˙ɹǝuᴉɐʇuoƆ˙ʇɔǝɟɟƎ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+uǝɥʇ (,,uʍɐdsǝɹ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝuᴉɐʇuoƆ˙ʇɔǝɟɟƎ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ        
+puǝ        
+()ʎoɹʇsǝp:ɥʇɐǝp˙ɹǝuᴉɐʇuoƆ˙ʇɔǝɟɟƎ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+uǝɥʇ (,,ɥʇɐǝp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝuᴉɐʇuoƆ˙ʇɔǝɟɟƎ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ    
+uǝɥʇ ʇɔǝɟɟǝᴉpsᴉp˙פ‾ ɟᴉ
+ǝnɹʇ = ʇɔǝɟɟǝᴉpsᴉp˙פ‾
+
+(puǝ
+puǝ
+puǝ
+(puǝ    
+puǝ        
+()ʎoɹʇsǝp:ʌ            
+(,,spunoS,,) == ǝɯɐN˙ʌ ɹo-- uǝɥʇ (,,lᴉɐ┴ɥsɐlS,,) == ǝɯɐN˙ʌ -- uǝɥʇ ,,ɥsɐlSpɹoʍS,, == ǝɯɐN˙ʌ ɹo ,,ʇᴉHɥsɐlS,, == ǝɯɐN˙ʌ ɹo ,,ƃuᴉɹpǝʌɹnƆ,, == ǝɯɐN˙ʌ ɟᴉ        
+()uoᴉʇɔunɟ)llɐɔd    
+op (()uǝɹplᴉɥƆʇǝפ:[,,uᴉƃᴉɹOplɹoM‾,,](,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ
+()uoᴉʇɔunɟ)uʍɐds
+
+[oʇn∀ ʇɔǝɟɟƎ pǝʇǝlǝp] --
+
+puǝ
+(puǝ	
+(puǝ		
+puǝ			
+0 = ǝnlɐΛ˙unʇS˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ				
+uǝɥʇ (,,unʇS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ			
+()uoᴉʇɔunɟ)llɐɔd		
+()uoᴉʇɔunɟ)ʇɔǝuuoɔ:pǝƃuɐɥƆ˙unʇS˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ	
+uǝɥʇ (,,unʇS,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ
+[unʇsoN] --
+
+puǝ
+puǝ    
+ǝslɐɟ uɹnʇǝɹ        
+puǝ        
+ǝnɹʇ uɹnʇǝɹ            
+ uǝɥʇ 00ᄅ => ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙ʇɔǝɾqo) ɟᴉ        
+ǝslǝ    
+(ʇɔǝɾqo)ɹǝuʍoʞɹoʍʇǝusᴉ uɹnʇǝɹ        
+uǝɥʇ ɹǝuʍoʞɹoʍʇǝusᴉ ɟᴉ    
+(ʇɔǝɾqo)ʞɹoMʇǝNʎWuI uoᴉʇɔunɟ
+(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+(ǝƃnɥ˙ɥʇɐɯ  ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs                            
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+puǝ                            
+()ʎoɹʇsǝp:ɹoʇɐɯᴉu∀˙pᴉouɐɯnH˙ʌ                                
+uǝɥʇ (,,ɹoʇɐɯᴉu∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pᴉouɐɯnH˙ʌ ɟᴉ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+(09'09'09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                            
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                            
+uoWsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙uoWsoԀ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ (,,ssoq,,'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ʇou ɟᴉ                    
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                
+uǝɥʇ qoWƃuᴉɹq ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+
+
+	(puǝ
+puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+puǝ                        
+(ǝƃnɥ˙ɥʇɐɯ  ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs                            
+(ㄣƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+(ƖƖ)ǝʇɐʇSǝƃuɐɥƆ:pᴉouɐɯnH˙ʌ                            
+puǝ                            
+()ʎoɹʇsǝp:ɹoʇɐɯᴉu∀˙pᴉouɐɯnH˙ʌ                                
+uǝɥʇ (,,ɹoʇɐɯᴉu∀,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:pᴉouɐɯnH˙ʌ ɟᴉ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙pɐǝH˙ʌ                            
+ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+(09'09'09)ʍǝu˙ƐɹoʇɔǝΛ = ǝzᴉS˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+0 = pǝǝdSʞlɐM˙pᴉouɐɯnH˙ʌ                            
+0 = ɹǝʍoԀdɯnſ˙pᴉouɐɯnH˙ʌ                            
+uoWsoԀ = ǝɯɐɹℲƆ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ                            
+uǝɥʇ (ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ)ʞɹoMʇǝNʎWuI ɟᴉ                        
+uǝɥʇ 00Ɛ => ǝpnʇᴉuƃɐɯ˙(uoᴉʇᴉsoԀ˙uoWsoԀ - uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ) puɐ (,,ssoq,,'ǝɯɐN˙ʌ)puᴉɟ˙ƃuᴉɹʇs ʇou ɟᴉ                    
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙ǝɔɐdsʞɹoM˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ                
+uǝɥʇ qoWƃuᴉɹq ɟᴉ            
+()uoᴉʇɔunɟ)llɐɔd        
+op ()ʇᴉɐʍ˙ʞsɐʇ ǝlᴉɥʍ    
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+
+(puǝ
+puǝ	
+puǝ		
+(ǝƃnɥ˙ɥʇɐɯ ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ʎʇɹǝdoɹduǝppᴉɥʇǝs			
+uǝɥʇ ʎʇɹǝdoɹduǝppᴉɥʇǝs ɟᴉ		
+puǝ		
+(ǝnɹʇ ',,snᴉpɐɹuoᴉʇɐlnɯᴉS,, 'ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ǝlqɐʇdᴉɹɔsʇǝs			
+uǝɥʇ ǝlqɐʇdᴉɹɔsʇǝs ɟᴉ		
+()ʇᴉɐʍ˙ʞsɐʇ op ǝnɹʇ ǝlᴉɥʍ	
+()uoᴉʇɔunɟ)uʍɐds˙ʞsɐʇ
+[uoWƃuᴉɹq] --
+
+(puǝ
+(puǝ    
+(puǝ        
+puǝ            
+puǝ                
+puǝ                    
+    ǝslɐɟ = ǝpᴉlloƆuɐƆ˙ʌ                        
+uǝɥʇ (,,ʇɹɐԀǝsɐq,,)∀sI:ʌ ɟᴉ                    
+op (()sʇuɐpuǝɔsǝpʇǝפ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ '‾ ɹoɟ                
+uǝɥʇ        
+ǝɔɐlԀʇxǝNoʇn∀˙פ‾ ɹo spᴉɐɹoʇn∀˙פ‾        
+[spᴉɐɹ]--        
+ɹo ʇsᴉ˥pɹoʍSʎɹǝʇsɐWɯɹɐℲ˙פ‾ ɹo ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙פ‾ ɹo ʎɹǝʇsɐWʇᴉnɹℲɯɹɐℲoʇn∀˙פ‾        
+[ʎɹǝʇsɐW]--        
+ɹo  ssoqɯɹɐℲoʇn∀˙פ‾ ɹo ʇɔǝlǝSssoqoʇn∀˙פ‾ ɹo ssoqll∀oʇn∀˙פ‾        
+[ssoq]--        
+ɹo ʇsǝɥƆɯɹɐℲoʇn∀˙פ‾ ɹo doʇʇɹodǝlǝʇ ɹo lɐᴉɹǝʇɐWɯɹɐℲoʇn∀ ɹo ƖʇsǝnQ‾ɐʇᴉɥsn┴ ɹo ᄅʇsǝnQ‾ɐʇᴉɥsn┴        
+ ɹo ┴∀OqO┴Ԁ┴˙פ‾         
+ɹo ʍollɐHssoqɯɹɐℲoʇn∀˙פ‾ ɹo spɹoʍSʎppnqoʇn∀˙פ‾        
+ɹo ɥɔɹo┴ʎloHoʇn∀˙פ‾ ɹo ᄅΛɥƃnopoʇn∀˙פ‾ ɹo ǝɔuᴉɹԀǝʞɐƆoʇn∀˙פ‾ ɹo ɹǝƃƃɐpʞɹɐpoʇn∀˙פ‾        
+ɹo ɹoʍoqʇuǝdɹǝSoʇn∀˙פ‾ ɹo pɹoʍSɐʇᴉɥsn┴oʇn∀˙פ‾ ɹo pɹoʍSɐɯɐ⅄oʇn∀˙פ‾ ɹo ɐuɐʇɐʞlɐnppǝsɹnƆoʇn∀˙פ‾        
+ɹo ɹǝpuɐʌɐƆoʇn∀˙פ‾ ɹo uɐɯnHpoפoʇn∀˙פ‾ ɹo  uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ ɹo ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾ ɹo  ǝuoqɯɹɐℲoʇn∀˙פ‾        
+ɹo pɹoʍSʎppnqoʇn∀˙פ‾ ɹo ʇɐHɹǝǝʇǝʞsnWoʇn∀˙פ‾ ɹo pᴉɐɹǝlʇsɐƆoʇn∀˙פ‾ ɹo ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ɹo ᴉʞɐHʍoquᴉɐɹoʇn∀˙פ‾        
+[Ɛ plɹoM]--        
+ɹo ʎɹoʇɔɐℲoʇn∀˙פ‾        
+ɹo ɯsɐldoʇɔƎoʇn∀˙פ‾ ɹo nʞoƃuǝɹoʇn∀˙פ‾ ɹo ɐuɐʇɐʞldᴉɹ┴ǝnɹ┴oʇn∀˙פ‾        
+ɹo sǝssɐlפuɐʍSoʇn∀˙פ‾ ɹo ʇɐoƆʞɹɐpoʇn∀˙פ‾ ɹo  ᄅΛ‾ǝɔɐɹ‾oʌƎ‾oʇn∀˙פ‾ ɹo ʇsǝnQolᴉʇɹɐqoʇn∀˙פ‾ ɹo ɐǝSpɹᴉɥ┴oʇn∀˙פ‾        
+[ᄅ plɹoM]--        
+ɹo puɐlsIʇɹodǝlǝ┴˙פ‾  ɹo ǝloԀoʇn∀˙פ‾ ɹo ɹǝqɐSoʇn∀˙פ‾        
+ɹo  plɹoMʍǝNoʇn∀˙פ‾ ɹo ɹɐǝפʇɹodǝlǝ┴˙פ‾ ɹo ɹɐǝפ‾oʇn∀˙פ‾ ɹo ʇuǝʌƎoʇn∀˙פ‾ ɹo ǝƃɐɹᴉW˙פ‾ ɹo ɯɹɐℲʇsɐǝɹɐǝN˙פ‾ ɹo ɹǝqɯƎʇǝlloƆ˙פ‾ ɹo ǝuᴉɹɥsǝunsᴉʞoʇd┴˙פ‾ ɹo puɐlsIʇuǝʌƎoʇd┴˙פ‾ ɹo puɐlsIǝunsᴉʞoʇd┴˙פ‾ ɹo ɯɹɐℲoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝddǝʇS˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+()uoᴉʇɔunɟ)llɐɔd    
+()uoᴉʇɔunɟ)uʍɐds
+
+(puǝ
+(puǝ    
+(puǝ        
+puǝ            
+puǝ                
+()ʎoɹʇsǝp:(,ʇɥƃᴉlɥƃᴉH,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                    
+uǝɥʇ (,ʇɥƃᴉlɥƃᴉH,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+puǝ                
+()ʎoɹʇsǝp:(,,dᴉlƆʎpoq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                    
+uǝɥʇ (,,dᴉlƆʎpoq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ                
+	ǝslǝ            
+puǝ                
+ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ʇuǝɹɐԀ˙ʇɥƃᴉlɥƃᴉH                    
+(ϛϛᄅ'98'0)ʍǝu˙ƐɹoloƆ = ɹoloƆǝuᴉlʇnO˙ʇɥƃᴉlɥƃᴉH                    
+(ϛϛᄅ '98 '0)ʍǝu˙ƐɹoloƆ = ɹoloƆllᴉℲ˙ʇɥƃᴉlɥƃᴉH                    
+(,,ʇɥƃᴉlɥƃᴉH,,)ʍǝu˙ǝɔuɐʇsuI = ʇɥƃᴉlɥƃᴉH lɐɔol                    
+uǝɥʇ (,,ʇɥƃᴉlɥƃᴉH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                
+puǝ                
+(0'0'0)ʍǝu˙ƐɹoʇɔǝΛ = ʎʇᴉɔolǝΛ˙dᴉlɔoN                    
+(00000Ɩ'00000Ɩ'00000Ɩ)ʍǝu˙ƐɹoʇɔǝΛ = ǝɔɹoℲxɐW˙dᴉlɔoN                    
+ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ʇuǝɹɐԀ˙dᴉlɔoN                    
+,,dᴉlƆʎpoq,, = ǝɯɐN˙dᴉlɔoN                    
+(,,ʎʇᴉɔolǝΛʎpoq,,)ʍǝu˙ǝɔuɐʇsuI = dᴉlɔoN lɐɔol                    
+uǝɥʇ (,,dᴉlƆʎpoq,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ʇou ɟᴉ                
+uǝɥʇ            
+ǝɔɐlԀʇxǝNoʇn∀˙פ‾ ɹo spᴉɐɹoʇn∀˙פ‾            
+[spᴉɐɹ]--            
+ɹo ʇsᴉ˥pɹoʍSʎɹǝʇsɐWɯɹɐℲ˙פ‾ ɹo ʎɹǝʇsɐWunפɯɹɐℲoʇn∀˙פ‾ ɹo ʎɹǝʇsɐWʇᴉnɹℲɯɹɐℲoʇn∀˙פ‾            
+[ʎɹǝʇsɐW]--            
+ɹo  ssoqɯɹɐℲoʇn∀˙פ‾ ɹo ʇɔǝlǝSssoqoʇn∀˙פ‾ ɹo ssoqll∀oʇn∀˙פ‾            
+[ssoq]--            
+ɹo ʇsǝɥƆɯɹɐℲoʇn∀˙פ‾ ɹo doʇʇɹodǝlǝʇ ɹo lɐᴉɹǝʇɐWɯɹɐℲoʇn∀ ɹo ƖʇsǝnQ‾ɐʇᴉɥsn┴ ɹo ᄅʇsǝnQ‾ɐʇᴉɥsn┴            
+ ɹo ┴∀OqO┴Ԁ┴˙פ‾            
+ɹo  ʍollɐHssoqɯɹɐℲoʇn∀˙פ‾ ɹo spɹoʍSʎppnqoʇn∀˙פ‾            
+ɹo ɥɔɹo┴ʎloHoʇn∀˙פ‾ ɹo ᄅΛɥƃnopoʇn∀˙פ‾ ɹo ǝɔuᴉɹԀǝʞɐƆoʇn∀˙פ‾ ɹo ɹǝƃƃɐpʞɹɐpoʇn∀˙פ‾            
+ɹo ɹoʍoqʇuǝdɹǝSoʇn∀˙פ‾ ɹo pɹoʍSɐʇᴉɥsn┴oʇn∀˙פ‾ ɹo pɹoʍSɐɯɐ⅄oʇn∀˙פ‾ ɹo ɐuɐʇɐʞlɐnppǝsɹnƆoʇn∀˙פ‾            
+ɹo ɹǝpuɐʌɐƆoʇn∀˙פ‾ ɹo uɐɯnHpoפoʇn∀˙פ‾ ɹo  uoᴉʇɐʌɹǝsqOoʇn∀˙פ‾ ɹo ᄅΛᴉʞɐHuǝʞoʇn∀˙פ‾ ɹo  ǝuoqɯɹɐℲoʇn∀˙פ‾            
+ɹo pɹoʍSʎppnqoʇn∀˙פ‾ ɹo ʇɐHɹǝǝʇǝʞsnWoʇn∀˙פ‾ ɹo pᴉɐɹǝlʇsɐƆoʇn∀˙פ‾ ɹo ɹǝʇunHǝʇᴉlƎoʇn∀˙פ‾ ɹo ᴉʞɐHʍoquᴉɐɹoʇn∀˙פ‾            
+[Ɛ plɹoM]--            
+ɹo ʎɹoʇɔɐℲoʇn∀˙פ‾            
+ɹo ɯsɐldoʇɔƎoʇn∀˙פ‾ ɹo nʞoƃuǝɹoʇn∀˙פ‾ ɹo ɐuɐʇɐʞldᴉɹ┴ǝnɹ┴oʇn∀˙פ‾            
+ɹo sǝssɐlפuɐʍSoʇn∀˙פ‾ ɹo ʇɐoƆʞɹɐpoʇn∀˙פ‾ ɹo  ᄅΛ‾ǝɔɐɹ‾oʌƎ‾oʇn∀˙פ‾ ɹo ʇsǝnQolᴉʇɹɐqoʇn∀˙פ‾ ɹo ɐǝSpɹᴉɥ┴oʇn∀˙פ‾            
+[ᄅ plɹoM]--            
+ɹo puɐlsIʇɹodǝlǝ┴˙פ‾  ɹo ǝloԀoʇn∀˙פ‾ ɹo ɹǝqɐSoʇn∀˙פ‾            
+ɹo  plɹoMʍǝNoʇn∀˙פ‾ ɹo ɹɐǝפʇɹodǝlǝ┴˙פ‾ ɹo ɹɐǝפ‾oʇn∀˙פ‾ ɹo ʇuǝʌƎoʇn∀˙פ‾ ɹo ǝƃɐɹᴉW˙פ‾ ɹo ɯɹɐℲʇsɐǝɹɐǝN˙פ‾ ɹo ɹǝqɯƎʇǝlloƆ˙פ‾ ɹo ǝuᴉɹɥsǝunsᴉʞoʇd┴˙פ‾ ɹo puɐlsIʇuǝʌƎoʇd┴˙פ‾ ɹo puɐlsIǝunsᴉʞoʇd┴˙פ‾ ɹo ɯɹɐℲoʇn∀˙פ‾ ɟᴉ            
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:pǝddǝʇS˙(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ        
+ʎʇᴉɔolǝʌ-- ()uoᴉʇɔunɟ)llɐɔd    
+()uoᴉʇɔunɟ)uʍɐds
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+puǝ
+{    
+ɹǝqnNǝɯɐɹℲƆqoW = [6]        
+'QuoW = [8]        
+'ǝɯɐɹℲƆqoW = [ㄥ]        
+'uoW = [9]        
+'ǝɹᴉnbǝɹlǝʌǝ˥ = [ϛ]        
+'ǝɯɐNʇsǝnQ = [ㄣ]        
+'ǝɯɐNqoW = [Ɛ]        
+'uoᴉʇᴉsoԀƆԀN = [ᄅ]        
+'lǝʌǝ˥ʇsǝnQ = [Ɩ]        
+} uɹnʇǝɹ    
+    
+puǝ    
+sǝɯɐɹℲƆƃuᴉɥɔʇɐɯ = ǝɯɐɹℲƆqoW        
+puǝ        
+(lᴉu 'sǝɯɐɹℲƆƃuᴉɥɔʇɐɯ)ʇɹǝsuᴉ˙ǝlqɐʇ            
+ǝslǝ        
+(ǝɯɐɹℲƆ˙ʌ 'sǝɯɐɹℲƆƃuᴉɥɔʇɐɯ)ʇɹǝsuᴉ˙ǝlqɐʇ            
+uǝɥʇ ㄣʇlnsǝɹ == ǝɯɐN˙ʌ ɟᴉ        
+op (()uǝɹplᴉɥƆʇǝפ:suʍɐdSʎɯǝuƎ˙ǝɔɐdsʞɹoʍ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ    
+    
+(,,,, ',,+s%,, 'Ɛʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ㄣʇlnsǝɹ lɐɔol    
+(,,,, ',,+p%,, 'ᄅʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = Ɛʇlnsǝɹ lɐɔol    
+(,,,, ',,[[%]%],, 'ʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ᄅʇlnsǝɹ lɐɔol    
+(,,,, ',, ˙ʌ˥,, 'ǝɯɐNqoW)qnsƃ˙ƃuᴉɹʇs = ʇlnsǝɹ lɐɔol    
+{} = sǝɯɐɹℲƆƃuᴉɥɔʇɐɯ lɐɔol    
+
+puǝ    
+puǝ        
+puǝ            
+ɐ = uoW                
+ǝɯɐN˙ʌ = ǝɯɐNqoW                
+uǝɥʇ 0ϛ + lʌ˥ => (Λ˥uoW)ɹǝqɯnuoʇ puɐ ǝɯɐNqoW# < ǝɯɐN˙ʌ# puɐ (ǝɯɐNqoW)puᴉɟ:ǝɯɐN˙ʌ ɟᴉ            
+(,,+p%,, 'ǝɯɐN˙ʌ)ɥɔʇɐɯ˙ƃuᴉɹʇs = Λ˥uoW            
+op (()uǝɹplᴉɥƆʇǝפ:(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ        
+uǝɥʇ (,,ʌ˥,,)puᴉɟ:ǝɯɐNqoW ʇou ɟᴉ    
+puǝ    
+puǝ        
+puǝ            
+ǝɯɐN˙ʌ = ǝɯɐNqoW                
+uǝɥʇ 0ϛ + lʌ˥ => (Λ˥uoW)ɹǝqɯnuoʇ puɐ ǝɯɐNqoW# < ǝɯɐN˙ʌ# puɐ (ǝɯɐNqoW)puᴉɟ:ǝɯɐN˙ʌ ɟᴉ            
+(,,+p%,, 'ǝɯɐN˙ʌ)ɥɔʇɐɯ˙ƃuᴉɹʇs = Λ˥uoW            
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ        
+uǝɥʇ (,,ʌ˥,,)puᴉɟ:ǝɯɐNqoW ʇou ɟᴉ    
+(ǝɯɐNqoW#'Ɩ)qns:ǝɯɐNqoW = ǝɯɐNqoW    
+puǝ    
+ϛㄥㄥ = ǝɹᴉnbǝɹlǝʌǝ˥        
+,,ǝʇɐɹᴉԀ uɐʍS,, = uoW        
+,,ǝʇɐɹᴉԀ uɐʍS,, = ǝɯɐNqoW        
+Ɩ = lǝʌǝ˥ʇsǝnQ        
+,,ʇsǝnQᄅɐǝɹ∀,, = ǝɯɐNʇsǝnQ        
+uǝɥʇ ᄅ == lǝʌǝ˥ʇsǝnQ puɐ ,,ʇsǝnQᄅɐǝɹ∀,, == ǝɯɐNʇsǝnQ ɟᴉǝslǝ    
+puǝ        
+(866ᄅ6ϛᄅᄅㄣ˙0- '0 '8Ɩ96ƖƐ906˙0- '0 'Ɩ '0 '8Ɩ96ƖƐ906˙0 '0 '866ᄅ6ϛᄅᄅㄣ˙0- '96Ɩ9ㄥㄣ˙Ɩ8Ɛ- 'Ɛㄣ06Ɩ˙ㄣㄣϛϛ 'ㄣƖ860˙6ϛ8ㄥ-)ʍǝu˙ǝɯɐɹℲƆ = uoᴉʇᴉsoԀƆԀN            
+uǝɥʇ ᄅ == lǝʌǝ˥ʇsǝnQ ɟᴉǝslǝ        
+(6ϛ8Ɩ6Ɩ966˙0 '0 'Ɩ0Ɛㄣ88Ɩㄥ80˙0 '0- 'Ɩ '0 'Ɩ0Ɛㄣ88Ɩㄥ80˙0- '0- '6ϛ8Ɩ6Ɩ966˙0 'Ɛㄣ996˙6ㄣ6Ɩ- 'ϛ69ㄣㄥ8˙Ɛㄣ8 'ㄥ9888˙Ɩᄅㄥㄣ-)ʍǝu˙ǝɯɐɹℲƆ = uoᴉʇᴉsoԀƆԀN            
+uǝɥʇ Ɩ == lǝʌǝ˥ʇsǝnQ ɟᴉ        
+uǝɥʇ ,,ʇsǝnQƖdxƎʎʞS,, == ǝɯɐNʇsǝnQ ɟᴉǝslǝ    
+(8ƖƖㄥƖ0ϛㄥƖ0˙0 '0 'ϛƐ69ㄣ8666˙0- '0 'Ɩ '0 'ϛƐ69ㄣ8666˙0 '0 '8ƖƖㄥƖ0ϛㄥƖ0˙0 'ㄣ6ϛ9ㄣ6˙ㄣㄥㄣ 'ϛᄅ6ㄣƖ00ϛƐ˙0 'ㄥㄣϛ09˙0ƖƐϛ)ʍǝu˙ǝɯɐɹℲƆ = uoᴉʇᴉsoԀƆԀN        
+0Ɩᄅ = ǝɹᴉnbǝɹlǝʌǝ˥        
+,,ɹǝuosᴉɹԀ snoɹǝƃuɐp,, = uoW        
+,,ɹǝuosᴉɹԀ snoɹǝƃuɐp,, = ǝɯɐNqoW        
+ᄅ = lǝʌǝ˥ʇsǝnQ        
+,,ʇsǝnQɹǝuosᴉɹԀ,, = ǝɯɐNʇsǝnQ        
+uǝɥʇ ,,ʇsǝnQlǝdɯI,, == ǝɯɐNʇsǝnQ ɟᴉǝslǝ    
+0ᄅƖ = ǝɹᴉnbǝɹlǝʌǝ˥        
+,,ɹǝɔᴉɟɟO ʎʇʇǝԀ ɟǝᴉɥƆ,, = uoW        
+,,ɹǝɔᴉɟɟO ʎʇʇǝԀ ɟǝᴉɥƆ,, = ǝɯɐNqoW        
+Ɩ = lǝʌǝ˥ʇsǝnQ        
+,,ᄅʇsǝnQǝuᴉɹɐW,, = ǝɯɐNʇsǝnQ        
+uǝɥʇ ,,ᄅʇsǝnQǝuᴉɹɐW,, == ǝɯɐNʇsǝnQ ɟᴉ    
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+[Ɩ](,,[,, ˙˙ [,,bǝɹlǝʌǝ˥,,]ɹ ˙˙,, ˙ʌ˥] ,,'ᄅᴉ)ʇᴉlds˙ƃuᴉɹʇs = uoW                    
+ᄅᴉ = ǝɯɐNqoW                    
+op ([,,ʞsɐ┴,,]ɹ)sɹᴉɐd uᴉ ᄅʌ'ᄅᴉ ɹoɟ                
+ᴉ = ǝɯɐNʇsǝnQ                
+uǝɥʇ ,,ʇsǝnQuǝzᴉʇᴉƆ,, =~ ᴉ puɐ ǝɹᴉnbǝɹlǝʌǝ˥ == [,,bǝɹlǝʌǝ˥,,]ɹ ɟᴉ            
+op (ʌ)sɹᴉɐd uᴉ ɹ'Ɩᴉ ɹoɟ        
+op (sʇsǝnQ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ    
+puǝ    
+puǝ        
+((ϛㄥ896ㄥƖㄣ8ㄥ˙6Ɩ8Ɩ 'ϛㄥ896ㄥ9˙ƖƖ 'ϛᄅ9ϛƖϛ8˙Ɛ9ƖƖ9)ʍǝu˙ƐɹoʇɔǝΛ',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ 000Ɛ < ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙uoᴉʇᴉsoԀƆԀN) puɐ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ        
+uǝɥʇ 6ㄣㄣ => lʌ˥ puɐ 00ㄣ =< lʌ˥ ɟᴉ    
+
+puǝ    
+puǝ        
+((ϛㄥ896ㄥƖㄣ8ㄥ˙6Ɩ8Ɩ 'ϛㄥ896ㄥ9˙ƖƖ 'ϛᄅ9ϛƖϛ8˙Ɛ9ƖƖ9)ʍǝu˙ƐɹoʇɔǝΛ',,ǝɔuɐɹʇuƎʇsǝnbǝɹ,,)ɹǝʌɹǝSǝʞoʌuI:‾ℲɯɯoƆ˙sǝʇoɯǝɹ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ            
+uǝɥʇ 000Ɛ < ǝpnʇᴉuƃɐW˙(uoᴉʇᴉsoԀ˙ʇɹɐԀʇooɹpᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ - uoᴉʇᴉsoԀ˙uoᴉʇᴉsoԀƆԀN) puɐ ɯɹɐℲoʇn∀˙פ‾ ɟᴉ        
+ uǝɥʇ 66Ɛ => lʌ˥ puɐ ϛㄥƐ =< lʌ˥ ɟᴉ    
+puǝ    
+puǝ        
+puǝ            
+puǝ                
+[ᄅ][,,slǝʌǝ˥,,]ʌ = ǝɹᴉnbǝɹlǝʌǝ˥                    
+ᄅ = lǝʌǝ˥ʇsǝnQ                    
+[,,ǝɯɐɹℲƆ,,]ᴉ = uoᴉʇᴉsoԀƆԀN                    
+uǝɥʇ Ɛ == lǝʌǝ˥ʇsǝnQ puɐ Ɛ == [,,slǝʌǝ˥,,]ʌ# ɟᴉ                
+puǝ                
+ɹ = ǝɹᴉnbǝɹlǝʌǝ˥                    
+Ɩᴉ = lǝʌǝ˥ʇsǝnQ                    
+[,,ǝɯɐɹℲƆ,,]ᴉ = uoᴉʇᴉsoԀƆԀN                    
+uǝɥʇ ǝɹᴉnbǝɹlǝʌǝ˥ < ɹ ɟᴉ                
+puǝ                
+0 = ǝɹᴉnbǝɹlǝʌǝ˥                    
+uǝɥʇ ǝɹᴉnbǝɹlǝʌǝ˥ ʇou ɟᴉ                
+uǝɥʇ ɹ =< lʌ˥ ɟᴉ            
+op ([,,slǝʌǝ˥,,]ʌ)sɹᴉɐd uᴉ ɹ'Ɩᴉ ɹoɟ        
+op ([,,ʇsᴉ˥ƆԀN,,][,,ɐʇɐp,,]ǝlnpoWǝpᴉnפ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ    
+(sʇsǝnQ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ǝɹᴉnbǝɹ = sʇsǝnQ lɐɔol    
+(ǝlnpoWǝpᴉnפ˙(,,ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)ǝɹᴉnbǝɹ = ǝlnpoWǝpᴉnפ lɐɔol    
+    
+puǝ    
+{        
+ǝɯɐɹℲƆqoW = [ㄥ]            
+'uoW = [9]            
+'ǝɹᴉnbǝɹlǝʌǝ˥ = [ϛ]            
+'ǝɯɐNʇsǝnQ = [ㄣ]            
+'ǝɯɐNqoW = [Ɛ]            
+'uoᴉʇᴉsoԀƆԀN = [ᄅ]            
+'lǝʌǝ˥ʇsǝnQ = [Ɩ]            
+} uɹnʇǝɹ        
+puǝ        
+sǝɯɐɹℲƆƃuᴉɥɔʇɐɯ = ǝɯɐɹℲƆqoW            
+puǝ            
+(ǝɯɐɹℲƆ˙ʌ 'sǝɯɐɹℲƆƃuᴉɥɔʇɐɯ)ʇɹǝsuᴉ˙ǝlqɐʇ                
+uǝɥʇ ㄣʇlnsǝɹ == ǝɯɐN˙ʌ ɟᴉ            
+op (()uǝɹplᴉɥƆʇǝפ:suʍɐdSʎɯǝuƎ˙ǝɔɐdsʞɹoʍ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ'ᴉ ɹoɟ        
+        
+(,,,, ',,+s%,, 'Ɛʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ㄣʇlnsǝɹ lɐɔol        
+(,,,, ',,+p%,, 'ᄅʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = Ɛʇlnsǝɹ lɐɔol        
+(,,,, ',,[[%]%],, 'ʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ᄅʇlnsǝɹ lɐɔol        
+(,,,, ',, ˙ʌ˥,, 'ǝɯɐNqoW)qnsƃ˙ƃuᴉɹʇs = ʇlnsǝɹ lɐɔol        
+{} = sǝɯɐɹℲƆƃuᴉɥɔʇɐɯ lɐɔol        
+(ᄅƖㄥㄣㄥᄅㄣ680˙0- '60-ǝ60ㄥㄣ8Ɛ90˙ᄅ- '9ƖƐƐ66ϛ66˙0 '60-ǝ698ㄣㄣㄥ9Ɩ˙ϛ- 'Ɩ '60-ǝ6ϛ8ㄥƖ809˙Ɩ '9ƖƐƐ66ϛ66˙0- '60-ǝ8Ɩ6ᄅ6ᄅ00˙ϛ- 'ᄅƖㄥㄣㄥᄅㄣ680˙0- 'ㄣƖϛ0ᄅƖ˙ϛㄥㄣ 'ƖᄅϛㄥƖϛϛ9˙Ɩ 'ϛƖƖƐ6˙80Ɛϛ)ʍǝu˙ǝɯɐɹℲƆ = uoᴉʇᴉsoԀƆԀN        
+,,ɹǝuosᴉɹԀ snoɹǝƃuɐp,, = uoW        
+ᄅ = lǝʌǝ˥ʇsǝnQ        
+,,ʇsǝnQɹǝuosᴉɹԀ,, = ǝɯɐNʇsǝnQ        
+,,ɹǝuosᴉɹԀ snoɹǝƃuɐp,, = ǝɯɐNqoW        
+uǝɥʇ 6ㄣᄅ => lʌ˥ puɐ 0Ɩᄅ =< lʌ˥ ɟᴉ    
+
+puǝ    
+{        
+ǝɯɐɹℲƆqoW = [ㄥ]            
+'uoW = [9]            
+'ǝɹᴉnbǝɹlǝʌǝ˥ = [ϛ]            
+'ǝɯɐNʇsǝnQ = [ㄣ]            
+'ǝɯɐNqoW = [Ɛ]            
+'uoᴉʇᴉsoԀƆԀN = [ᄅ]            
+'lǝʌǝ˥ʇsǝnQ = [Ɩ]            
+} uɹnʇǝɹ        
+puǝ        
+(ㄣㄥᄅ99ㄣϛ6˙0- '80-ǝᄅᄅ00ㄣƐ6Ɩ˙Ɩ 'ㄥ8ϛ689ㄥ6ᄅ˙0- '60-ǝㄣƖƖㄣ90ᄅᄅ˙6 'Ɩ '80-ǝ90Ɩ06Ɩϛ0˙Ɩ 'ㄥ8ϛ689ㄥ6ᄅ˙0 '60-ǝㄣ6ㄥƖᄅㄥ6ᄅ˙ㄥ 'ㄣㄥᄅ99ㄣϛ6˙0- 'ᄅ9Ɩ8ᄅ˙6ㄣϛƖ '690ᄅᄅᄅ6˙9Ɩ 'ƖƐㄥ66˙6ϛ0Ɩ)ʍǝu˙ǝɯɐɹℲƆ = uoᴉʇᴉsoԀƆԀN            
+Ɩ = lǝʌǝ˥ʇsǝnQ            
+,,ƖʇsǝnQʇᴉpuɐq,, = ǝɯɐNʇsǝnQ            
+,,ʇᴉpuɐq,, = uoW            
+,,ʇᴉpuɐq,, = ǝɯɐNqoW            
+uǝɥʇ ,,sǝʇɐɹᴉԀ,, == (ɯɐǝ┴˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ƃuᴉɹʇsoʇ ɟᴉǝslǝ        
+(6ᄅ6ㄣᄅㄥㄣㄣㄥ˙0- 'ㄥ0-ǝϛƖϛƖ0ᄅ60˙Ɩ- 'ƖㄥϛƖㄥƐㄥ99˙0 'ㄥ0-ǝㄣ0Ɛㄣ88ㄥ0˙Ɩ- 'Ɩ '80-ǝ88ϛƐ0ㄣᄅƐ˙ㄣ 'ƖㄥϛƖㄥƐㄥ99˙0- '80-ǝϛϛㄣㄥ96ㄥ6˙Ɛ- '6ᄅ6ㄣᄅㄥㄣㄣㄥ˙0- 'ϛ8ϛㄣᄅ˙ㄣ0Ɩᄅ 'ϛ8ϛ90ᄅϛ˙ㄣᄅ 'ㄣㄣ6ㄥ9˙60ㄥᄅ-)ʍǝu˙ǝɯɐɹℲƆ = uoᴉʇᴉsoԀƆԀN            
+,,ǝǝuᴉɐɹ┴,, = uoW            
+Ɩ = lǝʌǝ˥ʇsǝnQ            
+,,ʇsǝnQǝuᴉɹɐW,, = ǝɯɐNʇsǝnQ            
+,,ǝǝuᴉɐɹ┴,, = ǝɯɐNqoW            
+uǝɥʇ ,,sǝuᴉɹɐW,, == (ɯɐǝ┴˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)ƃuᴉɹʇsoʇ ɟᴉ        
+uǝɥʇ 6 => lʌ˥ puɐ Ɩ =< lʌ˥ ɟᴉ    
+ǝnlɐΛ˙lǝʌǝ˥˙ɐʇɐp˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = lʌ˥ lɐɔol    
+()ʞɔǝɥƆʇsǝnQ uoᴉʇɔunɟ lɐɔol
+
+puǝ	
+puǝ		
+ǝnɹʇ = pǝɹoɥɔu∀˙ᄅXsuʍɐdSʎɯǝuƎ			
+suʍɐdSʎɯǝuƎ˙ǝɔɐdsʞɹoʍ = ʇuǝɹɐԀ˙ᄅXsuʍɐdSʎɯǝuƎ			
+ㄣʇlnsǝɹ = ǝɯɐN˙ᄅXsuʍɐdSʎɯǝuƎ			
+(,,,, ',,+s%,, 'Ɛʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ㄣʇlnsǝɹ lɐɔol			
+(,,,, ',,+p%,, 'ᄅʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = Ɛʇlnsǝɹ lɐɔol			
+(,,,, ',,[[%]%],, 'ʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ᄅʇlnsǝɹ lɐɔol			
+(,,,, ',, ˙ʌ˥,, 'ǝɯɐN˙ʌ)qnsƃ˙ƃuᴉɹʇs = ʇlnsǝɹ lɐɔol			
+()ǝuolƆ:ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = ᄅXsuʍɐdSʎɯǝuƎ lɐɔol			
+uǝɥʇ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,lǝpoW,,)∀sI:ʌ ɟᴉ		
+op (()uǝɹplᴉɥƆʇǝפ:ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ	
+puǝ	
+puǝ		
+ǝnɹʇ = pǝɹoɥɔu∀˙ᄅXsuʍɐdSʎɯǝuƎ			
+suʍɐdSʎɯǝuƎ˙ǝɔɐdsʞɹoʍ = ʇuǝɹɐԀ˙ᄅXsuʍɐdSʎɯǝuƎ			
+ㄣʇlnsǝɹ = ǝɯɐN˙ᄅXsuʍɐdSʎɯǝuƎ			
+(,,,, ',,+s%,, 'Ɛʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ㄣʇlnsǝɹ lɐɔol			
+(,,,, ',,+p%,, 'ᄅʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = Ɛʇlnsǝɹ lɐɔol			
+(,,,, ',,[[%]%],, 'ʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ᄅʇlnsǝɹ lɐɔol			
+(,,,, ',, ˙ʌ˥,, 'ǝɯɐN˙ʌ)qnsƃ˙ƃuᴉɹʇs = ʇlnsǝɹ lɐɔol			
+()ǝuolƆ:ʇɹɐԀʇooɹpᴉouɐɯnH˙ʌ = ᄅXsuʍɐdSʎɯǝuƎ lɐɔol			
+uǝɥʇ (,,ʇɹɐԀʇooɹpᴉouɐɯnH,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʌ puɐ (,,lǝpoW,,)∀sI:ʌ ɟᴉ		
+op (()uǝɹplᴉɥƆʇǝפ:sǝᴉɯǝuƎ˙(,,ǝɔɐdsʞɹoM,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ	
+puǝ	
+puǝ		
+ǝnɹʇ = pǝɹoɥɔu∀˙ᄅXsuʍɐdSʎɯǝuƎ			
+suʍɐdSʎɯǝuƎ˙ǝɔɐdsʞɹoʍ = ʇuǝɹɐԀ˙ᄅXsuʍɐdSʎɯǝuƎ			
+ㄣʇlnsǝɹ = ǝɯɐN˙ᄅXsuʍɐdSʎɯǝuƎ			
+(,,,, ',,+s%,, 'Ɛʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ㄣʇlnsǝɹ lɐɔol			
+(,,,, ',,+p%,, 'ᄅʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = Ɛʇlnsǝɹ lɐɔol			
+(,,,, ',,[[%]%],, 'ʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ᄅʇlnsǝɹ lɐɔol			
+(,,,, ',, ˙ʌ˥,, 'ǝɯɐN˙ʌ)qnsƃ˙ƃuᴉɹʇs = ʇlnsǝɹ lɐɔol			
+()ǝuolƆ:ʌ = ᄅXsuʍɐdSʎɯǝuƎ lɐɔol			
+uǝɥʇ (,,ʇɹɐԀ,,)∀sI:ʌ ɟᴉ		
+op (()uǝɹplᴉɥƆʇǝפ:suʍɐdSʎɯǝuƎ˙uᴉƃᴉɹOplɹoM‾˙ǝɔɐdsʞɹoʍ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ	
+
+,,suʍɐdSʎɯǝuƎ,, = ǝɯɐN˙suʍɐdSʎɯǝuƎ	
+(ǝɔɐdsʞɹoʍ',,ɹǝploℲ,,)ʍǝu˙ǝɔuɐʇsuI = suʍɐdSʎɯǝuƎ lɐɔol
+
+puǝ	
+puǝ		
+puǝ			
+ǝɯɐɹℲƆ˙uʍɐdSpǝʇɔǝlǝs uɹnʇǝɹ				
+uǝɥʇ ㄣʇlnsǝɹ == ǝɯɐN˙uʍɐdSpǝʇɔǝlǝs ɟᴉ			
+			
+ㄣʇlnsǝɹ = ǝɯɐNQuoɯ lɐɔol			
+(,,,, ',,+s%,, 'Ɛʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ㄣʇlnsǝɹ lɐɔol			
+(,,,, ',,+p%,, 'ᄅʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = Ɛʇlnsǝɹ lɐɔol			
+(,,,, ',,[[%]%],, 'ʇlnsǝɹ)qnsƃ˙ƃuᴉɹʇs = ᄅʇlnsǝɹ lɐɔol			
+(,,,, ',, ˙ʌ˥,, 'ɹ‾)qnsƃ˙ƃuᴉɹʇs = ʇlnsǝɹ lɐɔol			
+op (sɹǝʇsuoWʇǝƃɹɐʇ)sɹᴉɐd uᴉ ɹ‾'‾ ɹoɟ		
+		
+[xǝpuIuʍɐdSɯopuɐɹ]suʍɐdSʎɯǝuǝ = uʍɐdSpǝʇɔǝlǝs lɐɔol		
+(suʍɐdSʎɯǝuǝ# 'Ɩ)ɯopuɐɹ˙ɥʇɐɯ = xǝpuIuʍɐdSɯopuɐɹ lɐɔol		
+()uǝɹplᴉɥƆʇǝפ:suʍɐdSʎɯǝuƎ˙ǝɔɐdsʞɹoʍ = suʍɐdSʎɯǝuǝ lɐɔol		
+{,,ɹǝʇɟɐɹƆ ǝᴉʞooƆ,, ',,pɹɐnפ ǝʞɐƆ,, ',,ɹǝʞɐq pɐǝH,, ',,ɟɟɐʇS ƃuᴉʞɐq,,} = sɹǝʇsuoWʇǝƃɹɐʇ lɐɔol		
+()uoW‾ǝɯɐɹℲƆ‾ǝʞɐƆʇǝפ uoᴉʇɔunɟ	
+{} = lǝqɐ┴
+
+puǝ
+(puǝ    
+puǝ        
+puǝ            
+(pᴉouɐɯnHloo┴)loo┴dᴉnbƎ:pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                
+(ǝɯɐN˙ʌ)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = pᴉouɐɯnHloo┴ lɐɔol                
+uǝɥʇ (,loo┴,)∀sI:ʌ puɐ ,,pɹoʍS,, == dᴉ┴loo┴˙ʌ ɟᴉ            
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ        
+()uoᴉʇɔunɟ)llɐɔd    
+()pɹoʍSuodɐǝMdᴉnbƎ uoᴉʇɔunɟ
+
+puǝ
+puǝ    
+puǝ        
+puǝ            
+(ǝɯɐN˙ʌ)uodɐǝMdᴉnbƎ                
+uǝɥʇ ((ǝɯɐN˙ʌ)ƃuᴉɹʇsoʇ)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ           
+uǝɥʇ ,,ʇᴉnɹℲ xolq,, == dᴉ┴loo┴˙ʌ ɟᴉ        
+op (()uǝɹplᴉɥƆʇǝפ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ)sɹᴉɐd uᴉ ʌ' ᴉ ɹoɟ    
+()ʇᴉnɹℲxolqdᴉnbƎ uoᴉʇɔunɟ
+
+puǝ
+(puǝ	
+puǝ		
+ (pᴉouɐɯnHloo┴)loo┴dᴉnbƎ:pᴉouɐɯnH˙ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ			
+ (loo┴)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = pᴉouɐɯnHloo┴ lɐɔol			
+ uǝɥʇ (loo┴)plᴉɥƆʇsɹᴉℲpuᴉℲ:ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ		
+()uoᴉʇɔunɟ)llɐɔd	
+(loo┴)uodɐǝMdᴉnbƎ uoᴉʇɔunɟ
+puǝ
+puǝ    
+ǝslɐɟ = dᴉnbƎoʇn∀ʇoN˙פ‾        
+(Ɩ˙)ʇᴉɐʍ        
+ʞɔɐdʞɔɐq˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ = ʇuǝɹɐԀ˙(uodɐǝM)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ        
+(ϛ˙)ʇᴉɐʍ        
+ǝnɹʇ = dᴉnbƎoʇn∀ʇoN˙פ‾        
+uǝɥʇ (uodɐǝM)plᴉɥƆʇsɹᴉℲpuᴉℲ:ɹǝʇɔɐɹɐɥƆ˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ɟᴉ    
+(uodɐǝM)uodɐǝMdᴉnbƎu∩ uoᴉʇɔunɟ
+
+[uodɐǝM dᴉnbƎ suoᴉʇɔunℲ] --
+
+(puǝ
+(ǝɯɐɹℲƆ˙ɐɹǝɯɐƆʇuǝɹɹnƆ˙ǝɔɐdsʞɹoʍ '(0 '0)ʍǝu˙ᄅɹoʇɔǝΛ)d∩ᄅuoʇʇnq:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+(Ɩ)ʇᴉɐʍ
+(ǝɯɐɹℲƆ˙ɐɹǝɯɐƆʇuǝɹɹnƆ˙ǝɔɐdsʞɹoʍ '(0 '0)ʍǝu˙ᄅɹoʇɔǝΛ)uʍopᄅuoʇʇnq:(,,ɹǝs∩lɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+()uoᴉʇɔunɟ)ʇɔǝuuoɔ:pǝlpI˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ
+[ʞℲ∀ ᴉʇu∀] --
+puǝ	
+()pǝpɐo˥sI:ǝɯɐƃ puɐ lᴉu =~ ɯɐǝ┴˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ lᴉʇun		
+puǝ			
+puǝ				
+puǝ					
+()uoᴉʇɔunℲ˙ʌ						
+                                                                                                op ((pǝʇɐʌᴉʇɔ∀˙uoʇʇnqʇxǝ┴˙ǝɯɐɹℲ˙sǝʇɐɹᴉԀ˙ɹǝuᴉɐʇuoƆ˙ɯɐǝ┴ǝsooɥƆ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)suoᴉʇɔǝuuoɔʇǝƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ					
+ǝslǝ				
+puǝ					
+()uoᴉʇɔunℲ˙ʌ						
+                                                                                                op ((pǝʇɐʌᴉʇɔ∀˙uoʇʇnqʇxǝ┴˙ǝɯɐɹℲ˙sǝuᴉɹɐW˙ɹǝuᴉɐʇuoƆ˙ɯɐǝ┴ǝsooɥƆ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)suoᴉʇɔǝuuoɔʇǝƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ					
+uǝɥʇ ,,ǝuᴉɹɐW,, == ɯɐǝ┴˙פ‾ ɟᴉǝslǝ				
+puǝ					
+()uoᴉʇɔunℲ˙ʌ						
+                                                                                                op ((pǝʇɐʌᴉʇɔ∀˙uoʇʇnqʇxǝ┴˙ǝɯɐɹℲ˙sǝʇɐɹᴉԀ˙ɹǝuᴉɐʇuoƆ˙ɯɐǝ┴ǝsooɥƆ˙uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ)suoᴉʇɔǝuuoɔʇǝƃ)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ					
+uǝɥʇ ,,ǝʇɐɹᴉԀ,, == ɯɐǝ┴˙פ‾ ɟᴉ				
+uǝɥʇ ǝnɹʇ == ǝlqᴉsᴉΛ˙ɯɐǝ┴ǝsooɥƆ˙(,,uᴉɐW,,)plᴉɥƆɹoℲʇᴉɐM:ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ			
+()ʇᴉɐʍ ʇɐǝdǝɹ		
+uǝɥʇ  (,,ɯɐǝ┴ǝsooɥƆ,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:uᴉɐW˙ᴉnפɹǝʎɐlԀ˙ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ ɟᴉ	
+	
+()pǝpɐo˥sI:ǝɯɐƃ lᴉʇun (0)ʇᴉɐʍ ʇɐǝdǝɹ
+(,,ǝɔᴉʌɹǝSᴉnפ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSᴉnפ lɐɔol
+()ǝsnoWʇǝפ:ɹǝʎɐlԀlɐɔo˥ = ǝsnoW lɐɔol
+ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ɹǝʎɐlԀlɐɔo˥ lɐɔol
+(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSunɹ lɐɔol
+,,ǝɔᴉʌɹǝSuǝǝʍ┴,,ǝɔᴉʌɹǝs:ǝɯɐƃ = uǝǝʍʇ lɐɔol
+(,,ǝɔᴉʌɹǝSuǝǝʍ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSuǝǝʍ┴ lɐɔol
+(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ lɐɔol
+()sƃuᴉʇʇǝSpɐo˥
+
+puǝ
+puǝ    
+ uɹnʇǝɹ        
+ǝslǝ    
+puǝ        
+((ʎɐɹɹ∀)ǝpoɔuƎNOSſ:(,,ǝɔᴉʌɹǝSdʇʇH,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+',,uosɾ˙,, ˙˙ ǝɯɐN˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ˙˙ ,,/sʇᴉnɹℲ xolq/qnHɹoʇɔǝΛ,,)ǝlᴉɟǝʇᴉɹʍ            
+puǝ            
+ʌ = [ᴉ]ʎɐɹɹ∀                
+op (sƃuᴉʇʇǝS˙פ‾)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ            
+{} = ʎɐɹɹ∀ lɐɔol            
+((,,uosɾ˙,, ˙˙ ǝɯɐN˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                
+˙˙ ,,/sʇᴉnɹℲ xolq/qnHɹoʇɔǝΛ,,)ǝlᴉɟpɐǝɹ)ǝpoɔǝpNOSſ:(,,ǝɔᴉʌɹǝSdʇʇH,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝpoɔǝp lɐɔol            
+ǝslǝ        
+()sƃuᴉʇʇǝSpɐo˥            
+uǝɥʇ (,,uosɾ˙,, ˙˙ ǝɯɐN˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ˙˙ ,,/sʇᴉnɹℲ xolq/qnHɹoʇɔǝΛ,,)ǝlᴉɟsᴉ ʇou ɟᴉ        
+uǝɥʇ ɹǝploɟsᴉ puɐ ǝlᴉɟsᴉ puɐ ǝlᴉɟǝʇᴉɹʍ puɐ ǝlᴉɟpɐǝɹ ɟᴉ    
+()sƃuᴉʇʇǝSǝʌɐS uoᴉʇɔunɟ
+
+puǝ
+puǝ    
+ uɹnʇǝɹ        
+ǝslǝ    
+puǝ        
+puǝ            
+ʌ = [ᴉ]sƃuᴉʇʇǝS˙פ‾                
+op (ǝpoɔǝp)sɹᴉɐd uᴉ ʌ 'ᴉ ɹoɟ            
+((,,uosɾ˙,, ˙˙ ǝɯɐN˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ                
+˙˙ ,,/sʇᴉnɹℲ xolq/qnHɹoʇɔǝΛ,,)ǝlᴉɟpɐǝɹ)ǝpoɔǝpNOSſ:(,,ǝɔᴉʌɹǝSdʇʇH,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝpoɔǝp lɐɔol            
+ǝslǝ        
+((sƃuᴉʇʇǝS˙פ‾)ǝpoɔuƎNOSſ:(,,ǝɔᴉʌɹǝSdʇʇH,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ                
+',,uosɾ˙,, ˙˙ ǝɯɐN˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ˙˙ ,,/sʇᴉnɹℲ xolq/qnHɹoʇɔǝΛ,,)ǝlᴉɟǝʇᴉɹʍ            
+uǝɥʇ (,,uosɾ˙,, ˙˙ ǝɯɐN˙ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ ˙˙ ,,/sʇᴉnɹℲ xolq/qnHɹoʇɔǝΛ,,)ǝlᴉɟsᴉ ʇou ɟᴉ        
+puǝ        
+(,,/sʇᴉnɹℲ xolq/qnHɹoʇɔǝΛ,,)ɹǝploɟǝʞɐɯ            
+uǝɥʇ (,,/sʇᴉnɹℲ xolq/qnHɹoʇɔǝΛ,,)ɹǝploɟsᴉ ʇou ɟᴉ        
+puǝ        
+(,,qnHɹoʇɔǝΛ,,)ɹǝploɟǝʞɐɯ            
+uǝɥʇ (,,qnHɹoʇɔǝΛ,,)ɹǝploɟsᴉ ʇou ɟᴉ        
+uǝɥʇ ɹǝploɟsᴉ puɐ ǝlᴉɟsᴉ puɐ ǝlᴉɟǝʇᴉɹʍ puɐ ǝlᴉɟpɐǝɹ ɟᴉ    
+()sƃuᴉʇʇǝSpɐo˥ uoᴉʇɔunɟ
+[sƃuᴉʇʇǝS ǝʌɐS] --
+
+[[pIԀɹƎԀI∩]]--
+(puǝ    
+(ǝɯɐƃ'ǝslɐɟ'ƖℲ˙ǝpoƆʎǝʞ˙ɯnuƎ'ǝslɐɟ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+(ǝɯɐƃ'ǝslɐɟ'ƖℲ˙ǝpoƆʎǝʞ˙ɯnuƎ'ǝnɹʇ)ʇuǝʌƎʎǝʞpuǝS:(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ    
+()uoᴉʇɔunɟ)ʇɔǝuuoɔ:uʍopƖuoʇʇnqǝsnoW˙uoʇʇnqǝƃɐɯI    
+()uoᴉʇɔunℲpɐo˥    
+puǝ
+(puǝ    
+puǝ        
+            
+	(ϛ˙)ʇᴉɐʍ            
+()ʎɐlԀ:(            
+{0 = ʎɔuǝɹɐdsuɐɹ┴ǝƃɐɯI}                
+'(uI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ʇɹɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ㄣ˙)ʍǝu˙oɟuIuǝǝʍ┴                
+'uoʇʇnqǝƃɐɯI                
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴            
+()ʎɐlԀ:(            
+{0 = uoᴉʇɐʇoɹ}                
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ʞɔɐq˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ᄅ˙)ʍǝu˙oɟuIuǝǝʍ┴                
+'uoʇʇnqǝƃɐɯI                
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴            
+(ϛ˙)ʇᴉɐʍ            
+()ʎɐlԀ:(            
+{0 = ʎɔuǝɹɐdsuɐɹ┴ǝƃɐɯI}                
+'(uI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ʇɹɐnQ˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ㄣ˙)ʍǝu˙oɟuIuǝǝʍ┴                
+'uoʇʇnqǝƃɐɯI                
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴            
+()ʎɐlԀ:ᄅʞɔᴉlƆpunoS            
+()ʎɐlԀ:(            
+{08Ɩ = uoᴉʇɐʇoɹ}                
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ʞɔɐq˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ᄅ˙)ʍǝu˙oɟuIuǝǝʍ┴                
+'uoʇʇnqǝƃɐɯI                
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴            
+ǝslɐɟ = snɔoℲpɐo˥            
+ uǝɥʇ ǝslɐɟ == snɔoℲpɐo˥ ɟᴉ        
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:uʍopƖuoʇʇnqǝsnoW˙uoʇʇnqǝƃɐɯI    
+    
+ǝslɐɟ = snɔoℲpɐo˥ lɐɔol    
+    
+(puǝ    
+()ʎɐlԀ:(        
+{(ϛ9 '0 'ϛ9 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS}            
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ʞɔɐq˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ᄅ˙)ʍǝu˙oɟuIuǝǝʍ┴            
+'uoʇʇnqǝƃɐɯI            
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴        
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ǝʌɐǝ˥ǝsnoW˙uoʇʇnqǝƃɐɯI    
+(puǝ    
+()ʎɐlԀ:(        
+{(08 '0 '08 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS}            
+'(ʇnOuI˙uoᴉʇɔǝɹᴉpƃuᴉsɐƎ˙ɯnuƎ 'ʞɔɐq˙ǝlʎʇSƃuᴉsɐƎ˙ɯnuƎ 'ᄅ˙)ʍǝu˙oɟuIuǝǝʍ┴            
+'uoʇʇnqǝƃɐɯI            
+)ǝʇɐǝɹƆ:ǝɔᴉʌɹǝSuǝǝʍ┴        
+()uoᴉʇɔunɟ)ʇɔǝuuoƆ:ɹǝʇuƎǝsnoW˙uoʇʇnqǝƃɐɯI        
+    ()uoᴉʇɔunℲpɐo˥ uoᴉʇɔunɟ
+,,ㄣϛ0ϛƐᄅ6ᄅƖ9Ɩ//:pᴉʇǝssɐxqɹ,, = ǝƃɐɯI˙uoʇʇnqǝƃɐɯI
+Ɩ = ʎɔuǝɹɐdsuɐɹ┴punoɹƃʞɔɐq˙uoʇʇnqǝƃɐɯI
+(0 '0 '0)qפɹɯoɹɟ˙ƐɹoloƆ = ƐɹoloƆpunoɹƃʞɔɐq˙uoʇʇnqǝƃɐɯI
+ǝnɹʇ = ǝlqɐƃƃɐɹp˙uoʇʇnqǝƃɐɯI
+(ϛ9 '0 'ϛ9 '0)ʍǝu˙ᄅɯᴉp∩ = ǝzᴉS˙uoʇʇnqǝƃɐɯI
+(0 'ƐƖ8068ᄅϛ60˙0 '0 'ㄥƐƐƐƐ80ᄅƖ˙0)ʍǝu˙ᄅɯᴉp∩ = uoᴉʇᴉsoԀ˙uoʇʇnqǝƃɐɯI
+ᴉnפuǝǝɹɔS = ʇuǝɹɐԀ˙uoʇʇnqǝƃɐɯI
+,,ʍɔzɔxɐpɐpsɐɟsɟpʍɟʍɟǝʍɟsp,, = ǝɯɐN˙ᴉnפuǝǝɹɔS
+(,,sǝlnpoW,,)plᴉɥƆɹoℲʇᴉɐM:(,,ᴉnפxolqoɹ,,)plᴉɥƆɹoℲʇᴉɐM:ᴉnפǝɹoƆ˙ǝɯɐƃ = ʇuǝɹɐԀ˙ᴉnפuǝǝɹɔS
+uoʇʇnqxolqoɹ˙ǝlʎʇSuoʇʇnq˙ɯnuƎ = uoʇʇnqxolqoɹ lɐɔol
+(,,uoʇʇnqǝƃɐɯI,,)ʍǝu˙ǝɔuɐʇsuI = uoʇʇnqǝƃɐɯI lɐɔol
+(,,ᴉnפuǝǝɹɔS,,)ʍǝu˙ǝɔuɐʇsuI = ᴉnפuǝǝɹɔS lɐɔol
+(,,ɹǝuɹoƆI∩,,)ʍǝu˙ǝɔuɐʇsuI = ɹǝuɹoƆI∩ lɐɔol
+(,,ǝʞoɹʇSI∩,,)ʍǝu˙ǝɔuɐʇsuI = ǝʞoɹʇSI∩ lɐɔol
+ǝɔɐdsʞɹoM˙ǝɯɐƃ = ʇuǝɹɐԀ˙ᄅʞɔᴉlƆpunoS
+Ɩ = ǝɯnloΛ˙ᄅʞɔᴉlƆpunoS
+,,ㄥ980ᄅ986ƐƐ//:pᴉʇǝssɐxqɹ,, = pIpunoS˙ᄅʞɔᴉlƆpunoS
+,,ʇɔǝɟɟƎ punoS,, = ǝɯɐN˙ᄅʞɔᴉlƆpunoS
+(,,punoS,,)ʍǝu˙ǝɔuɐʇsuI = ᄅʞɔᴉlƆpunoS lɐɔol
+(,,ǝɔᴉʌɹǝSᴉnפ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSᴉnפ lɐɔol
+()ǝsnoWʇǝפ:ɹǝʎɐlԀlɐɔo˥ = ǝsnoW lɐɔol
+ɹǝʎɐlԀlɐɔo˥˙(,,sɹǝʎɐlԀ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ɹǝʎɐlԀlɐɔo˥ lɐɔol
+(,,ǝɔᴉʌɹǝSunɹ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSunɹ lɐɔol
+,,ǝɔᴉʌɹǝSuǝǝʍ┴,,ǝɔᴉʌɹǝs:ǝɯɐƃ = uǝǝʍʇ lɐɔol
+(,,ǝɔᴉʌɹǝSuǝǝʍ┴,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSuǝǝʍ┴ lɐɔol
+(,,ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ɹǝƃɐuɐWʇnduIlɐnʇɹᴉΛ lɐɔol
+(,,ǝɔᴉʌɹǝSʇnduIɹǝs∩,,)ǝɔᴉʌɹǝSʇǝפ:ǝɯɐƃ = ǝɔᴉʌɹǝSʇnduIɹǝs∩ lɐɔol
+puǝ
+()ʎoɹʇsǝp:ᴉ∩    
+uǝɥʇ ᴉ∩ ɟᴉ
+(,,ʍɔzɔxɐpɐpsɐɟsɟpʍɟʍɟǝʍɟsp,,)plᴉɥƆʇsɹᴉℲpuᴉℲ:(,,sǝlnpoW,,)plᴉɥƆɹoℲʇᴉɐM:(,,ᴉnפxolqoɹ,,)plᴉɥƆɹoℲʇᴉɐM:ᴉnפǝɹoƆ˙ǝɯɐƃ = ᴉ∩ lɐɔol
+[[pᴉdɹǝԀ]]--
+
+puǝ
+()ʎɐldsᴉp:uoᴉʇɐɔᴉɟᴉʇou    
+0Ɩ = uoᴉʇɐɹnp˙uoᴉʇɐɔᴉɟᴉʇou    
+(ʇxǝʇ)ʍǝu˙uoᴉʇɐɔᴉɟᴉʇoN = uoᴉʇɐɔᴉɟᴉʇou lɐɔol    
+(uoᴉʇɐɔᴉɟᴉʇoN˙ǝƃɐɹoʇSpǝʇɐɔᴉldǝɹ˙ǝɯɐƃ)ǝɹᴉnbǝɹ = uoᴉʇɐɔᴉɟᴉʇoN lɐɔol    
+(ʇxǝʇ)ɔǝΛ uoᴉʇɔunɟ
+
+{
+ǝslɐɟ = ǝɔɐlԀʇxǝNoʇn∀    
+'ǝslɐɟ = spᴉɐɹoʇn∀    
+[spᴉɐɹ]--    
+'ǝslɐɟ = ʇsᴉ˥pɹoʍSʎɹǝʇsɐWɯɹɐℲ    
+'ǝslɐɟ = ʎɹǝʇsɐWunפɯɹɐℲoʇn∀    
+'ǝslɐɟ = ʎɹǝʇsɐWʇᴉnɹℲɯɹɐℲoʇn∀    
+[ʎɹǝʇsɐW]--    
+'ǝslɐɟ = ssoqɯɹɐℲoʇn∀    
+'ǝslɐɟ = ʇɔǝlǝSssoqoʇn∀    
+'ǝslɐɟ = ssoqll∀oʇn∀    
+[ssoq]--    
+'ǝslɐɟ = ʇsǝɥƆɯɹɐℲoʇn∀    
+'ǝslɐɟ = doʇʇɹodǝlǝ┴    
+'ǝslɐɟ = lɐᴉɹǝʇɐWɯɹɐℲoʇn∀    
+'ǝslɐɟ = ┴∀OqO┴Ԁ┴    
+'ǝslɐɟ = ʇuǝʌƎoʇn∀    
+'ǝslɐɟ = ʍollɐHssoqɯɹɐℲoʇn∀    
+'ǝslɐɟ = spɹoʍSʎppnqoʇn∀    
+'ǝslɐɟ = ɥɔɹo┴ʎloHoʇn∀    
+'ǝslɐɟ = ᄅΛɥƃnopoʇn∀    
+'ǝslɐɟ = ǝɔuᴉɹԀǝʞɐƆoʇn∀    
+'ǝslɐɟ = ɹǝƃƃɐpʞɹɐpoʇn∀    
+'ǝslɐɟ = ʍoqʇuǝdɹǝSoʇn∀    
+'ǝslɐɟ = pɹoʍSɐʇᴉɥsn┴oʇn∀    
+'ǝslɐɟ = pɹoʍSɐɯɐ⅄oʇn∀    
+'ǝslɐɟ = ɐuɐʇɐʞlɐnppǝsɹnƆoʇn∀    
+'ǝslɐɟ = ɹǝpuɐʌɐƆoʇn∀    
+'ǝslɐɟ = uɐɯnHpoפoʇn∀    
+'ǝslɐɟ = doH‾uoᴉʇɐʌɹǝsqOoʇn∀    
+'ǝslɐɟ = uoᴉʇɐʌɹǝsqOoʇn∀    
+'ǝslɐɟ = ᄅΛᴉʞɐHuǝʞoʇn∀    
+'ǝslɐɟ = ǝuoqɯɹɐℲoʇn∀    
+'ǝslɐɟ = pɹoʍSʎppnqoʇn∀    
+'ǝslɐɟ = ʇɐHɹǝǝʇǝʞsnWoʇn∀    
+'ǝslɐɟ = ɹǝʇunHǝʇᴉlƎoʇn∀    
+'ǝslɐɟ = doHpɹoʍSʎɹɐpuǝƃǝ˥ʎnqoʇn∀    
+'ǝslɐɟ = doHᴉʞɐHʇuǝɯuɐɥɔuƎʎnqoʇn∀    
+'ǝslɐɟ = ᴉʞɐHʍoquᴉɐɹoʇn∀    
+'ǝslɐɟ = ɹɐǝפʇɹodǝlǝ┴    
+'ǝslɐɟ = ɹɐǝפ‾oʇn∀    
+'ǝslɐɟ = doHǝƃɐɹᴉW    
+' ǝslɐɟ = ǝƃɐɹᴉW    
+[Ɛ plɹoM]--    
+
+'ǝslɐɟ = ʎɹoʇɔɐℲoʇn∀    
+'ǝslɐɟ = ɯsɐldoʇɔƎoʇn∀    
+'ǝslɐɟ = nʞoƃuǝɹoʇn∀    
+'ǝslɐɟ = ɐuɐʇɐʞldᴉɹ┴ǝnɹ┴oʇn∀    
+'ǝslɐɟ = sǝssɐlפuɐʍSoʇn∀    
+'ǝslɐɟ = ʇɐoƆʞɹɐpoʇn∀    
+'ǝslɐɟ = ᄅΛ‾ǝɔɐɹ‾oʌƎ‾oʇn∀    
+'ǝslɐɟ = ʇsǝnQolᴉʇɹɐqoʇn∀    
+'ǝslɐɟ = ɐǝSpɹᴉɥ┴oʇn∀    
+[ᄅ plɹoM]--
+
+'ǝslɐɟ = puɐlsIʇɹodǝlǝ┴    
+'ǝslɐɟ = ǝloԀoʇn∀    
+'ǝslɐɟ = ɹǝqɐSoʇn∀    
+'ǝslɐɟ = plɹoMʍǝNoʇn∀    
+'ǝslɐɟ = ɯɹɐℲʇsɐǝɹɐǝN    
+'ǝslɐɟ = ɯɹɐℲoʇn∀    
+} = sƃuᴉʇʇǝS˙פ‾
+(666)dɐɔsdɟʇǝs
+;puǝ
+()uʍopʇnɥS:ǝɯɐƃ
+ǝslǝ ;ǝnɹʇ = ƐplɹoM uǝɥʇ ϛƐ9Ɛᄅㄣ6ㄣㄣㄥ == pᴉ ɟᴉǝslǝ ;ǝnɹʇ = ᄅplɹoM uǝɥʇ Ɛ8Ɩᄅㄥᄅᄅㄣㄣㄣ == pᴉ ɟᴉǝslǝ  ;ǝnɹʇ = ƖplɹoM uǝɥʇ 6ㄣϛϛƖ6Ɛϛㄥᄅ == pᴉ ɟᴉ pIǝɔɐlԀ˙ǝɯɐƃ = pᴉ lɐɔol
+ɹǝʎɐlԀlɐɔo˥˙sɹǝʎɐlԀ˙ǝɯɐƃ lᴉʇun (0)ʇᴉɐʍ ʇɐǝdǝɹ
+[าษาภงอสน็ปเกยแอืลหเะลดมหจ็รสเ]ยทไ--
