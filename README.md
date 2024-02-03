@@ -6866,12 +6866,12 @@ spawn(function()
             end)
         end)
 page1:Line()
-page1:Seperator("<<Boss>>") 
+page1:Seperator("<<บอส>>") 
 local Boss = {}
-local BossName = page1:Dropdown("Select Boss",Boss, function(value)
+local BossName = page1:Dropdown("เลิือกบอส",Boss, function(value)
     _G.SelectBoss = value
 end)
-page1:Button("Refresh Boss",function()
+page1:Button("รีเฟชร",function()
 BossName:Clear()
     for i, v in pairs(game.ReplicatedStorage:GetChildren()) do
         if v.Name == "Cyborg" or v.Name == "The Gorilla King" or v.Name == "Wysper" or v.Name == "Thunder God" or v.Name == "Mob Leader" or v.Name == "Bobby" or v.Name == "Saber Expert" or v.Name == "Warden" or v.Name == "Chief Warden" or v.Name == "Swan" or v.Name == "Magma Admiral"  or v.Name == "Fishman Lord" or v.Name == "Wysper" or v.Name == "Ice Admiral" or v.Name == "Diamond" or v.Name == "Jeremy" or v.Name == "Fajita" or v.Name == "Don Swan" or v.Name == "Smoke Admiral" or v.Name == "Awakened Ice Admiral" or v.Name == "Tide Keeper" or v.Name == "Darkbeard" or v.Name == "Stone" or v.Name == "Island Empress" or v.Name == "Kilo Admiral" or v.Name == "Captain Elephant" or v.Name == "Beautiful Pirate" or v.Name == "Longma" or v.Name == "Cake Queen" or v.Name == "Greybeard" or v.Name == "Order" or v.Name == "Cursed Captain" or v.Name == "Soul Reaper" or v.Name == "Rip indra" or v.Name == "Mihawk Boss" or v.Name == "Cake Prince" or v.Name == "Dough King" or v.Name == "Cursed Skeleton Boss" or v.Name == "Factory"  then
@@ -6881,7 +6881,7 @@ BossName:Clear()
     end
 end)
 
-page1:Toggle("Auto Farm Boss", _G.AutoFarmBoss, function(value)
+page1:Toggle("ฟาร์มบอส", _G.AutoFarmBoss, function(value)
 _G.AutoFarmBoss = value
     if value == false then
         task.wait()
@@ -6926,7 +6926,7 @@ task.spawn(function()
     end
 end)
 
-page1:Toggle("Auto All Boss", _G.AutoAllBoss, function(value)
+page1:Toggle("ฟาร์มบอสทั้งหมด", _G.AutoAllBoss, function(value)
     _G.AutoAllBoss = value
         if value == false then
         task.wait()
@@ -7472,99 +7472,7 @@ spawn(function()
     end
 end)
 
-spawn(function()
-    while wait() do
-        local MyLevel = game.Players.LocalPlayer.Data.Level.Value
-        local QuestC = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest
-        pcall(function()
-            if _G.AutoFarmGunMastery then
-                if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, QuestCheck()[6]) then
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
-                end
-                if QuestC.Visible == true then
-                    if game:GetService("Workspace").Enemies:FindFirstChild(QuestCheck()[3]) then
-                        for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                            if v.Name == QuestCheck()[3] then
-                                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                    PosMon = v.HumanoidRootPart.CFrame
-                                    MonHumanoidRootPart = v.HumanoidRootPart
-                                    PositionSkillMasteryGun = v.HumanoidRootPart.Position
-                                    repeat task.wait()
-                                        v.HumanoidRootPart.CFrame = PosMon
-                                        if v.Humanoid.Health <= v.Humanoid.MaxHealth * _G.Settings.HealthMs/100 then 
-                                            _G.UseSkill = true
-                                            toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
-                                            v.HumanoidRootPart.Size = Vector3.new(120,120,120)
-                                            v.HumanoidRootPart.CanCollide = false
-                                            v.Head.CanCollide = false
-                                            BringMobFarm = true
-                                            v.HumanoidRootPart.Transparency = 1
-                                            EquipWeapon(_G.SelectWeaponGun)
-                                        else
-                                            _G.UseSkill = false
-                                            v.HumanoidRootPart.Size = Vector3.new(120,120,120)
-                                            v.HumanoidRootPart.CanCollide = false
-                                            v.Head.CanCollide = false
-                                            BringMobFarm = true
-                                            EquipWeapon(_G.SelectWeapon)
-                                            v.HumanoidRootPart.Transparency = 1
-                                            toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
-                                            if (v.HumanoidRootPart.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
-                                                game:GetService("VirtualUser"):CaptureController()
-                                                game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
-                                            end
-                                        end
-                                    until not _G.AutoFarmGunMastery or not v.Parent or v.Humanoid.Health <= 0 or QuestC.Visible == false or not v:FindFirstChild("HumanoidRootPart")
-                                end
-                            end
-                        end
-                    else
-                        _G.UseSkill = false
-                        UnEquipWeapon(_G.SelectWeapon)
-                        if _G.Auto_CFrame then
-                            toTarget(QuestCheck()[7][SetCFarme] * CFrame.new(0,30,5)) 
-                            if (QuestCheck()[7][SetCFarme].Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
-                                if SetCFarme == nil or SetCFarme == '' then
-                                    SetCFarme = 1
-                                    print(SetCFarme)
-                                elseif SetCFarme >= #QuestCheck()[7] then
-                                    SetCFarme = 1
-                                    print(SetCFarme)
-                                end
-                                SetCFarme =  SetCFarme + 1
 
-                                print(SetCFarme)
-                                wait(0.5)
-                            end
-                        else
-                            if AttackRandomType_MonCFrame == 1 then
-                                toTarget(QuestCheck()[7][1] * CFrame.new(0,30,20))
-                            elseif AttackRandomType_MonCFrame == 2 then
-                                toTarget(QuestCheck()[7][1] * CFrame.new(0,30,-20))
-                            elseif AttackRandomType_MonCFrame == 3 then
-                                toTarget(QuestCheck()[7][1] * CFrame.new(20,30,0))
-                            elseif AttackRandomType_MonCFrame == 4 then
-                                toTarget(QuestCheck()[7][1] * CFrame.new(0,30,-20))
-                            elseif AttackRandomType_MonCFrame == 5 then
-                                toTarget(QuestCheck()[7][1] * CFrame.new(-20,30,0))
-                            else
-                                toTarget(QuestCheck()[7][1] * CFrame.new(0,30,20))
-                            end
-                        end
-                    end
-                else
-                    toTarget(QuestCheck()[2])
-                    if (QuestCheck()[2].Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 then
-                        BringMobFarm = false
-                        wait(0.2)
-                        game:GetService('ReplicatedStorage').Remotes.CommF_:InvokeServer("StartQuest", QuestCheck()[4], QuestCheck()[1]) wait(0.5)
-                        toTarget(QuestCheck()[7][1] * CFrame.new(0,30,5))
-                    end
-                end
-            end
-        end)
-    end
-end)
 local Cam = workspace.CurrentCamera
 local hotkey = true
 function lookAt(target, eye)
@@ -7624,6 +7532,16 @@ spawn(function()
 end)
 
  
+
+page6:Seperator("✨")
+_G.HealthMs = 25
+page6:Toggle("ฟาร์มมาสเตอรี่ผลปีศาจ", _G.Settings.AutoFarmFruitMastery, function(value)
+_G.AutoFarmFruitMastery = value
+_G.Settings.AutoFarmFruitMastery = value
+SaveSettings()
+if value == false then
+    toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
+end
 spawn(function()
     while wait() do
         local MyLevel = game.Players.LocalPlayer.Data.Level.Value
@@ -7642,7 +7560,7 @@ spawn(function()
                                         if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, QuestCheck()[6]) then
                                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
                                         else
-                                            if v.Humanoid.Health <= v.Humanoid.MaxHealth * _G.Settings.HealthMs/100 then 
+                                            if v.Humanoid.Health <= v.Humanoid.MaxHealth * _G.HealthMs/100 then 
                                                 _G.UseSkill = true
                                                 EquipBloxFruit()
                                                 toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
@@ -7720,15 +7638,6 @@ spawn(function()
         end)
     end
 end)
-page6:Seperator("✨")
-_G.HealthMs = 25
-page6:Toggle("Auto Fruit Mastery", _G.Settings.AutoFarmFruitMastery, function(value)
-_G.AutoFarmFruitMastery = value
-_G.Settings.AutoFarmFruitMastery = value
-SaveSettings()
-if value == false then
-    toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
-end
 end)
 spawn(function()
     while task.wait() do
@@ -7747,56 +7656,146 @@ spawn(function()
         end)
     end
 end)
-page6:Toggle("Auto Gun Mastery", _G.Settings.AutoFarmGunMastery, function(value)
+page6:Toggle("ฟาร์มมาสเตอรี่ปืน", _G.Settings.AutoFarmGunMastery, function(value)
 _G.AutoFarmGunMastery = value
 _G.Settings.AutoFarmGunMastery = value
 SaveSettings()
     if value == false then
     toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
     end
+    spawn(function()
+        while wait() do
+            local MyLevel = game.Players.LocalPlayer.Data.Level.Value
+            local QuestC = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest
+            pcall(function()
+                if _G.AutoFarmGunMastery then
+                    if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, QuestCheck()[6]) then
+                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
+                    end
+                    if QuestC.Visible == true then
+                        if game:GetService("Workspace").Enemies:FindFirstChild(QuestCheck()[3]) then
+                            for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                                if v.Name == QuestCheck()[3] then
+                                    if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                        PosMon = v.HumanoidRootPart.CFrame
+                                        MonHumanoidRootPart = v.HumanoidRootPart
+                                        PositionSkillMasteryGun = v.HumanoidRootPart.Position
+                                        repeat task.wait()
+                                            v.HumanoidRootPart.CFrame = PosMon
+                                            if v.Humanoid.Health <= v.Humanoid.MaxHealth * _G.HealthMs/100 then 
+                                                _G.UseSkill = true
+                                                toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
+                                                v.HumanoidRootPart.Size = Vector3.new(120,120,120)
+                                                v.HumanoidRootPart.CanCollide = false
+                                                v.Head.CanCollide = false
+                                                BringMobFarm = true
+                                                v.HumanoidRootPart.Transparency = 1
+                                                EquipWeapon(_G.SelectWeaponGun)
+                                            else
+                                                _G.UseSkill = false
+                                                v.HumanoidRootPart.Size = Vector3.new(120,120,120)
+                                                v.HumanoidRootPart.CanCollide = false
+                                                v.Head.CanCollide = false
+                                                BringMobFarm = true
+                                                EquipWeapon(_G.SelectWeapon)
+                                                v.HumanoidRootPart.Transparency = 1
+                                                toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
+                                                if (v.HumanoidRootPart.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
+                                                    game:GetService("VirtualUser"):CaptureController()
+                                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                                end
+                                            end
+                                        until not _G.AutoFarmGunMastery or not v.Parent or v.Humanoid.Health <= 0 or QuestC.Visible == false or not v:FindFirstChild("HumanoidRootPart")
+                                    end
+                                end
+                            end
+                        else
+                            _G.UseSkill = false
+                            UnEquipWeapon(_G.SelectWeapon)
+                            if _G.Auto_CFrame then
+                                toTarget(QuestCheck()[7][SetCFarme] * CFrame.new(0,30,5)) 
+                                if (QuestCheck()[7][SetCFarme].Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
+                                    if SetCFarme == nil or SetCFarme == '' then
+                                        SetCFarme = 1
+                                        print(SetCFarme)
+                                    elseif SetCFarme >= #QuestCheck()[7] then
+                                        SetCFarme = 1
+                                        print(SetCFarme)
+                                    end
+                                    SetCFarme =  SetCFarme + 1
+    
+                                    print(SetCFarme)
+                                    wait(0.5)
+                                end
+                            else
+                                if AttackRandomType_MonCFrame == 1 then
+                                    toTarget(QuestCheck()[7][1] * CFrame.new(0,30,20))
+                                elseif AttackRandomType_MonCFrame == 2 then
+                                    toTarget(QuestCheck()[7][1] * CFrame.new(0,30,-20))
+                                elseif AttackRandomType_MonCFrame == 3 then
+                                    toTarget(QuestCheck()[7][1] * CFrame.new(20,30,0))
+                                elseif AttackRandomType_MonCFrame == 4 then
+                                    toTarget(QuestCheck()[7][1] * CFrame.new(0,30,-20))
+                                elseif AttackRandomType_MonCFrame == 5 then
+                                    toTarget(QuestCheck()[7][1] * CFrame.new(-20,30,0))
+                                else
+                                    toTarget(QuestCheck()[7][1] * CFrame.new(0,30,20))
+                                end
+                            end
+                        end
+                    else
+                        toTarget(QuestCheck()[2])
+                        if (QuestCheck()[2].Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 then
+                            BringMobFarm = false
+                            wait(0.2)
+                            game:GetService('ReplicatedStorage').Remotes.CommF_:InvokeServer("StartQuest", QuestCheck()[4], QuestCheck()[1]) wait(0.5)
+                            toTarget(QuestCheck()[7][1] * CFrame.new(0,30,5))
+                        end
+                    end
+                end
+            end)
+        end
+    end)
 end)
-page6:Slider("Kill At (%)",1,100,25,function(value)
+page6:Slider("ฆ่าเมื่อ (%)",1,100,25,function(value)
     _G.HealthMs = value
 end)
 
-page6:Label("Skill List")
-page6:Toggle("Skill Z", _G.SkillZ, function(value)
+page6:Label("รายการสกิล")
+page6:Toggle("สกิล Z", _G.SkillZ, function(value)
 _G.SkillZ = value
 end)
-page6:Toggle("Skill X", _G.SkillX, function(value)
+page6:Toggle("สกิล X", _G.SkillX, function(value)
 _G.SkillX = value
 end)
 
-page6:Toggle("Skill C", _G.SkillC, function(value)
+page6:Toggle("สกิล C", _G.SkillC, function(value)
 _G.SkillC = value
 end)
 
-page6:Toggle("Skill V", _G.SkillV, function(value)
+page6:Toggle("สกิล V", _G.SkillV, function(value)
 _G.SkillV = value
 end)
 
-page6:Toggle("Skill F",_G.SkillF, function(value)
+page6:Toggle("สกิล F",_G.SkillF, function(value)
 _G.SkillF = value
 end)
 
 if _G.AutoFarmGunMastery or _G.AutoFarmFruitMastery then
-_G.Select_Fast_Attack = "Slow"
+_G.FastType = "Slow"
 else
-_G.Select_Fast_Attack = "Fast"
+_G.FastType = "Fast"
 end
 page7:Seperator("🍈")
 
-page7:Toggle("BringFruit",_G.Auto_Bring_Fruit , function(value)
+page7:Toggle("ดึงผลไม้ปีศาจ",_G.Auto_Bring_Fruit , function(value)
      _G.Auto_Bring_Fruit  = value
 end)
-page7:Toggle("Auto Random Fruits", _G.AutoBuyRandomFruits, function(value)
+page7:Toggle("สุ่มผลไม้ปีศาจ", _G.AutoBuyRandomFruits, function(value)
 _G.AutoBuyRandomFruits = value
 end)
-page7:Button("Buy Random Fruits", function()
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin", "Buy")
-end)
 
-page7:Button("Devil Fruit Shop", function()
+page7:Button("เปิดร้านค้าผลไม้ปีศาจ", function()
 local args = {
     [1] = "GetFruits"
 }
@@ -7812,12 +7811,10 @@ spawn(function()
     end
 end)
 
-page7:Toggle("Auto Store Fruits", _G.AutoStoreFruits, function(value)
+page7:Toggle("เก็บผลไม้ปีศาจเข้ากระเป๋า", _G.AutoStoreFruits, function(value)
 _G.AutoStoreFruits = value
 end)
-page7:Toggle("Auto Store Fruits&Drop", _G.AutoStoreFruits, function(value)
-    _G.AutoStoreFruits = value
-end)
+
 spawn(function()
     while wait() do
         if _G.Auto_Bring_Fruit then
@@ -7984,10 +7981,10 @@ end)
 local SelectRaids = {"Flame","Ice","Quake","Light","Dark","String","Rumble","Magma","Human: Buddha","Sand","Bird: Phoenix","Dough"}
 page8:Seperator("⚔️")
 
-page8:Dropdown("Select Raids",SelectRaids, function(value)
+page8:Dropdown("เลือกดันเจี้ยน",SelectRaids, function(value)
     _G.SelectRaids = value
 end)
-page8:Toggle("Auto Raids", _G.AutoRaids, function(value)
+page8:Toggle("ลงดันเจี้ยน", _G.AutoRaids, function(value)
     _G.AutoRaids = value
     if value == false then
         task.wait()
@@ -7995,16 +7992,16 @@ page8:Toggle("Auto Raids", _G.AutoRaids, function(value)
         task.wait()
     end
 end)
-page8:Toggle("Kill Aura", _G.KillAura, function(value)
+page8:Toggle("ออร่าฆ่ามอนรอบตัว", _G.KillAura, function(value)
     _G.KillAura = value
 end)
-page8:Toggle("Auto Next Place", _G.AutoNextPlace, function(value)
+page8:Toggle("ออโต้ไปเกาะถัดไป", _G.AutoNextPlace, function(value)
     _G.AutoNextPlace = value
     if value == false then
         toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
     end
 end)
-page8:Toggle("Auto Awakened", _G.AutoAwakened, function(value)
+page8:Toggle("ซื้อสกิลตื่น", _G.AutoAwakened, function(value)
     _G.AutoAwakened = value
 end)
 
@@ -8159,7 +8156,7 @@ local getplayers = {}
 local getitems = {}
 local getweb = {}
 
-    page13:Seperator("<<PVP>>")
+    page13:Seperator("<<ต่อสู้>>")
 do
     for i, v in pairs(game:GetService("Workspace").Characters:GetChildren()) do
         if v.Name ~= plr.Name then
@@ -8172,10 +8169,10 @@ do
         end
     end
 end
-local PlayerDrop = page13:Dropdown("Select Player",getplayers, function(value)
+local PlayerDrop = page13:Dropdown("เลือกเพลย์เยอร์",getplayers, function(value)
     SelectPlayer = value
 end)
-page13:Button("Refresh", function()
+page13:Button("รีเฟชร", function()
     PlayerDrop:Clear()
     for i, v in next, game:GetService("Workspace").Characters:GetChildren() do
         if v.Name ~= plr.Name then
@@ -8185,7 +8182,7 @@ page13:Button("Refresh", function()
         end
     end
 end)
-page13:Toggle("Teleport to Player", teleporttop, function(value)
+page13:Toggle("เทเลพอร์ตไปหาเพลย์เยอร์", teleporttop, function(value)
     teleporttop = value
     if value == false then
         task.wait()
@@ -8193,7 +8190,7 @@ page13:Toggle("Teleport to Player", teleporttop, function(value)
         task.wait()
     end
 end)
-page13:Toggle("Spectate Player", SpectatePlys, function(value)
+page13:Toggle("แอบดูเพลย์เยอร์", SpectatePlys, function(value)
     SpectatePlys = value
     local plr1 = game:GetService("Players").LocalPlayer.Character.Humanoid
     local plr2 = game:GetService("Players"):FindFirstChild(SelectPlayer)
@@ -8215,10 +8212,10 @@ spawn(function()
         end
     end
 end)
-page13:Toggle("Aimbot Gun", false, function(value)
+page13:Toggle("อิมบอทปืน", false, function(value)
     Aimbot = value
 end)
-page13:Toggle("Aimbot Skill", false, function(value)
+page13:Toggle("อิมบอทสกิล", false, function(value)
     Skillaimbot = value
 end)
 
@@ -8288,8 +8285,8 @@ game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun].RemoteFunc
 end
 end)
 
-page13:Seperator("<<ESP>>")
-page13:Toggle("ESPPlayer", _G.ESPPlayer, function(value)
+page13:Seperator("<<มองทะลุ>>")
+page13:Toggle("มองทะลุหาเพลย์เยอร์", _G.ESPPlayer, function(value)
 ESPPlayer = value
 end)
 spawn(function()
@@ -8299,7 +8296,7 @@ while task.wait() do
     end
 end
 end)
-page13:Toggle("ESPChest", _G.ChestEsp, function(value)
+page13:Toggle("มองทะลุหากล่องสมบัติ", _G.ChestEsp, function(value)
 ChestESP = value
 end)
 spawn(function()
@@ -8308,7 +8305,7 @@ spawn(function()
         UpdateChestEsp()
     end
 end)
-page13:Toggle("ESPDevilFruit", _G.DevilFruitESP, function(value)
+page13:Toggle("มองทะลุหาผลไม้ปีศาจ", _G.DevilFruitESP, function(value)
 DevilFruitESP = value
 end)
 spawn(function()
@@ -8317,7 +8314,7 @@ spawn(function()
         UpdateBfEsp()
     end
 end)
-page13:Toggle("ESPFlower", _G.DevilFruitESP, function(value)
+page13:Toggle("มองทะลุหาดอกไม้", _G.FlowerESP, function(value)
 FlowerESP = value
 end)
 spawn(function()
@@ -8326,7 +8323,7 @@ spawn(function()
         UpdateFlowerEsp()
     end
 end)
-page13:Toggle("ESPIsland", _G.DevilFruitESP, function(value)
+page13:Toggle("มองทะลุหาเกาะ", _G.IslandESP, function(value)
 IslandESP = value
 end)
 spawn(function()
@@ -8709,7 +8706,7 @@ spawn(function()
     end)
 end)
 
-page9:Toggle("Auto Mirage Island",  _G.Settings.AutoMirageIsland, function(value)
+page9:Toggle("เทเลพอร์ตไปหาเกาะลับ",  _G.Settings.AutoMirageIsland, function(value)
 _G.Mirage = value
 _G.Settings.Mirage = value
 SaveSettings() 
@@ -8719,7 +8716,7 @@ if value == false then
 end
 end)
 
-page9:Toggle("Auto Mirage Island [HOP]", _G.Settings.MirageHop, function(value)
+page9:Toggle("เทเลพอร์ตไปหาเกาะลับ [ย้ายเซิฟ]", _G.Settings.MirageHop, function(value)
 _G.MirageHop = value
 _G.Settings.MirageHop = value
 _G.AutoMirageIslandHop = value
@@ -8741,7 +8738,7 @@ spawn(function()
                 if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
                         toTarget(workspace.Map.MysticIsland.PrimaryPart.CFrame * CFrame.new(0, 300, 0))
                 else
-                        game:GetService("StarterGui"):SetCore("SendNotification",{Title = "VectorHub",Text = "Mirage not Found!",Icon = "rbxassetid://16129235054",Duration = 1})
+                        game:GetService("StarterGui"):SetCore("SendNotification",{Title = "VectorHub",Text = "เกาะลับไม่เกิด",Icon = "rbxassetid://16129235054",Duration = 1})
                 end
             end
         end
@@ -8802,12 +8799,12 @@ spawn(function()
     end
 end)
 
-page9:Toggle("ESPMirageIsland", _G.ESPMirageIsland, function(value)
+page9:Toggle("มองทะลุหาเกาะลับ", _G.ESPMirageIsland, function(value)
     _G.ESPMirageIsland = value
     ESPMirageIsland()
 end)
 
-page9:Toggle("Teleport To Advanced Fruit Dealer", _G.TPNPCDF, function(value)
+page9:Toggle("เทเลพอร์ตไปหาคนขายผลไม้ปีศาจเกาะลับ", _G.TPNPCDF, function(value)
     spawn(function()
         pcall(function()
         while wait() do
@@ -8820,7 +8817,7 @@ page9:Toggle("Teleport To Advanced Fruit Dealer", _G.TPNPCDF, function(value)
         end)
     end)
 end)
-page9:Toggle("Teleport To Gear", _G.Settings.Auto_Gear, function(value)
+page9:Toggle("เทเลพอร์ตไปหาฟันเฟือง", _G.Settings.Auto_Gear, function(value)
     _G.Auto_Gear = value
     _G.Settings.Auto_Gear = value
         SaveSettings() 
@@ -8869,21 +8866,21 @@ end
 end)
 end
 
-page9:Toggle("LockMoon", _G.LockMoon , function(value)
+page9:Toggle("มองพระจันทร์", _G.LockMoon , function(value)
 _G.LockMoon = value
 LockMoon()
 end)
 
 page10:Seperator("🐰")
 
-page10:Toggle("Auto Active RaceV3",_G.AutoActiveRace,function(value)  
+page10:Toggle("ออโต้เปิดใช้งานเผ่าวีสาม",_G.AutoActiveRace,function(value)  
 _G.AutoActiveRace = value
     while _G.AutoActiveRace do wait()
         game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.T,false,game)
         game:GetService("VirtualInputManager"):SendKeyEvent(false,Enum.KeyCode.T,false,game)
     end
 end)
-page10:Toggle("Auto Active RaceV4",_G.AutoActiveRaceV4,function(value)  
+page10:Toggle("ออโต้เปิดใช้งานเผ่าวีสี่",_G.AutoActiveRaceV4,function(value)  
 _G.AutoActiveRaceV4 = value
     while _G.AutoActiveRaceV4 do wait()
         game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Y,false,game)
@@ -8891,97 +8888,56 @@ _G.AutoActiveRaceV4 = value
     end
 end)
 
-page10:Button("Teleport To Top GreatTree", function()
+page10:Button("เทเลพอร์ไปบนต้นไม้ใหญ่", function()
     toTarget(CFrame.new(2947.556884765625, 2281.630615234375, -7213.54931640625))
 end)
 
-page10:Button("Teleport To Timple Of Time", function()
+page10:Button("เทเลพอร์ตไปยังที่ทำเผ่าวีสี่", function()
     Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875,14895.3017578125, 102.62469482421875)
 end)
 
-page10:Button("Teleport To Lever Pull", function()
+page10:Button("เทเลพอร์ตไปที่คันโยก", function()
     toTarget(CFrame.new(28575.181640625, 14936.6279296875, 72.31636810302734))
 end)
 
-page10:Button("Teleport To Acient One", function()
+page10:Button("เทเลพอร์ตไปที่ Acient One", function()
     toTarget(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
 end)
 
-page10:Button("Unlock Lever.", function()
-if game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt") then
-    game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()
-else
-end
-wait(0.1)
-local ProximityPrompt = Instance.new("ProximityPrompt")
-ProximityPrompt.Parent = game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt
-ProximityPrompt.MaxActivationDistance = 10
-ProximityPrompt.ActionText = "Secrets Beholds Inside"
-ProximityPrompt.ObjectText = "An unknown lever of time"
-function onProximity()
-    local part = game:GetService("Workspace").Map["Temple of Time"].MainDoor1
-    local TweenService = game:GetService("TweenService")
-    local startPosition = part.Position
-    local endPosition = startPosition + Vector3.new(0, -50, 0)
-    local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
-    local tween = TweenService:Create(part, tweenInfo, { Position = endPosition })
-    tween:Play()
-    local partnew = game:GetService("Workspace").Map["Temple of Time"].MainDoor2
-    local TweenService = game:GetService("TweenService")
-    local startPosition = partnew.Position
-    local endPosition = startPosition + Vector3.new(0, -50, 0)
-    local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
-    local tween = TweenService:Create(partnew, tweenInfo, { Position = endPosition })
-    tween:Play()
-    local SoundSFX = Instance.new("Sound")
-    SoundSFX.Parent = workspace
-    SoundSFX.SoundId = "rbxassetid://1904813041"
-    SoundSFX:Play()
-    SoundSFX.Name = "POwfpxzxzfFfFF"
-    game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()
-    wait(5)
-    workspace:FindFirstChild("POwfpxzxzfFfFF"):Remove()
-    game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
-    game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
-    game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
-end
-ProximityPrompt.Triggered:Connect(onProximity)
-end)
-
-page10:Button("Teleport Cyborg Door ", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่าไซบอร์ก ", function()
     toTarget(CFrame.new(28492.4140625, 14894.4267578125, -422.1100158691406))
 end)
-page10:Button("Teleport Fish Door ", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่ามนุษย์เงือก ", function()
     toTarget(CFrame.new(28224.056640625, 14889.4267578125, -210.5872039794922))
 end)
-page10:Button("Teleport Ghoul Door", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่ากลู", function()
     toTarget(CFrame.new(28672.720703125, 14889.1279296875, 454.5961608886719))
 end)
-page10:Button("Teleport Human Door ", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่ามนุษย์", function()
     toTarget(CFrame.new(29237.294921875, 14889.4267578125, -206.94955444335938))
 end)
-page10:Button("Teleport Mink Door ", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่ากระต่าย", function()
     toTarget(CFrame.new(29020.66015625, 14889.4267578125, -379.2682800292969))
 end)
-page10:Button("Teleport Sky Door ", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่าสกายเปีย", function()
     toTarget(CFrame.new(28967.408203125, 14918.0751953125, 234.31198120117188))
 end)
 
-page10:Seperator("<<Auto Trials>>")
+page10:Seperator("<<ออโต้ผ่านด่านเผ่า>>")
 
-page10:Button("Auto Complete Angel Trial", function(t)
+page10:Button("ออโต้ผ่านด่านเผ่าสกายเปีย", function(t)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Map.SkyTrial.Model.FinishPart.CFrame
 end)
-page10:Button("Auto Complete Rabbit Trial", function(t)
+page10:Button("ออโต้ผ่านด่านเผ่ากระต่าย", function(t)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.MinkTrial.Ceiling.CFrame * CFrame.new(0, -5, 0)
 end)
-page10:Button("Auto Complete Cyborg Trial", function(t)
+page10:Button("ออโต้ผ่านด่านเผ่าไซบอร์ก", function(t)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 300, 0)
 end)
-page10:Button("Teleport PVP Zone", function()
+page10:Button("เทเลพอร์ตไปเขตต่อสู้", function()
     toTarget(CFrame.new(28766.681640625, 14967.1455078125, -164.13290405273438))
 end)
-page10:Button("Teleport To Safe Zone When PVP", function()
+page10:Button("เทเลพอร์ตไปที่ปลอดภัยเมื่อต่อสู้", function()
     toTarget(CFrame.new(28273.0859375, 14896.5078125, 157.42063903808594))
 end)
 function FullBright()
@@ -9058,7 +9014,7 @@ game.Lighting.DescendantAdded:Connect(function(obj)
 end
 
     page14:Seperator("🌊")
-    page14:Toggle("Auto Kill Mon Sea Event", _G.AutoEvent, function(value)
+    page14:Toggle("ฆ่ามอนอีเว้นท์ทะเล", _G.AutoEvent, function(value)
         _G.AutoEvent = value
         spawn(function()
             while wait() do 
@@ -9087,7 +9043,7 @@ end
             end
         end)
     end)
-page14:Toggle("Accept Quest Kill 20 Sharks", _G.QRepairBoat, function(value)
+page14:Toggle("รีบเควสฆ่าฉลาม20ตัว", _G.QRepairBoat, function(value)
     _G.QRepairBoat = value
     spawn(function()
         while wait() do
@@ -9118,7 +9074,7 @@ page14:Toggle("Accept Quest Kill 20 Sharks", _G.QRepairBoat, function(value)
         end
     end)
 end)
-page14:Toggle("Click After Kill 20 Shark{Beta}", _G.QRepairBoat2, function(value)
+page14:Toggle("กดหลังจากฆ่าฉลาม20ตัว", _G.QRepairBoat2, function(value)
         _G.QRepairBoat2 = value
         spawn(function()
             while wait() do
@@ -9145,79 +9101,10 @@ page14:Toggle("Click After Kill 20 Shark{Beta}", _G.QRepairBoat2, function(value
             end
         end)
     end)
-page14:Toggle("Farm-WoodPlank{Beta|", _G.WoodPlank, function(value)
-        _G.WoodPlank = value
-    spawn(function()
-        while wait() do
-            if _G.WoodPlank then
-            toTarget(CFrame.new(-16484.3125, 527.77948, 476.465302, 0.314159244, -2.17963532e-08, 0.949370325, -1.05681153e-08, 1, 2.64558757e-08, -0.949370325, -1.83444122e-08, 0.314159244) * CFrame.new(0,0,10))
-            wait(1)
-            toTarget(CFrame.new(-16597.0312, 527.77948, 482.512787, 0.203417599, 1.26229915e-08, 0.979092062, 1.91620697e-09, 1, -1.32906619e-08, -0.979092062, 4.57969751e-09, 0.203417599) * CFrame.new(0,0,10))
-            wait(1)
-            toTarget(CFrame.new(-16690.9844, 527.77948, 339.35199, -0.0264198873, 3.29540164e-08, 0.999650955, 9.8076347e-09, 1, -3.27063141e-08, -0.999650955, 8.94011354e-09, -0.0264198873) * CFrame.new(0,0,10))
-            wait(1)
-            toTarget(CFrame.new(-16425.9297, 527.77948, 319.027832, 0.369603723, -9.8490041e-08, 0.929189503, 7.75970719e-08, 1, 7.51298614e-08, -0.929189503, 4.43341115e-08, 0.369603723) * CFrame.new(0,0,10))
-            wait(1)
-            end
-        end
-    end)
-end)
-spawn(function()
-    while wait() do
-        if _G.WoodPlank then
-                repeat wait()
-                    for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-                        if v.ToolTip == "Melee" then
-                            if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
-                                EquipWeapon(v.Name)
-                            end
-                        end
-                        game:GetService("VirtualInputManager"):SendKeyEvent(true,"Z",false,game)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(false,"Z",false,game)
-                        wait(0.2)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(true,"X",false,game)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(false,"X",false,game)
-                        wait(0.2)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(true,"C",false,game)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(false,"C",false,game)
-                            if v.ToolTip == "Sword" then
-                                if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
-                                    EquipWeapon(v.Name)
-                                end
-                            end
-                        end
-                        game:GetService("VirtualInputManager"):SendKeyEvent(true,"Z",false,game)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(false,"Z",false,game)
-                        wait(0.2)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(true,"X",false,game)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(false,"X",false,game)
-                        for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-                            if v.ToolTip == "Blox Fruit" then
-                                if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
-                                    EquipWeapon(v.Name)
-                                end
-                            end
-                        end
-                        game:GetService("VirtualInputManager"):SendKeyEvent(true,"Z",false,game)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(false,"Z",false,game)
-                        wait(0.2)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(true,"X",false,game)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(false,"X",false,game)
-                        wait(0.2)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(true,"C",false,game)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(false,"C",false,game)
-                        wait(0.2)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(true,"F",false,game)
-                        game:GetService("VirtualInputManager"):SendKeyEvent(false,"F",false,game)
-                        wait(0.2)
-                    until not _G.WoodPlank
-                end
-            end
-        end)
 
 AllBoat = {"Dinghy","PirateSloop","PirateBrigade","PirateGrandBrigade","MarineSloop","MarineBrigade","MarineGrandBrigade"}
 local SelectBoat = nil
-page14:Dropdown("Select Boat",AllBoat, function(value)
+page14:Dropdown("เลือกเรือ",AllBoat, function(value)
     AllBoat = value
 end)  
 function CheckNotifyBuy()
@@ -9230,7 +9117,7 @@ function CheckNotifyBuy()
     end
     return false
 end
-page14:Toggle("Auto Buy Boat", _G.Bboat, function(value)
+page14:Toggle("ซื้อเรือ", _G.Bboat, function(value)
     _G.Bboat = value
 while _G.Bboat do wait()
     toTarget(CFrame.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667))
@@ -9260,11 +9147,11 @@ for i, v in pairs(game.Workspace.Boats[SelectBoat]:GetChildren()) do
 end)
   
 Seatable = {"Sea1[Low]","Sea2[Medium]","Sea3[High]","Sea4[Extreme]","Sea5[Crazy]","Sea6[???]"}
-page14:Dropdown("Select Sea Level",   Seatable , function(value)
+page14:Dropdown("เลือกระดับทะเล",   Seatable , function(value)
     _G.SelectLocalTeleportSea = value
 end)
 
-page14:Toggle("Teleport to The Selected Sea", _G.TeleportSea, function(value)
+page14:Toggle("เทเลพอร์ตไปยังทะเลที่เลือก", _G.TeleportSea, function(value)
     _G.TeleportSea = value
     local Boat = game.Workspace.Boats[SelectBoat]
     if _G.TeleportSea then
@@ -9285,7 +9172,7 @@ page14:Toggle("Teleport to The Selected Sea", _G.TeleportSea, function(value)
         until not _G.TeleportSea
     end
 end)
-page14:Toggle("Stop Boat", _G.stpboat, function(value)
+page14:Toggle("หยุดเรือ", _G.stpboat, function(value)
     _G.stpboat = value
     local Boatstop = game.Workspace.Boats[SelectBoat]
     tweenModel(Boatstop, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
@@ -9293,7 +9180,7 @@ page14:Toggle("Stop Boat", _G.stpboat, function(value)
         StopBoatF()
     end
 end)
-page14:Toggle("Increaseboatspeed",_G.increaseboatspeed, function(value)
+page14:Toggle("เพิ่มความเร็วเรือ",_G.increaseboatspeed, function(value)
 _G.increaseboatspeed = value
     local vehicleSeats = {}
     for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
@@ -9311,13 +9198,13 @@ _G.increaseboatspeed = value
         end
     end
 end)
-page14:Toggle("AutoSail",_G.AutoSail, function(value)
+page14:Toggle("ออโต้ขับเรือ",_G.AutoSail, function(value)
     _G.AutoSail = value
     while _G.AutoSail do task.wait(0)
     game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.W,false,game)
     end
 end)
-page14:Toggle("Noclip Rock",_G.Nocliprock, function(value)
+page14:Toggle("เรือทะลุหิน",_G.Nocliprock, function(value)
     _G.Nocliprock = value
     spawn(function()
             while wait() do
@@ -9349,7 +9236,7 @@ page14:Toggle("Noclip Rock",_G.Nocliprock, function(value)
             end
         end)
         end)
-        page14:Button("FullBright", function()
+        page14:Button("แมพสว่าง", function()
     FullBright()
 end)
  
@@ -9371,23 +9258,23 @@ task.spawn(function()
     while task.wait() do
         pcall(function()
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                FM:Set("5/5 🌕: Moon Status")
+                FM:Set("5/5 🌕: สถานะดวงจันทร์")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
-                FM:Set("4/5 🌖 : Moon Status")
+                FM:Set("4/5 🌖 : สถานะดวงจันทร์")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                FM:Set("3/5 🌗 : Moon Status")
+                FM:Set("3/5 🌗 : สถานะดวงจันทร์")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                FM:Set("2/5 🌘 : Moon Status")
+                FM:Set("2/5 🌘 : สถานะดวงจันทร์")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                FM:Set("1/5 🌘 : Moon Status")
+                FM:Set("1/5 🌘 : สถานะดวงจันทร์")
             else
-                FM:Set("0/5 🌘 : Moon Status")
+                FM:Set("0/5 🌘 : สถานะดวงจันทร์")
             end
         end)
     end
 end)
 
-page15:Toggle("Teleport To Kitsune Island", _G.TptoKisuneIsland, function(value)
+page15:Toggle("เทเลพอรตไปหาเกาะจิ้งจอก", _G.TptoKisuneIsland, function(value)
     _G.TptoKisuneIsland = value
     spawn(function()
         while task.wait() do
@@ -9398,19 +9285,7 @@ page15:Toggle("Teleport To Kitsune Island", _G.TptoKisuneIsland, function(value)
     end)
 end)
 
-
-page15:Toggle("Teleport To Kitsune Shrine", _G.TptoKisuneshrine, function(value)
-    _G.TptoKisuneshrine = value
-    spawn(function()
-        while task.wait() do
-            if _G.TptoKisuneshrine then
-                toTarget(game.Workspace.Map.KitsuneIsland.ShrineActive.NeonShrinePart.CFrame * CFrame.new(0,0,10))
-            end
-        end
-    end)
-end)
-
-page15:Toggle("Collect Azure Ember", _G.Ez, function(value)
+page15:Toggle("เก็บลูกไฟวิญญาณ", _G.Ez, function(value)
     _G.Ez = value
     spawn(function()
         while _G.Ez do wait()
@@ -9424,8 +9299,8 @@ page15:Toggle("Collect Azure Ember", _G.Ez, function(value)
 end)
 
 page11:Seperator("🛒")
-page11:Label("Auto Buy")
-page11:Toggle("Auto Buy Zoro Sword", _G.AutoBuyLegendarySword, function(value)
+page11:Label("ออโต้ซื้อ")
+page11:Toggle("ออโต้ซื้อดาบโซโล", _G.AutoBuyLegendarySword, function(value)
     _G.AutoBuyLegendarySword = value
     task.spawn(function()
         while task.wait() do
@@ -9439,7 +9314,7 @@ page11:Toggle("Auto Buy Zoro Sword", _G.AutoBuyLegendarySword, function(value)
         end
     end)
 end) 
-page11:Toggle("Auto Buy Zoro Sword Hop", _G.Settings.AutoBuyLegendarySwordHop, function(value)
+page11:Toggle("ออโต้ซื้อดาบโซโลย้ายซิฟ", _G.Settings.AutoBuyLegendarySwordHop, function(value)
 _G.AutoBuyLegendarySwordHop = value
 _G.Settings.AutoBuyLegendarySwordHop = value
     SaveSettings()
@@ -9462,7 +9337,7 @@ spawn(function()
     end
 end)
 
-page11:Toggle("Auto Buy Color Haki", _G.AutoBuyEnchanmentHaki, function(value)
+page11:Toggle("ออโต้ซื้อสีฮาคิ", _G.AutoBuyEnchanmentHaki, function(value)
     _G.AutoBuyEnchanmentHaki = value
     task.spawn(function()
         while task.wait() do
@@ -9478,7 +9353,7 @@ page11:Toggle("Auto Buy Color Haki", _G.AutoBuyEnchanmentHaki, function(value)
         end
     end)
 end)
-page11:Toggle("Auto Buy Color Haki Hop", _G.Settings.AutoBuyEnchanmentHakiHop, function(value)
+page11:Toggle("ออโต้ซื้อสีฮาคิย้ายเซิฟ", _G.Settings.AutoBuyEnchanmentHakiHop, function(value)
     _G.AutoBuyEnchanmentHakiHop = value
     _G.Settings.AutoBuyEnchanmentHakiHop = value
     SaveSettings()
@@ -9637,20 +9512,20 @@ local LP = game:GetService("Players").LocalPlayer
 page12:Textbox("JobID","",function(x)
 JobId_Textbox = x
 end)
-page12:Button("Join JobID",function()
+page12:Button("เข้าร่วม JobID",function()
     TPS:TeleportToPlaceInstance(game.PlaceId, JobId_Textbox, LP)
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "VectorHub",Text = "Success JobID Please Wait",Icon = "rbxassetid://16129235054",Duration = 3}) 
 end)
 
-page12:Button("Copy JobID",function()
+page12:Button("ก็อปปี้ JobID",function()
     setclipboard(game.JobId)
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "VectorHub",Text = "Success Copy JobID",Icon = "rbxassetid://16129235054",Duration = 3})   
 end)
-page12:Button("Join Pirates Team", function()
+page12:Button("เข้าร่วมทีมโจรสลัด", function()
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Pirates")
 end)
 
-page12:Button("Join Marines Team", function()
+page12:Button("เข้าร่วมทีมทหารเรือ", function()
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Marines")
 end)
 function kaituncap()
@@ -9869,24 +9744,24 @@ pcall(function()
 end)
 end
 
-page12:Seperator("<<Change Server>>")
-page12:Button("Hop Little Player Server", function()
+page12:Seperator("<<เปลีนเซิฟเวอร์>>")
+page12:Button("ย้ายเซิฟไปเซิฟคนน้อย", function()
     Teleport()
 end)
-page12:Button("Hop Server", function()
+page12:Button("ย้ายเซิฟไปเซิฟคนเยอะ", function()
     Hop()
 end)
 
-page12:Button("Rejoin", function()
+page12:Button("เข้าเซิฟเดิม", function()
     local ts = game:GetService("TeleportService")
     local p = game.Players.LocalPlayer
     ts:Teleport(game.PlaceId, p)
 end)
 page12:Line()
-page12:Button("Kaitun Cap", function()
+page12:Button("ถ่ายภาพไก่ตัน", function()
 kaituncap()
 end)
-page12:Button("Show Awakened Skill", function()
+page12:Button("แสดงสกิลผลไม้ปีศาจตื่น", function()
     local args = {
     [1] = "getAwakenedAbilities"
     }
@@ -9894,14 +9769,14 @@ page12:Button("Show Awakened Skill", function()
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
     game.Players.LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible = true
 end)
-page12:Button("Show Title Name", function()
+page12:Button("แสดงฉายา", function()
     local args = {
     [1] = "getTitles"
     }
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
     game.Players.localPlayer.PlayerGui.Main.Titles.Visible = true
 end)
-page12:Button("Show Color Haki", function()
+page12:Button("แสดงสีฮาคิ", function()
     game.Players.localPlayer.PlayerGui.Main.Colors.Visible = true
 end)
 function InfAbility()
@@ -9940,7 +9815,7 @@ else
     end
 end
 end
-page12:Toggle("Remove Fog",false,function(value)
+page12:Toggle("ลบหมอก",false,function(value)
     _G.Remove_Fog = value
     while wait() do
         if _G.Remove_Fog then
@@ -9951,7 +9826,7 @@ page12:Toggle("Remove Fog",false,function(value)
     end			
 end)
 
-page12:Toggle("Auto Click",false,function(value)
+page12:Toggle("ออโต้คลิก",false,function(value)
     _G.click = value
         end)  
         spawn(function()
@@ -9965,7 +9840,7 @@ page12:Toggle("Auto Click",false,function(value)
         end)
     end)
 
-    page12:Toggle("Walk on Water",fasle,function(value)
+    page12:Toggle("เดินบนน้ำ",fasle,function(value)
         _G.WalkWater = value
     end)
     spawn(function()
@@ -9979,12 +9854,12 @@ page12:Toggle("Auto Click",false,function(value)
                 end)
             end
         end)
-page12:Toggle("InfAbility", false, function(value)
+page12:Toggle("ความสามารถไม่จำกัด", false, function(value)
     _G.InfAbility = value
     InfAbility()
 end)
 
-page12:Toggle("Infinities Dash", _G.NoDashCooldown, function(value)
+page12:Toggle("แดชไม่จำกัด", _G.NoDashCooldown, function(value)
     _G.NoDashCooldown = value
     DodgeNoCoolDown()
 end)
@@ -10007,7 +9882,7 @@ if _G.NoDashCooldown then
 end
 end
 
-page12:Toggle("Infinities Geppo", _G.InfinitiesSkyJump, function(value)
+page12:Toggle("เดินชมจันทร์ไม่จำกัด", _G.InfinitiesSkyJump, function(value)
     _G.InfinitiesSkyJump = value
     SkyJumpNoCoolDown()
 end)
@@ -10030,11 +9905,6 @@ function SkyJumpNoCoolDown()
         end
     end
 end
-
-page12:Toggle("Infinities Energy", _G.InfinitiesEnergy, function(value)
-    _G.InfinitiesEnergy = value
-    InfinitiesEnergy()
-end)
 
 _G.AutoRejoin = true
 spawn(function()
