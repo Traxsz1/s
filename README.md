@@ -5413,8 +5413,8 @@ spawn(function()
                                                             _G.FastAttack = true
                                                         end
                                                     until not _G.AutoFarmBone or v.Humanoid.Health <= 0 or not v.Parent or v.Humanoid.Health <= 0
-                                                else
                                                     local CFrameMon = CFrame.new(-9513.88477, 172.1306, 6073.37061, -0.906221628, 7.55508509e-08, 0.422802985, 5.79426853e-08, 1, -5.44980487e-08, -0.422802985, -2.48889691e-08, -0.906221628)
+                                                elseif  (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 1000 then
                                                     repeat wait() toTarget(CFrameMon) until (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 20 or v.Humanoid.Health > 0 or  not _G.AutoFarmBone
                                                 end
                                             end
