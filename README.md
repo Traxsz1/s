@@ -1589,7 +1589,7 @@ function Update:Window(text, logo, keybind)
             end
         end
     end)
- if _G.Mode == "English" then
+ if _G.Mode == "ไทย" then
     Frame.Parent = Main
     Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Frame.BackgroundTransparency = 1.000
@@ -1606,7 +1606,28 @@ function Update:Window(text, logo, keybind)
     TextLabel.Position = UDim2.new(0.199847102, 0, 0.25, 0)
     TextLabel.Size = UDim2.new(0, 200, 0, 50)
     TextLabel.Font = Enum.Font.FredokaOne
-    TextLabel.Text = "English Version"
+    TextLabel.Text = "Thai VersionV2"
+    TextLabel.TextColor3 = Color3.fromRGB(0, 86, 255)
+    TextLabel.TextSize = 18.000
+    TextLabel.TextWrapped = true
+ elseif _G.Mode == "Vietnam" then
+    Frame.Parent = Main
+    Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    Frame.BackgroundTransparency = 1.000
+    Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Frame.BorderSizePixel = 0
+    Frame.Position = UDim2.new(0.1, -150, 0.158805028, -80)
+    Frame.Size = UDim2.new(0, 327, 0, 100)
+
+    TextLabel.Parent = Frame
+    TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.BackgroundTransparency = 1.000
+    TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    TextLabel.BorderSizePixel = 0
+    TextLabel.Position = UDim2.new(0.199847102, 0, 0.25, 0)
+    TextLabel.Size = UDim2.new(0, 200, 0, 50)
+    TextLabel.Font = Enum.Font.FredokaOne
+    TextLabel.Text = "Vietnam VersionV2"
     TextLabel.TextColor3 = Color3.fromRGB(0, 86, 255)
     TextLabel.TextSize = 18.000
     TextLabel.TextWrapped = true
@@ -1627,7 +1648,7 @@ function Update:Window(text, logo, keybind)
     TextLabel.Position = UDim2.new(0.199847102, 0, 0.25, 0)
     TextLabel.Size = UDim2.new(0, 200, 0, 50)
     TextLabel.Font = Enum.Font.FredokaOne
-    TextLabel.Text = "Thai Version"
+    TextLabel.Text = "English VersionV2"
     TextLabel.TextColor3 = Color3.fromRGB(0, 86, 255)
     TextLabel.TextSize = 18.000
     TextLabel.TextWrapped = true
@@ -2068,7 +2089,7 @@ function Update:Window(text, logo, keybind)
                     TweenService:Create(
                         Circle,
                         TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                        { BackgroundColor3 = Color3.fromRGB(227, 60, 110) }
+                        { BackgroundColor3 = Color3.fromRGB(255, 0, 0) }
                     ):Play()
                 end
                 pcall(callback, toggled)
@@ -3112,7 +3133,7 @@ page1:Label("เข้าดิสคอร์ดเพื่อข่าวส�
 end)
 
 
-page1:Toggle("ออโต้ฟาร์มเลเวล", _G.Settings.AutoFarm, function(value)
+page1:Toggle("Auto Farm level", _G.Settings.AutoFarm, function(value)
     _G.AutoFarm = value
     _G.Settings.AutoFarm = value
     SaveSettings()
@@ -3122,7 +3143,7 @@ page1:Toggle("ออโต้ฟาร์มเลเวล", _G.Settings.AutoFa
 end)
 
 
-page1:Toggle("เซฟโหมด", _G.Settings.SafeMode, function(value)
+page1:Toggle("Safe Mode", _G.Settings.SafeMode, function(value)
     _G.SafeMode = value
     _G.Settings.SafeMode = value
     SaveSettings() 
@@ -3141,7 +3162,7 @@ page1:Toggle("เซฟโหมด", _G.Settings.SafeMode, function(value)
 end)
        
 
-page1:Toggle("ฟาร์มมอนรอบๆ", _G.Settings.NeareastFarm, function(value)
+page1:Toggle("NeareastFarm", _G.Settings.NeareastFarm, function(value)
     _G.NeareastFarm = value
     _G.Settings.NeareastFarm = value
     SaveSettings() 
@@ -3185,8 +3206,8 @@ while wait(.1) do
 end
 end)
 
-if World1 then
-page1:Toggle("ฟาร์มลัดเลเวล 1-300", _G.AutoFarmFast,function(value)
+
+page1:Toggle("Auto Farm Fast 1-300", _G.AutoFarmFast,function(value)
     _G.AutoFarmFast = value
 end)
 
@@ -3199,93 +3220,96 @@ spawn(function()
 end)
 	
 local SetCFarme = 1
-  spawn(function()
-		while wait() do
-			local MyLevel = game.Players.LocalPlayer.Data.Level.Value
-			local QuestC = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest
-			pcall(function()
-				if _G.AutoFarm then  
-					if _G.AutoFarmFast and (MyLevel >= 15 and MyLevel <= 300) then
-						if MyLevel >= 15 and MyLevel <= 300 then
-							Auto_Farm_Level_Fast()
-							return
-						end
-					else
-						if QuestC.Visible == true then
-							if game:GetService("Workspace").Enemies:FindFirstChild(QuestCheck()[3]) then
-								for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-									if v.Name == QuestCheck()[3] then
-										if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-											repeat task.wait()
-												if _G.Auto_CFrame then
-													SetCFarme = 1
-												end
-												if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, QuestCheck()[6]) then
-													game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
-												else
-													PosMon = v.HumanoidRootPart.CFrame
-													v.HumanoidRootPart.Size = Vector3.new(60,60,60)
-													v.HumanoidRootPart.CanCollide = false
-													v.Humanoid.WalkSpeed = 0
-													v.Head.CanCollide = false
-													BringMob = true
-													_G.FastType = "Fast"
-													EquipWeapon(_G.SelectWeapon)
-													v.HumanoidRootPart.Transparency = 1
-													toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
+spawn(function()
+    while wait() do
+        local MyLevel = game.Players.LocalPlayer.Data.Level.Value
+        local QuestC = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest
+        pcall(function()
+            if _G.Auto_Farm_Level then
+                if _G.AutoFarmFast and (MyLevel >= 15 and MyLevel <= 300) then
+                    if MyLevel >= 15 and MyLevel <= 300 then
+                        Auto_Farm_Level_Fast()
+                        return
+                    end
+                else
+                    if QuestC.Visible == true then
+                        if game:GetService("Workspace").Enemies:FindFirstChild(QuestCheck()[3]) then
+                            for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                                if v.Name == QuestCheck()[3] then
+                                    if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                        repeat task.wait()
+                                            if _G.Auto_CFrame then
+                                                SetCFarme = 1
+                                            end
+                                            if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, QuestCheck()[6]) then
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
+                                            else
+                                                PosMon = v.HumanoidRootPart.CFrame
+                                                v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                                v.HumanoidRootPart.CanCollide = false
+                                                v.Humanoid.WalkSpeed = 0
+                                                v.Head.CanCollide = false
+                                                BringMobFarm = true
+                                                EquipWeapon(_G.Select_Weapon)
+                                                v.HumanoidRootPart.Transparency = 1
+                                                toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
+                                                if not _G.Auto_Farm_Level or not _G.Auto_Farm_LevelO or _G.Auto_Farm_Level or _G.Auto_Farm_LevelO then
+                                                    game:GetService("VirtualUser"):CaptureController()
+                                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                                end
+                                            end
+                                        until not _G.Auto_Farm_Level or not v.Parent or v.Humanoid.Health <= 0 or QuestC.Visible == false or not v:FindFirstChild("HumanoidRootPart")
+                                    end
+                                end
+                            end
+                        else
+                            if _G.Auto_CFrame and not _G.AutoFarmFast then
+                               toTarget(QuestCheck()[7][SetCFarme] * CFrame.new(0,30,5))
+                                if (QuestCheck()[7][SetCFarme].Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
+                                    if SetCFarme == nil or SetCFarme == '' then
+                                        SetCFarme = 1
+                                        print(SetCFarme)
+                                    elseif SetCFarme >= #QuestCheck()[7] then
+                                        SetCFarme = 1
+                                        print(SetCFarme)
+                                    end
+                                    SetCFarme =  SetCFarme + 1
 
-													if not _G.AutoFarm or not _G.Auto_Farm_LevelO or _G.Auto_Farm_Level or _G.Auto_Farm_LevelO then
-														_G.FastAttack = true
-													end
-												end
-											until not _G.AutoFarm or not v.Parent or v.Humanoid.Health <= 0 or QuestC.Visible == false or not v:FindFirstChild("HumanoidRootPart")
-										end
-									end
-								end
-							else
-								if _G.Auto_CFrame and not _G.AutoFarmFast then
-									toTarget(QuestCheck()[7][SetCFarme] * MethodFarm)
-									if (QuestCheck()[7][SetCFarme].Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
-										if SetCFarme == nil or SetCFarme == '' then
-											SetCFarme = 1
-										elseif SetCFarme >= #QuestCheck()[7] then
-											SetCFarme = 1
-										end
-										SetCFarme =  SetCFarme + 1
-										wait(0.5)
-									end
-								else
-									if not _G.AutoFarmFast then
-										if AttackRandomType_MonCFrame == 1 then
-											toTarget(QuestCheck()[7][1] * CFrame.new(0,30,20))
-										elseif AttackRandomType_MonCFrame == 2 then
-											toTarget(QuestCheck()[7][1] * CFrame.new(0,30,-20))
-										elseif AttackRandomType_MonCFrame == 3 then
-											toTarget(QuestCheck()[7][1] * CFrame.new(20,30,0))
-										elseif AttackRandomType_MonCFrame == 4 then
-											toTarget(QuestCheck()[7][1] * CFrame.new(0,30,-20))
-										elseif AttackRandomType_MonCFrame == 5 then
-											toTarget(QuestCheck()[7][1] * CFrame.new(-20,30,0))
-										else
-											toTarget(QuestCheck()[7][1] * CFrame.new(0,30,20))
-										end
-									end
-								end
-							end
-						else
-							toTarget(QuestCheck()[2])
-							if (QuestCheck()[2].Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 then
-								BringMob = false
-								wait(0.2)
-								game:GetService('ReplicatedStorage').Remotes.CommF_:InvokeServer("StartQuest", QuestCheck()[4], QuestCheck()[1]) wait(0.5)
-								toTarget(QuestCheck()[7][1] * MethodFarm)
-							end
-						end
-					end
-				end
-			end)
-		end
-	end)
+                                    print(SetCFarme)
+                                    wait(0.5)
+                                end
+                            else
+                                if not _G.AutoFarmFast then
+                                    if AttackRandomType_MonCFrame == 1 then
+                                       toTarget(QuestCheck()[7][1] * CFrame.new(0,30,20))
+                                    elseif AttackRandomType_MonCFrame == 2 then
+                                       toTarget(QuestCheck()[7][1] * CFrame.new(0,30,-20))
+                                    elseif AttackRandomType_MonCFrame == 3 then
+                                       toTarget(QuestCheck()[7][1] * CFrame.new(20,30,0))
+                                    elseif AttackRandomType_MonCFrame == 4 then
+                                       toTarget(QuestCheck()[7][1] * CFrame.new(0,30,-20))
+                                    elseif AttackRandomType_MonCFrame == 5 then
+                                       toTarget(QuestCheck()[7][1] * CFrame.new(-20,30,0))
+                                    else
+                                       toTarget(QuestCheck()[7][1] * CFrame.new(0,30,20))
+                                    end
+                                end
+                            end
+                        end
+                    else
+                       toTarget(QuestCheck()[2])
+                        if (QuestCheck()[2].Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 then
+                            BringMobFarm = false
+                            wait(0.2)
+                            game:GetService('ReplicatedStorage').Remotes.CommF_:InvokeServer("StartQuest", QuestCheck()[4], QuestCheck()[1]) wait(0.5)
+                           toTarget(QuestCheck()[7][1] * CFrame.new(0,30,20))
+                        end
+                    end
+                end
+            end
+        end)
+    end
+end)
 _G.ChackPlayer = 0
 _G.ChackPlayer2 = _G.ChackPlayer
 local AllPlayersTableSkipFarm = {}
@@ -3385,78 +3409,8 @@ spawn(function()
         end)
     end) 
 end)
-page1:Line()
-if World1 or World2 or World3 then
-page1:Toggle("ฟาร์มกล่อง {บินเก็บ}", _G.Settings.AutoFarmChest, function(value)
-    _G.AutoFarmChest = value
-    _G.Settings.AutoFarmChest = value
-    SaveSettings()
-    if value == false then
-        toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
-    end
-end)
-page1:Toggle("ออโต้ฟาร์มกล่อง {เร็ว:เสี่ยง}", _G.ChestBypass, function(value)
-    _G.ChestBypass = value
-end)
-
-_G.MagnitudeAdd = 0
-spawn(function()
-    while wait() do 
-        if _G.AutoFarmChest then
-            for i,v in pairs(game:GetService("Workspace"):GetChildren()) do 
-                if v.Name:find("Chest") then
-                    if game:GetService("Workspace"):FindFirstChild(v.Name) then
-                        if (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5000+_G.MagnitudeAdd then
-                            repeat wait()
-                                if game:GetService("Workspace"):FindFirstChild(v.Name) then
-                                    EquipWeapon(_G.SelectWeapon)
-                                    toTarget(v.CFrame)
-                                    UnEquipWeapon(_G.SelectWeapon)
-                                end
-                            until _G.AutoFarmChest == false or not v.Parent
-                            toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
-                            _G.MagnitudeAdd = _G.MagnitudeAdd+1500
-                            break
-                        end
-                    end
-                end
-            end
-        end
-    end
-end)
-
-spawn(function()
-    while wait() do
-    if _G.ChestBypass then
-             pcall(function()
-                    for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
-                            if string.find(v.Name, "Chest") then
-                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-                                wait(.15)
-                            end
-                        end
-                        for _,v in pairs(game:GetService("Workspace"):GetDescendants()) do
-                        if string.find(v.Name, "Chest") and v:IsA("TouchTransmitter") then
-                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0) --0 is touch
-                        wait()
-                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
-                        end
-                    end
-                end)
-            end
-        end
-    end)
-    
-spawn(function()
-    while task.wait() do
-        if _G.ChestBypass then
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(ohString1, ohString2)
-         end
-    end
-end)
-end
 if World1 then
-
+if World1 then
 page1:Label("สถานะ : โลก 1")
 page1:Toggle("ออโต้โลก 2", _G.AutoNewWorld, function(value)
     _G.AutoNewWorld = value
@@ -9299,7 +9253,7 @@ end)
 
 page11:Seperator("🛒")
 page11:Label("Auto Buy")
-page1:Toggle("Auto Buy Zoro Sword", _G.AutoBuyLegendarySword, function(value)
+page11:Toggle("Auto Buy Zoro Sword", _G.AutoBuyLegendarySword, function(value)
     _G.AutoBuyLegendarySword = value
     task.spawn(function()
         while task.wait() do
@@ -9838,87 +9792,6 @@ page12:Toggle("Auto Click",false,function(value)
             end
         end)
     end)
-
-
-page12:Toggle("High Graphic",false,function(v)
-    if v then
-        getgenv().mode = "Autumn" -- Choose from Summer and Autumn
-        local a = game.Lighting
-        a.Ambient = Color3.fromRGB(33, 33, 33)
-        a.Brightness = 0.3
-        a.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
-        a.ColorShift_Top = Color3.fromRGB(255, 247, 237)
-        a.EnvironmentDiffuseScale = 0.105
-        a.EnvironmentSpecularScale = 0.522
-        a.GlobalShadows = true
-        a.OutdoorAmbient = Color3.fromRGB(51, 54, 67)
-        a.ShadowSoftness = 0.04
-        a.GeographicLatitude = -15.525
-        a.ExposureCompensation = 0.75
-        local b = Instance.new("BloomEffect", a)
-        b.Name = "BloomEffect_Graphic"
-        b.Enabled = true
-        b.Intensity = 0.04
-        b.Size = 1900
-        b.Threshold = 0.915
-        local c = Instance.new("ColorCorrectionEffect", a)
-        c.Name = 'ColorCorrectionEffect1_Graphic'
-        c.Brightness = 0.176
-        c.Contrast = 0.39
-        c.Enabled = true
-        c.Saturation = 0.2
-        c.TintColor = Color3.fromRGB(217, 145, 57)
-        if getgenv().mode == "Summer" then
-            c.TintColor = Color3.fromRGB(255, 220, 148)
-        elseif getgenv().mode == "Autumn" then
-            c.TintColor = Color3.fromRGB(242, 193, 79)
-        end
-        local d = Instance.new("DepthOfFieldEffect", Graphic)
-        d.Name =  'DepthOfFieldEffect_Graphic'
-        d.Enabled = true
-        d.FarIntensity = 0.077
-        d.FocusDistance = 21.54
-        d.InFocusRadius = 20.77
-        d.NearIntensity = 0.277
-        local e = Instance.new("ColorCorrectionEffect", a)
-        e.Name = 'ColorCorrectionEffect2_Graphic'
-        e.Brightness = 0
-        e.Contrast = -0.07
-        e.Saturation = 0
-        e.Enabled = true
-        e.TintColor = Color3.fromRGB(255, 247, 239)
-        local e2 = Instance.new("ColorCorrectionEffect", a)
-        e2.Name = 'ColorCorrectionEffect3_Graphic'
-        e2.Brightness = 0.2
-        e2.Contrast = 0.45
-        e2.Saturation = -0.1
-        e2.Enabled = true
-        e2.TintColor = Color3.fromRGB(255, 255, 255)
-        local s = Instance.new("SunRaysEffect", a)
-        s.Name = 'SunRaysEffect_Graphic'
-        s.Enabled = false
-        s.Intensity = 0.01
-        s.Spread = 0.146
-    else
-        local a = game.Lighting
-        a.Ambient = Color3.fromRGB(170, 170, 170)
-        a.Brightness = 2
-        a.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
-        a.ColorShift_Top = Color3.fromRGB(0, 0, 0)
-        a.EnvironmentDiffuseScale = 0.105
-        a.EnvironmentSpecularScale = 0.522
-        a.GlobalShadows = false
-        a.OutdoorAmbient = Color3.fromRGB(127, 127, 127)
-        a.ShadowSoftness = 0
-        a.GeographicLatitude = 66
-        a.ExposureCompensation = 0.2
-        game:GetService("Lighting")["BloomEffect_Graphic"]:Destroy()
-        game:GetService("Lighting")["ColorCorrectionEffect1_Graphic"]:Destroy()
-        game:GetService("Lighting")["ColorCorrectionEffect2_Graphic"]:Destroy()
-        game:GetService("Lighting")["ColorCorrectionEffect3_Graphic"]:Destroy()
-        game:GetService("Lighting")["SunRaysEffect_Graphic"]:Destroy()
-    end
-end)
 
     page12:Toggle("Walk on Water",fasle,function(value)
         _G.WalkWater = value
