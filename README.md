@@ -1,4 +1,4 @@
---TH:TFDkEFS9
+--TH:rW5nxFq1
 repeat wait(0) until game.Players.LocalPlayer
 local id = game.PlaceId if id == 2753915549 then World1 = true;  elseif id == 4442272183 then World2 = true; elseif id == 7449423635 then World3 = true; else
 game:Shutdown()
@@ -3074,21 +3074,21 @@ function Update:Window(text, logo, keybind)
     return uitab
 end
     local Library = Update:Window("Vector Hub","",Enum.KeyCode.F1);
-    local page1 = Library:Tab("General","rbxassetid://11446900930")
-    local page2 = Library:Tab("Setting","rbxassetid://11446835336")
-    local page3 = Library:Tab("Stats","rbxassetid://7040410130")
-    local page4 = Library:Tab("Teleport","rbxassetid://6035190846")
-    local page5 = Library:Tab("Item","rbxassetid://12499842920")
-    local page6 = Library:Tab("Mastery","rbxassetid://11717242503")
-    local page7 = Library:Tab("DevilFruit","rbxassetid://130882646")
-    local page8 = Library:Tab("Raid","rbxassetid://13180179055")
-    local page13 = Library:Tab("Combat","rbxassetid://7485051715")
-    local page9 = Library:Tab("Mirage","rbxassetid://12598594243")
-    local page10 = Library:Tab("RaceV4","rbxassetid://7558782590")
-    local page14 = Library:Tab("SeaEvent","rbxassetid://7052520309")
-    local page15 = Library:Tab("Kitsune","rbxassetid://8028233454")
-    local page11 = Library:Tab("Shop","rbxassetid://6031265976")
-    local page12 = Library:Tab("Misc","rbxassetid://11447063791")
+    local page1 = Library:Tab("หลัก","rbxassetid://11446900930")
+    local page2 = Library:Tab("ตั้งค่า","rbxassetid://11446835336")
+    local page3 = Library:Tab("สแตค","rbxassetid://7040410130")
+    local page4 = Library:Tab("เทเลพอร์ต","rbxassetid://6035190846")
+    local page5 = Library:Tab("ไอเท็ม","rbxassetid://12499842920")
+    local page6 = Library:Tab("มาสเตอรี่","rbxassetid://11717242503")
+    local page7 = Library:Tab("ผลปีศาจ","rbxassetid://130882646")
+    local page8 = Library:Tab("ดันเจี้ยน","rbxassetid://13180179055")
+    local page13 = Library:Tab("ต่อสู้","rbxassetid://7485051715")
+    local page9 = Library:Tab("เกาะลับ","rbxassetid://12598594243")
+    local page10 = Library:Tab("เผ่าวีสี่","rbxassetid://7558782590")
+    local page14 = Library:Tab("อีเว้นท์ทะเล","rbxassetid://7052520309")
+    local page15 = Library:Tab("คิสุเนะ","rbxassetid://8028233454")
+    local page11 = Library:Tab("ร้านค้า","rbxassetid://6031265976")
+    local page12 = Library:Tab("อื่นๆ","rbxassetid://11447063791")
 page1:Seperator("Vector Hub")
 Time = page1:Label("..")
 page1:Label("ชื่อผู้ใช้ : "..game.Players.LocalPlayer.DisplayName)
@@ -6826,7 +6826,7 @@ spawn(function()
 page1:Line()
 page1:Seperator("<<บอส>>") 
 local Boss = {}
-local BossName = page1:Dropdown("เลิือกบอส",Boss, function(value)
+local BossName = page1:Dropdown("เลือกบอส",Boss, function(value)
     _G.SelectBoss = value
 end)
 page1:Button("รีเฟชร",function()
@@ -6838,6 +6838,7 @@ BossName:Clear()
         end
     end
 end)
+
 
 page1:Toggle("ฟาร์มบอส", _G.AutoFarmBoss, function(value)
 _G.AutoFarmBoss = value
