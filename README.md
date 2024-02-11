@@ -2369,7 +2369,7 @@ function Update:Window(text, logo, keybind)
             SliderFrame_2.Name = "SliderFrame_2"
             SliderFrame_2.Parent = SliderFrame
             SliderFrame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-            SliderFrame_2.BackgroundTransparency = 0
+            SliderFrame_2.BackgroundTransparency = 1
             SliderFrame_2.BorderSizePixel = 0
             SliderFrame_2.Position = UDim2.new(0, 1, 0, 1)
             SliderFrame_2.Size = UDim2.new(0, 387, 0, 60)
@@ -5292,7 +5292,7 @@ spawn(function()
         end)
     end
 end)
-
+page1:Line()
 local MobKilledLabel = page1:Label("Need Kill : Loading...", true)
 spawn(function()
 while true do
@@ -5404,7 +5404,7 @@ end)
             end
         end
     end)
-
+page1:Seperator("Material")
 page1:Dropdown("Select Material",AllMaterial, function(value)
     SelectModeMaterial = value
 end)
@@ -6782,7 +6782,6 @@ spawn(function()
                 end
             end)
         end)
-page1:Line()
 page1:Seperator("<<Boss>>") 
 local Boss = {}
 local BossName = page1:Dropdown("Select Boss",Boss, function(value)
@@ -7837,19 +7836,14 @@ spawn(function()
             pcall(function()
                 for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
                     if v:IsA("Tool") and string.find(v.Name,"Fruit") then 
-                        if (v.Handle.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude >= 1500 then
-                            Bypass(v.Handle.CFrame * CFrame.new(0,50,0))
-                            repeat wait() Bypass(v.Handle.CFrame * CFrame.new(0,50,0)) until (v.Handle.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.Auto_Bring_Fruit
-                            repeat wait() two(v.Handle.CFrame) until (v.Handle.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.Auto_Bring_Fruit
-                        else
-                            repeat wait() two(v.Handle.CFrame) until (v.Handle.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.Auto_Bring_Fruit
-                        end
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame 
                     end
                 end
             end)
         end
     end
 end)
+
 
 spawn(function()
 while task.wait() do
