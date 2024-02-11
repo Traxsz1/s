@@ -3092,7 +3092,8 @@ function Update:Window(text, logo, keybind)
     return uitab
 end
     local Library = Update:Window("Vector Hub","",Enum.KeyCode.F1);
-    local page1 = Library:Tab("Main","rbxassetid://11446900930")
+    local page15 = Library:Tab("Status","rbxassetid://11446900930")
+    local page1 = Library:Tab("Main","rbxassetid://6034798461")
     local page2 = Library:Tab("Setting","rbxassetid://11446835336")
     local page3 = Library:Tab("Stats","rbxassetid://7040410130")
     local page4 = Library:Tab("Teleport","rbxassetid://6035190846")
@@ -3106,9 +3107,9 @@ end
     local page14 = Library:Tab("Update20","rbxassetid://7052520309")
     local page11 = Library:Tab("Shop","rbxassetid://6031265976")
     local page12 = Library:Tab("Misc","rbxassetid://11447063791")
-page1:Seperator("Vector Hub")
-Time = page1:Label("..")
-page1:Label("[Username] : "..game.Players.LocalPlayer.DisplayName)
+page15:Seperator("Vector Hub")
+Time = page15:Label("..")
+page15:Label("[Username] : "..game.Players.LocalPlayer.DisplayName)
 function UpdateTime()
 local GameTime = math.floor(workspace.DistributedGameTime+0.5)
 local Hour = math.floor(GameTime/(60^2))%24
@@ -3125,7 +3126,7 @@ spawn(function()
     end
 end)
 
-Client = page1:Label1("Client")
+Client = page15:Label1("Client")
 function UpdateClient()
 local Fps = workspace:GetRealPhysicsFPS()
 Client:Refresh("[Fps] : "..Fps)
@@ -3137,7 +3138,7 @@ spawn(function()
     end
 end)
 
-Client1 = page1:Label1("Client")
+Client1 = page15:Label1("Client")
 function UpdateClient1()
 local Ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
 Client1:Refresh("[Ping] : "..Ping)
@@ -3147,7 +3148,7 @@ spawn(function()
     UpdateClient1()
     end
 end)
-local Mirragecheck = page1:Label('...')
+local Mirragecheck = page15:Label('...')
 spawn(function()
     pcall(function()
         while task.wait() do
@@ -3160,7 +3161,7 @@ spawn(function()
     end)
 end)
 
-local Kitsunecheck = page1:Label('...')
+local Kitsunecheck = page15:Label('...')
 spawn(function()
     pcall(function()
         while task.wait() do
@@ -3172,7 +3173,7 @@ spawn(function()
         end
     end)
 end)
-local FM = page1:Label('...')
+local FM = page15:Label('...')
 task.spawn(function()
     while task.wait() do
         pcall(function()
@@ -3192,12 +3193,12 @@ task.spawn(function()
         end)
     end
 end)
-page1:Label("Join Discord For News!")
-    page1:Button("CopyLinkDiscord",function()
+page15:Label("Join Discord For News!")
+    page15:Button("CopyLinkDiscord",function()
         setclipboard("https://discord.gg/977JQXX82w")
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "VectorHub",Text = "คัดลอกเรียบร้อยแล้ว",Icon = "rbxassetid://16129235054",Duration = 3})
 end)
-
+page1:Seperator("<<Main>>")
     page1:Toggle("Auto Farm Level", _G.Settings.AutoFarm, function(value)
         _G.AutoFarm = value
         _G.Settings.AutoFarm = value
