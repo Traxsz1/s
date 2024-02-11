@@ -7474,25 +7474,62 @@ end
 end
 
 spawn(function()
-    local gt = getrawmetatable(game)
-    local old = gt.__namecall
-    setreadonly(gt,false)
-    gt.__namecall = newcclosure(function(...)
-        local args = {...}
-        if getnamecallmethod() == "InvokeServer" then 
-            if _G.SelectWeaponGun then
-                if _G.SelectWeaponGun == "Soul Guitar" then
-                    if tostring(args[2]) == "TAP" then
-                        if  _G.AutoFarmGunMastery and _G.UseSkill then
-                            args[3] = PositionSkillMasteryGun
-                        end
-                    end
-                end
-            end
-        end
-        return old(unpack(args))
-    end)
-    setreadonly(gt,true)
+	local gg = getrawmetatable(game)
+	local old = gg.__namecall
+	setreadonly(gg,false)
+	gg.__namecall = newcclosure(function(...)
+		local method = getnamecallmethod()
+		local args = {...}
+		if tostring(method) == "FireServer" then
+			if tostring(args[1]) == "RemoteEvent" then
+				if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
+					if _G.UseSkill and _G.AutoFarmFruitMastery then
+						if type(args[2]) == "vector" then 
+							args[2] = PositionSkillMasteryDevilFruit
+						else
+							args[2] = CFrame.new(PositionSkillMasteryDevilFruit)
+						end
+						return old(unpack(args))
+					end
+				end
+			end
+		end
+		return old(...)
+	end)
+end)
+
+spawn(function()
+	local gt = getrawmetatable(game)
+	local old = gt.__namecall
+	setreadonly(gt,false)
+	gt.__namecall = newcclosure(function(...)
+		local args = {...}
+		if getnamecallmethod() == "InvokeServer" then 
+			if _G.SelectWeaponGun then
+				if _G.SelectWeaponGun == "Soul Guitar" then
+					if tostring(args[2]) == "TAP" then
+						if AutoFarmGunMastery and _G.UseSkill then
+							args[3] = PositionSkillMasteryGun
+						end
+					end
+				end
+			end
+		end
+		return old(unpack(args))
+	end)
+	setreadonly(gt,true)
+end)
+
+task.spawn(function()
+	while wait() do
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
+			if v:IsA("Tool") then
+				if v:FindFirstChild("RemoteFunctionShoot") then 
+					_G.SelectWeaponGun = v.Name
+				end
+			end
+		end
+	end
 end)
 spawn(function()
     while wait() do
@@ -7695,7 +7732,7 @@ SaveSettings()
     end)
 end)
 
-page6:Toggle("ฟาร์มมาสเตอรี่ผลปีศาจ", _G.Settings.AutoFarmFruitMastery, function(value)
+page6:Toggle("ฟาร์มมาสเตอรี่ผลปีศาจ test", _G.Settings.AutoFarmFruitMastery, function(value)
 _G.AutoFarmFruitMastery = value
 _G.Settings.AutoFarmFruitMastery = value
 SaveSettings()
@@ -7716,6 +7753,7 @@ spawn(function()
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v.Name == QuestCheck()[3] then
                                 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                    PositionSkillMasteryDevilFruit = v.HumanoidRootPart.Position
                                     repeat task.wait()
                                         if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, QuestCheck()[6]) then
                                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
@@ -7744,7 +7782,7 @@ spawn(function()
                                                         wait(.1)
                                                         game:service('VirtualInputManager'):SendKeyEvent(false, "Z", false, game)
                                                     end
-                                                    if Z and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and DevilFruitMastery >= MasteryDevilFruit.Lvl.X then
+                                                    if _G.SkillZ and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and DevilFruitMastery >= MasteryDevilFruit.Lvl.X then
                                                         game:service('VirtualInputManager'):SendKeyEvent(true, "X", false, game)
                                                         wait(.1)
                                                         game:service('VirtualInputManager'):SendKeyEvent(false, "X", false, game)
@@ -7800,7 +7838,7 @@ spawn(function()
                                                         wait(.1)
                                                         game:service('VirtualInputManager'):SendKeyEvent(false, "C", false, game)
                                                     end
-                                                    if _G.SkilV and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and DevilFruitMastery >= MasteryDevilFruit.Lvl.V then
+                                                    if _G.SkillV and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and DevilFruitMastery >= MasteryDevilFruit.Lvl.V then
                                                         game:service('VirtualInputManager'):SendKeyEvent(true, "V", false, game)
                                                         wait(.1)
                                                         game:service('VirtualInputManager'):SendKeyEvent(false, "V", false, game)
