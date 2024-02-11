@@ -5539,10 +5539,10 @@ end)
     end)
 
 page1:Seperator("<<ฟาร์มวัสดุ>>")  
-page1:Dropdown("Select Material",AllMaterial, function(value)
+page1:Dropdown("เลือกวัสดุ",AllMaterial, function(value)
     SelectModeMaterial = value
 end)
-page1:Toggle("Farm Material",AutoFarmMaterial, function(value)
+page1:Toggle("ฟาร์มวัสดุ",AutoFarmMaterial, function(value)
     AutoFarmMaterial = value
     spawn(function()
         while wait() do 
@@ -5552,11 +5552,11 @@ page1:Toggle("Farm Material",AutoFarmMaterial, function(value)
                         CheckMaterial(SelectModeMaterial)
                         if CustomFindFirstChild(MaterialMob) then
                             for v0,v1 in pairs(game:GetService("Workspace").Enemies:GetChildren()) do 
-                                if (AutoFarmMaterial and table.find(MaterialMob,v1.Name) and v1:FindFirstChild("HumanoidRootPart") and v1:FindFirstChild("Humanoid") and (v1.Humanoid.Health > 0)) then 
+                                if (AutoFarmMaterial and table.find(MaterialMob,v1.Name) and v1:FindFirstChild("HumanoidRootPart") and v1:FindFirstChild("Humanoid") and (v1.Humanoid.Health>0)) then 
                                     repeat task.wait()
-                                       E = toTarget(v1.HumanoidRootPart.CFrame * CFrame.new(0,30,1));
-                                        if (v1:FindFirstChild("HumanoidRootPart") and v1:FindFirstChild("Humanoid") and ((v1.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <=150)) then 
-                                            if E then E:Stop(); end 
+                                        FarmtoTarget = toTarget(v1.HumanoidRootPart.CFrame * CFrame.new(0,30,1));
+                                        if (v1:FindFirstChild("HumanoidRootPart") and v1:FindFirstChild("Humanoid") and ((v1.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude<=150)) then 
+                                            if FarmtoTarget then FarmtoTarget:Stop(); end 
                                             for v4,v9 in pairs(game:GetService("Workspace").Enemies:GetChildren()) do 
                                                     if (v9.Name==v1.Name) then 
                                                         v9.HumanoidRootPart.CFrame = v1.HumanoidRootPart.CFrame
@@ -5566,9 +5566,9 @@ page1:Toggle("Farm Material",AutoFarmMaterial, function(value)
                                                         v9.Humanoid:ChangeState(14);
                                                         v9.Humanoid:ChangeState(11);
                                                         v9.HumanoidRootPart.Size = Vector3.new(80,80,80)
-                                                        EquipWeapon(_G.SelectWeapon)
-                                                        FastAttack = true
-                                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = MethodFarm
+                                                        --EquipWeapon(_G.Settings.Configs["Select Weapon"]);
+                                                        FastAttack=true;
+                                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v1.HumanoidRootPart.CFrame * CFrame.new(0,30,1);
                                                     end 
                                                 end 
                                             end 
@@ -5577,7 +5577,7 @@ page1:Toggle("Farm Material",AutoFarmMaterial, function(value)
                                 end 
                             end 
                         else 
-                            FastAttack=false
+                            FastAttack = false
                             toTarget(CFrameMon)
                         end 
                     end
