@@ -2,6 +2,14 @@ repeat wait(0) until game.Players.LocalPlayer
 local id = game.PlaceId if id == 2753915549 then World1 = true;  elseif id == 4442272183 then World2 = true; elseif id == 7449423635 then World3 = true; else
 game:Shutdown()
 end;
+local vu = game:GetService("VirtualUser")
+repeat wait() until game:IsLoaded() 
+    game:GetService("Players").LocalPlayer.Idled:connect(function()
+    game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+        vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+        wait(1)
+        vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   end)
 setfpscap(999)
 _G.Settings = {
     AutoFarm = false,
@@ -535,7 +543,7 @@ spawn(function()
             --[Mastery]
             _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.FarmMasterySwordList or
             --[Raids]
-            _G.AutoRaids or _G.AutoNextPlace
+            _G.AutoRaids or _G.AutoNextPlace or Auto_Kill_Law or Auto_Kill_Players_Nearby
             then
                 if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                     local Noclip = Instance.new("BodyVelocity")
@@ -584,7 +592,7 @@ spawn(function()
         --[Mastery]
         _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.FarmMasterySwordList or
         --[Raids]
-        _G.AutoRaids or _G.AutoNextPlace
+        _G.AutoRaids or _G.AutoNextPlace or Auto_Kill_Law or Auto_Kill_Players_Nearby
         then
                 for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
                     if v:IsA("BasePart") then
@@ -868,6 +876,7 @@ elseif Distance < 750 then
 elseif Distance >= 1000 then
     Speed = 250
 end 
+
 
 if _G.BypassTP then
 if Distance > 3000 and not AutoFarmMaterial and not _G.AutoGodHumanand and not _G.AutoRaids and not (game.Players.LocalPlayer.Backpack:FindFirstChild("Special Microchip") or game.Players.LocalPlayer.Character:FindFirstChild("Special Microchip") or game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Backpack:FindFirstChild("Hallow Essence") or game.Players.LocalPlayer.Character:FindFirstChild("Hallow Essence") or game.Players.LocalPlayer.Character:FindFirstChild("Sweet Chalice") or game.Players.LocalPlayer.Backpack:FindFirstChild("Sweet Chalice")) and not (Name == "Fishman Commando" or Name == "Fishman Warrior") then
@@ -1655,7 +1664,7 @@ function Update:Window(text, logo, keybind)
     TextLabel.Position = UDim2.new(0.199847102, 0, 0.25, 0)
     TextLabel.Size = UDim2.new(0, 200, 0, 50)
     TextLabel.Font = Enum.Font.FredokaOne
-    TextLabel.Text = "English Version"
+    TextLabel.Text = "เวอร์ชั่นภาษาไทย"
     TextLabel.TextColor3 = Color3.fromRGB(0, 86, 255)
     TextLabel.TextSize = 18.000
     TextLabel.TextWrapped = true
@@ -2120,7 +2129,6 @@ function Update:Window(text, logo, keybind)
             pcall(callback, toggled)
         end
     end
-
         function main:Dropdown(text, option, callback)
             local isdropping = false
             local Dropdown = Instance.new("Frame")
@@ -3084,30 +3092,30 @@ function Update:Window(text, logo, keybind)
     return uitab
 end
     local Library = Update:Window("Vector Hub","",Enum.KeyCode.F1);
-    local page1 = Library:Tab("Main","rbxassetid://11446900930")
-    local page2 = Library:Tab("Setting","rbxassetid://11446835336")
-    local page3 = Library:Tab("Stats","rbxassetid://7040410130")
-    local page4 = Library:Tab("Teleport","rbxassetid://6035190846")
-    local page5 = Library:Tab("Items","rbxassetid://12499842920")
-    local page6 = Library:Tab("Mastery","rbxassetid://11717242503")
-    local page7 = Library:Tab("DevilFruit","rbxassetid://130882646")
-    local page8 = Library:Tab("Raids","rbxassetid://13180179055")
-    local page13 = Library:Tab("Combat","rbxassetid://7485051715")
-    local page9 = Library:Tab("Mirage","rbxassetid://12598594243")
-    local page10 = Library:Tab("RaceV4","rbxassetid://7558782590")
-    local page14 = Library:Tab("Sea","rbxassetid://7052520309")
-    local page15 = Library:Tab("Kitsune","rbxassetid://8028233454")
-    local page11 = Library:Tab("Shop","rbxassetid://6031265976")
-    local page12 = Library:Tab("Misc","rbxassetid://11447063791")
+    local page1 = Library:Tab("หลัก","rbxassetid://11446900930")
+    local page2 = Library:Tab("ตั้งค่า","rbxassetid://11446835336")
+    local page3 = Library:Tab("สแตค","rbxassetid://7040410130")
+    local page4 = Library:Tab("เทเลพอร์ต","rbxassetid://6035190846")
+    local page5 = Library:Tab("ไอเท็ม","rbxassetid://12499842920")
+    local page6 = Library:Tab("มาสเตอรี่","rbxassetid://11717242503")
+    local page7 = Library:Tab("ผลปีศาจ","rbxassetid://130882646")
+    local page8 = Library:Tab("ดันเจี้ยน","rbxassetid://13180179055")
+    local page13 = Library:Tab("ต่อสู้","rbxassetid://7485051715")
+    local page9 = Library:Tab("เกาะลับ","rbxassetid://12598594243")
+    local page10 = Library:Tab("เผ่าวีสี่","rbxassetid://7558782590")
+    local page14 = Library:Tab("อีเว้นท์ทะเล","rbxassetid://7052520309")
+    local page15 = Library:Tab("คิสุเนะ","rbxassetid://8028233454")
+    local page11 = Library:Tab("ร้านค้า","rbxassetid://6031265976")
+    local page12 = Library:Tab("อื่นๆ","rbxassetid://11447063791")
 page1:Seperator("Vector Hub")
 Time = page1:Label("..")
-page1:Label("[Username] : "..game.Players.LocalPlayer.DisplayName)
+page1:Label("[ชื่อผู้ใช้] : "..game.Players.LocalPlayer.DisplayName)
 function UpdateTime()
 local GameTime = math.floor(workspace.DistributedGameTime+0.5)
 local Hour = math.floor(GameTime/(60^2))%24
 local Minute = math.floor(GameTime/(60^1))%60
 local Second = math.floor(GameTime/(60^0))%60
-Time:Set("[GameTime] : Hour : "..Hour.." Minute : "..Minute.." Second : "..Second)
+Time:Set("[เวลาที่เล่น] : ชั่วโมง : "..Hour.." นาที : "..Minute.." วินาที : "..Second)
 end
 
 spawn(function()
@@ -3141,13 +3149,13 @@ spawn(function()
     end
 end)
  
-page1:Label("Join Discord For News!")
-    page1:Button("CopyLinkDiscord",function()
+page1:Label("เข้าดิสคอร์ดเพื่อข่าวสารต่างๆ")
+    page1:Button("ก็อปปี้ลิ้งดิสคอร์ด",function()
         setclipboard("https://discord.gg/977JQXX82w")
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "VectorHub",Text = "คัดลอกเรียบร้อยแล้ว",Icon = "rbxassetid://16129235054",Duration = 3})
 end)
 
-    page1:Toggle("Auto Farm Level", _G.Settings.AutoFarm, function(value)
+    page1:Toggle("ฟาร์มเลเวล", _G.Settings.AutoFarm, function(value)
         _G.AutoFarm = value
         _G.Settings.AutoFarm = value
         SaveSettings()
@@ -3156,13 +3164,13 @@ end)
         end
     end)  
   
-        page1:Toggle("SafeMode", _G.Settings.SafeMode, function(value)
+        page1:Toggle("เซฟโหมด", _G.Settings.SafeMode, function(value)
             _G.SafeMode = value
             _G.Settings.SafeMode = value
             SaveSettings()
         local HealthPercent = game.Players.LocalPlayer.Character.Humanoid.Health / game.Players.LocalPlayer.Character.Humanoid.MaxHealth * 100
         if HealthPercent < 20 then
-            Vec("<Color=Cyan>Safe Mode Runing<Color=/>")  
+            Vec("<Color=Cyan>เซฟโหมดทำงาน<Color=/>")  
         end
            spawn(function()
                 while _G.Settings.SafeMode do task.wait()
@@ -3176,7 +3184,7 @@ end)
             end)
             end)
         
-    page1:Toggle("Auto NeareastFarm", _G.Settings.NeareastFarm, function(value)
+    page1:Toggle("ฟาร์มมอนรอบๆ", _G.Settings.NeareastFarm, function(value)
         _G.NeareastFarm = value
         _G.Settings.NeareastFarm = value
         SaveSettings() 
@@ -3228,11 +3236,11 @@ end)
     end)
    
     if World1 then
-        page1:Toggle("Auto FaramFast 1-300", true, function(value)
+        page1:Toggle("ฟาร์มเลเวลเร็ว 1-300", _G.AutoFarmFast, function(value)
             _G.AutoFarmFast = value
         end)
     end
-    page1:Toggle("BypassTp[For All Teleport]", _G.BypassTP, function(value)
+    page1:Toggle("วาร์ปเร็ว[สำหรับการเทเลพอร์ตทั้งหมด]", _G.BypassTP, function(value)
         _G.BypassTP = value
     end)    
         AttackRandomType_MonCFrame = 1
@@ -3277,8 +3285,7 @@ end)
                                                         EquipWeapon(_G.SelectWeapon)
                                                         v.HumanoidRootPart.Transparency = 1
                                                         toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
-    
-                                                        if not _G.AutoFarm or not _G.Auto_Farm_LevelO or _G.Auto_Farm_Level or _G.Auto_Farm_LevelO then
+                                                        if not _G.AutoFarm  then
                                                             _G.FastAttack = true
                                                         end
                                                     end
@@ -3366,7 +3373,7 @@ end)
                                     v.HumanoidRootPart.Size = Vector3.new(60,60,60)
                                     v.HumanoidRootPart.Transparency = 1
                                     toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
-                                    if not _G.AutoFarm or not _G.Auto_Farm_LevelO or _G.Auto_Farm_Level or _G.Auto_Farm_LevelO or _G.SuperFastAttack then
+                                    if not _G.AutoFarm then
                                         _G.FastAttack = true
                                     end
                                 until not v.Parent or not _G.AutoFarm or v.Humanoid.Health < 0
@@ -3402,7 +3409,7 @@ end)
                                     game:service('VirtualInputManager'):SendKeyEvent(true, "Z", false, game)
                                     game:service('VirtualInputManager'):SendKeyEvent(false, "Z", false, game)
                                     end
-                                    if not _G.AutoFarm or not _G.Auto_Farm_LevelO or _G.Auto_Farm_Level or _G.Auto_Farm_LevelO or _G.SuperFastAttack then
+                                    if not _G.AutoFarm  then
                                         _G.FastAttack = true
                                     end
     
@@ -3435,7 +3442,7 @@ end)
         end)
 
     page1:Line()
-    page1:Toggle("Auto Farm Chest {Tween}", _G.Settings.AutoFarmChest, function(value)
+    page1:Toggle("ฟาร์มกล่อง {บินเก็บ}", _G.Settings.AutoFarmChest, function(value)
     _G.AutoFarmChest = value
     _G.Settings.AutoFarmChest = value
      SaveSettings()
@@ -3443,7 +3450,7 @@ end)
         toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
     end
     end)
-    page1:Toggle("Auto Farm Chest {Fast:Risk}", _G.ChestBypass, function(value)
+    page1:Toggle("ฟาร์มกล่อง {เร็ว:เสี่ยง}", _G.ChestBypass, function(value)
     _G.ChestBypass = value
     end)
     
@@ -3502,9 +3509,9 @@ end)
              end
         end
     end)
-    
-page1:Seperator("Status : Sea 1")
-page1:Toggle("Auto NewWorld", _G.AutoNewWorld, function(value)
+if World1 then
+page1:Seperator("สถานะ : ทะเล 1")
+page1:Toggle("ออโต้ไปทะเลสอง", _G.AutoNewWorld, function(value)
     _G.AutoNewWorld = value
     if value == false then
         task.wait()
@@ -3566,7 +3573,7 @@ task.spawn(function()
     end
 end)
     
-page1:Toggle("Auto Saber", _G.AutoSaber , function(value)
+page1:Toggle("หาดาบแชงค์", _G.AutoSaber , function(value)
     _G.AutoSaber  = value
     if value == false then
         task.wait()
@@ -3702,7 +3709,7 @@ task.spawn(function()
     end
 end)
 
-page1:Toggle("Auto Pole", _G.AutoPole, function(value)
+page1:Toggle("หากระบองเอเนล", _G.AutoPole, function(value)
     _G.AutoPole = value
     if value == false then
         task.wait()
@@ -3760,7 +3767,7 @@ task.spawn(function()
     end
 end)
 
-page1:Toggle("Auto Buy Ability",_G.AutoBuyAbility, function(value)
+page1:Toggle("ออโต้ซื้อทักษะ",_G.AutoBuyAbility, function(value)
 _G.AutoBuyAbility = value
     if value == false then
         task.wait()
@@ -3866,9 +3873,9 @@ task.spawn(function()
         end)
     end
 end)
-
-page1:Seperator("Status : Sea 2")
-page1:Toggle("Auto ThirdSea", _G.AutoThirdSea, function(value)
+elseif World2 then 
+page1:Seperator("สถานะ : ทะเล 2")
+page1:Toggle("ออโต้ไปทะเลสาม", _G.AutoThirdSea, function(value)
     _G.AutoThirdSea = value
     if value == false then
         task.wait()
@@ -4163,7 +4170,7 @@ spawn(function()
     end)
 end)
                     
-page1:Toggle("Auto Evo RaceV2",_G.Auto_Evo_Race_V2,function(value)
+page1:Toggle("ออโต้ทำเผ่าขั้นสอง",_G.Auto_Evo_Race_V2,function(value)
     _G.Auto_Evo_Race_V2 = value
 end)
     spawn(function()
@@ -4215,7 +4222,7 @@ end)
     end
 end)
 
-page1:Toggle("Auto BartiloQuest", _G.Settings.AutoBartiloQuest,function(value)
+page1:Toggle("ออโต้ทำเควสบาโธโมีโอ", _G.Settings.AutoBartiloQuest,function(value)
     _G.AutoBartiloQuest   = value
     _G.Settings.AutoBartiloQuest = value
     SaveSettings() 
@@ -4225,7 +4232,6 @@ page1:Toggle("Auto BartiloQuest", _G.Settings.AutoBartiloQuest,function(value)
             task.wait()
         end
     end)
-
 task.spawn(function()
     while task.wait() do
         pcall(function()
@@ -4387,7 +4393,7 @@ task.spawn(function()
     end
 end)                        
 
-page1:Toggle("AutoDarkCoat",_G.AutoDarkCoat,function(value)
+page1:Toggle("หาผ้าคลุมหนวดดำ",_G.AutoDarkCoat,function(value)
 _G.AutoDarkCoat = value
     if value == false then
         task.wait()
@@ -4436,7 +4442,7 @@ task.spawn(function()
     end
 end)
 
-page1:Toggle("Auto Ectoplasm",_G.AutoEctoplasm,function(value)
+page1:Toggle("หา พลาสซึม{Ectoplasm}",_G.AutoEctoplasm,function(value)
         _G.AutoEctoplasm = value
         if value == false then
             task.wait()
@@ -4489,7 +4495,7 @@ else
     end
 end)
 
-page1:Toggle("Auto Factory",_G.AutoFactory,function(value)
+page1:Toggle("ตีโรงงาน",_G.AutoFactory,function(value)
     _G.AutoFactory = value
     if value == false then
         task.wait()
@@ -4523,7 +4529,7 @@ task.spawn(function()
 end)
 
 
-page1:Toggle("Auto TrueTriplKatana", _G.AutoTrueTriplKatana, function(value)
+page1:Toggle("รวมสามดาบ", _G.AutoTrueTriplKatana, function(value)
     _G.AutoTrueTriplKatana = value
     if value == false then
         task.wait()
@@ -4545,7 +4551,7 @@ task.spawn(function()
     end
 end)
 
-page1:Toggle("Auto Rengoku", _G.AutoRengoku, function(value)
+page1:Toggle("หาดาบเรนโกคุ", _G.AutoRengoku, function(value)
     _G.AutoRengoku = value
     if value == false then
         toTarget(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
@@ -4597,7 +4603,7 @@ task.spawn(function()
     end
 end)
     
-page1:Toggle("Auto SwanGlasses", _G.AutoSwanGlasses,function(value)
+page1:Toggle("หาแว่นโดฟามิงโก้", _G.AutoSwanGlasses,function(value)
     _G.AutoSwanGlasses = value
     if value == false then
         toTarget(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
@@ -4642,10 +4648,83 @@ task.spawn(function()
             end
         end)
     end
+end)                
+
+page1:Seperator("<<ลอว์>>")
+page1:Toggle("ซื้อชิปลอว์",_G.Auto_Buy_Law_Chip, function(value)
+    _G.Auto_Buy_Law_Chip = value
 end)
-              
-page1:Seperator("Status : Sea 3")
-    page1:Toggle("Auto RainbowHaki", _G.AutoRainbowHaki,function(value)
+
+spawn(function()
+    while wait() do
+        if _G.Auto_Buy_Law_Chip then
+            pcall(function()
+                if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Microchip") or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Microchip") or game:GetService("Workspace").Enemies:FindFirstChild("Order [Lv. 1250] [Raid Boss]") or game:GetService("ReplicatedStorage"):FindFirstChild("Order [Lv. 1250] [Raid Boss]") then
+
+                else
+                    local args = {
+                        [1] = "BlackbeardReward",
+                        [2] = "Microchip",
+                        [3] = "2"
+                    }
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+                end
+            end)
+        end
+    end
+end)
+    page1:Toggle("เริ่มดันเจี้ยนลอว์ ",_G.Auto_Start_Law_Dungeon, function(value)
+    _G.Auto_Start_Law_Dungeon = value
+end)
+spawn(function()
+    while wait() do
+        if _G.Auto_Start_Law_Dungeon then
+            pcall(function()
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Microchip") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Microchip") then
+                    fireclickdetector(game:GetService("Workspace").Map.CircleIsland.RaidSummon.Button.Main.ClickDetector)
+                end
+            end)
+        end
+    end
+end)
+
+page1:Toggle("ออโต้ฆ่าลอว์",_G.Auto_Kill_Law, function(value)
+    _G.Auto_Kill_Law = value
+end)
+spawn(function()
+    while wait() do
+        if _G.Auto_Kill_Law then
+            pcall(function()
+                if game:GetService("ReplicatedStorage"):FindFirstChild("Order") or game:GetService("Workspace").Enemies:FindFirstChild("Order") then
+                    for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+                        if _G.Auto_Kill_Law and string.find(v.Name, "Order") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+                            repeat task.wait()
+                                --AutoHaki()
+                                --EquipWeapon(_G.Select_Weapon)
+                                v.Humanoid.JumpPower = 0
+                                v.Humanoid.WalkSpeed = 0
+                                v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                v.HumanoidRootPart.Transparency = 1
+                                v.HumanoidRootPart.CanCollide = false
+                                v.Head.CanCollide = false
+                                if v.Humanoid:FindFirstChild("Animator") then
+                                    v.Humanoid.Animator:Destroy()
+                                end
+                                v.Humanoid:ChangeState(11)
+                                v.Humanoid:ChangeState(14)
+                                _G.FastAttack = true
+                                toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0,30,0))
+                            until not _G.Auto_Kill_Law or v.Humanoid.Health <= 0 or not v.Parent
+                        end
+                    end
+                end 
+            end)
+        end
+    end
+end)
+elseif World3 then 
+page1:Seperator("สถานะ : ทะเล 3")
+    page1:Toggle("ทำฮาคิสีรุ้ง", _G.AutoRainbowHaki,function(value)
         _G.AutoRainbowHaki = value
             if value == false then
                 task.wait()
@@ -4653,7 +4732,6 @@ page1:Seperator("Status : Sea 3")
                 task.wait()
             end
         end)
-
 task.spawn(function()
     while task.wait() do
         pcall(function()
@@ -4841,7 +4919,7 @@ task.spawn(function()
     end
 end)         
 
-page1:Toggle("Auto HolyTorch", _G.AutoHolyTorch, function(value)
+page1:Toggle("จุดคบเพลิง", _G.AutoHolyTorch, function(value)
     _G.AutoHolyTorch = value
     _G.BypassTP = false
     if value == false then
@@ -5027,9 +5105,9 @@ local Elite_Hunter_Status = page1:Label("Status : N/Q")
         while task.wait() do
             pcall(function()
                 if game:GetService("ReplicatedStorage"):FindFirstChild("Diablo") or game:GetService("ReplicatedStorage"):FindFirstChild("Deandre") or game:GetService("ReplicatedStorage"):FindFirstChild("Urban") or game:GetService("Workspace").Enemies:FindFirstChild("Diablo") or game:GetService("Workspace").Enemies:FindFirstChild("Deandre") or game:GetService("Workspace").Enemies:FindFirstChild("Urban") then
-                    Elite_Hunter_Status:Set("Status : 🟢") 
+                    Elite_Hunter_Status:Set("สถานะ : 🟢") 
                 else
-                    Elite_Hunter_Status:Set("Status : 🔴") 
+                    Elite_Hunter_Status:Set("สถานะ : 🔴") 
                 end
             end)
         end
@@ -5038,13 +5116,13 @@ local EliteProgress = page1:Label("")
 spawn(function()
     pcall(function()
         while task.wait() do
-            EliteProgress:Set("Already killed : " ..
+            EliteProgress:Set("ฆ่าไปแล้ว : " ..
                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter", "Progress"))
         end
     end)
 end)
 
-page1:Toggle("Auto EliteHunterHop",_G.AutoEliteHunterHop, function(value)
+page1:Toggle("ออโต้ตี EliteHunter ย้ายเซิฟ",_G.AutoEliteHunterHop, function(value)
     _G.AutoEliteHunterHop = value
     Elite()
     if value == false then
@@ -5052,7 +5130,7 @@ page1:Toggle("Auto EliteHunterHop",_G.AutoEliteHunterHop, function(value)
     end
 end)
 
-page1:Toggle("Auto EliteHunter", _G.AutoEliteHunter,function(value)
+page1:Toggle("ออโต้ตี EliteHunter", _G.AutoEliteHunter,function(value)
 _G.AutoEliteHunter = value
 Elite()
     if value == false then
@@ -5060,7 +5138,7 @@ Elite()
     end
 end)
 
-page1:Toggle("Auto CastleRaid", _G.AutoCastleRaid, function(value)
+page1:Toggle("ออโต้ตีโจรเกาะกลาง", _G.AutoCastleRaid, function(value)
     _G.AutoCastleRaid = value
     if value == false then
         toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
@@ -5104,16 +5182,16 @@ spawn(function()
 end)
 
 local count_number = 0
-local count_stack = page1:Label('Bone : ' .. count_number, true)
+local count_stack = page1:Label('กระดูก : ' .. count_number, true)
 spawn(function()
     while task.wait() do
         local boneStatus = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones", "Check")
-        count_stack:Set('Bone : ' .. boneStatus)
+        count_stack:Set('กระดูก : ' .. boneStatus)
         wait(1) 
     end
 end)
 
-page1:Toggle("Auto FarmBone", _G.Settings.AutoFarmBone , function(value)
+page1:Toggle("ฟาร์มกระดูก", _G.Settings.AutoFarmBone , function(value)
     _G.AutoFarmBone  = value
     _G.Settings.AutoFarmBone = value
     SaveSettings() 
@@ -5124,11 +5202,11 @@ page1:Toggle("Auto FarmBone", _G.Settings.AutoFarmBone , function(value)
         task.wait()
     end
 end)
-page1:Toggle("Aceetp QuestBone", _G.AceetpQuestBone, function(value)
+page1:Toggle("รับเควสระหว่างฟาร์มกระดูก", _G.AceetpQuestBone, function(value)
     _G.AceetpQuestBone = value
 end)
 
-page1:Toggle("AutoRandomBone", _G.AutoRandomBone, function(value)
+page1:Toggle("แลกกระดูก", _G.AutoRandomBone, function(value)
     _G.AutoRandomBone = value
 end)
 
@@ -5292,26 +5370,26 @@ spawn(function()
         end)
     end
 end)
-page1:Line()
-local MobKilledLabel = page1:Label("Need Kill : Loading...", true)
+
+local MobKilledLabel = page1:Label("ต้องการฆ่าอีก : Loading...", true)
 spawn(function()
 while true do
     pcall(function()
         local cakeStatus = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")
         if string.len(cakeStatus) == 88 then
-            MobKilledLabel:Set("Need Kill : " .. string.sub(cakeStatus, 39, 41))
+            MobKilledLabel:Set("ต้องการฆ่าอีก : " .. string.sub(cakeStatus, 39, 41))
         elseif string.len(cakeStatus) == 87 then
-            MobKilledLabel:Set("Need Kill : " .. string.sub(cakeStatus, 39, 40))
+            MobKilledLabel:Set("ต้องการฆ่าอีก : " .. string.sub(cakeStatus, 39, 40))
         elseif string.len(cakeStatus) == 86 then
-            MobKilledLabel:Set("Need Kill : " .. string.sub(cakeStatus, 39, 39))
+            MobKilledLabel:Set("ต้องการฆ่าอีก : " .. string.sub(cakeStatus, 39, 39))
         else
-            MobKilledLabel:Set("Boss Is Spawn..")
+            MobKilledLabel:Set("คาตาคุริเกิดแล้ว..")
         end
     end)
     wait(1)
 end
 end)
-page1:Toggle("Auto CakePrince", _G.AutoCakePrince ,function(value)
+page1:Toggle("ตีคาตาคุริ", _G.AutoCakePrince ,function(value)
     _G.AutoCakePrince  = value
     if value == false then
         toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
@@ -5404,11 +5482,12 @@ end)
             end
         end
     end)
-page1:Seperator("Material")
-page1:Dropdown("Select Material",AllMaterial, function(value)
+end
+page1:Seperator("<<ฟาร์มวัสดุ>>")  
+page1:Dropdown("เลือกวัสดุ",AllMaterial, function(value)
     SelectModeMaterial = value
 end)
-page1:Toggle("Farm Material",AutoFarmMaterial, function(value)
+page1:Toggle("ฟาร์มวัสดุ",AutoFarmMaterial, function(value)
     AutoFarmMaterial = value
     spawn(function()
         while wait() do 
@@ -5455,10 +5534,10 @@ page1:Toggle("Farm Material",AutoFarmMaterial, function(value)
     end)
 end)
 
-Vec("<Color=Cyan>Vector Hub Load Finish<Color=/>")                                                           
+Vec("<Color=Cyan>Vector Hub โหลดเสร็จแล้ว<Color=/>")                                                           
 page2:Seperator("⚙️")
 Weapon = {"Melee","Sword","Fruit"}
-page2:Dropdown("Select Weapon",Weapon, function(value)
+page2:Dropdown("เลือกอาวุธ",Weapon, function(value)
 SelectWeapon = value
 end)
 task.spawn(function()
@@ -5509,11 +5588,11 @@ if  _G.DistanceAutoFarm == nil then
     _G.DistanceAutoFarm = 30
 end
   
-page2:Dropdown("Select Method Farm",Method, function(value)
+page2:Dropdown("เลือกตำแหน่งการฟาร์ม",Method, function(value)
     _G.Method = value
 end)
     
-page2:Slider("Select Distance Farm",1,80,30,function(value)
+page2:Slider("เลือกระยะการฟาร์ม",1,80,30,function(value)
  _G.DistanceAutoFarm = value
 end)
     
@@ -5534,7 +5613,7 @@ task.spawn(function()
 end)
 
 
-page2:Toggle("FastAttack", true, function(x)
+page2:Toggle("โจมตีเร็ว", true, function(x)
     _G.FastAttack = value
 end)
 
@@ -5566,7 +5645,7 @@ _G.FastType = "Fast"
 end
 
 for i, v in pairs(game.ReplicatedStorage:GetChildren()) do
-    if v.Name == "Cake Prince" or v.Name == "Dough King" or v.Name == "Cyborg" or v.Name == "The Gorilla King" or v.Name == "Wysper" or v.Name == "Thunder God" or v.Name == "Mob Leader" or v.Name == "Bobby" or v.Name == "Saber Expert" or v.Name == "Warden" or v.Name == "Chief Warden" or v.Name == "Swan" or v.Name == "Magma Admiral"  or v.Name == "Fishman Lord" or v.Name == "Wysper" or v.Name == "Ice Admiral" or v.Name == "Diamond" or v.Name == "Jeremy" or v.Name == "Fajita" or v.Name == "Don Swan" or v.Name == "Smoke Admiral" or v.Name == "Awakened Ice Admiral" or v.Name == "Tide Keeper" or v.Name == "Darkbeard" or v.Name == "Stone" or v.Name == "Island Empress" or v.Name == "Kilo Admiral" or v.Name == "Captain Elephant" or v.Name == "Beautiful Pirate" or v.Name == "Longma" or v.Name == "Cake Queen" or v.Name == "Greybeard" or v.Name == "Order" or v.Name == "Cursed Captain" or v.Name == "Soul Reaper" or v.Name == "Rip indra" or v.Name == "Mihawk Boss" or v.Name == "Cake Prince" or v.Name == "Dough King" or v.Name == "Cursed Skeleton Boss" then 
+    if v.Name == "Cake Prince" or v.Name == "Dough King" or v.Name == "Cyborg" or v.Name == "The Gorilla King" or v.Name == "Wysper" or v.Name == "Thunder God" or v.Name == "Mob Leader" or v.Name == "Bobby" or v.Name == "Saber Expert" or v.Name == "Warden" or v.Name == "Chief Warden" or v.Name == "Swan" or v.Name == "Magma Admiral"  or v.Name == "Fishman Lord" or v.Name == "Wysper" or v.Name == "Ice Admiral" or v.Name == "Diamond" or v.Name == "Jeremy" or v.Name == "Fajita" or v.Name == "Don Swan" or v.Name == "Smoke Admiral" or v.Name == "Awakened Ice Admiral" or v.Name == "Tide Keeper" or v.Name == "Darkbeard" or v.Name == "Stone" or v.Name == "Island Empress" or v.Name == "Kilo Admiral" or v.Name == "Captain Elephant" or v.Name == "Beautiful Pirate" or v.Name == "Longma" or v.Name == "Cake Queen" or v.Name == "Greybeard" or v.Name == "Order" or v.Name == "Cursed Captain" or v.Name == "Soul Reaper" or v.Name == "Rip indra" or v.Name == "Mihawk Boss" or v.Name == "Cake Prince" or v.Name == "Dough King" or v.Name == "Cursed Skeleton Boss" then --เห้
         if (v.HumanoidRootPart.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 1000 then
          _G.FastType = "Normal"
         end
@@ -5594,7 +5673,7 @@ Bruh = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramew
         end
     end
 end)
-page2:Toggle("Auto Haki", true, function(value)
+page2:Toggle("ออโต้เปิดฮาคิ", true, function(value)
 _G.AutoHaki = value
 end)
 task.spawn(function()
@@ -5608,7 +5687,7 @@ task.spawn(function()
         end)
     end
 end)
-page2:Toggle("Auto Ken", true, function(value)
+page2:Toggle("ออโต้เปิดฮาคิสังเกต", true, function(value)
 _G.AutoKen = value
 end)
 spawn(function()
@@ -5626,7 +5705,7 @@ end)
 
 local RunService = game:GetService("RunService")
 
-page2:Toggle("White Screen", false, function(value)
+page2:Toggle("จอขาว", false, function(value)
 _G.WhiteScreen = value
 if value then
     game.RunService:Set3dRenderingEnabled(false)
@@ -5635,7 +5714,7 @@ else
 end
 end)
 
-page2:Toggle("Black Screen", false, function(value)
+page2:Toggle("จอดำ", false, function(value)
 _G.BlackScreen = value
 if value then
     game.RunService:Set3dRenderingEnabled(false)
@@ -5646,25 +5725,25 @@ else
 end
 end)
 
-page2:Toggle("Hide Notification", false, function(value)
+page2:Toggle("ซ่อนข้อความการแจ้งเตือน", false, function(value)
 game:GetService("Players").LocalPlayer.PlayerGui.Notifications.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Notifications.Enabled
 end)
 
-page2:Toggle("BringMon", true, function(value)
+page2:Toggle("รวมอน", true, function(value)
 _G.BringMob = value
 end)
 _G.Auto_CFrame = true
-page2:Toggle("Disable Damage",  true, function(value)
+page2:Toggle("ปิดดาเมจ",  true, function(value)
 _G.Disdamage = value
 DisabledDamage()
 end)
 
 page3:Seperator("📊")
-page3:Dropdown("Select Stats",{"Melee","Defense","Sword","Gun","Fruit"},function(value)
+page3:Dropdown("เลือกสแตค",{"Melee","Defense","Sword","Gun","Fruit"},function(value)
     _G.SelectStats = value
 end)
 
-page3:Toggle("Auto Stats", _G.EnabledAutoStats, function(value)
+page3:Toggle("อัพสแตค", _G.EnabledAutoStats, function(value)
     _G.EnabledAutoStats = value
 end)
 
@@ -5713,7 +5792,7 @@ spawn(function()
     end)
 end)
 
-page3:Toggle("Auto Stats Kaitun", _G.AutoStatsKaitun, function(value)
+page3:Toggle("อัพสแตคแบบไก่ตัน", _G.AutoStatsKaitun, function(value)
     _G.AutoStatsKaitun = value
 end)
 
@@ -5739,7 +5818,7 @@ spawn(function()
     end
 end)
 
-page3:Toggle("Redeem code", _G.EnabledAutoRedeemCode, function(value)
+page3:Toggle("ใส่โค้ด", _G.EnabledAutoRedeemCode, function(value)
     _G.EnabledAutoRedeemCode = value
 end)
 
@@ -5780,8 +5859,8 @@ spawn(function()
     end
 end)
 
-page3:Seperator("<<Fighting Style>>") 
-page3:Toggle("Auto GodHuman", _G.AutoGodHuman, function(value)
+page3:Seperator("<<สไตล์การต่อสู้>>") 
+page3:Toggle("ออโต้ทำหมัดก็อตฮิวแมน", _G.AutoGodHuman, function(value)
     _G.AutoGodHuman = value
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman", true)
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
@@ -5845,7 +5924,7 @@ spawn(function()
 end)
 
 
-page3:Toggle("Auto Superhuman", _G.AutoSuperhuman, function(value)
+page3:Toggle("ออโต้ทำหมัดชุปเปอร์ฮิวแมน", _G.AutoSuperhuman, function(value)
     _G.AutoSuperhuman = value
 end)
 task.spawn(function()
@@ -6003,7 +6082,7 @@ end
 
 
 
-page3:Toggle("Auto ElectricClaw", _G.AutoElectricClaw, function(value)
+page3:Toggle("ออโต้ทำหมัดสายฟ้า", _G.AutoElectricClaw, function(value)
     _G.AutoElectricClaw = value
     if _G.AutoElectricClaw then
         Com("F_", "BuyElectro")
@@ -6056,7 +6135,7 @@ task.spawn(function()
     end
 end)
   
-page3:Toggle("Auto DeathStep", _G.AutoDeathStep, function(value)
+page3:Toggle("ออโต้ทำหมัดขาดำ", _G.AutoDeathStep, function(value)
     _G.AutoDeathStep = value
     if _G.AutoDeathStep then
         Com("F_", "BuyBlackLeg")
@@ -6152,7 +6231,7 @@ task.spawn(function()
     end
 end)
   
-page3:Toggle("Auto SharkManKarate",_G.AutoSharkManKarate, function(value)
+page3:Toggle("ออโต้ทำหมัดมนุษย์เงือก",_G.AutoSharkManKarate, function(value)
     _G.AutoSharkManKarate = value
     if _G.AutoSharkManKarate then
         Com("F_", "BuySharkmanKarate")
@@ -6246,7 +6325,7 @@ task.spawn(function()
     end
 end)
       
-page3:Toggle("Auto DragonTalon",  _G.AutoDragonTalon , function(value)
+page3:Toggle("ออโต้ทำหมัดมังกร",  _G.AutoDragonTalon , function(value)
     _G.AutoDragonTalon = value
     if _G.AutoDragonTalon then
         Com("F_", "BlackbeardReward", "DragonClaw", "2")
@@ -6318,15 +6397,15 @@ end)
 
 page4:Seperator("🚀")
 
-page4:Button("Teleport To Sea 1", function(value)
+page4:Button("เทเลพอร์ตไปทะเล 1", function(value)
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
 end)
 
-page4:Button("Teleport To Sea 2", function(value)
+page4:Button("เทเลพอร์ตไปทะเล 2", function(value)
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
 end)
 
-page4:Button("Teleport To Sea 3", function(value)
+page4:Button("เทเลพอร์ตไปทะเล 3", function(value)
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
 end)
 
@@ -6340,11 +6419,11 @@ TeleportTable = { "Port Town", "Hydra Island", "Gaint Tree", "Mansion", "Castle 
 end
 page4:Line()
 
-page4:Dropdown("Select Island",TeleportTable, function(value)
+page4:Dropdown("เลือกสถานที่",TeleportTable, function(value)
 _G.SelectLocalTeleport = value
 end)
 
-page4:Toggle("Teleport To Select", _G.TeleportIsland,function(value)
+page4:Toggle("เทเลพอร์ตไปที่เลือกไว้", _G.TeleportIsland,function(value)
 _G.TeleportIsland = value
 if _G.TeleportIsland then
 if World1  then
@@ -6514,20 +6593,20 @@ elseif World3 then
 end
 end)
  
-page4:Button("Stop Teleport", function(value)
+page4:Button("หยุดการเทเลพอร์ต", function(value)
     toTarget(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
 end)
-page1:Seperator("<<Observation>>") 
+page1:Seperator("<<ฮาคิสังเกต>>") 
 local ObservationRange = page1:Label("...")
 spawn(function()
         while wait() do
             pcall(function()
-                ObservationRange:Set("Observation Lv : "..math.floor(game:GetService("Players").LocalPlayer.VisionRadius.Value))
+                ObservationRange:Set("เลเวลของฮาคิสังเกต : "..math.floor(game:GetService("Players").LocalPlayer.VisionRadius.Value))
             end)
         end
     end)
 
-    page1:Toggle("Auto KenHakiV2",_G.AutoKenHakiV2, function(value)
+    page1:Toggle("ทำฮาคิสังเกตขั้นสอง",_G.AutoKenHakiV2, function(value)
         _G.AutoKenHakiV2 = value
             if value == false then
                 task.wait()
@@ -6652,8 +6731,7 @@ spawn(function()
             end)
         end
     end)
-
-page1:Toggle("Auto Observation",_G.Settings.AutoObservation,function(value)
+page1:Toggle("ฟาร์มฮาคิสังเกต",_G.Settings.AutoObservation,function(value)
     _G.AutoObservation = value
     _G.Settings.AutoObservation = value
     SaveSettings() 
@@ -6683,7 +6761,7 @@ while wait() do
     end
 end)
 
-page1:Toggle("Auto Observation_Hop",_G.AutoObservation_Hop,function(value)
+page1:Toggle("ฟาร์มฮาคิสังเกตย้ายเซิฟ",_G.AutoObservation_Hop,function(value)
     _G.AutoObservation_Hop = value
 end)
 
@@ -6782,9 +6860,10 @@ spawn(function()
                 end
             end)
         end)
-page1:Seperator("<<Boss>>") 
+
+page1:Seperator("<<บอส>>") 
 local Boss = {}
-local BossName = page1:Dropdown("Select Boss",Boss, function(value)
+local BossName = page1:Dropdown("เลือกบอส",Boss, function(value)
     _G.SelectBoss = value
 end)
 page1:Button("รีเฟชร",function()
@@ -6798,7 +6877,7 @@ BossName:Clear()
 end)
 
 
-page1:Toggle("Auto Farm Boss", _G.AutoFarmBoss, function(value)
+page1:Toggle("ฟาร์มบอส", _G.AutoFarmBoss, function(value)
 _G.AutoFarmBoss = value
     if value == false then
         task.wait()
@@ -6843,7 +6922,7 @@ task.spawn(function()
     end
 end)
 
-page1:Toggle("Auto AllBoss", _G.AutoAllBoss, function(value)
+page1:Toggle("ฟาร์มบอสทั้งหมด", _G.AutoAllBoss, function(value)
     _G.AutoAllBoss = value
         if value == false then
         task.wait()
@@ -7451,7 +7530,7 @@ end)
 
 page6:Seperator("✨")
 _G.HealthMs = 25
-page6:Toggle("Auto Farm Mastery Gun", _G.Settings.AutoFarmGunMastery, function(value)
+page6:Toggle("ฟาร์มมาสเตอรี่ปืน", _G.Settings.AutoFarmGunMastery, function(value)
 _G.AutoFarmGunMastery = value
 _G.Settings.AutoFarmGunMastery = value
 SaveSettings()
@@ -7571,7 +7650,7 @@ SaveSettings()
     end)
 end)
 
-page6:Toggle("Auto Farm Mastery Fruit", _G.Settings.AutoFarmFruitMastery, function(value)
+page6:Toggle("ฟาร์มมาสเตอรี่ผลปีศาจ", _G.Settings.AutoFarmFruitMastery, function(value)
 _G.AutoFarmFruitMastery = value
 _G.Settings.AutoFarmFruitMastery = value
 SaveSettings()
@@ -7772,27 +7851,27 @@ spawn(function()
         end)
     end
 end)
-page6:Slider("Kill At (%)",1,100,25,function(value)
+page6:Slider("ฆ่าเมื่อ (%)",1,100,25,function(value)
     _G.HealthMs = value
 end)
 
-page6:Label("Skill List")
-page6:Toggle("Skill Z", _G.SkillZ, function(value)
+page6:Label("รายการสกิล")
+page6:Toggle("สกิล Z", _G.SkillZ, function(value)
 _G.SkillZ = value
 end)
-page6:Toggle("Skill X", _G.SkillX, function(value)
+page6:Toggle("สกิล X", _G.SkillX, function(value)
 _G.SkillX = value
 end)
 
-page6:Toggle("Skill C", _G.SkillC, function(value)
+page6:Toggle("สกิล C", _G.SkillC, function(value)
 _G.SkillC = value
 end)
 
-page6:Toggle("Skill V", _G.SkillV, function(value)
+page6:Toggle("สกิล V", _G.SkillV, function(value)
 _G.SkillV = value
 end)
 
-page6:Toggle("Skill F",_G.SkillF, function(value)
+page6:Toggle("สกิล F",_G.SkillF, function(value)
 _G.SkillF = value
 end)
 
@@ -7803,14 +7882,14 @@ _G.FastType = "Fast"
 end
 page7:Seperator("🍈")
 
-page7:Toggle("Bring Fruit",_G.Auto_Bring_Fruit , function(value)
+page7:Toggle("ดึงผลไม้ปีศาจ",_G.Auto_Bring_Fruit , function(value)
      _G.Auto_Bring_Fruit  = value
 end)
-page7:Toggle("Random Fruit", _G.AutoBuyRandomFruits, function(value)
+page7:Toggle("สุ่มผลไม้ปีศาจ", _G.AutoBuyRandomFruits, function(value)
 _G.AutoBuyRandomFruits = value
 end)
 
-page7:Button("Devil Fruit Shop", function()
+page7:Button("เปิดร้านค้าผลไม้ปีศาจ", function()
 local args = {
     [1] = "GetFruits"
 }
@@ -7826,7 +7905,7 @@ spawn(function()
     end
 end)
 
-page7:Toggle("Store Fruit", _G.AutoStoreFruits, function(value)
+page7:Toggle("เก็บผลไม้ปีศาจเข้ากระเป๋า", _G.AutoStoreFruits, function(value)
 _G.AutoStoreFruits = value
 end)
 
@@ -7843,7 +7922,6 @@ spawn(function()
         end
     end
 end)
-
 
 spawn(function()
 while task.wait() do
@@ -7988,13 +8066,45 @@ while task.wait() do
     end
 end
 end)
+local Remote_GetFruits = game.ReplicatedStorage:FindFirstChild("Remotes").CommF_:InvokeServer("GetFruits");
+	
+Table_DevilFruitSniper = {}
+ShopDevilSell = {}
+
+for i,v in next,Remote_GetFruits do
+    table.insert(Table_DevilFruitSniper,v.Name)
+    if v.OnSale then 
+        table.insert(ShopDevilSell,v.Name)
+    end
+end
+
+page7:Dropdown("เลือกผลไม้ปีศาจ",Table_DevilFruitSniper,function(value)
+    _G.Select_Devil_Fruit = value
+end)
+page7:Toggle("ออโต้ซื้อผลไม้ปีศาจที่เลือก",_G.Auto_Buy_Devil_Fruit,function(value)
+    _G.Auto_Buy_Devil_Fruit = value 
+end)
+
+
+spawn(function()
+    while wait() do
+        if _G.Auto_Buy_Devil_Fruit then
+            pcall(function()
+                local string_1 = "PurchaseRawFruit";
+                local string_2 = _G.Select_Devil_Fruit;
+                local Target = game:GetService("ReplicatedStorage").Remotes["CommF_"];
+                Target:InvokeServer(string_1, string_2);
+            end)
+        end                              
+    end
+end)
 local SelectRaids = {"Flame","Ice","Quake","Light","Dark","String","Rumble","Magma","Human: Buddha","Sand","Bird: Phoenix","Dough"}
 page8:Seperator("⚔️")
 
-page8:Dropdown("Slect Raids",SelectRaids, function(value)
+page8:Dropdown("เลือกดันเจี้ยน",SelectRaids, function(value)
     _G.SelectRaids = value
 end)
-page8:Toggle("Auto Raids", _G.AutoRaids, function(value)
+page8:Toggle("ลงดันเจี้ยน", _G.AutoRaids, function(value)
     _G.AutoRaids = value
     if value == false then
         task.wait()
@@ -8002,16 +8112,16 @@ page8:Toggle("Auto Raids", _G.AutoRaids, function(value)
         task.wait()
     end
 end)
-page8:Toggle("Kll Aura", _G.KillAura, function(value)
+page8:Toggle("ออร่าฆ่ามอนรอบตัว", _G.KillAura, function(value)
     _G.KillAura = value
 end)
-page8:Toggle("Auto NextPlacec", _G.AutoNextPlace, function(value)
+page8:Toggle("ออโต้ไปเกาะถัดไป", _G.AutoNextPlace, function(value)
     _G.AutoNextPlace = value
     if value == false then
         toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
     end
 end)
-page8:Toggle("Auto Awakened", _G.AutoAwakened, function(value)
+page8:Toggle("ซื้อสกิลตื่น", _G.AutoAwakened, function(value)
     _G.AutoAwakened = value
 end)
 
@@ -8166,7 +8276,7 @@ local getplayers = {}
 local getitems = {}
 local getweb = {}
 
-    page13:Seperator("<<Combat>>")
+    page13:Seperator("<<ต่อสู้>>")
 do
     for i, v in pairs(game:GetService("Workspace").Characters:GetChildren()) do
         if v.Name ~= plr.Name then
@@ -8179,10 +8289,58 @@ do
         end
     end
 end
-local PlayerDrop = page13:Dropdown("Select Players",getplayers, function(value)
+
+page1:Toggle("ฆ่าเพลย์เยอร์ที่อยู่ใกล้ๆ",_G.Auto_Kill_Players_Nearby ,function(value)
+    _G.Auto_Kill_Players_Nearby  = value
+     end)
+     spawn(function()
+        while wait() do 
+            pcall(function()
+                if _G.Auto_Kill_Players_Nearby then
+                        for i,v in pairs(game:GetService("Workspace").Characters:GetChildren()) do
+                            if v.Name ~= plr and v.Humanoid.Health > 0 then
+                                repeat wait()
+                                    if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
+                                       toTarget(v.HumanoidRootPart.CFrame * MethodFarmPlayer)
+                                       EquipWeapon(_G.SelectWeapon)
+                                       FastAttack = true
+                                       v.HumanoidRootPart.CanCollide = false
+                                       v.Humanoid.WalkSpeed = 0
+                                       v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                       _G.FastAttack = true
+                                        game:GetService'VirtualUser':CaptureController()
+                                        game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                    end
+                                until v.Humanoid.Health <= 0 or not _G.Auto_Kill_Players_Nearby  
+                            end
+                        end
+                    end
+                end)
+            end
+        end)
+    
+        spawn(function()
+            local Methodnow = 1
+            while wait(1) do
+                if Methodnow == 1 then
+                    Methodnow = 2
+                    MethodFarmPlayer = CFrame.new(40, 15, 0)
+                elseif Methodnow == 2 then
+                    Methodnow = 3
+                    MethodFarmPlayer = CFrame.new(0, 15, 40)
+                elseif Methodnow == 3 then 
+                    Methodnow = 4
+                    MethodFarmPlayer = CFrame.new(-40, 15, 0)
+                else
+                    Methodnow = 1
+                    MethodFarmPlayer = CFrame.new(0, 15, -40)
+                end
+            end
+        end)
+local PlayerDrop = page13:Dropdown("เลือกเพลย์เยอร์",getplayers, function(value)
     SelectPlayer = value
 end)
-page13:Button("Refresh", function()
+page13:Button("รีเฟชร", function()
     PlayerDrop:Clear()
     for i, v in next, game:GetService("Workspace").Characters:GetChildren() do
         if v.Name ~= plr.Name then
@@ -8192,7 +8350,7 @@ page13:Button("Refresh", function()
         end
     end
 end)
-page13:Toggle("Teleport To Players", teleporttop, function(value)
+page13:Toggle("เทเลพอร์ตไปหาเพลย์เยอร์", teleporttop, function(value)
     teleporttop = value
     if value == false then
         task.wait()
@@ -8200,7 +8358,7 @@ page13:Toggle("Teleport To Players", teleporttop, function(value)
         task.wait()
     end
 end)
-page13:Toggle("Spectate Player", SpectatePlys, function(value)
+page13:Toggle("แอบดูเพลย์เยอร์", SpectatePlys, function(value)
     SpectatePlys = value
     local plr1 = game:GetService("Players").LocalPlayer.Character.Humanoid
     local plr2 = game:GetService("Players"):FindFirstChild(SelectPlayer)
@@ -8222,10 +8380,10 @@ spawn(function()
         end
     end
 end)
-page13:Toggle("Aimbot Gun", false, function(value)
+page13:Toggle("อิมบอทปืน", false, function(value)
     Aimbot = value
 end)
-page13:Toggle("Aimbot Skill", false, function(value)
+page13:Toggle("อิมบอทสกิล", false, function(value)
     Skillaimbot = value
 end)
 
@@ -8295,8 +8453,8 @@ game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun].RemoteFunc
 end
 end)
 
-page13:Seperator("<<ESP>>")
-page13:Toggle("ESP Players", _G.ESPPlayer, function(value)
+page13:Seperator("<<มองทะลุ>>")
+page13:Toggle("มองทะลุหาเพลย์เยอร์", _G.ESPPlayer, function(value)
 ESPPlayer = value
 while ESPPlayer do
 task.wait()
@@ -8310,7 +8468,7 @@ if ESPPlayer then
 end
 end
 end)
-page13:Toggle("ESP Chest", _G.ChestEsp, function(value)
+page13:Toggle("มองทะลุหากล่องสมบัติ", _G.ChestEsp, function(value)
 ChestESP = value
 while ChestESP do
 task.wait()
@@ -8318,7 +8476,7 @@ UpdateChestEsp()
 end
 end)
 
-page13:Toggle("ESP DevilFruit", _G.DevilFruitESP, function(value)
+page13:Toggle("มองทะลุหาผลปีศาจ", _G.DevilFruitESP, function(value)
 DevilFruitESP = value
 while DevilFruitESP do
 task.wait()
@@ -8326,7 +8484,7 @@ UpdateBfEsp()
 end
 end)
 
-page13:Toggle("ESP RealFruit", _G.DevilFruitRealESP, function(value)
+page13:Toggle("มองทะลุหาผลไม้จริงๆ", _G.DevilFruitRealESP, function(value)
 DevilFruitRealESP = value
 while DevilFruitRealESP do
 task.wait()
@@ -8334,7 +8492,7 @@ UpdateRealFruitChams()
 end
 end)
 
-page13:Toggle("ESP Flower", _G.FlowerESP, function(value)
+page13:Toggle("มองทะลุหาดอกไม้", _G.FlowerESP, function(value)
 FlowerESP = value
 while FlowerESP do
 task.wait()
@@ -8342,7 +8500,7 @@ UpdateFlowerEsp()
 end
 end)
 
-page13:Toggle("ESP Island", _G.IslandESP, function(value)
+page13:Toggle("มองทะลุหาเกาะ", _G.IslandESP, function(value)
 IslandESP = value
 while IslandESP do
 task.wait()
@@ -8724,7 +8882,7 @@ spawn(function()
     end)
 end)
 
-page9:Toggle("Teleport To Mirage Island",  _G.Settings.AutoMirageIsland, function(value)
+page9:Toggle("เทเลพอร์ตไปหาเกาะลับ",  _G.Settings.AutoMirageIsland, function(value)
 _G.Mirage = value
 _G.Settings.Mirage = value
 SaveSettings() 
@@ -8734,7 +8892,7 @@ if value == false then
 end
 end)
 
-page9:Toggle("Teleport To Mirage Island{Hop}", _G.Settings.MirageHop, function(value)
+page9:Toggle("เทเลพอร์ตไปหาเกาะลับ [ย้ายเซิฟ]", _G.Settings.MirageHop, function(value)
 _G.MirageHop = value
 _G.Settings.MirageHop = value
 _G.AutoMirageIslandHop = value
@@ -8817,12 +8975,12 @@ spawn(function()
     end
 end)
 
-page9:Toggle("ESP Mirage Island", _G.ESPMirageIsland, function(value)
+page9:Toggle("มองทะลุหาเกาะลับ", _G.ESPMirageIsland, function(value)
     _G.ESPMirageIsland = value
     ESPMirageIsland()
 end)
 
-page9:Toggle("Teleport To Advanced Fruit Dealer", _G.TPNPCDF, function(value)
+page9:Toggle("เทเลพอร์ตไปหาคนขายผลไม้ปีศาจเกาะลับ", _G.TPNPCDF, function(value)
     spawn(function()
         pcall(function()
         while wait() do
@@ -8835,7 +8993,7 @@ page9:Toggle("Teleport To Advanced Fruit Dealer", _G.TPNPCDF, function(value)
         end)
     end)
 end)
-page9:Toggle("Teleport To Gear", _G.Settings.Auto_Gear, function(value)
+page9:Toggle("เทเลพอร์ตไปหาฟันเฟือง", _G.Settings.Auto_Gear, function(value)
     _G.Auto_Gear = value
     _G.Settings.Auto_Gear = value
         SaveSettings() 
@@ -8884,21 +9042,21 @@ end
 end)
 end
 
-page9:Toggle("Lock Moon", _G.LockMoon , function(value)
+page9:Toggle("มองพระจันทร์", _G.LockMoon , function(value)
 _G.LockMoon = value
 LockMoon()
 end)
 
 page10:Seperator("🐰")
 
-page10:Toggle("Auto Active RaceV3",_G.AutoActiveRace,function(value)  
+page10:Toggle("ออโต้เปิดใช้งานเผ่าวีสาม",_G.AutoActiveRace,function(value)  
 _G.AutoActiveRace = value
     while _G.AutoActiveRace do wait()
         game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.T,false,game)
         game:GetService("VirtualInputManager"):SendKeyEvent(false,Enum.KeyCode.T,false,game)
     end
 end)
-page10:Toggle("Auto Active RaceV4",_G.AutoActiveRaceV4,function(value)  
+page10:Toggle("ออโต้เปิดใช้งานเผ่าวีสี่",_G.AutoActiveRaceV4,function(value)  
 _G.AutoActiveRaceV4 = value
     while _G.AutoActiveRaceV4 do wait()
         game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Y,false,game)
@@ -8906,56 +9064,56 @@ _G.AutoActiveRaceV4 = value
     end
 end)
 
-page10:Button("Teleport To Great Tree", function()
+page10:Button("เทเลพอร์ตไปบนต้นไม้ใหญ่", function()
     toTarget(CFrame.new(2947.556884765625, 2281.630615234375, -7213.54931640625))
 end)
 
-page10:Button("Teleport To Temple Of Time", function()
+page10:Button("เทเลพอร์ตไปยังที่ทำเผ่าวีสี่", function()
     Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875,14895.3017578125, 102.62469482421875)
 end)
 
-page10:Button("Teleport To Pull Level", function()
+page10:Button("เทเลพอร์ตไปที่คันโยก", function()
     toTarget(CFrame.new(28575.181640625, 14936.6279296875, 72.31636810302734))
 end)
 
-page10:Button("Teleport To Acient One", function()
+page10:Button("เทเลพอร์ตไปที่ Acient One", function()
     toTarget(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
 end)
 
-page10:Button("Telpeort To  Cybrog Door", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่าไซบอร์ก ", function()
     toTarget(CFrame.new(28492.4140625, 14894.4267578125, -422.1100158691406))
 end)
-page10:Button("Telpeort To Fishman Door ", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่ามนุษย์เงือก ", function()
     toTarget(CFrame.new(28224.056640625, 14889.4267578125, -210.5872039794922))
 end)
-page10:Button("Telpeort To Ghoul Door", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่ากลู", function()
     toTarget(CFrame.new(28672.720703125, 14889.1279296875, 454.5961608886719))
 end)
-page10:Button("Telpeort To Human Door", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่ามนุษย์", function()
     toTarget(CFrame.new(29237.294921875, 14889.4267578125, -206.94955444335938))
 end)
-page10:Button("Telpeort To Rabbit Door", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่ากระต่าย", function()
     toTarget(CFrame.new(29020.66015625, 14889.4267578125, -379.2682800292969))
 end)
-page10:Button("Telpeort To Skypiea Door", function()
+page10:Button("เทเลพอร์ตไปประตูเผ่าสกายเปีย", function()
     toTarget(CFrame.new(28967.408203125, 14918.0751953125, 234.31198120117188))
 end)
 
-page10:Seperator("<<Trail>>")
+page10:Seperator("<<ออโต้ผ่านด่านเผ่า>>")
 
-page10:Button("Auto Trail Skypiea", function(t)
+page10:Button("ออโต้ผ่านด่านเผ่าสกายเปีย", function(t)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Map.SkyTrial.Model.FinishPart.CFrame
 end)
-page10:Button("Auto Trail Rabbit", function(t)
+page10:Button("ออโต้ผ่านด่านเผ่ากระต่าย", function(t)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.MinkTrial.Ceiling.CFrame * CFrame.new(0, -5, 0)
 end)
-page10:Button("Auto Trail Cybrog", function(t)
+page10:Button("ออโต้ผ่านด่านเผ่าไซบอร์ก", function(t)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 300, 0)
 end)
-page10:Button("Teleport To Arena Pvp", function()
+page10:Button("เทเลพอร์ตไปเขตต่อสู้", function()
     toTarget(CFrame.new(28766.681640625, 14967.1455078125, -164.13290405273438))
 end)
-page10:Button("Teleport To Safe Zone when Pvp", function()
+page10:Button("เทเลพอร์ตไปที่ปลอดภัยเมื่อต่อสู้", function()
     toTarget(CFrame.new(28273.0859375, 14896.5078125, 157.42063903808594))
 end)
 function FullBright()
@@ -9032,7 +9190,7 @@ game.Lighting.DescendantAdded:Connect(function(obj)
 end
 
     page14:Seperator("🌊")
-    page14:Toggle("Auto Kill Mon Event", _G.AutoEvent, function(value)
+    page14:Toggle("ฆ่ามอนอีเว้นท์ทะเล", _G.AutoEvent, function(value)
         _G.AutoEvent = value
         spawn(function()
             while wait() do 
@@ -9061,7 +9219,7 @@ end
             end
         end)
     end)
-page14:Toggle("Accetp Quest Kill 20 Sharks", _G.QRepairBoat, function(value)
+page14:Toggle("รับเควสฆ่าฉลาม20ตัว", _G.QRepairBoat, function(value)
     _G.QRepairBoat = value
     spawn(function()
         while wait() do
@@ -9084,7 +9242,7 @@ page14:Toggle("Accetp Quest Kill 20 Sharks", _G.QRepairBoat, function(value)
             }
 
             game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/InteractSubclassQuest"):InvokeServer(unpack(args))
-                Vec("<Color=Red>English Version\n:Kill 20 sharks:<Color=/>")
+                Vec("<Color=Red>เวอร์ชั่นไทย\n:ฆ่าฉลาม20ตัว:<Color=/>")
             wait(1)
             repeat wait()  toTarget(CFrame.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667)) until  (Vector3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepaiBoat
             
@@ -9092,7 +9250,7 @@ page14:Toggle("Accetp Quest Kill 20 Sharks", _G.QRepairBoat, function(value)
         end
     end)
 end)
-page14:Toggle("Click After Kill 20 Sharks", _G.QRepairBoat2, function(value)
+page14:Toggle("กดหลังจากฆ่าฉลาม20ตัว", _G.QRepairBoat2, function(value)
         _G.QRepairBoat2 = value
         spawn(function()
             while wait() do
@@ -9120,77 +9278,89 @@ page14:Toggle("Click After Kill 20 Sharks", _G.QRepairBoat2, function(value)
         end)
     end)
 
-AllBoat = {"Dinghy","PirateSloop","PirateBrigade","PirateGrandBrigade","MarineSloop","MarineBrigade","MarineGrandBrigade"}
-local SelectBoat = nil
-page14:Dropdown("Select Boat",AllBoat, function(value)
-    AllBoat = value
-end)  
-function CheckNotifyBuy()
-    for i, v in pairs(game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("Notifications"):GetChildren()) do
-        if v.Name == "NotificationTemplate" then
-            if string.lower(v.Text):find("bought") then
-                return true
-            end
-        end
+    local checkteam = game:GetService("Players").LocalPlayer.Team
+    if checkteam ~= "Marines" then
+        AllBoat = {"Dinghy","MarineSloop","MarineBrigade","MarineGrandBrigade"}
+    else
+        AllBoat = {"Dinghy","PirateSloop","PirateBrigade","PirateGrandBrigade"}
     end
-    return false
-end
-page14:Toggle("Buy Boat", _G.Bboat, function(value)
-    _G.Bboat = value
-while _G.Bboat do wait()
-    toTarget(CFrame.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667))
-        if (Vector3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5 and CheckNotifyBuy() == false then
-            repeat wait()
-            if SelectBoat then 
-                local args = {
-                    [1] = "BuyBoat",
-                    [2] = SelectBoat
-                }
-                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-            end
-            until CheckNotifyBuy() == true or not _G.Bboat
-            for i, v in pairs(game.Workspace.Boats[SelectBoat]:GetChildren()) do
-                if v:IsA("VehicleSeat") and  game.Players.LocalPlayer.Name == game.Workspace.Boats[SelectBoat].Owner.Value.Name then 
-                    if (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 1000 then
-                        repeat
-                            task.wait()
-                            local CFrame = v.CFrame
-                            twoboat(CFrame)
-                        until (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 5 or not _G.Bboat
-                    end
+    
+    local SelectBoat = nil
+    page14:Dropdown("เลือกเรือ",AllBoat, function(value)
+        SelectBoat = value
+    end)  
+    
+    function CheckNotifyBuy()
+        for i, v in pairs(game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("Notifications"):GetChildren()) do
+            if v.Name == "NotificationTemplate" then
+                if string.lower(v.Text):find("bought") then
+                    return true
                 end
             end
         end
+        return false
     end
-end)
-  
-Seatable = {"Sea1[Low]","Sea2[Medium]","Sea3[High]","Sea4[Extreme]","Sea5[Crazy]","Sea6[???]"}
-page14:Dropdown("Select Sea",   Seatable , function(value)
-    _G.SelectLocalTeleportSea = value
-end)
-
-page14:Toggle("Teleport To Sea", _G.TeleportSea, function(value)
-    _G.TeleportSea = value
-    local Boat = game.Workspace.Boats[SelectBoat]
-    if _G.TeleportSea then
-        repeat wait()
-            if _G.SelectLocalTeleportSea == "Sea1[Low]" then
-                tweenModel(Boat, CFrame.new(-22526.0098, -0.3221744, 1716.89185, -0.210707203, 1.100981e-07, 0.977549195, 2.74631451e-09, 1, -1.12034698e-07, -0.977549195, -2.09218598e-08, -0.210707203))
-        elseif _G.SelectLocalTeleportSea == "Sea2[Medium]" then
-                tweenModel(Boat, CFrame.new(-25645.3535, -0.3221744, 2554.41016, -0.334876329, -5.05522451e-08, 0.942262113, -3.13346469e-08, 1, 4.25136619e-08, -0.942262113, -1.52886308e-08, -0.334876329))
-        elseif _G.SelectLocalTeleportSea == "Sea3[High]" then
-                tweenModel(Boat, CFrame.new(-29842.2227, -0.3221744, 4070.85767, -0.270609587, 3.60968606e-08, 0.962689161, -4.47193429e-08, 1, -5.00663617e-08, -0.962689161, -5.65992657e-08, -0.270609587))
-        elseif _G.SelectLocalTeleportSea == "Sea4[Extreme]" then
-                tweenModel(Boat, CFrame.new(-32654.7188, -0.3221744, 4788.14697, -0.183276221, 2.0033232e-08, 0.983061433, 3.66669433e-08, 1, -1.35424418e-08, -0.983061433, 3.35638504e-08, -0.183276221))
-        elseif _G.SelectLocalTeleportSea == "Sea5[Crazy]" then
-                tweenModel(Boat, CFrame.new(-37813.6953, -0.3221744, 6105.16895, -0.252362996, 4.13621581e-09, 0.967632651, 2.87320709e-08, 1, 3.21888249e-09, -0.967632651, 2.86144175e-08, -0.252362996))
-        elseif _G.SelectLocalTeleportSea == "Sea6[???]" then
-                tweenModel(Boat, CFrame.new(-42250.2227, -0.3221744, 9247.07715, -0.45916447, 6.39043236e-08, 0.888351262, -3.36711423e-08, 1, -8.93395651e-08, -0.888351262, -7.09333605e-08, -0.45916447))
+    page14:Toggle("ซื้อเรือ", _G.Bboat, function(value)
+    _G.Bboat = value
+    spawn(function()
+        while _G.Bboat do wait()
+            toTarget(CFrame.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667))
+                if (Vector3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5 and CheckNotifyBuy() == false then
+                    repeat wait()
+                    if SelectBoat then 
+                        local args = {
+                            [1] = "BuyBoat",
+                            [2] = SelectBoat
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+                    end
+                    until CheckNotifyBuy() == true or not _G.Bboat
+                elseif CheckNotifyBuy() == true or not _G.Bboat then
+                    _G.Bboat = false
+                    for i, v in pairs(game.Workspace.Boats[SelectBoat]:GetChildren()) do
+                        if v:IsA("VehicleSeat") and  game.Players.LocalPlayer.Name == game.Workspace.Boats[SelectBoat].Owner.Value.Name then 
+                            if (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 1000 then
+                                repeat
+                                    task.wait()
+                                    local CFrame = v.CFrame
+                                    twoboat(CFrame)
+                                until (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 5 or not _G.Bboat
+                            end
+                        end
+                    end
+                end
             end
-        until not _G.TeleportSea
-    end
-end)
-page14:Toggle("Stop Boat", _G.stpboat, function(value)
+        end)
+    end)
+    
+      
+    Seatable = {"Sea1[Low]","Sea2[Medium]","Sea3[High]","Sea4[Extreme]","Sea5[Crazy]","Sea6[???]"}
+    page14:Dropdown("เลือกระดับทะเล",   Seatable , function(value)
+        _G.SelectLocalTeleportSea = value
+    end)
+    
+    page14:Toggle("เทเลพอร์ตไปยังทะเลที่เลือก", _G.TeleportSea, function(value)
+        _G.TeleportSea = value
+        local Boat = game.Workspace.Boats[SelectBoat]
+        if _G.TeleportSea then
+            repeat wait()
+                if _G.SelectLocalTeleportSea == "Sea1[Low]" then
+                    tweenModel(Boat, CFrame.new(-22526.0098, -0.3221744, 1716.89185, -0.210707203, 1.100981e-07, 0.977549195, 2.74631451e-09, 1, -1.12034698e-07, -0.977549195, -2.09218598e-08, -0.210707203))
+            elseif _G.SelectLocalTeleportSea == "Sea2[Medium]" then
+                    tweenModel(Boat, CFrame.new(-25645.3535, -0.3221744, 2554.41016, -0.334876329, -5.05522451e-08, 0.942262113, -3.13346469e-08, 1, 4.25136619e-08, -0.942262113, -1.52886308e-08, -0.334876329))
+            elseif _G.SelectLocalTeleportSea == "Sea3[High]" then
+                    tweenModel(Boat, CFrame.new(-29842.2227, -0.3221744, 4070.85767, -0.270609587, 3.60968606e-08, 0.962689161, -4.47193429e-08, 1, -5.00663617e-08, -0.962689161, -5.65992657e-08, -0.270609587))
+            elseif _G.SelectLocalTeleportSea == "Sea4[Extreme]" then
+                    tweenModel(Boat, CFrame.new(-32654.7188, -0.3221744, 4788.14697, -0.183276221, 2.0033232e-08, 0.983061433, 3.66669433e-08, 1, -1.35424418e-08, -0.983061433, 3.35638504e-08, -0.183276221))
+            elseif _G.SelectLocalTeleportSea == "Sea5[Crazy]" then
+                    tweenModel(Boat, CFrame.new(-37813.6953, -0.3221744, 6105.16895, -0.252362996, 4.13621581e-09, 0.967632651, 2.87320709e-08, 1, 3.21888249e-09, -0.967632651, 2.86144175e-08, -0.252362996))
+            elseif _G.SelectLocalTeleportSea == "Sea6[???]" then
+                    tweenModel(Boat, CFrame.new(-42250.2227, -0.3221744, 9247.07715, -0.45916447, 6.39043236e-08, 0.888351262, -3.36711423e-08, 1, -8.93395651e-08, -0.888351262, -7.09333605e-08, -0.45916447))
+                end
+            until not _G.TeleportSea
+        end
+    end)
+page14:Toggle("หยุดเรือ", _G.stpboat, function(value)
     _G.stpboat = value
     local Boatstop = game.Workspace.Boats[SelectBoat]
     tweenModel(Boatstop, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
@@ -9198,7 +9368,7 @@ page14:Toggle("Stop Boat", _G.stpboat, function(value)
         StopBoatF()
     end
 end)
-page14:Toggle("Speed Boat",_G.increaseboatspeed, function(value)
+page14:Toggle("เพิ่มความเร็วเรือ",_G.increaseboatspeed, function(value)
 _G.increaseboatspeed = value
     local vehicleSeats = {}
     for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
@@ -9216,13 +9386,13 @@ _G.increaseboatspeed = value
         end
     end
 end)
-page14:Toggle("Auto Sail Boat",_G.AutoSail, function(value)
+page14:Toggle("ออโต้ขับเรือ",_G.AutoSail, function(value)
     _G.AutoSail = value
     while _G.AutoSail do task.wait(0)
     game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.W,false,game)
     end
 end)
-page14:Toggle("Boat Noclip Rock",_G.Nocliprock, function(value)
+page14:Toggle("เรือทะลุหิน",_G.Nocliprock, function(value)
     _G.Nocliprock = value
     spawn(function()
             while wait() do
@@ -9254,7 +9424,7 @@ page14:Toggle("Boat Noclip Rock",_G.Nocliprock, function(value)
             end
         end)
         end)
-        page14:Button("Full Bright", function()
+        page14:Button("แมพสว่าง", function()
     FullBright()
 end)
  
@@ -9276,23 +9446,23 @@ task.spawn(function()
     while task.wait() do
         pcall(function()
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                FM:Set("5/5 🌕: Status Moon")
+                FM:Set("5/5 🌕: สถานะดวงจันทร์")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
-                FM:Set("4/5 🌖 : Status Moon")
+                FM:Set("4/5 🌖 : สถานะดวงจันทร์")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                FM:Set("3/5 🌗 : Status Moon")
+                FM:Set("3/5 🌗 : สถานะดวงจันทร์")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                FM:Set("2/5 🌘 : Status Moon")
+                FM:Set("2/5 🌘 : สถานะดวงจันทร์")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                FM:Set("1/5 🌘 : Status Moon")
+                FM:Set("1/5 🌘 : สถานะดวงจันทร์")
             else
-                FM:Set("0/5 🌘 : Status Moon")
+                FM:Set("0/5 🌘 : สถานะดวงจันทร์")
             end
         end)
     end
 end)
 
-page15:Toggle("Teleport To Kisune Island", _G.TptoKisuneIsland, function(value)
+page15:Toggle("เทเลพอร์ตไปหาเกาะจิ้งจอก", _G.TptoKisuneIsland, function(value)
     _G.TptoKisuneIsland = value
     spawn(function()
         while task.wait() do
@@ -9303,7 +9473,7 @@ page15:Toggle("Teleport To Kisune Island", _G.TptoKisuneIsland, function(value)
     end)
 end)
 
-page15:Toggle("Auto Collet Azure Ember", _G.Ez, function(value)
+page15:Toggle("เก็บลูกไฟวิญญาณ", _G.Ez, function(value)
     _G.Ez = value
     spawn(function()
         while _G.Ez do wait()
@@ -9317,8 +9487,8 @@ page15:Toggle("Auto Collet Azure Ember", _G.Ez, function(value)
 end)
 
 page11:Seperator("🛒")
-page11:Label("Auto Buy")
-page11:Toggle("Auto Buy Zoro Sword", _G.AutoBuyLegendarySword, function(value)
+page11:Label("ออโต้ซื้อ")
+page11:Toggle("ออโต้ซื้อดาบโซโล", _G.AutoBuyLegendarySword, function(value)
     _G.AutoBuyLegendarySword = value
     task.spawn(function()
         while task.wait() do
@@ -9332,7 +9502,7 @@ page11:Toggle("Auto Buy Zoro Sword", _G.AutoBuyLegendarySword, function(value)
         end
     end)
 end) 
-page11:Toggle("Auto Buy Zoro Sword Hop", _G.Settings.AutoBuyLegendarySwordHop, function(value)
+page11:Toggle("ออโต้ซื้อดาบโซโลย้ายซิฟ", _G.Settings.AutoBuyLegendarySwordHop, function(value)
 _G.AutoBuyLegendarySwordHop = value
 _G.Settings.AutoBuyLegendarySwordHop = value
     SaveSettings()
@@ -9355,7 +9525,7 @@ spawn(function()
     end
 end)
 
-page11:Toggle("Auto Buy Color Haki", _G.AutoBuyEnchanmentHaki, function(value)
+page11:Toggle("ออโต้ซื้อสีฮาคิ", _G.AutoBuyEnchanmentHaki, function(value)
     _G.AutoBuyEnchanmentHaki = value
     task.spawn(function()
         while task.wait() do
@@ -9371,7 +9541,7 @@ page11:Toggle("Auto Buy Color Haki", _G.AutoBuyEnchanmentHaki, function(value)
         end
     end)
 end)
-page11:Toggle("Auto Buy Color Haki Hop", _G.Settings.AutoBuyEnchanmentHakiHop, function(value)
+page11:Toggle("ออโต้ซื้อสีฮาคิย้ายเซิฟ", _G.Settings.AutoBuyEnchanmentHakiHop, function(value)
     _G.AutoBuyEnchanmentHakiHop = value
     _G.Settings.AutoBuyEnchanmentHakiHop = value
     SaveSettings()
@@ -9530,20 +9700,20 @@ local LP = game:GetService("Players").LocalPlayer
 page12:Textbox("JobID","",function(x)
 JobId_Textbox = x
 end)
-page12:Button("Join JobID",function()
+page12:Button("เข้าร่วม JobID",function()
     TPS:TeleportToPlaceInstance(game.PlaceId, JobId_Textbox, LP)
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "VectorHub",Text = "Success JobID Please Wait",Icon = "rbxassetid://16129235054",Duration = 3}) 
 end)
 
-page12:Button("Copy JobID",function()
+page12:Button("ก็อปปี้ JobID",function()
     setclipboard(game.JobId)
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "VectorHub",Text = "Success Copy JobID",Icon = "rbxassetid://16129235054",Duration = 3})   
 end)
-page12:Button("Join Pirates", function()
+page12:Button("เข้าร่วมทีมโจรสลัด", function()
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Pirates")
 end)
 
-page12:Button("Join Marines", function()
+page12:Button("เข้าร่วมทีมทหารเรือ", function()
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Marines")
 end)
 function kaituncap()
@@ -9762,8 +9932,8 @@ pcall(function()
 end)
 end
 
-page12:Seperator("<<Server>>")
-page12:Button("Hop to little Players", function()
+page12:Seperator("<<เซิฟเวอร์>>")
+page12:Button("เข้าเซิฟคนน้อย", function()
     local PlaceID = game.PlaceId
     local AllIDs = {}
     local foundAnything = ""
@@ -9837,7 +10007,7 @@ page12:Button("Hop to little Players", function()
 
     Teleport()
 end)
-page12:Button("Hop to Many Players", function()
+page12:Button("เข้าเซิฟคนเยอะ", function()
     repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
         local HttpService, TPService = game:GetService "HttpService", game:GetService "TeleportService";
         local OtherServers = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/" ..
@@ -9876,17 +10046,16 @@ page12:Button("Hop to Many Players", function()
             TPService:TeleportToPlaceInstance(game.PlaceId, server)
         end
 end)
-
-page12:Button("Rejoin", function()
+page12:Button("เข้าเซิฟเดิม", function()
     local ts = game:GetService("TeleportService")
     local p = game.Players.LocalPlayer
     ts:Teleport(game.PlaceId, p)
 end)
 page12:Line()
-page12:Button("Kaituncap", function()
+page12:Button("ถ่ายภาพไก่ตัน", function()
 kaituncap()
 end)
-page12:Button("Show Awakened Skill", function()
+page12:Button("แสดงสกิลผลไม้ปีศาจตื่น", function()
     local args = {
     [1] = "getAwakenedAbilities"
     }
@@ -9894,14 +10063,14 @@ page12:Button("Show Awakened Skill", function()
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
     game.Players.LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible = true
 end)
-page12:Button("Show Title", function()
+page12:Button("แสดงฉายา", function()
     local args = {
     [1] = "getTitles"
     }
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
     game.Players.localPlayer.PlayerGui.Main.Titles.Visible = true
 end)
-page12:Button("Show Color Haki", function()
+page12:Button("แสดงสีฮาคิ", function()
     game.Players.localPlayer.PlayerGui.Main.Colors.Visible = true
 end)
 function InfAbility()
@@ -9940,7 +10109,7 @@ else
     end
 end
 end
-page12:Toggle("Remove Fog",false,function(value)
+page12:Toggle("ลบหมอก",false,function(value)
     _G.Remove_Fog = value
     while wait() do
         if _G.Remove_Fog then
@@ -9951,7 +10120,7 @@ page12:Toggle("Remove Fog",false,function(value)
     end			
 end)
 
-page12:Toggle("Auto Click",false,function(value)
+page12:Toggle("ออโต้คลิก",false,function(value)
     _G.click = value
         end)  
         spawn(function()
@@ -9965,7 +10134,7 @@ page12:Toggle("Auto Click",false,function(value)
         end)
     end)
 
-    page12:Toggle("Walk On Water",fasle,function(value)
+    page12:Toggle("เดินบนน้ำ",fasle,function(value)
         _G.WalkWater = value
     end)
     spawn(function()
@@ -9979,12 +10148,12 @@ page12:Toggle("Auto Click",false,function(value)
                 end)
             end
         end)
-page12:Toggle("Inf Ability", false, function(value)
+page12:Toggle("ความสามารถไม่จำกัด", false, function(value)
     _G.InfAbility = value
     InfAbility()
 end)
 
-page12:Toggle("Inf Dash", _G.NoDashCooldown, function(value)
+page12:Toggle("แดชไม่จำกัด", _G.NoDashCooldown, function(value)
     _G.NoDashCooldown = value
     DodgeNoCoolDown()
 end)
@@ -10007,7 +10176,7 @@ if _G.NoDashCooldown then
 end
 end
 
-page12:Toggle("Inf Geppo", _G.InfinitiesSkyJump, function(value)
+page12:Toggle("เดินชมจันทร์ไม่จำกัด", _G.InfinitiesSkyJump, function(value)
     _G.InfinitiesSkyJump = value
     SkyJumpNoCoolDown()
 end)
