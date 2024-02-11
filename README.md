@@ -3153,9 +3153,9 @@ spawn(function()
     pcall(function()
         while task.wait() do
             if game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
-                Mirragecheck:Set('🏝️ : 🟢')
+                Mirragecheck:Set('สถานะเกาะลับ : 🟢')
             else
-                Mirragecheck:Set('🏝️ : 🔴')
+                Mirragecheck:Set('สถานะเกาะลับ : 🔴')
             end
         end
     end)
@@ -3166,9 +3166,9 @@ spawn(function()
     pcall(function()
         while task.wait() do
             if game.Workspace._WorldOrigin.Locations:FindFirstChild('Kitsune Island') then
-                Kitsunecheck:Set('🦊 : 🟢')
+                Kitsunecheck:Set('สถานะเกาะจิ้งจอก : 🟢')
             else
-                Kitsunecheck:Set('🦊 : 🔴')
+                Kitsunecheck:Set('สถานะเกาะจิ้งจอก : 🔴')
             end
         end
     end)
@@ -3178,17 +3178,17 @@ task.spawn(function()
     while task.wait() do
         pcall(function()
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                FM:Set("5/5 🌕: สถานะดวงจันทร์")
+                FM:Set("สถานะดวงจันทร์ : 5/5 🌕")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
-                FM:Set("4/5 🌖 : สถานะดวงจันทร์")
+                FM:Set("สถานะดวงจันทร์ : 4/5 🌖")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                FM:Set("3/5 🌗 : สถานะดวงจันทร์")
+                FM:Set("สถานะดวงจันทร์ : 3/5 🌗")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                FM:Set("2/5 🌘 : สถานะดวงจันทร์")
+                FM:Set("สถานะดวงจันทร์ : 2/5 🌘")
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                FM:Set("1/5 🌘 : สถานะดวงจันทร์")
+                FM:Set("สถานะดวงจันทร์ : 1/5 🌘")
             else
-                FM:Set("0/5 🌘 : สถานะดวงจันทร์")
+                FM:Set("สถานะดวงจันทร์ : 0/5 🌘")
             end
         end)
     end
