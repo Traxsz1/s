@@ -2097,17 +2097,16 @@ function Update:Window(text, logo, keybind)
                 pcall(callback,true)
                 Circle.BackgroundColor3 = _G.Color
                 Circle.Image = "http://www.roblox.com/asset/?id=6023426926"
-                Circle.Visible = true
+               -- Circle.Visible = true
                 UICorner_3.CornerRadius = UDim.new(0, 100)
-                Circle:TweenSize(UDim2.new(0, 27, 0, 27),"In","Back",0.1,true)
-                wait(0.2)
                 Circle:TweenSize(UDim2.new(0, 25, 0, 20),"In","Back",0.1,true)
             else
                 toggled = false
                 pcall(callback,false) 
                 Circle.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+                Circle:TweenSize(UDim2.new(0, 0, 0, 0),"In","Back",0.1,true)
                 Circle.Image = "http://www.roblox.com/asset/?id=00"
-                Circle.Visible = false
+                --Circle.Visible = false
             end
             SoundClick:Destroy()
         end)
@@ -2115,7 +2114,7 @@ function Update:Window(text, logo, keybind)
             toggled = true
             Circle.BackgroundColor3 = _G.Color
             Circle.Image = "http://www.roblox.com/asset/?id=6023426926"
-            Circle.Visible = true
+            --Circle.Visible = true
             UICorner_3.CornerRadius = UDim.new(0, 100)
             Circle:TweenSize(UDim2.new(0, 25, 0, 20),"In","Back",0.1,true)
             pcall(callback, toggled)
@@ -3504,8 +3503,7 @@ end)
         end
     end)
     
-
-page1:Label("Status : Sea 1")
+page1:Seperator("Status : Sea 1")
 page1:Toggle("Auto NewWorld", _G.AutoNewWorld, function(value)
     _G.AutoNewWorld = value
     if value == false then
@@ -3869,7 +3867,7 @@ task.spawn(function()
     end
 end)
 
-page1:Label("Status : Sea 2")
+page1:Seperator("Status : Sea 2")
 page1:Toggle("Auto ThirdSea", _G.AutoThirdSea, function(value)
     _G.AutoThirdSea = value
     if value == false then
@@ -4227,7 +4225,7 @@ page1:Toggle("Auto BartiloQuest", _G.Settings.AutoBartiloQuest,function(value)
             task.wait()
         end
     end)
-    
+
 task.spawn(function()
     while task.wait() do
         pcall(function()
@@ -4646,7 +4644,7 @@ task.spawn(function()
     end
 end)
               
-page1:Label("Status : Sea 3")
+page1:Seperator("Status : Sea 3")
     page1:Toggle("Auto RainbowHaki", _G.AutoRainbowHaki,function(value)
         _G.AutoRainbowHaki = value
             if value == false then
@@ -4843,8 +4841,6 @@ task.spawn(function()
     end
 end)         
 
-page1:Line()
-page1:Seperator("<<Torch>>")
 page1:Toggle("Auto HolyTorch", _G.AutoHolyTorch, function(value)
     _G.AutoHolyTorch = value
     _G.BypassTP = false
@@ -5025,7 +5021,7 @@ function Elite()
         end
     end
 end       
-page1:Seperator("<<Elite>>")
+
 local Elite_Hunter_Status = page1:Label("Status : N/Q")
     task.spawn(function()
         while task.wait() do
@@ -5107,7 +5103,6 @@ spawn(function()
     end
 end)
 
-page1:Seperator("<<Bones>>")
 local count_number = 0
 local count_stack = page1:Label('Bone : ' .. count_number, true)
 spawn(function()
@@ -5298,7 +5293,6 @@ spawn(function()
     end
 end)
 
-page1:Seperator("<<Dough>>")  
 local MobKilledLabel = page1:Label("Need Kill : Loading...", true)
 spawn(function()
 while true do
@@ -5411,7 +5405,6 @@ end)
         end
     end)
 
-page1:Seperator("<<Material>>")  
 page1:Dropdown("Select Material",AllMaterial, function(value)
     SelectModeMaterial = value
 end)
